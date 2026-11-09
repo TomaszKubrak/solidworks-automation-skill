@@ -1,0 +1,1003 @@
+{
+ "nodes": [
+  {
+   "id": "file:scripts/cad_diagnostics.py",
+   "type": "file",
+   "name": "cad_diagnostics.py",
+   "filePath": "scripts/cad_diagnostics.py",
+   "summary": "Tworzy pakiet diagnostyczny CAD z zanonimizowaniem danych wrażliwych, na podstawie wyniku cad_doctor.",
+   "tags": [
+    "diagnostics",
+    "cli",
+    "redaction",
+    "entry-point"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/cad_diagnostics.py:_redact",
+   "type": "function",
+   "name": "_redact",
+   "filePath": "scripts/cad_diagnostics.py",
+   "lineRange": [
+    17,
+    29
+   ],
+   "summary": "Maskuje wrażliwe wartości w danych diagnostycznych.",
+   "tags": [
+    "function",
+    "helper",
+    "internal"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/cad_diagnostics.py:create_diagnostic_bundle",
+   "type": "function",
+   "name": "create_diagnostic_bundle",
+   "filePath": "scripts/cad_diagnostics.py",
+   "lineRange": [
+    32,
+    47
+   ],
+   "summary": "Buduje pakiet diagnostyczny z wyniku doktora i zapisuje go na dysk.",
+   "tags": [
+    "function",
+    "helper",
+    "public-api"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/cad_diagnostics.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "scripts/cad_diagnostics.py",
+   "lineRange": [
+    50,
+    60
+   ],
+   "summary": "Punkt wejścia CLI.",
+   "tags": [
+    "entry-point",
+    "cli",
+    "function"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/cad_doctor.py",
+   "type": "file",
+   "name": "cad_doctor.py",
+   "filePath": "scripts/cad_doctor.py",
+   "summary": "Diagnostyka środowiska SolidWorks: sprawdza instalację, uprawnienia zapisu i zbiera zalecenia naprawcze.",
+   "tags": [
+    "diagnostics",
+    "doctor",
+    "environment-check",
+    "cli"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/cad_doctor.py:_check",
+   "type": "function",
+   "name": "_check",
+   "filePath": "scripts/cad_doctor.py",
+   "lineRange": [
+    30,
+    57
+   ],
+   "summary": "Tworzy pojedynczy wpis wyniku kontroli.",
+   "tags": [
+    "function",
+    "helper",
+    "internal"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/cad_doctor.py:_collect_remediations",
+   "type": "function",
+   "name": "_collect_remediations",
+   "filePath": "scripts/cad_doctor.py",
+   "lineRange": [
+    60,
+    88
+   ],
+   "summary": "Zbiera zalecenia naprawcze z wyników kontroli.",
+   "tags": [
+    "function",
+    "helper",
+    "internal"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/cad_doctor.py:_is_writable",
+   "type": "function",
+   "name": "_is_writable",
+   "filePath": "scripts/cad_doctor.py",
+   "lineRange": [
+    91,
+    99
+   ],
+   "summary": "Sprawdza, czy katalog jest zapisywalny.",
+   "tags": [
+    "function",
+    "helper",
+    "internal"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/cad_doctor.py:_solidworks_installation",
+   "type": "function",
+   "name": "_solidworks_installation",
+   "filePath": "scripts/cad_doctor.py",
+   "lineRange": [
+    102,
+    115
+   ],
+   "summary": "Pobiera informacje o instalacji SolidWorks dla doktora.",
+   "tags": [
+    "function",
+    "helper",
+    "internal"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/cad_doctor.py:run_doctor",
+   "type": "function",
+   "name": "run_doctor",
+   "filePath": "scripts/cad_doctor.py",
+   "lineRange": [
+    118,
+    254
+   ],
+   "summary": "Uruchamia komplet kontroli środowiska i zwraca raport.",
+   "tags": [
+    "function",
+    "helper",
+    "public-api"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/cad_doctor.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "scripts/cad_doctor.py",
+   "lineRange": [
+    257,
+    268
+   ],
+   "summary": "Punkt wejścia CLI.",
+   "tags": [
+    "entry-point",
+    "cli",
+    "function"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/cad_installation.py",
+   "type": "file",
+   "name": "cad_installation.py",
+   "filePath": "scripts/cad_installation.py",
+   "summary": "Wykrywa instalacje SolidWorks przez skróty, rejestr, popularne ścieżki i dyski oraz rejestrację COM.",
+   "tags": [
+    "installation-discovery",
+    "windows-registry",
+    "utility",
+    "com"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/cad_installation.py:resolve_shortcut_target",
+   "type": "function",
+   "name": "resolve_shortcut_target",
+   "filePath": "scripts/cad_installation.py",
+   "lineRange": [
+    26,
+    41
+   ],
+   "summary": "Rozwiązuje cel skrótu .lnk.",
+   "tags": [
+    "function",
+    "helper",
+    "public-api"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/cad_installation.py:_unique_paths",
+   "type": "function",
+   "name": "_unique_paths",
+   "filePath": "scripts/cad_installation.py",
+   "lineRange": [
+    44,
+    52
+   ],
+   "summary": "Usuwa duplikaty ścieżek.",
+   "tags": [
+    "function",
+    "helper",
+    "internal"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/cad_installation.py:_shortcut_info",
+   "type": "function",
+   "name": "_shortcut_info",
+   "filePath": "scripts/cad_installation.py",
+   "lineRange": [
+    55,
+    65
+   ],
+   "summary": "Odczytuje informacje ze skrótu.",
+   "tags": [
+    "function",
+    "helper",
+    "internal"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/cad_installation.py:_shortcut_paths",
+   "type": "function",
+   "name": "_shortcut_paths",
+   "filePath": "scripts/cad_installation.py",
+   "lineRange": [
+    68,
+    74
+   ],
+   "summary": "Wyszukuje skróty SolidWorks.",
+   "tags": [
+    "function",
+    "helper",
+    "internal"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/cad_installation.py:_version_metadata",
+   "type": "function",
+   "name": "_version_metadata",
+   "filePath": "scripts/cad_installation.py",
+   "lineRange": [
+    77,
+    87
+   ],
+   "summary": "Odczytuje metadane wersji pliku wykonywalnego.",
+   "tags": [
+    "function",
+    "helper",
+    "internal"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/cad_installation.py:_uninstall_registry_candidates",
+   "type": "function",
+   "name": "_uninstall_registry_candidates",
+   "filePath": "scripts/cad_installation.py",
+   "lineRange": [
+    90,
+    152
+   ],
+   "summary": "Znajduje kandydatów na instalacje w rejestrze odinstalowania.",
+   "tags": [
+    "function",
+    "helper",
+    "internal"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/cad_installation.py:_registry_paths",
+   "type": "function",
+   "name": "_registry_paths",
+   "filePath": "scripts/cad_installation.py",
+   "lineRange": [
+    155,
+    202
+   ],
+   "summary": "Zbiera ścieżki instalacji z rejestru.",
+   "tags": [
+    "function",
+    "helper",
+    "internal"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/cad_installation.py:_candidate_drives",
+   "type": "function",
+   "name": "_candidate_drives",
+   "filePath": "scripts/cad_installation.py",
+   "lineRange": [
+    205,
+    221
+   ],
+   "summary": "Wylicza dyski do przeszukania.",
+   "tags": [
+    "function",
+    "helper",
+    "internal"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/cad_installation.py:_common_candidates",
+   "type": "function",
+   "name": "_common_candidates",
+   "filePath": "scripts/cad_installation.py",
+   "lineRange": [
+    224,
+    247
+   ],
+   "summary": "Generuje typowe ścieżki instalacji.",
+   "tags": [
+    "function",
+    "helper",
+    "internal"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/cad_installation.py:discover_installations",
+   "type": "function",
+   "name": "discover_installations",
+   "filePath": "scripts/cad_installation.py",
+   "lineRange": [
+    250,
+    324
+   ],
+   "summary": "Łączy wszystkie źródła i zwraca wykryte instalacje.",
+   "tags": [
+    "function",
+    "helper",
+    "public-api"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/cad_installation.py:discover_installation",
+   "type": "function",
+   "name": "discover_installation",
+   "filePath": "scripts/cad_installation.py",
+   "lineRange": [
+    327,
+    332
+   ],
+   "summary": "Zwraca preferowaną instalację.",
+   "tags": [
+    "function",
+    "helper",
+    "public-api"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/cad_installation.py:_com_registered",
+   "type": "function",
+   "name": "_com_registered",
+   "filePath": "scripts/cad_installation.py",
+   "lineRange": [
+    335,
+    345
+   ],
+   "summary": "Sprawdza rejestrację COM SolidWorks.",
+   "tags": [
+    "function",
+    "helper",
+    "internal"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/cad_installation.py:discover_all",
+   "type": "function",
+   "name": "discover_all",
+   "filePath": "scripts/cad_installation.py",
+   "lineRange": [
+    348,
+    349
+   ],
+   "summary": "Skrót do pełnego wykrywania.",
+   "tags": [
+    "function",
+    "helper",
+    "public-api"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/cad_studio.py",
+   "type": "file",
+   "name": "cad_studio.py",
+   "filePath": "scripts/cad_studio.py",
+   "summary": "CLI CAD Studio zarządzające kolejką zadań, historią uruchomień i ponawianiem zadań od wskazanego etapu.",
+   "tags": [
+    "cli",
+    "job-queue",
+    "entry-point",
+    "orchestration"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/cad_studio.py:_print_json",
+   "type": "function",
+   "name": "_print_json",
+   "filePath": "scripts/cad_studio.py",
+   "lineRange": [
+    25,
+    34
+   ],
+   "summary": "Drukuje JSON na standardowe wyjście.",
+   "tags": [
+    "function",
+    "helper",
+    "internal"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/cad_studio.py:_queue_jobs",
+   "type": "function",
+   "name": "_queue_jobs",
+   "filePath": "scripts/cad_studio.py",
+   "lineRange": [
+    37,
+    48
+   ],
+   "summary": "Listuje zadania w kolejce.",
+   "tags": [
+    "function",
+    "helper",
+    "internal"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/cad_studio.py:_job_path",
+   "type": "function",
+   "name": "_job_path",
+   "filePath": "scripts/cad_studio.py",
+   "lineRange": [
+    51,
+    61
+   ],
+   "summary": "Wyznacza ścieżkę pliku zadania.",
+   "tags": [
+    "function",
+    "helper",
+    "internal"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/cad_studio.py:_retry_from_stage",
+   "type": "function",
+   "name": "_retry_from_stage",
+   "filePath": "scripts/cad_studio.py",
+   "lineRange": [
+    64,
+    77
+   ],
+   "summary": "Ustala etap, od którego ponowić zadanie.",
+   "tags": [
+    "function",
+    "helper",
+    "internal"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/cad_studio.py:_run_history_snapshot",
+   "type": "function",
+   "name": "_run_history_snapshot",
+   "filePath": "scripts/cad_studio.py",
+   "lineRange": [
+    80,
+    87
+   ],
+   "summary": "Tworzy migawkę historii uruchomień.",
+   "tags": [
+    "function",
+    "helper",
+    "internal"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/cad_studio.py:prepare_job_for_retry",
+   "type": "function",
+   "name": "prepare_job_for_retry",
+   "filePath": "scripts/cad_studio.py",
+   "lineRange": [
+    90,
+    121
+   ],
+   "summary": "Przygotowuje zadanie do ponowienia.",
+   "tags": [
+    "function",
+    "helper",
+    "public-api"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/cad_studio.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "scripts/cad_studio.py",
+   "lineRange": [
+    124,
+    337
+   ],
+   "summary": "Punkt wejścia CLI.",
+   "tags": [
+    "entry-point",
+    "cli",
+    "function"
+   ],
+   "complexity": "complex"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:scripts/cad_diagnostics.py",
+   "target": "function:scripts/cad_diagnostics.py:_redact",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_diagnostics.py",
+   "target": "function:scripts/cad_diagnostics.py:_redact",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_diagnostics.py",
+   "target": "function:scripts/cad_diagnostics.py:create_diagnostic_bundle",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_diagnostics.py",
+   "target": "function:scripts/cad_diagnostics.py:create_diagnostic_bundle",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_diagnostics.py",
+   "target": "function:scripts/cad_diagnostics.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_diagnostics.py",
+   "target": "function:scripts/cad_diagnostics.py:main",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_diagnostics.py",
+   "target": "file:scripts/cad_doctor.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/cad_doctor.py",
+   "target": "function:scripts/cad_doctor.py:_check",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_doctor.py",
+   "target": "function:scripts/cad_doctor.py:_check",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_doctor.py",
+   "target": "function:scripts/cad_doctor.py:_collect_remediations",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_doctor.py",
+   "target": "function:scripts/cad_doctor.py:_collect_remediations",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_doctor.py",
+   "target": "function:scripts/cad_doctor.py:_is_writable",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_doctor.py",
+   "target": "function:scripts/cad_doctor.py:_is_writable",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_doctor.py",
+   "target": "function:scripts/cad_doctor.py:_solidworks_installation",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_doctor.py",
+   "target": "function:scripts/cad_doctor.py:_solidworks_installation",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_doctor.py",
+   "target": "function:scripts/cad_doctor.py:run_doctor",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_doctor.py",
+   "target": "function:scripts/cad_doctor.py:run_doctor",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_doctor.py",
+   "target": "function:scripts/cad_doctor.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_doctor.py",
+   "target": "function:scripts/cad_doctor.py:main",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_doctor.py",
+   "target": "file:scripts/cad_installation.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:resolve_shortcut_target",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:resolve_shortcut_target",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:_unique_paths",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:_unique_paths",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:_shortcut_info",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:_shortcut_info",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:_shortcut_paths",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:_shortcut_paths",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:_version_metadata",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:_version_metadata",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:_uninstall_registry_candidates",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:_uninstall_registry_candidates",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:_registry_paths",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:_registry_paths",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:_candidate_drives",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:_candidate_drives",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:_common_candidates",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:_common_candidates",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:discover_installations",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:discover_installations",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:discover_installation",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:discover_installation",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:_com_registered",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:_com_registered",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:discover_all",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_installation.py",
+   "target": "function:scripts/cad_installation.py:discover_all",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_studio.py",
+   "target": "function:scripts/cad_studio.py:_print_json",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_studio.py",
+   "target": "function:scripts/cad_studio.py:_print_json",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_studio.py",
+   "target": "function:scripts/cad_studio.py:_queue_jobs",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_studio.py",
+   "target": "function:scripts/cad_studio.py:_queue_jobs",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_studio.py",
+   "target": "function:scripts/cad_studio.py:_job_path",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_studio.py",
+   "target": "function:scripts/cad_studio.py:_job_path",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_studio.py",
+   "target": "function:scripts/cad_studio.py:_retry_from_stage",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_studio.py",
+   "target": "function:scripts/cad_studio.py:_retry_from_stage",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_studio.py",
+   "target": "function:scripts/cad_studio.py:_run_history_snapshot",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_studio.py",
+   "target": "function:scripts/cad_studio.py:_run_history_snapshot",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_studio.py",
+   "target": "function:scripts/cad_studio.py:prepare_job_for_retry",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_studio.py",
+   "target": "function:scripts/cad_studio.py:prepare_job_for_retry",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_studio.py",
+   "target": "function:scripts/cad_studio.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/cad_studio.py",
+   "target": "function:scripts/cad_studio.py:main",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/cad_studio.py",
+   "target": "file:scripts/cad_diagnostics.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/cad_studio.py",
+   "target": "file:scripts/cad_doctor.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "function:scripts/cad_diagnostics.py:create_diagnostic_bundle",
+   "target": "function:scripts/cad_doctor.py:run_doctor",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:scripts/cad_doctor.py:_solidworks_installation",
+   "target": "function:scripts/cad_installation.py:discover_installation",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  }
+ ]
+}

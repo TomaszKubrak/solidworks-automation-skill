@@ -1,0 +1,212 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 3,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 3
+    }
+  },
+  "results": [
+    {
+      "path": "subskills/autocad-automation/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 77,
+      "nonEmptyLines": 55,
+      "sections": [
+        {
+          "heading": "AutoCAD Automation 子技能",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "适用场景",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "与父技能的关系",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "快速命令",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "线稿转 CAD 的硬规则",
+          "level": 2,
+          "line": 57
+        },
+        {
+          "heading": "参考文档",
+          "level": 2,
+          "line": 72
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "subskills/autocad-automation/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 199,
+      "nonEmptyLines": 152,
+      "sections": [
+        {
+          "heading": "AutoCAD 自动化技能",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "目标",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "适用场景",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "默认假设",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "入口自检",
+          "level": 2,
+          "line": 41
+        },
+        {
+          "heading": "核心工作流",
+          "level": 2,
+          "line": 61
+        },
+        {
+          "heading": "机械零件图和 3D 打印开孔图硬性要求",
+          "level": 3,
+          "line": 76
+        },
+        {
+          "heading": "Codex 直连绘图",
+          "level": 2,
+          "line": 88
+        },
+        {
+          "heading": "技术路线选择",
+          "level": 2,
+          "line": 145
+        },
+        {
+          "heading": "工程规则",
+          "level": 2,
+          "line": 155
+        },
+        {
+          "heading": "GitHub 与官方文档策略",
+          "level": 2,
+          "line": 173
+        },
+        {
+          "heading": "渐进参考",
+          "level": 2,
+          "line": 184
+        },
+        {
+          "heading": "验收与汇报",
+          "level": 2,
+          "line": 192
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "subskills/autocad-automation/manifest.yaml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 27,
+      "nonEmptyLines": 27,
+      "sections": [
+        {
+          "heading": "name",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "title",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "status",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "summary",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "entrypoint",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "scripts",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "references",
+          "level": 1,
+          "line": 14
+        },
+        {
+          "heading": "dotnet",
+          "level": 1,
+          "line": 18
+        },
+        {
+          "heading": "depends_on",
+          "level": 1,
+          "line": 22
+        },
+        {
+          "heading": "related",
+          "level": 1,
+          "line": 24
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    }
+  ]
+}

@@ -1,0 +1,2920 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 18,
+  "filesSkipped": [
+    "apps/workbench-ui/src/assets/default-blossom-poster.webp",
+    "apps/workbench-ui/src/assets/wallpaper-anime-sky.webp",
+    "apps/workbench-ui/src/assets/wallpaper-fuji.webp",
+    "apps/workbench-ui/src/assets/wallpaper-tokyo-neon.webp",
+    "apps/workbench-ui/src/styles.css",
+    "dotnet/CadStudio.SolidWorks.AddinHost/CadStudio.AddinHost.snk.base64",
+    "dotnet/CadStudio.SolidWorks.AddinHost/CadStudio.SolidWorks.AddinHost.csproj"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 18,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 11,
+      "failed": 0,
+      "skipped": 7
+    }
+  },
+  "results": [
+    {
+      "path": "apps/workbench-ui/src-tauri/src/main.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 6,
+      "nonEmptyLines": 5,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 4,
+          "endLine": 6,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "app_lib::run",
+          "lineNumber": 5
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+      "language": "rust",
+      "fileCategory": "code",
+      "totalLines": 150,
+      "nonEmptyLines": 143,
+      "functions": [
+        {
+          "name": "new",
+          "startLine": 15,
+          "endLine": 21,
+          "params": []
+        },
+        {
+          "name": "with_timestamp",
+          "startLine": 23,
+          "endLine": 32,
+          "params": [
+            "stamp"
+          ]
+        },
+        {
+          "name": "fixtures_with_identical_timestamps_remain_isolated",
+          "startLine": 36,
+          "endLine": 50,
+          "params": []
+        },
+        {
+          "name": "drop",
+          "startLine": 52,
+          "endLine": 67,
+          "params": []
+        },
+        {
+          "name": "all_existing_agent_path_names_remain_supported",
+          "startLine": 71,
+          "endLine": 88,
+          "params": []
+        },
+        {
+          "name": "fixed_json_and_database_paths_share_the_same_boundary",
+          "startLine": 91,
+          "endLine": 105,
+          "params": []
+        },
+        {
+          "name": "explicit_cli_with_spaces_and_chinese_path_still_runs",
+          "startLine": 109,
+          "endLine": 128,
+          "params": []
+        },
+        {
+          "name": "config_symlink_outside_root_is_rejected",
+          "startLine": 132,
+          "endLine": 150,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "Fixture",
+          "startLine": 12,
+          "endLine": 12,
+          "methods": [
+            "new",
+            "with_timestamp",
+            "drop"
+          ],
+          "properties": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "new",
+          "callee": "SystemTime::now()\n            .duration_since(UNIX_EPOCH)\n            .unwrap().as_nanos",
+          "lineNumber": 16
+        },
+        {
+          "caller": "new",
+          "callee": "SystemTime::now()\n            .duration_since(UNIX_EPOCH).unwrap",
+          "lineNumber": 16
+        },
+        {
+          "caller": "new",
+          "callee": "SystemTime::now().duration_since",
+          "lineNumber": 16
+        },
+        {
+          "caller": "new",
+          "callee": "SystemTime::now",
+          "lineNumber": 16
+        },
+        {
+          "caller": "new",
+          "callee": "Self::with_timestamp",
+          "lineNumber": 20
+        },
+        {
+          "caller": "with_timestamp",
+          "callee": "FIXTURE_SEQUENCE.fetch_add",
+          "lineNumber": 25
+        },
+        {
+          "caller": "with_timestamp",
+          "callee": "std::env::temp_dir().join",
+          "lineNumber": 26
+        },
+        {
+          "caller": "with_timestamp",
+          "callee": "std::env::temp_dir",
+          "lineNumber": 26
+        },
+        {
+          "caller": "with_timestamp",
+          "callee": "fs::create_dir(&path).unwrap",
+          "lineNumber": 30
+        },
+        {
+          "caller": "with_timestamp",
+          "callee": "fs::create_dir",
+          "lineNumber": 30
+        },
+        {
+          "caller": "with_timestamp",
+          "callee": "Self",
+          "lineNumber": 31
+        },
+        {
+          "caller": "fixtures_with_identical_timestamps_remain_isolated",
+          "callee": "std::thread::scope",
+          "lineNumber": 37
+        },
+        {
+          "caller": "fixtures_with_identical_timestamps_remain_isolated",
+          "callee": "scope.spawn",
+          "lineNumber": 38
+        },
+        {
+          "caller": "fixtures_with_identical_timestamps_remain_isolated",
+          "callee": "Fixture::with_timestamp",
+          "lineNumber": 38
+        },
+        {
+          "caller": "fixtures_with_identical_timestamps_remain_isolated",
+          "callee": "scope.spawn",
+          "lineNumber": 39
+        },
+        {
+          "caller": "fixtures_with_identical_timestamps_remain_isolated",
+          "callee": "Fixture::with_timestamp",
+          "lineNumber": 39
+        },
+        {
+          "caller": "fixtures_with_identical_timestamps_remain_isolated",
+          "callee": "first.join().unwrap",
+          "lineNumber": 40
+        },
+        {
+          "caller": "fixtures_with_identical_timestamps_remain_isolated",
+          "callee": "first.join",
+          "lineNumber": 40
+        },
+        {
+          "caller": "fixtures_with_identical_timestamps_remain_isolated",
+          "callee": "second.join().unwrap",
+          "lineNumber": 40
+        },
+        {
+          "caller": "fixtures_with_identical_timestamps_remain_isolated",
+          "callee": "second.join",
+          "lineNumber": 40
+        },
+        {
+          "caller": "fixtures_with_identical_timestamps_remain_isolated",
+          "callee": "second.0.join",
+          "lineNumber": 43
+        },
+        {
+          "caller": "fixtures_with_identical_timestamps_remain_isolated",
+          "callee": "fs::write(&preserved, \"independent fixture\").unwrap",
+          "lineNumber": 44
+        },
+        {
+          "caller": "fixtures_with_identical_timestamps_remain_isolated",
+          "callee": "fs::write",
+          "lineNumber": 44
+        },
+        {
+          "caller": "fixtures_with_identical_timestamps_remain_isolated",
+          "callee": "drop",
+          "lineNumber": 45
+        },
+        {
+          "caller": "drop",
+          "callee": "self.0.canonicalize",
+          "lineNumber": 55
+        },
+        {
+          "caller": "drop",
+          "callee": "std::env::temp_dir().canonicalize",
+          "lineNumber": 55
+        },
+        {
+          "caller": "drop",
+          "callee": "std::env::temp_dir",
+          "lineNumber": 55
+        },
+        {
+          "caller": "drop",
+          "callee": "target.parent",
+          "lineNumber": 57
+        },
+        {
+          "caller": "drop",
+          "callee": "Some",
+          "lineNumber": 57
+        },
+        {
+          "caller": "drop",
+          "callee": "parent.as_path",
+          "lineNumber": 57
+        },
+        {
+          "caller": "drop",
+          "callee": "target\n                    .file_name()\n                    .unwrap()\n                    .to_string_lossy().starts_with",
+          "lineNumber": 58
+        },
+        {
+          "caller": "drop",
+          "callee": "target\n                    .file_name()\n                    .unwrap().to_string_lossy",
+          "lineNumber": 58
+        },
+        {
+          "caller": "drop",
+          "callee": "target\n                    .file_name().unwrap",
+          "lineNumber": 58
+        },
+        {
+          "caller": "drop",
+          "callee": "target.file_name",
+          "lineNumber": 58
+        },
+        {
+          "caller": "drop",
+          "callee": "fs::remove_dir_all",
+          "lineNumber": 64
+        },
+        {
+          "caller": "fixed_json_and_database_paths_share_the_same_boundary",
+          "callee": "Fixture::new",
+          "lineNumber": 92
+        },
+        {
+          "caller": "fixed_json_and_database_paths_share_the_same_boundary",
+          "callee": "fs::write(fixture.0.join(name), \"fixture\").unwrap",
+          "lineNumber": 94
+        },
+        {
+          "caller": "fixed_json_and_database_paths_share_the_same_boundary",
+          "callee": "fs::write",
+          "lineNumber": 94
+        },
+        {
+          "caller": "fixed_json_and_database_paths_share_the_same_boundary",
+          "callee": "fixture.0.join",
+          "lineNumber": 94
+        },
+        {
+          "caller": "explicit_cli_with_spaces_and_chinese_path_still_runs",
+          "callee": "Fixture::new",
+          "lineNumber": 110
+        },
+        {
+          "caller": "explicit_cli_with_spaces_and_chinese_path_still_runs",
+          "callee": "fixture.0.join",
+          "lineNumber": 111
+        },
+        {
+          "caller": "explicit_cli_with_spaces_and_chinese_path_still_runs",
+          "callee": "fs::create_dir_all(&folder).unwrap",
+          "lineNumber": 112
+        },
+        {
+          "caller": "explicit_cli_with_spaces_and_chinese_path_still_runs",
+          "callee": "fs::create_dir_all",
+          "lineNumber": 112
+        },
+        {
+          "caller": "explicit_cli_with_spaces_and_chinese_path_still_runs",
+          "callee": "folder.join",
+          "lineNumber": 113
+        },
+        {
+          "caller": "explicit_cli_with_spaces_and_chinese_path_still_runs",
+          "callee": "fs::write(\n        &script,\n        \"@echo off\\r\\necho fixture-version\\r\\nexit /b 0\\r\\n\",\n    ).unwrap",
+          "lineNumber": 114
+        },
+        {
+          "caller": "explicit_cli_with_spaces_and_chinese_path_still_runs",
+          "callee": "fs::write",
+          "lineNumber": 114
+        },
+        {
+          "caller": "explicit_cli_with_spaces_and_chinese_path_still_runs",
+          "callee": "command_summary_with_prefix",
+          "lineNumber": 119
+        },
+        {
+          "caller": "explicit_cli_with_spaces_and_chinese_path_still_runs",
+          "callee": "script.to_string_lossy().into_owned",
+          "lineNumber": 120
+        },
+        {
+          "caller": "explicit_cli_with_spaces_and_chinese_path_still_runs",
+          "callee": "script.to_string_lossy",
+          "lineNumber": 120
+        },
+        {
+          "caller": "config_symlink_outside_root_is_rejected",
+          "callee": "Fixture::new",
+          "lineNumber": 133
+        },
+        {
+          "caller": "config_symlink_outside_root_is_rejected",
+          "callee": "fixture.0.join",
+          "lineNumber": 134
+        },
+        {
+          "caller": "config_symlink_outside_root_is_rejected",
+          "callee": "fs::create_dir_all(&root).unwrap",
+          "lineNumber": 135
+        },
+        {
+          "caller": "config_symlink_outside_root_is_rejected",
+          "callee": "fs::create_dir_all",
+          "lineNumber": 135
+        },
+        {
+          "caller": "config_symlink_outside_root_is_rejected",
+          "callee": "fixture.0.join",
+          "lineNumber": 136
+        },
+        {
+          "caller": "config_symlink_outside_root_is_rejected",
+          "callee": "fs::write(&outside, \"outside-fixture\").unwrap",
+          "lineNumber": 137
+        },
+        {
+          "caller": "config_symlink_outside_root_is_rejected",
+          "callee": "fs::write",
+          "lineNumber": 137
+        },
+        {
+          "caller": "config_symlink_outside_root_is_rejected",
+          "callee": "std::os::windows::fs::symlink_file",
+          "lineNumber": 138
+        },
+        {
+          "caller": "config_symlink_outside_root_is_rejected",
+          "callee": "root.join",
+          "lineNumber": 138
+        },
+        {
+          "caller": "config_symlink_outside_root_is_rejected",
+          "callee": "error.raw_os_error",
+          "lineNumber": 140
+        },
+        {
+          "caller": "config_symlink_outside_root_is_rejected",
+          "callee": "Some",
+          "lineNumber": 140
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "apps/workbench-ui/src-tauri/tauri.conf.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 64,
+      "nonEmptyLines": 64,
+      "sections": [
+        {
+          "heading": "$schema",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "productName",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "version",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "identifier",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "build",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "app",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "bundle",
+          "level": 1,
+          "line": 35
+        },
+        {
+          "heading": "plugins",
+          "level": 1,
+          "line": 53
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "apps/workbench-ui/src/assets/WALLPAPER_CREDITS.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 12,
+      "nonEmptyLines": 8,
+      "sections": [
+        {
+          "heading": "内置壁纸来源与许可证",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "apps/workbench-ui/vite.config.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 22,
+      "callGraph": [
+        {
+          "caller": "manualChunks",
+          "callee": "id.includes",
+          "lineNumber": 11
+        },
+        {
+          "caller": "manualChunks",
+          "callee": "id.includes",
+          "lineNumber": 11
+        },
+        {
+          "caller": "manualChunks",
+          "callee": "id.includes",
+          "lineNumber": 12
+        },
+        {
+          "caller": "manualChunks",
+          "callee": "id.includes",
+          "lineNumber": 13
+        },
+        {
+          "caller": "manualChunks",
+          "callee": "id.includes",
+          "lineNumber": 14
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "config/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 67,
+      "nonEmptyLines": 51,
+      "sections": [
+        {
+          "heading": "runtime 配置模板",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "字段白名单",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "路径解析规则",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "填写示例（请替换为你的实际路径）",
+          "level": 2,
+          "line": 37
+        },
+        {
+          "heading": "自动探测的兜底逻辑",
+          "level": 2,
+          "line": 52
+        },
+        {
+          "heading": "环境变量",
+          "level": 2,
+          "line": 60
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "config/runtime.example.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 6,
+      "nonEmptyLines": 6,
+      "sections": [
+        {
+          "heading": "part_template",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "material_database",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "connect_timeout_seconds",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "cleanup_timeout_seconds",
+          "level": 1,
+          "line": 5
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "docs/agent-framework/enterprise-agent-control-plane.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 118,
+      "nonEmptyLines": 85,
+      "sections": [
+        {
+          "heading": "CAD Studio 企业级 Agent 控制平面",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "定位",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "对标吸收",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "模块边界",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "当前落地状态",
+          "level": 2,
+          "line": 40
+        },
+        {
+          "heading": "最小企业级原则",
+          "level": 2,
+          "line": 70
+        },
+        {
+          "heading": "Policy Gate",
+          "level": 2,
+          "line": 82
+        },
+        {
+          "heading": "Artifact Ledger",
+          "level": 2,
+          "line": 93
+        },
+        {
+          "heading": "Worker Health",
+          "level": 2,
+          "line": 104
+        },
+        {
+          "heading": "Reviewer Gate",
+          "level": 2,
+          "line": 108
+        },
+        {
+          "heading": "近期路线",
+          "level": 2,
+          "line": 112
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "docs/releases/v2.0.1.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 22,
+      "nonEmptyLines": 15,
+      "sections": [
+        {
+          "heading": "v2.0.1 — 技能包与 CAD Studio 同步更新",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "下载与更新",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "本版重点",
+          "level": 2,
+          "line": 14
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "docs/research/week1-js-cad-viewers.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 25,
+      "nonEmptyLines": 19,
+      "sections": [
+        {
+          "heading": "第 1 周：JS CAD 预览调研",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "本周实现边界",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "后续评估",
+          "level": 2,
+          "line": 21
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 141,
+      "nonEmptyLines": 130,
+      "functions": [
+        {
+          "name": "HostDiagnostics",
+          "startLine": 26,
+          "endLine": 31,
+          "params": []
+        },
+        {
+          "name": "MarkConnection",
+          "startLine": 40,
+          "endLine": 50,
+          "params": [
+            "revision",
+            "callbackReady"
+          ]
+        },
+        {
+          "name": "MarkUi",
+          "startLine": 53,
+          "endLine": 62,
+          "params": [
+            "commandReady",
+            "taskPane",
+            "propertyPage"
+          ]
+        },
+        {
+          "name": "RecordEvent",
+          "startLine": 65,
+          "endLine": 74,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "RecordError",
+          "startLine": 77,
+          "endLine": 88,
+          "params": [
+            "area",
+            "exception"
+          ]
+        },
+        {
+          "name": "Flush",
+          "startLine": 91,
+          "endLine": 97,
+          "params": []
+        },
+        {
+          "name": "MarkDisconnected",
+          "startLine": 100,
+          "endLine": 111,
+          "params": []
+        },
+        {
+          "name": "WriteUnsafe",
+          "startLine": 114,
+          "endLine": 139,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "HostDiagnostics",
+          "startLine": 11,
+          "endLine": 140,
+          "methods": [
+            "HostDiagnostics",
+            "MarkConnection",
+            "MarkUi",
+            "RecordEvent",
+            "RecordError",
+            "Flush",
+            "MarkDisconnected",
+            "WriteUnsafe"
+          ],
+          "properties": [
+            "syncRoot",
+            "serializer",
+            "eventCounts",
+            "errors",
+            "connectedAtUtc",
+            "solidWorksRevision",
+            "connected",
+            "callbackRegistered",
+            "commandGroupReady",
+            "taskPaneReady",
+            "propertyManagerPageReady",
+            "DiagnosticDirectory",
+            "DiagnosticPath"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "HostDiagnostics",
+          "callee": "Environment.GetFolderPath",
+          "lineNumber": 28
+        },
+        {
+          "caller": "HostDiagnostics",
+          "callee": "Path.Combine",
+          "lineNumber": 29
+        },
+        {
+          "caller": "HostDiagnostics",
+          "callee": "Path.Combine",
+          "lineNumber": 30
+        },
+        {
+          "caller": "MarkConnection",
+          "callee": "WriteUnsafe",
+          "lineNumber": 48
+        },
+        {
+          "caller": "MarkUi",
+          "callee": "WriteUnsafe",
+          "lineNumber": 60
+        },
+        {
+          "caller": "RecordEvent",
+          "callee": "eventCounts.TryGetValue",
+          "lineNumber": 70
+        },
+        {
+          "caller": "RecordEvent",
+          "callee": "WriteUnsafe",
+          "lineNumber": 72
+        },
+        {
+          "caller": "RecordError",
+          "callee": "errors.Add",
+          "lineNumber": 81
+        },
+        {
+          "caller": "RecordError",
+          "callee": "string.Format",
+          "lineNumber": 81
+        },
+        {
+          "caller": "RecordError",
+          "callee": "errors.RemoveAt",
+          "lineNumber": 84
+        },
+        {
+          "caller": "RecordError",
+          "callee": "WriteUnsafe",
+          "lineNumber": 86
+        },
+        {
+          "caller": "Flush",
+          "callee": "WriteUnsafe",
+          "lineNumber": 95
+        },
+        {
+          "caller": "MarkDisconnected",
+          "callee": "WriteUnsafe",
+          "lineNumber": 109
+        },
+        {
+          "caller": "WriteUnsafe",
+          "callee": "Directory.CreateDirectory",
+          "lineNumber": 116
+        },
+        {
+          "caller": "WriteUnsafe",
+          "callee": "new Dictionary<string, object>",
+          "lineNumber": 117
+        },
+        {
+          "caller": "WriteUnsafe",
+          "callee": "connectedAtUtc.ToString",
+          "lineNumber": 122
+        },
+        {
+          "caller": "WriteUnsafe",
+          "callee": "DateTime.UtcNow.ToString",
+          "lineNumber": 123
+        },
+        {
+          "caller": "WriteUnsafe",
+          "callee": "Process.GetCurrentProcess",
+          "lineNumber": 125
+        },
+        {
+          "caller": "WriteUnsafe",
+          "callee": "Process.GetCurrentProcess",
+          "lineNumber": 126
+        },
+        {
+          "caller": "WriteUnsafe",
+          "callee": "new Dictionary<string, int>",
+          "lineNumber": 131
+        },
+        {
+          "caller": "WriteUnsafe",
+          "callee": "errors.ToArray",
+          "lineNumber": 132
+        },
+        {
+          "caller": "WriteUnsafe",
+          "callee": "serializer.Serialize",
+          "lineNumber": 134
+        },
+        {
+          "caller": "WriteUnsafe",
+          "callee": "File.WriteAllText",
+          "lineNumber": 136
+        },
+        {
+          "caller": "WriteUnsafe",
+          "callee": "new UTF8Encoding",
+          "lineNumber": 136
+        },
+        {
+          "caller": "WriteUnsafe",
+          "callee": "File.Copy",
+          "lineNumber": 137
+        },
+        {
+          "caller": "WriteUnsafe",
+          "callee": "File.Delete",
+          "lineNumber": 138
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "dotnet/CadStudio.SolidWorks.AddinHost/Properties/AssemblyInfo.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 10,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "dotnet/CadStudio.SolidWorks.AddinHost/PropertyPageHandler.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 59,
+      "nonEmptyLines": 56,
+      "functions": [
+        {
+          "name": "PropertyPageHandler",
+          "startLine": 16,
+          "endLine": 19,
+          "params": [
+            "activityRecorder"
+          ]
+        },
+        {
+          "name": "AfterActivation",
+          "startLine": 21,
+          "endLine": 21,
+          "params": []
+        },
+        {
+          "name": "AfterClose",
+          "startLine": 22,
+          "endLine": 22,
+          "params": []
+        },
+        {
+          "name": "OnActiveXControlCreated",
+          "startLine": 23,
+          "endLine": 23,
+          "params": [
+            "id",
+            "status"
+          ]
+        },
+        {
+          "name": "OnButtonPress",
+          "startLine": 24,
+          "endLine": 24,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "OnCheckboxCheck",
+          "startLine": 25,
+          "endLine": 25,
+          "params": [
+            "id",
+            "isChecked"
+          ]
+        },
+        {
+          "name": "OnClose",
+          "startLine": 26,
+          "endLine": 26,
+          "params": [
+            "reason"
+          ]
+        },
+        {
+          "name": "OnComboboxEditChanged",
+          "startLine": 27,
+          "endLine": 27,
+          "params": [
+            "id",
+            "text"
+          ]
+        },
+        {
+          "name": "OnComboboxSelectionChanged",
+          "startLine": 28,
+          "endLine": 28,
+          "params": [
+            "id",
+            "item"
+          ]
+        },
+        {
+          "name": "OnGainedFocus",
+          "startLine": 29,
+          "endLine": 29,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "OnGroupCheck",
+          "startLine": 30,
+          "endLine": 30,
+          "params": [
+            "id",
+            "isChecked"
+          ]
+        },
+        {
+          "name": "OnGroupExpand",
+          "startLine": 31,
+          "endLine": 31,
+          "params": [
+            "id",
+            "expanded"
+          ]
+        },
+        {
+          "name": "OnHelp",
+          "startLine": 32,
+          "endLine": 32,
+          "params": []
+        },
+        {
+          "name": "OnKeystroke",
+          "startLine": 33,
+          "endLine": 33,
+          "params": [
+            "wparam",
+            "message",
+            "lparam",
+            "id"
+          ]
+        },
+        {
+          "name": "OnListboxRMBUp",
+          "startLine": 34,
+          "endLine": 34,
+          "params": [
+            "id",
+            "positionX",
+            "positionY"
+          ]
+        },
+        {
+          "name": "OnListboxSelectionChanged",
+          "startLine": 35,
+          "endLine": 35,
+          "params": [
+            "id",
+            "item"
+          ]
+        },
+        {
+          "name": "OnLostFocus",
+          "startLine": 36,
+          "endLine": 36,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "OnNextPage",
+          "startLine": 37,
+          "endLine": 37,
+          "params": []
+        },
+        {
+          "name": "OnNumberboxChanged",
+          "startLine": 38,
+          "endLine": 38,
+          "params": [
+            "id",
+            "value"
+          ]
+        },
+        {
+          "name": "OnNumberBoxTrackingCompleted",
+          "startLine": 39,
+          "endLine": 39,
+          "params": [
+            "id",
+            "value"
+          ]
+        },
+        {
+          "name": "OnOptionCheck",
+          "startLine": 40,
+          "endLine": 40,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "OnPopupMenuItem",
+          "startLine": 41,
+          "endLine": 41,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "OnPopupMenuItemUpdate",
+          "startLine": 42,
+          "endLine": 42,
+          "params": [
+            "id",
+            "retval"
+          ]
+        },
+        {
+          "name": "OnPreview",
+          "startLine": 43,
+          "endLine": 43,
+          "params": []
+        },
+        {
+          "name": "OnPreviousPage",
+          "startLine": 44,
+          "endLine": 44,
+          "params": []
+        },
+        {
+          "name": "OnRedo",
+          "startLine": 45,
+          "endLine": 45,
+          "params": []
+        },
+        {
+          "name": "OnSelectionboxCalloutCreated",
+          "startLine": 46,
+          "endLine": 46,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "OnSelectionboxCalloutDestroyed",
+          "startLine": 47,
+          "endLine": 47,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "OnSelectionboxFocusChanged",
+          "startLine": 48,
+          "endLine": 48,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "OnSelectionboxListChanged",
+          "startLine": 49,
+          "endLine": 49,
+          "params": [
+            "id",
+            "count"
+          ]
+        },
+        {
+          "name": "OnSliderPositionChanged",
+          "startLine": 50,
+          "endLine": 50,
+          "params": [
+            "id",
+            "value"
+          ]
+        },
+        {
+          "name": "OnSliderTrackingCompleted",
+          "startLine": 51,
+          "endLine": 51,
+          "params": [
+            "id",
+            "value"
+          ]
+        },
+        {
+          "name": "OnSubmitSelection",
+          "startLine": 52,
+          "endLine": 52,
+          "params": [
+            "id",
+            "selection",
+            "selectionType",
+            "itemText"
+          ]
+        },
+        {
+          "name": "OnTabClicked",
+          "startLine": 53,
+          "endLine": 53,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "OnTextboxChanged",
+          "startLine": 54,
+          "endLine": 54,
+          "params": [
+            "id",
+            "text"
+          ]
+        },
+        {
+          "name": "OnUndo",
+          "startLine": 55,
+          "endLine": 55,
+          "params": []
+        },
+        {
+          "name": "OnWhatsNew",
+          "startLine": 56,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "OnWindowFromHandleControlCreated",
+          "startLine": 57,
+          "endLine": 57,
+          "params": [
+            "id",
+            "status"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "PropertyPageHandler",
+          "startLine": 8,
+          "endLine": 58,
+          "methods": [
+            "PropertyPageHandler",
+            "AfterActivation",
+            "AfterClose",
+            "OnActiveXControlCreated",
+            "OnButtonPress",
+            "OnCheckboxCheck",
+            "OnClose",
+            "OnComboboxEditChanged",
+            "OnComboboxSelectionChanged",
+            "OnGainedFocus",
+            "OnGroupCheck",
+            "OnGroupExpand",
+            "OnHelp",
+            "OnKeystroke",
+            "OnListboxRMBUp",
+            "OnListboxSelectionChanged",
+            "OnLostFocus",
+            "OnNextPage",
+            "OnNumberboxChanged",
+            "OnNumberBoxTrackingCompleted",
+            "OnOptionCheck",
+            "OnPopupMenuItem",
+            "OnPopupMenuItemUpdate",
+            "OnPreview",
+            "OnPreviousPage",
+            "OnRedo",
+            "OnSelectionboxCalloutCreated",
+            "OnSelectionboxCalloutDestroyed",
+            "OnSelectionboxFocusChanged",
+            "OnSelectionboxListChanged",
+            "OnSliderPositionChanged",
+            "OnSliderTrackingCompleted",
+            "OnSubmitSelection",
+            "OnTabClicked",
+            "OnTextboxChanged",
+            "OnUndo",
+            "OnWhatsNew",
+            "OnWindowFromHandleControlCreated"
+          ],
+          "properties": [
+            "activity"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AfterActivation",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "AfterClose",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "OnActiveXControlCreated",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "OnButtonPress",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "OnCheckboxCheck",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "OnClose",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "OnComboboxEditChanged",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "OnComboboxSelectionChanged",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "OnGainedFocus",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "OnGroupCheck",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "OnGroupExpand",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "OnHelp",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "OnKeystroke",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "OnListboxRMBUp",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "OnListboxSelectionChanged",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "OnLostFocus",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "OnNextPage",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "OnNumberboxChanged",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "OnNumberBoxTrackingCompleted",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "OnOptionCheck",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "OnPopupMenuItem",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "OnPopupMenuItemUpdate",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "OnPreview",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "OnPreviousPage",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "OnRedo",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "OnSelectionboxCalloutCreated",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "OnSelectionboxCalloutDestroyed",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "OnSelectionboxFocusChanged",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "OnSelectionboxListChanged",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "OnSliderPositionChanged",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "OnSliderTrackingCompleted",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "OnSubmitSelection",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "OnTabClicked",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "OnTextboxChanged",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "OnUndo",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "OnWhatsNew",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "OnWindowFromHandleControlCreated",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "PropertyPageHandler",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "AfterActivation",
+          "callee": "activity",
+          "lineNumber": 21
+        },
+        {
+          "caller": "AfterClose",
+          "callee": "activity",
+          "lineNumber": 22
+        },
+        {
+          "caller": "OnButtonPress",
+          "callee": "activity",
+          "lineNumber": 24
+        },
+        {
+          "caller": "OnCheckboxCheck",
+          "callee": "activity",
+          "lineNumber": 25
+        },
+        {
+          "caller": "OnClose",
+          "callee": "activity",
+          "lineNumber": 26
+        },
+        {
+          "caller": "OnComboboxEditChanged",
+          "callee": "activity",
+          "lineNumber": 27
+        },
+        {
+          "caller": "OnComboboxSelectionChanged",
+          "callee": "activity",
+          "lineNumber": 28
+        },
+        {
+          "caller": "OnGainedFocus",
+          "callee": "activity",
+          "lineNumber": 29
+        },
+        {
+          "caller": "OnGroupCheck",
+          "callee": "activity",
+          "lineNumber": 30
+        },
+        {
+          "caller": "OnGroupExpand",
+          "callee": "activity",
+          "lineNumber": 31
+        },
+        {
+          "caller": "OnHelp",
+          "callee": "activity",
+          "lineNumber": 32
+        },
+        {
+          "caller": "OnListboxSelectionChanged",
+          "callee": "activity",
+          "lineNumber": 35
+        },
+        {
+          "caller": "OnNumberboxChanged",
+          "callee": "activity",
+          "lineNumber": 38
+        },
+        {
+          "caller": "OnOptionCheck",
+          "callee": "activity",
+          "lineNumber": 40
+        },
+        {
+          "caller": "OnPopupMenuItem",
+          "callee": "activity",
+          "lineNumber": 41
+        },
+        {
+          "caller": "OnPreview",
+          "callee": "activity",
+          "lineNumber": 43
+        },
+        {
+          "caller": "OnRedo",
+          "callee": "activity",
+          "lineNumber": 45
+        },
+        {
+          "caller": "OnSelectionboxListChanged",
+          "callee": "activity",
+          "lineNumber": 49
+        },
+        {
+          "caller": "OnTabClicked",
+          "callee": "activity",
+          "lineNumber": 53
+        },
+        {
+          "caller": "OnTextboxChanged",
+          "callee": "activity",
+          "lineNumber": 54
+        },
+        {
+          "caller": "OnUndo",
+          "callee": "activity",
+          "lineNumber": 55
+        },
+        {
+          "caller": "OnWhatsNew",
+          "callee": "activity",
+          "lineNumber": 56
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 38,
+        "functionCount": 38,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 398,
+      "nonEmptyLines": 375,
+      "functions": [
+        {
+          "name": "SwAddin",
+          "startLine": 39,
+          "endLine": 42,
+          "params": []
+        },
+        {
+          "name": "Register",
+          "startLine": 45,
+          "endLine": 59,
+          "params": [
+            "type"
+          ]
+        },
+        {
+          "name": "Unregister",
+          "startLine": 62,
+          "endLine": 68,
+          "params": [
+            "type"
+          ]
+        },
+        {
+          "name": "ConnectToSW",
+          "startLine": 71,
+          "endLine": 109,
+          "params": [
+            "thisSw",
+            "cookie"
+          ]
+        },
+        {
+          "name": "DisconnectFromSW",
+          "startLine": 112,
+          "endLine": 119,
+          "params": []
+        },
+        {
+          "name": "ShowPropertyPage",
+          "startLine": 122,
+          "endLine": 139,
+          "params": []
+        },
+        {
+          "name": "ShowTaskPane",
+          "startLine": 142,
+          "endLine": 153,
+          "params": []
+        },
+        {
+          "name": "RefreshDiagnostics",
+          "startLine": 156,
+          "endLine": 159,
+          "params": []
+        },
+        {
+          "name": "EnableCommand",
+          "startLine": 162,
+          "endLine": 165,
+          "params": []
+        },
+        {
+          "name": "CreateCommandGroup",
+          "startLine": 168,
+          "endLine": 194,
+          "params": []
+        },
+        {
+          "name": "CreateMainIcons",
+          "startLine": 197,
+          "endLine": 206,
+          "params": []
+        },
+        {
+          "name": "CreateCommandIconStrips",
+          "startLine": 209,
+          "endLine": 218,
+          "params": []
+        },
+        {
+          "name": "CreateTaskPane",
+          "startLine": 221,
+          "endLine": 233,
+          "params": []
+        },
+        {
+          "name": "CreatePropertyManagerPage",
+          "startLine": 236,
+          "endLine": 275,
+          "params": []
+        },
+        {
+          "name": "AttachApplicationEvents",
+          "startLine": 278,
+          "endLine": 285,
+          "params": []
+        },
+        {
+          "name": "DetachApplicationEvents",
+          "startLine": 288,
+          "endLine": 299,
+          "params": []
+        },
+        {
+          "name": "ReleaseHostResources",
+          "startLine": 302,
+          "endLine": 333,
+          "params": []
+        },
+        {
+          "name": "TryRelease",
+          "startLine": 336,
+          "endLine": 348,
+          "params": [
+            "area",
+            "release"
+          ]
+        },
+        {
+          "name": "OnActiveModelDocChange",
+          "startLine": 350,
+          "endLine": 350,
+          "params": []
+        },
+        {
+          "name": "OnFileOpenPost",
+          "startLine": 351,
+          "endLine": 351,
+          "params": [
+            "fileName"
+          ]
+        },
+        {
+          "name": "OnFileNew",
+          "startLine": 352,
+          "endLine": 361,
+          "params": [
+            "newDocument",
+            "documentType",
+            "templateName"
+          ]
+        },
+        {
+          "name": "OnFileClose",
+          "startLine": 362,
+          "endLine": 362,
+          "params": [
+            "fileName",
+            "reason"
+          ]
+        },
+        {
+          "name": "CreateIconFile",
+          "startLine": 365,
+          "endLine": 396,
+          "params": [
+            "fileName",
+            "size",
+            "glyphCount"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "SwAddin",
+          "startLine": 13,
+          "endLine": 397,
+          "methods": [
+            "SwAddin",
+            "Register",
+            "Unregister",
+            "ConnectToSW",
+            "DisconnectFromSW",
+            "ShowPropertyPage",
+            "ShowTaskPane",
+            "RefreshDiagnostics",
+            "EnableCommand",
+            "CreateCommandGroup",
+            "CreateMainIcons",
+            "CreateCommandIconStrips",
+            "CreateTaskPane",
+            "CreatePropertyManagerPage",
+            "AttachApplicationEvents",
+            "DetachApplicationEvents",
+            "ReleaseHostResources",
+            "TryRelease",
+            "OnActiveModelDocChange",
+            "OnFileOpenPost",
+            "OnFileNew",
+            "OnFileClose",
+            "CreateIconFile"
+          ],
+          "properties": [
+            "AddinGuid",
+            "CommandGroupId",
+            "PropertyPageLabelId",
+            "PropertyPageTextId",
+            "PropertyPageButtonId",
+            "diagnostics",
+            "swApp",
+            "applicationEvents",
+            "commandManager",
+            "commandGroup",
+            "taskPane",
+            "taskPaneControl",
+            "propertyPage",
+            "propertyPageHandler",
+            "addinCookie",
+            "commandGroupReady",
+            "taskPaneReady",
+            "propertyManagerPageReady"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AddinGuid",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "SwAddin",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "Register",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "Unregister",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "ConnectToSW",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "DisconnectFromSW",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "ShowPropertyPage",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "ShowTaskPane",
+          "line": 142,
+          "isDefault": false
+        },
+        {
+          "name": "RefreshDiagnostics",
+          "line": 156,
+          "isDefault": false
+        },
+        {
+          "name": "EnableCommand",
+          "line": 162,
+          "isDefault": false
+        },
+        {
+          "name": "SwAddin",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SwAddin",
+          "callee": "diagnostics.RecordEvent",
+          "lineNumber": 41
+        },
+        {
+          "caller": "Register",
+          "callee": "Registry.LocalMachine.CreateSubKey",
+          "lineNumber": 49
+        },
+        {
+          "caller": "Register",
+          "callee": "addin.SetValue",
+          "lineNumber": 51
+        },
+        {
+          "caller": "Register",
+          "callee": "addin.SetValue",
+          "lineNumber": 52
+        },
+        {
+          "caller": "Register",
+          "callee": "addin.SetValue",
+          "lineNumber": 53
+        },
+        {
+          "caller": "Register",
+          "callee": "Registry.CurrentUser.CreateSubKey",
+          "lineNumber": 55
+        },
+        {
+          "caller": "Register",
+          "callee": "startup.SetValue",
+          "lineNumber": 57
+        },
+        {
+          "caller": "Unregister",
+          "callee": "Registry.LocalMachine.DeleteSubKeyTree",
+          "lineNumber": 66
+        },
+        {
+          "caller": "Unregister",
+          "callee": "Registry.CurrentUser.DeleteSubKeyTree",
+          "lineNumber": 67
+        },
+        {
+          "caller": "ConnectToSW",
+          "callee": "swApp.SetAddinCallbackInfo2",
+          "lineNumber": 77
+        },
+        {
+          "caller": "ConnectToSW",
+          "callee": "diagnostics.MarkConnection",
+          "lineNumber": 78
+        },
+        {
+          "caller": "ConnectToSW",
+          "callee": "swApp.RevisionNumber",
+          "lineNumber": 78
+        },
+        {
+          "caller": "ConnectToSW",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 81
+        },
+        {
+          "caller": "ConnectToSW",
+          "callee": "diagnostics.RecordEvent",
+          "lineNumber": 83
+        },
+        {
+          "caller": "ConnectToSW",
+          "callee": "AttachApplicationEvents",
+          "lineNumber": 84
+        },
+        {
+          "caller": "ConnectToSW",
+          "callee": "diagnostics.RecordEvent",
+          "lineNumber": 85
+        },
+        {
+          "caller": "ConnectToSW",
+          "callee": "CreateCommandGroup",
+          "lineNumber": 86
+        },
+        {
+          "caller": "ConnectToSW",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 89
+        },
+        {
+          "caller": "ConnectToSW",
+          "callee": "diagnostics.RecordEvent",
+          "lineNumber": 91
+        },
+        {
+          "caller": "ConnectToSW",
+          "callee": "CreateTaskPane",
+          "lineNumber": 92
+        },
+        {
+          "caller": "ConnectToSW",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 95
+        },
+        {
+          "caller": "ConnectToSW",
+          "callee": "diagnostics.RecordEvent",
+          "lineNumber": 97
+        },
+        {
+          "caller": "ConnectToSW",
+          "callee": "CreatePropertyManagerPage",
+          "lineNumber": 98
+        },
+        {
+          "caller": "ConnectToSW",
+          "callee": "diagnostics.MarkUi",
+          "lineNumber": 99
+        },
+        {
+          "caller": "ConnectToSW",
+          "callee": "ReleaseHostResources",
+          "lineNumber": 104
+        },
+        {
+          "caller": "ConnectToSW",
+          "callee": "diagnostics.MarkDisconnected",
+          "lineNumber": 105
+        },
+        {
+          "caller": "ConnectToSW",
+          "callee": "diagnostics.RecordError",
+          "lineNumber": 106
+        },
+        {
+          "caller": "DisconnectFromSW",
+          "callee": "ReleaseHostResources",
+          "lineNumber": 114
+        },
+        {
+          "caller": "DisconnectFromSW",
+          "callee": "diagnostics.MarkDisconnected",
+          "lineNumber": 115
+        },
+        {
+          "caller": "DisconnectFromSW",
+          "callee": "GC.Collect",
+          "lineNumber": 116
+        },
+        {
+          "caller": "DisconnectFromSW",
+          "callee": "GC.WaitForPendingFinalizers",
+          "lineNumber": 117
+        },
+        {
+          "caller": "ShowPropertyPage",
+          "callee": "CreatePropertyManagerPage",
+          "lineNumber": 126
+        },
+        {
+          "caller": "ShowPropertyPage",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 128
+        },
+        {
+          "caller": "ShowPropertyPage",
+          "callee": "diagnostics.MarkUi",
+          "lineNumber": 131
+        },
+        {
+          "caller": "ShowPropertyPage",
+          "callee": "propertyPage.Show2",
+          "lineNumber": 132
+        },
+        {
+          "caller": "ShowPropertyPage",
+          "callee": "diagnostics.RecordEvent",
+          "lineNumber": 133
+        },
+        {
+          "caller": "ShowPropertyPage",
+          "callee": "diagnostics.RecordError",
+          "lineNumber": 137
+        },
+        {
+          "caller": "ShowTaskPane",
+          "callee": "taskPane?.ShowView",
+          "lineNumber": 146
+        },
+        {
+          "caller": "ShowTaskPane",
+          "callee": "diagnostics.RecordEvent",
+          "lineNumber": 147
+        },
+        {
+          "caller": "ShowTaskPane",
+          "callee": "diagnostics.RecordError",
+          "lineNumber": 151
+        },
+        {
+          "caller": "RefreshDiagnostics",
+          "callee": "diagnostics.Flush",
+          "lineNumber": 158
+        },
+        {
+          "caller": "CreateCommandGroup",
+          "callee": "swApp.GetCommandManager",
+          "lineNumber": 170
+        },
+        {
+          "caller": "CreateCommandGroup",
+          "callee": "commandManager.CreateCommandGroup2",
+          "lineNumber": 172
+        },
+        {
+          "caller": "CreateCommandGroup",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 182
+        },
+        {
+          "caller": "CreateCommandGroup",
+          "callee": "CreateMainIcons",
+          "lineNumber": 185
+        },
+        {
+          "caller": "CreateCommandGroup",
+          "callee": "CreateCommandIconStrips",
+          "lineNumber": 186
+        },
+        {
+          "caller": "CreateCommandGroup",
+          "callee": "commandGroup.AddCommandItem2",
+          "lineNumber": 190
+        },
+        {
+          "caller": "CreateCommandGroup",
+          "callee": "nameof",
+          "lineNumber": 190
+        },
+        {
+          "caller": "CreateCommandGroup",
+          "callee": "nameof",
+          "lineNumber": 190
+        },
+        {
+          "caller": "CreateCommandGroup",
+          "callee": "commandGroup.AddCommandItem2",
+          "lineNumber": 191
+        },
+        {
+          "caller": "CreateCommandGroup",
+          "callee": "nameof",
+          "lineNumber": 191
+        },
+        {
+          "caller": "CreateCommandGroup",
+          "callee": "nameof",
+          "lineNumber": 191
+        },
+        {
+          "caller": "CreateCommandGroup",
+          "callee": "commandGroup.AddCommandItem2",
+          "lineNumber": 192
+        },
+        {
+          "caller": "CreateCommandGroup",
+          "callee": "nameof",
+          "lineNumber": 192
+        },
+        {
+          "caller": "CreateCommandGroup",
+          "callee": "nameof",
+          "lineNumber": 192
+        },
+        {
+          "caller": "CreateCommandGroup",
+          "callee": "commandGroup.Activate",
+          "lineNumber": 193
+        },
+        {
+          "caller": "CreateMainIcons",
+          "callee": "CreateIconFile",
+          "lineNumber": 203
+        },
+        {
+          "caller": "CreateCommandIconStrips",
+          "callee": "CreateIconFile",
+          "lineNumber": 215
+        },
+        {
+          "caller": "CreateTaskPane",
+          "callee": "CreateIconFile",
+          "lineNumber": 223
+        },
+        {
+          "caller": "CreateTaskPane",
+          "callee": "swApp.CreateTaskpaneView2",
+          "lineNumber": 224
+        },
+        {
+          "caller": "CreateTaskPane",
+          "callee": "new TaskPaneControl",
+          "lineNumber": 229
+        },
+        {
+          "caller": "CreateTaskPane",
+          "callee": "swApp.RevisionNumber",
+          "lineNumber": 229
+        },
+        {
+          "caller": "CreateTaskPane",
+          "callee": "taskPaneControl.CreateControl",
+          "lineNumber": 230
+        },
+        {
+          "caller": "CreateTaskPane",
+          "callee": "taskPane.DisplayWindowFromHandlex64",
+          "lineNumber": 231
+        },
+        {
+          "caller": "CreateTaskPane",
+          "callee": "taskPaneControl.Handle.ToInt64",
+          "lineNumber": 231
+        },
+        {
+          "caller": "CreateTaskPane",
+          "callee": "taskPane.ShowView",
+          "lineNumber": 232
+        },
+        {
+          "caller": "CreatePropertyManagerPage",
+          "callee": "new PropertyPageHandler",
+          "lineNumber": 238
+        },
+        {
+          "caller": "CreatePropertyManagerPage",
+          "callee": "swApp.ICreatePropertyManagerPage",
+          "lineNumber": 243
+        },
+        {
+          "caller": "CreatePropertyManagerPage",
+          "callee": "propertyPage.AddControl2",
+          "lineNumber": 250
+        },
+        {
+          "caller": "CreatePropertyManagerPage",
+          "callee": "propertyPage.AddControl2",
+          "lineNumber": 258
+        },
+        {
+          "caller": "CreatePropertyManagerPage",
+          "callee": "propertyPage.AddControl2",
+          "lineNumber": 266
+        },
+        {
+          "caller": "ReleaseHostResources",
+          "callee": "TryRelease",
+          "lineNumber": 305
+        },
+        {
+          "caller": "ReleaseHostResources",
+          "callee": "TryRelease",
+          "lineNumber": 306
+        },
+        {
+          "caller": "ReleaseHostResources",
+          "callee": "propertyPage.Close",
+          "lineNumber": 308
+        },
+        {
+          "caller": "ReleaseHostResources",
+          "callee": "TryRelease",
+          "lineNumber": 310
+        },
+        {
+          "caller": "ReleaseHostResources",
+          "callee": "taskPane.DeleteView",
+          "lineNumber": 312
+        },
+        {
+          "caller": "ReleaseHostResources",
+          "callee": "TryRelease",
+          "lineNumber": 314
+        },
+        {
+          "caller": "ReleaseHostResources",
+          "callee": "taskPaneControl.Dispose",
+          "lineNumber": 316
+        },
+        {
+          "caller": "ReleaseHostResources",
+          "callee": "TryRelease",
+          "lineNumber": 318
+        },
+        {
+          "caller": "ReleaseHostResources",
+          "callee": "commandManager.RemoveCommandGroup2",
+          "lineNumber": 320
+        },
+        {
+          "caller": "TryRelease",
+          "callee": "release",
+          "lineNumber": 340
+        },
+        {
+          "caller": "TryRelease",
+          "callee": "diagnostics.RecordError",
+          "lineNumber": 345
+        },
+        {
+          "caller": "OnActiveModelDocChange",
+          "callee": "diagnostics.RecordEvent",
+          "lineNumber": 350
+        },
+        {
+          "caller": "OnFileOpenPost",
+          "callee": "diagnostics.RecordEvent",
+          "lineNumber": 351
+        },
+        {
+          "caller": "OnFileNew",
+          "callee": "diagnostics.RecordEvent",
+          "lineNumber": 354
+        },
+        {
+          "caller": "OnFileNew",
+          "callee": "CreatePropertyManagerPage",
+          "lineNumber": 357
+        },
+        {
+          "caller": "OnFileNew",
+          "callee": "diagnostics.MarkUi",
+          "lineNumber": 358
+        },
+        {
+          "caller": "OnFileClose",
+          "callee": "diagnostics.RecordEvent",
+          "lineNumber": 362
+        },
+        {
+          "caller": "CreateIconFile",
+          "callee": "Path.Combine",
+          "lineNumber": 367
+        },
+        {
+          "caller": "CreateIconFile",
+          "callee": "Directory.CreateDirectory",
+          "lineNumber": 368
+        },
+        {
+          "caller": "CreateIconFile",
+          "callee": "File.Exists",
+          "lineNumber": 369
+        },
+        {
+          "caller": "CreateIconFile",
+          "callee": "new Bitmap",
+          "lineNumber": 373
+        },
+        {
+          "caller": "CreateIconFile",
+          "callee": "Graphics.FromImage",
+          "lineNumber": 374
+        },
+        {
+          "caller": "CreateIconFile",
+          "callee": "new SolidBrush",
+          "lineNumber": 375
+        },
+        {
+          "caller": "CreateIconFile",
+          "callee": "Color.FromArgb",
+          "lineNumber": 375
+        },
+        {
+          "caller": "CreateIconFile",
+          "callee": "new SolidBrush",
+          "lineNumber": 376
+        },
+        {
+          "caller": "CreateIconFile",
+          "callee": "new Font",
+          "lineNumber": 377
+        },
+        {
+          "caller": "CreateIconFile",
+          "callee": "Math.Max",
+          "lineNumber": 377
+        },
+        {
+          "caller": "CreateIconFile",
+          "callee": "graphics.Clear",
+          "lineNumber": 379
+        },
+        {
+          "caller": "CreateIconFile",
+          "callee": "graphics.FillRectangle",
+          "lineNumber": 383
+        },
+        {
+          "caller": "CreateIconFile",
+          "callee": "graphics.DrawString",
+          "lineNumber": 384
+        },
+        {
+          "caller": "CreateIconFile",
+          "callee": "new PointF",
+          "lineNumber": 384
+        },
+        {
+          "caller": "CreateIconFile",
+          "callee": "Path.GetExtension(path).Equals",
+          "lineNumber": 386
+        },
+        {
+          "caller": "CreateIconFile",
+          "callee": "Path.GetExtension",
+          "lineNumber": 386
+        },
+        {
+          "caller": "CreateIconFile",
+          "callee": "bitmap.Save",
+          "lineNumber": 388
+        },
+        {
+          "caller": "CreateIconFile",
+          "callee": "bitmap.Save",
+          "lineNumber": 392
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 11,
+        "functionCount": 23,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "dotnet/CadStudio.SolidWorks.AddinHost/TaskPaneControl.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 58,
+      "nonEmptyLines": 54,
+      "functions": [
+        {
+          "name": "TaskPaneControl",
+          "startLine": 13,
+          "endLine": 56,
+          "params": [
+            "revision",
+            "diagnosticPath",
+            "showPropertyPage",
+            "refreshDiagnostics"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "TaskPaneControl",
+          "startLine": 8,
+          "endLine": 57,
+          "methods": [
+            "TaskPaneControl"
+          ],
+          "properties": [
+            "stateLabel"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "TaskPaneControl",
+          "callee": "new Padding",
+          "lineNumber": 17
+        },
+        {
+          "caller": "TaskPaneControl",
+          "callee": "new Label",
+          "lineNumber": 19
+        },
+        {
+          "caller": "TaskPaneControl",
+          "callee": "new Font",
+          "lineNumber": 22
+        },
+        {
+          "caller": "TaskPaneControl",
+          "callee": "new Point",
+          "lineNumber": 24
+        },
+        {
+          "caller": "TaskPaneControl",
+          "callee": "new Label",
+          "lineNumber": 26
+        },
+        {
+          "caller": "TaskPaneControl",
+          "callee": "new Size",
+          "lineNumber": 29
+        },
+        {
+          "caller": "TaskPaneControl",
+          "callee": "new Point",
+          "lineNumber": 30
+        },
+        {
+          "caller": "TaskPaneControl",
+          "callee": "new Button",
+          "lineNumber": 33
+        },
+        {
+          "caller": "TaskPaneControl",
+          "callee": "new Size",
+          "lineNumber": 36
+        },
+        {
+          "caller": "TaskPaneControl",
+          "callee": "new Point",
+          "lineNumber": 37
+        },
+        {
+          "caller": "TaskPaneControl",
+          "callee": "new Button",
+          "lineNumber": 39
+        },
+        {
+          "caller": "TaskPaneControl",
+          "callee": "new Size",
+          "lineNumber": 42
+        },
+        {
+          "caller": "TaskPaneControl",
+          "callee": "new Point",
+          "lineNumber": 43
+        },
+        {
+          "caller": "TaskPaneControl",
+          "callee": "showPropertyPage",
+          "lineNumber": 45
+        },
+        {
+          "caller": "TaskPaneControl",
+          "callee": "refreshDiagnostics",
+          "lineNumber": 48
+        },
+        {
+          "caller": "TaskPaneControl",
+          "callee": "Controls.Add",
+          "lineNumber": 52
+        },
+        {
+          "caller": "TaskPaneControl",
+          "callee": "Controls.Add",
+          "lineNumber": 53
+        },
+        {
+          "caller": "TaskPaneControl",
+          "callee": "Controls.Add",
+          "lineNumber": 54
+        },
+        {
+          "caller": "TaskPaneControl",
+          "callee": "Controls.Add",
+          "lineNumber": 55
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "examples/03_assembly.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 56,
+      "nonEmptyLines": 46,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 16,
+          "endLine": 53,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "connect_solidworks",
+          "lineNumber": 17
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 20
+        },
+        {
+          "caller": "main",
+          "callee": "new_document",
+          "lineNumber": 21
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 24
+        },
+        {
+          "caller": "main",
+          "callee": "add_component",
+          "lineNumber": 28
+        },
+        {
+          "caller": "main",
+          "callee": "add_component",
+          "lineNumber": 29
+        },
+        {
+          "caller": "main",
+          "callee": "mm",
+          "lineNumber": 29
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 32
+        },
+        {
+          "caller": "main",
+          "callee": "add_mate_coincident",
+          "lineNumber": 34
+        },
+        {
+          "caller": "main",
+          "callee": "add_mate_concentric",
+          "lineNumber": 41
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 48
+        },
+        {
+          "caller": "main",
+          "callee": "get_components",
+          "lineNumber": 49
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 51
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 53
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "examples/04_batch_export.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 42,
+      "nonEmptyLines": 32,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 12,
+          "endLine": 39,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "connect_solidworks",
+          "lineNumber": 13
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 19
+        },
+        {
+          "caller": "main",
+          "callee": "glob.glob",
+          "lineNumber": 22
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 25
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 28
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 28
+        },
+        {
+          "caller": "main",
+          "callee": "batch_export",
+          "lineNumber": 31
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 34
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 37
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 39
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "examples/05_drawing.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 46,
+      "nonEmptyLines": 36,
+      "functions": [
+        {
+          "name": "main",
+          "startLine": 16,
+          "endLine": 43,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "main",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "main",
+          "callee": "connect_solidworks",
+          "lineNumber": 17
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 20
+        },
+        {
+          "caller": "main",
+          "callee": "new_document",
+          "lineNumber": 21
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 27
+        },
+        {
+          "caller": "main",
+          "callee": "create_standard_views",
+          "lineNumber": 28
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 31
+        },
+        {
+          "caller": "main",
+          "callee": "insert_dimensions",
+          "lineNumber": 32
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 35
+        },
+        {
+          "caller": "main",
+          "callee": "add_note",
+          "lineNumber": 36
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 40
+        },
+        {
+          "caller": "main",
+          "callee": "export_sheet_to_pdf",
+          "lineNumber": 41
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 43
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    }
+  ]
+}

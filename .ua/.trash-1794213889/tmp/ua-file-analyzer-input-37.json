@@ -1,0 +1,182 @@
+{
+ "projectRoot": "/Users/tomasz/Developer/solidworks-automation-skill",
+ "batchFiles": [
+  {
+   "path": "scripts/design_spec.py",
+   "language": "python",
+   "sizeLines": 486,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/dfm_profiles.py",
+   "language": "python",
+   "sizeLines": 291,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/dfm_review.py",
+   "language": "python",
+   "sizeLines": 1161,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/drive_sizing.py",
+   "language": "python",
+   "sizeLines": 337,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/dxf_preview_scene.py",
+   "language": "python",
+   "sizeLines": 188,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/fastener_audit.py",
+   "language": "python",
+   "sizeLines": 273,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/fea_analysis.py",
+   "language": "python",
+   "sizeLines": 817,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/fea_convergence.py",
+   "language": "python",
+   "sizeLines": 251,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/headless_cad_writer.py",
+   "language": "python",
+   "sizeLines": 706,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/headless_occt_service.py",
+   "language": "python",
+   "sizeLines": 336,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/http_boundary.py",
+   "language": "python",
+   "sizeLines": 44,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/local_api_evidence.py",
+   "language": "python",
+   "sizeLines": 222,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/parallel_api_lookup.py",
+   "language": "python",
+   "sizeLines": 157,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/release_check.py",
+   "language": "python",
+   "sizeLines": 96,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/routing_review.py",
+   "language": "python",
+   "sizeLines": 520,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/stability_regression.py",
+   "language": "python",
+   "sizeLines": 79,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/standard_parts_geometry.py",
+   "language": "python",
+   "sizeLines": 427,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/sw_addin_host.py",
+   "language": "python",
+   "sizeLines": 172,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/sw_api_lookup.py",
+   "language": "python",
+   "sizeLines": 593,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/sw_appearance.py",
+   "language": "python",
+   "sizeLines": 218,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/sw_assembly.py",
+   "language": "python",
+   "sizeLines": 825,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/sw_assembly_rename.py",
+   "language": "python",
+   "sizeLines": 326,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/sw_capability_probe.py",
+   "language": "python",
+   "sizeLines": 181,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/sw_delivery.py",
+   "language": "python",
+   "sizeLines": 1337,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/sw_delivery_comtypes_worker.py",
+   "language": "python",
+   "sizeLines": 67,
+   "fileCategory": "code"
+  }
+ ],
+ "batchImportData": {
+  "scripts/design_spec.py": [],
+  "scripts/dfm_profiles.py": [],
+  "scripts/dfm_review.py": [],
+  "scripts/drive_sizing.py": [],
+  "scripts/dxf_preview_scene.py": [],
+  "scripts/fastener_audit.py": [],
+  "scripts/fea_analysis.py": [],
+  "scripts/fea_convergence.py": [],
+  "scripts/headless_cad_writer.py": [],
+  "scripts/headless_occt_service.py": [],
+  "scripts/http_boundary.py": [],
+  "scripts/local_api_evidence.py": [],
+  "scripts/parallel_api_lookup.py": [],
+  "scripts/release_check.py": [],
+  "scripts/routing_review.py": [],
+  "scripts/stability_regression.py": [],
+  "scripts/standard_parts_geometry.py": [],
+  "scripts/sw_addin_host.py": [],
+  "scripts/sw_api_lookup.py": [],
+  "scripts/sw_appearance.py": [],
+  "scripts/sw_assembly.py": [],
+  "scripts/sw_assembly_rename.py": [],
+  "scripts/sw_capability_probe.py": [],
+  "scripts/sw_delivery.py": [],
+  "scripts/sw_delivery_comtypes_worker.py": []
+ }
+}

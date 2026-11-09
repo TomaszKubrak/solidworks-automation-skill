@@ -1,0 +1,148 @@
+{
+ "nodes": [
+  {
+   "id": "document:subskills/solidworks-engineering-drawing/references/api-lookup.md",
+   "type": "document",
+   "name": "api-lookup.md",
+   "filePath": "subskills/solidworks-engineering-drawing/references/api-lookup.md",
+   "summary": "Lista kontrolna API rysunków SolidWorks (SetupSheet6, CreateSectionViewAt5, InsertBomTable4 itd.), które trzeba zweryfikować w oficjalnej dokumentacji lub Interop przed implementacją.",
+   "tags": [
+    "documentation",
+    "api-reference",
+    "drawing",
+    "checklist"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:subskills/solidworks-engineering-drawing/references/drawing.md",
+   "type": "document",
+   "name": "drawing.md",
+   "filePath": "subskills/solidworks-engineering-drawing/references/drawing.md",
+   "summary": "Wytyczne generowania rysunków: rzutowanie pierwszym kątem wg GB/T, wymagania dowodowe (odczyt widoków, DisplayDimension, PDF/BMP) i zasady obsługi nowych API.",
+   "tags": [
+    "documentation",
+    "drawing",
+    "gb-t",
+    "evidence"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:subskills/solidworks-engineering-drawing/references/drilling-panel-gdt.md",
+   "type": "document",
+   "name": "drilling-panel-gdt.md",
+   "filePath": "subskills/solidworks-engineering-drawing/references/drilling-panel-gdt.md",
+   "summary": "Opis pilotażowej analizy paneli z otworami (drilling_panel_gdt.py): kandydaci współrzędnych, bazy i GD&T wyłącznie z jawnego profilu, z ograniczeniami i weryfikacją na SW2026 SP1.1.",
+   "tags": [
+    "documentation",
+    "gdt",
+    "drilling-panel",
+    "pilot"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "document:subskills/solidworks-engineering-drawing/references/gdt-extended-options.md",
+   "type": "document",
+   "name": "gdt-extended-options.md",
+   "filePath": "subskills/solidworks-engineering-drawing/references/gdt-extended-options.md",
+   "summary": "Referencja rozszerzonych strukturalnych danych wejściowych GD&T dla SW2026: wspólne bazy, podbazy, modyfikatory i złożone ramki tolerancji w DrawingSpec.",
+   "tags": [
+    "documentation",
+    "gdt",
+    "sw2026",
+    "drawing-spec",
+    "schema"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "document:subskills/solidworks-engineering-drawing/references/native-gdt.md",
+   "type": "document",
+   "name": "native-gdt.md",
+   "filePath": "subskills/solidworks-engineering-drawing/references/native-gdt.md",
+   "summary": "Przewodnik po natywnym GD&T SW2026 i automatycznym nanoszeniu na rysunek (sw_gdt_copy.py): zakres pilota, kolejność działań agenta, ochrona plików źródłowych.",
+   "tags": [
+    "documentation",
+    "gdt",
+    "native-annotations",
+    "workflow",
+    "pilot"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "document:subskills/solidworks-engineering-drawing/references/review.md",
+   "type": "document",
+   "name": "review.md",
+   "filePath": "subskills/solidworks-engineering-drawing/references/review.md",
+   "summary": "Zasady przeglądu rysunków w trzech warstwach dowodowych (struktura, produkcja, wizualna) oraz reguły ścisłego dopasowania wymiarów, otworów, BOM i adnotacji profesjonalnych.",
+   "tags": [
+    "documentation",
+    "drawing-review",
+    "evidence",
+    "validation"
+   ],
+   "complexity": "moderate"
+  }
+ ],
+ "edges": [
+  {
+   "source": "document:subskills/solidworks-engineering-drawing/references/drawing.md",
+   "target": "document:subskills/solidworks-engineering-drawing/references/api-lookup.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:subskills/solidworks-engineering-drawing/references/drawing.md",
+   "target": "document:subskills/solidworks-engineering-drawing/references/review.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:subskills/solidworks-engineering-drawing/references/native-gdt.md",
+   "target": "document:subskills/solidworks-engineering-drawing/references/gdt-extended-options.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:subskills/solidworks-engineering-drawing/references/gdt-extended-options.md",
+   "target": "document:subskills/solidworks-engineering-drawing/references/native-gdt.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:subskills/solidworks-engineering-drawing/references/drilling-panel-gdt.md",
+   "target": "file:subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:subskills/solidworks-engineering-drawing/references/review.md",
+   "target": "file:subskills/solidworks-engineering-drawing/scripts/drawing_review.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:subskills/solidworks-engineering-drawing/references/drawing.md",
+   "target": "file:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:subskills/solidworks-engineering-drawing/references/gdt-extended-options.md",
+   "target": "file:subskills/solidworks-engineering-drawing/scripts/drawing_spec.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  }
+ ]
+}

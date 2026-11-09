@@ -1,0 +1,1277 @@
+{
+ "nodes": [
+  {
+   "id": "file:scripts/validate_mcp.py",
+   "type": "file",
+   "name": "validate_mcp.py",
+   "filePath": "scripts/validate_mcp.py",
+   "summary": "Skrypt walidacyjny uruchamiający serwer MCP przez sesję stdio i sprawdzający tryby full oraz search.",
+   "tags": [
+    "validation",
+    "mcp",
+    "script",
+    "cli"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:scripts/validate_skill.py",
+   "type": "file",
+   "name": "validate_skill.py",
+   "filePath": "scripts/validate_skill.py",
+   "summary": "Skrypt sprawdzający strukturę skilla: wymagane pliki, frontmatter SKILL.md, składnię Pythona i poprawność plików JSON.",
+   "tags": [
+    "validation",
+    "script",
+    "cli",
+    "skill"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:setup.py",
+   "type": "file",
+   "name": "setup.py",
+   "filePath": "setup.py",
+   "summary": "Konfiguracja pakietu setuptools z własną komendą PostInstallCommand uruchamianą po instalacji.",
+   "tags": [
+    "build-system",
+    "packaging",
+    "entry-point",
+    "install"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudio.AutoCAD2024.csproj",
+   "type": "config",
+   "name": "CadStudio.AutoCAD2024.csproj",
+   "filePath": "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudio.AutoCAD2024.csproj",
+   "summary": "Plik projektu .NET dla wtyczki CadStudio do AutoCAD 2024 z referencjami do zarządzanego API.",
+   "tags": [
+    "configuration",
+    "dotnet",
+    "autocad",
+    "build-system"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudioCommands.cs",
+   "type": "file",
+   "name": "CadStudioCommands.cs",
+   "filePath": "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudioCommands.cs",
+   "summary": "Wtyczka AutoCAD w C# rejestrująca komendy Probe i CreateGoldenDrawing, tworząca rysunek wzorcowy, plotująca model i zapisująca raport JSON.",
+   "tags": [
+    "autocad",
+    "dotnet",
+    "plugin",
+    "command-handler"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "config:subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/NuGet.Config",
+   "type": "config",
+   "name": "NuGet.Config",
+   "filePath": "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/NuGet.Config",
+   "summary": "Konfiguracja źródeł NuGet dla projektu wtyczki AutoCAD.",
+   "tags": [
+    "configuration",
+    "nuget",
+    "dotnet"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:subskills/autocad-automation/evals/evals.json",
+   "type": "config",
+   "name": "evals.json",
+   "filePath": "subskills/autocad-automation/evals/evals.json",
+   "summary": "Zestaw przypadków ewaluacyjnych dla subskilla autocad-automation.",
+   "tags": [
+    "evaluation",
+    "configuration",
+    "test-data",
+    "autocad"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:subskills/autocad-automation/examples/draw_mounting_plate.py",
+   "type": "file",
+   "name": "draw_mounting_plate.py",
+   "filePath": "subskills/autocad-automation/examples/draw_mounting_plate.py",
+   "summary": "Przykład rysowania płyty montażowej w AutoCAD za pomocą skryptu Python.",
+   "tags": [
+    "example",
+    "autocad",
+    "cad-drawing",
+    "script"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:subskills/autocad-automation/scripts/acad_dotnet_preflight.py",
+   "type": "file",
+   "name": "acad_dotnet_preflight.py",
+   "filePath": "subskills/autocad-automation/scripts/acad_dotnet_preflight.py",
+   "summary": "Preflight dla ścieżki .NET AutoCAD: wykrywa zarządzane API, SDK, dowody uruchomień i historię runtime.",
+   "tags": [
+    "preflight",
+    "autocad",
+    "dotnet",
+    "diagnostics"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:subskills/autocad-automation/scripts/acad_dotnet_regression.py",
+   "type": "file",
+   "name": "acad_dotnet_regression.py",
+   "filePath": "subskills/autocad-automation/scripts/acad_dotnet_regression.py",
+   "summary": "Uruchamia regresję wtyczki .NET w AutoCAD (accoreconsole), zbiera artefakty i zapisuje wynik z dowodami.",
+   "tags": [
+    "regression",
+    "autocad",
+    "dotnet",
+    "test-runner"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:subskills/autocad-automation/scripts/acad_headless.py",
+   "type": "file",
+   "name": "acad_headless.py",
+   "filePath": "subskills/autocad-automation/scripts/acad_headless.py",
+   "summary": "Bezgłowa inspekcja i renderowanie plików DXF z oceną inżynierską warstw, wymiarów, otworów i ramek.",
+   "tags": [
+    "headless",
+    "dxf",
+    "inspection",
+    "autocad"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:subskills/autocad-automation/scripts/acad_preflight.py",
+   "type": "file",
+   "name": "acad_preflight.py",
+   "filePath": "subskills/autocad-automation/scripts/acad_preflight.py",
+   "summary": "Preflight COM dla AutoCAD sprawdzający pywin32 oraz dostępność aplikacji AutoCAD.",
+   "tags": [
+    "preflight",
+    "autocad",
+    "com",
+    "diagnostics"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "config:subskills/solidworks-engineering-drawing/schemas/drawing_spec.schema.json",
+   "type": "config",
+   "name": "drawing_spec.schema.json",
+   "filePath": "subskills/solidworks-engineering-drawing/schemas/drawing_spec.schema.json",
+   "summary": "Schemat JSON specyfikacji rysunku inżynierskiego (widoki, wymiary, notatki, BOM, tabliczka).",
+   "tags": [
+    "json-schema",
+    "schema-definition",
+    "drawing-spec",
+    "validation"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "config:subskills/solidworks-engineering-drawing/schemas/gdt_copy_spec.schema.json",
+   "type": "config",
+   "name": "gdt_copy_spec.schema.json",
+   "filePath": "subskills/solidworks-engineering-drawing/schemas/gdt_copy_spec.schema.json",
+   "summary": "Schemat JSON specyfikacji kopiowania adnotacji GD&T między rysunkami.",
+   "tags": [
+    "json-schema",
+    "gdt",
+    "schema-definition",
+    "validation"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:subskills/solidworks-engineering-drawing/scripts/__init__.py",
+   "type": "file",
+   "name": "__init__.py",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/__init__.py",
+   "summary": "Znacznik pakietu Pythona dla skryptów rysunku inżynierskiego.",
+   "tags": [
+    "package",
+    "entry-point",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:subskills/solidworks-engineering-drawing/scripts/drawing_review.py",
+   "type": "file",
+   "name": "drawing_review.py",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drawing_review.py",
+   "summary": "Przegląd artefaktów rysunku: porównuje wymiary, otwory, BOM, tabliczkę, widoki, adnotacje i notatki z wymaganiami oraz wykrywa nakładanie się w PDF.",
+   "tags": [
+    "review",
+    "drawing",
+    "validation",
+    "quality-gate"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:subskills/solidworks-engineering-drawing/scripts/drawing_spec.py",
+   "type": "file",
+   "name": "drawing_spec.py",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drawing_spec.py",
+   "summary": "Ładowanie i walidacja specyfikacji rysunku względem schematu JSON z zestawem reguł domenowych.",
+   "tags": [
+    "validation",
+    "drawing-spec",
+    "schema",
+    "utility"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "type": "file",
+   "name": "drawing_workflow.py",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "summary": "Główny workflow generowania rysunku SolidWorks: szablony, układ widoków, wymiary, notatki, BOM, znaczniki środka, eksport PDF i inspekcja struktury.",
+   "tags": [
+    "workflow",
+    "solidworks",
+    "drawing",
+    "orchestration"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py",
+   "type": "file",
+   "name": "drilling_panel_gdt.py",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py",
+   "summary": "Analiza płyt wiertarskich: wykrywanie wzorców otworów, wnioskowanie baz, generowanie GD&T, tabeli otworów i specyfikacji rysunku.",
+   "tags": [
+    "gdt",
+    "hole-pattern",
+    "analysis",
+    "cli"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "config:subskills/solidworks-fillet-chamfer-cnc/agents/openai.yaml",
+   "type": "config",
+   "name": "openai.yaml",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/agents/openai.yaml",
+   "summary": "Definicja interfejsu agenta OpenAI dla skilla fillet/chamfer CNC.",
+   "tags": [
+    "configuration",
+    "agent",
+    "openai"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:subskills/solidworks-fillet-chamfer-cnc/evals/evals.json",
+   "type": "config",
+   "name": "evals.json",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/evals/evals.json",
+   "summary": "Przypadki ewaluacyjne dla skilla fillet/chamfer CNC.",
+   "tags": [
+    "evaluation",
+    "configuration",
+    "test-data",
+    "cnc"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:subskills/solidworks-fillet-chamfer-cnc/examples/cnc_mount_precision_params.json",
+   "type": "config",
+   "name": "cnc_mount_precision_params.json",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/examples/cnc_mount_precision_params.json",
+   "summary": "Przykładowe parametry precyzyjnego uchwytu CNC do planowania promieni i fazek.",
+   "tags": [
+    "example",
+    "parameters",
+    "cnc",
+    "json"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:subskills/solidworks-fillet-chamfer-cnc/examples/open_source_corner_bracket_case.json",
+   "type": "config",
+   "name": "open_source_corner_bracket_case.json",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/examples/open_source_corner_bracket_case.json",
+   "summary": "Przypadek referencyjny narożnego wspornika open source do walidacji strategii fillet/chamfer.",
+   "tags": [
+    "example",
+    "case-study",
+    "cnc",
+    "json"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:subskills/solidworks-fillet-chamfer-cnc/references/cnc-fillet-chamfer-lessons.md",
+   "type": "document",
+   "name": "cnc-fillet-chamfer-lessons.md",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/references/cnc-fillet-chamfer-lessons.md",
+   "summary": "Zbiór wniosków i zasad projektowych dla promieni i fazek w częściach obrabianych CNC.",
+   "tags": [
+    "documentation",
+    "cnc",
+    "fillet-chamfer",
+    "lessons"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py",
+   "type": "file",
+   "name": "cnc_strategy.py",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py",
+   "summary": "Analiza parametrów uchwytu CNC i budowa planu operacji fillet/chamfer wraz z walidacją odstępów i nadpisań.",
+   "tags": [
+    "cnc",
+    "planning",
+    "validation",
+    "dataclass"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/validate_mcp.py:_check_search",
+   "type": "function",
+   "name": "_check_search",
+   "filePath": "scripts/validate_mcp.py",
+   "lineRange": [
+    143,
+    164
+   ],
+   "summary": "Sprawdza tryb search serwera MCP przez wywołania narzędzi w sesji.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/validate_mcp.py:_with_session",
+   "type": "function",
+   "name": "_with_session",
+   "filePath": "scripts/validate_mcp.py",
+   "lineRange": [
+    120,
+    130
+   ],
+   "summary": "Otwiera sesję stdio MCP i wykonuje przekazaną korutynę.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/validate_skill.py:check_json_files",
+   "type": "function",
+   "name": "check_json_files",
+   "filePath": "scripts/validate_skill.py",
+   "lineRange": [
+    119,
+    154
+   ],
+   "summary": "Weryfikuje poprawność wszystkich plików JSON w repozytorium skilla.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/validate_skill.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "scripts/validate_skill.py",
+   "lineRange": [
+    157,
+    163
+   ],
+   "summary": "Uruchamia wszystkie kontrole i zwraca kod wyjścia.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:setup.py:PostInstallCommand",
+   "type": "class",
+   "name": "PostInstallCommand",
+   "filePath": "setup.py",
+   "lineRange": [
+    7,
+    38
+   ],
+   "summary": "Komenda install uruchamiająca kroki poinstalacyjne.",
+   "tags": [
+    "class",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudioCommands.cs:CadStudioCommands",
+   "type": "class",
+   "name": "CadStudioCommands",
+   "filePath": "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudioCommands.cs",
+   "lineRange": [
+    37,
+    319
+   ],
+   "summary": "Klasa komend AutoCAD: Probe, CreateGoldenDrawing, plot i raportowanie.",
+   "tags": [
+    "class",
+    "logic",
+    "autocad"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "class:subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudioCommands.cs:CadStudioExtension",
+   "type": "class",
+   "name": "CadStudioExtension",
+   "filePath": "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudioCommands.cs",
+   "lineRange": [
+    21,
+    34
+   ],
+   "summary": "Punkt wejścia rozszerzenia AutoCAD z Initialize i Terminate.",
+   "tags": [
+    "class",
+    "logic",
+    "autocad"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_dotnet_preflight.py:run_preflight",
+   "type": "function",
+   "name": "run_preflight",
+   "filePath": "subskills/autocad-automation/scripts/acad_dotnet_preflight.py",
+   "lineRange": [
+    171,
+    229
+   ],
+   "summary": "Składa wyniki kontroli SDK i runtime w raport preflight.",
+   "tags": [
+    "function",
+    "logic",
+    "autocad"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_dotnet_regression.py:run_regression",
+   "type": "function",
+   "name": "run_regression",
+   "filePath": "subskills/autocad-automation/scripts/acad_dotnet_regression.py",
+   "lineRange": [
+    184,
+    300
+   ],
+   "summary": "Wykonuje pełną regresję .NET w AutoCAD i utrwala wynik.",
+   "tags": [
+    "function",
+    "logic",
+    "autocad"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_headless.py:inspect_dxf",
+   "type": "function",
+   "name": "inspect_dxf",
+   "filePath": "subskills/autocad-automation/scripts/acad_headless.py",
+   "lineRange": [
+    151,
+    229
+   ],
+   "summary": "Inspekcja DXF: warstwy, wymiary, otwory i ocena inżynierska.",
+   "tags": [
+    "function",
+    "logic",
+    "autocad"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_headless.py:render_dxf",
+   "type": "function",
+   "name": "render_dxf",
+   "filePath": "subskills/autocad-automation/scripts/acad_headless.py",
+   "lineRange": [
+    232,
+    278
+   ],
+   "summary": "Renderuje DXF do obrazu do wizualnej kontroli.",
+   "tags": [
+    "function",
+    "logic",
+    "autocad"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_preflight.py:check_autocad",
+   "type": "function",
+   "name": "check_autocad",
+   "filePath": "subskills/autocad-automation/scripts/acad_preflight.py",
+   "lineRange": [
+    44,
+    108
+   ],
+   "summary": "Sprawdza dostępność i stan aplikacji AutoCAD przez COM.",
+   "tags": [
+    "function",
+    "logic",
+    "autocad"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-engineering-drawing/scripts/drawing_review.py:review_drawing_artifacts",
+   "type": "function",
+   "name": "review_drawing_artifacts",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drawing_review.py",
+   "lineRange": [
+    750,
+    922
+   ],
+   "summary": "Zbiera raporty cząstkowe w końcowy przegląd rysunku.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-engineering-drawing/scripts/drawing_review.py:inspect_pdf_dimension_rendering",
+   "type": "function",
+   "name": "inspect_pdf_dimension_rendering",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drawing_review.py",
+   "lineRange": [
+    581,
+    689
+   ],
+   "summary": "Ocenia renderowanie wymiarów w PDF i ich pola ograniczające.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-engineering-drawing/scripts/drawing_review.py:_professional_annotation_report",
+   "type": "function",
+   "name": "_professional_annotation_report",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drawing_review.py",
+   "lineRange": [
+    417,
+    504
+   ],
+   "summary": "Raportuje adnotacje profesjonalne, w tym ramki GD&T.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-engineering-drawing/scripts/drawing_spec.py:validate_drawing_spec",
+   "type": "function",
+   "name": "validate_drawing_spec",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drawing_spec.py",
+   "lineRange": [
+    57,
+    150
+   ],
+   "summary": "Waliduje specyfikację rysunku i zwraca listę problemów.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-engineering-drawing/scripts/drawing_spec.py:load_drawing_spec",
+   "type": "function",
+   "name": "load_drawing_spec",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drawing_spec.py",
+   "lineRange": [
+    21,
+    34
+   ],
+   "summary": "Wczytuje specyfikację rysunku z pliku JSON.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py:generate_drawing_from_spec",
+   "type": "function",
+   "name": "generate_drawing_from_spec",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "lineRange": [
+    1980,
+    2129
+   ],
+   "summary": "Generuje rysunek SolidWorks na podstawie specyfikacji.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py:generate_drawing_package",
+   "type": "function",
+   "name": "generate_drawing_package",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "lineRange": [
+    2132,
+    2135
+   ],
+   "summary": "Wejście wysokiego poziomu generujące pakiet rysunkowy.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py:inspect_drawing_structure",
+   "type": "function",
+   "name": "inspect_drawing_structure",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "lineRange": [
+    1527,
+    1700
+   ],
+   "summary": "Inspekcja struktury rysunku: widoki, tabele, adnotacje.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py:create_adaptive_standard_views",
+   "type": "function",
+   "name": "create_adaptive_standard_views",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "lineRange": [
+    750,
+    882
+   ],
+   "summary": "Tworzy standardowe widoki z adaptacyjnym układem.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py:plan_standard_view_layout",
+   "type": "function",
+   "name": "plan_standard_view_layout",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "lineRange": [
+    386,
+    520
+   ],
+   "summary": "Planuje układ widoków na arkuszu.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py:auto_insert_center_marks",
+   "type": "function",
+   "name": "auto_insert_center_marks",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "lineRange": [
+    1703,
+    1813
+   ],
+   "summary": "Automatycznie wstawia znaczniki środka.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py:insert_dimensions",
+   "type": "function",
+   "name": "insert_dimensions",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "lineRange": [
+    952,
+    1021
+   ],
+   "summary": "Wstawia wymiary do widoków rysunku.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py:estimate_dimension_text_box",
+   "type": "function",
+   "name": "estimate_dimension_text_box",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "lineRange": [
+    246,
+    336
+   ],
+   "summary": "Szacuje pole tekstu wymiaru do kontroli kolizji.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py:export_sheet_to_pdf",
+   "type": "function",
+   "name": "export_sheet_to_pdf",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "lineRange": [
+    1816,
+    1859
+   ],
+   "summary": "Eksportuje arkusz do PDF.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py:analyze_drilling_panel",
+   "type": "function",
+   "name": "analyze_drilling_panel",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py",
+   "lineRange": [
+    414,
+    460
+   ],
+   "summary": "Analizuje płytę wiertarską: wzorce, bazy, GD&T, tabela.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py:detect_hole_patterns",
+   "type": "function",
+   "name": "detect_hole_patterns",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py",
+   "lineRange": [
+    131,
+    156
+   ],
+   "summary": "Wykrywa wzorce otworów przez klasteryzację współrzędnych.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py:build_drawing_spec",
+   "type": "function",
+   "name": "build_drawing_spec",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py",
+   "lineRange": [
+    507,
+    582
+   ],
+   "summary": "Buduje specyfikację rysunku z wyników analizy.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py:generate_gdt",
+   "type": "function",
+   "name": "generate_gdt",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py",
+   "lineRange": [
+    313,
+    356
+   ],
+   "summary": "Generuje ramki GD&T dla wzorców otworów.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py:HolePattern",
+   "type": "class",
+   "name": "HolePattern",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py",
+   "lineRange": [
+    48,
+    64
+   ],
+   "summary": "Model danych wzorca otworów.",
+   "tags": [
+    "class",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py:Hole",
+   "type": "class",
+   "name": "Hole",
+   "filePath": "subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py",
+   "lineRange": [
+    33,
+    44
+   ],
+   "summary": "Model danych pojedynczego otworu.",
+   "tags": [
+    "class",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py:analyze_parameters",
+   "type": "function",
+   "name": "analyze_parameters",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py",
+   "lineRange": [
+    177,
+    301
+   ],
+   "summary": "Waliduje parametry uchwytu i oblicza odstępy geometryczne.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py:build_operation_plan",
+   "type": "function",
+   "name": "build_operation_plan",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py",
+   "lineRange": [
+    333,
+    381
+   ],
+   "summary": "Buduje uporządkowany plan operacji fillet/chamfer.",
+   "tags": [
+    "function",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py:MountParameters",
+   "type": "class",
+   "name": "MountParameters",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py",
+   "lineRange": [
+    18,
+    51
+   ],
+   "summary": "Dataclass parametrów uchwytu CNC.",
+   "tags": [
+    "class",
+    "logic",
+    "solidworks"
+   ],
+   "complexity": "moderate"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:scripts/validate_mcp.py",
+   "target": "function:scripts/validate_mcp.py:_check_search",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/validate_mcp.py",
+   "target": "function:scripts/validate_mcp.py:_with_session",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/validate_skill.py",
+   "target": "function:scripts/validate_skill.py:check_json_files",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/validate_skill.py",
+   "target": "function:scripts/validate_skill.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:setup.py",
+   "target": "class:setup.py:PostInstallCommand",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudioCommands.cs",
+   "target": "class:subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudioCommands.cs:CadStudioCommands",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudioCommands.cs",
+   "target": "class:subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudioCommands.cs:CadStudioExtension",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_dotnet_preflight.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_dotnet_preflight.py:run_preflight",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_dotnet_regression.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_dotnet_regression.py:run_regression",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_headless.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_headless.py:inspect_dxf",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_headless.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_headless.py:render_dxf",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_preflight.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_preflight.py:check_autocad",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drawing_review.py",
+   "target": "function:subskills/solidworks-engineering-drawing/scripts/drawing_review.py:review_drawing_artifacts",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drawing_review.py",
+   "target": "function:subskills/solidworks-engineering-drawing/scripts/drawing_review.py:inspect_pdf_dimension_rendering",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drawing_review.py",
+   "target": "function:subskills/solidworks-engineering-drawing/scripts/drawing_review.py:_professional_annotation_report",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drawing_spec.py",
+   "target": "function:subskills/solidworks-engineering-drawing/scripts/drawing_spec.py:validate_drawing_spec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drawing_spec.py",
+   "target": "function:subskills/solidworks-engineering-drawing/scripts/drawing_spec.py:load_drawing_spec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "target": "function:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py:generate_drawing_from_spec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "target": "function:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py:generate_drawing_package",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "target": "function:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py:inspect_drawing_structure",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "target": "function:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py:create_adaptive_standard_views",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "target": "function:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py:plan_standard_view_layout",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "target": "function:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py:auto_insert_center_marks",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "target": "function:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py:insert_dimensions",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "target": "function:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py:estimate_dimension_text_box",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "target": "function:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py:export_sheet_to_pdf",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py",
+   "target": "function:subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py:analyze_drilling_panel",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py",
+   "target": "function:subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py:detect_hole_patterns",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py",
+   "target": "function:subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py:build_drawing_spec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py",
+   "target": "function:subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py:generate_gdt",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py",
+   "target": "class:subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py:HolePattern",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py",
+   "target": "class:subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py:Hole",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py:analyze_parameters",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py:build_operation_plan",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py",
+   "target": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py:MountParameters",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "config:subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudio.AutoCAD2024.csproj",
+   "target": "file:subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudioCommands.cs",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "config:subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/NuGet.Config",
+   "target": "config:subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudio.AutoCAD2024.csproj",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "config:subskills/solidworks-engineering-drawing/schemas/drawing_spec.schema.json",
+   "target": "file:subskills/solidworks-engineering-drawing/scripts/drawing_spec.py",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "config:subskills/solidworks-engineering-drawing/schemas/drawing_spec.schema.json",
+   "target": "file:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "config:subskills/solidworks-fillet-chamfer-cnc/examples/cnc_mount_precision_params.json",
+   "target": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:subskills/solidworks-fillet-chamfer-cnc/examples/open_source_corner_bracket_case.json",
+   "target": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:subskills/solidworks-fillet-chamfer-cnc/references/cnc-fillet-chamfer-lessons.md",
+   "target": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:subskills/autocad-automation/examples/draw_mounting_plate.py",
+   "target": "file:subskills/autocad-automation/scripts/acad_preflight.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_dotnet_regression.py",
+   "target": "file:subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudioCommands.cs",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py",
+   "target": "config:subskills/solidworks-engineering-drawing/schemas/drawing_spec.schema.json",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drawing_review.py",
+   "target": "file:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:subskills/solidworks-engineering-drawing/scripts/drawing_review.py",
+   "target": "file:scripts/sw_review.py",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  }
+ ]
+}

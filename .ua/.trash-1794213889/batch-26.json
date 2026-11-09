@@ -1,0 +1,9 @@
+{"nodes":[
+{"id":"document:subskills/autocad-automation/README.md","type":"document","name":"README.md","filePath":"subskills/autocad-automation/README.md","summary":"Przegląd podskilla AutoCAD: zakres (DWG/DXF, wektoryzacja szkiców, warstwy, eksport), relacja do nadrzędnego skilla SolidWorks oraz szybkie komendy preflight i regresji backendu .NET.","tags":["documentation","autocad","dwg-dxf","overview"],"complexity":"moderate"},
+{"id":"document:subskills/autocad-automation/SKILL.md","type":"document","name":"SKILL.md","filePath":"subskills/autocad-automation/SKILL.md","summary":"Główna instrukcja skilla AutoCAD: założenia, kontrola wejścia, workflow, bezpośrednie rysowanie, wybór ścieżki technicznej, reguły inżynierskie i kryteria akceptacji.","tags":["documentation","skill","autocad","workflow","entry-point"],"complexity":"complex"},
+{"id":"config:subskills/autocad-automation/manifest.yaml","type":"config","name":"manifest.yaml","filePath":"subskills/autocad-automation/manifest.yaml","summary":"Manifest podskilla AutoCAD: lista skryptów Pythona, referencji, projektu .NET oraz zależności od skilla solidworks-automation i powiązań z innymi podskillami.","tags":["configuration","manifest","autocad","skill-metadata"],"complexity":"simple"}
+],"edges":[
+{"source":"document:subskills/autocad-automation/README.md","target":"document:subskills/autocad-automation/SKILL.md","type":"related","direction":"forward","weight":0.5},
+{"source":"config:subskills/autocad-automation/manifest.yaml","target":"document:subskills/autocad-automation/SKILL.md","type":"configures","direction":"forward","weight":0.6},
+{"source":"config:subskills/autocad-automation/manifest.yaml","target":"document:subskills/autocad-automation/README.md","type":"related","direction":"forward","weight":0.5}
+]}

@@ -1,0 +1,5996 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 398,
+  "totalBatches": 41,
+  "exportsByPath": {
+    ".gitattributes": [],
+    ".github/CODEOWNERS": [],
+    ".mcpbignore": [],
+    "ai_team/delivery-gate-e2e.cjs": [],
+    "ai_team/preview-viewport-e2e.cjs": [],
+    "ai_team/provider-ui-e2e.cjs": [],
+    "ai_team/release-portable-e2e.cjs": [],
+    "ai_team/ui-layout-check.cjs": [],
+    "ai_team/workbench-e2e-final.cjs": [],
+    "apps/desktop/__init__.py": [],
+    "apps/desktop/cad_workbench/__init__.py": [],
+    "apps/desktop/cad_workbench/agent_contracts.py": [
+      "AgentRole",
+      "AgentRunPolicy",
+      "EnterpriseAgentProfile",
+      "profile_to_json",
+      "load_profile",
+      "compile_codex_prompt",
+      "safe_job_id",
+      "_strip_windows_extended_prefix",
+      "_canonical_path",
+      "_path_is_within",
+      "resolve_workspace",
+      "codex_output_path",
+      "agent_output_path",
+      "validate_codex_job",
+      "policy_reasons",
+      "is_policy_approved",
+      "require_policy_approval"
+    ],
+    "apps/desktop/cad_workbench/agent_providers.py": [
+      "AgentProvider",
+      "_node_command",
+      "_first_executable",
+      "resolve_provider",
+      "build_provider_command",
+      "_result_from_value",
+      "_result_from_text",
+      "_normalise_unified_result",
+      "parse_provider_result",
+      "probe_provider"
+    ],
+    "apps/desktop/cad_workbench/app.py": [
+      "MainWindow"
+    ],
+    "apps/desktop/cad_workbench/artifact_ledger.py": [
+      "ledger_dir",
+      "ledger_path_for",
+      "sha256_file",
+      "_candidate_paths",
+      "_artifact_base_dir",
+      "_artifact_key",
+      "_recorded_path_key",
+      "normalize_artifact_baseline",
+      "artifact_requires_current_run_proof",
+      "_covered_by_baseline",
+      "collect_artifact_paths",
+      "_describe_artifact",
+      "describe_artifact",
+      "build_artifact_ledger",
+      "write_artifact_ledger"
+    ],
+    "apps/desktop/cad_workbench/cad_core_contracts.py": [
+      "CoordinateSystem",
+      "NeutralFeature",
+      "NeutralCadDocument",
+      "PreviewManifest",
+      "EvidenceNode",
+      "EvidenceEdge",
+      "EvidenceGraph",
+      "_asdict",
+      "sha256_file",
+      "write_json_contract",
+      "read_json_contract",
+      "preview_manifest_for_artifact",
+      "enrich_job_with_core_contracts"
+    ],
+    "apps/desktop/cad_workbench/core.py": [
+      "now_iso",
+      "default_output_root",
+      "repo_root",
+      "slugify_project_name",
+      "write_json",
+      "read_json",
+      "ensure_project_tree",
+      "build_project_payload",
+      "default_parameters",
+      "create_project"
+    ],
+    "apps/desktop/cad_workbench/engineering_orchestrator.py": [
+      "CapabilityLevel",
+      "PhaseStatus",
+      "RetryPolicy",
+      "CapabilityRoute",
+      "EngineeringPhase",
+      "EngineeringPlan",
+      "engineering_plan_from_dict",
+      "_CapabilityDefinition",
+      "requires_engineering_orchestration",
+      "_unique",
+      "_enum_values",
+      "_normalise_level",
+      "_route",
+      "_phase_status",
+      "_phase",
+      "build_engineering_plan",
+      "infer_affected_phases",
+      "replan_for_local_change"
+    ],
+    "apps/desktop/cad_workbench/knowledge_retrieval.py": [
+      "_NoRedirectHandler",
+      "KnowledgeChunk",
+      "default_knowledge_roots",
+      "_iter_documents",
+      "_document_text",
+      "_chunks",
+      "_tokens",
+      "_title",
+      "retrieve_local_knowledge",
+      "retrieve_cloud_knowledge",
+      "_api_knowledge",
+      "build_job_knowledge_context"
+    ],
+    "apps/desktop/cad_workbench/mock_runner.py": [
+      "_assert_inside",
+      "_log",
+      "_is_number",
+      "validate_parameters",
+      "run_mock"
+    ],
+    "apps/desktop/cad_workbench/queue_worker.py": [
+      "_capability_block_reasons",
+      "JobCancelled",
+      "JobBlocked",
+      "_codex_windowsapps_candidates",
+      "_node_codex_command",
+      "resolve_codex_command",
+      "default_tauri_queue_dir",
+      "read_job",
+      "write_job",
+      "_queue_write_delay",
+      "atomic_replace_with_retry",
+      "atomic_write_json",
+      "cancel_marker_path",
+      "is_cancel_requested",
+      "worker_id",
+      "lock_path_for",
+      "quarantine_dir",
+      "events_dir",
+      "logs_dir",
+      "event_path_for",
+      "log_paths_for",
+      "append_event",
+      "parse_iso",
+      "lease_until",
+      "is_expired",
+      "quarantine_bad_job",
+      "acquire_lock",
+      "release_lock",
+      "mark_job_claimed",
+      "refresh_job_heartbeat",
+      "request_cancel",
+      "approve_job",
+      "mark_approval_required",
+      "recover_stale_jobs",
+      "append_worker_event",
+      "set_job_state",
+      "_domain_evidence_status",
+      "mock_create_shell",
+      "mock_import_model",
+      "mock_delivery_package",
+      "build_codex_prompt",
+      "_artifact_roots",
+      "_path_in_roots",
+      "_resolve_job_path",
+      "_dfm_input_path",
+      "_dfm_output_path",
+      "_dfm_synthetic_document",
+      "run_dfm_review_job",
+      "_snapshot_cad_artifacts",
+      "_validate_codex_result",
+      "_provider_id_for_job",
+      "record_provider_verification",
+      "previous_engineering_plan",
+      "run_agent_job",
+      "run_codex_job",
+      "_run_command",
+      "_run_command_with_runtime",
+      "terminate_process",
+      "_primary_capability",
+      "_execute_handler_with_core",
+      "_record_verification_assessment",
+      "process_job",
+      "build_handlers",
+      "process_queue",
+      "watch_queue",
+      "main"
+    ],
+    "apps/desktop/cad_workbench/reviewer_gate.py": [
+      "review_dir",
+      "review_path_for",
+      "_read_file_sample",
+      "_artifact_extension",
+      "_text_sample",
+      "validate_known_format",
+      "_close_measurement",
+      "_same_envelope",
+      "_unique_triplets",
+      "_dimension_triplets",
+      "_diameters",
+      "_json_measurements",
+      "_trusted_measurement_payload",
+      "_artifact_measurements",
+      "_spec_conformance_checks",
+      "evaluate_ledger",
+      "write_reviewer_gate"
+    ],
+    "apps/desktop/cad_workbench/style.py": [],
+    "apps/desktop/cad_workbench/worker_health.py": [
+      "health_path_for",
+      "count_jobs",
+      "health_level",
+      "write_worker_health",
+      "read_worker_health"
+    ],
+    "apps/desktop/run.py": [
+      "main"
+    ],
+    "apps/workbench-ui/src-tauri/build.rs": [],
+    "apps/workbench-ui/src-tauri/examples/verify_updater_signature.rs": [],
+    "apps/workbench-ui/src-tauri/icons/icon.icns": [],
+    "apps/workbench-ui/src-tauri/src/lib.rs": [
+      "run"
+    ],
+    "apps/workbench-ui/src-tauri/src/main.rs": [],
+    "apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs": [],
+    "apps/workbench-ui/src/App.tsx": [],
+    "apps/workbench-ui/src/CadPreview.tsx": [
+      "CadPreview"
+    ],
+    "apps/workbench-ui/src/assets/default-blossom-poster.webp": [],
+    "apps/workbench-ui/src/assets/wallpaper-anime-sky.webp": [],
+    "apps/workbench-ui/src/assets/wallpaper-fuji.webp": [],
+    "apps/workbench-ui/src/assets/wallpaper-tokyo-neon.webp": [],
+    "apps/workbench-ui/src/components/AppUpdatePanel.tsx": [
+      "AppUpdatePanel"
+    ],
+    "apps/workbench-ui/src/components/ArtifactBrowser.tsx": [
+      "ArtifactBrowser"
+    ],
+    "apps/workbench-ui/src/components/ConversationControls.tsx": [
+      "ConversationControls"
+    ],
+    "apps/workbench-ui/src/components/EnvironmentRemediationPanel.tsx": [
+      "EnvironmentRemediationPanel"
+    ],
+    "apps/workbench-ui/src/components/ManualReviewPanel.tsx": [
+      "ManualReviewPanel"
+    ],
+    "apps/workbench-ui/src/components/ProjectSwitcher.tsx": [
+      "ProjectSwitcher"
+    ],
+    "apps/workbench-ui/src/components/TaskSequence.tsx": [
+      "TaskSequence"
+    ],
+    "apps/workbench-ui/src/domain/artifacts.ts": [
+      "deliveryFileExtensions",
+      "artifactRequiresCurrentRunProof",
+      "fileNameFromPath",
+      "artifactKindLabel",
+      "artifactGroup",
+      "groupedArtifacts",
+      "formatBytes",
+      "artifactStatusLabel",
+      "deliveryFormatStatus",
+      "collectJobArtifacts"
+    ],
+    "apps/workbench-ui/src/domain/delivery.test.ts": [],
+    "apps/workbench-ui/src/domain/delivery.ts": [
+      "retryStageLabel",
+      "retryStageForJob",
+      "assessDelivery",
+      "backendDiagnosticsFor",
+      "artifactVersionComparison",
+      "createRunSnapshot"
+    ],
+    "apps/workbench-ui/src/domain/jobs.ts": [
+      "jobStatusLabel",
+      "sidebarJobStatusLabel",
+      "conciseTaskTitle",
+      "jobDisplayTitle"
+    ],
+    "apps/workbench-ui/src/domain/projects.ts": [
+      "LEGACY_PROJECT_ID",
+      "DEFAULT_PROJECT",
+      "jobProjectId",
+      "newProjectId",
+      "normalizeProjectName",
+      "latestProjectConversation",
+      "filterProjects",
+      "duplicateProjectRecord",
+      "hasActiveProjectJobs",
+      "terminalProjectJobs"
+    ],
+    "apps/workbench-ui/src/domain/updateProgress.test.ts": [],
+    "apps/workbench-ui/src/domain/updateProgress.ts": [
+      "updateDownloadProgress"
+    ],
+    "apps/workbench-ui/src/main.tsx": [],
+    "apps/workbench-ui/src/persistence.test.ts": [],
+    "apps/workbench-ui/src/persistence.ts": [
+      "isTauriRuntime",
+      "parsePersistedJson",
+      "readPersistedState",
+      "writePersistedState"
+    ],
+    "apps/workbench-ui/src/preview/DxfViewport.tsx": [
+      "DxfViewport"
+    ],
+    "apps/workbench-ui/src/preview/ModelViewport.tsx": [
+      "ModelViewport"
+    ],
+    "apps/workbench-ui/src/preview/PreviewEvidencePanel.tsx": [
+      "PreviewEvidencePanel"
+    ],
+    "apps/workbench-ui/src/preview/PreviewInspector.tsx": [
+      "PreviewInspector"
+    ],
+    "apps/workbench-ui/src/preview/PreviewShowcase.tsx": [
+      "PreviewShowcase"
+    ],
+    "apps/workbench-ui/src/preview/PreviewStatus.tsx": [
+      "PreviewStatus"
+    ],
+    "apps/workbench-ui/src/preview/PreviewToolbar.tsx": [
+      "PreviewToolbar"
+    ],
+    "apps/workbench-ui/src/preview/demoScenes.ts": [
+      "DEMO_SCENES"
+    ],
+    "apps/workbench-ui/src/preview/dxfWorker.ts": [],
+    "apps/workbench-ui/src/preview/previewTypes.ts": [],
+    "apps/workbench-ui/src/preview/previewUtils.ts": [
+      "extensionOf",
+      "dirnameOf",
+      "resolveSiblingPath",
+      "modeForPath",
+      "mimeType",
+      "fileName",
+      "formatBounds",
+      "hasWebGlSupport"
+    ],
+    "apps/workbench-ui/src/types.ts": [],
+    "apps/workbench-ui/vite.config.ts": [],
+    "dotnet/CadStudio.SolidWorks.AddinHost/CadStudio.AddinHost.snk.base64": [],
+    "dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs": [],
+    "dotnet/CadStudio.SolidWorks.AddinHost/Properties/AssemblyInfo.cs": [],
+    "dotnet/CadStudio.SolidWorks.AddinHost/PropertyPageHandler.cs": [
+      "AfterActivation",
+      "AfterClose",
+      "OnActiveXControlCreated",
+      "OnButtonPress",
+      "OnCheckboxCheck",
+      "OnClose",
+      "OnComboboxEditChanged",
+      "OnComboboxSelectionChanged",
+      "OnGainedFocus",
+      "OnGroupCheck",
+      "OnGroupExpand",
+      "OnHelp",
+      "OnKeystroke",
+      "OnListboxRMBUp",
+      "OnListboxSelectionChanged",
+      "OnLostFocus",
+      "OnNextPage",
+      "OnNumberboxChanged",
+      "OnNumberBoxTrackingCompleted",
+      "OnOptionCheck",
+      "OnPopupMenuItem",
+      "OnPopupMenuItemUpdate",
+      "OnPreview",
+      "OnPreviousPage",
+      "OnRedo",
+      "OnSelectionboxCalloutCreated",
+      "OnSelectionboxCalloutDestroyed",
+      "OnSelectionboxFocusChanged",
+      "OnSelectionboxListChanged",
+      "OnSliderPositionChanged",
+      "OnSliderTrackingCompleted",
+      "OnSubmitSelection",
+      "OnTabClicked",
+      "OnTextboxChanged",
+      "OnUndo",
+      "OnWhatsNew",
+      "OnWindowFromHandleControlCreated",
+      "PropertyPageHandler"
+    ],
+    "dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs": [
+      "AddinGuid",
+      "SwAddin",
+      "Register",
+      "Unregister",
+      "ConnectToSW",
+      "DisconnectFromSW",
+      "ShowPropertyPage",
+      "ShowTaskPane",
+      "RefreshDiagnostics",
+      "EnableCommand",
+      "SwAddin"
+    ],
+    "dotnet/CadStudio.SolidWorks.AddinHost/TaskPaneControl.cs": [],
+    "examples/01_basic_part.py": [
+      "main"
+    ],
+    "examples/02_complex_part.py": [
+      "main"
+    ],
+    "examples/03_assembly.py": [
+      "main"
+    ],
+    "examples/04_batch_export.py": [
+      "main"
+    ],
+    "examples/05_drawing.py": [
+      "main"
+    ],
+    "examples/06_friendly_api.py": [
+      "main"
+    ],
+    "examples/07_motion_study_rotary_motor.py": [
+      "main"
+    ],
+    "examples/08_mini_fan_motion_assembly.py": [
+      "save_and_close",
+      "create_base",
+      "create_stand",
+      "create_impeller",
+      "create_front_guard",
+      "set_component_fixed",
+      "add_plane_coincident_mate",
+      "add_plane_distance_mate",
+      "create_assembly",
+      "main"
+    ],
+    "examples/generate_fea_convergence_example.py": [
+      "build_hex_cantilever",
+      "build_study",
+      "main"
+    ],
+    "install.js": [],
+    "mcp-server/approval.py": [
+      "default_root",
+      "ApprovalError",
+      "_locked",
+      "ApprovalLedger",
+      "_unsigned",
+      "_normalize_path",
+      "_within"
+    ],
+    "mcp-server/artifact_access.py": [
+      "ArtifactAccess"
+    ],
+    "mcp-server/discovery.py": [
+      "_is_read_like",
+      "_normalize",
+      "_contains",
+      "_metadata",
+      "ToolCatalog"
+    ],
+    "mcp-server/document_identity.py": [
+      "DocumentIdentityError",
+      "_path",
+      "_pid",
+      "DocumentIdentity",
+      "bind_document",
+      "verify_bound_document",
+      "has_bound_document"
+    ],
+    "mcp-server/gate.py": [
+      "_Confirm",
+      "ToolGate",
+      "allowed_reason"
+    ],
+    "mcp-server/http_transport.py": [
+      "TokenAuthMiddleware"
+    ],
+    "mcp-server/policy.py": [
+      "Effect",
+      "needs_active_document_identity",
+      "supports_document_identity",
+      "classify",
+      "registered_names",
+      "requires_approval",
+      "targets",
+      "canonical_digest",
+      "summarize",
+      "_walk",
+      "_strings"
+    ],
+    "mcp-server/register_all_ai_mcp.js": [],
+    "mcp-server/server.py": [
+      "_load_automation_modules",
+      "ResponseFormat",
+      "DocType",
+      "ExportFormat",
+      "BasicPartShape",
+      "AppearanceTarget",
+      "HoleFeatureKind",
+      "BaseInput",
+      "SolidWorksConnectInput",
+      "SolidWorksApiLookupInput",
+      "CadStudioBackendRouteInput",
+      "CadStudioOpenFormatInput",
+      "CadStudioDxfPreviewInput",
+      "CadStudioDrcReviewInput",
+      "CadStudioDfmReviewInput",
+      "CadStudioRoutingReviewInput",
+      "CadStudioRoutingPreflightInput",
+      "CadStudioFeaPreflightInput",
+      "CadStudioFeaPrepareInput",
+      "CadStudioFeaRunInput",
+      "CadStudioFeaConvergenceInput",
+      "CadStudioAdvancedGeometryInput",
+      "CadStudioOcpLoftInput",
+      "CadStudioOcpSurfaceInput",
+      "SolidWorksHealthCheckInput",
+      "SolidWorksSketchOnPlaneInput",
+      "SolidWorksRevolveInput",
+      "SolidWorksFilletInput",
+      "SolidWorksChamferInput",
+      "SolidWorksShellInput",
+      "SolidWorksPatternInput",
+      "SolidWorksMirrorInput",
+      "SolidWorksEdgeInspectionInput",
+      "SolidWorksMassPropertiesInput",
+      "SolidWorksBoundingBoxInput",
+      "SolidWorksInterferenceInput",
+      "SolidWorksUnitsInput",
+      "DesignSpecValidateInput",
+      "DesignSpecBuildInput",
+      "SolidWorksRecoverInput",
+      "SolidWorksNewDocumentInput",
+      "SolidWorksCreateBasicPartInput",
+      "SolidWorksOpenDocumentInput",
+      "SolidWorksSaveDocumentInput",
+      "SolidWorksCloseDocumentsInput",
+      "SolidWorksAddComponentInput",
+      "SolidWorksSetComponentFixedInput",
+      "SolidWorksExportInput",
+      "SolidWorksDimensionUpdateInput",
+      "SolidWorksAddinHostStatusInput",
+      "SolidWorksConfigurationCreateInput",
+      "SolidWorksConfigurationInspectInput",
+      "SolidWorksConfigurationActivateInput",
+      "SolidWorksCustomPropertiesInput",
+      "SolidWorksBatchExportInput",
+      "SolidWorksBomExportInput",
+      "SolidWorksPackAndGoInput",
+      "SolidWorksReviewInput",
+      "SolidWorksGenerateDrawingInput",
+      "SolidWorksReviewDrawingInput",
+      "SolidWorksInspectDrawingInput",
+      "SolidWorksHoleFeatureInput",
+      "HoleExpectationInput",
+      "SolidWorksHoleInspectionInput",
+      "SolidWorksPlaneCoincidentMateInput",
+      "SolidWorksPlaneDistanceMateInput",
+      "SolidWorksConcentricMateInput",
+      "SolidWorksSetAppearanceInput",
+      "SolidWorksRotaryMotorInput",
+      "SolidWorksMotionAuditInput",
+      "SolidWorksMotionValidationInput",
+      "_coinitialize",
+      "_active_model_required",
+      "_active_assembly_required",
+      "_active_part_required",
+      "_model_summary",
+      "_component_summary",
+      "_set_component_fixed",
+      "_result",
+      "_artifact_access",
+      "_tool_error",
+      "_run_locked",
+      "cadstudio_resolve_backend",
+      "cadstudio_write_open_format",
+      "cadstudio_build_dxf_preview_scene",
+      "cadstudio_check_drc",
+      "cadstudio_list_drc_rules",
+      "cadstudio_check_dfm",
+      "cadstudio_check_routing",
+      "cadstudio_routing_preflight",
+      "solidworks_addin_host_status",
+      "cadstudio_fea_preflight",
+      "cadstudio_prepare_fea",
+      "cadstudio_run_fea",
+      "cadstudio_run_fea_convergence",
+      "cadstudio_review_advanced_geometry",
+      "cadstudio_create_ocp_loft",
+      "cadstudio_create_ocp_surface",
+      "solidworks_connect",
+      "solidworks_lookup_api",
+      "solidworks_health_check",
+      "_enumerate_solidworks_windows",
+      "solidworks_recover",
+      "solidworks_new_document",
+      "solidworks_create_basic_part",
+      "_edge_spec_from",
+      "_run_feature_with_edges",
+      "solidworks_list_edges",
+      "solidworks_sketch_and_extrude",
+      "solidworks_revolve",
+      "solidworks_fillet",
+      "solidworks_chamfer",
+      "solidworks_shell",
+      "solidworks_pattern",
+      "solidworks_mirror_feature",
+      "solidworks_mass_properties",
+      "solidworks_bounding_box",
+      "solidworks_interference_check",
+      "solidworks_document_units",
+      "design_spec_validate",
+      "design_spec_build",
+      "solidworks_open_document",
+      "solidworks_add_component",
+      "solidworks_set_component_fixed",
+      "solidworks_save_document",
+      "solidworks_close_documents",
+      "solidworks_add_coincident_mate",
+      "solidworks_add_distance_mate",
+      "solidworks_add_concentric_mate",
+      "solidworks_set_appearance",
+      "solidworks_export_active",
+      "solidworks_inspect_configurations",
+      "solidworks_create_configuration",
+      "solidworks_activate_configuration",
+      "solidworks_update_dimension",
+      "solidworks_set_custom_properties",
+      "solidworks_batch_export_files",
+      "solidworks_export_assembly_bom",
+      "solidworks_pack_and_go_tool",
+      "solidworks_review_active",
+      "_drawing_report_path",
+      "solidworks_generate_drawing",
+      "solidworks_review_drawing",
+      "solidworks_inspect_drawing",
+      "solidworks_create_hole_feature",
+      "solidworks_inspect_hole_features",
+      "solidworks_add_rotary_motor",
+      "solidworks_inspect_motion_studies",
+      "solidworks_validate_motion_study",
+      "ArtifactReadInput",
+      "cadstudio_read_artifact",
+      "read_artifact_resource",
+      "sw_search_tools",
+      "sw_describe_tool",
+      "sw_call_tool",
+      "main"
+    ],
+    "scripts/__init__.py": [
+      "__getattr__"
+    ],
+    "scripts/advanced_geometry.py": [
+      "_now_iso",
+      "_versioned_target",
+      "_sha256",
+      "_id",
+      "_positive",
+      "_load_plan",
+      "_refs",
+      "validate_geometry_plan",
+      "_require_types",
+      "_validate_operation",
+      "geometry_preflight",
+      "write_preflight_report",
+      "main"
+    ],
+    "scripts/advanced_geometry_ocp.py": [
+      "_suppress_native_stdout",
+      "_now_iso",
+      "_identifier",
+      "_finite",
+      "_point2",
+      "_segments_intersect",
+      "_validate_simple_polygon",
+      "_load_request",
+      "validate_ocp_loft_request",
+      "_make_wire",
+      "build_ocp_loft_shape",
+      "_expected_section_bounds",
+      "_verify_section_envelope",
+      "_shape_evidence",
+      "_verify_reopened_evidence",
+      "_sha256",
+      "_versioned_stem",
+      "_write_shape",
+      "_reopen_shape",
+      "execute_ocp_loft",
+      "_blocked",
+      "_failed"
+    ],
+    "scripts/advanced_surface_ocp.py": [
+      "_now_iso",
+      "_load_request",
+      "_finite",
+      "_point3",
+      "_validate_common",
+      "_trusted_artifact",
+      "validate_surface_request",
+      "collect_surface_continuity_evidence",
+      "_smooth_loft",
+      "_circle_wire",
+      "_sweep",
+      "_topology_counts",
+      "collect_curvature_radius_evidence",
+      "_knit",
+      "_thicken",
+      "_persist_result",
+      "execute_advanced_surface",
+      "_surface_result"
+    ],
+    "scripts/api_environment.py": [
+      "SetupCancelled",
+      "_setup_lock",
+      "_run_setup",
+      "setup_enabled",
+      "_missing",
+      "ensure_python_packages",
+      "_portable_root",
+      "_valid_portable",
+      "_download",
+      "ensure_sevenzip"
+    ],
+    "scripts/api_help_restore.py": [
+      "_registered_source",
+      "_signed_by_solidworks",
+      "_msi_rows",
+      "_msi_metadata",
+      "_extract_bounded",
+      "_matches_installer_hash",
+      "restore_local_help"
+    ],
+    "scripts/api_intent.py": [
+      "natural_language_candidates",
+      "task_candidates",
+      "task_years"
+    ],
+    "scripts/backend_router.py": [
+      "build_parser",
+      "route_report",
+      "main"
+    ],
+    "scripts/build_from_spec.py": [
+      "_safe",
+      "_feature_name",
+      "_rotate_point",
+      "expand_hole_patterns",
+      "_create_base",
+      "validate_holes_inside_base",
+      "_hole_center_m",
+      "_create_hole",
+      "build_from_spec"
+    ],
+    "scripts/build_skill_release.py": [
+      "release_version",
+      "_digest",
+      "_entry_name",
+      "build_skill_archive",
+      "verify_skill_archive",
+      "verify_desktop_skill",
+      "verify_installed_skill",
+      "main"
+    ],
+    "scripts/build_smithery_mcpb.py": [
+      "collect_tool_cards",
+      "build_smithery_bundle",
+      "main"
+    ],
+    "scripts/cad_diagnostics.py": [
+      "_redact",
+      "create_diagnostic_bundle",
+      "main"
+    ],
+    "scripts/cad_doctor.py": [
+      "_check",
+      "_collect_remediations",
+      "_is_writable",
+      "_solidworks_installation",
+      "run_doctor",
+      "main"
+    ],
+    "scripts/cad_installation.py": [
+      "resolve_shortcut_target",
+      "_unique_paths",
+      "_shortcut_info",
+      "_shortcut_paths",
+      "_version_metadata",
+      "_uninstall_registry_candidates",
+      "_registry_paths",
+      "_candidate_drives",
+      "_common_candidates",
+      "discover_installations",
+      "discover_installation",
+      "_com_registered",
+      "discover_all"
+    ],
+    "scripts/cad_studio.py": [
+      "_print_json",
+      "_queue_jobs",
+      "_job_path",
+      "_retry_from_stage",
+      "_run_history_snapshot",
+      "prepare_job_for_retry",
+      "main"
+    ],
+    "scripts/capabilities.py": [
+      "manifest_path",
+      "load_capabilities",
+      "capability_index",
+      "backend_index",
+      "operation_route_index",
+      "resolve_operation_backend",
+      "backend_route_snapshot",
+      "capability_level",
+      "unattended_allowed",
+      "capability_snapshot"
+    ],
+    "scripts/ci/cad_ci_guard.cjs": [],
+    "scripts/ci/capture_governance_attestation.cjs": [],
+    "scripts/ci/check_governance_drift.cjs": [],
+    "scripts/ci/governance_attestation.cjs": [],
+    "scripts/ci/governance_trust_root.cjs": [],
+    "scripts/core/__init__.py": [],
+    "scripts/core/capability.py": [
+      "load_capabilities",
+      "get_capability",
+      "get_operation_route",
+      "get_backend_candidates",
+      "resolve_backend",
+      "requires_review",
+      "get_capability_status",
+      "capability_gap"
+    ],
+    "scripts/core/execution.py": [
+      "normalize_tool_payload",
+      "_extract_message",
+      "_extract_outputs",
+      "_extract_error_code",
+      "_exception_summary",
+      "ExecutionAssessment",
+      "_trace",
+      "execute_with_core"
+    ],
+    "scripts/core/recovery.py": [
+      "ErrorKind",
+      "_coerce_kind",
+      "_hint_kind",
+      "_classify_exception",
+      "_verification_fail_present",
+      "_classify_blocked",
+      "_classify_verification",
+      "_classify_capability",
+      "_classify_execution",
+      "classify_error",
+      "_resolve_fallback",
+      "_trace_decision",
+      "decide"
+    ],
+    "scripts/core/state.py": [
+      "now_iso",
+      "RunStatus",
+      "StepStatus",
+      "VerificationStatus",
+      "InvalidStateTransition",
+      "_coerce_enum",
+      "_serialize",
+      "can_transition_run",
+      "can_transition_step",
+      "ensure_run_transition",
+      "ensure_step_transition",
+      "_JsonModel",
+      "VerificationResult",
+      "RecoveryDecision",
+      "ExecutionResult",
+      "StepRecord",
+      "RunContext"
+    ],
+    "scripts/core/trace.py": [
+      "sanitize_id",
+      "events_dir",
+      "trace_path_for",
+      "redact",
+      "_event_key",
+      "append_event",
+      "emit",
+      "read_events"
+    ],
+    "scripts/core/verification.py": [
+      "normalize_status",
+      "aggregate_statuses",
+      "check_status",
+      "aggregate_checks",
+      "_coerce_results",
+      "_status_from_result",
+      "_result_reason",
+      "_result_error_code",
+      "_dedup_artifacts",
+      "_trace_event",
+      "_execution_summary",
+      "verify"
+    ],
+    "scripts/delivery_compare.py": [
+      "_sha256",
+      "snapshot_files",
+      "compare_snapshots",
+      "build_regeneration_request"
+    ],
+    "scripts/design_audit.py": [
+      "finding_fingerprint",
+      "attach_fingerprints",
+      "_actionable",
+      "diff_findings",
+      "_waiver_matches",
+      "_date_le",
+      "validate_waiver",
+      "apply_waivers",
+      "gated_status",
+      "_band",
+      "risk_score",
+      "summarize_audit",
+      "assert_no_regression"
+    ],
+    "scripts/design_rule_check.py": [
+      "_now_iso",
+      "_num",
+      "_check",
+      "_load_document",
+      "_extract_context",
+      "rule_geometry",
+      "rule_holes",
+      "gear_min_teeth_without_undercut",
+      "rule_standard_parts",
+      "rule_assembly",
+      "rule_drawing",
+      "rule_ligament",
+      "rule_thread_vs_thickness",
+      "rule_relations",
+      "rule_fastener",
+      "rule_drives",
+      "_rule_clause",
+      "list_rules",
+      "_document_scalars",
+      "_compare",
+      "_apply_custom_rule",
+      "_resolve_profile",
+      "_aggregate_status",
+      "_resolve_rule_packs",
+      "build_drc_report",
+      "_load_document_json",
+      "write_drc_report",
+      "main"
+    ],
+    "scripts/design_rule_profiles.py": [
+      "DrcProfileError",
+      "_require",
+      "_number",
+      "_validate_custom_rule",
+      "validate_profile",
+      "load_profile",
+      "list_rule_packs",
+      "load_rule_pack",
+      "merge_profiles"
+    ],
+    "scripts/design_spec.py": [
+      "DesignSpecError",
+      "unit_scale",
+      "to_mm",
+      "_positive",
+      "_position",
+      "validate_design_spec",
+      "load_design_spec",
+      "compare_verification"
+    ],
+    "scripts/dfm_profiles.py": [
+      "DfmProfileError",
+      "_canonical_hash",
+      "_positive_number",
+      "_positive_vector",
+      "validate_profile",
+      "_resolve_profile_path",
+      "load_profile",
+      "load_profiles",
+      "_intersect_casefold",
+      "merge_profiles"
+    ],
+    "scripts/dfm_review.py": [
+      "_now_iso",
+      "_sha256_file",
+      "_versioned_target",
+      "_load_document",
+      "_document_to_mm",
+      "_manufacturing",
+      "_normalize_process",
+      "_number",
+      "_sequence_numbers",
+      "_material",
+      "_feature_params",
+      "_box_bounds",
+      "_cylinder_bounds",
+      "_bounds",
+      "_canonical_sha256",
+      "_brep_size",
+      "_load_brep_evidence",
+      "_hole_diameters",
+      "_check",
+      "_critical_missing",
+      "_common_checks",
+      "_machining_checks",
+      "_sheet_metal_checks",
+      "_laser_checks",
+      "_printing_checks",
+      "_fits_envelope",
+      "_injection_molding_checks",
+      "_profile_checks",
+      "build_dfm_report",
+      "write_dfm_report",
+      "main"
+    ],
+    "scripts/drawing_spec.py": [],
+    "scripts/drive_sizing.py": [
+      "_boolean",
+      "_num",
+      "motion_profile",
+      "static_force_n",
+      "validate_drive_spec",
+      "compute_drive",
+      "_check",
+      "evaluate_drive",
+      "main"
+    ],
+    "scripts/dxf_preview_scene.py": [
+      "_point",
+      "_circle_points",
+      "_dimension_points",
+      "_entity_payload",
+      "_bounds",
+      "dxf_to_preview_scene",
+      "main"
+    ],
+    "scripts/fastener_audit.py": [
+      "_num",
+      "nominal_from_thread",
+      "head_dimensions",
+      "_check",
+      "parse_fastener_hole",
+      "audit_fastener_hole",
+      "audit_orientation_consistency",
+      "audit_relief",
+      "audit_fastener_holes",
+      "counterbores_from_cylinders"
+    ],
+    "scripts/fea_analysis.py": [
+      "_now_iso",
+      "_versioned_target",
+      "_sha256",
+      "_load_request",
+      "_finite_number",
+      "_windows_user_environment",
+      "_drive_roots",
+      "_standard_solver_candidates",
+      "_identifier",
+      "_calculix_id_lines",
+      "validate_analysis",
+      "_validate_nonlinear_extensions",
+      "_validate_sets",
+      "_validate_load",
+      "discover_solver",
+      "parse_calculix_results",
+      "build_calculix_input",
+      "_blocked",
+      "run_analysis",
+      "main"
+    ],
+    "scripts/fea_convergence.py": [
+      "_now_iso",
+      "_finite_positive",
+      "_identifier",
+      "_load_request",
+      "_physics_fingerprint",
+      "validate_convergence_request",
+      "_versioned_directory",
+      "_relative_change_percent",
+      "run_convergence_study"
+    ],
+    "scripts/headless_cad_writer.py": [
+      "_feature_params",
+      "_versioned_target",
+      "_run_occt_service",
+      "_box_mesh",
+      "_cylinder_mesh",
+      "_normal",
+      "_validate_document",
+      "_triangles",
+      "write_ascii_stl",
+      "write_obj",
+      "_feature_radius",
+      "_document_2d_geometry",
+      "_unsupported_2d_features",
+      "write_dxf",
+      "_add_gbt_frame",
+      "write_svg",
+      "_pdf_escape",
+      "write_pdf",
+      "_png_chunk",
+      "write_png",
+      "write_rendered_dxf_format",
+      "export_headless",
+      "main"
+    ],
+    "scripts/headless_occt_service.py": [
+      "UnsupportedFeatureError",
+      "_params",
+      "_positive",
+      "_versioned_target",
+      "_document_height",
+      "build_shape",
+      "collect_evidence",
+      "_mesh_shape",
+      "export_occt",
+      "_write_result",
+      "main"
+    ],
+    "scripts/http_boundary.py": [
+      "validate_https_url",
+      "_NoRedirect",
+      "read_https_response"
+    ],
+    "scripts/local_api_evidence.py": [
+      "_find_sevenzip",
+      "_cache_dir",
+      "_cache_path",
+      "save_document",
+      "_valid_document",
+      "load_document",
+      "_TitleText",
+      "read_local_help"
+    ],
+    "scripts/parallel_api_lookup.py": [
+      "ParallelLookupError",
+      "ParallelLookupCancelled",
+      "_official_url",
+      "_payload",
+      "_verified_extract",
+      "_query",
+      "_guard",
+      "retrieve_parallel_document"
+    ],
+    "scripts/release_check.py": [
+      "_version",
+      "find_bundled_skill_drift",
+      "run_release_check"
+    ],
+    "scripts/routing_review.py": [
+      "_now_iso",
+      "_point",
+      "_finite_number",
+      "_distance",
+      "_segment_hits_box",
+      "_path_points",
+      "_native_addin_registration",
+      "_registry_has",
+      "probe_solidworks_routing",
+      "build_routing_report",
+      "review_routing_file",
+      "main"
+    ],
+    "scripts/stability_regression.py": [
+      "FakeCadProcess",
+      "LifecycleHarness",
+      "run_regression"
+    ],
+    "scripts/standard_parts_geometry.py": [
+      "_finite",
+      "_positive",
+      "_integer",
+      "involute",
+      "_polar_to_xy",
+      "SpurGearGeometry",
+      "spur_gear_profile",
+      "CompressionSpringGeometry",
+      "compression_spring_helix",
+      "RollerSprocketGeometry",
+      "roller_sprocket_profile",
+      "polygon_is_closed_ccw"
+    ],
+    "scripts/sw_addin_host.py": [
+      "_registry_key_exists",
+      "_read_diagnostics",
+      "_process_is_running",
+      "probe_addin_host",
+      "main"
+    ],
+    "scripts/sw_api_lookup.py": [
+      "LookupCancelled",
+      "_identifier",
+      "official_api_url",
+      "_process_executable",
+      "_executable_version",
+      "_executable_year",
+      "_running_target",
+      "_installed_target",
+      "_type_text",
+      "_lookup_typelib",
+      "_lookup_typelib_initialized",
+      "_NextDataParser",
+      "_PlainText",
+      "_NoRedirect",
+      "_SemanticPage",
+      "retrieve_official_document",
+      "_cached_official_document",
+      "lookup_api",
+      "lookup_task",
+      "main"
+    ],
+    "scripts/sw_appearance.py": [
+      "rgb01",
+      "material_values",
+      "material_variant",
+      "_configuration_args",
+      "_try_set",
+      "get_material_property_values",
+      "verify_appearance",
+      "set_document_appearance",
+      "set_feature_appearance",
+      "set_component_appearance",
+      "apply_component_palette",
+      "apply_named_appearance"
+    ],
+    "scripts/sw_assembly.py": [
+      "_empty_callout",
+      "_select_by_id",
+      "_as_alias_list",
+      "_active_solidworks_app",
+      "_activate_model_document",
+      "_add_component5",
+      "_add_component4",
+      "add_component",
+      "resolve_component",
+      "get_component_model",
+      "get_component_feature",
+      "get_assembly_entity",
+      "get_component_feature_entity",
+      "find_largest_cylinder_face",
+      "select_entities_for_mate",
+      "add_mate5_checked",
+      "add_concentric_mate_by_cylinders",
+      "add_gear_mate_by_cylinders",
+      "add_revolute_joint_by_cylinders",
+      "build_transform_data_x",
+      "apply_component_transform_x",
+      "iter_feature_tree",
+      "collect_mate_feature_summary",
+      "inspect_component_dofs",
+      "create_math_transform",
+      "inspect_native_mates",
+      "add_mate_coincident",
+      "add_mate_concentric",
+      "add_mate_distance",
+      "add_mate_parallel",
+      "get_components",
+      "find_component_by_name",
+      "suppress_component",
+      "unsuppress_component",
+      "replace_component",
+      "get_interference_detection"
+    ],
+    "scripts/sw_assembly_rename.py": [
+      "prepare_assembly_plan",
+      "validate_reference_graph",
+      "_direct_references",
+      "_assembly_snapshot",
+      "_compare_assembly",
+      "copy_assembly",
+      "main"
+    ],
+    "scripts/sw_capability_probe.py": [
+      "_env_typelib_dirs",
+      "_find_typelib",
+      "_type_names",
+      "probe_capabilities",
+      "main"
+    ],
+    "scripts/sw_connect.py": [
+      "SolidWorksConnectionError",
+      "_LaunchGuard",
+      "get_com_member",
+      "safe_get_com_member",
+      "create_empty_dispatch_variant",
+      "normalize_doc_type",
+      "_expand_path",
+      "_ensure_parent_dir",
+      "_prog_id_for_version",
+      "_read_active_document",
+      "_wait_until_ready",
+      "close_owned_solidworks",
+      "connect_solidworks",
+      "get_sw_version",
+      "find_template",
+      "ensure_default_templates",
+      "snapshot_open_documents",
+      "_find_new_document",
+      "new_document",
+      "open_document",
+      "save_document",
+      "mm",
+      "deg"
+    ],
+    "scripts/sw_delivery.py": [
+      "_file_signature",
+      "_sha256",
+      "_property_value",
+      "collect_assembly_bom",
+      "export_assembly_bom_csv",
+      "build_bom_traceability",
+      "_status_codes",
+      "_collect_new_outputs",
+      "_document_dependency_paths",
+      "_optional_com_member",
+      "_is_external_reference",
+      "_toolbox_state",
+      "_suppression_state",
+      "_collect_component_audit_records",
+      "_associated_drawing_paths",
+      "_required_pack_dependency_paths",
+      "build_pack_and_go_audit_matrix",
+      "_missing_dependency_paths",
+      "_safe_staged_destination",
+      "_stage_pack_and_go_dependencies",
+      "_comtypes_document_names",
+      "_active_solidworks_major",
+      "_load_sldworks_typelib_module",
+      "_model_doc_extension",
+      "_coerce_dispatch",
+      "_get_pack_and_go",
+      "_pywin32_pack_and_go",
+      "_comtypes_module",
+      "_extract_comtypes_model",
+      "_comtypes_active_model",
+      "_connect_comtypes_solidworks",
+      "_comtypes_pack_and_go",
+      "_comtypes_pack_and_go_impl",
+      "_comtypes_documents",
+      "_pack_parent_pid",
+      "pack_and_go"
+    ],
+    "scripts/sw_delivery_comtypes_worker.py": [
+      "main"
+    ],
+    "scripts/sw_document_data.py": [
+      "_configuration_names",
+      "_resolve_configuration_name",
+      "_active_configuration_name",
+      "inspect_configurations",
+      "activate_configuration",
+      "create_configuration",
+      "_dimension_value_mm",
+      "update_dimension_mm",
+      "_property_manager",
+      "read_custom_property",
+      "set_custom_properties"
+    ],
+    "scripts/sw_drawing.py": [],
+    "scripts/sw_drawing_native.py": [
+      "orientation",
+      "_number",
+      "_position",
+      "validate_dimensions",
+      "validate_native_requests",
+      "describe_target",
+      "target_matches",
+      "map_views",
+      "create_dimensions",
+      "create_professional_annotations",
+      "dimension_binding",
+      "verify_dimensions"
+    ],
+    "scripts/sw_drawing_package.py": [
+      "generate_package",
+      "main"
+    ],
+    "scripts/sw_drawing_review.py": [],
+    "scripts/sw_edge_select.py": [
+      "_to_mm",
+      "_normalize",
+      "_is_parallel",
+      "_edge_curve",
+      "_curve_span",
+      "_positive_mm",
+      "describe_edge",
+      "describe_convexity",
+      "iter_model_edges",
+      "filter_edges",
+      "select_edges",
+      "_select_edge"
+    ],
+    "scripts/sw_entity_reference.py": [
+      "SemanticEntityReference",
+      "geometry_signature",
+      "reference_from_metadata",
+      "resolve_semantic_reference"
+    ],
+    "scripts/sw_export.py": [
+      "_ensure_parent_dir",
+      "export_to_step",
+      "export_to_stl",
+      "export_to_iges",
+      "export_to_parasolid",
+      "export_to_pdf",
+      "_sheet_metal_alignment_variant",
+      "export_to_dxf",
+      "export_flat_pattern_dxf",
+      "batch_export",
+      "_normalize_format",
+      "_file_signature",
+      "_activate_source_document",
+      "_export_for_format",
+      "batch_export_formats",
+      "_export_generic",
+      "_print_result"
+    ],
+    "scripts/sw_file_load.py": [
+      "_describe",
+      "classify_sw_file_load_errors",
+      "classify_sw_file_load_warnings",
+      "SolidWorksDocumentOpenError"
+    ],
+    "scripts/sw_file_rename.py": [
+      "template_fields",
+      "_valid_filename",
+      "plan_renames",
+      "collect_entries",
+      "main"
+    ],
+    "scripts/sw_gdt_annotation.py": [
+      "build_frame_xml",
+      "build_gtol_xmls",
+      "referenced_datums",
+      "verify_gtol_xml",
+      "verify_gtol_frames",
+      "_select_target",
+      "_select_dimension",
+      "_check_position",
+      "_confirm_attachment",
+      "_set_position",
+      "insert_datum",
+      "insert_gtol"
+    ],
+    "scripts/sw_gdt_copy.py": [
+      "inspect_targets",
+      "validate_plan",
+      "_near",
+      "resolve_target",
+      "_persistent_id",
+      "_same_id",
+      "_resolve_plan",
+      "create_annotations",
+      "_verify_reopened",
+      "_capture_saved_positions",
+      "annotate_copy",
+      "main"
+    ],
+    "scripts/sw_gdt_options.py": [
+      "object_fields",
+      "decimal_text",
+      "boolean",
+      "enum",
+      "append_flag",
+      "normalize_constraints",
+      "normalize_detail",
+      "datum_references",
+      "datum_labels",
+      "_detail_xml",
+      "append_datum_xml",
+      "_range_options",
+      "_profile_options",
+      "_filter_xml",
+      "append_options_before_material"
+    ],
+    "scripts/sw_gear.py": [
+      "SpurGearSpec",
+      "SpurGearGeometry",
+      "_finite_positive",
+      "_involute_angle",
+      "_polar",
+      "_append_unique",
+      "_sample_angles",
+      "calculate_external_spur_gear",
+      "create_external_spur_gear"
+    ],
+    "scripts/sw_hole_features.py": [
+      "HoleFeatureEvidence",
+      "_positive",
+      "_center",
+      "_feature_name",
+      "_circle_cut",
+      "_entry_point_3d",
+      "_find_hole_entry_edge",
+      "_chamfer_hole_entry",
+      "create_blind_hole",
+      "create_through_hole",
+      "create_counterbore_hole",
+      "create_countersink_hole",
+      "create_semicircular_slot",
+      "create_hole_pattern"
+    ],
+    "scripts/sw_import_mesh_reference.py": [
+      "configure_mesh_import_preferences",
+      "import_mesh_reference",
+      "_build_parser",
+      "main"
+    ],
+    "scripts/sw_macro_guard.py": [
+      "_configure_stdio_utf8",
+      "MacroValidationResult",
+      "MacroGenerationResult",
+      "normalize_model_family",
+      "build_prompt",
+      "extract_vba_code",
+      "_contains_any_pattern",
+      "validate_vba_macro",
+      "select_template_key",
+      "fallback_macro_for_request",
+      "generate_macro_with_guard",
+      "write_macro_file",
+      "_parse_args",
+      "main"
+    ],
+    "scripts/sw_mcp_approve.py": [
+      "_format_time",
+      "_show_list",
+      "_confirm",
+      "_show_request",
+      "main"
+    ],
+    "scripts/sw_measure.py": [
+      "_safe_member",
+      "_round",
+      "collect_mass_properties",
+      "collect_bounding_box",
+      "inspect_interference",
+      "check_tolerance_fit"
+    ],
+    "scripts/sw_motion.py": [
+      "_motion_typelib_candidates",
+      "ensure_motion_type_library",
+      "motion_member",
+      "get_motion_study_manager",
+      "create_motion_study",
+      "_set_first_supported",
+      "_set_load_references",
+      "add_constant_speed_rotary_motor",
+      "add_constant_speed_rotary_motor_by_cylinders",
+      "calculate_and_play",
+      "_collect_motion_features",
+      "collect_motion_study_summary",
+      "validate_motion_study_summary",
+      "validate_motion_studies"
+    ],
+    "scripts/sw_native_wire.cs": [
+      "Run",
+      "NativeWireTools"
+    ],
+    "scripts/sw_native_wire.py": [
+      "Strict",
+      "Sweep",
+      "Box",
+      "BuildSpec",
+      "Target",
+      "BuildInput",
+      "ImportInput",
+      "ReplaceInput",
+      "DeleteInput",
+      "invoke_native",
+      "register_tools"
+    ],
+    "scripts/sw_part.py": [
+      "_callout_variant",
+      "SketchSelectionRef",
+      "_SketchCacheEntry",
+      "_weak_model",
+      "_document_fingerprint",
+      "clear_sketch_selection_cache",
+      "_prune_sketch_cache",
+      "_get_sketch_cache_entry",
+      "_empty_callout",
+      "_select_by_id",
+      "_get_plane_name_candidates",
+      "_get_sketch_name_candidates",
+      "_as_tuple",
+      "_safe_com_member",
+      "_model_cache_key",
+      "_cache_name_variants",
+      "_cache_sketch_ref",
+      "_find_cached_sketch_ref",
+      "_capture_sketch_ref",
+      "_refresh_sketch_ref",
+      "_select_first_candidate",
+      "_get_selection_count",
+      "_select_com_object",
+      "_select_any_object",
+      "_select_sketch_ref",
+      "_select_sketch_feature_by_name",
+      "_ensure_sketch_selected",
+      "start_sketch",
+      "end_sketch",
+      "sketch",
+      "current_sketch_name",
+      "sketch_line",
+      "sketch_rectangle",
+      "sketch_corner_rectangle",
+      "sketch_circle",
+      "sketch_arc",
+      "sketch_polygon",
+      "sketch_slot",
+      "sketch_spline",
+      "auto_dimension_sketch",
+      "add_dimension",
+      "add_sketch_relation",
+      "extrude_boss",
+      "extrude_cut",
+      "extrude_midplane",
+      "revolve_boss",
+      "fillet",
+      "chamfer",
+      "linear_pattern",
+      "circular_pattern",
+      "shell",
+      "mirror_feature",
+      "hole_wizard",
+      "rib"
+    ],
+    "scripts/sw_pattern.py": [
+      "_unit",
+      "_seed",
+      "_select_entity",
+      "_direction",
+      "linear_pattern",
+      "circular_pattern"
+    ],
+    "scripts/sw_preflight.py": [
+      "_configure_stdio_utf8",
+      "DependencyInstallDeclined",
+      "SolidWorksNotInstalledError",
+      "PreflightResult",
+      "_module_available",
+      "missing_com_dependencies",
+      "pip_install_command",
+      "shell_command_text",
+      "install_com_dependencies",
+      "ask_install_permission",
+      "ensure_com_dependencies",
+      "import_com_dependencies",
+      "_is_windows",
+      "_solidworks_com_registered",
+      "_solidworks_exe_candidates",
+      "solidworks_installed",
+      "ensure_solidworks_installed",
+      "run_preflight",
+      "_parse_args",
+      "main"
+    ],
+    "scripts/sw_process.py": [
+      "solidworks_processes"
+    ],
+    "scripts/sw_read_guard.py": [
+      "SolidWorksReadGuard"
+    ],
+    "scripts/sw_rename_copy.py": [
+      "prepare_plan",
+      "_sha256",
+      "_snapshot",
+      "_open_checked",
+      "copy_batch",
+      "main"
+    ],
+    "scripts/sw_review.py": [
+      "_pdf_text_overlap_candidate",
+      "_import_pdf_parser",
+      "_drawing_boxes_overlap",
+      "review_drawing_layout",
+      "_expand_path",
+      "_file_info",
+      "_read_bmp_size",
+      "inspect_pdf_text_layout",
+      "inspect_bmp_preview",
+      "zoom_to_fit",
+      "clear_selection_for_preview",
+      "activate_model_for_preview",
+      "set_standard_view",
+      "save_preview",
+      "save_review_previews",
+      "_feature_health",
+      "collect_model_summary",
+      "_unit_vector",
+      "_axis_distance_mm",
+      "group_coaxial_hole_segments",
+      "validate_hole_positions",
+      "collect_geometry_measurements",
+      "build_review_report",
+      "evaluate_review_report",
+      "write_review_report",
+      "write_markdown_summary",
+      "run_review",
+      "_parse_args",
+      "main"
+    ],
+    "scripts/sw_session.py": [
+      "SolidWorksSession",
+      "session"
+    ],
+    "scripts/sw_sheet_metal.py": [
+      "BaseFlangeSpec",
+      "_feature_type",
+      "iter_features",
+      "create_base_flange",
+      "sheet_metal_evidence"
+    ],
+    "scripts/sw_sketch_quality.py": [
+      "inspect_sketch",
+      "fully_define_sketch",
+      "inspect_model_sketches"
+    ],
+    "scripts/sw_spring.py": [
+      "OpenHelicalSpringSpec",
+      "validate_spring_spec",
+      "exact_body_bounds_mm",
+      "expected_body_bounds_mm",
+      "verify_helix_definition",
+      "create_open_helical_spring"
+    ],
+    "scripts/sw_sprocket.py": [
+      "SprocketSpec",
+      "create_approximate_sprocket"
+    ],
+    "scripts/sw_tolerance_extract.py": [
+      "_optional",
+      "_tolerance_bound",
+      "_dimension_row",
+      "extract_tolerances",
+      "write_csv",
+      "main"
+    ],
+    "scripts/sw_weldment.py": [
+      "_as_tuple",
+      "_active_configuration_name",
+      "create_weldment_profile",
+      "create_structural_member",
+      "_body_length_key",
+      "_body_cut_list_key",
+      "ensure_cut_list",
+      "_iter_feature_chain",
+      "iter_features_recursive",
+      "_read_property",
+      "read_property_manager",
+      "set_cut_list_properties",
+      "update_cut_list",
+      "weldment_evidence",
+      "export_cut_list_csv"
+    ],
+    "scripts/sync_bundled_skill.py": [
+      "_validate_target",
+      "_is_runtime_file",
+      "collect_runtime_files",
+      "sync_bundled_skill",
+      "main"
+    ],
+    "scripts/validate_mcp.py": [
+      "_configure_stdio_utf8",
+      "_server_env",
+      "_with_session",
+      "_check_full",
+      "_check_search",
+      "_main"
+    ],
+    "scripts/validate_skill.py": [
+      "_configure_stdio_utf8",
+      "check_required_files",
+      "check_skill_frontmatter",
+      "check_python_syntax",
+      "check_json_files",
+      "main"
+    ],
+    "setup.py": [
+      "PostInstallCommand"
+    ],
+    "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudioCommands.cs": [
+      "Initialize",
+      "Terminate",
+      "CadStudioExtension",
+      "Probe",
+      "CreateGoldenDrawing",
+      "CadStudioCommands"
+    ],
+    "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/NuGet.Config": [],
+    "subskills/autocad-automation/examples/draw_mounting_plate.py": [
+      "main"
+    ],
+    "subskills/autocad-automation/scripts/acad_dotnet_preflight.py": [
+      "_find_managed_api",
+      "_sdk_info",
+      "_runtime_evidence",
+      "_runtime_history",
+      "_install_sdk",
+      "run_preflight",
+      "main"
+    ],
+    "subskills/autocad-automation/scripts/acad_dotnet_regression.py": [
+      "_dotnet_executable",
+      "_find_template",
+      "_script_text",
+      "_system_variable_probe_text",
+      "_parse_system_variable",
+      "_decode_output",
+      "_run",
+      "_runtime_status",
+      "_artifact_nonempty",
+      "_artifact_record",
+      "_persist_result",
+      "run_regression",
+      "main"
+    ],
+    "subskills/autocad-automation/scripts/acad_draw.py": [
+      "load_brief",
+      "draw_entity",
+      "_is_live_enabled",
+      "run",
+      "main"
+    ],
+    "subskills/autocad-automation/scripts/acad_headless.py": [
+      "_layer_details",
+      "_entity_text",
+      "_dimension_evidence",
+      "_hole_evidence",
+      "_frame_candidates",
+      "_layer_group_checks",
+      "_engineering_evaluation",
+      "inspect_dxf",
+      "render_dxf",
+      "main"
+    ],
+    "subskills/autocad-automation/scripts/acad_preflight.py": [
+      "_result",
+      "check_pywin32",
+      "check_autocad",
+      "main"
+    ],
+    "subskills/autocad-automation/scripts/acad_preview.py": [
+      "convert_bmp_to_png",
+      "main"
+    ],
+    "subskills/autocad-automation/scripts/acad_review.py": [
+      "_safe_getattr",
+      "_entity_bbox",
+      "_merge_bbox",
+      "review_active",
+      "main"
+    ],
+    "subskills/autocad-automation/scripts/acad_session.py": [
+      "_retry_com_busy",
+      "_window_process_id",
+      "_process_is_running",
+      "_wait_for_process_exit",
+      "_terminate_owned_process",
+      "require_pywin32",
+      "mm",
+      "acad_point",
+      "acad_double_array",
+      "connect_autocad",
+      "AutoCADSession",
+      "point_tuple",
+      "run_whitelisted_script_command"
+    ],
+    "subskills/solidworks-engineering-drawing/scripts/__init__.py": [],
+    "subskills/solidworks-engineering-drawing/scripts/drawing_review.py": [
+      "_check",
+      "_normalise_token",
+      "_dimension_identity",
+      "_dimension_view",
+      "_dimension_text",
+      "_extract_numbers",
+      "_dimension_mismatches",
+      "_required_dimension_report",
+      "_hole_specification",
+      "_distance_mm",
+      "_group_semantic_text",
+      "_hole_group_matches",
+      "_hole_report",
+      "_bom_report",
+      "_title_block_report",
+      "_canonical_view_name",
+      "_view_requirement_label",
+      "_view_report",
+      "_annotation_evidence_text",
+      "_professional_annotation_report",
+      "_note_report",
+      "_boxes_overlap",
+      "inspect_pdf_dimension_rendering",
+      "_with_rendered_dimension_boxes",
+      "_with_rendered_note_boxes",
+      "review_drawing_artifacts"
+    ],
+    "subskills/solidworks-engineering-drawing/scripts/drawing_spec.py": [
+      "load_drawing_spec",
+      "_issue",
+      "_schema_issues",
+      "validate_drawing_spec"
+    ],
+    "subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py": [
+      "_safe_member",
+      "_as_sequence",
+      "_normalise_box",
+      "_annotation_box",
+      "_view_display_dimensions",
+      "auto_arrange_drawing_dimensions",
+      "_finite_positive",
+      "_dimension_text_evidence",
+      "estimate_dimension_text_box",
+      "select_drawing_template",
+      "plan_standard_view_layout",
+      "_scale_ratio",
+      "_apply_view_layout",
+      "_normalise_orientation",
+      "_view_position",
+      "_set_view_center",
+      "_refine_standard_view_spacing",
+      "_collect_drawing_views",
+      "_map_native_standard_views",
+      "_map_standard_views_from_sheet_views",
+      "create_adaptive_standard_views",
+      "create_standard_views",
+      "create_standard_views_with_projection",
+      "add_view",
+      "add_section_view",
+      "add_detail_view",
+      "insert_dimensions",
+      "_note_text",
+      "_note_annotation",
+      "_set_annotation_position",
+      "_annotation_position",
+      "_note_box",
+      "_note_evidence",
+      "add_note",
+      "insert_bom_table",
+      "set_sheet_format",
+      "add_sheet",
+      "add_a3_sheet",
+      "setup_current_sheet_as_a3",
+      "get_all_views",
+      "_paper_size_from_template",
+      "_table_cell_text",
+      "_table_evidence",
+      "_annotation_text_parts",
+      "_professional_annotation_record",
+      "first_center_mark",
+      "_view_center_marks",
+      "_gtol_frame_records",
+      "_collect_view_professional_annotations",
+      "inspect_drawing_structure",
+      "auto_insert_center_marks",
+      "export_sheet_to_pdf",
+      "setup_current_sheet",
+      "validate_generic_drawing_generation",
+      "generate_drawing_from_spec",
+      "generate_drawing_package"
+    ],
+    "subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py": [
+      "Hole",
+      "HolePattern",
+      "DatumScheme",
+      "GdtFrame",
+      "_finite",
+      "_cluster_1d",
+      "_uniform",
+      "detect_hole_patterns",
+      "_classify_group",
+      "_diffs",
+      "_mean_pitch",
+      "bounding_box",
+      "infer_datums",
+      "default_gdt_profile",
+      "_fcf_text",
+      "generate_gdt",
+      "build_hole_table",
+      "build_ordinate_dimensions",
+      "analyze_drilling_panel",
+      "_pattern_dict",
+      "_gdt_dict",
+      "_pick_paper_size",
+      "build_drawing_spec",
+      "_pattern_locations",
+      "_technical_notes",
+      "holes_from_neutral_document",
+      "_thinnest_axis",
+      "holes_from_geometry_measurements",
+      "_plate_from_box",
+      "snapshot_holes_from_model",
+      "analyze_model",
+      "main"
+    ],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py": [
+      "VariableFilletSpec",
+      "FaceFilletSpec",
+      "HoldLineFilletSpec",
+      "SurfaceCombinationSpec",
+      "FullRoundFilletSpec",
+      "SetbackFilletSpec",
+      "WidthWidthChamferSpec",
+      "_finite_positive",
+      "validate_variable_spec",
+      "validate_face_spec",
+      "validate_hold_line_spec",
+      "validate_surface_combination_spec",
+      "validate_full_round_spec",
+      "validate_setback_spec",
+      "validate_width_width_chamfer_spec",
+      "inspect_typelib_members",
+      "build_capability_report",
+      "spec_payload"
+    ],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py": [
+      "MountParameters",
+      "finite_number",
+      "validate_basename",
+      "_coerce_overrides",
+      "parse_set_values",
+      "load_parameter_file",
+      "parameter_positions",
+      "_circle_gap",
+      "_point_to_centered_slot_gap",
+      "analyze_parameters",
+      "require_valid_parameters",
+      "build_parameters",
+      "fallback_values",
+      "build_operation_plan",
+      "plan_payload"
+    ],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py": [
+      "assert_feature",
+      "clear",
+      "hide_reference_planes",
+      "select_plane",
+      "current_sketch_name",
+      "offset_front_plane",
+      "select_sketch",
+      "extrude_boss",
+      "cut",
+      "edge_points",
+      "midpoint",
+      "edge_direction",
+      "circle_center_radius",
+      "edge_signature",
+      "all_edges",
+      "matching_edges",
+      "select_exact_edges",
+      "planar_outer_loop_predicate",
+      "vertical_corner_predicate",
+      "hole_mouth_predicate",
+      "operation_predicate",
+      "apply_treatment",
+      "create_centered_slot",
+      "collect_feature_evidence",
+      "build_model",
+      "parse_args",
+      "parameters_from_args",
+      "main"
+    ],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py": [
+      "HoldLineBridgeError",
+      "unsafe_hold_line_probe_enabled",
+      "known_hold_line_block_evidence",
+      "_require_unsafe_probe",
+      "_solidworks_revision",
+      "_long_path",
+      "_short_path",
+      "_solidworks_install_dir",
+      "discover_bridge_toolchain",
+      "discover_native_toolchain",
+      "build_native_hold_line_addin",
+      "build_native_hold_line_macro",
+      "create_hold_line_via_native_addin",
+      "build_hold_line_bridge",
+      "create_hold_line_via_csharp"
+    ],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs": [],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp": [
+      "Check",
+      "Wide",
+      "JobFilePath",
+      "ReadResultPath",
+      "JsonString",
+      "WriteResult",
+      "ReleasePreparedObjects",
+      "PreparedHoldLineTimerProc"
+    ],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.def": [],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineMacro.swb": [],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py": [
+      "HoldLineInteropBlockedError",
+      "_dispatch_array",
+      "_double_array",
+      "_variant_array",
+      "_typed_feature_data",
+      "_find_typelib",
+      "_select_plane",
+      "_hide_review_helpers",
+      "_create_box",
+      "_create_cylinder",
+      "_add_projected_hold_line",
+      "_body",
+      "_point",
+      "_edge_points",
+      "_edge_length_mm",
+      "_near",
+      "_find_edge",
+      "_face_box",
+      "_find_face",
+      "_surface_type",
+      "_find_vertex",
+      "_incident_edges",
+      "_assert_feature",
+      "_create_variable",
+      "_create_face",
+      "_create_hold_line",
+      "_create_surface_combo",
+      "_create_full_round",
+      "_create_setback",
+      "_create_width_width_chamfer",
+      "_feature_data_evidence",
+      "_evidence_passes",
+      "_verify_one",
+      "parse_args",
+      "main"
+    ],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py": [
+      "_advanced_evidence_passes",
+      "_sha256",
+      "_body_stats",
+      "_add_variable_fillet",
+      "_add_width_width_chamfer",
+      "run_regression",
+      "parse_args",
+      "main"
+    ],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py": [
+      "_validate_download_url",
+      "load_case",
+      "_validate_case_payload",
+      "fetch_pinned_source",
+      "topology_counts",
+      "topology_is_complex",
+      "assert_expected_source_topology",
+      "edge_signature",
+      "apply_complex_width_width_chamfer",
+      "hide_review_helpers",
+      "run_solidworks_case",
+      "parse_args",
+      "main"
+    ],
+    "subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py": [
+      "ThreadedHoleParams",
+      "normalize_thread_key",
+      "resolve_thread_spec",
+      "finite_number",
+      "positive_number",
+      "validate_basename",
+      "face_config",
+      "assert_feature",
+      "clear",
+      "hide_reference_planes",
+      "hide_visible_thread_sketch",
+      "select_plane",
+      "current_sketch_name",
+      "create_offset_plane",
+      "select_sketch",
+      "cut_hole_from_sketch",
+      "circle_center_radius",
+      "all_edges",
+      "model_point_from_local",
+      "locate_hole_mouth_edge",
+      "select_hole_mouth_edge",
+      "add_hole_mouth_chamfer",
+      "add_real_thread_feature",
+      "add_cosmetic_thread_feature",
+      "visible_helix_plan",
+      "add_visible_thread_helix",
+      "write_thread_properties",
+      "build_params",
+      "collect_thread_feature_evidence",
+      "require_thread_representation",
+      "create_threaded_hole_block",
+      "parse_args",
+      "main"
+    ],
+    "subskills/solidworks-vibecad/scripts/plan_from_brief.py": [
+      "parse_triplet_mm",
+      "parse_first_number_before",
+      "parse_radius_or_chamfer",
+      "detect_thread",
+      "build_plan",
+      "clearance_diameter",
+      "main"
+    ],
+    "subskills/solidworks-vibecad/scripts/sw_execution_outline.py": [
+      "load_plan",
+      "build_outline",
+      "write_markdown",
+      "main"
+    ]
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": "apps/workbench-ui/src/App.tsx",
+          "language": "typescript",
+          "sizeLines": 3924,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/components/ArtifactBrowser.tsx",
+          "language": "typescript",
+          "sizeLines": 39,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/components/ConversationControls.tsx",
+          "language": "typescript",
+          "sizeLines": 48,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/components/EnvironmentRemediationPanel.tsx",
+          "language": "typescript",
+          "sizeLines": 52,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/components/ManualReviewPanel.tsx",
+          "language": "typescript",
+          "sizeLines": 39,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/components/ProjectSwitcher.tsx",
+          "language": "typescript",
+          "sizeLines": 187,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/components/TaskSequence.tsx",
+          "language": "typescript",
+          "sizeLines": 88,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/domain/artifacts.ts",
+          "language": "typescript",
+          "sizeLines": 127,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/domain/delivery.test.ts",
+          "language": "typescript",
+          "sizeLines": 98,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/domain/delivery.ts",
+          "language": "typescript",
+          "sizeLines": 175,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/domain/jobs.ts",
+          "language": "typescript",
+          "sizeLines": 34,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/domain/projects.ts",
+          "language": "typescript",
+          "sizeLines": 67,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/main.tsx",
+          "language": "typescript",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/types.ts",
+          "language": "typescript",
+          "sizeLines": 310,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "apps/workbench-ui/src/App.tsx": [
+          "apps/workbench-ui/src/components/AppUpdatePanel.tsx",
+          "apps/workbench-ui/src/components/ArtifactBrowser.tsx",
+          "apps/workbench-ui/src/components/ConversationControls.tsx",
+          "apps/workbench-ui/src/components/EnvironmentRemediationPanel.tsx",
+          "apps/workbench-ui/src/components/ManualReviewPanel.tsx",
+          "apps/workbench-ui/src/components/ProjectSwitcher.tsx",
+          "apps/workbench-ui/src/components/TaskSequence.tsx",
+          "apps/workbench-ui/src/domain/artifacts.ts",
+          "apps/workbench-ui/src/domain/delivery.ts",
+          "apps/workbench-ui/src/domain/jobs.ts",
+          "apps/workbench-ui/src/domain/projects.ts",
+          "apps/workbench-ui/src/persistence.ts",
+          "apps/workbench-ui/src/preview/PreviewShowcase.tsx",
+          "apps/workbench-ui/src/types.ts"
+        ],
+        "apps/workbench-ui/src/components/ArtifactBrowser.tsx": [
+          "apps/workbench-ui/src/CadPreview.tsx",
+          "apps/workbench-ui/src/domain/artifacts.ts",
+          "apps/workbench-ui/src/types.ts"
+        ],
+        "apps/workbench-ui/src/components/ConversationControls.tsx": [
+          "apps/workbench-ui/src/types.ts"
+        ],
+        "apps/workbench-ui/src/components/EnvironmentRemediationPanel.tsx": [
+          "apps/workbench-ui/src/types.ts"
+        ],
+        "apps/workbench-ui/src/components/ManualReviewPanel.tsx": [
+          "apps/workbench-ui/src/types.ts"
+        ],
+        "apps/workbench-ui/src/components/ProjectSwitcher.tsx": [
+          "apps/workbench-ui/src/domain/projects.ts",
+          "apps/workbench-ui/src/types.ts"
+        ],
+        "apps/workbench-ui/src/components/TaskSequence.tsx": [
+          "apps/workbench-ui/src/domain/jobs.ts",
+          "apps/workbench-ui/src/types.ts"
+        ],
+        "apps/workbench-ui/src/domain/artifacts.ts": [
+          "apps/workbench-ui/src/types.ts"
+        ],
+        "apps/workbench-ui/src/domain/delivery.test.ts": [
+          "apps/workbench-ui/src/domain/artifacts.ts",
+          "apps/workbench-ui/src/domain/delivery.ts",
+          "apps/workbench-ui/src/types.ts"
+        ],
+        "apps/workbench-ui/src/domain/delivery.ts": [
+          "apps/workbench-ui/src/domain/artifacts.ts",
+          "apps/workbench-ui/src/types.ts"
+        ],
+        "apps/workbench-ui/src/domain/jobs.ts": [
+          "apps/workbench-ui/src/types.ts"
+        ],
+        "apps/workbench-ui/src/domain/projects.ts": [
+          "apps/workbench-ui/src/types.ts"
+        ],
+        "apps/workbench-ui/src/main.tsx": [
+          "apps/workbench-ui/src/App.tsx",
+          "apps/workbench-ui/src/styles.css"
+        ],
+        "apps/workbench-ui/src/types.ts": []
+      },
+      "neighborMap": {
+        "apps/workbench-ui/src/App.tsx": [
+          {
+            "path": "apps/workbench-ui/src/components/AppUpdatePanel.tsx",
+            "batchIndex": 7,
+            "symbols": [
+              "AppUpdatePanel"
+            ]
+          },
+          {
+            "path": "apps/workbench-ui/src/persistence.ts",
+            "batchIndex": 7,
+            "symbols": [
+              "isTauriRuntime",
+              "parsePersistedJson",
+              "readPersistedState",
+              "writePersistedState"
+            ]
+          },
+          {
+            "path": "apps/workbench-ui/src/preview/PreviewShowcase.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "PreviewShowcase"
+            ]
+          }
+        ],
+        "apps/workbench-ui/src/components/ArtifactBrowser.tsx": [
+          {
+            "path": "apps/workbench-ui/src/CadPreview.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "CadPreview"
+            ]
+          }
+        ],
+        "apps/workbench-ui/src/main.tsx": [
+          {
+            "path": "apps/workbench-ui/src/styles.css",
+            "batchIndex": 36,
+            "symbols": []
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 2,
+      "files": [
+        {
+          "path": "examples/01_basic_part.py",
+          "language": "python",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "examples/02_complex_part.py",
+          "language": "python",
+          "sizeLines": 35,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/drawing_spec.py",
+          "language": "python",
+          "sizeLines": 24,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_connect.py",
+          "language": "python",
+          "sizeLines": 667,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_drawing_native.py",
+          "language": "python",
+          "sizeLines": 288,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_drawing_package.py",
+          "language": "python",
+          "sizeLines": 151,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_file_rename.py",
+          "language": "python",
+          "sizeLines": 134,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_gdt_annotation.py",
+          "language": "python",
+          "sizeLines": 289,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_gdt_copy.py",
+          "language": "python",
+          "sizeLines": 364,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_part.py",
+          "language": "python",
+          "sizeLines": 998,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_read_guard.py",
+          "language": "python",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_rename_copy.py",
+          "language": "python",
+          "sizeLines": 186,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_session.py",
+          "language": "python",
+          "sizeLines": 234,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_sketch_quality.py",
+          "language": "python",
+          "sizeLines": 104,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "examples/01_basic_part.py": [
+          "scripts/sw_connect.py",
+          "scripts/sw_part.py",
+          "scripts/sw_session.py",
+          "scripts/sw_sketch_quality.py"
+        ],
+        "examples/02_complex_part.py": [
+          "scripts/sw_connect.py",
+          "scripts/sw_part.py",
+          "scripts/sw_session.py",
+          "scripts/sw_sketch_quality.py"
+        ],
+        "scripts/drawing_spec.py": [],
+        "scripts/sw_connect.py": [],
+        "scripts/sw_drawing_native.py": [
+          "scripts/sw_connect.py",
+          "scripts/sw_gdt_annotation.py",
+          "scripts/sw_gdt_copy.py"
+        ],
+        "scripts/sw_drawing_package.py": [
+          "scripts/drawing_spec.py",
+          "scripts/sw_connect.py",
+          "scripts/sw_file_rename.py",
+          "scripts/sw_read_guard.py",
+          "scripts/sw_rename_copy.py",
+          "scripts/sw_session.py"
+        ],
+        "scripts/sw_file_rename.py": [],
+        "scripts/sw_gdt_annotation.py": [],
+        "scripts/sw_gdt_copy.py": [
+          "scripts/sw_connect.py",
+          "scripts/sw_gdt_annotation.py",
+          "scripts/sw_read_guard.py",
+          "scripts/sw_rename_copy.py",
+          "scripts/sw_session.py"
+        ],
+        "scripts/sw_part.py": [],
+        "scripts/sw_read_guard.py": [],
+        "scripts/sw_rename_copy.py": [],
+        "scripts/sw_session.py": [],
+        "scripts/sw_sketch_quality.py": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 3,
+      "files": [
+        {
+          "path": "apps/desktop/cad_workbench/agent_contracts.py",
+          "language": "python",
+          "sizeLines": 389,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/desktop/cad_workbench/agent_providers.py",
+          "language": "python",
+          "sizeLines": 276,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/desktop/cad_workbench/app.py",
+          "language": "python",
+          "sizeLines": 836,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/desktop/cad_workbench/artifact_ledger.py",
+          "language": "python",
+          "sizeLines": 262,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/desktop/cad_workbench/core.py",
+          "language": "python",
+          "sizeLines": 178,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/desktop/cad_workbench/engineering_orchestrator.py",
+          "language": "python",
+          "sizeLines": 631,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/desktop/cad_workbench/knowledge_retrieval.py",
+          "language": "python",
+          "sizeLines": 343,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/desktop/cad_workbench/mock_runner.py",
+          "language": "python",
+          "sizeLines": 263,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/desktop/cad_workbench/queue_worker.py",
+          "language": "python",
+          "sizeLines": 1492,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/desktop/cad_workbench/reviewer_gate.py",
+          "language": "python",
+          "sizeLines": 569,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/desktop/cad_workbench/style.py",
+          "language": "python",
+          "sizeLines": 202,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/desktop/cad_workbench/worker_health.py",
+          "language": "python",
+          "sizeLines": 84,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "apps/desktop/cad_workbench/agent_contracts.py": [],
+        "apps/desktop/cad_workbench/agent_providers.py": [],
+        "apps/desktop/cad_workbench/app.py": [
+          "apps/desktop/cad_workbench/core.py",
+          "apps/desktop/cad_workbench/mock_runner.py",
+          "apps/desktop/cad_workbench/style.py"
+        ],
+        "apps/desktop/cad_workbench/artifact_ledger.py": [
+          "apps/desktop/cad_workbench/agent_contracts.py",
+          "apps/desktop/cad_workbench/core.py"
+        ],
+        "apps/desktop/cad_workbench/core.py": [],
+        "apps/desktop/cad_workbench/engineering_orchestrator.py": [],
+        "apps/desktop/cad_workbench/knowledge_retrieval.py": [],
+        "apps/desktop/cad_workbench/mock_runner.py": [
+          "apps/desktop/cad_workbench/core.py"
+        ],
+        "apps/desktop/cad_workbench/queue_worker.py": [
+          "apps/desktop/cad_workbench/agent_contracts.py",
+          "apps/desktop/cad_workbench/agent_providers.py",
+          "apps/desktop/cad_workbench/artifact_ledger.py",
+          "apps/desktop/cad_workbench/core.py",
+          "apps/desktop/cad_workbench/engineering_orchestrator.py",
+          "apps/desktop/cad_workbench/knowledge_retrieval.py",
+          "apps/desktop/cad_workbench/reviewer_gate.py",
+          "apps/desktop/cad_workbench/worker_health.py"
+        ],
+        "apps/desktop/cad_workbench/reviewer_gate.py": [
+          "apps/desktop/cad_workbench/agent_contracts.py",
+          "apps/desktop/cad_workbench/artifact_ledger.py",
+          "apps/desktop/cad_workbench/core.py"
+        ],
+        "apps/desktop/cad_workbench/style.py": [],
+        "apps/desktop/cad_workbench/worker_health.py": [
+          "apps/desktop/cad_workbench/core.py"
+        ]
+      },
+      "neighborMap": {
+        "apps/desktop/cad_workbench/artifact_ledger.py": [
+          {
+            "path": "mcp-server/artifact_access.py",
+            "batchIndex": 5,
+            "symbols": [
+              "ArtifactAccess"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 4,
+      "files": [
+        {
+          "path": "apps/workbench-ui/src/CadPreview.tsx",
+          "language": "typescript",
+          "sizeLines": 234,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/preview/DxfViewport.tsx",
+          "language": "typescript",
+          "sizeLines": 161,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/preview/ModelViewport.tsx",
+          "language": "typescript",
+          "sizeLines": 219,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/preview/PreviewEvidencePanel.tsx",
+          "language": "typescript",
+          "sizeLines": 20,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/preview/PreviewInspector.tsx",
+          "language": "typescript",
+          "sizeLines": 51,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/preview/PreviewShowcase.tsx",
+          "language": "typescript",
+          "sizeLines": 37,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/preview/PreviewStatus.tsx",
+          "language": "typescript",
+          "sizeLines": 21,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/preview/PreviewToolbar.tsx",
+          "language": "typescript",
+          "sizeLines": 32,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/preview/demoScenes.ts",
+          "language": "typescript",
+          "sizeLines": 163,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/preview/dxfWorker.ts",
+          "language": "typescript",
+          "sizeLines": 120,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/preview/previewTypes.ts",
+          "language": "typescript",
+          "sizeLines": 75,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/preview/previewUtils.ts",
+          "language": "typescript",
+          "sizeLines": 62,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "apps/workbench-ui/src/CadPreview.tsx": [
+          "apps/workbench-ui/src/preview/DxfViewport.tsx",
+          "apps/workbench-ui/src/preview/ModelViewport.tsx",
+          "apps/workbench-ui/src/preview/PreviewEvidencePanel.tsx",
+          "apps/workbench-ui/src/preview/PreviewInspector.tsx",
+          "apps/workbench-ui/src/preview/PreviewStatus.tsx",
+          "apps/workbench-ui/src/preview/PreviewToolbar.tsx",
+          "apps/workbench-ui/src/preview/previewTypes.ts",
+          "apps/workbench-ui/src/preview/previewUtils.ts"
+        ],
+        "apps/workbench-ui/src/preview/DxfViewport.tsx": [
+          "apps/workbench-ui/src/preview/previewTypes.ts",
+          "apps/workbench-ui/src/preview/previewUtils.ts"
+        ],
+        "apps/workbench-ui/src/preview/ModelViewport.tsx": [
+          "apps/workbench-ui/src/preview/previewTypes.ts",
+          "apps/workbench-ui/src/preview/previewUtils.ts"
+        ],
+        "apps/workbench-ui/src/preview/PreviewEvidencePanel.tsx": [
+          "apps/workbench-ui/src/preview/previewTypes.ts"
+        ],
+        "apps/workbench-ui/src/preview/PreviewInspector.tsx": [
+          "apps/workbench-ui/src/preview/previewTypes.ts",
+          "apps/workbench-ui/src/preview/previewUtils.ts"
+        ],
+        "apps/workbench-ui/src/preview/PreviewShowcase.tsx": [
+          "apps/workbench-ui/src/CadPreview.tsx",
+          "apps/workbench-ui/src/preview/demoScenes.ts"
+        ],
+        "apps/workbench-ui/src/preview/PreviewStatus.tsx": [
+          "apps/workbench-ui/src/preview/previewTypes.ts"
+        ],
+        "apps/workbench-ui/src/preview/PreviewToolbar.tsx": [
+          "apps/workbench-ui/src/preview/previewTypes.ts"
+        ],
+        "apps/workbench-ui/src/preview/demoScenes.ts": [
+          "apps/workbench-ui/src/preview/previewTypes.ts"
+        ],
+        "apps/workbench-ui/src/preview/dxfWorker.ts": [
+          "apps/workbench-ui/src/preview/previewTypes.ts"
+        ],
+        "apps/workbench-ui/src/preview/previewTypes.ts": [],
+        "apps/workbench-ui/src/preview/previewUtils.ts": [
+          "apps/workbench-ui/src/preview/previewTypes.ts"
+        ]
+      },
+      "neighborMap": {
+        "apps/workbench-ui/src/CadPreview.tsx": [
+          {
+            "path": "apps/workbench-ui/src/components/ArtifactBrowser.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "ArtifactBrowser"
+            ]
+          }
+        ],
+        "apps/workbench-ui/src/preview/PreviewShowcase.tsx": [
+          {
+            "path": "apps/workbench-ui/src/App.tsx",
+            "batchIndex": 1,
+            "symbols": []
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 5,
+      "files": [
+        {
+          "path": "mcp-server/approval.py",
+          "language": "python",
+          "sizeLines": 346,
+          "fileCategory": "code"
+        },
+        {
+          "path": "mcp-server/artifact_access.py",
+          "language": "python",
+          "sizeLines": 93,
+          "fileCategory": "code"
+        },
+        {
+          "path": "mcp-server/discovery.py",
+          "language": "python",
+          "sizeLines": 252,
+          "fileCategory": "code"
+        },
+        {
+          "path": "mcp-server/document_identity.py",
+          "language": "python",
+          "sizeLines": 93,
+          "fileCategory": "code"
+        },
+        {
+          "path": "mcp-server/gate.py",
+          "language": "python",
+          "sizeLines": 268,
+          "fileCategory": "code"
+        },
+        {
+          "path": "mcp-server/policy.py",
+          "language": "python",
+          "sizeLines": 236,
+          "fileCategory": "code"
+        },
+        {
+          "path": "mcp-server/server.py",
+          "language": "python",
+          "sizeLines": 3832,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_native_wire.py",
+          "language": "python",
+          "sizeLines": 128,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_preflight.py",
+          "language": "python",
+          "sizeLines": 267,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "mcp-server/approval.py": [
+          "mcp-server/policy.py"
+        ],
+        "mcp-server/artifact_access.py": [
+          "apps/desktop/cad_workbench/artifact_ledger.py"
+        ],
+        "mcp-server/discovery.py": [],
+        "mcp-server/document_identity.py": [],
+        "mcp-server/gate.py": [
+          "mcp-server/approval.py",
+          "mcp-server/discovery.py",
+          "mcp-server/document_identity.py",
+          "mcp-server/policy.py"
+        ],
+        "mcp-server/policy.py": [],
+        "mcp-server/server.py": [
+          "mcp-server/artifact_access.py",
+          "mcp-server/document_identity.py",
+          "mcp-server/gate.py",
+          "scripts/core/execution.py",
+          "scripts/sw_native_wire.py",
+          "scripts/sw_preflight.py"
+        ],
+        "scripts/sw_native_wire.py": [],
+        "scripts/sw_preflight.py": []
+      },
+      "neighborMap": {
+        "mcp-server/artifact_access.py": [
+          {
+            "path": "apps/desktop/cad_workbench/artifact_ledger.py",
+            "batchIndex": 3,
+            "symbols": [
+              "ledger_dir",
+              "ledger_path_for",
+              "sha256_file",
+              "_candidate_paths",
+              "_artifact_base_dir",
+              "_artifact_key",
+              "_recorded_path_key",
+              "normalize_artifact_baseline",
+              "artifact_requires_current_run_proof",
+              "_covered_by_baseline",
+              "collect_artifact_paths",
+              "_describe_artifact",
+              "describe_artifact",
+              "build_artifact_ledger",
+              "write_artifact_ledger"
+            ]
+          }
+        ],
+        "mcp-server/server.py": [
+          {
+            "path": "scripts/core/execution.py",
+            "batchIndex": 6,
+            "symbols": [
+              "normalize_tool_payload",
+              "_extract_message",
+              "_extract_outputs",
+              "_extract_error_code",
+              "_exception_summary",
+              "ExecutionAssessment",
+              "_trace",
+              "execute_with_core"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 6,
+      "files": [
+        {
+          "path": "scripts/core/__init__.py",
+          "language": "python",
+          "sizeLines": 121,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/core/capability.py",
+          "language": "python",
+          "sizeLines": 149,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/core/execution.py",
+          "language": "python",
+          "sizeLines": 334,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/core/recovery.py",
+          "language": "python",
+          "sizeLines": 503,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/core/state.py",
+          "language": "python",
+          "sizeLines": 442,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/core/trace.py",
+          "language": "python",
+          "sizeLines": 192,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/core/verification.py",
+          "language": "python",
+          "sizeLines": 341,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "scripts/core/__init__.py": [
+          "scripts/core/capability.py",
+          "scripts/core/execution.py",
+          "scripts/core/recovery.py",
+          "scripts/core/state.py",
+          "scripts/core/trace.py",
+          "scripts/core/verification.py"
+        ],
+        "scripts/core/capability.py": [],
+        "scripts/core/execution.py": [
+          "scripts/core/capability.py",
+          "scripts/core/recovery.py",
+          "scripts/core/state.py",
+          "scripts/core/trace.py",
+          "scripts/core/verification.py"
+        ],
+        "scripts/core/recovery.py": [
+          "scripts/core/__init__.py",
+          "scripts/core/state.py",
+          "scripts/core/trace.py",
+          "scripts/core/verification.py"
+        ],
+        "scripts/core/state.py": [],
+        "scripts/core/trace.py": [
+          "scripts/core/state.py"
+        ],
+        "scripts/core/verification.py": [
+          "scripts/core/state.py",
+          "scripts/core/trace.py"
+        ]
+      },
+      "neighborMap": {
+        "scripts/core/execution.py": [
+          {
+            "path": "mcp-server/server.py",
+            "batchIndex": 5,
+            "symbols": [
+              "_load_automation_modules",
+              "ResponseFormat",
+              "DocType",
+              "ExportFormat",
+              "BasicPartShape",
+              "AppearanceTarget",
+              "HoleFeatureKind",
+              "BaseInput",
+              "SolidWorksConnectInput",
+              "SolidWorksApiLookupInput",
+              "CadStudioBackendRouteInput",
+              "CadStudioOpenFormatInput",
+              "CadStudioDxfPreviewInput",
+              "CadStudioDrcReviewInput",
+              "CadStudioDfmReviewInput",
+              "CadStudioRoutingReviewInput",
+              "CadStudioRoutingPreflightInput",
+              "CadStudioFeaPreflightInput",
+              "CadStudioFeaPrepareInput",
+              "CadStudioFeaRunInput",
+              "CadStudioFeaConvergenceInput",
+              "CadStudioAdvancedGeometryInput",
+              "CadStudioOcpLoftInput",
+              "CadStudioOcpSurfaceInput",
+              "SolidWorksHealthCheckInput",
+              "SolidWorksSketchOnPlaneInput",
+              "SolidWorksRevolveInput",
+              "SolidWorksFilletInput",
+              "SolidWorksChamferInput",
+              "SolidWorksShellInput",
+              "SolidWorksPatternInput",
+              "SolidWorksMirrorInput",
+              "SolidWorksEdgeInspectionInput",
+              "SolidWorksMassPropertiesInput",
+              "SolidWorksBoundingBoxInput",
+              "SolidWorksInterferenceInput",
+              "SolidWorksUnitsInput",
+              "DesignSpecValidateInput",
+              "DesignSpecBuildInput",
+              "SolidWorksRecoverInput",
+              "SolidWorksNewDocumentInput",
+              "SolidWorksCreateBasicPartInput",
+              "SolidWorksOpenDocumentInput",
+              "SolidWorksSaveDocumentInput",
+              "SolidWorksCloseDocumentsInput",
+              "SolidWorksAddComponentInput",
+              "SolidWorksSetComponentFixedInput",
+              "SolidWorksExportInput",
+              "SolidWorksDimensionUpdateInput",
+              "SolidWorksAddinHostStatusInput",
+              "SolidWorksConfigurationCreateInput",
+              "SolidWorksConfigurationInspectInput",
+              "SolidWorksConfigurationActivateInput",
+              "SolidWorksCustomPropertiesInput",
+              "SolidWorksBatchExportInput",
+              "SolidWorksBomExportInput",
+              "SolidWorksPackAndGoInput",
+              "SolidWorksReviewInput",
+              "SolidWorksGenerateDrawingInput",
+              "SolidWorksReviewDrawingInput",
+              "SolidWorksInspectDrawingInput",
+              "SolidWorksHoleFeatureInput",
+              "HoleExpectationInput",
+              "SolidWorksHoleInspectionInput",
+              "SolidWorksPlaneCoincidentMateInput",
+              "SolidWorksPlaneDistanceMateInput",
+              "SolidWorksConcentricMateInput",
+              "SolidWorksSetAppearanceInput",
+              "SolidWorksRotaryMotorInput",
+              "SolidWorksMotionAuditInput",
+              "SolidWorksMotionValidationInput",
+              "_coinitialize",
+              "_active_model_required",
+              "_active_assembly_required",
+              "_active_part_required",
+              "_model_summary",
+              "_component_summary",
+              "_set_component_fixed",
+              "_result",
+              "_artifact_access",
+              "_tool_error",
+              "_run_locked",
+              "cadstudio_resolve_backend",
+              "cadstudio_write_open_format",
+              "cadstudio_build_dxf_preview_scene",
+              "cadstudio_check_drc",
+              "cadstudio_list_drc_rules",
+              "cadstudio_check_dfm",
+              "cadstudio_check_routing",
+              "cadstudio_routing_preflight",
+              "solidworks_addin_host_status",
+              "cadstudio_fea_preflight",
+              "cadstudio_prepare_fea",
+              "cadstudio_run_fea",
+              "cadstudio_run_fea_convergence",
+              "cadstudio_review_advanced_geometry",
+              "cadstudio_create_ocp_loft",
+              "cadstudio_create_ocp_surface",
+              "solidworks_connect",
+              "solidworks_lookup_api",
+              "solidworks_health_check",
+              "_enumerate_solidworks_windows",
+              "solidworks_recover",
+              "solidworks_new_document",
+              "solidworks_create_basic_part",
+              "_edge_spec_from",
+              "_run_feature_with_edges",
+              "solidworks_list_edges",
+              "solidworks_sketch_and_extrude",
+              "solidworks_revolve",
+              "solidworks_fillet",
+              "solidworks_chamfer",
+              "solidworks_shell",
+              "solidworks_pattern",
+              "solidworks_mirror_feature",
+              "solidworks_mass_properties",
+              "solidworks_bounding_box",
+              "solidworks_interference_check",
+              "solidworks_document_units",
+              "design_spec_validate",
+              "design_spec_build",
+              "solidworks_open_document",
+              "solidworks_add_component",
+              "solidworks_set_component_fixed",
+              "solidworks_save_document",
+              "solidworks_close_documents",
+              "solidworks_add_coincident_mate",
+              "solidworks_add_distance_mate",
+              "solidworks_add_concentric_mate",
+              "solidworks_set_appearance",
+              "solidworks_export_active",
+              "solidworks_inspect_configurations",
+              "solidworks_create_configuration",
+              "solidworks_activate_configuration",
+              "solidworks_update_dimension",
+              "solidworks_set_custom_properties",
+              "solidworks_batch_export_files",
+              "solidworks_export_assembly_bom",
+              "solidworks_pack_and_go_tool",
+              "solidworks_review_active",
+              "_drawing_report_path",
+              "solidworks_generate_drawing",
+              "solidworks_review_drawing",
+              "solidworks_inspect_drawing",
+              "solidworks_create_hole_feature",
+              "solidworks_inspect_hole_features",
+              "solidworks_add_rotary_motor",
+              "solidworks_inspect_motion_studies",
+              "solidworks_validate_motion_study",
+              "ArtifactReadInput",
+              "cadstudio_read_artifact",
+              "read_artifact_resource",
+              "sw_search_tools",
+              "sw_describe_tool",
+              "sw_call_tool",
+              "main"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 7,
+      "files": [
+        {
+          "path": "apps/workbench-ui/src/components/AppUpdatePanel.tsx",
+          "language": "typescript",
+          "sizeLines": 144,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/domain/updateProgress.test.ts",
+          "language": "typescript",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/domain/updateProgress.ts",
+          "language": "typescript",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/persistence.test.ts",
+          "language": "typescript",
+          "sizeLines": 83,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/persistence.ts",
+          "language": "typescript",
+          "sizeLines": 81,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "apps/workbench-ui/src/components/AppUpdatePanel.tsx": [
+          "apps/workbench-ui/src/domain/updateProgress.ts",
+          "apps/workbench-ui/src/persistence.ts"
+        ],
+        "apps/workbench-ui/src/domain/updateProgress.test.ts": [
+          "apps/workbench-ui/src/domain/updateProgress.ts"
+        ],
+        "apps/workbench-ui/src/domain/updateProgress.ts": [],
+        "apps/workbench-ui/src/persistence.test.ts": [
+          "apps/workbench-ui/src/persistence.ts"
+        ],
+        "apps/workbench-ui/src/persistence.ts": []
+      },
+      "neighborMap": {
+        "apps/workbench-ui/src/components/AppUpdatePanel.tsx": [
+          {
+            "path": "apps/workbench-ui/src/App.tsx",
+            "batchIndex": 1,
+            "symbols": []
+          }
+        ],
+        "apps/workbench-ui/src/persistence.ts": [
+          {
+            "path": "apps/workbench-ui/src/App.tsx",
+            "batchIndex": 1,
+            "symbols": []
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 8,
+      "files": [
+        {
+          "path": "scripts/cad_diagnostics.py",
+          "language": "python",
+          "sizeLines": 64,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/cad_doctor.py",
+          "language": "python",
+          "sizeLines": 272,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/cad_installation.py",
+          "language": "python",
+          "sizeLines": 349,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/cad_studio.py",
+          "language": "python",
+          "sizeLines": 341,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "scripts/cad_diagnostics.py": [
+          "scripts/cad_doctor.py"
+        ],
+        "scripts/cad_doctor.py": [
+          "scripts/cad_installation.py"
+        ],
+        "scripts/cad_installation.py": [],
+        "scripts/cad_studio.py": [
+          "scripts/cad_diagnostics.py",
+          "scripts/cad_doctor.py"
+        ]
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 9,
+      "files": [
+        {
+          "path": "scripts/ci/cad_ci_guard.cjs",
+          "language": "javascript",
+          "sizeLines": 198,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/ci/capture_governance_attestation.cjs",
+          "language": "javascript",
+          "sizeLines": 211,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/ci/governance_attestation.cjs",
+          "language": "javascript",
+          "sizeLines": 360,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/ci/governance_trust_root.cjs",
+          "language": "javascript",
+          "sizeLines": 39,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "scripts/ci/cad_ci_guard.cjs": [
+          "scripts/ci/governance_attestation.cjs",
+          "scripts/ci/governance_trust_root.cjs"
+        ],
+        "scripts/ci/capture_governance_attestation.cjs": [
+          "scripts/ci/governance_attestation.cjs",
+          "scripts/ci/governance_trust_root.cjs"
+        ],
+        "scripts/ci/governance_attestation.cjs": [],
+        "scripts/ci/governance_trust_root.cjs": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 10,
+      "files": [
+        {
+          "path": "subskills/autocad-automation/scripts/acad_draw.py",
+          "language": "python",
+          "sizeLines": 150,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/autocad-automation/scripts/acad_preview.py",
+          "language": "python",
+          "sizeLines": 115,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/autocad-automation/scripts/acad_review.py",
+          "language": "python",
+          "sizeLines": 111,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/autocad-automation/scripts/acad_session.py",
+          "language": "python",
+          "sizeLines": 811,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "subskills/autocad-automation/scripts/acad_draw.py": [
+          "subskills/autocad-automation/scripts/acad_session.py"
+        ],
+        "subskills/autocad-automation/scripts/acad_preview.py": [
+          "subskills/autocad-automation/scripts/acad_session.py"
+        ],
+        "subskills/autocad-automation/scripts/acad_review.py": [
+          "subskills/autocad-automation/scripts/acad_session.py"
+        ],
+        "subskills/autocad-automation/scripts/acad_session.py": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 11,
+      "files": [
+        {
+          "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+          "language": "python",
+          "sizeLines": 374,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+          "language": "python",
+          "sizeLines": 431,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+          "language": "python",
+          "sizeLines": 1014,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+          "language": "python",
+          "sizeLines": 291,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py": [],
+        "subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py": [],
+        "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py": [
+          "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+          "subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py"
+        ],
+        "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py": [
+          "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py"
+        ]
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 12,
+      "files": [
+        {
+          "path": ".github/workflows/windows-cad-regression.yml",
+          "language": "yaml",
+          "sizeLines": 166,
+          "fileCategory": "infra"
+        },
+        {
+          "path": ".github/workflows/windows-release.yml",
+          "language": "yaml",
+          "sizeLines": 316,
+          "fileCategory": "infra"
+        }
+      ],
+      "batchImportData": {
+        ".github/workflows/windows-cad-regression.yml": [],
+        ".github/workflows/windows-release.yml": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 13,
+      "files": [
+        {
+          "path": "CONTRIBUTING.md",
+          "language": "markdown",
+          "sizeLines": 367,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "README.md",
+          "language": "markdown",
+          "sizeLines": 356,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "SECURITY.md",
+          "language": "markdown",
+          "sizeLines": 16,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "SKILL.md",
+          "language": "markdown",
+          "sizeLines": 328,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "SUBSKILLS.md",
+          "language": "markdown",
+          "sizeLines": 134,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "capabilities.yaml",
+          "language": "yaml",
+          "sizeLines": 583,
+          "fileCategory": "config"
+        },
+        {
+          "path": "golden-workflows.yaml",
+          "language": "yaml",
+          "sizeLines": 18,
+          "fileCategory": "config"
+        },
+        {
+          "path": "manifest.json",
+          "language": "json",
+          "sizeLines": 58,
+          "fileCategory": "config"
+        },
+        {
+          "path": "package.json",
+          "language": "json",
+          "sizeLines": 37,
+          "fileCategory": "config"
+        },
+        {
+          "path": "project.yaml",
+          "language": "yaml",
+          "sizeLines": 38,
+          "fileCategory": "config"
+        },
+        {
+          "path": "pyproject.toml",
+          "language": "toml",
+          "sizeLines": 32,
+          "fileCategory": "config"
+        },
+        {
+          "path": "requirements-mesh.txt",
+          "language": "txt",
+          "sizeLines": 4,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "requirements-occt.txt",
+          "language": "txt",
+          "sizeLines": 3,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "requirements-pdf.txt",
+          "language": "txt",
+          "sizeLines": 1,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "requirements.txt",
+          "language": "txt",
+          "sizeLines": 9,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "CONTRIBUTING.md": [],
+        "README.md": [],
+        "SECURITY.md": [],
+        "SKILL.md": [],
+        "SUBSKILLS.md": [],
+        "capabilities.yaml": [],
+        "golden-workflows.yaml": [],
+        "manifest.json": [],
+        "package.json": [],
+        "project.yaml": [],
+        "pyproject.toml": [],
+        "requirements-mesh.txt": [],
+        "requirements-occt.txt": [],
+        "requirements-pdf.txt": [],
+        "requirements.txt": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 14,
+      "files": [
+        {
+          "path": "apps/desktop/DESIGN.md",
+          "language": "markdown",
+          "sizeLines": 58,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "apps/desktop/README.md",
+          "language": "markdown",
+          "sizeLines": 79,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "apps/desktop/build_exe.ps1",
+          "language": "powershell",
+          "sizeLines": 32,
+          "fileCategory": "script"
+        },
+        {
+          "path": "apps/desktop/requirements.txt",
+          "language": "txt",
+          "sizeLines": 1,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "apps/desktop/start_desktop.ps1",
+          "language": "powershell",
+          "sizeLines": 24,
+          "fileCategory": "script"
+        }
+      ],
+      "batchImportData": {
+        "apps/desktop/DESIGN.md": [],
+        "apps/desktop/README.md": [],
+        "apps/desktop/build_exe.ps1": [],
+        "apps/desktop/requirements.txt": [],
+        "apps/desktop/start_desktop.ps1": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 15,
+      "files": [
+        {
+          "path": "apps/desktop/cad_workbench/schemas/advanced_geometry.schema.json",
+          "language": "json",
+          "sizeLines": 35,
+          "fileCategory": "config"
+        },
+        {
+          "path": "apps/desktop/cad_workbench/schemas/advanced_surface.schema.json",
+          "language": "json",
+          "sizeLines": 65,
+          "fileCategory": "config"
+        },
+        {
+          "path": "apps/desktop/cad_workbench/schemas/automation_job.schema.json",
+          "language": "json",
+          "sizeLines": 369,
+          "fileCategory": "config"
+        },
+        {
+          "path": "apps/desktop/cad_workbench/schemas/codex_final_response.schema.json",
+          "language": "json",
+          "sizeLines": 54,
+          "fileCategory": "config"
+        },
+        {
+          "path": "apps/desktop/cad_workbench/schemas/evidence_graph.schema.json",
+          "language": "json",
+          "sizeLines": 38,
+          "fileCategory": "config"
+        },
+        {
+          "path": "apps/desktop/cad_workbench/schemas/fea_analysis.schema.json",
+          "language": "json",
+          "sizeLines": 159,
+          "fileCategory": "config"
+        },
+        {
+          "path": "apps/desktop/cad_workbench/schemas/neutral_cad_document.schema.json",
+          "language": "json",
+          "sizeLines": 43,
+          "fileCategory": "config"
+        },
+        {
+          "path": "apps/desktop/cad_workbench/schemas/preview_manifest.schema.json",
+          "language": "json",
+          "sizeLines": 24,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "apps/desktop/cad_workbench/schemas/advanced_geometry.schema.json": [],
+        "apps/desktop/cad_workbench/schemas/advanced_surface.schema.json": [],
+        "apps/desktop/cad_workbench/schemas/automation_job.schema.json": [],
+        "apps/desktop/cad_workbench/schemas/codex_final_response.schema.json": [],
+        "apps/desktop/cad_workbench/schemas/evidence_graph.schema.json": [],
+        "apps/desktop/cad_workbench/schemas/fea_analysis.schema.json": [],
+        "apps/desktop/cad_workbench/schemas/neutral_cad_document.schema.json": [],
+        "apps/desktop/cad_workbench/schemas/preview_manifest.schema.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 16,
+      "files": [
+        {
+          "path": "apps/workbench-ui/README.md",
+          "language": "markdown",
+          "sizeLines": 141,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "apps/workbench-ui/index.html",
+          "language": "html",
+          "sizeLines": 15,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "apps/workbench-ui/package.json",
+          "language": "json",
+          "sizeLines": 39,
+          "fileCategory": "config"
+        },
+        {
+          "path": "apps/workbench-ui/tsconfig.json",
+          "language": "json",
+          "sizeLines": 21,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "apps/workbench-ui/README.md": [],
+        "apps/workbench-ui/index.html": [],
+        "apps/workbench-ui/package.json": [],
+        "apps/workbench-ui/tsconfig.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 17,
+      "files": [
+        {
+          "path": "docs/CAD_STUDIO_USER_MANUAL.md",
+          "language": "markdown",
+          "sizeLines": 319,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/market-research-2026.md",
+          "language": "markdown",
+          "sizeLines": 426,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/native-wire-tools.md",
+          "language": "markdown",
+          "sizeLines": 38,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/product-mvp-spec.md",
+          "language": "markdown",
+          "sizeLines": 831,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/skill-map.md",
+          "language": "markdown",
+          "sizeLines": 72,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/weekly-delivery-plan.md",
+          "language": "markdown",
+          "sizeLines": 114,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "docs/CAD_STUDIO_USER_MANUAL.md": [],
+        "docs/market-research-2026.md": [],
+        "docs/native-wire-tools.md": [],
+        "docs/product-mvp-spec.md": [],
+        "docs/skill-map.md": [],
+        "docs/weekly-delivery-plan.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 18,
+      "files": [
+        {
+          "path": "docs/architecture/evidence/governance-ruleset-attestation.json",
+          "language": "json",
+          "sizeLines": 88,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/architecture/evidence/p0-11-real-golden-2026-10-23.json",
+          "language": "json",
+          "sizeLines": 191,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/architecture/evidence/p0-12-real-golden-2026-10-23.json",
+          "language": "json",
+          "sizeLines": 338,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/architecture/evidence/p0-2-1-real-gripper-travel-2026-10-27.json",
+          "language": "json",
+          "sizeLines": 8575,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/architecture/evidence/p0-2-real-gripper-2026-10-26.json",
+          "language": "json",
+          "sizeLines": 709,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/architecture/evidence/p0-real-golden-2026-10-23.json",
+          "language": "json",
+          "sizeLines": 211,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "docs/architecture/evidence/governance-ruleset-attestation.json": [],
+        "docs/architecture/evidence/p0-11-real-golden-2026-10-23.json": [],
+        "docs/architecture/evidence/p0-12-real-golden-2026-10-23.json": [],
+        "docs/architecture/evidence/p0-2-1-real-gripper-travel-2026-10-27.json": [],
+        "docs/architecture/evidence/p0-2-real-gripper-2026-10-26.json": [],
+        "docs/architecture/evidence/p0-real-golden-2026-10-23.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 19,
+      "files": [
+        {
+          "path": "docs/architecture/evidence/p0-2-1-2026-10-27/README.md",
+          "language": "markdown",
+          "sizeLines": 75,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/architecture/evidence/p0-2-1-2026-10-27/manifest.json",
+          "language": "json",
+          "sizeLines": 77,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-evidence-sha256.json",
+          "language": "json",
+          "sizeLines": 2741,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-independent-seal-verification.json",
+          "language": "json",
+          "sizeLines": 17,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-work-state.json",
+          "language": "json",
+          "sizeLines": 38,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/architecture/evidence/p0-2-1-2026-10-27/suite-summary.redacted.json",
+          "language": "json",
+          "sizeLines": 222,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "docs/architecture/evidence/p0-2-1-2026-10-27/README.md": [],
+        "docs/architecture/evidence/p0-2-1-2026-10-27/manifest.json": [],
+        "docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-evidence-sha256.json": [],
+        "docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-independent-seal-verification.json": [],
+        "docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-work-state.json": [],
+        "docs/architecture/evidence/p0-2-1-2026-10-27/suite-summary.redacted.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 20,
+      "files": [
+        {
+          "path": "docs/architecture/execution-core.md",
+          "language": "markdown",
+          "sizeLines": 180,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/architecture/governance-attestation.md",
+          "language": "markdown",
+          "sizeLines": 332,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/architecture/governance-bypass-remediation.md",
+          "language": "markdown",
+          "sizeLines": 168,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/architecture/real-golden-gripper-retention-travel-acceptance.md",
+          "language": "markdown",
+          "sizeLines": 270,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/architecture/real-golden-merge-readiness.md",
+          "language": "markdown",
+          "sizeLines": 269,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/architecture/real-golden-parallel-gripper-acceptance.md",
+          "language": "markdown",
+          "sizeLines": 221,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/architecture/real-golden-workflow-acceptance.md",
+          "language": "markdown",
+          "sizeLines": 239,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/architecture/remaining-pr-increments.md",
+          "language": "markdown",
+          "sizeLines": 33,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/architecture/scheme-b-reliability.md",
+          "language": "markdown",
+          "sizeLines": 61,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/architecture/v2-audit.md",
+          "language": "markdown",
+          "sizeLines": 360,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/architecture/v2-evaluation.md",
+          "language": "markdown",
+          "sizeLines": 146,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/architecture/v2-regression-report.md",
+          "language": "markdown",
+          "sizeLines": 146,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/architecture/v2-release-notes.md",
+          "language": "markdown",
+          "sizeLines": 55,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "docs/architecture/execution-core.md": [],
+        "docs/architecture/governance-attestation.md": [],
+        "docs/architecture/governance-bypass-remediation.md": [],
+        "docs/architecture/real-golden-gripper-retention-travel-acceptance.md": [],
+        "docs/architecture/real-golden-merge-readiness.md": [],
+        "docs/architecture/real-golden-parallel-gripper-acceptance.md": [],
+        "docs/architecture/real-golden-workflow-acceptance.md": [],
+        "docs/architecture/remaining-pr-increments.md": [],
+        "docs/architecture/scheme-b-reliability.md": [],
+        "docs/architecture/v2-audit.md": [],
+        "docs/architecture/v2-evaluation.md": [],
+        "docs/architecture/v2-regression-report.md": [],
+        "docs/architecture/v2-release-notes.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 21,
+      "files": [
+        {
+          "path": "examples/README.md",
+          "language": "markdown",
+          "sizeLines": 235,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "examples/drc_profile_strict.json",
+          "language": "json",
+          "sizeLines": 15,
+          "fileCategory": "config"
+        },
+        {
+          "path": "examples/drc_sample_part.cadstudio.json",
+          "language": "json",
+          "sizeLines": 18,
+          "fileCategory": "config"
+        },
+        {
+          "path": "examples/drilling_panel_sample.cadstudio.json",
+          "language": "json",
+          "sizeLines": 315,
+          "fileCategory": "config"
+        },
+        {
+          "path": "examples/drive_sizing_sample.cadstudio.json",
+          "language": "json",
+          "sizeLines": 23,
+          "fileCategory": "config"
+        },
+        {
+          "path": "examples/fastener_stack_sample.cadstudio.json",
+          "language": "json",
+          "sizeLines": 14,
+          "fileCategory": "config"
+        },
+        {
+          "path": "examples/fea_tetra_static.json",
+          "language": "json",
+          "sizeLines": 42,
+          "fileCategory": "config"
+        },
+        {
+          "path": "examples/ocp_loft_adapter.json",
+          "language": "json",
+          "sizeLines": 15,
+          "fileCategory": "config"
+        },
+        {
+          "path": "examples/part.cadstudio.json",
+          "language": "json",
+          "sizeLines": 34,
+          "fileCategory": "config"
+        },
+        {
+          "path": "examples/supplier-profile.json",
+          "language": "json",
+          "sizeLines": 38,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "examples/README.md": [],
+        "examples/drc_profile_strict.json": [],
+        "examples/drc_sample_part.cadstudio.json": [],
+        "examples/drilling_panel_sample.cadstudio.json": [],
+        "examples/drive_sizing_sample.cadstudio.json": [],
+        "examples/fastener_stack_sample.cadstudio.json": [],
+        "examples/fea_tetra_static.json": [],
+        "examples/ocp_loft_adapter.json": [],
+        "examples/part.cadstudio.json": [],
+        "examples/supplier-profile.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 22,
+      "files": [
+        {
+          "path": "mcp-server/README.md",
+          "language": "markdown",
+          "sizeLines": 434,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "mcp-server/register_all_ai_mcp.ps1",
+          "language": "powershell",
+          "sizeLines": 48,
+          "fileCategory": "script"
+        },
+        {
+          "path": "mcp-server/register_codex_mcp.ps1",
+          "language": "powershell",
+          "sizeLines": 94,
+          "fileCategory": "script"
+        },
+        {
+          "path": "mcp-server/requirements.txt",
+          "language": "txt",
+          "sizeLines": 6,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "mcp-server/README.md": [],
+        "mcp-server/register_all_ai_mcp.ps1": [],
+        "mcp-server/register_codex_mcp.ps1": [],
+        "mcp-server/requirements.txt": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 23,
+      "files": [
+        {
+          "path": "profiles/drc/drilling_panel.json",
+          "language": "json",
+          "sizeLines": 25,
+          "fileCategory": "config"
+        },
+        {
+          "path": "profiles/drc/injection_shell.json",
+          "language": "json",
+          "sizeLines": 23,
+          "fileCategory": "config"
+        },
+        {
+          "path": "profiles/drc/machined_bracket.json",
+          "language": "json",
+          "sizeLines": 25,
+          "fileCategory": "config"
+        },
+        {
+          "path": "profiles/drc/sheet_metal_panel.json",
+          "language": "json",
+          "sizeLines": 13,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "profiles/drc/drilling_panel.json": [],
+        "profiles/drc/injection_shell.json": [],
+        "profiles/drc/machined_bracket.json": [],
+        "profiles/drc/sheet_metal_panel.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 24,
+      "files": [
+        {
+          "path": "references/advanced.md",
+          "language": "markdown",
+          "sizeLines": 260,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/agent-provider-architecture.md",
+          "language": "markdown",
+          "sizeLines": 108,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/api-lookup.md",
+          "language": "markdown",
+          "sizeLines": 107,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/appearance.md",
+          "language": "markdown",
+          "sizeLines": 92,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/assembly.md",
+          "language": "markdown",
+          "sizeLines": 243,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/complex-hole-features.md",
+          "language": "markdown",
+          "sizeLines": 77,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/complex-mechanical-routing.md",
+          "language": "markdown",
+          "sizeLines": 59,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/delivery-freshness.md",
+          "language": "markdown",
+          "sizeLines": 30,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/design-rule-check.md",
+          "language": "markdown",
+          "sizeLines": 21,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/design-spec.md",
+          "language": "markdown",
+          "sizeLines": 180,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/drawing.md",
+          "language": "markdown",
+          "sizeLines": 206,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/drive-sizing.md",
+          "language": "markdown",
+          "sizeLines": 63,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/edge-selection.md",
+          "language": "markdown",
+          "sizeLines": 177,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/enterprise-agent-rag.md",
+          "language": "markdown",
+          "sizeLines": 86,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/export.md",
+          "language": "markdown",
+          "sizeLines": 145,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/gears.md",
+          "language": "markdown",
+          "sizeLines": 59,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/language-backend-routing.md",
+          "language": "markdown",
+          "sizeLines": 87,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/mcp-server.md",
+          "language": "markdown",
+          "sizeLines": 157,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/mesh-reference-import.md",
+          "language": "markdown",
+          "sizeLines": 128,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/motion-study.md",
+          "language": "markdown",
+          "sizeLines": 175,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "references/advanced.md": [],
+        "references/agent-provider-architecture.md": [],
+        "references/api-lookup.md": [],
+        "references/appearance.md": [],
+        "references/assembly.md": [],
+        "references/complex-hole-features.md": [],
+        "references/complex-mechanical-routing.md": [],
+        "references/delivery-freshness.md": [],
+        "references/design-rule-check.md": [],
+        "references/design-spec.md": [],
+        "references/drawing.md": [],
+        "references/drive-sizing.md": [],
+        "references/edge-selection.md": [],
+        "references/enterprise-agent-rag.md": [],
+        "references/export.md": [],
+        "references/gears.md": [],
+        "references/language-backend-routing.md": [],
+        "references/mcp-server.md": [],
+        "references/mesh-reference-import.md": [],
+        "references/motion-study.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 25,
+      "files": [
+        {
+          "path": "references/openclaw.md",
+          "language": "markdown",
+          "sizeLines": 110,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/part-modeling.md",
+          "language": "markdown",
+          "sizeLines": 267,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/rename-preview.md",
+          "language": "markdown",
+          "sizeLines": 39,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/review.md",
+          "language": "markdown",
+          "sizeLines": 122,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/solidworks-addin-host.md",
+          "language": "markdown",
+          "sizeLines": 102,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/spring.md",
+          "language": "markdown",
+          "sizeLines": 30,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/sprocket.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/tolerance-extraction.md",
+          "language": "markdown",
+          "sizeLines": 18,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "references/troubleshooting.md",
+          "language": "markdown",
+          "sizeLines": 828,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "references/openclaw.md": [],
+        "references/part-modeling.md": [],
+        "references/rename-preview.md": [],
+        "references/review.md": [],
+        "references/solidworks-addin-host.md": [],
+        "references/spring.md": [],
+        "references/sprocket.md": [],
+        "references/tolerance-extraction.md": [],
+        "references/troubleshooting.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 26,
+      "files": [
+        {
+          "path": "scripts/build_windows_release.ps1",
+          "language": "powershell",
+          "sizeLines": 123,
+          "fileCategory": "script"
+        },
+        {
+          "path": "scripts/sw_addin_host.ps1",
+          "language": "powershell",
+          "sizeLines": 197,
+          "fileCategory": "script"
+        },
+        {
+          "path": "scripts/sw_native_wire.ps1",
+          "language": "powershell",
+          "sizeLines": 13,
+          "fileCategory": "script"
+        },
+        {
+          "path": "scripts/verify_updater_release.ps1",
+          "language": "powershell",
+          "sizeLines": 72,
+          "fileCategory": "script"
+        }
+      ],
+      "batchImportData": {
+        "scripts/build_windows_release.ps1": [],
+        "scripts/sw_addin_host.ps1": [],
+        "scripts/sw_native_wire.ps1": [],
+        "scripts/verify_updater_release.ps1": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 27,
+      "files": [
+        {
+          "path": "subskills/autocad-automation/README.md",
+          "language": "markdown",
+          "sizeLines": 77,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/autocad-automation/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 199,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/autocad-automation/manifest.yaml",
+          "language": "yaml",
+          "sizeLines": 27,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "subskills/autocad-automation/README.md": [],
+        "subskills/autocad-automation/SKILL.md": [],
+        "subskills/autocad-automation/manifest.yaml": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 28,
+      "files": [
+        {
+          "path": "subskills/autocad-automation/references/api-lookup.md",
+          "language": "markdown",
+          "sizeLines": 73,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/autocad-automation/references/engineering-patterns.md",
+          "language": "markdown",
+          "sizeLines": 77,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/autocad-automation/references/troubleshooting.md",
+          "language": "markdown",
+          "sizeLines": 244,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "subskills/autocad-automation/references/api-lookup.md": [],
+        "subskills/autocad-automation/references/engineering-patterns.md": [],
+        "subskills/autocad-automation/references/troubleshooting.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 29,
+      "files": [
+        {
+          "path": "subskills/solidworks-engineering-drawing/README.md",
+          "language": "markdown",
+          "sizeLines": 70,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/solidworks-engineering-drawing/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 52,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/solidworks-engineering-drawing/manifest.yaml",
+          "language": "yaml",
+          "sizeLines": 22,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "subskills/solidworks-engineering-drawing/README.md": [],
+        "subskills/solidworks-engineering-drawing/SKILL.md": [],
+        "subskills/solidworks-engineering-drawing/manifest.yaml": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 30,
+      "files": [
+        {
+          "path": "subskills/solidworks-engineering-drawing/references/api-lookup.md",
+          "language": "markdown",
+          "sizeLines": 13,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/solidworks-engineering-drawing/references/drawing.md",
+          "language": "markdown",
+          "sizeLines": 19,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/solidworks-engineering-drawing/references/drilling-panel-gdt.md",
+          "language": "markdown",
+          "sizeLines": 27,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/solidworks-engineering-drawing/references/gdt-extended-options.md",
+          "language": "markdown",
+          "sizeLines": 119,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/solidworks-engineering-drawing/references/native-gdt.md",
+          "language": "markdown",
+          "sizeLines": 138,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/solidworks-engineering-drawing/references/review.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        }
+      ],
+      "batchImportData": {
+        "subskills/solidworks-engineering-drawing/references/api-lookup.md": [],
+        "subskills/solidworks-engineering-drawing/references/drawing.md": [],
+        "subskills/solidworks-engineering-drawing/references/drilling-panel-gdt.md": [],
+        "subskills/solidworks-engineering-drawing/references/gdt-extended-options.md": [],
+        "subskills/solidworks-engineering-drawing/references/native-gdt.md": [],
+        "subskills/solidworks-engineering-drawing/references/review.md": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 31,
+      "files": [
+        {
+          "path": "subskills/solidworks-fillet-chamfer-cnc/README.md",
+          "language": "markdown",
+          "sizeLines": 99,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/solidworks-fillet-chamfer-cnc/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 135,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/solidworks-fillet-chamfer-cnc/manifest.yaml",
+          "language": "yaml",
+          "sizeLines": 21,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "subskills/solidworks-fillet-chamfer-cnc/README.md": [],
+        "subskills/solidworks-fillet-chamfer-cnc/SKILL.md": [],
+        "subskills/solidworks-fillet-chamfer-cnc/manifest.yaml": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 32,
+      "files": [
+        {
+          "path": "subskills/solidworks-threaded-holes/README.md",
+          "language": "markdown",
+          "sizeLines": 58,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/solidworks-threaded-holes/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 71,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/solidworks-threaded-holes/manifest.yaml",
+          "language": "yaml",
+          "sizeLines": 15,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "subskills/solidworks-threaded-holes/README.md": [],
+        "subskills/solidworks-threaded-holes/SKILL.md": [],
+        "subskills/solidworks-threaded-holes/manifest.yaml": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 33,
+      "files": [
+        {
+          "path": "subskills/solidworks-vibecad/README.md",
+          "language": "markdown",
+          "sizeLines": 82,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/solidworks-vibecad/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 77,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/solidworks-vibecad/manifest.yaml",
+          "language": "yaml",
+          "sizeLines": 22,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "subskills/solidworks-vibecad/README.md": [],
+        "subskills/solidworks-vibecad/SKILL.md": [],
+        "subskills/solidworks-vibecad/manifest.yaml": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 34,
+      "files": [
+        {
+          "path": "subskills/solidworks-vibecad/examples/motor_mount_brief.txt",
+          "language": "txt",
+          "sizeLines": 3,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/solidworks-vibecad/examples/motor_mount_execution.md",
+          "language": "markdown",
+          "sizeLines": 34,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/solidworks-vibecad/examples/motor_mount_plan.json",
+          "language": "json",
+          "sizeLines": 189,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "subskills/solidworks-vibecad/examples/motor_mount_brief.txt": [],
+        "subskills/solidworks-vibecad/examples/motor_mount_execution.md": [],
+        "subskills/solidworks-vibecad/examples/motor_mount_plan.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 35,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "language": "unknown",
+          "sizeLines": 3,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".github/CODEOWNERS",
+          "language": "unknown",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".github/actionlint.yaml",
+          "language": "yaml",
+          "sizeLines": 4,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".github/governance-sensitive-manifest.json",
+          "language": "json",
+          "sizeLines": 15,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".mcpbignore",
+          "language": "unknown",
+          "sizeLines": 28,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".ua/config.json",
+          "language": "json",
+          "sizeLines": 1,
+          "fileCategory": "config"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "language": "yaml",
+          "sizeLines": 8,
+          "fileCategory": "config"
+        },
+        {
+          "path": "ai_team/delivery-gate-e2e.cjs",
+          "language": "javascript",
+          "sizeLines": 146,
+          "fileCategory": "code"
+        },
+        {
+          "path": "ai_team/nsis-install-e2e.ps1",
+          "language": "powershell",
+          "sizeLines": 42,
+          "fileCategory": "script"
+        },
+        {
+          "path": "ai_team/preview-viewport-e2e.cjs",
+          "language": "javascript",
+          "sizeLines": 372,
+          "fileCategory": "code"
+        },
+        {
+          "path": "ai_team/provider-ui-e2e.cjs",
+          "language": "javascript",
+          "sizeLines": 166,
+          "fileCategory": "code"
+        },
+        {
+          "path": "ai_team/release-portable-e2e.cjs",
+          "language": "javascript",
+          "sizeLines": 136,
+          "fileCategory": "code"
+        },
+        {
+          "path": "ai_team/ui-layout-check.cjs",
+          "language": "javascript",
+          "sizeLines": 204,
+          "fileCategory": "code"
+        },
+        {
+          "path": "ai_team/workbench-e2e-final.cjs",
+          "language": "javascript",
+          "sizeLines": 555,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/desktop/__init__.py",
+          "language": "python",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/desktop/cad_workbench/__init__.py",
+          "language": "python",
+          "sizeLines": 3,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/desktop/cad_workbench/cad_core_contracts.py",
+          "language": "python",
+          "sizeLines": 187,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/desktop/run.py",
+          "language": "python",
+          "sizeLines": 32,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/docs/automation-queue-protocol.md",
+          "language": "markdown",
+          "sizeLines": 368,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "apps/workbench-ui/src-tauri/Cargo.toml",
+          "language": "toml",
+          "sizeLines": 37,
+          "fileCategory": "config"
+        },
+        {
+          "path": "apps/workbench-ui/src-tauri/build.rs",
+          "language": "rust",
+          "sizeLines": 43,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src-tauri/capabilities/default.json",
+          "language": "json",
+          "sizeLines": 19,
+          "fileCategory": "config"
+        },
+        {
+          "path": "apps/workbench-ui/src-tauri/examples/verify_updater_signature.rs",
+          "language": "rust",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src-tauri/icons/icon.icns",
+          "language": "icns",
+          "sizeLines": 1022,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src-tauri/src/lib.rs",
+          "language": "rust",
+          "sizeLines": 3719,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        ".gitattributes": [],
+        ".github/CODEOWNERS": [],
+        ".github/actionlint.yaml": [],
+        ".github/governance-sensitive-manifest.json": [],
+        ".mcpbignore": [],
+        ".ua/config.json": [],
+        "agents/openai.yaml": [],
+        "ai_team/delivery-gate-e2e.cjs": [],
+        "ai_team/nsis-install-e2e.ps1": [],
+        "ai_team/preview-viewport-e2e.cjs": [],
+        "ai_team/provider-ui-e2e.cjs": [],
+        "ai_team/release-portable-e2e.cjs": [],
+        "ai_team/ui-layout-check.cjs": [],
+        "ai_team/workbench-e2e-final.cjs": [],
+        "apps/desktop/__init__.py": [],
+        "apps/desktop/cad_workbench/__init__.py": [],
+        "apps/desktop/cad_workbench/cad_core_contracts.py": [],
+        "apps/desktop/run.py": [],
+        "apps/workbench-ui/docs/automation-queue-protocol.md": [],
+        "apps/workbench-ui/src-tauri/Cargo.toml": [],
+        "apps/workbench-ui/src-tauri/build.rs": [],
+        "apps/workbench-ui/src-tauri/capabilities/default.json": [],
+        "apps/workbench-ui/src-tauri/examples/verify_updater_signature.rs": [],
+        "apps/workbench-ui/src-tauri/icons/icon.icns": [],
+        "apps/workbench-ui/src-tauri/src/lib.rs": [
+          "apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs"
+        ]
+      },
+      "neighborMap": {
+        "apps/workbench-ui/src-tauri/src/lib.rs": [
+          {
+            "path": "apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+            "batchIndex": 36,
+            "symbols": []
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 36,
+      "files": [
+        {
+          "path": "apps/workbench-ui/src-tauri/src/main.rs",
+          "language": "rust",
+          "sizeLines": 6,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+          "language": "rust",
+          "sizeLines": 150,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src-tauri/tauri.conf.json",
+          "language": "json",
+          "sizeLines": 64,
+          "fileCategory": "config"
+        },
+        {
+          "path": "apps/workbench-ui/src/assets/WALLPAPER_CREDITS.md",
+          "language": "markdown",
+          "sizeLines": 12,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "apps/workbench-ui/src/assets/default-blossom-poster.webp",
+          "language": "webp",
+          "sizeLines": 179,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/assets/wallpaper-anime-sky.webp",
+          "language": "webp",
+          "sizeLines": 1541,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/assets/wallpaper-fuji.webp",
+          "language": "webp",
+          "sizeLines": 88,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/assets/wallpaper-tokyo-neon.webp",
+          "language": "webp",
+          "sizeLines": 2282,
+          "fileCategory": "code"
+        },
+        {
+          "path": "apps/workbench-ui/src/styles.css",
+          "language": "css",
+          "sizeLines": 5489,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "apps/workbench-ui/vite.config.ts",
+          "language": "typescript",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": "config/README.md",
+          "language": "markdown",
+          "sizeLines": 67,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "config/runtime.example.json",
+          "language": "json",
+          "sizeLines": 6,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/agent-framework/enterprise-agent-control-plane.md",
+          "language": "markdown",
+          "sizeLines": 118,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/releases/v2.0.1.md",
+          "language": "markdown",
+          "sizeLines": 22,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/research/week1-js-cad-viewers.md",
+          "language": "markdown",
+          "sizeLines": 25,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "dotnet/CadStudio.SolidWorks.AddinHost/CadStudio.AddinHost.snk.base64",
+          "language": "base64",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "dotnet/CadStudio.SolidWorks.AddinHost/CadStudio.SolidWorks.AddinHost.csproj",
+          "language": "csproj",
+          "sizeLines": 48,
+          "fileCategory": "config"
+        },
+        {
+          "path": "dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs",
+          "language": "csharp",
+          "sizeLines": 141,
+          "fileCategory": "code"
+        },
+        {
+          "path": "dotnet/CadStudio.SolidWorks.AddinHost/Properties/AssemblyInfo.cs",
+          "language": "csharp",
+          "sizeLines": 11,
+          "fileCategory": "code"
+        },
+        {
+          "path": "dotnet/CadStudio.SolidWorks.AddinHost/PropertyPageHandler.cs",
+          "language": "csharp",
+          "sizeLines": 59,
+          "fileCategory": "code"
+        },
+        {
+          "path": "dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+          "language": "csharp",
+          "sizeLines": 398,
+          "fileCategory": "code"
+        },
+        {
+          "path": "dotnet/CadStudio.SolidWorks.AddinHost/TaskPaneControl.cs",
+          "language": "csharp",
+          "sizeLines": 58,
+          "fileCategory": "code"
+        },
+        {
+          "path": "examples/03_assembly.py",
+          "language": "python",
+          "sizeLines": 56,
+          "fileCategory": "code"
+        },
+        {
+          "path": "examples/04_batch_export.py",
+          "language": "python",
+          "sizeLines": 42,
+          "fileCategory": "code"
+        },
+        {
+          "path": "examples/05_drawing.py",
+          "language": "python",
+          "sizeLines": 46,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "apps/workbench-ui/src-tauri/src/main.rs": [],
+        "apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs": [],
+        "apps/workbench-ui/src-tauri/tauri.conf.json": [],
+        "apps/workbench-ui/src/assets/WALLPAPER_CREDITS.md": [],
+        "apps/workbench-ui/src/assets/default-blossom-poster.webp": [],
+        "apps/workbench-ui/src/assets/wallpaper-anime-sky.webp": [],
+        "apps/workbench-ui/src/assets/wallpaper-fuji.webp": [],
+        "apps/workbench-ui/src/assets/wallpaper-tokyo-neon.webp": [],
+        "apps/workbench-ui/src/styles.css": [],
+        "apps/workbench-ui/vite.config.ts": [],
+        "config/README.md": [],
+        "config/runtime.example.json": [],
+        "docs/agent-framework/enterprise-agent-control-plane.md": [],
+        "docs/releases/v2.0.1.md": [],
+        "docs/research/week1-js-cad-viewers.md": [],
+        "dotnet/CadStudio.SolidWorks.AddinHost/CadStudio.AddinHost.snk.base64": [],
+        "dotnet/CadStudio.SolidWorks.AddinHost/CadStudio.SolidWorks.AddinHost.csproj": [],
+        "dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs": [],
+        "dotnet/CadStudio.SolidWorks.AddinHost/Properties/AssemblyInfo.cs": [],
+        "dotnet/CadStudio.SolidWorks.AddinHost/PropertyPageHandler.cs": [],
+        "dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs": [],
+        "dotnet/CadStudio.SolidWorks.AddinHost/TaskPaneControl.cs": [],
+        "examples/03_assembly.py": [],
+        "examples/04_batch_export.py": [],
+        "examples/05_drawing.py": []
+      },
+      "neighborMap": {
+        "apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs": [
+          {
+            "path": "apps/workbench-ui/src-tauri/src/lib.rs",
+            "batchIndex": 35,
+            "symbols": [
+              "run"
+            ]
+          }
+        ],
+        "apps/workbench-ui/src/styles.css": [
+          {
+            "path": "apps/workbench-ui/src/main.tsx",
+            "batchIndex": 1,
+            "symbols": []
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 37,
+      "files": [
+        {
+          "path": "examples/06_friendly_api.py",
+          "language": "python",
+          "sizeLines": 34,
+          "fileCategory": "code"
+        },
+        {
+          "path": "examples/07_motion_study_rotary_motor.py",
+          "language": "python",
+          "sizeLines": 50,
+          "fileCategory": "code"
+        },
+        {
+          "path": "examples/08_mini_fan_motion_assembly.py",
+          "language": "python",
+          "sizeLines": 371,
+          "fileCategory": "code"
+        },
+        {
+          "path": "examples/generate_fea_convergence_example.py",
+          "language": "python",
+          "sizeLines": 105,
+          "fileCategory": "code"
+        },
+        {
+          "path": "examples/weldment/coremark_hss1x1x16ga.json",
+          "language": "json",
+          "sizeLines": 25,
+          "fileCategory": "config"
+        },
+        {
+          "path": "install.js",
+          "language": "javascript",
+          "sizeLines": 430,
+          "fileCategory": "code"
+        },
+        {
+          "path": "mcp-server/http_transport.py",
+          "language": "python",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "mcp-server/register_all_ai_mcp.js",
+          "language": "javascript",
+          "sizeLines": 350,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/__init__.py",
+          "language": "python",
+          "sizeLines": 22,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/advanced_geometry.py",
+          "language": "python",
+          "sizeLines": 253,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/advanced_geometry_ocp.py",
+          "language": "python",
+          "sizeLines": 533,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/advanced_surface_ocp.py",
+          "language": "python",
+          "sizeLines": 562,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/api_environment.py",
+          "language": "python",
+          "sizeLines": 230,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/api_help_restore.py",
+          "language": "python",
+          "sizeLines": 237,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/api_intent.py",
+          "language": "python",
+          "sizeLines": 62,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/backend_router.py",
+          "language": "python",
+          "sizeLines": 81,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/build_from_spec.py",
+          "language": "python",
+          "sizeLines": 472,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/build_skill_release.py",
+          "language": "python",
+          "sizeLines": 164,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/build_smithery_mcpb.py",
+          "language": "python",
+          "sizeLines": 70,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/capabilities.py",
+          "language": "python",
+          "sizeLines": 222,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/ci/check_governance_drift.cjs",
+          "language": "javascript",
+          "sizeLines": 119,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/delivery_compare.py",
+          "language": "python",
+          "sizeLines": 90,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/design_audit.py",
+          "language": "python",
+          "sizeLines": 299,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/design_rule_check.py",
+          "language": "python",
+          "sizeLines": 963,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/design_rule_profiles.py",
+          "language": "python",
+          "sizeLines": 234,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "examples/06_friendly_api.py": [],
+        "examples/07_motion_study_rotary_motor.py": [],
+        "examples/08_mini_fan_motion_assembly.py": [],
+        "examples/generate_fea_convergence_example.py": [],
+        "examples/weldment/coremark_hss1x1x16ga.json": [],
+        "install.js": [],
+        "mcp-server/http_transport.py": [],
+        "mcp-server/register_all_ai_mcp.js": [],
+        "scripts/__init__.py": [],
+        "scripts/advanced_geometry.py": [],
+        "scripts/advanced_geometry_ocp.py": [],
+        "scripts/advanced_surface_ocp.py": [],
+        "scripts/api_environment.py": [],
+        "scripts/api_help_restore.py": [],
+        "scripts/api_intent.py": [],
+        "scripts/backend_router.py": [],
+        "scripts/build_from_spec.py": [],
+        "scripts/build_skill_release.py": [],
+        "scripts/build_smithery_mcpb.py": [],
+        "scripts/capabilities.py": [],
+        "scripts/ci/check_governance_drift.cjs": [],
+        "scripts/delivery_compare.py": [],
+        "scripts/design_audit.py": [],
+        "scripts/design_rule_check.py": [],
+        "scripts/design_rule_profiles.py": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 38,
+      "files": [
+        {
+          "path": "scripts/design_spec.py",
+          "language": "python",
+          "sizeLines": 486,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/dfm_profiles.py",
+          "language": "python",
+          "sizeLines": 291,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/dfm_review.py",
+          "language": "python",
+          "sizeLines": 1161,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/drive_sizing.py",
+          "language": "python",
+          "sizeLines": 337,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/dxf_preview_scene.py",
+          "language": "python",
+          "sizeLines": 188,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/fastener_audit.py",
+          "language": "python",
+          "sizeLines": 273,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/fea_analysis.py",
+          "language": "python",
+          "sizeLines": 817,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/fea_convergence.py",
+          "language": "python",
+          "sizeLines": 251,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/headless_cad_writer.py",
+          "language": "python",
+          "sizeLines": 706,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/headless_occt_service.py",
+          "language": "python",
+          "sizeLines": 336,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/http_boundary.py",
+          "language": "python",
+          "sizeLines": 44,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/local_api_evidence.py",
+          "language": "python",
+          "sizeLines": 222,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/parallel_api_lookup.py",
+          "language": "python",
+          "sizeLines": 157,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/release_check.py",
+          "language": "python",
+          "sizeLines": 96,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/routing_review.py",
+          "language": "python",
+          "sizeLines": 520,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/stability_regression.py",
+          "language": "python",
+          "sizeLines": 79,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/standard_parts_geometry.py",
+          "language": "python",
+          "sizeLines": 427,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_addin_host.py",
+          "language": "python",
+          "sizeLines": 172,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_api_lookup.py",
+          "language": "python",
+          "sizeLines": 593,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_appearance.py",
+          "language": "python",
+          "sizeLines": 218,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_assembly.py",
+          "language": "python",
+          "sizeLines": 825,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_assembly_rename.py",
+          "language": "python",
+          "sizeLines": 326,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_capability_probe.py",
+          "language": "python",
+          "sizeLines": 181,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_delivery.py",
+          "language": "python",
+          "sizeLines": 1337,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_delivery_comtypes_worker.py",
+          "language": "python",
+          "sizeLines": 67,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "scripts/design_spec.py": [],
+        "scripts/dfm_profiles.py": [],
+        "scripts/dfm_review.py": [],
+        "scripts/drive_sizing.py": [],
+        "scripts/dxf_preview_scene.py": [],
+        "scripts/fastener_audit.py": [],
+        "scripts/fea_analysis.py": [],
+        "scripts/fea_convergence.py": [],
+        "scripts/headless_cad_writer.py": [],
+        "scripts/headless_occt_service.py": [],
+        "scripts/http_boundary.py": [],
+        "scripts/local_api_evidence.py": [],
+        "scripts/parallel_api_lookup.py": [],
+        "scripts/release_check.py": [],
+        "scripts/routing_review.py": [],
+        "scripts/stability_regression.py": [],
+        "scripts/standard_parts_geometry.py": [],
+        "scripts/sw_addin_host.py": [],
+        "scripts/sw_api_lookup.py": [],
+        "scripts/sw_appearance.py": [],
+        "scripts/sw_assembly.py": [],
+        "scripts/sw_assembly_rename.py": [],
+        "scripts/sw_capability_probe.py": [],
+        "scripts/sw_delivery.py": [],
+        "scripts/sw_delivery_comtypes_worker.py": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 39,
+      "files": [
+        {
+          "path": "scripts/sw_document_data.py",
+          "language": "python",
+          "sizeLines": 354,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_drawing.py",
+          "language": "python",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_drawing_review.py",
+          "language": "python",
+          "sizeLines": 24,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_edge_select.py",
+          "language": "python",
+          "sizeLines": 510,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_entity_reference.py",
+          "language": "python",
+          "sizeLines": 75,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_export.py",
+          "language": "python",
+          "sizeLines": 375,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_file_load.py",
+          "language": "python",
+          "sizeLines": 40,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_gdt_options.py",
+          "language": "python",
+          "sizeLines": 329,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_gear.py",
+          "language": "python",
+          "sizeLines": 301,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_hole_features.py",
+          "language": "python",
+          "sizeLines": 253,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_import_mesh_reference.py",
+          "language": "python",
+          "sizeLines": 258,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_macro_guard.py",
+          "language": "python",
+          "sizeLines": 356,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_mcp_approve.py",
+          "language": "python",
+          "sizeLines": 131,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_measure.py",
+          "language": "python",
+          "sizeLines": 392,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_motion.py",
+          "language": "python",
+          "sizeLines": 496,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_native_wire.cs",
+          "language": "csharp",
+          "sizeLines": 115,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_pattern.py",
+          "language": "python",
+          "sizeLines": 112,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_process.py",
+          "language": "python",
+          "sizeLines": 58,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_review.py",
+          "language": "python",
+          "sizeLines": 1286,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_sheet_metal.py",
+          "language": "python",
+          "sizeLines": 163,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_spring.py",
+          "language": "python",
+          "sizeLines": 157,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_sprocket.py",
+          "language": "python",
+          "sizeLines": 79,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_tolerance_extract.py",
+          "language": "python",
+          "sizeLines": 170,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sw_weldment.py",
+          "language": "python",
+          "sizeLines": 404,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/sync_bundled_skill.py",
+          "language": "python",
+          "sizeLines": 123,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "scripts/sw_document_data.py": [],
+        "scripts/sw_drawing.py": [],
+        "scripts/sw_drawing_review.py": [],
+        "scripts/sw_edge_select.py": [],
+        "scripts/sw_entity_reference.py": [],
+        "scripts/sw_export.py": [],
+        "scripts/sw_file_load.py": [],
+        "scripts/sw_gdt_options.py": [],
+        "scripts/sw_gear.py": [],
+        "scripts/sw_hole_features.py": [],
+        "scripts/sw_import_mesh_reference.py": [],
+        "scripts/sw_macro_guard.py": [],
+        "scripts/sw_mcp_approve.py": [],
+        "scripts/sw_measure.py": [],
+        "scripts/sw_motion.py": [],
+        "scripts/sw_native_wire.cs": [],
+        "scripts/sw_pattern.py": [],
+        "scripts/sw_process.py": [],
+        "scripts/sw_review.py": [],
+        "scripts/sw_sheet_metal.py": [],
+        "scripts/sw_spring.py": [],
+        "scripts/sw_sprocket.py": [],
+        "scripts/sw_tolerance_extract.py": [],
+        "scripts/sw_weldment.py": [],
+        "scripts/sync_bundled_skill.py": []
+      },
+      "neighborMap": {
+        "scripts/sw_review.py": [
+          {
+            "path": "subskills/solidworks-engineering-drawing/scripts/drawing_review.py",
+            "batchIndex": 40,
+            "symbols": [
+              "_check",
+              "_normalise_token",
+              "_dimension_identity",
+              "_dimension_view",
+              "_dimension_text",
+              "_extract_numbers",
+              "_dimension_mismatches",
+              "_required_dimension_report",
+              "_hole_specification",
+              "_distance_mm",
+              "_group_semantic_text",
+              "_hole_group_matches",
+              "_hole_report",
+              "_bom_report",
+              "_title_block_report",
+              "_canonical_view_name",
+              "_view_requirement_label",
+              "_view_report",
+              "_annotation_evidence_text",
+              "_professional_annotation_report",
+              "_note_report",
+              "_boxes_overlap",
+              "inspect_pdf_dimension_rendering",
+              "_with_rendered_dimension_boxes",
+              "_with_rendered_note_boxes",
+              "review_drawing_artifacts"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 40,
+      "files": [
+        {
+          "path": "scripts/validate_mcp.py",
+          "language": "python",
+          "sizeLines": 188,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/validate_skill.py",
+          "language": "python",
+          "sizeLines": 171,
+          "fileCategory": "code"
+        },
+        {
+          "path": "setup.py",
+          "language": "python",
+          "sizeLines": 62,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudio.AutoCAD2024.csproj",
+          "language": "csproj",
+          "sizeLines": 34,
+          "fileCategory": "config"
+        },
+        {
+          "path": "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudioCommands.cs",
+          "language": "csharp",
+          "sizeLines": 320,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/NuGet.Config",
+          "language": "config",
+          "sizeLines": 7,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/autocad-automation/evals/evals.json",
+          "language": "json",
+          "sizeLines": 24,
+          "fileCategory": "config"
+        },
+        {
+          "path": "subskills/autocad-automation/examples/draw_mounting_plate.py",
+          "language": "python",
+          "sizeLines": 47,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/autocad-automation/scripts/acad_dotnet_preflight.py",
+          "language": "python",
+          "sizeLines": 242,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/autocad-automation/scripts/acad_dotnet_regression.py",
+          "language": "python",
+          "sizeLines": 316,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/autocad-automation/scripts/acad_headless.py",
+          "language": "python",
+          "sizeLines": 300,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/autocad-automation/scripts/acad_preflight.py",
+          "language": "python",
+          "sizeLines": 136,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/solidworks-engineering-drawing/schemas/drawing_spec.schema.json",
+          "language": "json",
+          "sizeLines": 463,
+          "fileCategory": "config"
+        },
+        {
+          "path": "subskills/solidworks-engineering-drawing/schemas/gdt_copy_spec.schema.json",
+          "language": "json",
+          "sizeLines": 336,
+          "fileCategory": "config"
+        },
+        {
+          "path": "subskills/solidworks-engineering-drawing/scripts/__init__.py",
+          "language": "python",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/solidworks-engineering-drawing/scripts/drawing_review.py",
+          "language": "python",
+          "sizeLines": 922,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/solidworks-engineering-drawing/scripts/drawing_spec.py",
+          "language": "python",
+          "sizeLines": 150,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+          "language": "python",
+          "sizeLines": 2135,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py",
+          "language": "python",
+          "sizeLines": 874,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/solidworks-fillet-chamfer-cnc/agents/openai.yaml",
+          "language": "yaml",
+          "sizeLines": 7,
+          "fileCategory": "config"
+        },
+        {
+          "path": "subskills/solidworks-fillet-chamfer-cnc/evals/evals.json",
+          "language": "json",
+          "sizeLines": 23,
+          "fileCategory": "config"
+        },
+        {
+          "path": "subskills/solidworks-fillet-chamfer-cnc/examples/cnc_mount_precision_params.json",
+          "language": "json",
+          "sizeLines": 36,
+          "fileCategory": "config"
+        },
+        {
+          "path": "subskills/solidworks-fillet-chamfer-cnc/examples/open_source_corner_bracket_case.json",
+          "language": "json",
+          "sizeLines": 30,
+          "fileCategory": "config"
+        },
+        {
+          "path": "subskills/solidworks-fillet-chamfer-cnc/references/cnc-fillet-chamfer-lessons.md",
+          "language": "markdown",
+          "sizeLines": 240,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py",
+          "language": "python",
+          "sizeLines": 397,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "scripts/validate_mcp.py": [],
+        "scripts/validate_skill.py": [],
+        "setup.py": [],
+        "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudio.AutoCAD2024.csproj": [],
+        "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudioCommands.cs": [],
+        "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/NuGet.Config": [],
+        "subskills/autocad-automation/evals/evals.json": [],
+        "subskills/autocad-automation/examples/draw_mounting_plate.py": [],
+        "subskills/autocad-automation/scripts/acad_dotnet_preflight.py": [],
+        "subskills/autocad-automation/scripts/acad_dotnet_regression.py": [],
+        "subskills/autocad-automation/scripts/acad_headless.py": [],
+        "subskills/autocad-automation/scripts/acad_preflight.py": [],
+        "subskills/solidworks-engineering-drawing/schemas/drawing_spec.schema.json": [],
+        "subskills/solidworks-engineering-drawing/schemas/gdt_copy_spec.schema.json": [],
+        "subskills/solidworks-engineering-drawing/scripts/__init__.py": [],
+        "subskills/solidworks-engineering-drawing/scripts/drawing_review.py": [
+          "scripts/sw_review.py"
+        ],
+        "subskills/solidworks-engineering-drawing/scripts/drawing_spec.py": [],
+        "subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py": [],
+        "subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py": [],
+        "subskills/solidworks-fillet-chamfer-cnc/agents/openai.yaml": [],
+        "subskills/solidworks-fillet-chamfer-cnc/evals/evals.json": [],
+        "subskills/solidworks-fillet-chamfer-cnc/examples/cnc_mount_precision_params.json": [],
+        "subskills/solidworks-fillet-chamfer-cnc/examples/open_source_corner_bracket_case.json": [],
+        "subskills/solidworks-fillet-chamfer-cnc/references/cnc-fillet-chamfer-lessons.md": [],
+        "subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py": []
+      },
+      "neighborMap": {
+        "subskills/solidworks-engineering-drawing/scripts/drawing_review.py": [
+          {
+            "path": "scripts/sw_review.py",
+            "batchIndex": 39,
+            "symbols": [
+              "_pdf_text_overlap_candidate",
+              "_import_pdf_parser",
+              "_drawing_boxes_overlap",
+              "review_drawing_layout",
+              "_expand_path",
+              "_file_info",
+              "_read_bmp_size",
+              "inspect_pdf_text_layout",
+              "inspect_bmp_preview",
+              "zoom_to_fit",
+              "clear_selection_for_preview",
+              "activate_model_for_preview",
+              "set_standard_view",
+              "save_preview",
+              "save_review_previews",
+              "_feature_health",
+              "collect_model_summary",
+              "_unit_vector",
+              "_axis_distance_mm",
+              "group_coaxial_hole_segments",
+              "validate_hole_positions",
+              "collect_geometry_measurements",
+              "build_review_report",
+              "evaluate_review_report",
+              "write_review_report",
+              "write_markdown_summary",
+              "run_review",
+              "_parse_args",
+              "main"
+            ]
+          }
+        ],
+        "subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py": [
+          {
+            "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+            "batchIndex": 41,
+            "symbols": [
+              "assert_feature",
+              "clear",
+              "hide_reference_planes",
+              "select_plane",
+              "current_sketch_name",
+              "offset_front_plane",
+              "select_sketch",
+              "extrude_boss",
+              "cut",
+              "edge_points",
+              "midpoint",
+              "edge_direction",
+              "circle_center_radius",
+              "edge_signature",
+              "all_edges",
+              "matching_edges",
+              "select_exact_edges",
+              "planar_outer_loop_predicate",
+              "vertical_corner_predicate",
+              "hole_mouth_predicate",
+              "operation_predicate",
+              "apply_treatment",
+              "create_centered_slot",
+              "collect_feature_evidence",
+              "build_model",
+              "parse_args",
+              "parameters_from_args",
+              "main"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 41,
+      "files": [
+        {
+          "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+          "language": "python",
+          "sizeLines": 790,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs",
+          "language": "csharp",
+          "sizeLines": 324,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp",
+          "language": "cpp",
+          "sizeLines": 236,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.def",
+          "language": "def",
+          "sizeLines": 3,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineMacro.swb",
+          "language": "swb",
+          "sizeLines": 51,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py",
+          "language": "python",
+          "sizeLines": 342,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/solidworks-threaded-holes/agents/openai.yaml",
+          "language": "yaml",
+          "sizeLines": 4,
+          "fileCategory": "config"
+        },
+        {
+          "path": "subskills/solidworks-threaded-holes/references/threaded-hole-lessons.md",
+          "language": "markdown",
+          "sizeLines": 84,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/solidworks-threaded-holes/references/threaded-hole-roadmap.md",
+          "language": "markdown",
+          "sizeLines": 67,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+          "language": "python",
+          "sizeLines": 812,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/solidworks-vibecad/knowledge/manufacturing_rules.yaml",
+          "language": "yaml",
+          "sizeLines": 87,
+          "fileCategory": "config"
+        },
+        {
+          "path": "subskills/solidworks-vibecad/prompts/solidworks_parametric_planner.md",
+          "language": "markdown",
+          "sizeLines": 42,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/solidworks-vibecad/references/vibecad-roadmap.md",
+          "language": "markdown",
+          "sizeLines": 76,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "subskills/solidworks-vibecad/schemas/design_plan.schema.json",
+          "language": "json",
+          "sizeLines": 96,
+          "fileCategory": "config"
+        },
+        {
+          "path": "subskills/solidworks-vibecad/scripts/plan_from_brief.py",
+          "language": "python",
+          "sizeLines": 259,
+          "fileCategory": "code"
+        },
+        {
+          "path": "subskills/solidworks-vibecad/scripts/sw_execution_outline.py",
+          "language": "python",
+          "sizeLines": 117,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py": [
+          "subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py"
+        ],
+        "subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs": [],
+        "subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp": [],
+        "subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.def": [],
+        "subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineMacro.swb": [],
+        "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py": [],
+        "subskills/solidworks-threaded-holes/agents/openai.yaml": [],
+        "subskills/solidworks-threaded-holes/references/threaded-hole-lessons.md": [],
+        "subskills/solidworks-threaded-holes/references/threaded-hole-roadmap.md": [],
+        "subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py": [],
+        "subskills/solidworks-vibecad/knowledge/manufacturing_rules.yaml": [],
+        "subskills/solidworks-vibecad/prompts/solidworks_parametric_planner.md": [],
+        "subskills/solidworks-vibecad/references/vibecad-roadmap.md": [],
+        "subskills/solidworks-vibecad/schemas/design_plan.schema.json": [],
+        "subskills/solidworks-vibecad/scripts/plan_from_brief.py": [],
+        "subskills/solidworks-vibecad/scripts/sw_execution_outline.py": []
+      },
+      "neighborMap": {
+        "subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py": [
+          {
+            "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py",
+            "batchIndex": 40,
+            "symbols": [
+              "MountParameters",
+              "finite_number",
+              "validate_basename",
+              "_coerce_overrides",
+              "parse_set_values",
+              "load_parameter_file",
+              "parameter_positions",
+              "_circle_gap",
+              "_point_to_centered_slot_gap",
+              "analyze_parameters",
+              "require_valid_parameters",
+              "build_parameters",
+              "fallback_values",
+              "build_operation_plan",
+              "plan_payload"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

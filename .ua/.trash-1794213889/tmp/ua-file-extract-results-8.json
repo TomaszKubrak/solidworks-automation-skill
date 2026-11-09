@@ -1,0 +1,1719 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 4,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 4,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "scripts/ci/cad_ci_guard.cjs",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 198,
+      "nonEmptyLines": 190,
+      "functions": [
+        {
+          "name": "evaluatePolicy",
+          "startLine": 24,
+          "endLine": 128,
+          "params": [
+            "snapshot"
+          ]
+        },
+        {
+          "name": "readAttestation",
+          "startLine": 135,
+          "endLine": 143,
+          "params": []
+        },
+        {
+          "name": "readSnapshot",
+          "startLine": 146,
+          "endLine": 184,
+          "params": []
+        },
+        {
+          "name": "main",
+          "startLine": 187,
+          "endLine": 195,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "evaluatePolicy",
+          "callee": "environment?.protection_rules?.find",
+          "lineNumber": 28
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "[context.actor, context.triggering_actor].filter",
+          "lineNumber": 30
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "(Array.isArray(rulesets) ? rulesets : [])\n    .filter",
+          "lineNumber": 31
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "Array.isArray",
+          "lineNumber": 31
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "rules.find",
+          "lineNumber": 33
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "(statusChecks?.parameters?.required_status_checks || []).map",
+          "lineNumber": 34
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "Boolean",
+          "lineNumber": 36
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "activeRulesets.every",
+          "lineNumber": 38
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "Array.isArray",
+          "lineNumber": 38
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "trustRootAnchor.trim",
+          "lineNumber": 41
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "lib.trustRootAnchor",
+          "lineNumber": 42
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "/^sha256:[a-f0-9]{64}$/.test",
+          "lineNumber": 43
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "anchorFailures.push",
+          "lineNumber": 45
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "anchorFailures.push",
+          "lineNumber": 46
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "anchorFailures.push",
+          "lineNumber": 47
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "anchorFailures.push",
+          "lineNumber": 48
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "activeRulesets.find",
+          "lineNumber": 52
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "lib.verifyAttestation",
+          "lineNumber": 53
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "context.ref?.startsWith",
+          "lineNumber": 62
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "/^[a-f0-9]{40}$/.test",
+          "lineNumber": 66
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "rules.some",
+          "lineNumber": 68
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "requiredContexts.includes",
+          "lineNumber": 69
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "Boolean",
+          "lineNumber": 73
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "activeRulesets.every",
+          "lineNumber": 88
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "roles.every",
+          "lineNumber": 89
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "['admin', 'maintain'].includes",
+          "lineNumber": 89
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "Number.isInteger",
+          "lineNumber": 90
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "Boolean",
+          "lineNumber": 91
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "runners.some",
+          "lineNumber": 92
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "['self-hosted', 'windows', 'cad'].every",
+          "lineNumber": 93
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "r.labels?.some",
+          "lineNumber": 93
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "v.name?.toLowerCase",
+          "lineNumber": 93
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "governanceRisks.push",
+          "lineNumber": 96
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "governanceRisks.push",
+          "lineNumber": 97
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "governanceRisks.push",
+          "lineNumber": 98
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "governanceRisks.push",
+          "lineNumber": 100
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "governanceRisks.push",
+          "lineNumber": 102
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "governanceRisks.push",
+          "lineNumber": 104
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "governanceRisks.push",
+          "lineNumber": 105
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "governanceRisks.push",
+          "lineNumber": 106
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "Object.keys(checks).filter",
+          "lineNumber": 107
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "Object.keys",
+          "lineNumber": 107
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "Boolean",
+          "lineNumber": 117
+        },
+        {
+          "caller": "evaluatePolicy",
+          "callee": "Object.keys",
+          "lineNumber": 118
+        },
+        {
+          "caller": "readAttestation",
+          "callee": "Boolean",
+          "lineNumber": 139
+        },
+        {
+          "caller": "readAttestation",
+          "callee": "fs.existsSync",
+          "lineNumber": 140
+        },
+        {
+          "caller": "readAttestation",
+          "callee": "JSON.parse",
+          "lineNumber": 141
+        },
+        {
+          "caller": "readAttestation",
+          "callee": "fs.readFileSync",
+          "lineNumber": 141
+        },
+        {
+          "caller": "readSnapshot",
+          "callee": "readAttestation",
+          "lineNumber": 150
+        },
+        {
+          "caller": "get",
+          "callee": "fetch",
+          "lineNumber": 158
+        },
+        {
+          "caller": "get",
+          "callee": "response.json",
+          "lineNumber": 162
+        },
+        {
+          "caller": "readSnapshot",
+          "callee": "encodeURIComponent",
+          "lineNumber": 165
+        },
+        {
+          "caller": "readSnapshot",
+          "callee": "context.ref.slice",
+          "lineNumber": 165
+        },
+        {
+          "caller": "readSnapshot",
+          "callee": "Promise.all",
+          "lineNumber": 166
+        },
+        {
+          "caller": "readSnapshot",
+          "callee": "get",
+          "lineNumber": 167
+        },
+        {
+          "caller": "readSnapshot",
+          "callee": "get",
+          "lineNumber": 167
+        },
+        {
+          "caller": "readSnapshot",
+          "callee": "get",
+          "lineNumber": 168
+        },
+        {
+          "caller": "readSnapshot",
+          "callee": "get",
+          "lineNumber": 168
+        },
+        {
+          "caller": "readSnapshot",
+          "callee": "get",
+          "lineNumber": 169
+        },
+        {
+          "caller": "readSnapshot",
+          "callee": "(Array.isArray(rulesetList) ? rulesetList : [])\n    .filter",
+          "lineNumber": 174
+        },
+        {
+          "caller": "readSnapshot",
+          "callee": "Array.isArray",
+          "lineNumber": 174
+        },
+        {
+          "caller": "readSnapshot",
+          "callee": "Promise.all",
+          "lineNumber": 176
+        },
+        {
+          "caller": "readSnapshot",
+          "callee": "branchRulesets.map",
+          "lineNumber": 176
+        },
+        {
+          "caller": "readSnapshot",
+          "callee": "get",
+          "lineNumber": 176
+        },
+        {
+          "caller": "readSnapshot",
+          "callee": "get",
+          "lineNumber": 179
+        },
+        {
+          "caller": "readSnapshot",
+          "callee": "encodeURIComponent",
+          "lineNumber": 179
+        },
+        {
+          "caller": "main",
+          "callee": "readSnapshot",
+          "lineNumber": 189
+        },
+        {
+          "caller": "main",
+          "callee": "evaluatePolicy",
+          "lineNumber": 189
+        },
+        {
+          "caller": "main",
+          "callee": "fs.writeFileSync",
+          "lineNumber": 191
+        },
+        {
+          "caller": "main",
+          "callee": "JSON.stringify",
+          "lineNumber": 191
+        },
+        {
+          "caller": "main",
+          "callee": "fs.appendFileSync",
+          "lineNumber": 192
+        },
+        {
+          "caller": "main",
+          "callee": "console.log",
+          "lineNumber": 193
+        },
+        {
+          "caller": "main",
+          "callee": "JSON.stringify",
+          "lineNumber": 193
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scripts/ci/capture_governance_attestation.cjs",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 211,
+      "nonEmptyLines": 195,
+      "functions": [
+        {
+          "name": "parseArgs",
+          "startLine": 38,
+          "endLine": 58,
+          "params": [
+            "argv"
+          ]
+        },
+        {
+          "name": "loadPrivateKey",
+          "startLine": 61,
+          "endLine": 65,
+          "params": []
+        },
+        {
+          "name": "keyIdOfPrivateKey",
+          "startLine": 67,
+          "endLine": 70,
+          "params": [
+            "privateKeyPem"
+          ]
+        },
+        {
+          "name": "githubGet",
+          "startLine": 72,
+          "endLine": 77,
+          "params": [
+            "token",
+            "route"
+          ]
+        },
+        {
+          "name": "capture",
+          "startLine": 90,
+          "endLine": 153,
+          "params": []
+        },
+        {
+          "name": "verifyCaptured",
+          "startLine": 156,
+          "endLine": 161,
+          "params": []
+        },
+        {
+          "name": "runCapture",
+          "startLine": 168,
+          "endLine": 179,
+          "params": [
+            "options"
+          ]
+        },
+        {
+          "name": "main",
+          "startLine": 181,
+          "endLine": 207,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "parseArgs",
+          "callee": "Number",
+          "lineNumber": 43
+        },
+        {
+          "caller": "parseArgs",
+          "callee": "console.log",
+          "lineNumber": 50
+        },
+        {
+          "caller": "parseArgs",
+          "callee": "process.exit",
+          "lineNumber": 51
+        },
+        {
+          "caller": "parseArgs",
+          "callee": "Number.isInteger",
+          "lineNumber": 54
+        },
+        {
+          "caller": "loadPrivateKey",
+          "callee": "env.GOVERNANCE_SIGNING_KEY.trim",
+          "lineNumber": 62
+        },
+        {
+          "caller": "loadPrivateKey",
+          "callee": "fs.existsSync",
+          "lineNumber": 63
+        },
+        {
+          "caller": "loadPrivateKey",
+          "callee": "fs.readFileSync",
+          "lineNumber": 64
+        },
+        {
+          "caller": "keyIdOfPrivateKey",
+          "callee": "crypto.createPublicKey(crypto.createPrivateKey(privateKeyPem)).export",
+          "lineNumber": 68
+        },
+        {
+          "caller": "keyIdOfPrivateKey",
+          "callee": "crypto.createPublicKey",
+          "lineNumber": 68
+        },
+        {
+          "caller": "keyIdOfPrivateKey",
+          "callee": "crypto.createPrivateKey",
+          "lineNumber": 68
+        },
+        {
+          "caller": "keyIdOfPrivateKey",
+          "callee": "lib.keyIdOf",
+          "lineNumber": 69
+        },
+        {
+          "caller": "githubGet",
+          "callee": "fetch",
+          "lineNumber": 73
+        },
+        {
+          "caller": "githubGet",
+          "callee": "response.json",
+          "lineNumber": 76
+        },
+        {
+          "caller": "capture",
+          "callee": "Number.isInteger",
+          "lineNumber": 94
+        },
+        {
+          "caller": "capture",
+          "callee": "fetchJson",
+          "lineNumber": 96
+        },
+        {
+          "caller": "capture",
+          "callee": "String",
+          "lineNumber": 97
+        },
+        {
+          "caller": "capture",
+          "callee": "fetchJson",
+          "lineNumber": 100
+        },
+        {
+          "caller": "capture",
+          "callee": "(Array.isArray(rulesetList) ? rulesetList : []).find",
+          "lineNumber": 101
+        },
+        {
+          "caller": "capture",
+          "callee": "Array.isArray",
+          "lineNumber": 101
+        },
+        {
+          "caller": "capture",
+          "callee": "fetchJson",
+          "lineNumber": 103
+        },
+        {
+          "caller": "capture",
+          "callee": "Array.isArray",
+          "lineNumber": 105
+        },
+        {
+          "caller": "capture",
+          "callee": "Array.isArray",
+          "lineNumber": 108
+        },
+        {
+          "caller": "capture",
+          "callee": "lib.evaluateCompliance",
+          "lineNumber": 117
+        },
+        {
+          "caller": "capture",
+          "callee": "compliance.reasons.join",
+          "lineNumber": 118
+        },
+        {
+          "caller": "capture",
+          "callee": "compliance.reasons.join",
+          "lineNumber": 122
+        },
+        {
+          "caller": "capture",
+          "callee": "lib.policyDigest",
+          "lineNumber": 127
+        },
+        {
+          "caller": "capture",
+          "callee": "lib.snapshotDigest",
+          "lineNumber": 128
+        },
+        {
+          "caller": "capture",
+          "callee": "String",
+          "lineNumber": 134
+        },
+        {
+          "caller": "capture",
+          "callee": "capturedAt.toISOString",
+          "lineNumber": 146
+        },
+        {
+          "caller": "capture",
+          "callee": "new Date(capturedAt.getTime() + ttlDays * DAY_MS).toISOString",
+          "lineNumber": 147
+        },
+        {
+          "caller": "capture",
+          "callee": "capturedAt.getTime",
+          "lineNumber": 147
+        },
+        {
+          "caller": "capture",
+          "callee": "keyIdOfPrivateKey",
+          "lineNumber": 149
+        },
+        {
+          "caller": "capture",
+          "callee": "capturedAt.toISOString",
+          "lineNumber": 149
+        },
+        {
+          "caller": "capture",
+          "callee": "lib.signAttestation",
+          "lineNumber": 151
+        },
+        {
+          "caller": "verifyCaptured",
+          "callee": "fetchJson",
+          "lineNumber": 157
+        },
+        {
+          "caller": "verifyCaptured",
+          "callee": "require",
+          "lineNumber": 158
+        },
+        {
+          "caller": "verifyCaptured",
+          "callee": "lib.verifyAttestation",
+          "lineNumber": 159
+        },
+        {
+          "caller": "runCapture",
+          "callee": "loadPrivateKey",
+          "lineNumber": 169
+        },
+        {
+          "caller": "runCapture",
+          "callee": "capture",
+          "lineNumber": 170
+        },
+        {
+          "caller": "runCapture",
+          "callee": "JSON.stringify",
+          "lineNumber": 172
+        },
+        {
+          "caller": "runCapture",
+          "callee": "process.stdout.write",
+          "lineNumber": 173
+        },
+        {
+          "caller": "runCapture",
+          "callee": "fs.mkdirSync",
+          "lineNumber": 175
+        },
+        {
+          "caller": "runCapture",
+          "callee": "path.dirname",
+          "lineNumber": 175
+        },
+        {
+          "caller": "runCapture",
+          "callee": "fs.writeFileSync",
+          "lineNumber": 176
+        },
+        {
+          "caller": "main",
+          "callee": "parseArgs",
+          "lineNumber": 184
+        },
+        {
+          "caller": "main",
+          "callee": "process.argv.slice",
+          "lineNumber": 184
+        },
+        {
+          "caller": "main",
+          "callee": "runCapture",
+          "lineNumber": 185
+        },
+        {
+          "caller": "main",
+          "callee": "console.log",
+          "lineNumber": 186
+        },
+        {
+          "caller": "main",
+          "callee": "console.log",
+          "lineNumber": 187
+        },
+        {
+          "caller": "main",
+          "callee": "console.log",
+          "lineNumber": 188
+        },
+        {
+          "caller": "main",
+          "callee": "console.log",
+          "lineNumber": 189
+        },
+        {
+          "caller": "main",
+          "callee": "console.log",
+          "lineNumber": 190
+        },
+        {
+          "caller": "main",
+          "callee": "console.log",
+          "lineNumber": 191
+        },
+        {
+          "caller": "main",
+          "callee": "compliance.reasons.join",
+          "lineNumber": 191
+        },
+        {
+          "caller": "main",
+          "callee": "console.log",
+          "lineNumber": 192
+        },
+        {
+          "caller": "main",
+          "callee": "console.log",
+          "lineNumber": 193
+        },
+        {
+          "caller": "main",
+          "callee": "console.log",
+          "lineNumber": 194
+        },
+        {
+          "caller": "main",
+          "callee": "console.log",
+          "lineNumber": 195
+        },
+        {
+          "caller": "main",
+          "callee": "console.warn",
+          "lineNumber": 196
+        },
+        {
+          "caller": "main",
+          "callee": "verifyCaptured",
+          "lineNumber": 198
+        },
+        {
+          "caller": "main",
+          "callee": "console.log",
+          "lineNumber": 199
+        },
+        {
+          "caller": "main",
+          "callee": "report.reasons.join",
+          "lineNumber": 199
+        },
+        {
+          "caller": "main",
+          "callee": "console.error",
+          "lineNumber": 204
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 8,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scripts/ci/governance_attestation.cjs",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 360,
+      "nonEmptyLines": 320,
+      "functions": [
+        {
+          "name": "canonical",
+          "startLine": 28,
+          "endLine": 34,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "sha256Hex",
+          "startLine": 36,
+          "endLine": 36,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "normalizeRule",
+          "startLine": 39,
+          "endLine": 42,
+          "params": [
+            "rule"
+          ]
+        },
+        {
+          "name": "normalizePem",
+          "startLine": 45,
+          "endLine": 45,
+          "params": [
+            "pem"
+          ]
+        },
+        {
+          "name": "refNameOf",
+          "startLine": 48,
+          "endLine": 52,
+          "params": [
+            "ruleset"
+          ]
+        },
+        {
+          "name": "policyView",
+          "startLine": 59,
+          "endLine": 68,
+          "params": [
+            "ruleset"
+          ]
+        },
+        {
+          "name": "policyDigest",
+          "startLine": 71,
+          "endLine": 74,
+          "params": [
+            "ruleset"
+          ]
+        },
+        {
+          "name": "normalizeBypass",
+          "startLine": 77,
+          "endLine": 81,
+          "params": [
+            "actors"
+          ]
+        },
+        {
+          "name": "snapshotView",
+          "startLine": 87,
+          "endLine": 96,
+          "params": [
+            "ruleset"
+          ]
+        },
+        {
+          "name": "snapshotDigest",
+          "startLine": 99,
+          "endLine": 102,
+          "params": [
+            "ruleset"
+          ]
+        },
+        {
+          "name": "publicKeyFingerprint",
+          "startLine": 105,
+          "endLine": 108,
+          "params": [
+            "publicKeyPem"
+          ]
+        },
+        {
+          "name": "keyIdOf",
+          "startLine": 110,
+          "endLine": 110,
+          "params": [
+            "publicKeyPem"
+          ]
+        },
+        {
+          "name": "signingPayload",
+          "startLine": 113,
+          "endLine": 116,
+          "params": [
+            "attestation"
+          ]
+        },
+        {
+          "name": "signAttestation",
+          "startLine": 119,
+          "endLine": 122,
+          "params": [
+            "attestation",
+            "privateKeyPem"
+          ]
+        },
+        {
+          "name": "verifySignature",
+          "startLine": 124,
+          "endLine": 130,
+          "params": [
+            "attestation",
+            "publicKeyPem"
+          ]
+        },
+        {
+          "name": "parseTime",
+          "startLine": 132,
+          "endLine": 135,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "trustRootAnchor",
+          "startLine": 143,
+          "endLine": 160,
+          "params": [
+            "trustRoot"
+          ]
+        },
+        {
+          "name": "rotationLogCheck",
+          "startLine": 167,
+          "endLine": 190,
+          "params": [
+            "trustRoot"
+          ]
+        },
+        {
+          "name": "trustRootIntact",
+          "startLine": 193,
+          "endLine": 198,
+          "params": [
+            "trustRoot"
+          ]
+        },
+        {
+          "name": "evaluateCompliance",
+          "startLine": 204,
+          "endLine": 221,
+          "params": [
+            "ruleset"
+          ]
+        },
+        {
+          "name": "resolveKey",
+          "startLine": 224,
+          "endLine": 233,
+          "params": [
+            "trustRoot",
+            "keyId",
+            "signedAtMs"
+          ]
+        },
+        {
+          "name": "verifyAttestation",
+          "startLine": 249,
+          "endLine": 354,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "canonical",
+          "callee": "JSON.stringify",
+          "lineNumber": 30
+        },
+        {
+          "caller": "canonical",
+          "callee": "Array.isArray",
+          "lineNumber": 31
+        },
+        {
+          "caller": "canonical",
+          "callee": "value.map(canonical).join",
+          "lineNumber": 31
+        },
+        {
+          "caller": "canonical",
+          "callee": "value.map",
+          "lineNumber": 31
+        },
+        {
+          "caller": "canonical",
+          "callee": "Object.keys(value).filter(key => value[key] !== undefined).sort",
+          "lineNumber": 32
+        },
+        {
+          "caller": "canonical",
+          "callee": "Object.keys(value).filter",
+          "lineNumber": 32
+        },
+        {
+          "caller": "canonical",
+          "callee": "Object.keys",
+          "lineNumber": 32
+        },
+        {
+          "caller": "canonical",
+          "callee": "keys.map(key => `${JSON.stringify(key)}:${canonical(value[key])}`).join",
+          "lineNumber": 33
+        },
+        {
+          "caller": "canonical",
+          "callee": "keys.map",
+          "lineNumber": 33
+        },
+        {
+          "caller": "canonical",
+          "callee": "JSON.stringify",
+          "lineNumber": 33
+        },
+        {
+          "caller": "canonical",
+          "callee": "canonical",
+          "lineNumber": 33
+        },
+        {
+          "caller": "sha256Hex",
+          "callee": "crypto.createHash('sha256').update(text, 'utf8').digest",
+          "lineNumber": 36
+        },
+        {
+          "caller": "sha256Hex",
+          "callee": "crypto.createHash('sha256').update",
+          "lineNumber": 36
+        },
+        {
+          "caller": "sha256Hex",
+          "callee": "crypto.createHash",
+          "lineNumber": 36
+        },
+        {
+          "caller": "normalizePem",
+          "callee": "String(pem).replace(/\\r\\n/g, '\\n').trim",
+          "lineNumber": 45
+        },
+        {
+          "caller": "normalizePem",
+          "callee": "String(pem).replace",
+          "lineNumber": 45
+        },
+        {
+          "caller": "normalizePem",
+          "callee": "String",
+          "lineNumber": 45
+        },
+        {
+          "caller": "policyView",
+          "callee": "Array.isArray",
+          "lineNumber": 60
+        },
+        {
+          "caller": "policyView",
+          "callee": "refNameOf",
+          "lineNumber": 61
+        },
+        {
+          "caller": "policyView",
+          "callee": "ruleset.rules.map(normalizeRule).filter(Boolean)\n    .sort",
+          "lineNumber": 62
+        },
+        {
+          "caller": "policyView",
+          "callee": "ruleset.rules.map(normalizeRule).filter",
+          "lineNumber": 62
+        },
+        {
+          "caller": "policyView",
+          "callee": "ruleset.rules.map",
+          "lineNumber": 62
+        },
+        {
+          "caller": "policyView",
+          "callee": "[...refName.include].sort",
+          "lineNumber": 66
+        },
+        {
+          "caller": "policyView",
+          "callee": "[...refName.exclude].sort",
+          "lineNumber": 66
+        },
+        {
+          "caller": "policyDigest",
+          "callee": "policyView",
+          "lineNumber": 72
+        },
+        {
+          "caller": "policyDigest",
+          "callee": "sha256Hex",
+          "lineNumber": 73
+        },
+        {
+          "caller": "policyDigest",
+          "callee": "canonical",
+          "lineNumber": 73
+        },
+        {
+          "caller": "normalizeBypass",
+          "callee": "actors.map(actor => ({\n    actor_id: actor?.actor_id ?? null, actor_type: actor?.actor_type ?? null, bypass_mode: actor?.bypass_mode ?? null,\n  })).sort",
+          "lineNumber": 78
+        },
+        {
+          "caller": "normalizeBypass",
+          "callee": "actors.map",
+          "lineNumber": 78
+        },
+        {
+          "caller": "normalizeBypass",
+          "callee": "canonical",
+          "lineNumber": 80
+        },
+        {
+          "caller": "normalizeBypass",
+          "callee": "canonical",
+          "lineNumber": 80
+        },
+        {
+          "caller": "normalizeBypass",
+          "callee": "canonical",
+          "lineNumber": 80
+        },
+        {
+          "caller": "normalizeBypass",
+          "callee": "canonical",
+          "lineNumber": 80
+        },
+        {
+          "caller": "snapshotView",
+          "callee": "policyView",
+          "lineNumber": 88
+        },
+        {
+          "caller": "snapshotView",
+          "callee": "Array.isArray",
+          "lineNumber": 90
+        },
+        {
+          "caller": "snapshotView",
+          "callee": "normalizeBypass",
+          "lineNumber": 93
+        },
+        {
+          "caller": "snapshotDigest",
+          "callee": "snapshotView",
+          "lineNumber": 100
+        },
+        {
+          "caller": "snapshotDigest",
+          "callee": "sha256Hex",
+          "lineNumber": 101
+        },
+        {
+          "caller": "snapshotDigest",
+          "callee": "canonical",
+          "lineNumber": 101
+        },
+        {
+          "caller": "publicKeyFingerprint",
+          "callee": "crypto.createPublicKey(publicKeyPem).export",
+          "lineNumber": 106
+        },
+        {
+          "caller": "publicKeyFingerprint",
+          "callee": "crypto.createPublicKey",
+          "lineNumber": 106
+        },
+        {
+          "caller": "publicKeyFingerprint",
+          "callee": "sha256Hex",
+          "lineNumber": 107
+        },
+        {
+          "caller": "publicKeyFingerprint",
+          "callee": "der.toString",
+          "lineNumber": 107
+        },
+        {
+          "caller": "keyIdOf",
+          "callee": "publicKeyFingerprint",
+          "lineNumber": 110
+        },
+        {
+          "caller": "signingPayload",
+          "callee": "Buffer.from",
+          "lineNumber": 115
+        },
+        {
+          "caller": "signingPayload",
+          "callee": "canonical",
+          "lineNumber": 115
+        },
+        {
+          "caller": "signAttestation",
+          "callee": "crypto.createPrivateKey",
+          "lineNumber": 120
+        },
+        {
+          "caller": "signAttestation",
+          "callee": "crypto.sign(null, signingPayload(attestation), key).toString",
+          "lineNumber": 121
+        },
+        {
+          "caller": "signAttestation",
+          "callee": "crypto.sign",
+          "lineNumber": 121
+        },
+        {
+          "caller": "signAttestation",
+          "callee": "signingPayload",
+          "lineNumber": 121
+        },
+        {
+          "caller": "verifySignature",
+          "callee": "Buffer.from",
+          "lineNumber": 126
+        },
+        {
+          "caller": "verifySignature",
+          "callee": "String",
+          "lineNumber": 126
+        },
+        {
+          "caller": "verifySignature",
+          "callee": "crypto.verify",
+          "lineNumber": 128
+        },
+        {
+          "caller": "verifySignature",
+          "callee": "signingPayload",
+          "lineNumber": 128
+        },
+        {
+          "caller": "verifySignature",
+          "callee": "crypto.createPublicKey",
+          "lineNumber": 128
+        },
+        {
+          "caller": "parseTime",
+          "callee": "Date.parse",
+          "lineNumber": 133
+        },
+        {
+          "caller": "parseTime",
+          "callee": "Number.isFinite",
+          "lineNumber": 134
+        },
+        {
+          "caller": "trustRootAnchor",
+          "callee": "Array.isArray",
+          "lineNumber": 146
+        },
+        {
+          "caller": "trustRootAnchor",
+          "callee": "Array.isArray",
+          "lineNumber": 147
+        },
+        {
+          "caller": "trustRootAnchor",
+          "callee": "log.every",
+          "lineNumber": 148
+        },
+        {
+          "caller": "trustRootAnchor",
+          "callee": "Object.keys(keys).sort",
+          "lineNumber": 150
+        },
+        {
+          "caller": "trustRootAnchor",
+          "callee": "Object.keys",
+          "lineNumber": 150
+        },
+        {
+          "caller": "trustRootAnchor",
+          "callee": "normalizePem",
+          "lineNumber": 154
+        },
+        {
+          "caller": "trustRootAnchor",
+          "callee": "sha256Hex",
+          "lineNumber": 159
+        },
+        {
+          "caller": "trustRootAnchor",
+          "callee": "canonical",
+          "lineNumber": 159
+        },
+        {
+          "caller": "rotationLogCheck",
+          "callee": "Array.isArray",
+          "lineNumber": 170
+        },
+        {
+          "caller": "rotationLogCheck",
+          "callee": "Array.isArray",
+          "lineNumber": 171
+        },
+        {
+          "caller": "rotationLogCheck",
+          "callee": "log.every",
+          "lineNumber": 172
+        },
+        {
+          "caller": "rotationLogCheck",
+          "callee": "reasons.push",
+          "lineNumber": 174
+        },
+        {
+          "caller": "rotationLogCheck",
+          "callee": "Object.prototype.hasOwnProperty.call",
+          "lineNumber": 175
+        },
+        {
+          "caller": "rotationLogCheck",
+          "callee": "reasons.push",
+          "lineNumber": 175
+        },
+        {
+          "caller": "rotationLogCheck",
+          "callee": "Object.keys",
+          "lineNumber": 176
+        },
+        {
+          "caller": "rotationLogCheck",
+          "callee": "log.includes",
+          "lineNumber": 176
+        },
+        {
+          "caller": "rotationLogCheck",
+          "callee": "reasons.push",
+          "lineNumber": 176
+        },
+        {
+          "caller": "rotationLogCheck",
+          "callee": "log.forEach",
+          "lineNumber": 178
+        },
+        {
+          "caller": "rotationLogCheck",
+          "callee": "reasons.push",
+          "lineNumber": 185
+        },
+        {
+          "caller": "rotationLogCheck",
+          "callee": "parseTime",
+          "lineNumber": 186
+        },
+        {
+          "caller": "rotationLogCheck",
+          "callee": "reasons.push",
+          "lineNumber": 186
+        },
+        {
+          "caller": "rotationLogCheck",
+          "callee": "reasons.push",
+          "lineNumber": 187
+        },
+        {
+          "caller": "trustRootIntact",
+          "callee": "Array.isArray",
+          "lineNumber": 196
+        },
+        {
+          "caller": "trustRootIntact",
+          "callee": "log.every",
+          "lineNumber": 197
+        },
+        {
+          "caller": "trustRootIntact",
+          "callee": "Object.prototype.hasOwnProperty.call",
+          "lineNumber": 197
+        },
+        {
+          "caller": "evaluateCompliance",
+          "callee": "reasons.push",
+          "lineNumber": 207
+        },
+        {
+          "caller": "evaluateCompliance",
+          "callee": "reasons.push",
+          "lineNumber": 208
+        },
+        {
+          "caller": "evaluateCompliance",
+          "callee": "refNameOf",
+          "lineNumber": 209
+        },
+        {
+          "caller": "evaluateCompliance",
+          "callee": "reasons.push",
+          "lineNumber": 212
+        },
+        {
+          "caller": "evaluateCompliance",
+          "callee": "Array.isArray",
+          "lineNumber": 213
+        },
+        {
+          "caller": "evaluateCompliance",
+          "callee": "rules.some",
+          "lineNumber": 214
+        },
+        {
+          "caller": "evaluateCompliance",
+          "callee": "reasons.push",
+          "lineNumber": 214
+        },
+        {
+          "caller": "evaluateCompliance",
+          "callee": "rules.find",
+          "lineNumber": 215
+        },
+        {
+          "caller": "evaluateCompliance",
+          "callee": "(statusRule?.parameters?.required_status_checks || []).map",
+          "lineNumber": 216
+        },
+        {
+          "caller": "evaluateCompliance",
+          "callee": "contexts.includes",
+          "lineNumber": 217
+        },
+        {
+          "caller": "evaluateCompliance",
+          "callee": "reasons.push",
+          "lineNumber": 217
+        },
+        {
+          "caller": "evaluateCompliance",
+          "callee": "Array.isArray",
+          "lineNumber": 218
+        },
+        {
+          "caller": "evaluateCompliance",
+          "callee": "reasons.push",
+          "lineNumber": 218
+        },
+        {
+          "caller": "evaluateCompliance",
+          "callee": "reasons.push",
+          "lineNumber": 219
+        },
+        {
+          "caller": "resolveKey",
+          "callee": "keyIdOf",
+          "lineNumber": 227
+        },
+        {
+          "caller": "resolveKey",
+          "callee": "parseTime",
+          "lineNumber": 228
+        },
+        {
+          "caller": "resolveKey",
+          "callee": "parseTime",
+          "lineNumber": 230
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "Object.fromEntries",
+          "lineNumber": 251
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "CHECK_KEYS.map",
+          "lineNumber": 251
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "now.getTime",
+          "lineNumber": 253
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "parseTime",
+          "lineNumber": 253
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "Array.isArray",
+          "lineNumber": 256
+        },
+        {
+          "caller": "fail",
+          "callee": "reasons.push",
+          "lineNumber": 260
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "trustRootIntact",
+          "lineNumber": 262
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "fail",
+          "lineNumber": 263
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "rotationLogCheck",
+          "lineNumber": 265
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "fail",
+          "lineNumber": 267
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "fail",
+          "lineNumber": 270
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "fail",
+          "lineNumber": 276
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "String",
+          "lineNumber": 279
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "String",
+          "lineNumber": 279
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "fail",
+          "lineNumber": 281
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "fail",
+          "lineNumber": 287
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "refNameOf",
+          "lineNumber": 289
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "refNameOf",
+          "lineNumber": 290
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "fail",
+          "lineNumber": 294
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "parseTime",
+          "lineNumber": 296
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "parseTime",
+          "lineNumber": 297
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "fail",
+          "lineNumber": 302
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "parseTime",
+          "lineNumber": 305
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "resolveKey",
+          "lineNumber": 306
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "fail",
+          "lineNumber": 307
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "verifySignature",
+          "lineNumber": 308
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "fail",
+          "lineNumber": 309
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "policyDigest",
+          "lineNumber": 312
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "policyDigest",
+          "lineNumber": 313
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "fail",
+          "lineNumber": 316
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "snapshotDigest",
+          "lineNumber": 321
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "snapshotDigest",
+          "lineNumber": 322
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "fail",
+          "lineNumber": 327
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "fail",
+          "lineNumber": 331
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "Array.isArray",
+          "lineNumber": 335
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "evaluateCompliance",
+          "lineNumber": 336
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "fail",
+          "lineNumber": 339
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "Array.isArray",
+          "lineNumber": 342
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "fail",
+          "lineNumber": 343
+        },
+        {
+          "caller": "verifyAttestation",
+          "callee": "Array.isArray",
+          "lineNumber": 350
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 22,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scripts/ci/governance_trust_root.cjs",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 39,
+      "nonEmptyLines": 36,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

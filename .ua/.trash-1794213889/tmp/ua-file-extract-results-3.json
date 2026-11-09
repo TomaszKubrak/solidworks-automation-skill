@@ -1,0 +1,1885 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 12,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 12,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 12,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "apps/workbench-ui/src/CadPreview.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 234,
+      "nonEmptyLines": 220,
+      "functions": [
+        {
+          "name": "isLocalRuntime",
+          "startLine": 35,
+          "endLine": 37,
+          "params": []
+        },
+        {
+          "name": "readPreviewUrl",
+          "startLine": 39,
+          "endLine": 45,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "readPreviewText",
+          "startLine": 47,
+          "endLine": 56,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "manifestFromArtifact",
+          "startLine": 58,
+          "endLine": 71,
+          "params": [
+            "artifact"
+          ]
+        },
+        {
+          "name": "CadPreview",
+          "startLine": 74,
+          "endLine": 234,
+          "params": [
+            "{ artifact }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CadPreview",
+          "line": 74,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "readPreviewUrl",
+          "callee": "/^(https?:|asset:|data:|blob:)/i.test",
+          "lineNumber": 40
+        },
+        {
+          "caller": "readPreviewUrl",
+          "callee": "path.startsWith",
+          "lineNumber": 40
+        },
+        {
+          "caller": "readPreviewUrl",
+          "callee": "isLocalRuntime",
+          "lineNumber": 40
+        },
+        {
+          "caller": "readPreviewUrl",
+          "callee": "await invoke",
+          "lineNumber": 41
+        },
+        {
+          "caller": "readPreviewUrl",
+          "callee": "URL.createObjectURL",
+          "lineNumber": 43
+        },
+        {
+          "caller": "readPreviewUrl",
+          "callee": "mimeType",
+          "lineNumber": 43
+        },
+        {
+          "caller": "readPreviewUrl",
+          "callee": "URL.revokeObjectURL",
+          "lineNumber": 44
+        },
+        {
+          "caller": "readPreviewText",
+          "callee": "readPreviewUrl",
+          "lineNumber": 48
+        },
+        {
+          "caller": "readPreviewText",
+          "callee": "fetch",
+          "lineNumber": 50
+        },
+        {
+          "caller": "readPreviewText",
+          "callee": "response.text",
+          "lineNumber": 52
+        },
+        {
+          "caller": "readPreviewText",
+          "callee": "revoke",
+          "lineNumber": 54
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "useRef",
+          "lineNumber": 75
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "useRef",
+          "lineNumber": 76
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "useRef",
+          "lineNumber": 77
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "useState",
+          "lineNumber": 78
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "useState",
+          "lineNumber": 79
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "useState",
+          "lineNumber": 80
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "useState",
+          "lineNumber": 81
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "useState",
+          "lineNumber": 82
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "useState",
+          "lineNumber": 83
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "useState",
+          "lineNumber": 84
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "useState",
+          "lineNumber": 85
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "modeForPath",
+          "lineNumber": 86
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "useCallback",
+          "lineNumber": 89
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "setPhase",
+          "lineNumber": 90
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "setMessage",
+          "lineNumber": 91
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "useEffect",
+          "lineNumber": 94
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "setLoaded",
+          "lineNumber": 96
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "setSelection",
+          "lineNumber": 97
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "setStats",
+          "lineNumber": 98
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "setLayers",
+          "lineNumber": 99
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "setVisibleLayers",
+          "lineNumber": 100
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "setPreviewPhase",
+          "lineNumber": 104
+        },
+        {
+          "caller": "load",
+          "callee": "URL.createObjectURL",
+          "lineNumber": 110
+        },
+        {
+          "caller": "load",
+          "callee": "JSON.stringify",
+          "lineNumber": 110
+        },
+        {
+          "caller": "load",
+          "callee": "manifestFromArtifact",
+          "lineNumber": 111
+        },
+        {
+          "caller": "load",
+          "callee": "setLoaded",
+          "lineNumber": 113
+        },
+        {
+          "caller": "load",
+          "callee": "URL.revokeObjectURL",
+          "lineNumber": 119
+        },
+        {
+          "caller": "load",
+          "callee": "setPreviewPhase",
+          "lineNumber": 121
+        },
+        {
+          "caller": "load",
+          "callee": "URL.revokeObjectURL",
+          "lineNumber": 123
+        },
+        {
+          "caller": "load",
+          "callee": "setPreviewPhase",
+          "lineNumber": 127
+        },
+        {
+          "caller": "load",
+          "callee": "fileName",
+          "lineNumber": 127
+        },
+        {
+          "caller": "load",
+          "callee": "manifestFromArtifact",
+          "lineNumber": 128
+        },
+        {
+          "caller": "load",
+          "callee": "modeForPath",
+          "lineNumber": 130
+        },
+        {
+          "caller": "load",
+          "callee": "readPreviewText",
+          "lineNumber": 131
+        },
+        {
+          "caller": "load",
+          "callee": "JSON.parse",
+          "lineNumber": 132
+        },
+        {
+          "caller": "load",
+          "callee": "resolveSiblingPath",
+          "lineNumber": 133
+        },
+        {
+          "caller": "load",
+          "callee": "modeForPath",
+          "lineNumber": 135
+        },
+        {
+          "caller": "load",
+          "callee": "resolveSiblingPath",
+          "lineNumber": 137
+        },
+        {
+          "caller": "load",
+          "callee": "modeForPath",
+          "lineNumber": 138
+        },
+        {
+          "caller": "load",
+          "callee": "readPreviewUrl",
+          "lineNumber": 140
+        },
+        {
+          "caller": "load",
+          "callee": "loadedUrl.revoke",
+          "lineNumber": 142
+        },
+        {
+          "caller": "load",
+          "callee": "setLoaded",
+          "lineNumber": 145
+        },
+        {
+          "caller": "load",
+          "callee": "setPreviewPhase",
+          "lineNumber": 146
+        },
+        {
+          "caller": "load",
+          "callee": "fileName",
+          "lineNumber": 146
+        },
+        {
+          "caller": "load",
+          "callee": "setPreviewPhase",
+          "lineNumber": 148
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "load",
+          "lineNumber": 151
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "useEffect",
+          "lineNumber": 155
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "loaded?.revoke",
+          "lineNumber": 155
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "useCallback",
+          "lineNumber": 157
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "setPreviewPhase",
+          "lineNumber": 160
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "resolveSiblingPath",
+          "lineNumber": 163
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "setPreviewPhase",
+          "lineNumber": 164
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "readPreviewUrl(fallbackPath).then((fallbackUrl) => {\n      setLoaded((current) => ({\n        url: fallbackUrl.url,\n        path: fallbackPath,\n        mode: \"image\",\n        manifest: current?.manifest,\n        manifestPath: current?.manifestPath,\n        revoke: fallbackUrl.revoke,\n      }));\n      setPreviewPhase(\"可交互\", `${reason} 已显示 PNG 回退预览。`);\n    }).catch",
+          "lineNumber": 165
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "readPreviewUrl(fallbackPath).then",
+          "lineNumber": 165
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "readPreviewUrl",
+          "lineNumber": 165
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "setLoaded",
+          "lineNumber": 166
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "setPreviewPhase",
+          "lineNumber": 174
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "setPreviewPhase",
+          "lineNumber": 175
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "useEffect",
+          "lineNumber": 178
+        },
+        {
+          "caller": "handler",
+          "callee": "actionsRef.current.fit",
+          "lineNumber": 181
+        },
+        {
+          "caller": "handler",
+          "callee": "actionsRef.current.clearSelection",
+          "lineNumber": 182
+        },
+        {
+          "caller": "handler",
+          "callee": "actionsRef.current.setStandardView",
+          "lineNumber": 184
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "window.addEventListener",
+          "lineNumber": 186
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "window.removeEventListener",
+          "lineNumber": 187
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "useMemo",
+          "lineNumber": 191
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "layers.map",
+          "lineNumber": 191
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "useEffect",
+          "lineNumber": 192
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "setVisibleLayers",
+          "lineNumber": 192
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "fileName",
+          "lineNumber": 199
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "setVisibleLayers",
+          "lineNumber": 211
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "next.has",
+          "lineNumber": 213
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "next.delete",
+          "lineNumber": 213
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "next.add",
+          "lineNumber": 213
+        },
+        {
+          "caller": "CadPreview",
+          "callee": "fileName",
+          "lineNumber": 223
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 1,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "apps/workbench-ui/src/preview/DxfViewport.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 161,
+      "nonEmptyLines": 150,
+      "functions": [
+        {
+          "name": "color",
+          "startLine": 16,
+          "endLine": 18,
+          "params": [
+            "entity"
+          ]
+        },
+        {
+          "name": "project",
+          "startLine": 20,
+          "endLine": 22,
+          "params": [
+            "point",
+            "projection"
+          ]
+        },
+        {
+          "name": "drawScene",
+          "startLine": 24,
+          "endLine": 66,
+          "params": [
+            "canvas",
+            "scene",
+            "visibleLayers",
+            "selectedId"
+          ]
+        },
+        {
+          "name": "hitTest",
+          "startLine": 68,
+          "endLine": 80,
+          "params": [
+            "scene",
+            "projection",
+            "visibleLayers",
+            "x",
+            "y"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "DxfViewport",
+          "line": 83,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "drawScene",
+          "callee": "canvas.getContext",
+          "lineNumber": 30
+        },
+        {
+          "caller": "drawScene",
+          "callee": "context.setTransform",
+          "lineNumber": 32
+        },
+        {
+          "caller": "drawScene",
+          "callee": "context.fillRect",
+          "lineNumber": 34
+        },
+        {
+          "caller": "drawScene",
+          "callee": "Math.min",
+          "lineNumber": 38
+        },
+        {
+          "caller": "drawScene",
+          "callee": "Math.max",
+          "lineNumber": 38
+        },
+        {
+          "caller": "drawScene",
+          "callee": "Math.max",
+          "lineNumber": 38
+        },
+        {
+          "caller": "drawScene",
+          "callee": "visibleLayers.has",
+          "lineNumber": 43
+        },
+        {
+          "caller": "drawScene",
+          "callee": "context.save",
+          "lineNumber": 44
+        },
+        {
+          "caller": "drawScene",
+          "callee": "color",
+          "lineNumber": 45
+        },
+        {
+          "caller": "drawScene",
+          "callee": "color",
+          "lineNumber": 46
+        },
+        {
+          "caller": "drawScene",
+          "callee": "project",
+          "lineNumber": 51
+        },
+        {
+          "caller": "drawScene",
+          "callee": "context.fillText",
+          "lineNumber": 53
+        },
+        {
+          "caller": "drawScene",
+          "callee": "context.beginPath",
+          "lineNumber": 56
+        },
+        {
+          "caller": "drawScene",
+          "callee": "entity.points.forEach",
+          "lineNumber": 57
+        },
+        {
+          "caller": "drawScene",
+          "callee": "project",
+          "lineNumber": 58
+        },
+        {
+          "caller": "drawScene",
+          "callee": "context.moveTo",
+          "lineNumber": 59
+        },
+        {
+          "caller": "drawScene",
+          "callee": "context.lineTo",
+          "lineNumber": 59
+        },
+        {
+          "caller": "drawScene",
+          "callee": "context.stroke",
+          "lineNumber": 61
+        },
+        {
+          "caller": "drawScene",
+          "callee": "context.restore",
+          "lineNumber": 63
+        },
+        {
+          "caller": "hitTest",
+          "callee": "visibleLayers.has",
+          "lineNumber": 71
+        },
+        {
+          "caller": "hitTest",
+          "callee": "project",
+          "lineNumber": 74
+        },
+        {
+          "caller": "hitTest",
+          "callee": "Math.hypot",
+          "lineNumber": 75
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "apps/workbench-ui/src/preview/ModelViewport.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 219,
+      "nonEmptyLines": 212,
+      "functions": [
+        {
+          "name": "boundsLabel",
+          "startLine": 17,
+          "endLine": 19,
+          "params": [
+            "size"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ModelViewport",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "boundsLabel",
+          "callee": "size.x.toFixed",
+          "lineNumber": 18
+        },
+        {
+          "caller": "boundsLabel",
+          "callee": "size.y.toFixed",
+          "lineNumber": 18
+        },
+        {
+          "caller": "boundsLabel",
+          "callee": "size.z.toFixed",
+          "lineNumber": 18
+        },
+        {
+          "caller": "render",
+          "callee": "renderer?.render",
+          "lineNumber": 81
+        },
+        {
+          "caller": "setCameraPosition",
+          "callee": "camera.position.set",
+          "lineNumber": 136
+        },
+        {
+          "caller": "setCameraPosition",
+          "callee": "Math.max",
+          "lineNumber": 137
+        },
+        {
+          "caller": "setCameraPosition",
+          "callee": "camera.updateProjectionMatrix",
+          "lineNumber": 137
+        },
+        {
+          "caller": "setCameraPosition",
+          "callee": "controls?.target.set",
+          "lineNumber": 138
+        },
+        {
+          "caller": "setCameraPosition",
+          "callee": "controls?.update",
+          "lineNumber": 138
+        },
+        {
+          "caller": "setCameraPosition",
+          "callee": "render",
+          "lineNumber": 138
+        },
+        {
+          "caller": "fit",
+          "callee": "setCameraPosition",
+          "lineNumber": 140
+        },
+        {
+          "caller": "reset",
+          "callee": "selectionHelper?.removeFromParent",
+          "lineNumber": 141
+        },
+        {
+          "caller": "reset",
+          "callee": "onSelection",
+          "lineNumber": 141
+        },
+        {
+          "caller": "reset",
+          "callee": "fit",
+          "lineNumber": 141
+        },
+        {
+          "caller": "clearSelection",
+          "callee": "selectionHelper?.removeFromParent",
+          "lineNumber": 142
+        },
+        {
+          "caller": "clearSelection",
+          "callee": "onSelection",
+          "lineNumber": 142
+        },
+        {
+          "caller": "clearSelection",
+          "callee": "render",
+          "lineNumber": 142
+        },
+        {
+          "caller": "updateOrthographic",
+          "callee": "Math.max",
+          "lineNumber": 144
+        },
+        {
+          "caller": "updateOrthographic",
+          "callee": "orthographic.position.copy",
+          "lineNumber": 149
+        },
+        {
+          "caller": "updateOrthographic",
+          "callee": "orthographic.updateProjectionMatrix",
+          "lineNumber": 152
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "apps/workbench-ui/src/preview/PreviewEvidencePanel.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 18,
+      "functions": [
+        {
+          "name": "PreviewEvidencePanel",
+          "startLine": 9,
+          "endLine": 20,
+          "params": [
+            "{ manifest, selection }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PreviewEvidencePanel",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "PreviewEvidencePanel",
+          "callee": "manifest.sha256.slice",
+          "lineNumber": 14
+        },
+        {
+          "caller": "PreviewEvidencePanel",
+          "callee": "evidence.map",
+          "lineNumber": 16
+        },
+        {
+          "caller": "PreviewEvidencePanel",
+          "callee": "limitations.map",
+          "lineNumber": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "apps/workbench-ui/src/preview/PreviewInspector.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 51,
+      "nonEmptyLines": 49,
+      "functions": [
+        {
+          "name": "PreviewInspector",
+          "startLine": 15,
+          "endLine": 51,
+          "params": [
+            "{ artifactPath, manifest, stats, selection, layers, visibleLayers, onToggleLayer }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PreviewInspector",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "PreviewInspector",
+          "callee": "fileName",
+          "lineNumber": 20
+        },
+        {
+          "caller": "PreviewInspector",
+          "callee": "fileName",
+          "lineNumber": 21
+        },
+        {
+          "caller": "PreviewInspector",
+          "callee": "layers.map",
+          "lineNumber": 39
+        },
+        {
+          "caller": "PreviewInspector",
+          "callee": "visibleLayers.has",
+          "lineNumber": 41
+        },
+        {
+          "caller": "PreviewInspector",
+          "callee": "onToggleLayer",
+          "lineNumber": 41
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "apps/workbench-ui/src/preview/PreviewShowcase.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 37,
+      "nonEmptyLines": 36,
+      "functions": [
+        {
+          "name": "PreviewShowcase",
+          "startLine": 6,
+          "endLine": 37,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "PreviewShowcase",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "PreviewShowcase",
+          "callee": "useState",
+          "lineNumber": 7
+        },
+        {
+          "caller": "PreviewShowcase",
+          "callee": "useMemo",
+          "lineNumber": 8
+        },
+        {
+          "caller": "PreviewShowcase",
+          "callee": "DEMO_SCENES.find",
+          "lineNumber": 8
+        },
+        {
+          "caller": "PreviewShowcase",
+          "callee": "setActiveId",
+          "lineNumber": 18
+        },
+        {
+          "caller": "PreviewShowcase",
+          "callee": "DEMO_SCENES.map",
+          "lineNumber": 19
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "apps/workbench-ui/src/preview/PreviewStatus.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 19,
+      "functions": [
+        {
+          "name": "PreviewStatus",
+          "startLine": 11,
+          "endLine": 21,
+          "params": [
+            "{ phase, message, manifest }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PreviewStatus",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "apps/workbench-ui/src/preview/PreviewToolbar.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 32,
+      "nonEmptyLines": 30,
+      "functions": [
+        {
+          "name": "PreviewToolbar",
+          "startLine": 12,
+          "endLine": 32,
+          "params": [
+            "{ ready, mode, projection, actions }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PreviewToolbar",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "PreviewToolbar",
+          "callee": "actions?.zoom",
+          "lineNumber": 16
+        },
+        {
+          "caller": "PreviewToolbar",
+          "callee": "actions?.zoom",
+          "lineNumber": 17
+        },
+        {
+          "caller": "PreviewToolbar",
+          "callee": "actions?.fit",
+          "lineNumber": 18
+        },
+        {
+          "caller": "PreviewToolbar",
+          "callee": "actions?.reset",
+          "lineNumber": 19
+        },
+        {
+          "caller": "PreviewToolbar",
+          "callee": "actions?.clearSelection",
+          "lineNumber": 20
+        },
+        {
+          "caller": "PreviewToolbar",
+          "callee": "([\"iso\", \"front\", \"right\", \"top\"] as const).map",
+          "lineNumber": 22
+        },
+        {
+          "caller": "PreviewToolbar",
+          "callee": "actions?.setStandardView",
+          "lineNumber": 23
+        },
+        {
+          "caller": "PreviewToolbar",
+          "callee": "actions?.toggleProjection",
+          "lineNumber": 26
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "apps/workbench-ui/src/preview/demoScenes.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 163,
+      "nonEmptyLines": 156,
+      "functions": [
+        {
+          "name": "layer",
+          "startLine": 9,
+          "endLine": 9,
+          "params": [
+            "name",
+            "color",
+            "count"
+          ]
+        },
+        {
+          "name": "line",
+          "startLine": 11,
+          "endLine": 18,
+          "params": [
+            "id",
+            "points",
+            "layerName",
+            "color",
+            "evidenceRefs"
+          ]
+        },
+        {
+          "name": "circle",
+          "startLine": 20,
+          "endLine": 27,
+          "params": [
+            "id",
+            "center",
+            "radius",
+            "layerName",
+            "color"
+          ]
+        },
+        {
+          "name": "text",
+          "startLine": 29,
+          "endLine": 36,
+          "params": [
+            "id",
+            "value",
+            "point",
+            "layerName",
+            "color"
+          ]
+        },
+        {
+          "name": "scene",
+          "startLine": 38,
+          "endLine": 45,
+          "params": [
+            "entities",
+            "layers",
+            "bounds",
+            "warnings"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "DEMO_SCENES",
+          "line": 47,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "circle",
+          "callee": "points.push",
+          "lineNumber": 24
+        },
+        {
+          "caller": "circle",
+          "callee": "Math.cos",
+          "lineNumber": 24
+        },
+        {
+          "caller": "circle",
+          "callee": "Math.sin",
+          "lineNumber": 24
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "apps/workbench-ui/src/preview/dxfWorker.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 120,
+      "nonEmptyLines": 111,
+      "functions": [
+        {
+          "name": "numberValue",
+          "startLine": 5,
+          "endLine": 9,
+          "params": [
+            "tags",
+            "code"
+          ]
+        },
+        {
+          "name": "allNumberValues",
+          "startLine": 11,
+          "endLine": 13,
+          "params": [
+            "tags",
+            "code"
+          ]
+        },
+        {
+          "name": "colorFromIndex",
+          "startLine": 15,
+          "endLine": 18,
+          "params": [
+            "index"
+          ]
+        },
+        {
+          "name": "entityBBox",
+          "startLine": 20,
+          "endLine": 28,
+          "params": [
+            "points"
+          ]
+        },
+        {
+          "name": "pushLayer",
+          "startLine": 30,
+          "endLine": 35,
+          "params": [
+            "layers",
+            "name",
+            "color"
+          ]
+        },
+        {
+          "name": "parseEntity",
+          "startLine": 37,
+          "endLine": 72,
+          "params": [
+            "kind",
+            "tags",
+            "index",
+            "layers"
+          ]
+        },
+        {
+          "name": "parseDxf",
+          "startLine": 74,
+          "endLine": 112,
+          "params": [
+            "source"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "numberValue",
+          "callee": "tags.find",
+          "lineNumber": 6
+        },
+        {
+          "caller": "numberValue",
+          "callee": "Number",
+          "lineNumber": 7
+        },
+        {
+          "caller": "numberValue",
+          "callee": "Number.isFinite",
+          "lineNumber": 8
+        },
+        {
+          "caller": "allNumberValues",
+          "callee": "tags.map((tag) => (tag.code === code ? Number(tag.value) : NaN)).filter",
+          "lineNumber": 12
+        },
+        {
+          "caller": "allNumberValues",
+          "callee": "tags.map",
+          "lineNumber": 12
+        },
+        {
+          "caller": "allNumberValues",
+          "callee": "Number",
+          "lineNumber": 12
+        },
+        {
+          "caller": "entityBBox",
+          "callee": "Math.min",
+          "lineNumber": 23
+        },
+        {
+          "caller": "entityBBox",
+          "callee": "points.map",
+          "lineNumber": 23
+        },
+        {
+          "caller": "entityBBox",
+          "callee": "Math.min",
+          "lineNumber": 24
+        },
+        {
+          "caller": "entityBBox",
+          "callee": "points.map",
+          "lineNumber": 24
+        },
+        {
+          "caller": "entityBBox",
+          "callee": "Math.max",
+          "lineNumber": 25
+        },
+        {
+          "caller": "entityBBox",
+          "callee": "points.map",
+          "lineNumber": 25
+        },
+        {
+          "caller": "entityBBox",
+          "callee": "Math.max",
+          "lineNumber": 26
+        },
+        {
+          "caller": "entityBBox",
+          "callee": "points.map",
+          "lineNumber": 26
+        },
+        {
+          "caller": "pushLayer",
+          "callee": "layers.get",
+          "lineNumber": 31
+        },
+        {
+          "caller": "pushLayer",
+          "callee": "layers.set",
+          "lineNumber": 34
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "tags.find",
+          "lineNumber": 38
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "colorFromIndex",
+          "lineNumber": 39
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "numberValue",
+          "lineNumber": 39
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "kind.toLowerCase",
+          "lineNumber": 40
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "kind.toLowerCase",
+          "lineNumber": 40
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "numberValue",
+          "lineNumber": 43
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "numberValue",
+          "lineNumber": 43
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "numberValue",
+          "lineNumber": 44
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "numberValue",
+          "lineNumber": 44
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "[x1, y1, x2, y2].every",
+          "lineNumber": 45
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "numberValue",
+          "lineNumber": 47
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "numberValue",
+          "lineNumber": 47
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "numberValue",
+          "lineNumber": 47
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "[cx, cy, radius].every",
+          "lineNumber": 48
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "numberValue",
+          "lineNumber": 49
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "numberValue",
+          "lineNumber": 50
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "points.push",
+          "lineNumber": 55
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "Math.cos",
+          "lineNumber": 55
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "Math.sin",
+          "lineNumber": 55
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "allNumberValues",
+          "lineNumber": 60
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "allNumberValues",
+          "lineNumber": 60
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "xs.map((x, itemIndex) => [x, ys[itemIndex]] as [number, number]).filter",
+          "lineNumber": 61
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "xs.map",
+          "lineNumber": 61
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "Number.isFinite",
+          "lineNumber": 61
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "Number",
+          "lineNumber": 62
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "numberValue",
+          "lineNumber": 62
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "points.push",
+          "lineNumber": 62
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "[\"TEXT\", \"MTEXT\", \"DIMENSION\"].includes",
+          "lineNumber": 64
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "numberValue",
+          "lineNumber": 65
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "numberValue",
+          "lineNumber": 65
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "tags.find",
+          "lineNumber": 66
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "tags.find",
+          "lineNumber": 66
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "entityBBox",
+          "lineNumber": 69
+        },
+        {
+          "caller": "parseEntity",
+          "callee": "pushLayer",
+          "lineNumber": 70
+        },
+        {
+          "caller": "parseDxf",
+          "callee": "source.replace(/\\r/g, \"\").split(\"\\n\").map",
+          "lineNumber": 75
+        },
+        {
+          "caller": "parseDxf",
+          "callee": "source.replace(/\\r/g, \"\").split",
+          "lineNumber": 75
+        },
+        {
+          "caller": "parseDxf",
+          "callee": "source.replace",
+          "lineNumber": 75
+        },
+        {
+          "caller": "parseDxf",
+          "callee": "value.trim",
+          "lineNumber": 75
+        },
+        {
+          "caller": "parseDxf",
+          "callee": "pairs.push",
+          "lineNumber": 77
+        },
+        {
+          "caller": "parseDxf",
+          "callee": "tags.push",
+          "lineNumber": 97
+        },
+        {
+          "caller": "parseDxf",
+          "callee": "parseEntity",
+          "lineNumber": 100
+        },
+        {
+          "caller": "parseDxf",
+          "callee": "entities.push",
+          "lineNumber": 101
+        },
+        {
+          "caller": "parseDxf",
+          "callee": "entities.map((entity) => entity.bbox).filter",
+          "lineNumber": 104
+        },
+        {
+          "caller": "parseDxf",
+          "callee": "entities.map",
+          "lineNumber": 104
+        },
+        {
+          "caller": "parseDxf",
+          "callee": "Math.min",
+          "lineNumber": 106
+        },
+        {
+          "caller": "parseDxf",
+          "callee": "boxes.map",
+          "lineNumber": 106
+        },
+        {
+          "caller": "parseDxf",
+          "callee": "Math.min",
+          "lineNumber": 107
+        },
+        {
+          "caller": "parseDxf",
+          "callee": "boxes.map",
+          "lineNumber": 107
+        },
+        {
+          "caller": "parseDxf",
+          "callee": "Math.max",
+          "lineNumber": 108
+        },
+        {
+          "caller": "parseDxf",
+          "callee": "boxes.map",
+          "lineNumber": 108
+        },
+        {
+          "caller": "parseDxf",
+          "callee": "Math.max",
+          "lineNumber": 109
+        },
+        {
+          "caller": "parseDxf",
+          "callee": "boxes.map",
+          "lineNumber": 109
+        },
+        {
+          "caller": "parseDxf",
+          "callee": "layers.values",
+          "lineNumber": 111
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 7,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "apps/workbench-ui/src/preview/previewTypes.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 75,
+      "nonEmptyLines": 68,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "apps/workbench-ui/src/preview/previewUtils.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 62,
+      "nonEmptyLines": 54,
+      "functions": [
+        {
+          "name": "extensionOf",
+          "startLine": 3,
+          "endLine": 5,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "dirnameOf",
+          "startLine": 7,
+          "endLine": 11,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "resolveSiblingPath",
+          "startLine": 13,
+          "endLine": 19,
+          "params": [
+            "basePath",
+            "nextPath"
+          ]
+        },
+        {
+          "name": "modeForPath",
+          "startLine": 21,
+          "endLine": 29,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "mimeType",
+          "startLine": 31,
+          "endLine": 41,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "fileName",
+          "startLine": 43,
+          "endLine": 45,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "formatBounds",
+          "startLine": 47,
+          "endLine": 53,
+          "params": [
+            "bounds",
+            "units"
+          ]
+        },
+        {
+          "name": "hasWebGlSupport",
+          "startLine": 55,
+          "endLine": 62,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "extensionOf",
+          "line": 3,
+          "isDefault": false
+        },
+        {
+          "name": "dirnameOf",
+          "line": 7,
+          "isDefault": false
+        },
+        {
+          "name": "resolveSiblingPath",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "modeForPath",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "mimeType",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "fileName",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "formatBounds",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "hasWebGlSupport",
+          "line": 55,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "extensionOf",
+          "callee": "path?.split(/[.?]/).pop()?.toLowerCase",
+          "lineNumber": 4
+        },
+        {
+          "caller": "extensionOf",
+          "callee": "path?.split(/[.?]/).pop",
+          "lineNumber": 4
+        },
+        {
+          "caller": "extensionOf",
+          "callee": "path?.split",
+          "lineNumber": 4
+        },
+        {
+          "caller": "dirnameOf",
+          "callee": "Math.max",
+          "lineNumber": 9
+        },
+        {
+          "caller": "dirnameOf",
+          "callee": "path.lastIndexOf",
+          "lineNumber": 9
+        },
+        {
+          "caller": "dirnameOf",
+          "callee": "path.lastIndexOf",
+          "lineNumber": 9
+        },
+        {
+          "caller": "dirnameOf",
+          "callee": "path.slice",
+          "lineNumber": 10
+        },
+        {
+          "caller": "resolveSiblingPath",
+          "callee": "/^(https?:|asset:|data:|blob:)/i.test",
+          "lineNumber": 15
+        },
+        {
+          "caller": "resolveSiblingPath",
+          "callee": "/^[A-Za-z]:[\\\\/]/.test",
+          "lineNumber": 15
+        },
+        {
+          "caller": "resolveSiblingPath",
+          "callee": "nextPath.startsWith",
+          "lineNumber": 15
+        },
+        {
+          "caller": "resolveSiblingPath",
+          "callee": "dirnameOf",
+          "lineNumber": 16
+        },
+        {
+          "caller": "resolveSiblingPath",
+          "callee": "base.includes",
+          "lineNumber": 18
+        },
+        {
+          "caller": "modeForPath",
+          "callee": "path?.toLowerCase().split(/[?#]/)[0].endsWith",
+          "lineNumber": 22
+        },
+        {
+          "caller": "modeForPath",
+          "callee": "path?.toLowerCase().split",
+          "lineNumber": 22
+        },
+        {
+          "caller": "modeForPath",
+          "callee": "path?.toLowerCase",
+          "lineNumber": 22
+        },
+        {
+          "caller": "modeForPath",
+          "callee": "extensionOf",
+          "lineNumber": 23
+        },
+        {
+          "caller": "modeForPath",
+          "callee": "[\"stl\", \"glb\", \"gltf\", \"obj\"].includes",
+          "lineNumber": 24
+        },
+        {
+          "caller": "modeForPath",
+          "callee": "[\"png\", \"jpg\", \"jpeg\", \"webp\", \"bmp\", \"gif\", \"svg\"].includes",
+          "lineNumber": 27
+        },
+        {
+          "caller": "mimeType",
+          "callee": "extensionOf",
+          "lineNumber": 32
+        },
+        {
+          "caller": "fileName",
+          "callee": "path?.split(/[\\\\/]/).pop",
+          "lineNumber": 44
+        },
+        {
+          "caller": "fileName",
+          "callee": "path?.split",
+          "lineNumber": 44
+        },
+        {
+          "caller": "formatBounds",
+          "callee": "Math.abs",
+          "lineNumber": 49
+        },
+        {
+          "caller": "formatBounds",
+          "callee": "Math.abs",
+          "lineNumber": 50
+        },
+        {
+          "caller": "formatBounds",
+          "callee": "Number.isFinite",
+          "lineNumber": 51
+        },
+        {
+          "caller": "formatBounds",
+          "callee": "Number.isFinite",
+          "lineNumber": 51
+        },
+        {
+          "caller": "formatBounds",
+          "callee": "width.toFixed",
+          "lineNumber": 52
+        },
+        {
+          "caller": "formatBounds",
+          "callee": "height.toFixed",
+          "lineNumber": 52
+        },
+        {
+          "caller": "hasWebGlSupport",
+          "callee": "document.createElement",
+          "lineNumber": 57
+        },
+        {
+          "caller": "hasWebGlSupport",
+          "callee": "Boolean",
+          "lineNumber": 58
+        },
+        {
+          "caller": "hasWebGlSupport",
+          "callee": "canvas.getContext",
+          "lineNumber": 58
+        },
+        {
+          "caller": "hasWebGlSupport",
+          "callee": "canvas.getContext",
+          "lineNumber": 58
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 8,
+        "functionCount": 8,
+        "classCount": 0
+      }
+    }
+  ]
+}

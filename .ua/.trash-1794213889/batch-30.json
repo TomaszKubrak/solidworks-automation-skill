@@ -1,0 +1,9 @@
+{"nodes":[
+{"id":"document:subskills/solidworks-fillet-chamfer-cnc/README.md","type":"document","name":"README.md","filePath":"subskills/solidworks-fillet-chamfer-cnc/README.md","summary":"Przegląd podskilla CNC fillet/chamfer: scenariusze użycia, zasady (prosta bryła bazowa, preflight kolizji, semantyczny wybór krawędzi) oraz dowody regresji dla SW2026 i backendów hold-line.","tags":["documentation","entry-point","cnc","fillet-chamfer"],"complexity":"moderate"},
+{"id":"document:subskills/solidworks-fillet-chamfer-cnc/SKILL.md","type":"document","name":"SKILL.md","filePath":"subskills/solidworks-fillet-chamfer-cnc/SKILL.md","summary":"Instrukcja skilla dla agenta: wybór trybu zadania, wejście przez szablon z --dry-run, zmienny promień, face/full-round/setback, G2 oraz ograniczenia pilot/blocked dla wersji SolidWorks.","tags":["documentation","skill","cnc","workflow","solidworks"],"complexity":"moderate"},
+{"id":"config:subskills/solidworks-fillet-chamfer-cnc/manifest.yaml","type":"config","name":"manifest.yaml","filePath":"subskills/solidworks-fillet-chamfer-cnc/manifest.yaml","summary":"Manifest podskilla: status stable, entrypoint SKILL.md, lista skryptów, referencji i przykładów oraz zależności od solidworks-automation i powiązania z vibecad i threaded-holes.","tags":["configuration","manifest","skill-metadata","cnc"],"complexity":"simple"}
+],"edges":[
+{"source":"document:subskills/solidworks-fillet-chamfer-cnc/README.md","target":"document:subskills/solidworks-fillet-chamfer-cnc/SKILL.md","type":"related","direction":"forward","weight":0.5},
+{"source":"config:subskills/solidworks-fillet-chamfer-cnc/manifest.yaml","target":"document:subskills/solidworks-fillet-chamfer-cnc/SKILL.md","type":"configures","direction":"forward","weight":0.6},
+{"source":"config:subskills/solidworks-fillet-chamfer-cnc/manifest.yaml","target":"document:subskills/solidworks-fillet-chamfer-cnc/README.md","type":"related","direction":"forward","weight":0.5}
+]}

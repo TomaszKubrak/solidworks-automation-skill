@@ -1,0 +1,14 @@
+{
+ "nodes": [
+  {"id":"document:apps/workbench-ui/README.md","type":"document","name":"README.md","filePath":"apps/workbench-ui/README.md","summary":"Dokumentacja desktopowego klienta CAD Studio (React + Tauri): funkcje interfejsu, kolejka automatyzacji, bramki zatwierdzania, Artifact Ledger oraz instrukcje instalacji, uruchamiania i budowania.","tags":["documentation","entry-point","tauri","workbench-ui"],"complexity":"moderate"},
+  {"id":"file:apps/workbench-ui/index.html","type":"file","name":"index.html","filePath":"apps/workbench-ui/index.html","summary":"Punkt wejścia HTML aplikacji Vite: definiuje metadane, kontener #root i ładuje moduł src/main.tsx.","tags":["entry-point","html","vite","markup"],"complexity":"simple"},
+  {"id":"config:apps/workbench-ui/package.json","type":"config","name":"package.json","filePath":"apps/workbench-ui/package.json","summary":"Manifest npm aplikacji workbench-ui: skrypty Vite/Tauri/Vitest, synchronizacja skilla oraz zależności React 19, three, motion i Tauri.","tags":["configuration","npm","build-system","tauri"],"complexity":"simple"},
+  {"id":"config:apps/workbench-ui/tsconfig.json","type":"config","name":"tsconfig.json","filePath":"apps/workbench-ui/tsconfig.json","summary":"Konfiguracja kompilatora TypeScript dla interfejsu workbench-ui wraz z referencjami projektów.","tags":["configuration","typescript","build-system"],"complexity":"simple"}
+ ],
+ "edges": [
+  {"source":"config:apps/workbench-ui/package.json","target":"file:apps/workbench-ui/index.html","type":"configures","direction":"forward","weight":0.6},
+  {"source":"config:apps/workbench-ui/tsconfig.json","target":"file:apps/workbench-ui/index.html","type":"configures","direction":"forward","weight":0.6},
+  {"source":"document:apps/workbench-ui/README.md","target":"config:apps/workbench-ui/package.json","type":"documents","direction":"forward","weight":0.5},
+  {"source":"document:apps/workbench-ui/README.md","target":"file:apps/workbench-ui/index.html","type":"documents","direction":"forward","weight":0.5}
+ ]
+}

@@ -1,0 +1,182 @@
+{
+ "projectRoot": "/Users/tomasz/Developer/solidworks-automation-skill",
+ "batchFiles": [
+  {
+   "path": "examples/06_friendly_api.py",
+   "language": "python",
+   "sizeLines": 34,
+   "fileCategory": "code"
+  },
+  {
+   "path": "examples/07_motion_study_rotary_motor.py",
+   "language": "python",
+   "sizeLines": 50,
+   "fileCategory": "code"
+  },
+  {
+   "path": "examples/08_mini_fan_motion_assembly.py",
+   "language": "python",
+   "sizeLines": 371,
+   "fileCategory": "code"
+  },
+  {
+   "path": "examples/generate_fea_convergence_example.py",
+   "language": "python",
+   "sizeLines": 105,
+   "fileCategory": "code"
+  },
+  {
+   "path": "examples/weldment/coremark_hss1x1x16ga.json",
+   "language": "json",
+   "sizeLines": 25,
+   "fileCategory": "config"
+  },
+  {
+   "path": "install.js",
+   "language": "javascript",
+   "sizeLines": 430,
+   "fileCategory": "code"
+  },
+  {
+   "path": "mcp-server/http_transport.py",
+   "language": "python",
+   "sizeLines": 19,
+   "fileCategory": "code"
+  },
+  {
+   "path": "mcp-server/register_all_ai_mcp.js",
+   "language": "javascript",
+   "sizeLines": 350,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/__init__.py",
+   "language": "python",
+   "sizeLines": 22,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/advanced_geometry.py",
+   "language": "python",
+   "sizeLines": 253,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/advanced_geometry_ocp.py",
+   "language": "python",
+   "sizeLines": 533,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/advanced_surface_ocp.py",
+   "language": "python",
+   "sizeLines": 562,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/api_environment.py",
+   "language": "python",
+   "sizeLines": 230,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/api_help_restore.py",
+   "language": "python",
+   "sizeLines": 237,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/api_intent.py",
+   "language": "python",
+   "sizeLines": 62,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/backend_router.py",
+   "language": "python",
+   "sizeLines": 81,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/build_from_spec.py",
+   "language": "python",
+   "sizeLines": 472,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/build_skill_release.py",
+   "language": "python",
+   "sizeLines": 164,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/build_smithery_mcpb.py",
+   "language": "python",
+   "sizeLines": 70,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/capabilities.py",
+   "language": "python",
+   "sizeLines": 222,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/ci/check_governance_drift.cjs",
+   "language": "javascript",
+   "sizeLines": 119,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/delivery_compare.py",
+   "language": "python",
+   "sizeLines": 90,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/design_audit.py",
+   "language": "python",
+   "sizeLines": 299,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/design_rule_check.py",
+   "language": "python",
+   "sizeLines": 963,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/design_rule_profiles.py",
+   "language": "python",
+   "sizeLines": 234,
+   "fileCategory": "code"
+  }
+ ],
+ "batchImportData": {
+  "examples/06_friendly_api.py": [],
+  "examples/07_motion_study_rotary_motor.py": [],
+  "examples/08_mini_fan_motion_assembly.py": [],
+  "examples/generate_fea_convergence_example.py": [],
+  "examples/weldment/coremark_hss1x1x16ga.json": [],
+  "install.js": [],
+  "mcp-server/http_transport.py": [],
+  "mcp-server/register_all_ai_mcp.js": [],
+  "scripts/__init__.py": [],
+  "scripts/advanced_geometry.py": [],
+  "scripts/advanced_geometry_ocp.py": [],
+  "scripts/advanced_surface_ocp.py": [],
+  "scripts/api_environment.py": [],
+  "scripts/api_help_restore.py": [],
+  "scripts/api_intent.py": [],
+  "scripts/backend_router.py": [],
+  "scripts/build_from_spec.py": [],
+  "scripts/build_skill_release.py": [],
+  "scripts/build_smithery_mcpb.py": [],
+  "scripts/capabilities.py": [],
+  "scripts/ci/check_governance_drift.cjs": [],
+  "scripts/delivery_compare.py": [],
+  "scripts/design_audit.py": [],
+  "scripts/design_rule_check.py": [],
+  "scripts/design_rule_profiles.py": []
+ }
+}

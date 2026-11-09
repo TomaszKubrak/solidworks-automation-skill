@@ -1,0 +1,648 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 9,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 9,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 9
+    }
+  },
+  "results": [
+    {
+      "path": "references/openclaw.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 110,
+      "nonEmptyLines": 78,
+      "sections": [
+        {
+          "heading": "OpenClaw 控制 SolidWorks",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "运行前检查",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "推荐执行流程",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "最小导入模板",
+          "level": 2,
+          "line": 39
+        },
+        {
+          "heading": "多模型 VBA 宏防护",
+          "level": 2,
+          "line": 56
+        },
+        {
+          "heading": "推荐提示词",
+          "level": 2,
+          "line": 74
+        },
+        {
+          "heading": "执行注意事项",
+          "level": 2,
+          "line": 82
+        },
+        {
+          "heading": "自检清单",
+          "level": 2,
+          "line": 89
+        },
+        {
+          "heading": "自审查示例",
+          "level": 2,
+          "line": 101
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "references/part-modeling.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 267,
+      "nonEmptyLines": 215,
+      "sections": [
+        {
+          "heading": "零件建模 API 参考",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "草图操作",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "基准面选择",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "草图几何体方法速查",
+          "level": 3,
+          "line": 21
+        },
+        {
+          "heading": "草图约束",
+          "level": 3,
+          "line": 35
+        },
+        {
+          "heading": "原生阵列",
+          "level": 3,
+          "line": 46
+        },
+        {
+          "heading": "草图选择稳定策略",
+          "level": 3,
+          "line": 50
+        },
+        {
+          "heading": "特征操作",
+          "level": 2,
+          "line": 73
+        },
+        {
+          "heading": "FeatureExtrusion3 参数详解",
+          "level": 3,
+          "line": 75
+        },
+        {
+          "heading": "FeatureCut4 参数详解",
+          "level": 3,
+          "line": 113
+        },
+        {
+          "heading": "FeatureRevolve2 参数",
+          "level": 3,
+          "line": 119
+        },
+        {
+          "heading": "阶梯轴建模推荐流程",
+          "level": 3,
+          "line": 146
+        },
+        {
+          "heading": "圆柱表面长圆槽",
+          "level": 3,
+          "line": 184
+        },
+        {
+          "heading": "圆角/倒角",
+          "level": 3,
+          "line": 214
+        },
+        {
+          "heading": "圆角/倒角当前可靠边界",
+          "level": 3,
+          "line": 241
+        },
+        {
+          "heading": "SelectByID2 实体类型",
+          "level": 2,
+          "line": 252
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 16
+      }
+    },
+    {
+      "path": "references/rename-preview.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 39,
+      "nonEmptyLines": 23,
+      "sections": [
+        {
+          "heading": "基于自定义属性的改名预览（pilot）",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "创建装配体改名副本（SolidWorks 2026 试点）",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "把独立零件复制为新名称",
+          "level": 2,
+          "line": 23
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "references/review.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 122,
+      "nonEmptyLines": 96,
+      "sections": [
+        {
+          "heading": "结果自审查参考",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "必做检查",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "结构化自审查报告",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "命令行一键审查",
+          "level": 2,
+          "line": 90
+        },
+        {
+          "heading": "目视自查清单",
+          "level": 2,
+          "line": 107
+        },
+        {
+          "heading": "发现问题时",
+          "level": 2,
+          "line": 117
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "references/solidworks-addin-host.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 102,
+      "nonEmptyLines": 74,
+      "sections": [
+        {
+          "heading": "SolidWorks C# Add-in 宿主",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "定位",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "构建",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "注册与验证",
+          "level": 2,
+          "line": 36
+        },
+        {
+          "heading": "验收门禁",
+          "level": 2,
+          "line": 60
+        },
+        {
+          "heading": "SW2026 真机证据",
+          "level": 2,
+          "line": 73
+        },
+        {
+          "heading": "已知限制",
+          "level": 2,
+          "line": 87
+        },
+        {
+          "heading": "官方依据",
+          "level": 2,
+          "line": 96
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "references/spring.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 30,
+      "nonEmptyLines": 22,
+      "sections": [
+        {
+          "heading": "开放端等螺距弹簧实体（pilot）",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "references/sprocket.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 16,
+      "sections": [
+        {
+          "heading": "近似链轮实体（pilot）",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "references/tolerance-extraction.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 18,
+      "nonEmptyLines": 13,
+      "sections": [
+        {
+          "heading": "已显示尺寸公差提取（pilot）",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "references/troubleshooting.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 828,
+      "nonEmptyLines": 564,
+      "sections": [
+        {
+          "heading": "常见问题排查",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "连接问题",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "无法连接到 SolidWorks",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "GetActiveObject 失败",
+          "level": 3,
+          "line": 17
+        },
+        {
+          "heading": "Python 32/64 位不匹配",
+          "level": 3,
+          "line": 26
+        },
+        {
+          "heading": "类型错误",
+          "level": 2,
+          "line": 31
+        },
+        {
+          "heading": "COM 伪可调用属性导致“找不到成员”",
+          "level": 3,
+          "line": 33
+        },
+        {
+          "heading": "Motion Study 成员“找不到成员”",
+          "level": 3,
+          "line": 54
+        },
+        {
+          "heading": "SelectByID2 类型不匹配",
+          "level": 3,
+          "line": 86
+        },
+        {
+          "heading": "by-ref 参数错误",
+          "level": 3,
+          "line": 100
+        },
+        {
+          "heading": "Pack and Go 获取对象时报缺少参数",
+          "level": 3,
+          "line": 108
+        },
+        {
+          "heading": "Pack and Go 只输出顶层装配体",
+          "level": 3,
+          "line": 123
+        },
+        {
+          "heading": "STL 导出了当前装配体而不是目标零件",
+          "level": 3,
+          "line": 129
+        },
+        {
+          "heading": "操作失败",
+          "level": 2,
+          "line": 140
+        },
+        {
+          "heading": "run_review 只截到一个零件或子装配",
+          "level": 3,
+          "line": 142
+        },
+        {
+          "heading": "STEP 分件装配后全部叠在原点",
+          "level": 3,
+          "line": 164
+        },
+        {
+          "heading": "GetModelDoc2 返回 None",
+          "level": 3,
+          "line": 182
+        },
+        {
+          "heading": "AddComponent4 返回 None",
+          "level": 3,
+          "line": 201
+        },
+        {
+          "heading": "Mate 创建后特征树没有真实配合",
+          "level": 3,
+          "line": 224
+        },
+        {
+          "heading": "AddMate5 返回 Mate 但 error_status=1",
+          "level": 3,
+          "line": 245
+        },
+        {
+          "heading": "选择集被清空",
+          "level": 3,
+          "line": 264
+        },
+        {
+          "heading": "GetCorresponding 返回 None",
+          "level": 3,
+          "line": 283
+        },
+        {
+          "heading": "同心 Mate 后零件不能转",
+          "level": 3,
+          "line": 296
+        },
+        {
+          "heading": "特征创建失败（返回 None）",
+          "level": 3,
+          "line": 313
+        },
+        {
+          "heading": "SelectByID2(\"SKETCH\") 持续返回 False",
+          "level": 3,
+          "line": 321
+        },
+        {
+          "heading": "FeatureCut4 长参数不稳定",
+          "level": 3,
+          "line": 353
+        },
+        {
+          "heading": "中心基准面切槽导致轴被剖开",
+          "level": 3,
+          "line": 375
+        },
+        {
+          "heading": "槽特征树成功但预览不可见",
+          "level": 3,
+          "line": 383
+        },
+        {
+          "heading": "基准面选择失败",
+          "level": 3,
+          "line": 396
+        },
+        {
+          "heading": "保存/导出失败",
+          "level": 3,
+          "line": 408
+        },
+        {
+          "heading": "STEP/IGES 用 OpenDoc6 崩溃或弹模板对话框",
+          "level": 3,
+          "line": 419
+        },
+        {
+          "heading": "OBJ/STL 用 OpenDoc6 打不开或 LoadFile4 类型不匹配",
+          "level": 3,
+          "line": 457
+        },
+        {
+          "heading": "SaveAs 错误码 1 或覆盖失败",
+          "level": 3,
+          "line": 494
+        },
+        {
+          "heading": "临时 SLDPRT 删除失败",
+          "level": 3,
+          "line": 510
+        },
+        {
+          "heading": "参考面或草图污染预览图",
+          "level": 3,
+          "line": 526
+        },
+        {
+          "heading": "多色装配体几乎全部变绿",
+          "level": 3,
+          "line": 549
+        },
+        {
+          "heading": "MathUtility.CreateTransform 不稳定",
+          "level": 3,
+          "line": 578
+        },
+        {
+          "heading": "SolidWorks 内部错误或 COM 变慢",
+          "level": 3,
+          "line": 593
+        },
+        {
+          "heading": "FeatureFillet 报\"非选择性的参数\"",
+          "level": 3,
+          "line": 607
+        },
+        {
+          "heading": "圆角/倒角选到错误的边",
+          "level": 3,
+          "line": 636
+        },
+        {
+          "heading": "IEdge.Select4 报\"类型不匹配\"",
+          "level": 3,
+          "line": 655
+        },
+        {
+          "heading": "孔\"创建成功\"但模型上没有孔",
+          "level": 3,
+          "line": 676
+        },
+        {
+          "heading": "特征返回值判空而不是判真",
+          "level": 3,
+          "line": 695
+        },
+        {
+          "heading": "读取包围盒得到 1000 倍或 0.001 倍的尺寸",
+          "level": 3,
+          "line": 706
+        },
+        {
+          "heading": "质量属性提示\"未分配材料\"",
+          "level": 3,
+          "line": 725
+        },
+        {
+          "heading": "MCP 调用长时间无响应",
+          "level": 3,
+          "line": 741
+        },
+        {
+          "heading": "未封装 API 调用",
+          "level": 2,
+          "line": 758
+        },
+        {
+          "heading": "性能优化",
+          "level": 2,
+          "line": 780
+        },
+        {
+          "heading": "大型装配体操作慢",
+          "level": 3,
+          "line": 782
+        },
+        {
+          "heading": "批量操作优化",
+          "level": 3,
+          "line": 797
+        },
+        {
+          "heading": "版本号对照",
+          "level": 2,
+          "line": 810
+        },
+        {
+          "heading": "许可证与加载项边界",
+          "level": 2,
+          "line": 824
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 52
+      }
+    }
+  ]
+}

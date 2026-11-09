@@ -1,0 +1,160 @@
+{
+ "nodes": [
+  {
+   "id": "document:examples/README.md",
+   "type": "document",
+   "name": "README.md",
+   "filePath": "examples/README.md",
+   "summary": "Przewodnik po katalogu examples: skrypty Python 01-08 (część, złożenie, eksport, rysunek, motion study) oraz pliki danych JSON CAD Studio i profile DFM niewymagające SolidWorks.",
+   "tags": [
+    "documentation",
+    "examples",
+    "tutorial",
+    "solidworks"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "config:examples/drc_profile_strict.json",
+   "type": "config",
+   "name": "drc_profile_strict.json",
+   "filePath": "examples/drc_profile_strict.json",
+   "summary": "Profil reguł DRC (design rule check) dla obrabianego wspornika: progi grubości ścianki, odległości otworu od krawędzi, wskaźnik sprężyny i niestandardowa reguła małych otworów.",
+   "tags": [
+    "configuration",
+    "drc",
+    "profile",
+    "example"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:examples/drc_sample_part.cadstudio.json",
+   "type": "config",
+   "name": "drc_sample_part.cadstudio.json",
+   "filePath": "examples/drc_sample_part.cadstudio.json",
+   "summary": "Przykładowa płyta z dwoma otworami (M6) i metadanymi projektu, montażu i rysunku, używana jako wejście do kontroli DRC.",
+   "tags": [
+    "configuration",
+    "drc",
+    "cadstudio",
+    "example"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:examples/drilling_panel_sample.cadstudio.json",
+   "type": "config",
+   "name": "drilling_panel_sample.cadstudio.json",
+   "filePath": "examples/drilling_panel_sample.cadstudio.json",
+   "summary": "Duży przykładowy panel z siatką otworów gwintowanych M6 (G00...), z metadanymi do planowania wiercenia; dokument CAD Studio.",
+   "tags": [
+    "configuration",
+    "cadstudio",
+    "drilling",
+    "example"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "config:examples/drive_sizing_sample.cadstudio.json",
+   "type": "config",
+   "name": "drive_sizing_sample.cadstudio.json",
+   "filePath": "examples/drive_sizing_sample.cadstudio.json",
+   "summary": "Przykład doboru napędu osi X ze śrubą pociągową: obciążenie, ruch, transmisja i silnik w metadanych, bez cech geometrycznych.",
+   "tags": [
+    "configuration",
+    "cadstudio",
+    "drive-sizing",
+    "example"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:examples/fastener_stack_sample.cadstudio.json",
+   "type": "config",
+   "name": "fastener_stack_sample.cadstudio.json",
+   "filePath": "examples/fastener_stack_sample.cadstudio.json",
+   "summary": "Przykład stosu łączników: otwory z pogłębieniami, stroną współpracy i grupą łączników (top-cover), do analizy połączeń śrubowych.",
+   "tags": [
+    "configuration",
+    "cadstudio",
+    "fasteners",
+    "example"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:examples/fea_tetra_static.json",
+   "type": "config",
+   "name": "fea_tetra_static.json",
+   "filePath": "examples/fea_tetra_static.json",
+   "summary": "Definicja liniowej analizy statycznej MES (solver CalculiX) dla siatki tetraedrycznej: materiał stalowy, węzły, więzy i obciążenia.",
+   "tags": [
+    "configuration",
+    "fea",
+    "simulation",
+    "example"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "config:examples/ocp_loft_adapter.json",
+   "type": "config",
+   "name": "ocp_loft_adapter.json",
+   "filePath": "examples/ocp_loft_adapter.json",
+   "summary": "Specyfikacja operacji loft dla adaptera (OCP): przekroje koło/elipsa/koło, tolerancja i formaty wyjściowe step, brep, stl.",
+   "tags": [
+    "configuration",
+    "loft",
+    "ocp",
+    "example"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:examples/part.cadstudio.json",
+   "type": "config",
+   "name": "part.cadstudio.json",
+   "filePath": "examples/part.cadstudio.json",
+   "summary": "Podstawowy przykład części CAD Studio: płyta montażowa z bossem, metadane produkcyjne (frezowanie, AL6061-T6).",
+   "tags": [
+    "configuration",
+    "cadstudio",
+    "part",
+    "example"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:examples/supplier-profile.json",
+   "type": "config",
+   "name": "supplier-profile.json",
+   "filePath": "examples/supplier-profile.json",
+   "summary": "Przykładowy profil możliwości dostawcy (frezowanie 3-osiowe, blacha) w formacie wejściowym dla check-dfm; wyłącznie demonstracyjny.",
+   "tags": [
+    "configuration",
+    "dfm",
+    "supplier-profile",
+    "example"
+   ],
+   "complexity": "simple"
+  }
+ ],
+ "edges": [
+  {
+   "source": "document:examples/README.md",
+   "target": "config:examples/part.cadstudio.json",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:examples/README.md",
+   "target": "config:examples/supplier-profile.json",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  }
+ ]
+}

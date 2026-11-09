@@ -1,0 +1,497 @@
+{
+ "nodes": [
+  {
+   "id": "file:scripts/ci/cad_ci_guard.cjs",
+   "type": "file",
+   "name": "cad_ci_guard.cjs",
+   "filePath": "scripts/ci/cad_ci_guard.cjs",
+   "summary": "Tylko do odczytu bramka CI przed przydzieleniem runnera z prawdziwym SolidWorks; weryfikuje stan GitHuba (ruleset, środowisko, uprawnienia) oraz podpisany dowód offline i blokuje przy braku konfiguracji lub błędzie API.",
+   "tags": [
+    "ci-cd",
+    "security",
+    "governance",
+    "entry-point",
+    "validation"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:scripts/ci/capture_governance_attestation.cjs",
+   "type": "file",
+   "name": "capture_governance_attestation.cjs",
+   "filePath": "scripts/ci/capture_governance_attestation.cjs",
+   "summary": "Offline'owe narzędzie maintainera zbierające pełną konfigurację Ruleset z GitHuba i wystawiające podpisany dowód; domyślnie podpisuje tylko stan zgodny, a klucz prywatny nigdy nie trafia do repozytorium.",
+   "tags": [
+    "ci-cd",
+    "security",
+    "cli",
+    "attestation",
+    "signing"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:scripts/ci/governance_attestation.cjs",
+   "type": "file",
+   "name": "governance_attestation.cjs",
+   "filePath": "scripts/ci/governance_attestation.cjs",
+   "summary": "Czyste funkcje normalizacji, skrótów (policy_digest, snapshot_digest) i weryfikacji podpisu dowodu governance, w tym kontrola kotwicy trust root i logu rotacji kluczy; bez sieci i poświadczeń.",
+   "tags": [
+    "security",
+    "attestation",
+    "crypto",
+    "validation",
+    "utility"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:scripts/ci/governance_trust_root.cjs",
+   "type": "file",
+   "name": "governance_trust_root.cjs",
+   "filePath": "scripts/ci/governance_trust_root.cjs",
+   "summary": "Trust root podpisów dowodów: przypięte klucze publiczne i append-only log rotacji; zapewnia ślad zmian (tamper-evidence), a nie niezależne źródło zaufania.",
+   "tags": [
+    "security",
+    "trust-root",
+    "configuration",
+    "crypto",
+    "governance"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/ci/cad_ci_guard.cjs:evaluatePolicy",
+   "type": "function",
+   "name": "evaluatePolicy",
+   "filePath": "scripts/ci/cad_ci_guard.cjs",
+   "lineRange": [
+    24,
+    128
+   ],
+   "summary": "Czysta ocena polityki na podstawie snapshotu GitHuba: branch, reguły, rulesety, uprawnienia, środowisko, runnery oraz weryfikacja dowodu i trust root.",
+   "tags": [
+    "policy",
+    "validation",
+    "security"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/ci/cad_ci_guard.cjs:readAttestation",
+   "type": "function",
+   "name": "readAttestation",
+   "filePath": "scripts/ci/cad_ci_guard.cjs",
+   "lineRange": [
+    135,
+    143
+   ],
+   "summary": "Wczytuje plik dowodu offline z ustalonej ścieżki (z wyjątkiem wstrzykiwania ścieżki w NODE_ENV=test).",
+   "tags": [
+    "io",
+    "attestation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/ci/cad_ci_guard.cjs:readSnapshot",
+   "type": "function",
+   "name": "readSnapshot",
+   "filePath": "scripts/ci/cad_ci_guard.cjs",
+   "lineRange": [
+    146,
+    184
+   ],
+   "summary": "Pobiera tylko-do-odczytu migawkę stanu repozytorium z API GitHuba wraz z dowodem i kotwicą trust root.",
+   "tags": [
+    "github-api",
+    "io",
+    "snapshot"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/ci/cad_ci_guard.cjs:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "scripts/ci/cad_ci_guard.cjs",
+   "lineRange": [
+    187,
+    195
+   ],
+   "summary": "Punkt wejścia: buduje snapshot, ocenia politykę i kończy proces kodem błędu przy naruszeniu.",
+   "tags": [
+    "entry-point",
+    "cli"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/ci/capture_governance_attestation.cjs:parseArgs",
+   "type": "function",
+   "name": "parseArgs",
+   "filePath": "scripts/ci/capture_governance_attestation.cjs",
+   "lineRange": [
+    38,
+    58
+   ],
+   "summary": "Parsuje argumenty CLI narzędzia do zbierania dowodu (m.in. --allow-noncompliant).",
+   "tags": [
+    "cli",
+    "parsing"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/ci/capture_governance_attestation.cjs:capture",
+   "type": "function",
+   "name": "capture",
+   "filePath": "scripts/ci/capture_governance_attestation.cjs",
+   "lineRange": [
+    90,
+    153
+   ],
+   "summary": "Zbiera pełną konfigurację ruleset, w tym bypass_actors, i buduje podpisany rekord dowodu.",
+   "tags": [
+    "github-api",
+    "attestation",
+    "signing"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/ci/capture_governance_attestation.cjs:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "scripts/ci/capture_governance_attestation.cjs",
+   "lineRange": [
+    181,
+    207
+   ],
+   "summary": "Punkt wejścia CLI: parsuje argumenty, uruchamia zbieranie i zapisuje dowód lub kończy błędem.",
+   "tags": [
+    "entry-point",
+    "cli"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/ci/capture_governance_attestation.cjs:runCapture",
+   "type": "function",
+   "name": "runCapture",
+   "filePath": "scripts/ci/capture_governance_attestation.cjs",
+   "lineRange": [
+    168,
+    179
+   ],
+   "summary": "Wykonuje zbieranie i weryfikację dowodu przed zapisem pliku.",
+   "tags": [
+    "orchestration",
+    "attestation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/ci/governance_attestation.cjs:canonical",
+   "type": "function",
+   "name": "canonical",
+   "filePath": "scripts/ci/governance_attestation.cjs",
+   "lineRange": [
+    28,
+    34
+   ],
+   "summary": "Kanoniczna serializacja JSON z posortowanymi kluczami, podstawa stabilnych skrótów.",
+   "tags": [
+    "serialization",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/ci/governance_attestation.cjs:policyView",
+   "type": "function",
+   "name": "policyView",
+   "filePath": "scripts/ci/governance_attestation.cjs",
+   "lineRange": [
+    59,
+    68
+   ],
+   "summary": "Widok polityki ruleset pomijający bypass i zmienne metadane na potrzeby policy_digest.",
+   "tags": [
+    "normalization",
+    "policy"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/ci/governance_attestation.cjs:snapshotView",
+   "type": "function",
+   "name": "snapshotView",
+   "filePath": "scripts/ci/governance_attestation.cjs",
+   "lineRange": [
+    87,
+    96
+   ],
+   "summary": "Widok pełnego snapshotu (z bypass i znacznikami czasu) dla snapshot_digest.",
+   "tags": [
+    "normalization",
+    "snapshot"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/ci/governance_attestation.cjs:trustRootAnchor",
+   "type": "function",
+   "name": "trustRootAnchor",
+   "filePath": "scripts/ci/governance_attestation.cjs",
+   "lineRange": [
+    143,
+    160
+   ],
+   "summary": "Wylicza kotwicę trust root do porównania ze zmienną repozytorium.",
+   "tags": [
+    "trust-root",
+    "security"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/ci/governance_attestation.cjs:rotationLogCheck",
+   "type": "function",
+   "name": "rotationLogCheck",
+   "filePath": "scripts/ci/governance_attestation.cjs",
+   "lineRange": [
+    167,
+    190
+   ],
+   "summary": "Sprawdza spójność append-only logu rotacji kluczy.",
+   "tags": [
+    "validation",
+    "trust-root",
+    "security"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/ci/governance_attestation.cjs:evaluateCompliance",
+   "type": "function",
+   "name": "evaluateCompliance",
+   "filePath": "scripts/ci/governance_attestation.cjs",
+   "lineRange": [
+    204,
+    221
+   ],
+   "summary": "Ocenia zgodność zapisanej polityki (PR wymagany, status check, brak bypass).",
+   "tags": [
+    "policy",
+    "validation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/ci/governance_attestation.cjs:verifyAttestation",
+   "type": "function",
+   "name": "verifyAttestation",
+   "filePath": "scripts/ci/governance_attestation.cjs",
+   "lineRange": [
+    249,
+    354
+   ],
+   "summary": "Pełna weryfikacja dowodu: schemat, świeżość, klucz, podpis, digesty i zgodność.",
+   "tags": [
+    "security",
+    "validation",
+    "crypto"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/ci/governance_attestation.cjs:signAttestation",
+   "type": "function",
+   "name": "signAttestation",
+   "filePath": "scripts/ci/governance_attestation.cjs",
+   "lineRange": [
+    119,
+    122
+   ],
+   "summary": "Podpisuje ładunek dowodu kluczem prywatnym.",
+   "tags": [
+    "crypto",
+    "signing"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/ci/governance_attestation.cjs:verifySignature",
+   "type": "function",
+   "name": "verifySignature",
+   "filePath": "scripts/ci/governance_attestation.cjs",
+   "lineRange": [
+    124,
+    130
+   ],
+   "summary": "Weryfikuje podpis dowodu kluczem publicznym.",
+   "tags": [
+    "crypto",
+    "validation"
+   ],
+   "complexity": "simple"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:scripts/ci/cad_ci_guard.cjs",
+   "target": "function:scripts/ci/cad_ci_guard.cjs:evaluatePolicy",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/ci/cad_ci_guard.cjs",
+   "target": "function:scripts/ci/cad_ci_guard.cjs:readAttestation",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/ci/cad_ci_guard.cjs",
+   "target": "function:scripts/ci/cad_ci_guard.cjs:readSnapshot",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/ci/cad_ci_guard.cjs",
+   "target": "function:scripts/ci/cad_ci_guard.cjs:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/ci/capture_governance_attestation.cjs",
+   "target": "function:scripts/ci/capture_governance_attestation.cjs:parseArgs",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/ci/capture_governance_attestation.cjs",
+   "target": "function:scripts/ci/capture_governance_attestation.cjs:capture",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/ci/capture_governance_attestation.cjs",
+   "target": "function:scripts/ci/capture_governance_attestation.cjs:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/ci/capture_governance_attestation.cjs",
+   "target": "function:scripts/ci/capture_governance_attestation.cjs:runCapture",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/ci/governance_attestation.cjs",
+   "target": "function:scripts/ci/governance_attestation.cjs:canonical",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/ci/governance_attestation.cjs",
+   "target": "function:scripts/ci/governance_attestation.cjs:policyView",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/ci/governance_attestation.cjs",
+   "target": "function:scripts/ci/governance_attestation.cjs:snapshotView",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/ci/governance_attestation.cjs",
+   "target": "function:scripts/ci/governance_attestation.cjs:trustRootAnchor",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/ci/governance_attestation.cjs",
+   "target": "function:scripts/ci/governance_attestation.cjs:rotationLogCheck",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/ci/governance_attestation.cjs",
+   "target": "function:scripts/ci/governance_attestation.cjs:evaluateCompliance",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/ci/governance_attestation.cjs",
+   "target": "function:scripts/ci/governance_attestation.cjs:verifyAttestation",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/ci/governance_attestation.cjs",
+   "target": "function:scripts/ci/governance_attestation.cjs:signAttestation",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/ci/governance_attestation.cjs",
+   "target": "function:scripts/ci/governance_attestation.cjs:verifySignature",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/ci/cad_ci_guard.cjs",
+   "target": "file:scripts/ci/governance_attestation.cjs",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/ci/cad_ci_guard.cjs",
+   "target": "file:scripts/ci/governance_trust_root.cjs",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/ci/capture_governance_attestation.cjs",
+   "target": "file:scripts/ci/governance_attestation.cjs",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/ci/capture_governance_attestation.cjs",
+   "target": "file:scripts/ci/governance_trust_root.cjs",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/ci/governance_attestation.cjs",
+   "target": "file:scripts/ci/governance_trust_root.cjs",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+"nodes":[
+{"id":"document:subskills/solidworks-vibecad/examples/motor_mount_brief.txt","type":"document","name":"motor_mount_brief.txt","filePath":"subskills/solidworks-vibecad/examples/motor_mount_brief.txt","summary":"Krótki opis wejściowy (brief) w języku chińskim dla aluminiowego wspornika silnika CNC: płyta 90x60x8 mm, cztery otwory M5, otwór środkowy 22 mm, promienie R6 i fazy C1, kieszenie odciążające oraz eksport STEP.","tags":["przyklad","brief","cnc","dokumentacja"],"complexity":"simple"},
+{"id":"document:subskills/solidworks-vibecad/examples/motor_mount_execution.md","type":"document","name":"motor_mount_execution.md","filePath":"subskills/solidworks-vibecad/examples/motor_mount_execution.md","summary":"Podsumowanie wykonania planu SolidWorks dla wspornika silnika: tryb szeregowego COM, dziewięć kroków mapowanych na funkcje sw_session/sw_part, bramki cech z wariantami awaryjnymi i warunki zatrzymania.","tags":["dokumentacja","przyklad","solidworks","wykonanie","bramki-cech"],"complexity":"simple"},
+{"id":"config:subskills/solidworks-vibecad/examples/motor_mount_plan.json","type":"config","name":"motor_mount_plan.json","filePath":"subskills/solidworks-vibecad/examples/motor_mount_plan.json","summary":"Ustrukturyzowany plan modelowania wspornika silnika (rodzina cnc_mount): parametry w mm, materiał 6061, lista cech z flagami required i wariantami awaryjnymi, wygenerowany z briefu.","tags":["konfiguracja","plan","przyklad","cnc","json"],"complexity":"moderate"}
+],
+"edges":[
+{"source":"document:subskills/solidworks-vibecad/examples/motor_mount_brief.txt","target":"config:subskills/solidworks-vibecad/examples/motor_mount_plan.json","type":"related","direction":"forward","weight":0.5},
+{"source":"config:subskills/solidworks-vibecad/examples/motor_mount_plan.json","target":"document:subskills/solidworks-vibecad/examples/motor_mount_execution.md","type":"related","direction":"forward","weight":0.5},
+{"source":"document:subskills/solidworks-vibecad/examples/motor_mount_execution.md","target":"config:subskills/solidworks-vibecad/examples/motor_mount_plan.json","type":"documents","direction":"forward","weight":0.5}
+]}

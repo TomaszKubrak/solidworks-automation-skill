@@ -1,0 +1,678 @@
+{
+ "nodes": [
+  {
+   "id": "file:examples/06_friendly_api.py",
+   "type": "file",
+   "name": "06_friendly_api.py",
+   "filePath": "examples/06_friendly_api.py",
+   "summary": "Krótki przykład pokazujący przyjazne API do tworzenia prostej części w SolidWorks.",
+   "tags": [
+    "example",
+    "python",
+    "api-demo"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:examples/06_friendly_api.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "examples/06_friendly_api.py",
+   "lineRange": [
+    17,
+    29
+   ],
+   "summary": "Uruchamia scenariusz demonstracyjny przyjaznego API.",
+   "tags": [
+    "entry-point",
+    "example",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:examples/07_motion_study_rotary_motor.py",
+   "type": "file",
+   "name": "07_motion_study_rotary_motor.py",
+   "filePath": "examples/07_motion_study_rotary_motor.py",
+   "summary": "Przykład tworzenia badania ruchu (motion study) z silnikiem obrotowym.",
+   "tags": [
+    "example",
+    "motion-study",
+    "simulation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:examples/07_motion_study_rotary_motor.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "examples/07_motion_study_rotary_motor.py",
+   "lineRange": [
+    23,
+    46
+   ],
+   "summary": "Konfiguruje badanie ruchu z silnikiem obrotowym i uruchamia je.",
+   "tags": [
+    "entry-point",
+    "motion-study",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:examples/08_mini_fan_motion_assembly.py",
+   "type": "file",
+   "name": "08_mini_fan_motion_assembly.py",
+   "filePath": "examples/08_mini_fan_motion_assembly.py",
+   "summary": "Rozbudowany przykład budujący zespół mini wentylatora (podstawa, stojak, wirnik, osłona), nakładający wiązania i badanie ruchu.",
+   "tags": [
+    "example",
+    "assembly",
+    "motion-study",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:examples/08_mini_fan_motion_assembly.py:create_impeller",
+   "type": "function",
+   "name": "create_impeller",
+   "filePath": "examples/08_mini_fan_motion_assembly.py",
+   "lineRange": [
+    108,
+    133
+   ],
+   "summary": "Modeluje wirnik wentylatora jako część.",
+   "tags": [
+    "part-modeling",
+    "geometry",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:examples/08_mini_fan_motion_assembly.py:create_front_guard",
+   "type": "function",
+   "name": "create_front_guard",
+   "filePath": "examples/08_mini_fan_motion_assembly.py",
+   "lineRange": [
+    136,
+    163
+   ],
+   "summary": "Modeluje przednią osłonę wentylatora.",
+   "tags": [
+    "part-modeling",
+    "geometry",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:examples/08_mini_fan_motion_assembly.py:set_component_fixed",
+   "type": "function",
+   "name": "set_component_fixed",
+   "filePath": "examples/08_mini_fan_motion_assembly.py",
+   "lineRange": [
+    166,
+    199
+   ],
+   "summary": "Ustawia komponent zespołu jako zafiksowany.",
+   "tags": [
+    "assembly",
+    "helper",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:examples/08_mini_fan_motion_assembly.py:create_assembly",
+   "type": "function",
+   "name": "create_assembly",
+   "filePath": "examples/08_mini_fan_motion_assembly.py",
+   "lineRange": [
+    240,
+    351
+   ],
+   "summary": "Składa zespół wentylatora, wstawia komponenty, dodaje wiązania i konfiguruje ruch.",
+   "tags": [
+    "assembly",
+    "mates",
+    "orchestration",
+    "python"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:examples/08_mini_fan_motion_assembly.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "examples/08_mini_fan_motion_assembly.py",
+   "lineRange": [
+    354,
+    367
+   ],
+   "summary": "Punkt wejścia generujący cały model wentylatora.",
+   "tags": [
+    "entry-point",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:examples/generate_fea_convergence_example.py",
+   "type": "file",
+   "name": "generate_fea_convergence_example.py",
+   "filePath": "examples/generate_fea_convergence_example.py",
+   "summary": "Generuje przykład badania zbieżności siatki MES dla wspornika z elementów heksagonalnych.",
+   "tags": [
+    "example",
+    "fea",
+    "convergence",
+    "simulation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:examples/generate_fea_convergence_example.py:build_hex_cantilever",
+   "type": "function",
+   "name": "build_hex_cantilever",
+   "filePath": "examples/generate_fea_convergence_example.py",
+   "lineRange": [
+    9,
+    63
+   ],
+   "summary": "Buduje model wspornika siatką heksagonalną.",
+   "tags": [
+    "fea",
+    "mesh",
+    "geometry",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:examples/generate_fea_convergence_example.py:build_study",
+   "type": "function",
+   "name": "build_study",
+   "filePath": "examples/generate_fea_convergence_example.py",
+   "lineRange": [
+    66,
+    87
+   ],
+   "summary": "Tworzy badanie MES z parametrami zbieżności.",
+   "tags": [
+    "fea",
+    "study",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:examples/generate_fea_convergence_example.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "examples/generate_fea_convergence_example.py",
+   "lineRange": [
+    90,
+    101
+   ],
+   "summary": "Punkt wejścia generujący przykład.",
+   "tags": [
+    "entry-point",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:examples/weldment/coremark_hss1x1x16ga.json",
+   "type": "config",
+   "name": "coremark_hss1x1x16ga.json",
+   "filePath": "examples/weldment/coremark_hss1x1x16ga.json",
+   "summary": "Definicja profilu spawanego HSS 1x1x16ga (Coremark) dla przykładu weldment.",
+   "tags": [
+    "configuration",
+    "weldment",
+    "profile",
+    "data"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:install.js",
+   "type": "file",
+   "name": "install.js",
+   "filePath": "install.js",
+   "summary": "Instalator CLI klonujący repozytorium skilla do katalogów docelowych, przygotowujący środowisko Python i rejestrujący serwer MCP.",
+   "tags": [
+    "entry-point",
+    "installer",
+    "cli",
+    "git"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:install.js:parseArgs",
+   "type": "function",
+   "name": "parseArgs",
+   "filePath": "install.js",
+   "lineRange": [
+    57,
+    104
+   ],
+   "summary": "Parsuje argumenty wiersza poleceń instalatora.",
+   "tags": [
+    "cli",
+    "parsing",
+    "javascript"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:install.js:installToDir",
+   "type": "function",
+   "name": "installToDir",
+   "filePath": "install.js",
+   "lineRange": [
+    228,
+    277
+   ],
+   "summary": "Instaluje skill do wskazanego katalogu z kopią zapasową.",
+   "tags": [
+    "installer",
+    "filesystem",
+    "javascript"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:install.js:installDependencies",
+   "type": "function",
+   "name": "installDependencies",
+   "filePath": "install.js",
+   "lineRange": [
+    283,
+    300
+   ],
+   "summary": "Instaluje zależności Pythona skilla.",
+   "tags": [
+    "installer",
+    "dependencies",
+    "javascript"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:install.js:registerMcp",
+   "type": "function",
+   "name": "registerMcp",
+   "filePath": "install.js",
+   "lineRange": [
+    302,
+    326
+   ],
+   "summary": "Rejestruje serwer MCP w klientach AI.",
+   "tags": [
+    "mcp",
+    "registration",
+    "javascript"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:install.js:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "install.js",
+   "lineRange": [
+    328,
+    409
+   ],
+   "summary": "Główny przepływ instalacji.",
+   "tags": [
+    "entry-point",
+    "orchestration",
+    "javascript"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:mcp-server/http_transport.py",
+   "type": "file",
+   "name": "http_transport.py",
+   "filePath": "mcp-server/http_transport.py",
+   "summary": "Middleware ASGI z uwierzytelnianiem tokenem dla transportu HTTP serwera MCP.",
+   "tags": [
+    "middleware",
+    "authentication",
+    "mcp",
+    "http"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:mcp-server/http_transport.py:TokenAuthMiddleware",
+   "type": "class",
+   "name": "TokenAuthMiddleware",
+   "filePath": "mcp-server/http_transport.py",
+   "lineRange": [
+    5,
+    19
+   ],
+   "summary": "Klasa middleware odrzucająca żądania bez poprawnego tokenu.",
+   "tags": [
+    "middleware",
+    "security",
+    "class"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:mcp-server/register_all_ai_mcp.js",
+   "type": "file",
+   "name": "register_all_ai_mcp.js",
+   "filePath": "mcp-server/register_all_ai_mcp.js",
+   "summary": "Skrypt rejestrujący serwer MCP w wielu klientach AI (Codex, Claude Code, klienci JSON).",
+   "tags": [
+    "cli",
+    "mcp",
+    "registration",
+    "installer"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:mcp-server/register_all_ai_mcp.js:resolvePython",
+   "type": "function",
+   "name": "resolvePython",
+   "filePath": "mcp-server/register_all_ai_mcp.js",
+   "lineRange": [
+    127,
+    153
+   ],
+   "summary": "Wyszukuje interpreter Pythona.",
+   "tags": [
+    "javascript",
+    "discovery"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:mcp-server/register_all_ai_mcp.js:ensureServerReady",
+   "type": "function",
+   "name": "ensureServerReady",
+   "filePath": "mcp-server/register_all_ai_mcp.js",
+   "lineRange": [
+    155,
+    183
+   ],
+   "summary": "Sprawdza gotowość serwera MCP.",
+   "tags": [
+    "health-check",
+    "javascript"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:mcp-server/register_all_ai_mcp.js:registerCodex",
+   "type": "function",
+   "name": "registerCodex",
+   "filePath": "mcp-server/register_all_ai_mcp.js",
+   "lineRange": [
+    185,
+    204
+   ],
+   "summary": "Rejestruje serwer w Codex.",
+   "tags": [
+    "mcp",
+    "registration",
+    "javascript"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:mcp-server/register_all_ai_mcp.js:registerClaudeCode",
+   "type": "function",
+   "name": "registerClaudeCode",
+   "filePath": "mcp-server/register_all_ai_mcp.js",
+   "lineRange": [
+    206,
+    225
+   ],
+   "summary": "Rejestruje serwer w Claude Code.",
+   "tags": [
+    "mcp",
+    "registration",
+    "javascript"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:mcp-server/register_all_ai_mcp.js:registerJsonClient",
+   "type": "function",
+   "name": "registerJsonClient",
+   "filePath": "mcp-server/register_all_ai_mcp.js",
+   "lineRange": [
+    227,
+    266
+   ],
+   "summary": "Zapisuje wpis serwera do pliku konfiguracji klienta JSON.",
+   "tags": [
+    "mcp",
+    "config",
+    "javascript"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:mcp-server/register_all_ai_mcp.js:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "mcp-server/register_all_ai_mcp.js",
+   "lineRange": [
+    312,
+    340
+   ],
+   "summary": "Główny przepływ rejestracji.",
+   "tags": [
+    "entry-point",
+    "javascript"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:scripts/__init__.py",
+   "type": "file",
+   "name": "__init__.py",
+   "filePath": "scripts/__init__.py",
+   "summary": "Inicjalizacja pakietu scripts z leniwym ładowaniem atrybutów przez __getattr__.",
+   "tags": [
+    "entry-point",
+    "barrel",
+    "lazy-loading"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/__init__.py:__getattr__",
+   "type": "function",
+   "name": "__getattr__",
+   "filePath": "scripts/__init__.py",
+   "lineRange": [
+    14,
+    21
+   ],
+   "summary": "Leniwie importuje podmoduły pakietu.",
+   "tags": [
+    "lazy-loading",
+    "barrel",
+    "python"
+   ],
+   "complexity": "simple"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:examples/06_friendly_api.py",
+   "target": "function:examples/06_friendly_api.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:examples/07_motion_study_rotary_motor.py",
+   "target": "function:examples/07_motion_study_rotary_motor.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:examples/08_mini_fan_motion_assembly.py",
+   "target": "function:examples/08_mini_fan_motion_assembly.py:create_impeller",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:examples/08_mini_fan_motion_assembly.py",
+   "target": "function:examples/08_mini_fan_motion_assembly.py:create_front_guard",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:examples/08_mini_fan_motion_assembly.py",
+   "target": "function:examples/08_mini_fan_motion_assembly.py:set_component_fixed",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:examples/08_mini_fan_motion_assembly.py",
+   "target": "function:examples/08_mini_fan_motion_assembly.py:create_assembly",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:examples/08_mini_fan_motion_assembly.py",
+   "target": "function:examples/08_mini_fan_motion_assembly.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:examples/generate_fea_convergence_example.py",
+   "target": "function:examples/generate_fea_convergence_example.py:build_hex_cantilever",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:examples/generate_fea_convergence_example.py",
+   "target": "function:examples/generate_fea_convergence_example.py:build_study",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:examples/generate_fea_convergence_example.py",
+   "target": "function:examples/generate_fea_convergence_example.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:install.js",
+   "target": "function:install.js:parseArgs",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:install.js",
+   "target": "function:install.js:installToDir",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:install.js",
+   "target": "function:install.js:installDependencies",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:install.js",
+   "target": "function:install.js:registerMcp",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:install.js",
+   "target": "function:install.js:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/http_transport.py",
+   "target": "class:mcp-server/http_transport.py:TokenAuthMiddleware",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/register_all_ai_mcp.js",
+   "target": "function:mcp-server/register_all_ai_mcp.js:resolvePython",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/register_all_ai_mcp.js",
+   "target": "function:mcp-server/register_all_ai_mcp.js:ensureServerReady",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/register_all_ai_mcp.js",
+   "target": "function:mcp-server/register_all_ai_mcp.js:registerCodex",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/register_all_ai_mcp.js",
+   "target": "function:mcp-server/register_all_ai_mcp.js:registerClaudeCode",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/register_all_ai_mcp.js",
+   "target": "function:mcp-server/register_all_ai_mcp.js:registerJsonClient",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/register_all_ai_mcp.js",
+   "target": "function:mcp-server/register_all_ai_mcp.js:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/__init__.py",
+   "target": "function:scripts/__init__.py:__getattr__",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  }
+ ]
+}

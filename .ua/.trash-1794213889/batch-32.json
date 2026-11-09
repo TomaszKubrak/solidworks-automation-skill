@@ -1,0 +1,8 @@
+{"nodes":[
+{"id":"document:subskills/solidworks-vibecad/README.md","type":"document","name":"README.md","filePath":"subskills/solidworks-vibecad/README.md","summary":"Opis podskilla solidworks-vibecad: zamiana opisu w języku naturalnym na ustrukturyzowany plan projektu parametrycznego, reguły produkcyjne i bramki przeglądu. Zawiera uzasadnienie, listę możliwości i strukturę katalogów.","tags":["documentation","vibecad","parametric-design","overview"],"complexity":"moderate"},
+{"id":"document:subskills/solidworks-vibecad/SKILL.md","type":"document","name":"SKILL.md","filePath":"subskills/solidworks-vibecad/SKILL.md","summary":"Definicja podskilla VibeCAD: przepływ pracy od briefu do planu JSON i podsumowania wykonania SolidWorks, polecenia, relacje z skillami nadrzędnymi i pułapki do uniknięcia.","tags":["documentation","skill-definition","workflow","text-to-cad"],"complexity":"moderate"},
+{"id":"config:subskills/solidworks-vibecad/manifest.yaml","type":"config","name":"manifest.yaml","filePath":"subskills/solidworks-vibecad/manifest.yaml","summary":"Manifest podskilla solidworks-vibecad wymieniający punkt wejścia, skrypty, wiedzę, prompty, schematy, przykłady i zależności od innych skilli.","tags":["configuration","manifest","skill-metadata","dependencies"],"complexity":"simple"}
+],"edges":[
+{"source":"document:subskills/solidworks-vibecad/README.md","target":"document:subskills/solidworks-vibecad/SKILL.md","type":"related","direction":"forward","weight":0.5},
+{"source":"config:subskills/solidworks-vibecad/manifest.yaml","target":"document:subskills/solidworks-vibecad/SKILL.md","type":"configures","direction":"forward","weight":0.6}
+]}

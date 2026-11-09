@@ -1,0 +1,252 @@
+{
+ "nodes": [
+  {
+   "id": "file:scripts/build_windows_release.ps1",
+   "type": "file",
+   "name": "build_windows_release.ps1",
+   "filePath": "scripts/build_windows_release.ps1",
+   "summary": "Skrypt budujący wydanie Windows: synchronizuje dołączony skill, weryfikuje spójność wersji (Tauri, package.json, Cargo, App.tsx) i bezpiecznie przygotowuje katalog release-output.",
+   "tags": [
+    "build-system",
+    "release",
+    "powershell",
+    "tauri"
+   ],
+   "complexity": "moderate",
+   "languageNotes": "Skrypt PowerShell z walidacją ścieżek chroniącą przed zapisem poza release-output."
+  },
+  {
+   "id": "file:scripts/sw_addin_host.ps1",
+   "type": "file",
+   "name": "sw_addin_host.ps1",
+   "filePath": "scripts/sw_addin_host.ps1",
+   "summary": "Skrypt PowerShell do budowy, rejestracji, testu COM, sondowania i wyrejestrowania hosta dodatku C# CAD Studio dla SolidWorks, w trybie CurrentUser lub Machine.",
+   "tags": [
+    "powershell",
+    "solidworks",
+    "addin",
+    "registration",
+    "build-system"
+   ],
+   "complexity": "complex",
+   "languageNotes": "Akcje sterowane ValidateSet; rejestracja ograniczona do stałego GUID dodatku, z samopodniesieniem do uprawnień administratora."
+  },
+  {
+   "id": "file:scripts/sw_native_wire.ps1",
+   "type": "file",
+   "name": "sw_native_wire.ps1",
+   "filePath": "scripts/sw_native_wire.ps1",
+   "summary": "Cienki wrapper PowerShell ładujący interopy SolidWorks, kompilujący sw_native_wire.cs i uruchamiający NativeWireTools z żądaniem JSON ze stdin lub Base64.",
+   "tags": [
+    "powershell",
+    "solidworks",
+    "interop",
+    "wire-protocol"
+   ],
+   "complexity": "simple",
+   "languageNotes": "Używa Add-Type do kompilacji kodu C# w locie; limit 1 MiB na żądanie."
+  },
+  {
+   "id": "file:scripts/verify_updater_release.ps1",
+   "type": "file",
+   "name": "verify_updater_release.ps1",
+   "filePath": "scripts/verify_updater_release.ps1",
+   "summary": "Skrypt weryfikujący artefakty aktualizatora wydania: zgodność wersji latest.json z konfiguracją Tauri oraz bezpieczeństwo ścieżki release-output.",
+   "tags": [
+    "release",
+    "verification",
+    "updater",
+    "powershell",
+    "tauri"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_addin_host.ps1:Resolve-SolidWorksApiDir",
+   "type": "function",
+   "name": "Resolve-SolidWorksApiDir",
+   "filePath": "scripts/sw_addin_host.ps1",
+   "lineRange": [
+    34,
+    53
+   ],
+   "summary": "Ustala katalog interopów SolidWorks API z parametru lub z rejestru HKLM.",
+   "tags": [
+    "registry",
+    "path-resolution",
+    "solidworks"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_addin_host.ps1:Build-AddinHost",
+   "type": "function",
+   "name": "Build-AddinHost",
+   "filePath": "scripts/sw_addin_host.ps1",
+   "lineRange": [
+    54,
+    64
+   ],
+   "summary": "Buduje projekt hosta dodatku przy użyciu dotnet.",
+   "tags": [
+    "build",
+    "dotnet"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_addin_host.ps1:Test-IsAdministrator",
+   "type": "function",
+   "name": "Test-IsAdministrator",
+   "filePath": "scripts/sw_addin_host.ps1",
+   "lineRange": [
+    65,
+    70
+   ],
+   "summary": "Sprawdza, czy proces działa z uprawnieniami administratora.",
+   "tags": [
+    "security",
+    "elevation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_addin_host.ps1:Invoke-ElevatedSelf",
+   "type": "function",
+   "name": "Invoke-ElevatedSelf",
+   "filePath": "scripts/sw_addin_host.ps1",
+   "lineRange": [
+    71,
+    87
+   ],
+   "summary": "Uruchamia ponownie skrypt z podniesionymi uprawnieniami.",
+   "tags": [
+    "elevation",
+    "process"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_addin_host.ps1:Set-RegistryDefaultValue",
+   "type": "function",
+   "name": "Set-RegistryDefaultValue",
+   "filePath": "scripts/sw_addin_host.ps1",
+   "lineRange": [
+    88,
+    94
+   ],
+   "summary": "Ustawia domyślną wartość klucza rejestru.",
+   "tags": [
+    "registry",
+    "helper"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_addin_host.ps1:Register-CurrentUser",
+   "type": "function",
+   "name": "Register-CurrentUser",
+   "filePath": "scripts/sw_addin_host.ps1",
+   "lineRange": [
+    95,
+    118
+   ],
+   "summary": "Rejestruje dodatek COM w gałęzi rejestru bieżącego użytkownika.",
+   "tags": [
+    "registry",
+    "com",
+    "registration"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_addin_host.ps1:Unregister-CurrentUser",
+   "type": "function",
+   "name": "Unregister-CurrentUser",
+   "filePath": "scripts/sw_addin_host.ps1",
+   "lineRange": [
+    119,
+    135
+   ],
+   "summary": "Usuwa wpisy rejestru dodatku dla bieżącego użytkownika.",
+   "tags": [
+    "registry",
+    "unregister",
+    "cleanup"
+   ],
+   "complexity": "simple"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:scripts/sw_addin_host.ps1",
+   "target": "function:scripts/sw_addin_host.ps1:Resolve-SolidWorksApiDir",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_addin_host.ps1",
+   "target": "function:scripts/sw_addin_host.ps1:Build-AddinHost",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_addin_host.ps1",
+   "target": "function:scripts/sw_addin_host.ps1:Test-IsAdministrator",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_addin_host.ps1",
+   "target": "function:scripts/sw_addin_host.ps1:Invoke-ElevatedSelf",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_addin_host.ps1",
+   "target": "function:scripts/sw_addin_host.ps1:Set-RegistryDefaultValue",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_addin_host.ps1",
+   "target": "function:scripts/sw_addin_host.ps1:Register-CurrentUser",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_addin_host.ps1",
+   "target": "function:scripts/sw_addin_host.ps1:Unregister-CurrentUser",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_native_wire.ps1",
+   "target": "file:scripts/sw_native_wire.cs",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:scripts/build_windows_release.ps1",
+   "target": "file:scripts/sync_bundled_skill.py",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:scripts/verify_updater_release.ps1",
+   "target": "file:scripts/build_windows_release.ps1",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  }
+ ]
+}

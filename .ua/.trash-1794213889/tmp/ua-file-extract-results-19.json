@@ -1,0 +1,1052 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 13,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 13,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 13
+    }
+  },
+  "results": [
+    {
+      "path": "docs/architecture/execution-core.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 180,
+      "nonEmptyLines": 134,
+      "sections": [
+        {
+          "heading": "V2 Execution Core —— 内部可靠执行层",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Motivation",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "2. Architecture",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "3. State（`state.py`）",
+          "level": 2,
+          "line": 53
+        },
+        {
+          "heading": "4. Capability Facade（`capability.py`）",
+          "level": 2,
+          "line": 66
+        },
+        {
+          "heading": "5. Execution（`execution.py`）",
+          "level": 2,
+          "line": 76
+        },
+        {
+          "heading": "6. Verification（`verification.py`）",
+          "level": 2,
+          "line": 93
+        },
+        {
+          "heading": "7. Recovery Decision（`recovery.py`）",
+          "level": 2,
+          "line": 106
+        },
+        {
+          "heading": "8. Trace（`trace.py`）",
+          "level": 2,
+          "line": 123
+        },
+        {
+          "heading": "9. Worker Integration（最小侵入）",
+          "level": 2,
+          "line": 135
+        },
+        {
+          "heading": "10. Capability Gap",
+          "level": 2,
+          "line": 154
+        },
+        {
+          "heading": "11. Reliability Eval（`tests/evals/`）",
+          "level": 2,
+          "line": 166
+        },
+        {
+          "heading": "12. Compatibility",
+          "level": 2,
+          "line": 175
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "docs/architecture/governance-attestation.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 332,
+      "nonEmptyLines": 247,
+      "sections": [
+        {
+          "heading": "治理规则集证明：离线采集、签名与只读校验",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. 为什么需要离线证明",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "2. 信任边界（必须如实披露）",
+          "level": 2,
+          "line": 33
+        },
+        {
+          "heading": "2.1 本机制能做到",
+          "level": 3,
+          "line": 35
+        },
+        {
+          "heading": "2.2 本机制做不到",
+          "level": 3,
+          "line": 42
+        },
+        {
+          "heading": "2.3 信任锚点的计算",
+          "level": 3,
+          "line": 56
+        },
+        {
+          "heading": "3. 双摘要语义（不可混用）",
+          "level": 2,
+          "line": 70
+        },
+        {
+          "heading": "4. 证明结构（v2）",
+          "level": 2,
+          "line": 87
+        },
+        {
+          "heading": "4.1 `compliant` 的含义",
+          "level": 3,
+          "line": 121
+        },
+        {
+          "heading": "5. 生成流程（维护者本机）",
+          "level": 2,
+          "line": 137
+        },
+        {
+          "heading": "6. CI 只读校验项（28 项）",
+          "level": 2,
+          "line": 179
+        },
+        {
+          "heading": "6.1 fail-closed 复述",
+          "level": 3,
+          "line": 226
+        },
+        {
+          "heading": "6.2 路径注入隔离",
+          "level": 3,
+          "line": 239
+        },
+        {
+          "heading": "7. 失效规则",
+          "level": 2,
+          "line": 247
+        },
+        {
+          "heading": "8. 密钥固定与轮换",
+          "level": 2,
+          "line": 264
+        },
+        {
+          "heading": "9. 漂移检测（`check_governance_drift.cjs`）",
+          "level": 2,
+          "line": 283
+        },
+        {
+          "heading": "10. 自检",
+          "level": 2,
+          "line": 302
+        },
+        {
+          "heading": "11. 未解决与未验证",
+          "level": 2,
+          "line": 319
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 18
+      }
+    },
+    {
+      "path": "docs/architecture/governance-bypass-remediation.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 168,
+      "nonEmptyLines": 122,
+      "sections": [
+        {
+          "heading": "绕过必需检查的风险与最小修复方案",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. 现状（2026-10-27 实测，只读）",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "2. 风险：`bypass_mode = always` 的作用",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "2.1 为什么签名证明解决不了这个问题",
+          "level": 3,
+          "line": 38
+        },
+        {
+          "heading": "2.2 当前的实际暴露面",
+          "level": 3,
+          "line": 50
+        },
+        {
+          "heading": "3. 最小变更方案",
+          "level": 2,
+          "line": 62
+        },
+        {
+          "heading": "3.1 改动内容",
+          "level": 3,
+          "line": 64
+        },
+        {
+          "heading": "3.2 为什么这是最小方案",
+          "level": 3,
+          "line": 69
+        },
+        {
+          "heading": "3.3 执行前置条件（缺一不可）",
+          "level": 3,
+          "line": 78
+        },
+        {
+          "heading": "3.4 执行步骤",
+          "level": 3,
+          "line": 85
+        },
+        {
+          "heading": "3.5 验收判据",
+          "level": 3,
+          "line": 105
+        },
+        {
+          "heading": "3.6 变更后的必然结果",
+          "level": 3,
+          "line": 121
+        },
+        {
+          "heading": "4. 与 CI 门禁的关系",
+          "level": 2,
+          "line": 132
+        },
+        {
+          "heading": "5. 回滚方案",
+          "level": 2,
+          "line": 146
+        },
+        {
+          "heading": "6. 停止条件",
+          "level": 2,
+          "line": 162
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 15
+      }
+    },
+    {
+      "path": "docs/architecture/real-golden-gripper-retention-travel-acceptance.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 270,
+      "nonEmptyLines": 217,
+      "sections": [
+        {
+          "heading": "P0-2.1：夹爪机械保持、公差及静态全行程验收",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "原结构审计及最小机械改动",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "孔与定位明细",
+          "level": 2,
+          "line": 33
+        },
+        {
+          "heading": "公差依据及适用边界",
+          "level": 2,
+          "line": 49
+        },
+        {
+          "heading": "行程与真实计算契约",
+          "level": 2,
+          "line": 65
+        },
+        {
+          "heading": "运行与双状态",
+          "level": 2,
+          "line": 90
+        },
+        {
+          "heading": "API 核查",
+          "level": 2,
+          "line": 109
+        },
+        {
+          "heading": "实际执行记录",
+          "level": 2,
+          "line": 122
+        },
+        {
+          "heading": "2026-10-27 冻结源码五轮结果",
+          "level": 2,
+          "line": 158
+        },
+        {
+          "heading": "离线回归、证据与实施后审查",
+          "level": 2,
+          "line": 215
+        },
+        {
+          "heading": "尚未放行与后续工程审核",
+          "level": 2,
+          "line": 259
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "docs/architecture/real-golden-merge-readiness.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 269,
+      "nonEmptyLines": 209,
+      "sections": [
+        {
+          "heading": "P0-1.2 合并前检查报告",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "治理标准调整记录（2026-10-27）",
+          "level": 2,
+          "line": 12
+        },
+        {
+          "heading": "PR 相对 main 的完整审计",
+          "level": 2,
+          "line": 55
+        },
+        {
+          "heading": "可维护的手动 CI 准入",
+          "level": 2,
+          "line": 73
+        },
+        {
+          "heading": "实际 GitHub 设置与人工配置条件",
+          "level": 2,
+          "line": 97
+        },
+        {
+          "heading": "可复用入口、配置和证据协议",
+          "level": 2,
+          "line": 128
+        },
+        {
+          "heading": "核查依据",
+          "level": 2,
+          "line": 161
+        },
+        {
+          "heading": "本阶段完整修改清单",
+          "level": 2,
+          "line": 167
+        },
+        {
+          "heading": "失败及修复记录",
+          "level": 2,
+          "line": 187
+        },
+        {
+          "heading": "实际验收结果（2026-10-23）",
+          "level": 2,
+          "line": 202
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "docs/architecture/real-golden-parallel-gripper-acceptance.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 221,
+      "nonEmptyLines": 170,
+      "sections": [
+        {
+          "heading": "P0-2：双指平行夹爪原生装配 Golden",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "分支与执行边界",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "统一规格（mm）",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "原生配合与自由度",
+          "level": 2,
+          "line": 33
+        },
+        {
+          "heading": "装配、干涉与交付验收",
+          "level": 2,
+          "line": 58
+        },
+        {
+          "heading": "运行命令",
+          "level": 2,
+          "line": 78
+        },
+        {
+          "heading": "API 核查依据",
+          "level": 2,
+          "line": 95
+        },
+        {
+          "heading": "开发阶段发现并保留的问题",
+          "level": 3,
+          "line": 105
+        },
+        {
+          "heading": "2026-10-26 本机实测结果",
+          "level": 2,
+          "line": 125
+        },
+        {
+          "heading": "Evidence 与复核入口",
+          "level": 2,
+          "line": 159
+        },
+        {
+          "heading": "本阶段完整变更清单",
+          "level": 2,
+          "line": 192
+        },
+        {
+          "heading": "未验证范围及 P0-2.1",
+          "level": 2,
+          "line": 207
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "docs/architecture/real-golden-workflow-acceptance.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 239,
+      "nonEmptyLines": 193,
+      "sections": [
+        {
+          "heading": "SolidWorks 2026 真实 Golden Workflow 验收",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "构建与运行",
+          "level": 2,
+          "line": 12
+        },
+        {
+          "heading": "验收证据",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "已知限制",
+          "level": 2,
+          "line": 56
+        },
+        {
+          "heading": "CI 边界",
+          "level": 2,
+          "line": 68
+        },
+        {
+          "heading": "P0-1.1 状态传播审计与边界",
+          "level": 2,
+          "line": 85
+        },
+        {
+          "heading": "本次排错记录",
+          "level": 2,
+          "line": 116
+        },
+        {
+          "heading": "API 核查依据",
+          "level": 2,
+          "line": 129
+        },
+        {
+          "heading": "2026-10-23 本机执行结果",
+          "level": 2,
+          "line": 135
+        },
+        {
+          "heading": "2026-10-23 P0-1.1 实际复测结果",
+          "level": 2,
+          "line": 182
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "docs/architecture/remaining-pr-increments.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 33,
+      "nonEmptyLines": 24,
+      "sections": [
+        {
+          "heading": "剩余 PR 的增量修复（2026）",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "docs/architecture/scheme-b-reliability.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 61,
+      "nonEmptyLines": 46,
+      "sections": [
+        {
+          "heading": "方案 B：既有架构的可靠性修复与验收",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "改动与真正原因",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "验证结果",
+          "level": 2,
+          "line": 23
+        },
+        {
+          "heading": "如何运行与复核",
+          "level": 2,
+          "line": 33
+        },
+        {
+          "heading": "已知限制",
+          "level": 2,
+          "line": 54
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "docs/architecture/v2-audit.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 360,
+      "nonEmptyLines": 262,
+      "sections": [
+        {
+          "heading": "SolidWorks Automation Skill V2 架构审计报告",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "0. 审计范围与方法",
+          "level": 2,
+          "line": 12
+        },
+        {
+          "heading": "1. 当前真实架构",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "1.1 三个用户入口（已确认，保持不变）",
+          "level": 3,
+          "line": 32
+        },
+        {
+          "heading": "1.2 模块职责现状（与 V2 统一概念对照）",
+          "level": 3,
+          "line": 42
+        },
+        {
+          "heading": "2. 当前真实调用链路",
+          "level": 2,
+          "line": 59
+        },
+        {
+          "heading": "2.1 Skill 链路（Agent 直接执行脚本）",
+          "level": 3,
+          "line": 61
+        },
+        {
+          "heading": "2.2 MCP 链路（串行白名单工具）",
+          "level": 3,
+          "line": 76
+        },
+        {
+          "heading": "2.3 CAD Studio 链路（Worker + 门禁 + 账本 + 复核）",
+          "level": 3,
+          "line": 91
+        },
+        {
+          "heading": "3. 已存在且可直接复用的能力盘点",
+          "level": 2,
+          "line": 117
+        },
+        {
+          "heading": "3.1 Retry（分散、非统一）",
+          "level": 3,
+          "line": 119
+        },
+        {
+          "heading": "3.2 Review / Verification（强，双层级互补）",
+          "level": 3,
+          "line": 131
+        },
+        {
+          "heading": "3.3 Routing（强，唯一真源已存在）",
+          "level": 3,
+          "line": 139
+        },
+        {
+          "heading": "3.4 Trace / Logs（job 级 JSONL 已存在）",
+          "level": 3,
+          "line": 147
+        },
+        {
+          "heading": "3.5 Queue State / Worker Health（强）",
+          "level": 3,
+          "line": 155
+        },
+        {
+          "heading": "3.6 Artifact Ledger（强）",
+          "level": 3,
+          "line": 164
+        },
+        {
+          "heading": "3.7 Error Handling（弱，无结构化分类）",
+          "level": 3,
+          "line": 170
+        },
+        {
+          "heading": "3.8 Policy Gate（强）",
+          "level": 3,
+          "line": 176
+        },
+        {
+          "heading": "3.9 Capability Gap 开放机制（Skill 层已有，代码层缺失）",
+          "level": 3,
+          "line": 182
+        },
+        {
+          "heading": "4. capabilities.yaml 当前承担职责（唯一真源）",
+          "level": 2,
+          "line": 192
+        },
+        {
+          "heading": "5. 重复风险与过度设计风险",
+          "level": 2,
+          "line": 205
+        },
+        {
+          "heading": "5.1 已存在的重复（V2 不得再复制）",
+          "level": 3,
+          "line": 207
+        },
+        {
+          "heading": "5.2 V2 必须避免的重复",
+          "level": 3,
+          "line": 212
+        },
+        {
+          "heading": "5.3 过度设计风险（重点提醒）",
+          "level": 3,
+          "line": 220
+        },
+        {
+          "heading": "6. V2 最小改造方案",
+          "level": 2,
+          "line": 231
+        },
+        {
+          "heading": "6.1 新增内部模块（`scripts/core/`，不是用户入口）",
+          "level": 3,
+          "line": 233
+        },
+        {
+          "heading": "6.2 各模块要点",
+          "level": 3,
+          "line": 247
+        },
+        {
+          "heading": "6.3 Golden Workflow Eval（`tests/evals/`）",
+          "level": 3,
+          "line": 275
+        },
+        {
+          "heading": "7. 计划修改文件",
+          "level": 2,
+          "line": 285
+        },
+        {
+          "heading": "8. 明确不会修改的模块",
+          "level": 2,
+          "line": 308
+        },
+        {
+          "heading": "9. 关键兼容性约束（V2 全程红线）",
+          "level": 2,
+          "line": 331
+        },
+        {
+          "heading": "10. 核心结论",
+          "level": 2,
+          "line": 344
+        },
+        {
+          "heading": "11. Phase 2 入口前待确认事项（请求用户拍板）",
+          "level": 2,
+          "line": 353
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 33
+      }
+    },
+    {
+      "path": "docs/architecture/v2-evaluation.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 146,
+      "nonEmptyLines": 105,
+      "sections": [
+        {
+          "heading": "V2 Evaluation —— Golden Workflow Reliability Eval",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. 为什么需要 Eval",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "2. Golden Workflow 是什么",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "3. Scenario 分类（benchmark_group）",
+          "level": 2,
+          "line": 23
+        },
+        {
+          "heading": "4. Metrics 定义",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "Nominal（只针对 nominal scenarios）",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "Robustness（recovery / fault_injection / guardrail）",
+          "level": 3,
+          "line": 47
+        },
+        {
+          "heading": "Safety（假成功）",
+          "level": 3,
+          "line": 64
+        },
+        {
+          "heading": "Overall（诊断，不用于 target）",
+          "level": 3,
+          "line": 72
+        },
+        {
+          "heading": "5. False Completion 精确定义（修正后）",
+          "level": 2,
+          "line": 79
+        },
+        {
+          "heading": "6. 旧算法问题（为什么 59.5% / 29.7% / 33.3% 失真）",
+          "level": 2,
+          "line": 91
+        },
+        {
+          "heading": "7. deterministic fixture 设计",
+          "level": 2,
+          "line": 112
+        },
+        {
+          "heading": "8. 如何运行 Eval",
+          "level": 2,
+          "line": 119
+        },
+        {
+          "heading": "9. 如何读报告",
+          "level": 2,
+          "line": 127
+        },
+        {
+          "heading": "10. 当前 Eval 不覆盖什么",
+          "level": 2,
+          "line": 136
+        },
+        {
+          "heading": "11. 未来 Live Agent Eval 如何扩展",
+          "level": 2,
+          "line": 142
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 16
+      }
+    },
+    {
+      "path": "docs/architecture/v2-regression-report.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 146,
+      "nonEmptyLines": 111,
+      "sections": [
+        {
+          "heading": "V2 Regression Report & Reliability Baseline",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. V2 架构版本",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "2. Regression Matrix",
+          "level": 2,
+          "line": 21
+        },
+        {
+          "heading": "3. Backward Compatibility",
+          "level": 2,
+          "line": 39
+        },
+        {
+          "heading": "4. Official Eval Metrics（Phase 7.5 修正后口径）",
+          "level": 2,
+          "line": 50
+        },
+        {
+          "heading": "Nominal Reliability（11 nominal scenarios）",
+          "level": 3,
+          "line": 54
+        },
+        {
+          "heading": "Robustness（26 robustness scenarios）",
+          "level": 3,
+          "line": 66
+        },
+        {
+          "heading": "Safety",
+          "level": 3,
+          "line": 80
+        },
+        {
+          "heading": "Overall Diagnostic（不用于 target）",
+          "level": 3,
+          "line": 88
+        },
+        {
+          "heading": "5. Reliability Baseline（Phase 7.5 修正后）",
+          "level": 2,
+          "line": 96
+        },
+        {
+          "heading": "6. CI-safe / Live-test 边界",
+          "level": 2,
+          "line": 110
+        },
+        {
+          "heading": "7. 已知限制与口径说明",
+          "level": 2,
+          "line": 116
+        },
+        {
+          "heading": "8. 发现的问题",
+          "level": 2,
+          "line": 128
+        },
+        {
+          "heading": "9. Production Code 是否发生变化",
+          "level": 2,
+          "line": 133
+        },
+        {
+          "heading": "10. 是否可以进入 V2 Documentation Freeze",
+          "level": 2,
+          "line": 141
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 15
+      }
+    },
+    {
+      "path": "docs/architecture/v2-release-notes.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 55,
+      "nonEmptyLines": 43,
+      "sections": [
+        {
+          "heading": "V2 Release Notes (Draft)",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Added",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Preserved",
+          "level": 2,
+          "line": 20
+        },
+        {
+          "heading": "Metrics（Deterministic Execution Reliability Benchmark，37 scenarios）",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "Limitations",
+          "level": 2,
+          "line": 40
+        },
+        {
+          "heading": "Docs",
+          "level": 2,
+          "line": 50
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    }
+  ]
+}

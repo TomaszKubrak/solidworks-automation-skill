@@ -1,0 +1,16 @@
+{
+"nodes":[
+{"id":"document:subskills/solidworks-engineering-drawing/README.md","type":"document","name":"README.md","filePath":"subskills/solidworks-engineering-drawing/README.md","summary":"Przegląd podumiejętności inżynierskich rysunków SolidWorks: przypadek z prawdziwego CAD (NIST test artifact), wejścia, wyjścia, natywny GD&T SW2026, macierz wersji i status pilot.","tags":["documentation","drawing","gdt","solidworks","entry-point"],"complexity":"moderate"},
+{"id":"document:subskills/solidworks-engineering-drawing/SKILL.md","type":"document","name":"SKILL.md","filePath":"subskills/solidworks-engineering-drawing/SKILL.md","summary":"Definicja podumiejętności: kiedy ją wywołać, domyślne reguły GB/T, przepływ pracy, granice możliwości i bramki przeglądu PDF/GD&T oraz zależności od głównej umiejętności.","tags":["documentation","skill-definition","drawing","review-gate","solidworks"],"complexity":"moderate"},
+{"id":"config:subskills/solidworks-engineering-drawing/manifest.yaml","type":"config","name":"manifest.yaml","filePath":"subskills/solidworks-engineering-drawing/manifest.yaml","summary":"Manifest podumiejętności: nazwa, status pilot, skrypty, schematy, referencje oraz zależności od solidworks-automation i powiązane podumiejętności.","tags":["configuration","manifest","subskill","metadata"],"complexity":"simple"}
+],
+"edges":[
+{"source":"document:subskills/solidworks-engineering-drawing/README.md","target":"file:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py","type":"documents","direction":"forward","weight":0.5},
+{"source":"document:subskills/solidworks-engineering-drawing/SKILL.md","target":"file:subskills/solidworks-engineering-drawing/scripts/drawing_review.py","type":"documents","direction":"forward","weight":0.5},
+{"source":"document:subskills/solidworks-engineering-drawing/SKILL.md","target":"file:subskills/solidworks-engineering-drawing/scripts/drawing_spec.py","type":"documents","direction":"forward","weight":0.5},
+{"source":"document:subskills/solidworks-engineering-drawing/SKILL.md","target":"file:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py","type":"documents","direction":"forward","weight":0.5},
+{"source":"config:subskills/solidworks-engineering-drawing/manifest.yaml","target":"file:subskills/solidworks-engineering-drawing/scripts/drawing_spec.py","type":"configures","direction":"forward","weight":0.6},
+{"source":"config:subskills/solidworks-engineering-drawing/manifest.yaml","target":"file:subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py","type":"configures","direction":"forward","weight":0.6},
+{"source":"config:subskills/solidworks-engineering-drawing/manifest.yaml","target":"file:subskills/solidworks-engineering-drawing/scripts/drawing_review.py","type":"configures","direction":"forward","weight":0.6},
+{"source":"config:subskills/solidworks-engineering-drawing/manifest.yaml","target":"document:subskills/solidworks-engineering-drawing/SKILL.md","type":"related","direction":"forward","weight":0.5}
+]}

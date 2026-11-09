@@ -1,0 +1,42 @@
+{
+ "projectRoot": "/Users/tomasz/Developer/solidworks-automation-skill",
+ "batchFiles": [
+  {
+   "path": "apps/desktop/DESIGN.md",
+   "language": "markdown",
+   "sizeLines": 58,
+   "fileCategory": "docs"
+  },
+  {
+   "path": "apps/desktop/README.md",
+   "language": "markdown",
+   "sizeLines": 79,
+   "fileCategory": "docs"
+  },
+  {
+   "path": "apps/desktop/build_exe.ps1",
+   "language": "powershell",
+   "sizeLines": 32,
+   "fileCategory": "script"
+  },
+  {
+   "path": "apps/desktop/requirements.txt",
+   "language": "txt",
+   "sizeLines": 1,
+   "fileCategory": "docs"
+  },
+  {
+   "path": "apps/desktop/start_desktop.ps1",
+   "language": "powershell",
+   "sizeLines": 24,
+   "fileCategory": "script"
+  }
+ ],
+ "batchImportData": {
+  "apps/desktop/DESIGN.md": [],
+  "apps/desktop/README.md": [],
+  "apps/desktop/build_exe.ps1": [],
+  "apps/desktop/requirements.txt": [],
+  "apps/desktop/start_desktop.ps1": []
+ }
+}

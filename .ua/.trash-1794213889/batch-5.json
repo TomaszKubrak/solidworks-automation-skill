@@ -1,0 +1,1230 @@
+{
+ "nodes": [
+  {
+   "id": "file:scripts/core/__init__.py",
+   "type": "file",
+   "name": "__init__.py",
+   "filePath": "scripts/core/__init__.py",
+   "summary": "Barrel pakietu core: reeksportuje publiczne API modeli stanu, fasady capability, trace, weryfikacji, recovery i orkiestracji wykonania.",
+   "tags": [
+    "barrel",
+    "entry-point",
+    "execution-core",
+    "reexport"
+   ],
+   "complexity": "moderate",
+   "languageNotes": "Dokumentacja pakietu ostrzega, by importować przez core.* bez wyzwalania COM z scripts/__init__.py."
+  },
+  {
+   "id": "file:scripts/core/capability.py",
+   "type": "file",
+   "name": "capability.py",
+   "filePath": "scripts/core/capability.py",
+   "summary": "Fasada nad capabilities.yaml: ładuje definicje, wyznacza trasę operacji, kandydatów backendu i wymóg review.",
+   "tags": [
+    "capability",
+    "router",
+    "facade",
+    "configuration"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/core/capability.py:load_capabilities",
+   "type": "function",
+   "name": "load_capabilities",
+   "filePath": "scripts/core/capability.py",
+   "lineRange": [
+    22,
+    24
+   ],
+   "summary": "Ładuje definicje capability z capabilities.yaml.",
+   "tags": [
+    "function",
+    "capability",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/core/capability.py:get_operation_route",
+   "type": "function",
+   "name": "get_operation_route",
+   "filePath": "scripts/core/capability.py",
+   "lineRange": [
+    33,
+    36
+   ],
+   "summary": "Zwraca trasę routingu dla operacji.",
+   "tags": [
+    "function",
+    "capability",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/core/capability.py:get_backend_candidates",
+   "type": "function",
+   "name": "get_backend_candidates",
+   "filePath": "scripts/core/capability.py",
+   "lineRange": [
+    39,
+    45
+   ],
+   "summary": "Zwraca listę kandydatów backendu dla capability.",
+   "tags": [
+    "function",
+    "capability",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/core/capability.py:resolve_backend",
+   "type": "function",
+   "name": "resolve_backend",
+   "filePath": "scripts/core/capability.py",
+   "lineRange": [
+    48,
+    65
+   ],
+   "summary": "Wybiera backend dla operacji na podstawie kandydatów i dostępności.",
+   "tags": [
+    "function",
+    "capability",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/core/capability.py:requires_review",
+   "type": "function",
+   "name": "requires_review",
+   "filePath": "scripts/core/capability.py",
+   "lineRange": [
+    68,
+    85
+   ],
+   "summary": "Określa, czy operacja wymaga przeglądu (review).",
+   "tags": [
+    "function",
+    "capability",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/core/capability.py:get_capability_status",
+   "type": "function",
+   "name": "get_capability_status",
+   "filePath": "scripts/core/capability.py",
+   "lineRange": [
+    88,
+    115
+   ],
+   "summary": "Zwraca status capability.",
+   "tags": [
+    "function",
+    "capability",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/core/capability.py:capability_gap",
+   "type": "function",
+   "name": "capability_gap",
+   "filePath": "scripts/core/capability.py",
+   "lineRange": [
+    118,
+    137
+   ],
+   "summary": "Wylicza lukę możliwości (brakujące wsparcie) dla żądanej operacji.",
+   "tags": [
+    "function",
+    "capability",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:scripts/core/execution.py",
+   "type": "file",
+   "name": "execution.py",
+   "filePath": "scripts/core/execution.py",
+   "summary": "Wewnętrzna warstwa orkiestracji execute_with_core łącząca stan, handler, weryfikację, recovery i trace dla niezawodnego wykonania operacji.",
+   "tags": [
+    "orchestration",
+    "execution",
+    "reliability",
+    "normalization"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/core/execution.py:normalize_tool_payload",
+   "type": "function",
+   "name": "normalize_tool_payload",
+   "filePath": "scripts/core/execution.py",
+   "lineRange": [
+    40,
+    61
+   ],
+   "summary": "Normalizuje wynik narzędzia do spójnego słownika payload.",
+   "tags": [
+    "function",
+    "orchestration",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/core/execution.py:execute_with_core",
+   "type": "function",
+   "name": "execute_with_core",
+   "filePath": "scripts/core/execution.py",
+   "lineRange": [
+    155,
+    331
+   ],
+   "summary": "Główna orkiestracja: uruchamia handler, weryfikuje wynik, stosuje recovery i emituje trace.",
+   "tags": [
+    "function",
+    "orchestration",
+    "python"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "class:scripts/core/execution.py:ExecutionAssessment",
+   "type": "class",
+   "name": "ExecutionAssessment",
+   "filePath": "scripts/core/execution.py",
+   "lineRange": [
+    102,
+    125
+   ],
+   "summary": "Struktura oceny wyniku wykonania (sukces, komunikat, błąd).",
+   "tags": [
+    "class",
+    "orchestration",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/core/recovery.py",
+   "type": "file",
+   "name": "recovery.py",
+   "filePath": "scripts/core/recovery.py",
+   "summary": "Deterministyczna warstwa decyzyjna po błędach: klasyfikuje błędy (ErrorKind) i wybiera akcję recovery bez jej wykonywania.",
+   "tags": [
+    "recovery",
+    "error-classification",
+    "decision-engine",
+    "deterministic"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/core/recovery.py:classify_error",
+   "type": "function",
+   "name": "classify_error",
+   "filePath": "scripts/core/recovery.py",
+   "lineRange": [
+    272,
+    328
+   ],
+   "summary": "Klasyfikuje błąd do ErrorKind na podstawie wyjątku, weryfikacji i capability.",
+   "tags": [
+    "function",
+    "recovery",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/core/recovery.py:decide",
+   "type": "function",
+   "name": "decide",
+   "filePath": "scripts/core/recovery.py",
+   "lineRange": [
+    381,
+    495
+   ],
+   "summary": "Podejmuje deterministyczną decyzję recovery (retry, fallback, abort) dla błędu.",
+   "tags": [
+    "function",
+    "recovery",
+    "python"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "class:scripts/core/recovery.py:ErrorKind",
+   "type": "class",
+   "name": "ErrorKind",
+   "filePath": "scripts/core/recovery.py",
+   "lineRange": [
+    28,
+    40
+   ],
+   "summary": "Enum rodzajów błędów używany w klasyfikacji recovery.",
+   "tags": [
+    "class",
+    "recovery",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/core/state.py",
+   "type": "file",
+   "name": "state.py",
+   "filePath": "scripts/core/state.py",
+   "summary": "Modele danych stanu wykonania (enumy statusów, RunContext, StepRecord, VerificationResult, RecoveryDecision) z walidacją przejść i serializacją JSON.",
+   "tags": [
+    "data-model",
+    "state-machine",
+    "serialization",
+    "execution-core"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/core/state.py:can_transition_run",
+   "type": "function",
+   "name": "can_transition_run",
+   "filePath": "scripts/core/state.py",
+   "lineRange": [
+    161,
+    167
+   ],
+   "summary": "Sprawdza, czy przejście statusu przebiegu jest dozwolone.",
+   "tags": [
+    "function",
+    "data-model",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/core/state.py:ensure_run_transition",
+   "type": "function",
+   "name": "ensure_run_transition",
+   "filePath": "scripts/core/state.py",
+   "lineRange": [
+    179,
+    186
+   ],
+   "summary": "Wymusza dozwolone przejście przebiegu, inaczej rzuca InvalidStateTransition.",
+   "tags": [
+    "function",
+    "data-model",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/core/state.py:ensure_step_transition",
+   "type": "function",
+   "name": "ensure_step_transition",
+   "filePath": "scripts/core/state.py",
+   "lineRange": [
+    189,
+    196
+   ],
+   "summary": "Wymusza dozwolone przejście kroku, inaczej rzuca InvalidStateTransition.",
+   "tags": [
+    "function",
+    "data-model",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:scripts/core/state.py:RunStatus",
+   "type": "class",
+   "name": "RunStatus",
+   "filePath": "scripts/core/state.py",
+   "lineRange": [
+    32,
+    41
+   ],
+   "summary": "Enum statusów przebiegu.",
+   "tags": [
+    "class",
+    "data-model",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:scripts/core/state.py:StepStatus",
+   "type": "class",
+   "name": "StepStatus",
+   "filePath": "scripts/core/state.py",
+   "lineRange": [
+    44,
+    53
+   ],
+   "summary": "Enum statusów kroku.",
+   "tags": [
+    "class",
+    "data-model",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:scripts/core/state.py:VerificationStatus",
+   "type": "class",
+   "name": "VerificationStatus",
+   "filePath": "scripts/core/state.py",
+   "lineRange": [
+    56,
+    62
+   ],
+   "summary": "Enum statusów weryfikacji.",
+   "tags": [
+    "class",
+    "data-model",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:scripts/core/state.py:InvalidStateTransition",
+   "type": "class",
+   "name": "InvalidStateTransition",
+   "filePath": "scripts/core/state.py",
+   "lineRange": [
+    78,
+    79
+   ],
+   "summary": "Wyjątek dla niedozwolonego przejścia stanu.",
+   "tags": [
+    "class",
+    "data-model",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:scripts/core/state.py:VerificationResult",
+   "type": "class",
+   "name": "VerificationResult",
+   "filePath": "scripts/core/state.py",
+   "lineRange": [
+    214,
+    237
+   ],
+   "summary": "Model wyniku weryfikacji.",
+   "tags": [
+    "class",
+    "data-model",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:scripts/core/state.py:RecoveryDecision",
+   "type": "class",
+   "name": "RecoveryDecision",
+   "filePath": "scripts/core/state.py",
+   "lineRange": [
+    241,
+    268
+   ],
+   "summary": "Model decyzji recovery.",
+   "tags": [
+    "class",
+    "data-model",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:scripts/core/state.py:ExecutionResult",
+   "type": "class",
+   "name": "ExecutionResult",
+   "filePath": "scripts/core/state.py",
+   "lineRange": [
+    272,
+    301
+   ],
+   "summary": "Model wyniku wykonania.",
+   "tags": [
+    "class",
+    "data-model",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:scripts/core/state.py:StepRecord",
+   "type": "class",
+   "name": "StepRecord",
+   "filePath": "scripts/core/state.py",
+   "lineRange": [
+    305,
+    359
+   ],
+   "summary": "Rekord pojedynczego kroku z przejściami statusów.",
+   "tags": [
+    "class",
+    "data-model",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:scripts/core/state.py:RunContext",
+   "type": "class",
+   "name": "RunContext",
+   "filePath": "scripts/core/state.py",
+   "lineRange": [
+    363,
+    422
+   ],
+   "summary": "Kontekst przebiegu agregujący kroki i status.",
+   "tags": [
+    "class",
+    "data-model",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:scripts/core/trace.py",
+   "type": "file",
+   "name": "trace.py",
+   "filePath": "scripts/core/trace.py",
+   "summary": "Adapter append-only śladu wykonania oparty o queue/events: zapis, redakcja danych wrażliwych i odczyt zdarzeń.",
+   "tags": [
+    "trace",
+    "logging",
+    "redaction",
+    "adapter"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/core/trace.py:redact",
+   "type": "function",
+   "name": "redact",
+   "filePath": "scripts/core/trace.py",
+   "lineRange": [
+    87,
+    95
+   ],
+   "summary": "Redaguje wrażliwe wartości przed zapisem do śladu.",
+   "tags": [
+    "function",
+    "trace",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/core/trace.py:append_event",
+   "type": "function",
+   "name": "append_event",
+   "filePath": "scripts/core/trace.py",
+   "lineRange": [
+    108,
+    115
+   ],
+   "summary": "Dopisuje zdarzenie do pliku trace (append-only).",
+   "tags": [
+    "function",
+    "trace",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/core/trace.py:emit",
+   "type": "function",
+   "name": "emit",
+   "filePath": "scripts/core/trace.py",
+   "lineRange": [
+    118,
+    160
+   ],
+   "summary": "Buduje i zapisuje zdarzenie trace z deduplikacją.",
+   "tags": [
+    "function",
+    "trace",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/core/trace.py:read_events",
+   "type": "function",
+   "name": "read_events",
+   "filePath": "scripts/core/trace.py",
+   "lineRange": [
+    163,
+    180
+   ],
+   "summary": "Odczytuje zdarzenia trace z pliku.",
+   "tags": [
+    "function",
+    "trace",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:scripts/core/verification.py",
+   "type": "file",
+   "name": "verification.py",
+   "filePath": "scripts/core/verification.py",
+   "summary": "Adapter agregujący wyniki Reviewera do ujednoliconego VerificationResult wraz ze statusami, artefaktami i zdarzeniami trace.",
+   "tags": [
+    "verification",
+    "adapter",
+    "aggregation",
+    "review"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/core/verification.py:verify",
+   "type": "function",
+   "name": "verify",
+   "filePath": "scripts/core/verification.py",
+   "lineRange": [
+    213,
+    332
+   ],
+   "summary": "Agreguje wyniki Reviewera w VerificationResult i emituje zdarzenia trace.",
+   "tags": [
+    "function",
+    "verification",
+    "python"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/core/verification.py:aggregate_statuses",
+   "type": "function",
+   "name": "aggregate_statuses",
+   "filePath": "scripts/core/verification.py",
+   "lineRange": [
+    82,
+    87
+   ],
+   "summary": "Agreguje listę statusów weryfikacji do jednego.",
+   "tags": [
+    "function",
+    "verification",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/core/verification.py:normalize_status",
+   "type": "function",
+   "name": "normalize_status",
+   "filePath": "scripts/core/verification.py",
+   "lineRange": [
+    73,
+    79
+   ],
+   "summary": "Normalizuje status do VerificationStatus.",
+   "tags": [
+    "function",
+    "verification",
+    "python"
+   ],
+   "complexity": "simple"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:scripts/core/__init__.py",
+   "target": "file:scripts/core/capability.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/core/__init__.py",
+   "target": "file:scripts/core/execution.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/core/__init__.py",
+   "target": "file:scripts/core/recovery.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/core/__init__.py",
+   "target": "file:scripts/core/state.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/core/__init__.py",
+   "target": "file:scripts/core/trace.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/core/__init__.py",
+   "target": "file:scripts/core/verification.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/core/capability.py",
+   "target": "function:scripts/core/capability.py:load_capabilities",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/capability.py",
+   "target": "function:scripts/core/capability.py:load_capabilities",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/capability.py",
+   "target": "function:scripts/core/capability.py:get_operation_route",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/capability.py",
+   "target": "function:scripts/core/capability.py:get_operation_route",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/capability.py",
+   "target": "function:scripts/core/capability.py:get_backend_candidates",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/capability.py",
+   "target": "function:scripts/core/capability.py:get_backend_candidates",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/capability.py",
+   "target": "function:scripts/core/capability.py:resolve_backend",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/capability.py",
+   "target": "function:scripts/core/capability.py:resolve_backend",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/capability.py",
+   "target": "function:scripts/core/capability.py:requires_review",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/capability.py",
+   "target": "function:scripts/core/capability.py:requires_review",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/capability.py",
+   "target": "function:scripts/core/capability.py:get_capability_status",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/capability.py",
+   "target": "function:scripts/core/capability.py:get_capability_status",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/capability.py",
+   "target": "function:scripts/core/capability.py:capability_gap",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/capability.py",
+   "target": "function:scripts/core/capability.py:capability_gap",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/execution.py",
+   "target": "function:scripts/core/execution.py:normalize_tool_payload",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/execution.py",
+   "target": "function:scripts/core/execution.py:normalize_tool_payload",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/execution.py",
+   "target": "function:scripts/core/execution.py:execute_with_core",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/execution.py",
+   "target": "function:scripts/core/execution.py:execute_with_core",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/execution.py",
+   "target": "class:scripts/core/execution.py:ExecutionAssessment",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/execution.py",
+   "target": "class:scripts/core/execution.py:ExecutionAssessment",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/execution.py",
+   "target": "file:scripts/core/capability.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/core/execution.py",
+   "target": "file:scripts/core/recovery.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/core/execution.py",
+   "target": "file:scripts/core/state.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/core/execution.py",
+   "target": "file:scripts/core/trace.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/core/execution.py",
+   "target": "file:scripts/core/verification.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/core/recovery.py",
+   "target": "function:scripts/core/recovery.py:classify_error",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/recovery.py",
+   "target": "function:scripts/core/recovery.py:classify_error",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/recovery.py",
+   "target": "function:scripts/core/recovery.py:decide",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/recovery.py",
+   "target": "function:scripts/core/recovery.py:decide",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/recovery.py",
+   "target": "class:scripts/core/recovery.py:ErrorKind",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/recovery.py",
+   "target": "class:scripts/core/recovery.py:ErrorKind",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/recovery.py",
+   "target": "file:scripts/core/__init__.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/core/recovery.py",
+   "target": "file:scripts/core/state.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/core/recovery.py",
+   "target": "file:scripts/core/trace.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/core/recovery.py",
+   "target": "file:scripts/core/verification.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "function:scripts/core/state.py:can_transition_run",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "function:scripts/core/state.py:can_transition_run",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "function:scripts/core/state.py:ensure_run_transition",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "function:scripts/core/state.py:ensure_run_transition",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "function:scripts/core/state.py:ensure_step_transition",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "function:scripts/core/state.py:ensure_step_transition",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "class:scripts/core/state.py:RunStatus",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "class:scripts/core/state.py:RunStatus",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "class:scripts/core/state.py:StepStatus",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "class:scripts/core/state.py:StepStatus",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "class:scripts/core/state.py:VerificationStatus",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "class:scripts/core/state.py:VerificationStatus",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "class:scripts/core/state.py:InvalidStateTransition",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "class:scripts/core/state.py:InvalidStateTransition",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "class:scripts/core/state.py:VerificationResult",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "class:scripts/core/state.py:VerificationResult",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "class:scripts/core/state.py:RecoveryDecision",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "class:scripts/core/state.py:RecoveryDecision",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "class:scripts/core/state.py:ExecutionResult",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "class:scripts/core/state.py:ExecutionResult",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "class:scripts/core/state.py:StepRecord",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "class:scripts/core/state.py:StepRecord",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "class:scripts/core/state.py:RunContext",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/state.py",
+   "target": "class:scripts/core/state.py:RunContext",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/trace.py",
+   "target": "function:scripts/core/trace.py:redact",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/trace.py",
+   "target": "function:scripts/core/trace.py:redact",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/trace.py",
+   "target": "function:scripts/core/trace.py:append_event",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/trace.py",
+   "target": "function:scripts/core/trace.py:append_event",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/trace.py",
+   "target": "function:scripts/core/trace.py:emit",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/trace.py",
+   "target": "function:scripts/core/trace.py:emit",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/trace.py",
+   "target": "function:scripts/core/trace.py:read_events",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/trace.py",
+   "target": "function:scripts/core/trace.py:read_events",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/trace.py",
+   "target": "file:scripts/core/state.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/core/verification.py",
+   "target": "function:scripts/core/verification.py:verify",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/verification.py",
+   "target": "function:scripts/core/verification.py:verify",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/verification.py",
+   "target": "function:scripts/core/verification.py:aggregate_statuses",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/verification.py",
+   "target": "function:scripts/core/verification.py:aggregate_statuses",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/verification.py",
+   "target": "function:scripts/core/verification.py:normalize_status",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/core/verification.py",
+   "target": "function:scripts/core/verification.py:normalize_status",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/core/verification.py",
+   "target": "file:scripts/core/state.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/core/verification.py",
+   "target": "file:scripts/core/trace.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/core/execution.py",
+   "target": "file:mcp-server/server.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  }
+ ]
+}

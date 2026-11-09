@@ -1,0 +1,1222 @@
+{
+ "nodes": [
+  {
+   "id": "file:scripts/advanced_geometry.py",
+   "type": "file",
+   "name": "advanced_geometry.py",
+   "filePath": "scripts/advanced_geometry.py",
+   "summary": "Walidacja planów geometrii zaawansowanej i raport preflight przed wykonaniem operacji.",
+   "tags": [
+    "validation",
+    "geometry",
+    "preflight"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/advanced_geometry.py:validate_geometry_plan",
+   "type": "function",
+   "name": "validate_geometry_plan",
+   "filePath": "scripts/advanced_geometry.py",
+   "lineRange": [
+    97,
+    141
+   ],
+   "summary": "Waliduje plan operacji geometrycznych.",
+   "tags": [
+    "validation",
+    "geometry",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/advanced_geometry.py:geometry_preflight",
+   "type": "function",
+   "name": "geometry_preflight",
+   "filePath": "scripts/advanced_geometry.py",
+   "lineRange": [
+    200,
+    224
+   ],
+   "summary": "Wykonuje preflight planu geometrii.",
+   "tags": [
+    "preflight",
+    "geometry",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/advanced_geometry.py:write_preflight_report",
+   "type": "function",
+   "name": "write_preflight_report",
+   "filePath": "scripts/advanced_geometry.py",
+   "lineRange": [
+    227,
+    238
+   ],
+   "summary": "Zapisuje raport preflight z wersjonowaniem.",
+   "tags": [
+    "report",
+    "io",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/advanced_geometry.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "scripts/advanced_geometry.py",
+   "lineRange": [
+    241,
+    249
+   ],
+   "summary": "Punkt wejścia CLI.",
+   "tags": [
+    "entry-point",
+    "cli",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/advanced_geometry_ocp.py",
+   "type": "file",
+   "name": "advanced_geometry_ocp.py",
+   "filePath": "scripts/advanced_geometry_ocp.py",
+   "summary": "Walidacja i budowa loftu w OCP (OpenCascade) z weryfikacją obwiedni, ponownym otwarciem i dowodami kształtu.",
+   "tags": [
+    "ocp",
+    "loft",
+    "geometry",
+    "verification"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/advanced_geometry_ocp.py:validate_ocp_loft_request",
+   "type": "function",
+   "name": "validate_ocp_loft_request",
+   "filePath": "scripts/advanced_geometry_ocp.py",
+   "lineRange": [
+    147,
+    225
+   ],
+   "summary": "Waliduje żądanie loftu OCP.",
+   "tags": [
+    "validation",
+    "ocp",
+    "python"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/advanced_geometry_ocp.py:_make_wire",
+   "type": "function",
+   "name": "_make_wire",
+   "filePath": "scripts/advanced_geometry_ocp.py",
+   "lineRange": [
+    228,
+    260
+   ],
+   "summary": "Tworzy drut z sekcji wielokąta.",
+   "tags": [
+    "ocp",
+    "helper",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/advanced_geometry_ocp.py:build_ocp_loft_shape",
+   "type": "function",
+   "name": "build_ocp_loft_shape",
+   "filePath": "scripts/advanced_geometry_ocp.py",
+   "lineRange": [
+    263,
+    280
+   ],
+   "summary": "Buduje kształt loftu z sekcji.",
+   "tags": [
+    "ocp",
+    "geometry",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/advanced_geometry_ocp.py:_shape_evidence",
+   "type": "function",
+   "name": "_shape_evidence",
+   "filePath": "scripts/advanced_geometry_ocp.py",
+   "lineRange": [
+    328,
+    364
+   ],
+   "summary": "Zbiera dowody geometryczne kształtu.",
+   "tags": [
+    "evidence",
+    "ocp",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/advanced_geometry_ocp.py:_write_shape",
+   "type": "function",
+   "name": "_write_shape",
+   "filePath": "scripts/advanced_geometry_ocp.py",
+   "lineRange": [
+    406,
+    434
+   ],
+   "summary": "Zapisuje kształt do pliku.",
+   "tags": [
+    "io",
+    "ocp",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/advanced_geometry_ocp.py:_reopen_shape",
+   "type": "function",
+   "name": "_reopen_shape",
+   "filePath": "scripts/advanced_geometry_ocp.py",
+   "lineRange": [
+    437,
+    462
+   ],
+   "summary": "Ponownie otwiera zapisany kształt do weryfikacji.",
+   "tags": [
+    "verification",
+    "ocp",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/advanced_geometry_ocp.py:execute_ocp_loft",
+   "type": "function",
+   "name": "execute_ocp_loft",
+   "filePath": "scripts/advanced_geometry_ocp.py",
+   "lineRange": [
+    465,
+    519
+   ],
+   "summary": "Wykonuje loft, zapisuje i weryfikuje wynik.",
+   "tags": [
+    "ocp",
+    "orchestration",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:scripts/advanced_surface_ocp.py",
+   "type": "file",
+   "name": "advanced_surface_ocp.py",
+   "filePath": "scripts/advanced_surface_ocp.py",
+   "summary": "Zaawansowane operacje powierzchniowe w OCP: loft, przeciągnięcie, zszywanie, pogrubianie oraz dowody ciągłości i krzywizny.",
+   "tags": [
+    "ocp",
+    "surface",
+    "geometry",
+    "verification"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/advanced_surface_ocp.py:validate_surface_request",
+   "type": "function",
+   "name": "validate_surface_request",
+   "filePath": "scripts/advanced_surface_ocp.py",
+   "lineRange": [
+    120,
+    177
+   ],
+   "summary": "Waliduje żądanie operacji powierzchniowej.",
+   "tags": [
+    "validation",
+    "surface",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/advanced_surface_ocp.py:collect_surface_continuity_evidence",
+   "type": "function",
+   "name": "collect_surface_continuity_evidence",
+   "filePath": "scripts/advanced_surface_ocp.py",
+   "lineRange": [
+    180,
+    254
+   ],
+   "summary": "Zbiera dowody ciągłości powierzchni.",
+   "tags": [
+    "evidence",
+    "continuity",
+    "python"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/advanced_surface_ocp.py:_sweep",
+   "type": "function",
+   "name": "_sweep",
+   "filePath": "scripts/advanced_surface_ocp.py",
+   "lineRange": [
+    291,
+    327
+   ],
+   "summary": "Wykonuje przeciągnięcie profilu po ścieżce.",
+   "tags": [
+    "ocp",
+    "sweep",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/advanced_surface_ocp.py:collect_curvature_radius_evidence",
+   "type": "function",
+   "name": "collect_curvature_radius_evidence",
+   "filePath": "scripts/advanced_surface_ocp.py",
+   "lineRange": [
+    345,
+    391
+   ],
+   "summary": "Zbiera dowody promienia krzywizny.",
+   "tags": [
+    "evidence",
+    "curvature",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/advanced_surface_ocp.py:_knit",
+   "type": "function",
+   "name": "_knit",
+   "filePath": "scripts/advanced_surface_ocp.py",
+   "lineRange": [
+    394,
+    427
+   ],
+   "summary": "Zszywa powierzchnie w bryłę lub powłokę.",
+   "tags": [
+    "ocp",
+    "knit",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/advanced_surface_ocp.py:_thicken",
+   "type": "function",
+   "name": "_thicken",
+   "filePath": "scripts/advanced_surface_ocp.py",
+   "lineRange": [
+    430,
+    471
+   ],
+   "summary": "Pogrubia powierzchnię do bryły.",
+   "tags": [
+    "ocp",
+    "thicken",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/advanced_surface_ocp.py:_persist_result",
+   "type": "function",
+   "name": "_persist_result",
+   "filePath": "scripts/advanced_surface_ocp.py",
+   "lineRange": [
+    474,
+    515
+   ],
+   "summary": "Zapisuje wynik i metadane.",
+   "tags": [
+    "io",
+    "persistence",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/advanced_surface_ocp.py:execute_advanced_surface",
+   "type": "function",
+   "name": "execute_advanced_surface",
+   "filePath": "scripts/advanced_surface_ocp.py",
+   "lineRange": [
+    518,
+    550
+   ],
+   "summary": "Wykonuje operację powierzchniową i zapisuje wynik.",
+   "tags": [
+    "orchestration",
+    "surface",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:scripts/api_environment.py",
+   "type": "file",
+   "name": "api_environment.py",
+   "filePath": "scripts/api_environment.py",
+   "summary": "Przygotowanie środowiska API: blokada instalacji, instalacja pakietów Pythona i przenośnego 7-Zip.",
+   "tags": [
+    "environment",
+    "setup",
+    "dependencies"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/api_environment.py:_setup_lock",
+   "type": "function",
+   "name": "_setup_lock",
+   "filePath": "scripts/api_environment.py",
+   "lineRange": [
+    36,
+    85
+   ],
+   "summary": "Menedżer kontekstu blokady instalacji.",
+   "tags": [
+    "lock",
+    "concurrency",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/api_environment.py:_run_setup",
+   "type": "function",
+   "name": "_run_setup",
+   "filePath": "scripts/api_environment.py",
+   "lineRange": [
+    88,
+    111
+   ],
+   "summary": "Uruchamia krok instalacji.",
+   "tags": [
+    "setup",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/api_environment.py:ensure_python_packages",
+   "type": "function",
+   "name": "ensure_python_packages",
+   "filePath": "scripts/api_environment.py",
+   "lineRange": [
+    128,
+    163
+   ],
+   "summary": "Zapewnia obecność wymaganych pakietów Pythona.",
+   "tags": [
+    "dependencies",
+    "setup",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/api_environment.py:ensure_sevenzip",
+   "type": "function",
+   "name": "ensure_sevenzip",
+   "filePath": "scripts/api_environment.py",
+   "lineRange": [
+    188,
+    230
+   ],
+   "summary": "Zapewnia dostępność przenośnego 7-Zip.",
+   "tags": [
+    "download",
+    "setup",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:scripts/api_environment.py:SetupCancelled",
+   "type": "class",
+   "name": "SetupCancelled",
+   "filePath": "scripts/api_environment.py",
+   "lineRange": [
+    31,
+    32
+   ],
+   "summary": "Wyjątek sygnalizujący anulowanie instalacji.",
+   "tags": [
+    "exception",
+    "class"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/api_help_restore.py",
+   "type": "file",
+   "name": "api_help_restore.py",
+   "filePath": "scripts/api_help_restore.py",
+   "summary": "Odtwarza lokalną pomoc API SolidWorks z instalatora MSI z weryfikacją podpisu i skrótu.",
+   "tags": [
+    "help",
+    "msi",
+    "security",
+    "restore"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/api_help_restore.py:_registered_source",
+   "type": "function",
+   "name": "_registered_source",
+   "filePath": "scripts/api_help_restore.py",
+   "lineRange": [
+    16,
+    62
+   ],
+   "summary": "Znajduje zarejestrowane źródło instalatora.",
+   "tags": [
+    "registry",
+    "discovery",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/api_help_restore.py:_signed_by_solidworks",
+   "type": "function",
+   "name": "_signed_by_solidworks",
+   "filePath": "scripts/api_help_restore.py",
+   "lineRange": [
+    65,
+    78
+   ],
+   "summary": "Sprawdza podpis cyfrowy SolidWorks.",
+   "tags": [
+    "security",
+    "signature",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/api_help_restore.py:_msi_rows",
+   "type": "function",
+   "name": "_msi_rows",
+   "filePath": "scripts/api_help_restore.py",
+   "lineRange": [
+    81,
+    110
+   ],
+   "summary": "Odczytuje wiersze tabel MSI.",
+   "tags": [
+    "msi",
+    "parsing",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/api_help_restore.py:_extract_bounded",
+   "type": "function",
+   "name": "_extract_bounded",
+   "filePath": "scripts/api_help_restore.py",
+   "lineRange": [
+    139,
+    166
+   ],
+   "summary": "Bezpiecznie wypakowuje ograniczony zakres plików.",
+   "tags": [
+    "extraction",
+    "security",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/api_help_restore.py:restore_local_help",
+   "type": "function",
+   "name": "restore_local_help",
+   "filePath": "scripts/api_help_restore.py",
+   "lineRange": [
+    180,
+    237
+   ],
+   "summary": "Odtwarza lokalną pomoc API z zarejestrowanego źródła.",
+   "tags": [
+    "restore",
+    "orchestration",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:scripts/api_intent.py",
+   "type": "file",
+   "name": "api_intent.py",
+   "filePath": "scripts/api_intent.py",
+   "summary": "Mapuje zapytania w języku naturalnym i zadania na kandydatów API oraz lata wersji.",
+   "tags": [
+    "api",
+    "intent",
+    "nlp",
+    "routing"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/api_intent.py:natural_language_candidates",
+   "type": "function",
+   "name": "natural_language_candidates",
+   "filePath": "scripts/api_intent.py",
+   "lineRange": [
+    28,
+    39
+   ],
+   "summary": "Zwraca kandydatów API dla opisu w języku naturalnym.",
+   "tags": [
+    "nlp",
+    "candidates",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/api_intent.py:task_candidates",
+   "type": "function",
+   "name": "task_candidates",
+   "filePath": "scripts/api_intent.py",
+   "lineRange": [
+    42,
+    57
+   ],
+   "summary": "Zwraca kandydatów API dla zadania.",
+   "tags": [
+    "candidates",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/api_intent.py:task_years",
+   "type": "function",
+   "name": "task_years",
+   "filePath": "scripts/api_intent.py",
+   "lineRange": [
+    60,
+    62
+   ],
+   "summary": "Zwraca lata wersji dla zadania.",
+   "tags": [
+    "versioning",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/backend_router.py",
+   "type": "file",
+   "name": "backend_router.py",
+   "filePath": "scripts/backend_router.py",
+   "summary": "CLI raportujące wybór backendu dla operacji na podstawie manifestu możliwości.",
+   "tags": [
+    "routing",
+    "backend",
+    "cli"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/backend_router.py:build_parser",
+   "type": "function",
+   "name": "build_parser",
+   "filePath": "scripts/backend_router.py",
+   "lineRange": [
+    25,
+    35
+   ],
+   "summary": "Buduje parser argumentów CLI.",
+   "tags": [
+    "cli",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/backend_router.py:route_report",
+   "type": "function",
+   "name": "route_report",
+   "filePath": "scripts/backend_router.py",
+   "lineRange": [
+    38,
+    69
+   ],
+   "summary": "Buduje raport routingu operacji do backendu.",
+   "tags": [
+    "routing",
+    "report",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/backend_router.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "scripts/backend_router.py",
+   "lineRange": [
+    72,
+    77
+   ],
+   "summary": "Punkt wejścia CLI.",
+   "tags": [
+    "entry-point",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/build_from_spec.py",
+   "type": "file",
+   "name": "build_from_spec.py",
+   "filePath": "scripts/build_from_spec.py",
+   "summary": "Buduje część SolidWorks ze specyfikacji: baza, rozwinięcie wzorów otworów, walidacja otworów i tworzenie cech.",
+   "tags": [
+    "spec",
+    "part-modeling",
+    "holes",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/build_from_spec.py:expand_hole_patterns",
+   "type": "function",
+   "name": "expand_hole_patterns",
+   "filePath": "scripts/build_from_spec.py",
+   "lineRange": [
+    79,
+    138
+   ],
+   "summary": "Rozwija wzory otworów do pojedynczych pozycji.",
+   "tags": [
+    "holes",
+    "patterns",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/build_from_spec.py:_create_base",
+   "type": "function",
+   "name": "_create_base",
+   "filePath": "scripts/build_from_spec.py",
+   "lineRange": [
+    141,
+    170
+   ],
+   "summary": "Tworzy bazową bryłę.",
+   "tags": [
+    "feature",
+    "helper",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/build_from_spec.py:validate_holes_inside_base",
+   "type": "function",
+   "name": "validate_holes_inside_base",
+   "filePath": "scripts/build_from_spec.py",
+   "lineRange": [
+    173,
+    203
+   ],
+   "summary": "Sprawdza, czy otwory mieszczą się w bazie.",
+   "tags": [
+    "validation",
+    "holes",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/build_from_spec.py:_create_hole",
+   "type": "function",
+   "name": "_create_hole",
+   "filePath": "scripts/build_from_spec.py",
+   "lineRange": [
+    214,
+    261
+   ],
+   "summary": "Tworzy otwór.",
+   "tags": [
+    "feature",
+    "holes",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/build_from_spec.py:build_from_spec",
+   "type": "function",
+   "name": "build_from_spec",
+   "filePath": "scripts/build_from_spec.py",
+   "lineRange": [
+    264,
+    472
+   ],
+   "summary": "Buduje model z pełnej specyfikacji.",
+   "tags": [
+    "orchestration",
+    "spec",
+    "python"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:scripts/build_skill_release.py",
+   "type": "file",
+   "name": "build_skill_release.py",
+   "filePath": "scripts/build_skill_release.py",
+   "summary": "Buduje i weryfikuje archiwum wydania skilla oraz instalacje desktopowe i zainstalowane.",
+   "tags": [
+    "release",
+    "packaging",
+    "verification",
+    "cli"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/build_skill_release.py:release_version",
+   "type": "function",
+   "name": "release_version",
+   "filePath": "scripts/build_skill_release.py",
+   "lineRange": [
+    22,
+    28
+   ],
+   "summary": "Odczytuje wersję wydania.",
+   "tags": [
+    "versioning",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/build_skill_release.py:build_skill_archive",
+   "type": "function",
+   "name": "build_skill_archive",
+   "filePath": "scripts/build_skill_release.py",
+   "lineRange": [
+    42,
+    70
+   ],
+   "summary": "Buduje archiwum skilla.",
+   "tags": [
+    "packaging",
+    "release",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/build_skill_release.py:verify_skill_archive",
+   "type": "function",
+   "name": "verify_skill_archive",
+   "filePath": "scripts/build_skill_release.py",
+   "lineRange": [
+    73,
+    97
+   ],
+   "summary": "Weryfikuje zawartość archiwum.",
+   "tags": [
+    "verification",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/build_skill_release.py:verify_desktop_skill",
+   "type": "function",
+   "name": "verify_desktop_skill",
+   "filePath": "scripts/build_skill_release.py",
+   "lineRange": [
+    100,
+    119
+   ],
+   "summary": "Weryfikuje skill w wersji desktopowej.",
+   "tags": [
+    "verification",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/build_skill_release.py:verify_installed_skill",
+   "type": "function",
+   "name": "verify_installed_skill",
+   "filePath": "scripts/build_skill_release.py",
+   "lineRange": [
+    122,
+    136
+   ],
+   "summary": "Weryfikuje zainstalowany skill.",
+   "tags": [
+    "verification",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/build_skill_release.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "scripts/build_skill_release.py",
+   "lineRange": [
+    139,
+    160
+   ],
+   "summary": "Punkt wejścia CLI.",
+   "tags": [
+    "entry-point",
+    "python"
+   ],
+   "complexity": "moderate"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:scripts/advanced_geometry.py",
+   "target": "function:scripts/advanced_geometry.py:validate_geometry_plan",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/advanced_geometry.py",
+   "target": "function:scripts/advanced_geometry.py:geometry_preflight",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/advanced_geometry.py",
+   "target": "function:scripts/advanced_geometry.py:write_preflight_report",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/advanced_geometry.py",
+   "target": "function:scripts/advanced_geometry.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/advanced_geometry_ocp.py",
+   "target": "function:scripts/advanced_geometry_ocp.py:validate_ocp_loft_request",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/advanced_geometry_ocp.py",
+   "target": "function:scripts/advanced_geometry_ocp.py:_make_wire",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/advanced_geometry_ocp.py",
+   "target": "function:scripts/advanced_geometry_ocp.py:build_ocp_loft_shape",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/advanced_geometry_ocp.py",
+   "target": "function:scripts/advanced_geometry_ocp.py:_shape_evidence",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/advanced_geometry_ocp.py",
+   "target": "function:scripts/advanced_geometry_ocp.py:_write_shape",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/advanced_geometry_ocp.py",
+   "target": "function:scripts/advanced_geometry_ocp.py:_reopen_shape",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/advanced_geometry_ocp.py",
+   "target": "function:scripts/advanced_geometry_ocp.py:execute_ocp_loft",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/advanced_surface_ocp.py",
+   "target": "function:scripts/advanced_surface_ocp.py:validate_surface_request",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/advanced_surface_ocp.py",
+   "target": "function:scripts/advanced_surface_ocp.py:collect_surface_continuity_evidence",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/advanced_surface_ocp.py",
+   "target": "function:scripts/advanced_surface_ocp.py:_sweep",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/advanced_surface_ocp.py",
+   "target": "function:scripts/advanced_surface_ocp.py:collect_curvature_radius_evidence",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/advanced_surface_ocp.py",
+   "target": "function:scripts/advanced_surface_ocp.py:_knit",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/advanced_surface_ocp.py",
+   "target": "function:scripts/advanced_surface_ocp.py:_thicken",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/advanced_surface_ocp.py",
+   "target": "function:scripts/advanced_surface_ocp.py:_persist_result",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/advanced_surface_ocp.py",
+   "target": "function:scripts/advanced_surface_ocp.py:execute_advanced_surface",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/api_environment.py",
+   "target": "function:scripts/api_environment.py:_setup_lock",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/api_environment.py",
+   "target": "function:scripts/api_environment.py:_run_setup",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/api_environment.py",
+   "target": "function:scripts/api_environment.py:ensure_python_packages",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/api_environment.py",
+   "target": "function:scripts/api_environment.py:ensure_sevenzip",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/api_environment.py",
+   "target": "class:scripts/api_environment.py:SetupCancelled",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/api_help_restore.py",
+   "target": "function:scripts/api_help_restore.py:_registered_source",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/api_help_restore.py",
+   "target": "function:scripts/api_help_restore.py:_signed_by_solidworks",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/api_help_restore.py",
+   "target": "function:scripts/api_help_restore.py:_msi_rows",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/api_help_restore.py",
+   "target": "function:scripts/api_help_restore.py:_extract_bounded",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/api_help_restore.py",
+   "target": "function:scripts/api_help_restore.py:restore_local_help",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/api_intent.py",
+   "target": "function:scripts/api_intent.py:natural_language_candidates",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/api_intent.py",
+   "target": "function:scripts/api_intent.py:task_candidates",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/api_intent.py",
+   "target": "function:scripts/api_intent.py:task_years",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/backend_router.py",
+   "target": "function:scripts/backend_router.py:build_parser",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/backend_router.py",
+   "target": "function:scripts/backend_router.py:route_report",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/backend_router.py",
+   "target": "function:scripts/backend_router.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/build_from_spec.py",
+   "target": "function:scripts/build_from_spec.py:expand_hole_patterns",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/build_from_spec.py",
+   "target": "function:scripts/build_from_spec.py:_create_base",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/build_from_spec.py",
+   "target": "function:scripts/build_from_spec.py:validate_holes_inside_base",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/build_from_spec.py",
+   "target": "function:scripts/build_from_spec.py:_create_hole",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/build_from_spec.py",
+   "target": "function:scripts/build_from_spec.py:build_from_spec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/build_skill_release.py",
+   "target": "function:scripts/build_skill_release.py:release_version",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/build_skill_release.py",
+   "target": "function:scripts/build_skill_release.py:build_skill_archive",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/build_skill_release.py",
+   "target": "function:scripts/build_skill_release.py:verify_skill_archive",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/build_skill_release.py",
+   "target": "function:scripts/build_skill_release.py:verify_desktop_skill",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/build_skill_release.py",
+   "target": "function:scripts/build_skill_release.py:verify_installed_skill",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/build_skill_release.py",
+   "target": "function:scripts/build_skill_release.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  }
+ ]
+}

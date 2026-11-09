@@ -1,0 +1,730 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 6,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 6
+    }
+  },
+  "results": [
+    {
+      "path": "docs/architecture/evidence/governance-ruleset-attestation.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 88,
+      "nonEmptyLines": 88,
+      "sections": [
+        {
+          "heading": "schema",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "repository",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "ruleset",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "policy_digest_sha256",
+          "level": 1,
+          "line": 64
+        },
+        {
+          "heading": "snapshot_digest_sha256",
+          "level": 1,
+          "line": 65
+        },
+        {
+          "heading": "compliant",
+          "level": 1,
+          "line": 66
+        },
+        {
+          "heading": "noncompliance_reasons",
+          "level": 1,
+          "line": 67
+        },
+        {
+          "heading": "governance",
+          "level": 1,
+          "line": 70
+        },
+        {
+          "heading": "captured_at",
+          "level": 1,
+          "line": 76
+        },
+        {
+          "heading": "expires_at",
+          "level": 1,
+          "line": 77
+        },
+        {
+          "heading": "generator",
+          "level": 1,
+          "line": 78
+        },
+        {
+          "heading": "signer",
+          "level": 1,
+          "line": 82
+        },
+        {
+          "heading": "signature",
+          "level": 1,
+          "line": 87
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/p0-11-real-golden-2026-10-23.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 192,
+      "nonEmptyLines": 192,
+      "sections": [
+        {
+          "heading": "date",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "phase",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "branch",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "base_sha",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "phase_start_sha",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "task_status",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "acceptance_status",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "real_command_exit_code",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "strict_control_acceptance",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "metrics",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "runs",
+          "level": 1,
+          "line": 20
+        },
+        {
+          "heading": "verified_sha256_total",
+          "level": 1,
+          "line": 177
+        },
+        {
+          "heading": "offline",
+          "level": 1,
+          "line": 178
+        },
+        {
+          "heading": "core_scope",
+          "level": 1,
+          "line": 27
+        },
+        {
+          "heading": "unverified",
+          "level": 1,
+          "line": 186
+        },
+        {
+          "heading": "pr",
+          "level": 1,
+          "line": 191
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 16
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/p0-12-real-golden-2026-10-23.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 339,
+      "nonEmptyLines": 339,
+      "sections": [
+        {
+          "heading": "date",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "phase",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "branch",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "base_sha",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "phase_start_sha",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "real_source_sha",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "readiness",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "recommend_merge",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "task_status",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "acceptance_status",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "manual_review_required",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "backend",
+          "level": 1,
+          "line": 13
+        },
+        {
+          "heading": "mock",
+          "level": 1,
+          "line": 14
+        },
+        {
+          "heading": "real_command_exit_code",
+          "level": 1,
+          "line": 15
+        },
+        {
+          "heading": "strict_control_acceptance",
+          "level": 1,
+          "line": 16
+        },
+        {
+          "heading": "metrics",
+          "level": 1,
+          "line": 17
+        },
+        {
+          "heading": "runs",
+          "level": 1,
+          "line": 26
+        },
+        {
+          "heading": "verified_sha256_total",
+          "level": 1,
+          "line": 253
+        },
+        {
+          "heading": "offline",
+          "level": 1,
+          "line": 254
+        },
+        {
+          "heading": "core_scope",
+          "level": 1,
+          "line": 35
+        },
+        {
+          "heading": "github_settings_audit",
+          "level": 1,
+          "line": 264
+        },
+        {
+          "heading": "failures_and_fixes",
+          "level": 1,
+          "line": 299
+        },
+        {
+          "heading": "real_failed_runs",
+          "level": 1,
+          "line": 321
+        },
+        {
+          "heading": "manual_configuration_required",
+          "level": 1,
+          "line": 322
+        },
+        {
+          "heading": "unverified",
+          "level": 1,
+          "line": 330
+        },
+        {
+          "heading": "pr",
+          "level": 1,
+          "line": 338
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 26
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/p0-2-1-real-gripper-travel-2026-10-27.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 8576,
+      "nonEmptyLines": 8576,
+      "sections": [
+        {
+          "heading": "phase",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "date",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "branch",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "base_sha",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "base_branch",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "parent_pr",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "real_source_sha",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "task_status",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "acceptance_status",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "manual_review_required",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "core_scope",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "metrics",
+          "level": 1,
+          "line": 13
+        },
+        {
+          "heading": "runs",
+          "level": 1,
+          "line": 20
+        },
+        {
+          "heading": "history",
+          "level": 1,
+          "line": 3502
+        },
+        {
+          "heading": "final_process_audit",
+          "level": 1,
+          "line": 3644
+        },
+        {
+          "heading": "case_mode",
+          "level": 1,
+          "line": 3700
+        },
+        {
+          "heading": "free_drag_verified",
+          "level": 1,
+          "line": 3701
+        },
+        {
+          "heading": "continuous_sweep_verified",
+          "level": 1,
+          "line": 3702
+        },
+        {
+          "heading": "synchronization_verified",
+          "level": 1,
+          "line": 3703
+        },
+        {
+          "heading": "interruption_context",
+          "level": 1,
+          "line": 3704
+        },
+        {
+          "heading": "incomplete_attempt_context",
+          "level": 1,
+          "line": 3713
+        },
+        {
+          "heading": "native_diagnostics",
+          "level": 1,
+          "line": 3732
+        },
+        {
+          "heading": "diagnostic_exit_code_scope",
+          "level": 1,
+          "line": 7779
+        },
+        {
+          "heading": "offline",
+          "level": 1,
+          "line": 7797
+        },
+        {
+          "heading": "tolerance_proposal",
+          "level": 1,
+          "line": 7806
+        },
+        {
+          "heading": "mate_contract",
+          "level": 1,
+          "line": 7842
+        },
+        {
+          "heading": "post_implementation_review",
+          "level": 1,
+          "line": 8496
+        },
+        {
+          "heading": "remote_cad_ci_executed",
+          "level": 1,
+          "line": 8558
+        },
+        {
+          "heading": "github_safety_settings_changed",
+          "level": 1,
+          "line": 8559
+        },
+        {
+          "heading": "manufacturing_release",
+          "level": 1,
+          "line": 68
+        },
+        {
+          "heading": "unverified",
+          "level": 1,
+          "line": 8561
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 31
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/p0-2-real-gripper-2026-10-26.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 710,
+      "nonEmptyLines": 710,
+      "sections": [
+        {
+          "heading": "phase",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "date",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "branch",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "stacked_base_branch",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "stacked_base_sha",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "real_source_sha",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "parent_pr",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "task_status",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "acceptance_status",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "manual_review_required",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "core_scope",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "remote_cad_ci_executed",
+          "level": 1,
+          "line": 13
+        },
+        {
+          "heading": "github_settings_changed",
+          "level": 1,
+          "line": 14
+        },
+        {
+          "heading": "manual_preview_review",
+          "level": 1,
+          "line": 15
+        },
+        {
+          "heading": "metrics",
+          "level": 1,
+          "line": 31
+        },
+        {
+          "heading": "runs",
+          "level": 1,
+          "line": 16
+        },
+        {
+          "heading": "mate_contract",
+          "level": 1,
+          "line": 397
+        },
+        {
+          "heading": "verified_sha256_total",
+          "level": 1,
+          "line": 637
+        },
+        {
+          "heading": "strict_completed_control",
+          "level": 1,
+          "line": 638
+        },
+        {
+          "heading": "offline",
+          "level": 1,
+          "line": 639
+        },
+        {
+          "heading": "failures_and_fixes",
+          "level": 1,
+          "line": 648
+        },
+        {
+          "heading": "unverified",
+          "level": 1,
+          "line": 693
+        },
+        {
+          "heading": "p0_2_1_suggestions",
+          "level": 1,
+          "line": 704
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 23
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/p0-real-golden-2026-10-23.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 212,
+      "nonEmptyLines": 212,
+      "sections": [
+        {
+          "heading": "date",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "base_sha",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "branch",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "status",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "completed_runs",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "geometry_delivery_passed_runs",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "blocked_runs",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "blocking_reason",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "offline",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "runs",
+          "level": 1,
+          "line": 24
+        },
+        {
+          "heading": "verified_sha256_total",
+          "level": 1,
+          "line": 201
+        },
+        {
+          "heading": "failures_preserved",
+          "level": 1,
+          "line": 202
+        },
+        {
+          "heading": "unverified",
+          "level": 1,
+          "line": 206
+        },
+        {
+          "heading": "pr",
+          "level": 1,
+          "line": 211
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 14
+      }
+    }
+  ]
+}

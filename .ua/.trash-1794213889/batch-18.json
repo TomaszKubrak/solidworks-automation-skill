@@ -1,0 +1,153 @@
+{
+ "nodes": [
+  {
+   "id": "document:docs/architecture/evidence/p0-2-1-2026-10-27/README.md",
+   "type": "document",
+   "name": "README.md",
+   "filePath": "docs/architecture/evidence/p0-2-1-2026-10-27/README.md",
+   "summary": "Indeks publicznych dowodów odbioru P0-2.1 (2026-10-27): tabela plików, instrukcja weryfikacji hashy SHA-256, wyniki przeglądu prywatności i znane ograniczenia (m.in. brak archiwum surowych dowodów w repozytorium).",
+   "tags": [
+    "documentation",
+    "evidence",
+    "privacy-review",
+    "verification"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "config:docs/architecture/evidence/p0-2-1-2026-10-27/manifest.json",
+   "type": "config",
+   "name": "manifest.json",
+   "filePath": "docs/architecture/evidence/p0-2-1-2026-10-27/manifest.json",
+   "summary": "Manifest publicznych dowodów: hashe oryginalne i opublikowane, wynik przeglądu prywatności, mapowanie redakcji ścieżek oraz dane o archiwum, którego nie ma w repozytorium.",
+   "tags": [
+    "configuration",
+    "manifest",
+    "evidence",
+    "privacy-review"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "config:docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-evidence-sha256.json",
+   "type": "config",
+   "name": "p0-2-1-evidence-sha256.json",
+   "filePath": "docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-evidence-sha256.json",
+   "summary": "Lista 548 pozycji z rozmiarem i SHA-256 każdego pliku pakietu dowodowego P0-2.1 (ścieżki względne).",
+   "tags": [
+    "data",
+    "checksums",
+    "evidence",
+    "integrity"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "config:docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-independent-seal-verification.json",
+   "type": "config",
+   "name": "p0-2-1-independent-seal-verification.json",
+   "filePath": "docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-independent-seal-verification.json",
+   "summary": "Wynik niezależnej weryfikacji pieczęci archiwum: hash całości, 549 członków, porównanie bajt po bajcie, ponowna kontrola 5 przebiegów, 45 stanów i 20 kontroli przekroczenia skoku.",
+   "tags": [
+    "configuration",
+    "verification",
+    "evidence",
+    "integrity"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-work-state.json",
+   "type": "config",
+   "name": "p0-2-1-work-state.json",
+   "filePath": "docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-work-state.json",
+   "summary": "Historyczny snapshot stanu fazy P0-2.1: gałąź, SHA zamrożonych źródeł, zestaw formalny, zadania oczekujące i status zablokowany mimo zaliczonego odbioru.",
+   "tags": [
+    "configuration",
+    "work-state",
+    "evidence",
+    "history"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:docs/architecture/evidence/p0-2-1-2026-10-27/suite-summary.redacted.json",
+   "type": "config",
+   "name": "suite-summary.redacted.json",
+   "filePath": "docs/architecture/evidence/p0-2-1-2026-10-27/suite-summary.redacted.json",
+   "summary": "Zredagowane podsumowanie pięciu przebiegów na prawdziwym SolidWorks 2026 z kontrolami zestawu i wynikami poszczególnych przebiegów (ścieżki lokalne zastąpione przez <repo>).",
+   "tags": [
+    "configuration",
+    "test-results",
+    "evidence",
+    "redacted"
+   ],
+   "complexity": "complex"
+  }
+ ],
+ "edges": [
+  {
+   "source": "document:docs/architecture/evidence/p0-2-1-2026-10-27/README.md",
+   "target": "config:docs/architecture/evidence/p0-2-1-2026-10-27/manifest.json",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:docs/architecture/evidence/p0-2-1-2026-10-27/README.md",
+   "target": "config:docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-evidence-sha256.json",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:docs/architecture/evidence/p0-2-1-2026-10-27/README.md",
+   "target": "config:docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-independent-seal-verification.json",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:docs/architecture/evidence/p0-2-1-2026-10-27/README.md",
+   "target": "config:docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-work-state.json",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:docs/architecture/evidence/p0-2-1-2026-10-27/README.md",
+   "target": "config:docs/architecture/evidence/p0-2-1-2026-10-27/suite-summary.redacted.json",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:docs/architecture/evidence/p0-2-1-2026-10-27/manifest.json",
+   "target": "config:docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-evidence-sha256.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:docs/architecture/evidence/p0-2-1-2026-10-27/manifest.json",
+   "target": "config:docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-independent-seal-verification.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:docs/architecture/evidence/p0-2-1-2026-10-27/manifest.json",
+   "target": "config:docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-work-state.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:docs/architecture/evidence/p0-2-1-2026-10-27/manifest.json",
+   "target": "config:docs/architecture/evidence/p0-2-1-2026-10-27/suite-summary.redacted.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  }
+ ]
+}

@@ -1,0 +1,408 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 6,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 6
+    }
+  },
+  "results": [
+    {
+      "path": "docs/architecture/evidence/p0-2-1-2026-10-27/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 75,
+      "nonEmptyLines": 60,
+      "sections": [
+        {
+          "heading": "P0-2.1 公开证据索引（2026-10-27）",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "文件",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "如何复核",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "隐私审查结论",
+          "level": 2,
+          "line": 43
+        },
+        {
+          "heading": "已知限制（不得忽略）",
+          "level": 2,
+          "line": 56
+        },
+        {
+          "heading": "其他证据文件的处理",
+          "level": 2,
+          "line": 70
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/p0-2-1-2026-10-27/manifest.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 77,
+      "nonEmptyLines": 77,
+      "sections": [
+        {
+          "heading": "schema",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "phase",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "branch",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "frozen_source_sha",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "generated_at",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "privacy_review",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "external_reproducibility",
+          "level": 1,
+          "line": 33
+        },
+        {
+          "heading": "files",
+          "level": 1,
+          "line": 41
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-evidence-sha256.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 2742,
+      "nonEmptyLines": 2742,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 0
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-independent-seal-verification.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 18,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "status",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "archive_sha256",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "archive_size_bytes",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "zip_members",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "byte_for_byte_disk_archive_match",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "rechecked_runs",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "rechecked_static_states",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "rechecked_physical_overtravel_controls",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "metrics",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "solidworks_processes_after",
+          "level": 1,
+          "line": 17
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-work-state.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 38,
+      "nonEmptyLines": 38,
+      "sections": [
+        {
+          "heading": "phase",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "branch",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "base_sha",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "frozen_source_sha",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "formal_suite",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "exec_session_id",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "state",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "offline_final",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "diagnostic",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "mode",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "pending",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "history_context",
+          "level": 1,
+          "line": 17
+        },
+        {
+          "heading": "draft_pr",
+          "level": 1,
+          "line": 18
+        },
+        {
+          "heading": "accepted_current_suite_runs",
+          "level": 1,
+          "line": 19
+        },
+        {
+          "heading": "current_run",
+          "level": 1,
+          "line": 26
+        },
+        {
+          "heading": "archive_target",
+          "level": 1,
+          "line": 27
+        },
+        {
+          "heading": "index_target",
+          "level": 1,
+          "line": 28
+        },
+        {
+          "heading": "native_volume_mm3",
+          "level": 1,
+          "line": 29
+        },
+        {
+          "heading": "implementation_delivery",
+          "level": 1,
+          "line": 30
+        },
+        {
+          "heading": "task_status",
+          "level": 1,
+          "line": 31
+        },
+        {
+          "heading": "acceptance_status",
+          "level": 1,
+          "line": 32
+        },
+        {
+          "heading": "manual_review_required",
+          "level": 1,
+          "line": 33
+        },
+        {
+          "heading": "final_commit_sha",
+          "level": 1,
+          "line": 34
+        },
+        {
+          "heading": "archive_sha256",
+          "level": 1,
+          "line": 35
+        },
+        {
+          "heading": "archive_zip_members",
+          "level": 1,
+          "line": 36
+        },
+        {
+          "heading": "verified_native_hashes",
+          "level": 1,
+          "line": 37
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 26
+      }
+    },
+    {
+      "path": "docs/architecture/evidence/p0-2-1-2026-10-27/suite-summary.redacted.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 223,
+      "nonEmptyLines": 223,
+      "sections": [
+        {
+          "heading": "case_id",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "backend",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "mock",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "task_status",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "acceptance_status",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "expected_terminal",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "suite_checks",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "runs",
+          "level": 1,
+          "line": 14
+        },
+        {
+          "heading": "metrics",
+          "level": 1,
+          "line": 216
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    }
+  ]
+}

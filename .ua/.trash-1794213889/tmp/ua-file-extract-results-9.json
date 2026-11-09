@@ -1,0 +1,2671 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 4,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 4,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "subskills/autocad-automation/scripts/acad_draw.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 150,
+      "nonEmptyLines": 128,
+      "functions": [
+        {
+          "name": "load_brief",
+          "startLine": 16,
+          "endLine": 22,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "draw_entity",
+          "startLine": 25,
+          "endLine": 67,
+          "params": [
+            "session",
+            "entity"
+          ]
+        },
+        {
+          "name": "_is_live_enabled",
+          "startLine": 70,
+          "endLine": 74,
+          "params": [
+            "brief",
+            "fast_mode"
+          ]
+        },
+        {
+          "name": "run",
+          "startLine": 77,
+          "endLine": 129,
+          "params": [
+            "brief",
+            "output",
+            "new_document",
+            "source",
+            "fast_mode",
+            "step_delay_s"
+          ]
+        },
+        {
+          "name": "main",
+          "startLine": 132,
+          "endLine": 146,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "load_brief",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "draw_entity",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "_is_live_enabled",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "run",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 132,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "load_brief",
+          "callee": "open",
+          "lineNumber": 18
+        },
+        {
+          "caller": "load_brief",
+          "callee": "json.load",
+          "lineNumber": 19
+        },
+        {
+          "caller": "load_brief",
+          "callee": "isinstance",
+          "lineNumber": 20
+        },
+        {
+          "caller": "load_brief",
+          "callee": "ValueError",
+          "lineNumber": 21
+        },
+        {
+          "caller": "draw_entity",
+          "callee": "str(entity.get(\"type\", \"\")).lower",
+          "lineNumber": 27
+        },
+        {
+          "caller": "draw_entity",
+          "callee": "str",
+          "lineNumber": 27
+        },
+        {
+          "caller": "draw_entity",
+          "callee": "entity.get",
+          "lineNumber": 27
+        },
+        {
+          "caller": "draw_entity",
+          "callee": "entity.get",
+          "lineNumber": 28
+        },
+        {
+          "caller": "draw_entity",
+          "callee": "entity.get",
+          "lineNumber": 29
+        },
+        {
+          "caller": "draw_entity",
+          "callee": "session.add_line",
+          "lineNumber": 32
+        },
+        {
+          "caller": "draw_entity",
+          "callee": "session.add_circle",
+          "lineNumber": 34
+        },
+        {
+          "caller": "draw_entity",
+          "callee": "session.add_lwpolyline",
+          "lineNumber": 36
+        },
+        {
+          "caller": "draw_entity",
+          "callee": "bool",
+          "lineNumber": 38
+        },
+        {
+          "caller": "draw_entity",
+          "callee": "entity.get",
+          "lineNumber": 38
+        },
+        {
+          "caller": "draw_entity",
+          "callee": "session.add_rectangle",
+          "lineNumber": 43
+        },
+        {
+          "caller": "draw_entity",
+          "callee": "session.add_text",
+          "lineNumber": 51
+        },
+        {
+          "caller": "draw_entity",
+          "callee": "entity.get",
+          "lineNumber": 54
+        },
+        {
+          "caller": "draw_entity",
+          "callee": "session.add_mtext",
+          "lineNumber": 59
+        },
+        {
+          "caller": "draw_entity",
+          "callee": "entity.get",
+          "lineNumber": 62
+        },
+        {
+          "caller": "draw_entity",
+          "callee": "ValueError",
+          "lineNumber": 67
+        },
+        {
+          "caller": "_is_live_enabled",
+          "callee": "bool",
+          "lineNumber": 74
+        },
+        {
+          "caller": "_is_live_enabled",
+          "callee": "brief.get",
+          "lineNumber": 74
+        },
+        {
+          "caller": "run",
+          "callee": "AutoCADSession(create_if_missing=True, visible=True).connect",
+          "lineNumber": 86
+        },
+        {
+          "caller": "run",
+          "callee": "AutoCADSession",
+          "lineNumber": 86
+        },
+        {
+          "caller": "run",
+          "callee": "_is_live_enabled",
+          "lineNumber": 87
+        },
+        {
+          "caller": "run",
+          "callee": "max",
+          "lineNumber": 88
+        },
+        {
+          "caller": "run",
+          "callee": "int",
+          "lineNumber": 88
+        },
+        {
+          "caller": "run",
+          "callee": "brief.get",
+          "lineNumber": 88
+        },
+        {
+          "caller": "run",
+          "callee": "session.open_document",
+          "lineNumber": 90
+        },
+        {
+          "caller": "run",
+          "callee": "session.new_document",
+          "lineNumber": 92
+        },
+        {
+          "caller": "run",
+          "callee": "brief.get",
+          "lineNumber": 92
+        },
+        {
+          "caller": "run",
+          "callee": "session.live_update",
+          "lineNumber": 94
+        },
+        {
+          "caller": "run",
+          "callee": "brief.get",
+          "lineNumber": 96
+        },
+        {
+          "caller": "run",
+          "callee": "session.create_layer",
+          "lineNumber": 97
+        },
+        {
+          "caller": "run",
+          "callee": "str",
+          "lineNumber": 98
+        },
+        {
+          "caller": "run",
+          "callee": "layer.get",
+          "lineNumber": 99
+        },
+        {
+          "caller": "run",
+          "callee": "layer.get",
+          "lineNumber": 100
+        },
+        {
+          "caller": "run",
+          "callee": "session.live_update",
+          "lineNumber": 103
+        },
+        {
+          "caller": "run",
+          "callee": "brief.get",
+          "lineNumber": 105
+        },
+        {
+          "caller": "run",
+          "callee": "enumerate",
+          "lineNumber": 106
+        },
+        {
+          "caller": "run",
+          "callee": "draw_entity",
+          "lineNumber": 107
+        },
+        {
+          "caller": "run",
+          "callee": "session.live_update",
+          "lineNumber": 109
+        },
+        {
+          "caller": "run",
+          "callee": "len",
+          "lineNumber": 111
+        },
+        {
+          "caller": "run",
+          "callee": "session.regen",
+          "lineNumber": 114
+        },
+        {
+          "caller": "run",
+          "callee": "session.zoom_extents",
+          "lineNumber": 115
+        },
+        {
+          "caller": "run",
+          "callee": "brief.get",
+          "lineNumber": 118
+        },
+        {
+          "caller": "run",
+          "callee": "str",
+          "lineNumber": 120
+        },
+        {
+          "caller": "run",
+          "callee": "session.save_as",
+          "lineNumber": 120
+        },
+        {
+          "caller": "run",
+          "callee": "brief.get",
+          "lineNumber": 124
+        },
+        {
+          "caller": "run",
+          "callee": "len",
+          "lineNumber": 125
+        },
+        {
+          "caller": "main",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 134
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 135
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 136
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 137
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 138
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 139
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 140
+        },
+        {
+          "caller": "main",
+          "callee": "parser.parse_args",
+          "lineNumber": 141
+        },
+        {
+          "caller": "main",
+          "callee": "load_brief",
+          "lineNumber": 143
+        },
+        {
+          "caller": "main",
+          "callee": "run",
+          "lineNumber": 144
+        },
+        {
+          "caller": "main",
+          "callee": "max",
+          "lineNumber": 144
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 145
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 145
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "subskills/autocad-automation/scripts/acad_preview.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 115,
+      "nonEmptyLines": 99,
+      "functions": [
+        {
+          "name": "convert_bmp_to_png",
+          "startLine": 17,
+          "endLine": 75,
+          "params": [
+            "bmp_path",
+            "png_path"
+          ]
+        },
+        {
+          "name": "main",
+          "startLine": 78,
+          "endLine": 111,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "convert_bmp_to_png",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 78,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "convert_bmp_to_png",
+          "callee": "str(bmp_path).replace",
+          "lineNumber": 29
+        },
+        {
+          "caller": "convert_bmp_to_png",
+          "callee": "str",
+          "lineNumber": 29
+        },
+        {
+          "caller": "convert_bmp_to_png",
+          "callee": "str(png_path).replace",
+          "lineNumber": 30
+        },
+        {
+          "caller": "convert_bmp_to_png",
+          "callee": "str",
+          "lineNumber": 30
+        },
+        {
+          "caller": "convert_bmp_to_png",
+          "callee": "subprocess.run",
+          "lineNumber": 39
+        },
+        {
+          "caller": "convert_bmp_to_png",
+          "callee": "repr",
+          "lineNumber": 49
+        },
+        {
+          "caller": "convert_bmp_to_png",
+          "callee": "repr",
+          "lineNumber": 50
+        },
+        {
+          "caller": "convert_bmp_to_png",
+          "callee": "png_path.exists",
+          "lineNumber": 52
+        },
+        {
+          "caller": "convert_bmp_to_png",
+          "callee": "repr",
+          "lineNumber": 56
+        },
+        {
+          "caller": "convert_bmp_to_png",
+          "callee": "str",
+          "lineNumber": 62
+        },
+        {
+          "caller": "convert_bmp_to_png",
+          "callee": "png_path.stat",
+          "lineNumber": 63
+        },
+        {
+          "caller": "convert_bmp_to_png",
+          "callee": "Image.open",
+          "lineNumber": 67
+        },
+        {
+          "caller": "convert_bmp_to_png",
+          "callee": "image.save",
+          "lineNumber": 68
+        },
+        {
+          "caller": "convert_bmp_to_png",
+          "callee": "list",
+          "lineNumber": 69
+        },
+        {
+          "caller": "convert_bmp_to_png",
+          "callee": "str",
+          "lineNumber": 72
+        },
+        {
+          "caller": "convert_bmp_to_png",
+          "callee": "png_path.stat",
+          "lineNumber": 73
+        },
+        {
+          "caller": "main",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 80
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 81
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 82
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 83
+        },
+        {
+          "caller": "main",
+          "callee": "parser.parse_args",
+          "lineNumber": 84
+        },
+        {
+          "caller": "main",
+          "callee": "Path(args.output).resolve",
+          "lineNumber": 86
+        },
+        {
+          "caller": "main",
+          "callee": "Path",
+          "lineNumber": 86
+        },
+        {
+          "caller": "main",
+          "callee": "output.parent.mkdir",
+          "lineNumber": 87
+        },
+        {
+          "caller": "main",
+          "callee": "output.suffix.lower",
+          "lineNumber": 88
+        },
+        {
+          "caller": "main",
+          "callee": "output.with_suffix",
+          "lineNumber": 88
+        },
+        {
+          "caller": "main",
+          "callee": "AutoCADSession(create_if_missing=args.launch, visible=True).connect",
+          "lineNumber": 90
+        },
+        {
+          "caller": "main",
+          "callee": "AutoCADSession",
+          "lineNumber": 90
+        },
+        {
+          "caller": "main",
+          "callee": "session.open_document",
+          "lineNumber": 92
+        },
+        {
+          "caller": "main",
+          "callee": "session.export_bmp_preview",
+          "lineNumber": 94
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 98
+        },
+        {
+          "caller": "main",
+          "callee": "bmp_path.exists",
+          "lineNumber": 99
+        },
+        {
+          "caller": "main",
+          "callee": "bmp_path.stat",
+          "lineNumber": 100
+        },
+        {
+          "caller": "main",
+          "callee": "bmp_path.exists",
+          "lineNumber": 100
+        },
+        {
+          "caller": "main",
+          "callee": "output.suffix.lower",
+          "lineNumber": 104
+        },
+        {
+          "caller": "main",
+          "callee": "convert_bmp_to_png",
+          "lineNumber": 105
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 110
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 110
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "subskills/autocad-automation/scripts/acad_review.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 111,
+      "nonEmptyLines": 89,
+      "functions": [
+        {
+          "name": "_safe_getattr",
+          "startLine": 17,
+          "endLine": 22,
+          "params": [
+            "obj",
+            "name",
+            "default"
+          ]
+        },
+        {
+          "name": "_entity_bbox",
+          "startLine": 25,
+          "endLine": 31,
+          "params": [
+            "entity"
+          ]
+        },
+        {
+          "name": "_merge_bbox",
+          "startLine": 34,
+          "endLine": 45,
+          "params": [
+            "current",
+            "bbox"
+          ]
+        },
+        {
+          "name": "review_active",
+          "startLine": 48,
+          "endLine": 82,
+          "params": [
+            "session"
+          ]
+        },
+        {
+          "name": "main",
+          "startLine": 85,
+          "endLine": 106,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_safe_getattr",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "_entity_bbox",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "_merge_bbox",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "review_active",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 85,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_safe_getattr",
+          "callee": "getattr",
+          "lineNumber": 20
+        },
+        {
+          "caller": "_entity_bbox",
+          "callee": "entity.GetBoundingBox",
+          "lineNumber": 28
+        },
+        {
+          "caller": "_entity_bbox",
+          "callee": "point_tuple",
+          "lineNumber": 29
+        },
+        {
+          "caller": "_entity_bbox",
+          "callee": "point_tuple",
+          "lineNumber": 29
+        },
+        {
+          "caller": "_merge_bbox",
+          "callee": "list",
+          "lineNumber": 41
+        },
+        {
+          "caller": "_merge_bbox",
+          "callee": "list",
+          "lineNumber": 41
+        },
+        {
+          "caller": "_merge_bbox",
+          "callee": "range",
+          "lineNumber": 42
+        },
+        {
+          "caller": "_merge_bbox",
+          "callee": "min",
+          "lineNumber": 43
+        },
+        {
+          "caller": "_merge_bbox",
+          "callee": "max",
+          "lineNumber": 44
+        },
+        {
+          "caller": "review_active",
+          "callee": "session.active_document",
+          "lineNumber": 50
+        },
+        {
+          "caller": "review_active",
+          "callee": "Counter",
+          "lineNumber": 51
+        },
+        {
+          "caller": "review_active",
+          "callee": "Counter",
+          "lineNumber": 52
+        },
+        {
+          "caller": "review_active",
+          "callee": "session.iter_model_entities",
+          "lineNumber": 56
+        },
+        {
+          "caller": "review_active",
+          "callee": "str",
+          "lineNumber": 57
+        },
+        {
+          "caller": "review_active",
+          "callee": "_safe_getattr",
+          "lineNumber": 57
+        },
+        {
+          "caller": "review_active",
+          "callee": "str",
+          "lineNumber": 58
+        },
+        {
+          "caller": "review_active",
+          "callee": "_safe_getattr",
+          "lineNumber": 58
+        },
+        {
+          "caller": "review_active",
+          "callee": "_entity_bbox",
+          "lineNumber": 61
+        },
+        {
+          "caller": "review_active",
+          "callee": "_merge_bbox",
+          "lineNumber": 65
+        },
+        {
+          "caller": "review_active",
+          "callee": "str",
+          "lineNumber": 67
+        },
+        {
+          "caller": "review_active",
+          "callee": "_safe_getattr",
+          "lineNumber": 67
+        },
+        {
+          "caller": "review_active",
+          "callee": "bool",
+          "lineNumber": 68
+        },
+        {
+          "caller": "review_active",
+          "callee": "Path(full_name).exists",
+          "lineNumber": 68
+        },
+        {
+          "caller": "review_active",
+          "callee": "Path",
+          "lineNumber": 68
+        },
+        {
+          "caller": "review_active",
+          "callee": "Path(full_name).stat",
+          "lineNumber": 69
+        },
+        {
+          "caller": "review_active",
+          "callee": "Path",
+          "lineNumber": 69
+        },
+        {
+          "caller": "review_active",
+          "callee": "str",
+          "lineNumber": 73
+        },
+        {
+          "caller": "review_active",
+          "callee": "_safe_getattr",
+          "lineNumber": 73
+        },
+        {
+          "caller": "review_active",
+          "callee": "sum",
+          "lineNumber": 77
+        },
+        {
+          "caller": "review_active",
+          "callee": "type_counts.values",
+          "lineNumber": 77
+        },
+        {
+          "caller": "review_active",
+          "callee": "dict",
+          "lineNumber": 78
+        },
+        {
+          "caller": "review_active",
+          "callee": "dict",
+          "lineNumber": 79
+        },
+        {
+          "caller": "main",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 87
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 88
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 89
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 90
+        },
+        {
+          "caller": "main",
+          "callee": "parser.parse_args",
+          "lineNumber": 91
+        },
+        {
+          "caller": "main",
+          "callee": "AutoCADSession(create_if_missing=args.launch, visible=True).connect",
+          "lineNumber": 93
+        },
+        {
+          "caller": "main",
+          "callee": "AutoCADSession",
+          "lineNumber": 93
+        },
+        {
+          "caller": "main",
+          "callee": "session.open_document",
+          "lineNumber": 95
+        },
+        {
+          "caller": "main",
+          "callee": "review_active",
+          "lineNumber": 96
+        },
+        {
+          "caller": "main",
+          "callee": "session.zoom_extents",
+          "lineNumber": 97
+        },
+        {
+          "caller": "main",
+          "callee": "Path(args.json).resolve",
+          "lineNumber": 100
+        },
+        {
+          "caller": "main",
+          "callee": "Path",
+          "lineNumber": 100
+        },
+        {
+          "caller": "main",
+          "callee": "out.parent.mkdir",
+          "lineNumber": 101
+        },
+        {
+          "caller": "main",
+          "callee": "out.write_text",
+          "lineNumber": 102
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 102
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 103
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 105
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 105
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 5,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "subskills/autocad-automation/scripts/acad_session.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 811,
+      "nonEmptyLines": 727,
+      "functions": [
+        {
+          "name": "_retry_com_busy",
+          "startLine": 31,
+          "endLine": 43,
+          "params": [
+            "operation",
+            "label",
+            "attempts"
+          ]
+        },
+        {
+          "name": "_window_process_id",
+          "startLine": 46,
+          "endLine": 54,
+          "params": [
+            "app"
+          ]
+        },
+        {
+          "name": "_process_is_running",
+          "startLine": 57,
+          "endLine": 71,
+          "params": [
+            "process_id"
+          ]
+        },
+        {
+          "name": "_wait_for_process_exit",
+          "startLine": 74,
+          "endLine": 87,
+          "params": [
+            "process_id",
+            "timeout_s",
+            "poll_interval_s"
+          ]
+        },
+        {
+          "name": "_terminate_owned_process",
+          "startLine": 90,
+          "endLine": 101,
+          "params": [
+            "process_id"
+          ]
+        },
+        {
+          "name": "require_pywin32",
+          "startLine": 104,
+          "endLine": 107,
+          "params": []
+        },
+        {
+          "name": "mm",
+          "startLine": 110,
+          "endLine": 112,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "acad_point",
+          "startLine": 115,
+          "endLine": 127,
+          "params": [
+            "values"
+          ]
+        },
+        {
+          "name": "acad_double_array",
+          "startLine": 130,
+          "endLine": 136,
+          "params": [
+            "values"
+          ]
+        },
+        {
+          "name": "connect_autocad",
+          "startLine": 139,
+          "endLine": 167,
+          "params": [
+            "create_if_missing",
+            "visible",
+            "return_ownership"
+          ]
+        },
+        {
+          "name": "point_tuple",
+          "startLine": 763,
+          "endLine": 768,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "run_whitelisted_script_command",
+          "startLine": 778,
+          "endLine": 811,
+          "params": [
+            "session",
+            "command_id"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AutoCADSession",
+          "startLine": 170,
+          "endLine": 760,
+          "methods": [
+            "__init__",
+            "connect",
+            "active_document",
+            "refresh_document_proxy",
+            "_documents_collection",
+            "new_document",
+            "open_document",
+            "ensure_visible",
+            "activate_window",
+            "model",
+            "create_layer",
+            "set_current_layer",
+            "_apply_entity_options",
+            "add_line",
+            "add_circle",
+            "add_lwpolyline",
+            "add_rectangle",
+            "add_text",
+            "add_mtext",
+            "add_dim_aligned",
+            "add_dim_rotated",
+            "add_dim_diametric",
+            "send_command",
+            "regen",
+            "zoom_extents",
+            "live_update",
+            "iter_model_entities",
+            "save_as",
+            "delete_selection_set",
+            "create_empty_selection_set",
+            "export_dxf",
+            "export_bmp_preview",
+            "close_document",
+            "quit_owned_instance"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_retry_com_busy",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "_window_process_id",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "_process_is_running",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "_wait_for_process_exit",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "_terminate_owned_process",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "require_pywin32",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "mm",
+          "line": 110,
+          "isDefault": false
+        },
+        {
+          "name": "acad_point",
+          "line": 115,
+          "isDefault": false
+        },
+        {
+          "name": "acad_double_array",
+          "line": 130,
+          "isDefault": false
+        },
+        {
+          "name": "connect_autocad",
+          "line": 139,
+          "isDefault": false
+        },
+        {
+          "name": "AutoCADSession",
+          "line": 170,
+          "isDefault": false
+        },
+        {
+          "name": "point_tuple",
+          "line": 763,
+          "isDefault": false
+        },
+        {
+          "name": "run_whitelisted_script_command",
+          "line": 778,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_retry_com_busy",
+          "callee": "range",
+          "lineNumber": 34
+        },
+        {
+          "caller": "_retry_com_busy",
+          "callee": "operation",
+          "lineNumber": 36
+        },
+        {
+          "caller": "_retry_com_busy",
+          "callee": "getattr",
+          "lineNumber": 38
+        },
+        {
+          "caller": "_retry_com_busy",
+          "callee": "time.sleep",
+          "lineNumber": 42
+        },
+        {
+          "caller": "_retry_com_busy",
+          "callee": "RuntimeError",
+          "lineNumber": 43
+        },
+        {
+          "caller": "_window_process_id",
+          "callee": "int",
+          "lineNumber": 49
+        },
+        {
+          "caller": "_window_process_id",
+          "callee": "ctypes.c_ulong",
+          "lineNumber": 50
+        },
+        {
+          "caller": "_window_process_id",
+          "callee": "ctypes.windll.user32.GetWindowThreadProcessId",
+          "lineNumber": 51
+        },
+        {
+          "caller": "_window_process_id",
+          "callee": "ctypes.byref",
+          "lineNumber": 51
+        },
+        {
+          "caller": "_window_process_id",
+          "callee": "int",
+          "lineNumber": 52
+        },
+        {
+          "caller": "_process_is_running",
+          "callee": "ctypes.windll.kernel32.OpenProcess",
+          "lineNumber": 60
+        },
+        {
+          "caller": "_process_is_running",
+          "callee": "int",
+          "lineNumber": 60
+        },
+        {
+          "caller": "_process_is_running",
+          "callee": "ctypes.c_ulong",
+          "lineNumber": 64
+        },
+        {
+          "caller": "_process_is_running",
+          "callee": "ctypes.windll.kernel32.GetExitCodeProcess",
+          "lineNumber": 65
+        },
+        {
+          "caller": "_process_is_running",
+          "callee": "ctypes.byref",
+          "lineNumber": 65
+        },
+        {
+          "caller": "_process_is_running",
+          "callee": "ctypes.windll.kernel32.CloseHandle",
+          "lineNumber": 69
+        },
+        {
+          "caller": "_wait_for_process_exit",
+          "callee": "max",
+          "lineNumber": 81
+        },
+        {
+          "caller": "_wait_for_process_exit",
+          "callee": "float",
+          "lineNumber": 81
+        },
+        {
+          "caller": "_wait_for_process_exit",
+          "callee": "max",
+          "lineNumber": 82
+        },
+        {
+          "caller": "_wait_for_process_exit",
+          "callee": "int",
+          "lineNumber": 82
+        },
+        {
+          "caller": "_wait_for_process_exit",
+          "callee": "math.ceil",
+          "lineNumber": 82
+        },
+        {
+          "caller": "_wait_for_process_exit",
+          "callee": "max",
+          "lineNumber": 82
+        },
+        {
+          "caller": "_wait_for_process_exit",
+          "callee": "float",
+          "lineNumber": 82
+        },
+        {
+          "caller": "_wait_for_process_exit",
+          "callee": "range",
+          "lineNumber": 83
+        },
+        {
+          "caller": "_wait_for_process_exit",
+          "callee": "_process_is_running",
+          "lineNumber": 84
+        },
+        {
+          "caller": "_wait_for_process_exit",
+          "callee": "time.sleep",
+          "lineNumber": 86
+        },
+        {
+          "caller": "_wait_for_process_exit",
+          "callee": "_process_is_running",
+          "lineNumber": 87
+        },
+        {
+          "caller": "_terminate_owned_process",
+          "callee": "ctypes.windll.kernel32.OpenProcess",
+          "lineNumber": 93
+        },
+        {
+          "caller": "_terminate_owned_process",
+          "callee": "int",
+          "lineNumber": 93
+        },
+        {
+          "caller": "_terminate_owned_process",
+          "callee": "_process_is_running",
+          "lineNumber": 95
+        },
+        {
+          "caller": "_terminate_owned_process",
+          "callee": "bool",
+          "lineNumber": 97
+        },
+        {
+          "caller": "_terminate_owned_process",
+          "callee": "ctypes.windll.kernel32.TerminateProcess",
+          "lineNumber": 97
+        },
+        {
+          "caller": "_terminate_owned_process",
+          "callee": "ctypes.windll.kernel32.CloseHandle",
+          "lineNumber": 99
+        },
+        {
+          "caller": "require_pywin32",
+          "callee": "RuntimeError",
+          "lineNumber": 107
+        },
+        {
+          "caller": "mm",
+          "callee": "float",
+          "lineNumber": 112
+        },
+        {
+          "caller": "acad_point",
+          "callee": "require_pywin32",
+          "lineNumber": 121
+        },
+        {
+          "caller": "acad_point",
+          "callee": "list",
+          "lineNumber": 122
+        },
+        {
+          "caller": "acad_point",
+          "callee": "len",
+          "lineNumber": 123
+        },
+        {
+          "caller": "acad_point",
+          "callee": "xyz.append",
+          "lineNumber": 124
+        },
+        {
+          "caller": "acad_point",
+          "callee": "len",
+          "lineNumber": 125
+        },
+        {
+          "caller": "acad_point",
+          "callee": "ValueError",
+          "lineNumber": 126
+        },
+        {
+          "caller": "acad_point",
+          "callee": "win32com.client.VARIANT",
+          "lineNumber": 127
+        },
+        {
+          "caller": "acad_point",
+          "callee": "tuple",
+          "lineNumber": 127
+        },
+        {
+          "caller": "acad_point",
+          "callee": "float",
+          "lineNumber": 127
+        },
+        {
+          "caller": "acad_double_array",
+          "callee": "require_pywin32",
+          "lineNumber": 132
+        },
+        {
+          "caller": "acad_double_array",
+          "callee": "win32com.client.VARIANT",
+          "lineNumber": 133
+        },
+        {
+          "caller": "acad_double_array",
+          "callee": "tuple",
+          "lineNumber": 135
+        },
+        {
+          "caller": "acad_double_array",
+          "callee": "float",
+          "lineNumber": 135
+        },
+        {
+          "caller": "connect_autocad",
+          "callee": "require_pywin32",
+          "lineNumber": 152
+        },
+        {
+          "caller": "connect_autocad",
+          "callee": "pythoncom.CoInitialize",
+          "lineNumber": 153
+        },
+        {
+          "caller": "connect_autocad",
+          "callee": "win32com.client.GetActiveObject",
+          "lineNumber": 156
+        },
+        {
+          "caller": "connect_autocad",
+          "callee": "win32com.client.DispatchEx",
+          "lineNumber": 161
+        },
+        {
+          "caller": "connect",
+          "callee": "connect_autocad",
+          "lineNumber": 185
+        },
+        {
+          "caller": "connect",
+          "callee": "self.ensure_visible",
+          "lineNumber": 192
+        },
+        {
+          "caller": "connect",
+          "callee": "range",
+          "lineNumber": 194
+        },
+        {
+          "caller": "connect",
+          "callee": "_window_process_id",
+          "lineNumber": 195
+        },
+        {
+          "caller": "connect",
+          "callee": "time.sleep",
+          "lineNumber": 198
+        },
+        {
+          "caller": "active_document",
+          "callee": "self.connect",
+          "lineNumber": 210
+        },
+        {
+          "caller": "active_document",
+          "callee": "RuntimeError",
+          "lineNumber": 214
+        },
+        {
+          "caller": "refresh_document_proxy",
+          "callee": "self.connect",
+          "lineNumber": 220
+        },
+        {
+          "caller": "refresh_document_proxy",
+          "callee": "range",
+          "lineNumber": 222
+        },
+        {
+          "caller": "refresh_document_proxy",
+          "callee": "time.sleep",
+          "lineNumber": 230
+        },
+        {
+          "caller": "refresh_document_proxy",
+          "callee": "RuntimeError",
+          "lineNumber": 232
+        },
+        {
+          "caller": "refresh_document_proxy",
+          "callee": "RuntimeError",
+          "lineNumber": 233
+        },
+        {
+          "caller": "_documents_collection",
+          "callee": "self.connect",
+          "lineNumber": 238
+        },
+        {
+          "caller": "_documents_collection",
+          "callee": "range",
+          "lineNumber": 240
+        },
+        {
+          "caller": "_documents_collection",
+          "callee": "time.sleep",
+          "lineNumber": 254
+        },
+        {
+          "caller": "_documents_collection",
+          "callee": "RuntimeError",
+          "lineNumber": 256
+        },
+        {
+          "caller": "_documents_collection",
+          "callee": "RuntimeError",
+          "lineNumber": 257
+        },
+        {
+          "caller": "new_document",
+          "callee": "self.connect",
+          "lineNumber": 262
+        },
+        {
+          "caller": "new_document",
+          "callee": "self._documents_collection",
+          "lineNumber": 263
+        },
+        {
+          "caller": "new_document",
+          "callee": "range",
+          "lineNumber": 266
+        },
+        {
+          "caller": "new_document",
+          "callee": "documents.Add",
+          "lineNumber": 269
+        },
+        {
+          "caller": "new_document",
+          "callee": "str",
+          "lineNumber": 269
+        },
+        {
+          "caller": "new_document",
+          "callee": "documents.Add",
+          "lineNumber": 271
+        },
+        {
+          "caller": "new_document",
+          "callee": "time.sleep",
+          "lineNumber": 276
+        },
+        {
+          "caller": "new_document",
+          "callee": "RuntimeError",
+          "lineNumber": 278
+        },
+        {
+          "caller": "new_document",
+          "callee": "range",
+          "lineNumber": 282
+        },
+        {
+          "caller": "new_document",
+          "callee": "documents.Item",
+          "lineNumber": 290
+        },
+        {
+          "caller": "new_document",
+          "callee": "time.sleep",
+          "lineNumber": 295
+        },
+        {
+          "caller": "new_document",
+          "callee": "RuntimeError",
+          "lineNumber": 297
+        },
+        {
+          "caller": "open_document",
+          "callee": "self.connect",
+          "lineNumber": 303
+        },
+        {
+          "caller": "open_document",
+          "callee": "Path(path).resolve",
+          "lineNumber": 304
+        },
+        {
+          "caller": "open_document",
+          "callee": "Path",
+          "lineNumber": 304
+        },
+        {
+          "caller": "open_document",
+          "callee": "target.exists",
+          "lineNumber": 305
+        },
+        {
+          "caller": "open_document",
+          "callee": "FileNotFoundError",
+          "lineNumber": 306
+        },
+        {
+          "caller": "open_document",
+          "callee": "str",
+          "lineNumber": 306
+        },
+        {
+          "caller": "open_document",
+          "callee": "range",
+          "lineNumber": 308
+        },
+        {
+          "caller": "open_document",
+          "callee": "self._documents_collection",
+          "lineNumber": 309
+        },
+        {
+          "caller": "open_document",
+          "callee": "documents.Open",
+          "lineNumber": 311
+        },
+        {
+          "caller": "open_document",
+          "callee": "str",
+          "lineNumber": 311
+        },
+        {
+          "caller": "open_document",
+          "callee": "bool",
+          "lineNumber": 311
+        },
+        {
+          "caller": "open_document",
+          "callee": "time.sleep",
+          "lineNumber": 316
+        },
+        {
+          "caller": "open_document",
+          "callee": "RuntimeError",
+          "lineNumber": 318
+        },
+        {
+          "caller": "ensure_visible",
+          "callee": "self.connect",
+          "lineNumber": 324
+        },
+        {
+          "caller": "activate_window",
+          "callee": "self.connect",
+          "lineNumber": 333
+        },
+        {
+          "caller": "activate_window",
+          "callee": "int",
+          "lineNumber": 335
+        },
+        {
+          "caller": "activate_window",
+          "callee": "user32.ShowWindow",
+          "lineNumber": 340
+        },
+        {
+          "caller": "activate_window",
+          "callee": "user32.SetForegroundWindow",
+          "lineNumber": 341
+        },
+        {
+          "caller": "model",
+          "callee": "_retry_com_busy",
+          "lineNumber": 349
+        },
+        {
+          "caller": "model",
+          "callee": "self.active_document",
+          "lineNumber": 349
+        },
+        {
+          "caller": "model",
+          "callee": "_retry_com_busy",
+          "lineNumber": 352
+        },
+        {
+          "caller": "model",
+          "callee": "self.refresh_document_proxy",
+          "lineNumber": 352
+        },
+        {
+          "caller": "create_layer",
+          "callee": "self.active_document",
+          "lineNumber": 361
+        },
+        {
+          "caller": "create_layer",
+          "callee": "layers.Item",
+          "lineNumber": 364
+        },
+        {
+          "caller": "create_layer",
+          "callee": "_retry_com_busy",
+          "lineNumber": 366
+        },
+        {
+          "caller": "create_layer",
+          "callee": "layers.Add",
+          "lineNumber": 366
+        },
+        {
+          "caller": "create_layer",
+          "callee": "_retry_com_busy",
+          "lineNumber": 368
+        },
+        {
+          "caller": "create_layer",
+          "callee": "self.active_document().Layers.Item",
+          "lineNumber": 368
+        },
+        {
+          "caller": "create_layer",
+          "callee": "self.active_document",
+          "lineNumber": 368
+        },
+        {
+          "caller": "create_layer",
+          "callee": "_retry_com_busy",
+          "lineNumber": 370
+        },
+        {
+          "caller": "create_layer",
+          "callee": "setattr",
+          "lineNumber": 370
+        },
+        {
+          "caller": "create_layer",
+          "callee": "int",
+          "lineNumber": 370
+        },
+        {
+          "caller": "create_layer",
+          "callee": "_retry_com_busy",
+          "lineNumber": 373
+        },
+        {
+          "caller": "create_layer",
+          "callee": "self.active_document().Linetypes.Load",
+          "lineNumber": 373
+        },
+        {
+          "caller": "create_layer",
+          "callee": "self.active_document",
+          "lineNumber": 373
+        },
+        {
+          "caller": "create_layer",
+          "callee": "_retry_com_busy",
+          "lineNumber": 376
+        },
+        {
+          "caller": "create_layer",
+          "callee": "self.active_document().Layers.Item",
+          "lineNumber": 376
+        },
+        {
+          "caller": "create_layer",
+          "callee": "self.active_document",
+          "lineNumber": 376
+        },
+        {
+          "caller": "create_layer",
+          "callee": "_retry_com_busy",
+          "lineNumber": 377
+        },
+        {
+          "caller": "create_layer",
+          "callee": "setattr",
+          "lineNumber": 377
+        },
+        {
+          "caller": "set_current_layer",
+          "callee": "self.active_document",
+          "lineNumber": 382
+        },
+        {
+          "caller": "set_current_layer",
+          "callee": "self.create_layer",
+          "lineNumber": 382
+        },
+        {
+          "caller": "_apply_entity_options",
+          "callee": "_retry_com_busy",
+          "lineNumber": 387
+        },
+        {
+          "caller": "_apply_entity_options",
+          "callee": "self.create_layer",
+          "lineNumber": 387
+        },
+        {
+          "caller": "_apply_entity_options",
+          "callee": "_retry_com_busy",
+          "lineNumber": 388
+        },
+        {
+          "caller": "_apply_entity_options",
+          "callee": "setattr",
+          "lineNumber": 388
+        },
+        {
+          "caller": "_apply_entity_options",
+          "callee": "_retry_com_busy",
+          "lineNumber": 390
+        },
+        {
+          "caller": "_apply_entity_options",
+          "callee": "setattr",
+          "lineNumber": 390
+        },
+        {
+          "caller": "_apply_entity_options",
+          "callee": "int",
+          "lineNumber": 390
+        },
+        {
+          "caller": "add_line",
+          "callee": "_retry_com_busy",
+          "lineNumber": 395
+        },
+        {
+          "caller": "add_line",
+          "callee": "self.model.AddLine",
+          "lineNumber": 396
+        },
+        {
+          "caller": "add_line",
+          "callee": "acad_point",
+          "lineNumber": 396
+        },
+        {
+          "caller": "add_line",
+          "callee": "acad_point",
+          "lineNumber": 396
+        },
+        {
+          "caller": "add_line",
+          "callee": "self._apply_entity_options",
+          "lineNumber": 399
+        },
+        {
+          "caller": "add_circle",
+          "callee": "_retry_com_busy",
+          "lineNumber": 409
+        },
+        {
+          "caller": "add_circle",
+          "callee": "self.model.AddCircle",
+          "lineNumber": 410
+        },
+        {
+          "caller": "add_circle",
+          "callee": "acad_point",
+          "lineNumber": 410
+        },
+        {
+          "caller": "add_circle",
+          "callee": "float",
+          "lineNumber": 410
+        },
+        {
+          "caller": "add_circle",
+          "callee": "self._apply_entity_options",
+          "lineNumber": 413
+        },
+        {
+          "caller": "add_lwpolyline",
+          "callee": "len",
+          "lineNumber": 423
+        },
+        {
+          "caller": "add_lwpolyline",
+          "callee": "ValueError",
+          "lineNumber": 424
+        },
+        {
+          "caller": "add_lwpolyline",
+          "callee": "len",
+          "lineNumber": 427
+        },
+        {
+          "caller": "add_lwpolyline",
+          "callee": "ValueError",
+          "lineNumber": 428
+        },
+        {
+          "caller": "add_lwpolyline",
+          "callee": "flat.extend",
+          "lineNumber": 429
+        },
+        {
+          "caller": "add_lwpolyline",
+          "callee": "float",
+          "lineNumber": 429
+        },
+        {
+          "caller": "add_lwpolyline",
+          "callee": "float",
+          "lineNumber": 429
+        },
+        {
+          "caller": "add_lwpolyline",
+          "callee": "_retry_com_busy",
+          "lineNumber": 430
+        },
+        {
+          "caller": "add_lwpolyline",
+          "callee": "self.model.AddLightWeightPolyline",
+          "lineNumber": 431
+        },
+        {
+          "caller": "add_lwpolyline",
+          "callee": "acad_double_array",
+          "lineNumber": 431
+        },
+        {
+          "caller": "add_lwpolyline",
+          "callee": "_retry_com_busy",
+          "lineNumber": 434
+        },
+        {
+          "caller": "add_lwpolyline",
+          "callee": "setattr",
+          "lineNumber": 434
+        },
+        {
+          "caller": "add_lwpolyline",
+          "callee": "bool",
+          "lineNumber": 434
+        },
+        {
+          "caller": "add_lwpolyline",
+          "callee": "self._apply_entity_options",
+          "lineNumber": 435
+        },
+        {
+          "caller": "add_rectangle",
+          "callee": "float",
+          "lineNumber": 446
+        },
+        {
+          "caller": "add_rectangle",
+          "callee": "float",
+          "lineNumber": 447
+        },
+        {
+          "caller": "add_rectangle",
+          "callee": "float",
+          "lineNumber": 448
+        },
+        {
+          "caller": "add_rectangle",
+          "callee": "float",
+          "lineNumber": 449
+        },
+        {
+          "caller": "add_rectangle",
+          "callee": "self.add_lwpolyline",
+          "lineNumber": 450
+        },
+        {
+          "caller": "add_text",
+          "callee": "_retry_com_busy",
+          "lineNumber": 466
+        },
+        {
+          "caller": "add_text",
+          "callee": "self.model.AddText",
+          "lineNumber": 467
+        },
+        {
+          "caller": "add_text",
+          "callee": "str",
+          "lineNumber": 467
+        },
+        {
+          "caller": "add_text",
+          "callee": "acad_point",
+          "lineNumber": 467
+        },
+        {
+          "caller": "add_text",
+          "callee": "float",
+          "lineNumber": 467
+        },
+        {
+          "caller": "add_text",
+          "callee": "self._apply_entity_options",
+          "lineNumber": 470
+        },
+        {
+          "caller": "add_mtext",
+          "callee": "_retry_com_busy",
+          "lineNumber": 481
+        },
+        {
+          "caller": "add_mtext",
+          "callee": "self.model.AddMText",
+          "lineNumber": 482
+        },
+        {
+          "caller": "add_mtext",
+          "callee": "acad_point",
+          "lineNumber": 482
+        },
+        {
+          "caller": "add_mtext",
+          "callee": "float",
+          "lineNumber": 482
+        },
+        {
+          "caller": "add_mtext",
+          "callee": "str",
+          "lineNumber": 482
+        },
+        {
+          "caller": "add_mtext",
+          "callee": "self._apply_entity_options",
+          "lineNumber": 485
+        },
+        {
+          "caller": "add_dim_aligned",
+          "callee": "_retry_com_busy",
+          "lineNumber": 496
+        },
+        {
+          "caller": "add_dim_aligned",
+          "callee": "self.model.AddDimAligned",
+          "lineNumber": 497
+        },
+        {
+          "caller": "add_dim_aligned",
+          "callee": "acad_point",
+          "lineNumber": 498
+        },
+        {
+          "caller": "add_dim_aligned",
+          "callee": "acad_point",
+          "lineNumber": 499
+        },
+        {
+          "caller": "add_dim_aligned",
+          "callee": "acad_point",
+          "lineNumber": 500
+        },
+        {
+          "caller": "add_dim_aligned",
+          "callee": "self._apply_entity_options",
+          "lineNumber": 504
+        },
+        {
+          "caller": "add_dim_rotated",
+          "callee": "_retry_com_busy",
+          "lineNumber": 516
+        },
+        {
+          "caller": "add_dim_rotated",
+          "callee": "self.model.AddDimRotated",
+          "lineNumber": 517
+        },
+        {
+          "caller": "add_dim_rotated",
+          "callee": "acad_point",
+          "lineNumber": 518
+        },
+        {
+          "caller": "add_dim_rotated",
+          "callee": "acad_point",
+          "lineNumber": 519
+        },
+        {
+          "caller": "add_dim_rotated",
+          "callee": "acad_point",
+          "lineNumber": 520
+        },
+        {
+          "caller": "add_dim_rotated",
+          "callee": "math.radians",
+          "lineNumber": 521
+        },
+        {
+          "caller": "add_dim_rotated",
+          "callee": "float",
+          "lineNumber": 521
+        },
+        {
+          "caller": "add_dim_rotated",
+          "callee": "self._apply_entity_options",
+          "lineNumber": 525
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "list",
+          "lineNumber": 538
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "len",
+          "lineNumber": 539
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "xyz.append",
+          "lineNumber": 540
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "len",
+          "lineNumber": 541
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "ValueError",
+          "lineNumber": 542
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "math.radians",
+          "lineNumber": 543
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "float",
+          "lineNumber": 543
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "math.cos",
+          "lineNumber": 544
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "float",
+          "lineNumber": 544
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "math.sin",
+          "lineNumber": 545
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "float",
+          "lineNumber": 545
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "float",
+          "lineNumber": 546
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "float",
+          "lineNumber": 546
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "float",
+          "lineNumber": 546
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "float",
+          "lineNumber": 547
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "float",
+          "lineNumber": 547
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "float",
+          "lineNumber": 547
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "_retry_com_busy",
+          "lineNumber": 548
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "self.model.AddDimDiametric",
+          "lineNumber": 549
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "acad_point",
+          "lineNumber": 550
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "acad_point",
+          "lineNumber": 551
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "float",
+          "lineNumber": 552
+        },
+        {
+          "caller": "add_dim_diametric",
+          "callee": "self._apply_entity_options",
+          "lineNumber": 556
+        },
+        {
+          "caller": "send_command",
+          "callee": "command.endswith",
+          "lineNumber": 563
+        },
+        {
+          "caller": "send_command",
+          "callee": "_retry_com_busy",
+          "lineNumber": 565
+        },
+        {
+          "caller": "send_command",
+          "callee": "self.active_document().SendCommand",
+          "lineNumber": 565
+        },
+        {
+          "caller": "send_command",
+          "callee": "self.active_document",
+          "lineNumber": 565
+        },
+        {
+          "caller": "regen",
+          "callee": "_retry_com_busy",
+          "lineNumber": 570
+        },
+        {
+          "caller": "regen",
+          "callee": "self.active_document().Regen",
+          "lineNumber": 570
+        },
+        {
+          "caller": "regen",
+          "callee": "self.active_document",
+          "lineNumber": 570
+        },
+        {
+          "caller": "zoom_extents",
+          "callee": "self.connect",
+          "lineNumber": 575
+        },
+        {
+          "caller": "zoom_extents",
+          "callee": "_retry_com_busy",
+          "lineNumber": 576
+        },
+        {
+          "caller": "zoom_extents",
+          "callee": "self.app.ZoomExtents",
+          "lineNumber": 576
+        },
+        {
+          "caller": "live_update",
+          "callee": "self.ensure_visible",
+          "lineNumber": 584
+        },
+        {
+          "caller": "live_update",
+          "callee": "self.activate_window",
+          "lineNumber": 585
+        },
+        {
+          "caller": "live_update",
+          "callee": "self.regen",
+          "lineNumber": 586
+        },
+        {
+          "caller": "live_update",
+          "callee": "self.zoom_extents",
+          "lineNumber": 588
+        },
+        {
+          "caller": "live_update",
+          "callee": "time.sleep",
+          "lineNumber": 590
+        },
+        {
+          "caller": "iter_model_entities",
+          "callee": "int",
+          "lineNumber": 596
+        },
+        {
+          "caller": "iter_model_entities",
+          "callee": "_retry_com_busy",
+          "lineNumber": 596
+        },
+        {
+          "caller": "iter_model_entities",
+          "callee": "range",
+          "lineNumber": 600
+        },
+        {
+          "caller": "iter_model_entities",
+          "callee": "_retry_com_busy",
+          "lineNumber": 601
+        },
+        {
+          "caller": "iter_model_entities",
+          "callee": "model_space.Item",
+          "lineNumber": 601
+        },
+        {
+          "caller": "save_as",
+          "callee": "Path(path).resolve",
+          "lineNumber": 608
+        },
+        {
+          "caller": "save_as",
+          "callee": "Path",
+          "lineNumber": 608
+        },
+        {
+          "caller": "save_as",
+          "callee": "target.parent.mkdir",
+          "lineNumber": 609
+        },
+        {
+          "caller": "save_as",
+          "callee": "_retry_com_busy",
+          "lineNumber": 610
+        },
+        {
+          "caller": "save_as",
+          "callee": "self.active_document().SaveAs",
+          "lineNumber": 610
+        },
+        {
+          "caller": "save_as",
+          "callee": "self.active_document",
+          "lineNumber": 610
+        },
+        {
+          "caller": "save_as",
+          "callee": "str",
+          "lineNumber": 610
+        },
+        {
+          "caller": "delete_selection_set",
+          "callee": "self.refresh_document_proxy",
+          "lineNumber": 615
+        },
+        {
+          "caller": "delete_selection_set",
+          "callee": "doc.SelectionSets.Item(name).Delete",
+          "lineNumber": 617
+        },
+        {
+          "caller": "delete_selection_set",
+          "callee": "doc.SelectionSets.Item",
+          "lineNumber": 617
+        },
+        {
+          "caller": "create_empty_selection_set",
+          "callee": "range",
+          "lineNumber": 628
+        },
+        {
+          "caller": "create_empty_selection_set",
+          "callee": "self.refresh_document_proxy",
+          "lineNumber": 630
+        },
+        {
+          "caller": "create_empty_selection_set",
+          "callee": "self.delete_selection_set",
+          "lineNumber": 631
+        },
+        {
+          "caller": "create_empty_selection_set",
+          "callee": "doc.SelectionSets.Add",
+          "lineNumber": 632
+        },
+        {
+          "caller": "create_empty_selection_set",
+          "callee": "time.sleep",
+          "lineNumber": 635
+        },
+        {
+          "caller": "create_empty_selection_set",
+          "callee": "RuntimeError",
+          "lineNumber": 636
+        },
+        {
+          "caller": "export_dxf",
+          "callee": "Path(path).resolve",
+          "lineNumber": 645
+        },
+        {
+          "caller": "export_dxf",
+          "callee": "Path",
+          "lineNumber": 645
+        },
+        {
+          "caller": "export_dxf",
+          "callee": "target.parent.mkdir",
+          "lineNumber": 646
+        },
+        {
+          "caller": "export_dxf",
+          "callee": "target.exists",
+          "lineNumber": 647
+        },
+        {
+          "caller": "export_dxf",
+          "callee": "target.unlink",
+          "lineNumber": 648
+        },
+        {
+          "caller": "export_dxf",
+          "callee": "self.refresh_document_proxy",
+          "lineNumber": 650
+        },
+        {
+          "caller": "export_dxf",
+          "callee": "self.create_empty_selection_set",
+          "lineNumber": 651
+        },
+        {
+          "caller": "export_dxf",
+          "callee": "str",
+          "lineNumber": 652
+        },
+        {
+          "caller": "export_dxf",
+          "callee": "target.with_suffix",
+          "lineNumber": 652
+        },
+        {
+          "caller": "export_dxf",
+          "callee": "self.refresh_document_proxy().Export",
+          "lineNumber": 654
+        },
+        {
+          "caller": "export_dxf",
+          "callee": "self.refresh_document_proxy",
+          "lineNumber": 654
+        },
+        {
+          "caller": "export_dxf",
+          "callee": "sset.Delete",
+          "lineNumber": 657
+        },
+        {
+          "caller": "export_bmp_preview",
+          "callee": "Path(path).resolve",
+          "lineNumber": 669
+        },
+        {
+          "caller": "export_bmp_preview",
+          "callee": "Path",
+          "lineNumber": 669
+        },
+        {
+          "caller": "export_bmp_preview",
+          "callee": "target.parent.mkdir",
+          "lineNumber": 670
+        },
+        {
+          "caller": "export_bmp_preview",
+          "callee": "target.exists",
+          "lineNumber": 671
+        },
+        {
+          "caller": "export_bmp_preview",
+          "callee": "target.unlink",
+          "lineNumber": 672
+        },
+        {
+          "caller": "export_bmp_preview",
+          "callee": "self.regen",
+          "lineNumber": 674
+        },
+        {
+          "caller": "export_bmp_preview",
+          "callee": "self.zoom_extents",
+          "lineNumber": 675
+        },
+        {
+          "caller": "export_bmp_preview",
+          "callee": "self.refresh_document_proxy",
+          "lineNumber": 676
+        },
+        {
+          "caller": "export_bmp_preview",
+          "callee": "self.create_empty_selection_set",
+          "lineNumber": 677
+        },
+        {
+          "caller": "export_bmp_preview",
+          "callee": "sset.Select",
+          "lineNumber": 680
+        },
+        {
+          "caller": "export_bmp_preview",
+          "callee": "self.refresh_document_proxy().Export",
+          "lineNumber": 681
+        },
+        {
+          "caller": "export_bmp_preview",
+          "callee": "self.refresh_document_proxy",
+          "lineNumber": 681
+        },
+        {
+          "caller": "export_bmp_preview",
+          "callee": "str",
+          "lineNumber": 681
+        },
+        {
+          "caller": "export_bmp_preview",
+          "callee": "target.with_suffix",
+          "lineNumber": 681
+        },
+        {
+          "caller": "export_bmp_preview",
+          "callee": "sset.Delete",
+          "lineNumber": 684
+        },
+        {
+          "caller": "close_document",
+          "callee": "range",
+          "lineNumber": 693
+        },
+        {
+          "caller": "close_document",
+          "callee": "self.refresh_document_proxy().Close",
+          "lineNumber": 695
+        },
+        {
+          "caller": "close_document",
+          "callee": "self.refresh_document_proxy",
+          "lineNumber": 695
+        },
+        {
+          "caller": "close_document",
+          "callee": "bool",
+          "lineNumber": 695
+        },
+        {
+          "caller": "close_document",
+          "callee": "time.sleep",
+          "lineNumber": 700
+        },
+        {
+          "caller": "quit_owned_instance",
+          "callee": "_retry_com_busy",
+          "lineNumber": 733
+        },
+        {
+          "caller": "quit_owned_instance",
+          "callee": "app.Quit",
+          "lineNumber": 733
+        },
+        {
+          "caller": "quit_owned_instance",
+          "callee": "bool",
+          "lineNumber": 740
+        },
+        {
+          "caller": "quit_owned_instance",
+          "callee": "_wait_for_process_exit",
+          "lineNumber": 745
+        },
+        {
+          "caller": "quit_owned_instance",
+          "callee": "_terminate_owned_process",
+          "lineNumber": 750
+        },
+        {
+          "caller": "quit_owned_instance",
+          "callee": "_wait_for_process_exit",
+          "lineNumber": 752
+        },
+        {
+          "caller": "point_tuple",
+          "callee": "list",
+          "lineNumber": 765
+        },
+        {
+          "caller": "point_tuple",
+          "callee": "len",
+          "lineNumber": 766
+        },
+        {
+          "caller": "point_tuple",
+          "callee": "items.append",
+          "lineNumber": 767
+        },
+        {
+          "caller": "point_tuple",
+          "callee": "float",
+          "lineNumber": 768
+        },
+        {
+          "caller": "point_tuple",
+          "callee": "float",
+          "lineNumber": 768
+        },
+        {
+          "caller": "point_tuple",
+          "callee": "float",
+          "lineNumber": 768
+        },
+        {
+          "caller": "run_whitelisted_script_command",
+          "callee": "session.send_command",
+          "lineNumber": 791
+        },
+        {
+          "caller": "run_whitelisted_script_command",
+          "callee": "str",
+          "lineNumber": 801
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 13,
+        "functionCount": 12,
+        "classCount": 1
+      }
+    }
+  ]
+}

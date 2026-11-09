@@ -1,0 +1,154 @@
+{
+ "nodes": [
+  {
+   "id": "config:apps/desktop/cad_workbench/schemas/advanced_geometry.schema.json",
+   "type": "config",
+   "name": "advanced_geometry.schema.json",
+   "filePath": "apps/desktop/cad_workbench/schemas/advanced_geometry.schema.json",
+   "summary": "Schemat JSON opisujący zaawansowaną geometrię CAD (obiekty z definicjami $defs) walidowaną przed dalszym przetwarzaniem.",
+   "tags": [
+    "configuration",
+    "schema-definition",
+    "json-schema",
+    "geometry",
+    "cad"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:apps/desktop/cad_workbench/schemas/advanced_surface.schema.json",
+   "type": "config",
+   "name": "advanced_surface.schema.json",
+   "filePath": "apps/desktop/cad_workbench/schemas/advanced_surface.schema.json",
+   "summary": "Schemat JSON dla zaawansowanych powierzchni CAD z warunkowymi regułami allOf i definicjami $defs.",
+   "tags": [
+    "configuration",
+    "schema-definition",
+    "json-schema",
+    "surface",
+    "cad"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "config:apps/desktop/cad_workbench/schemas/automation_job.schema.json",
+   "type": "config",
+   "name": "automation_job.schema.json",
+   "filePath": "apps/desktop/cad_workbench/schemas/automation_job.schema.json",
+   "summary": "Schemat zadania automatyzacji CAD Studio (wersje 1.0 i 2.0) z rodzajami zadań, statusami, etapami, artefaktami i dowodami weryfikacji.",
+   "tags": [
+    "configuration",
+    "schema-definition",
+    "json-schema",
+    "automation-job",
+    "workflow"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "config:apps/desktop/cad_workbench/schemas/codex_final_response.schema.json",
+   "type": "config",
+   "name": "codex_final_response.schema.json",
+   "filePath": "apps/desktop/cad_workbench/schemas/codex_final_response.schema.json",
+   "summary": "Schemat JSON końcowej odpowiedzi agenta Codex, wymuszający ustrukturyzowany format wyniku.",
+   "tags": [
+    "configuration",
+    "schema-definition",
+    "json-schema",
+    "codex",
+    "agent-response"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:apps/desktop/cad_workbench/schemas/evidence_graph.schema.json",
+   "type": "config",
+   "name": "evidence_graph.schema.json",
+   "filePath": "apps/desktop/cad_workbench/schemas/evidence_graph.schema.json",
+   "summary": "Schemat JSON grafu dowodów łączącego artefakty i weryfikacje wyników CAD.",
+   "tags": [
+    "configuration",
+    "schema-definition",
+    "json-schema",
+    "evidence",
+    "verification"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:apps/desktop/cad_workbench/schemas/fea_analysis.schema.json",
+   "type": "config",
+   "name": "fea_analysis.schema.json",
+   "filePath": "apps/desktop/cad_workbench/schemas/fea_analysis.schema.json",
+   "summary": "Schemat JSON analizy FEA (MES) z właściwościami, warunkami allOf i definicjami $defs dla siatki, obciążeń i wyników.",
+   "tags": [
+    "configuration",
+    "schema-definition",
+    "json-schema",
+    "fea",
+    "simulation"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "config:apps/desktop/cad_workbench/schemas/neutral_cad_document.schema.json",
+   "type": "config",
+   "name": "neutral_cad_document.schema.json",
+   "filePath": "apps/desktop/cad_workbench/schemas/neutral_cad_document.schema.json",
+   "summary": "Schemat neutralnego dokumentu CAD niezależnego od konkretnego systemu (np. SolidWorks).",
+   "tags": [
+    "configuration",
+    "schema-definition",
+    "json-schema",
+    "neutral-cad",
+    "document-model"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:apps/desktop/cad_workbench/schemas/preview_manifest.schema.json",
+   "type": "config",
+   "name": "preview_manifest.schema.json",
+   "filePath": "apps/desktop/cad_workbench/schemas/preview_manifest.schema.json",
+   "summary": "Schemat manifestu podglądu modelu CAD opisujący pliki podglądu dla interfejsu desktopowego.",
+   "tags": [
+    "configuration",
+    "schema-definition",
+    "json-schema",
+    "preview",
+    "manifest"
+   ],
+   "complexity": "simple"
+  }
+ ],
+ "edges": [
+  {
+   "source": "config:apps/desktop/cad_workbench/schemas/evidence_graph.schema.json",
+   "target": "config:apps/desktop/cad_workbench/schemas/automation_job.schema.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:apps/desktop/cad_workbench/schemas/codex_final_response.schema.json",
+   "target": "config:apps/desktop/cad_workbench/schemas/automation_job.schema.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:apps/desktop/cad_workbench/schemas/preview_manifest.schema.json",
+   "target": "config:apps/desktop/cad_workbench/schemas/automation_job.schema.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:apps/desktop/cad_workbench/schemas/advanced_geometry.schema.json",
+   "target": "config:apps/desktop/cad_workbench/schemas/advanced_surface.schema.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  }
+ ]
+}

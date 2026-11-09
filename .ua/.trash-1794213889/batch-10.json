@@ -1,0 +1,1802 @@
+{
+ "nodes": [
+  {
+   "id": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "type": "file",
+   "name": "advanced_fillet_strategy.py",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "summary": "Offline'owy kontrakt zaawansowanych zaokrągleń SolidWorks: dataclass'y specyfikacji, ścisła walidacja parametrów oraz odczyt metadanych typelib bez łączenia się z SolidWorks.",
+   "tags": [
+    "fillet",
+    "validation",
+    "dataclass",
+    "offline-contract",
+    "solidworks"
+   ],
+   "complexity": "complex",
+   "languageNotes": "Używa frozen/zwykłych dataclass'ów i walidatorów zwracających ustrukturyzowane błędy; probe typelib czyta tylko metadane COM."
+  },
+  {
+   "id": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "type": "file",
+   "name": "hold_line_bridge.py",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "summary": "Most wielojęzyczny (C# PIA, SWBasic, natywny C++) do tworzenia zaokrągleń z linią trzymającą; domyślnie zwraca dowody blokady znanej awarii SW2026 SP1.1, a ryzykowne wywołania natywne wymagają jawnej flagi środowiskowej.",
+   "tags": [
+    "bridge",
+    "native-interop",
+    "hold-line",
+    "safety-gate",
+    "windows"
+   ],
+   "complexity": "complex",
+   "languageNotes": "Moduł zależy od winreg i ctypes, więc działa tylko na Windows; kompiluje csc/MSVC w locie."
+  },
+  {
+   "id": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "type": "file",
+   "name": "verify_advanced_fillets.py",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "summary": "Skrypt regresji na prawdziwym SolidWorks 2026 weryfikujący siedem rodzajów zaawansowanych zaokrągleń i fazek; każdy przypadek używa osobnej części, zapisu, eksportu STEP, ponownego otwarcia i podglądu.",
+   "tags": [
+    "regression-test",
+    "com-automation",
+    "fillet",
+    "verification",
+    "cli"
+   ],
+   "complexity": "complex",
+   "languageNotes": "Manipuluje ścieżką sys.path i używa wariantów COM (VARIANT arrays) do wywołań FeatureManager."
+  },
+  {
+   "id": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "type": "file",
+   "name": "verify_open_source_bracket.py",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "summary": "Regresja na otwartoźródłowym wsporniku (CadQuery l_gusset STEP): tworzy czteropunktowe zaokrąglenie o zmiennym promieniu i fazkę szerokość-szerokość oraz zbiera dowody FeatureData i przeglądy czterowidokowe.",
+   "tags": [
+    "regression-test",
+    "step-import",
+    "fillet",
+    "chamfer",
+    "cli"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:VariableFilletSpec",
+   "type": "class",
+   "name": "VariableFilletSpec",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "lineRange": [
+    74,
+    81
+   ],
+   "summary": "Specyfikacja zaokrąglenia o zmiennym promieniu z punktami kontrolnymi.",
+   "tags": [
+    "dataclass",
+    "spec",
+    "fillet"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:FaceFilletSpec",
+   "type": "class",
+   "name": "FaceFilletSpec",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "lineRange": [
+    85,
+    90
+   ],
+   "summary": "Specyfikacja zaokrąglenia ścian.",
+   "tags": [
+    "dataclass",
+    "spec",
+    "fillet"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:HoldLineFilletSpec",
+   "type": "class",
+   "name": "HoldLineFilletSpec",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "lineRange": [
+    94,
+    100
+   ],
+   "summary": "Specyfikacja zaokrąglenia z linią trzymającą.",
+   "tags": [
+    "dataclass",
+    "spec",
+    "fillet"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:SurfaceCombinationSpec",
+   "type": "class",
+   "name": "SurfaceCombinationSpec",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "lineRange": [
+    104,
+    109
+   ],
+   "summary": "Specyfikacja kombinacji powierzchni z ciągłością krzywizny.",
+   "tags": [
+    "dataclass",
+    "spec",
+    "fillet"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:FullRoundFilletSpec",
+   "type": "class",
+   "name": "FullRoundFilletSpec",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "lineRange": [
+    113,
+    116
+   ],
+   "summary": "Specyfikacja pełnego zaokrąglenia między trzema ścianami.",
+   "tags": [
+    "dataclass",
+    "spec",
+    "fillet"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:SetbackFilletSpec",
+   "type": "class",
+   "name": "SetbackFilletSpec",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "lineRange": [
+    120,
+    125
+   ],
+   "summary": "Specyfikacja zaokrąglenia z setbackiem w narożniku.",
+   "tags": [
+    "dataclass",
+    "spec",
+    "fillet"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:WidthWidthChamferSpec",
+   "type": "class",
+   "name": "WidthWidthChamferSpec",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "lineRange": [
+    129,
+    134
+   ],
+   "summary": "Specyfikacja fazki szerokość-szerokość.",
+   "tags": [
+    "dataclass",
+    "spec",
+    "fillet"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:validate_variable_spec",
+   "type": "function",
+   "name": "validate_variable_spec",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "lineRange": [
+    148,
+    181
+   ],
+   "summary": "Waliduje punkty kontrolne i promienie zaokrąglenia zmiennego.",
+   "tags": [
+    "validation",
+    "fillet",
+    "spec"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:validate_face_spec",
+   "type": "function",
+   "name": "validate_face_spec",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "lineRange": [
+    184,
+    192
+   ],
+   "summary": "Waliduje specyfikację zaokrąglenia ścian.",
+   "tags": [
+    "validation",
+    "fillet",
+    "spec"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:validate_hold_line_spec",
+   "type": "function",
+   "name": "validate_hold_line_spec",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "lineRange": [
+    195,
+    218
+   ],
+   "summary": "Waliduje zestawy ścian i linii trzymających.",
+   "tags": [
+    "validation",
+    "fillet",
+    "spec"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:validate_surface_combination_spec",
+   "type": "function",
+   "name": "validate_surface_combination_spec",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "lineRange": [
+    221,
+    245
+   ],
+   "summary": "Waliduje kombinację powierzchni i ciągłość.",
+   "tags": [
+    "validation",
+    "fillet",
+    "spec"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:validate_full_round_spec",
+   "type": "function",
+   "name": "validate_full_round_spec",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "lineRange": [
+    248,
+    260
+   ],
+   "summary": "Waliduje trzy ściany pełnego zaokrąglenia.",
+   "tags": [
+    "validation",
+    "fillet",
+    "spec"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:validate_setback_spec",
+   "type": "function",
+   "name": "validate_setback_spec",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "lineRange": [
+    263,
+    285
+   ],
+   "summary": "Waliduje promienie i odległości setback.",
+   "tags": [
+    "validation",
+    "fillet",
+    "spec"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:validate_width_width_chamfer_spec",
+   "type": "function",
+   "name": "validate_width_width_chamfer_spec",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "lineRange": [
+    288,
+    311
+   ],
+   "summary": "Waliduje szerokości fazki szerokość-szerokość.",
+   "tags": [
+    "validation",
+    "fillet",
+    "spec"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:inspect_typelib_members",
+   "type": "function",
+   "name": "inspect_typelib_members",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "lineRange": [
+    314,
+    336
+   ],
+   "summary": "Odczytuje z typelib listę członków wymaganych interfejsów.",
+   "tags": [
+    "typelib",
+    "capability",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:build_capability_report",
+   "type": "function",
+   "name": "build_capability_report",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "lineRange": [
+    339,
+    365
+   ],
+   "summary": "Buduje raport zdolności maszyny na podstawie typelib.",
+   "tags": [
+    "typelib",
+    "capability",
+    "utility"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:spec_payload",
+   "type": "function",
+   "name": "spec_payload",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "lineRange": [
+    368,
+    374
+   ],
+   "summary": "Serializuje specyfikację do słownika JSON.",
+   "tags": [
+    "typelib",
+    "capability",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:HoldLineBridgeError",
+   "type": "class",
+   "name": "HoldLineBridgeError",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "lineRange": [
+    35,
+    40
+   ],
+   "summary": "Wyjątek zgłaszany przez most linii trzymającej, niosący ustrukturyzowane dowody.",
+   "tags": [
+    "exception",
+    "bridge",
+    "error-handling"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:unsafe_hold_line_probe_enabled",
+   "type": "function",
+   "name": "unsafe_hold_line_probe_enabled",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "lineRange": [
+    43,
+    47
+   ],
+   "summary": "Sprawdza zmienną środowiskową włączającą niebezpieczną sondę natywną.",
+   "tags": [
+    "bridge",
+    "hold-line",
+    "interop"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:known_hold_line_block_evidence",
+   "type": "function",
+   "name": "known_hold_line_block_evidence",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "lineRange": [
+    50,
+    65
+   ],
+   "summary": "Zwraca dowód znanej blokady ISetHoldLines w SW2026 SP1.1.",
+   "tags": [
+    "bridge",
+    "hold-line",
+    "interop"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:discover_bridge_toolchain",
+   "type": "function",
+   "name": "discover_bridge_toolchain",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "lineRange": [
+    121,
+    135
+   ],
+   "summary": "Wyszukuje kompilator csc dla mostu C#.",
+   "tags": [
+    "bridge",
+    "hold-line",
+    "interop"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:discover_native_toolchain",
+   "type": "function",
+   "name": "discover_native_toolchain",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "lineRange": [
+    138,
+    157
+   ],
+   "summary": "Wyszukuje narzędzia MSVC do budowy natywnego add-inu.",
+   "tags": [
+    "bridge",
+    "hold-line",
+    "interop"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:build_native_hold_line_addin",
+   "type": "function",
+   "name": "build_native_hold_line_addin",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "lineRange": [
+    160,
+    205
+   ],
+   "summary": "Kompiluje natywną bibliotekę DLL add-inu C++.",
+   "tags": [
+    "bridge",
+    "hold-line",
+    "interop"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:build_native_hold_line_macro",
+   "type": "function",
+   "name": "build_native_hold_line_macro",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "lineRange": [
+    208,
+    226
+   ],
+   "summary": "Przygotowuje makro SWBasic do wywołania linii trzymającej.",
+   "tags": [
+    "bridge",
+    "hold-line",
+    "interop"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:create_hold_line_via_native_addin",
+   "type": "function",
+   "name": "create_hold_line_via_native_addin",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "lineRange": [
+    229,
+    323
+   ],
+   "summary": "Ładuje add-in w procesie SolidWorks i wywołuje natywnie linię trzymającą, z bramką bezpieczeństwa.",
+   "tags": [
+    "bridge",
+    "hold-line",
+    "interop"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:build_hold_line_bridge",
+   "type": "function",
+   "name": "build_hold_line_bridge",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "lineRange": [
+    326,
+    372
+   ],
+   "summary": "Kompiluje most C# i zwraca ścieżkę pliku wykonywalnego.",
+   "tags": [
+    "bridge",
+    "hold-line",
+    "interop"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:create_hold_line_via_csharp",
+   "type": "function",
+   "name": "create_hold_line_via_csharp",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "lineRange": [
+    375,
+    417
+   ],
+   "summary": "Uruchamia most C# PIA i zwraca wynik JSON.",
+   "tags": [
+    "bridge",
+    "hold-line",
+    "interop"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:HoldLineInteropBlockedError",
+   "type": "class",
+   "name": "HoldLineInteropBlockedError",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "lineRange": [
+    84,
+    93
+   ],
+   "summary": "Wyjątek sygnalizujący zablokowaną międzyprocesową obsługę linii trzymającej.",
+   "tags": [
+    "exception",
+    "hold-line",
+    "blocked"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_variable",
+   "type": "function",
+   "name": "_create_variable",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "lineRange": [
+    377,
+    413
+   ],
+   "summary": "Tworzy część testową i zaokrąglenie zmiennopromieniowe.",
+   "tags": [
+    "regression-test",
+    "com-automation",
+    "fillet"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_face",
+   "type": "function",
+   "name": "_create_face",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "lineRange": [
+    416,
+    438
+   ],
+   "summary": "Tworzy zaokrąglenie ścian na części testowej.",
+   "tags": [
+    "regression-test",
+    "com-automation",
+    "fillet"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_hold_line",
+   "type": "function",
+   "name": "_create_hold_line",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "lineRange": [
+    441,
+    620
+   ],
+   "summary": "Buduje scenariusz linii trzymającej z wieloma ścieżkami i dowodami blokady.",
+   "tags": [
+    "regression-test",
+    "com-automation",
+    "fillet"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_surface_combo",
+   "type": "function",
+   "name": "_create_surface_combo",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "lineRange": [
+    623,
+    651
+   ],
+   "summary": "Tworzy kombinację powierzchni z ciągłością krzywizny.",
+   "tags": [
+    "regression-test",
+    "com-automation",
+    "fillet"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_full_round",
+   "type": "function",
+   "name": "_create_full_round",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "lineRange": [
+    654,
+    677
+   ],
+   "summary": "Tworzy pełne zaokrąglenie.",
+   "tags": [
+    "regression-test",
+    "com-automation",
+    "fillet"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_setback",
+   "type": "function",
+   "name": "_create_setback",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "lineRange": [
+    680,
+    712
+   ],
+   "summary": "Tworzy zaokrąglenie setback.",
+   "tags": [
+    "regression-test",
+    "com-automation",
+    "fillet"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_width_width_chamfer",
+   "type": "function",
+   "name": "_create_width_width_chamfer",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "lineRange": [
+    715,
+    742
+   ],
+   "summary": "Tworzy fazkę szerokość-szerokość.",
+   "tags": [
+    "regression-test",
+    "com-automation",
+    "fillet"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_feature_data_evidence",
+   "type": "function",
+   "name": "_feature_data_evidence",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "lineRange": [
+    756,
+    810
+   ],
+   "summary": "Odczytuje FeatureData jako dowody weryfikacji.",
+   "tags": [
+    "regression-test",
+    "com-automation",
+    "fillet"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_evidence_passes",
+   "type": "function",
+   "name": "_evidence_passes",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "lineRange": [
+    813,
+    846
+   ],
+   "summary": "Ocenia, czy dowody spełniają kryteria verified.",
+   "tags": [
+    "regression-test",
+    "com-automation",
+    "fillet"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_verify_one",
+   "type": "function",
+   "name": "_verify_one",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "lineRange": [
+    849,
+    930
+   ],
+   "summary": "Wykonuje pełny cykl jednego przypadku: tworzenie, zapis, STEP, otwarcie, podgląd.",
+   "tags": [
+    "regression-test",
+    "com-automation",
+    "fillet"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:parse_args",
+   "type": "function",
+   "name": "parse_args",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "lineRange": [
+    933,
+    956
+   ],
+   "summary": "Parsuje argumenty CLI.",
+   "tags": [
+    "regression-test",
+    "com-automation",
+    "fillet"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "lineRange": [
+    959,
+    1010
+   ],
+   "summary": "Punkt wejścia CLI uruchamiający wszystkie przypadki i raportujący JSON.",
+   "tags": [
+    "regression-test",
+    "com-automation",
+    "fillet"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_find_typelib",
+   "type": "function",
+   "name": "_find_typelib",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "lineRange": [
+    123,
+    146
+   ],
+   "summary": "Lokalizuje typelib SolidWorks.",
+   "tags": [
+    "regression-test",
+    "com-automation",
+    "fillet"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_box",
+   "type": "function",
+   "name": "_create_box",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "lineRange": [
+    170,
+    195
+   ],
+   "summary": "Tworzy prostopadłościan testowy.",
+   "tags": [
+    "regression-test",
+    "com-automation",
+    "fillet"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_cylinder",
+   "type": "function",
+   "name": "_create_cylinder",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "lineRange": [
+    198,
+    221
+   ],
+   "summary": "Tworzy cylinder testowy.",
+   "tags": [
+    "regression-test",
+    "com-automation",
+    "fillet"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_surface_type",
+   "type": "function",
+   "name": "_surface_type",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "lineRange": [
+    312,
+    329
+   ],
+   "summary": "Rozpoznaje typ powierzchni ściany.",
+   "tags": [
+    "regression-test",
+    "com-automation",
+    "fillet"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_find_vertex",
+   "type": "function",
+   "name": "_find_vertex",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "lineRange": [
+    332,
+    348
+   ],
+   "summary": "Znajduje wierzchołek po współrzędnych.",
+   "tags": [
+    "regression-test",
+    "com-automation",
+    "fillet"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_add_projected_hold_line",
+   "type": "function",
+   "name": "_add_projected_hold_line",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "lineRange": [
+    224,
+    244
+   ],
+   "summary": "Dodaje rzutowaną linię trzymającą na szkicu.",
+   "tags": [
+    "regression-test",
+    "com-automation",
+    "fillet"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_typed_feature_data",
+   "type": "function",
+   "name": "_typed_feature_data",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "lineRange": [
+    114,
+    120
+   ],
+   "summary": "Zwraca typowane FeatureData przez typelib.",
+   "tags": [
+    "regression-test",
+    "com-automation",
+    "fillet"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:_advanced_evidence_passes",
+   "type": "function",
+   "name": "_advanced_evidence_passes",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "lineRange": [
+    54,
+    69
+   ],
+   "summary": "Sprawdza, czy dowody zaawansowanych operacji spełniają kryteria.",
+   "tags": [
+    "regression-test",
+    "step-import",
+    "bracket"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:_sha256",
+   "type": "function",
+   "name": "_sha256",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "lineRange": [
+    72,
+    78
+   ],
+   "summary": "Liczy skrót SHA-256 pliku.",
+   "tags": [
+    "regression-test",
+    "step-import",
+    "bracket"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:_body_stats",
+   "type": "function",
+   "name": "_body_stats",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "lineRange": [
+    81,
+    102
+   ],
+   "summary": "Zbiera statystyki bryły do porównań.",
+   "tags": [
+    "regression-test",
+    "step-import",
+    "bracket"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:_add_variable_fillet",
+   "type": "function",
+   "name": "_add_variable_fillet",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "lineRange": [
+    105,
+    136
+   ],
+   "summary": "Dodaje czteropunktowe zaokrąglenie zmiennopromieniowe na wsporniku.",
+   "tags": [
+    "regression-test",
+    "step-import",
+    "bracket"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:_add_width_width_chamfer",
+   "type": "function",
+   "name": "_add_width_width_chamfer",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "lineRange": [
+    139,
+    160
+   ],
+   "summary": "Dodaje fazkę szerokość-szerokość na wsporniku.",
+   "tags": [
+    "regression-test",
+    "step-import",
+    "bracket"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:run_regression",
+   "type": "function",
+   "name": "run_regression",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "lineRange": [
+    163,
+    262
+   ],
+   "summary": "Główny przepływ regresji: import STEP, operacje, zapis, ponowne otwarcie, przegląd.",
+   "tags": [
+    "regression-test",
+    "step-import",
+    "bracket"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:parse_args",
+   "type": "function",
+   "name": "parse_args",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "lineRange": [
+    265,
+    277
+   ],
+   "summary": "Parsuje argumenty CLI.",
+   "tags": [
+    "regression-test",
+    "step-import",
+    "bracket"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "lineRange": [
+    280,
+    287
+   ],
+   "summary": "Punkt wejścia CLI.",
+   "tags": [
+    "regression-test",
+    "step-import",
+    "bracket"
+   ],
+   "complexity": "simple"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:VariableFilletSpec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:VariableFilletSpec",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:FaceFilletSpec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:FaceFilletSpec",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:HoldLineFilletSpec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:HoldLineFilletSpec",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:SurfaceCombinationSpec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:SurfaceCombinationSpec",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:FullRoundFilletSpec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:FullRoundFilletSpec",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:SetbackFilletSpec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:SetbackFilletSpec",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:WidthWidthChamferSpec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:WidthWidthChamferSpec",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:validate_variable_spec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:validate_variable_spec",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:validate_face_spec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:validate_face_spec",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:validate_hold_line_spec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:validate_hold_line_spec",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:validate_surface_combination_spec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:validate_surface_combination_spec",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:validate_full_round_spec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:validate_full_round_spec",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:validate_setback_spec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:validate_setback_spec",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:validate_width_width_chamfer_spec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:validate_width_width_chamfer_spec",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:inspect_typelib_members",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:inspect_typelib_members",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:build_capability_report",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:build_capability_report",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:spec_payload",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py:spec_payload",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "target": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:HoldLineBridgeError",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "target": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:HoldLineBridgeError",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:unsafe_hold_line_probe_enabled",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:unsafe_hold_line_probe_enabled",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:known_hold_line_block_evidence",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:known_hold_line_block_evidence",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:discover_bridge_toolchain",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:discover_bridge_toolchain",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:discover_native_toolchain",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:discover_native_toolchain",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:build_native_hold_line_addin",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:build_native_hold_line_addin",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:build_native_hold_line_macro",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:build_native_hold_line_macro",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:create_hold_line_via_native_addin",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:create_hold_line_via_native_addin",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:build_hold_line_bridge",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:build_hold_line_bridge",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:create_hold_line_via_csharp",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py:create_hold_line_via_csharp",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:HoldLineInteropBlockedError",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:HoldLineInteropBlockedError",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_variable",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_variable",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_face",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_face",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_hold_line",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_hold_line",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_surface_combo",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_surface_combo",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_full_round",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_full_round",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_setback",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_setback",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_width_width_chamfer",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_width_width_chamfer",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_feature_data_evidence",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_feature_data_evidence",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_evidence_passes",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_evidence_passes",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_verify_one",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_verify_one",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:parse_args",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:parse_args",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:main",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_find_typelib",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_find_typelib",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_box",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_box",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_cylinder",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_create_cylinder",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_surface_type",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_surface_type",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_find_vertex",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_find_vertex",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_add_projected_hold_line",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_add_projected_hold_line",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_typed_feature_data",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py:_typed_feature_data",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:_advanced_evidence_passes",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:_advanced_evidence_passes",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:_sha256",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:_sha256",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:_body_stats",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:_body_stats",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:_add_variable_fillet",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:_add_variable_fillet",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:_add_width_width_chamfer",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:_add_width_width_chamfer",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:run_regression",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:run_regression",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:parse_args",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:parse_args",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py:main",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+   "target": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+   "target": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  }
+ ]
+}

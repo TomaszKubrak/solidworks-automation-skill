@@ -1,0 +1,77 @@
+{
+ "projectRoot": "/Users/tomasz/Developer/solidworks-automation-skill",
+ "batchFiles": [
+  {
+   "path": "examples/README.md",
+   "language": "markdown",
+   "sizeLines": 235,
+   "fileCategory": "docs"
+  },
+  {
+   "path": "examples/drc_profile_strict.json",
+   "language": "json",
+   "sizeLines": 15,
+   "fileCategory": "config"
+  },
+  {
+   "path": "examples/drc_sample_part.cadstudio.json",
+   "language": "json",
+   "sizeLines": 18,
+   "fileCategory": "config"
+  },
+  {
+   "path": "examples/drilling_panel_sample.cadstudio.json",
+   "language": "json",
+   "sizeLines": 315,
+   "fileCategory": "config"
+  },
+  {
+   "path": "examples/drive_sizing_sample.cadstudio.json",
+   "language": "json",
+   "sizeLines": 23,
+   "fileCategory": "config"
+  },
+  {
+   "path": "examples/fastener_stack_sample.cadstudio.json",
+   "language": "json",
+   "sizeLines": 14,
+   "fileCategory": "config"
+  },
+  {
+   "path": "examples/fea_tetra_static.json",
+   "language": "json",
+   "sizeLines": 42,
+   "fileCategory": "config"
+  },
+  {
+   "path": "examples/ocp_loft_adapter.json",
+   "language": "json",
+   "sizeLines": 15,
+   "fileCategory": "config"
+  },
+  {
+   "path": "examples/part.cadstudio.json",
+   "language": "json",
+   "sizeLines": 34,
+   "fileCategory": "config"
+  },
+  {
+   "path": "examples/supplier-profile.json",
+   "language": "json",
+   "sizeLines": 38,
+   "fileCategory": "config"
+  }
+ ],
+ "batchImportData": {
+  "examples/README.md": [],
+  "examples/drc_profile_strict.json": [],
+  "examples/drc_sample_part.cadstudio.json": [],
+  "examples/drilling_panel_sample.cadstudio.json": [],
+  "examples/drive_sizing_sample.cadstudio.json": [],
+  "examples/fastener_stack_sample.cadstudio.json": [],
+  "examples/fea_tetra_static.json": [],
+  "examples/ocp_loft_adapter.json": [],
+  "examples/part.cadstudio.json": [],
+  "examples/supplier-profile.json": []
+ }
+}

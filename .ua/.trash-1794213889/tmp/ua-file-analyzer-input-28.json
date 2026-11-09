@@ -1,0 +1,28 @@
+{
+ "projectRoot": "/Users/tomasz/Developer/solidworks-automation-skill",
+ "batchFiles": [
+  {
+   "path": "subskills/solidworks-engineering-drawing/README.md",
+   "language": "markdown",
+   "sizeLines": 70,
+   "fileCategory": "docs"
+  },
+  {
+   "path": "subskills/solidworks-engineering-drawing/SKILL.md",
+   "language": "markdown",
+   "sizeLines": 52,
+   "fileCategory": "docs"
+  },
+  {
+   "path": "subskills/solidworks-engineering-drawing/manifest.yaml",
+   "language": "yaml",
+   "sizeLines": 22,
+   "fileCategory": "config"
+  }
+ ],
+ "batchImportData": {
+  "subskills/solidworks-engineering-drawing/README.md": [],
+  "subskills/solidworks-engineering-drawing/SKILL.md": [],
+  "subskills/solidworks-engineering-drawing/manifest.yaml": []
+ }
+}

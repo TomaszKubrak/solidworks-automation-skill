@@ -1,0 +1,61 @@
+{
+ "nodes": [
+  {
+   "id": "config:profiles/drc/drilling_panel.json",
+   "type": "config",
+   "name": "drilling_panel.json",
+   "filePath": "profiles/drc/drilling_panel.json",
+   "summary": "Profil DRC dla niestandardowych paneli wiertarskich: progi odległości otworu od krawędzi, rozstawu, ligamentu i zazębienia gwintu oraz reguła ostrzegawcza dla otworów poniżej 3 mm.",
+   "tags": [
+    "configuration",
+    "drc",
+    "design-rules",
+    "profile"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:profiles/drc/injection_shell.json",
+   "type": "config",
+   "name": "injection_shell.json",
+   "filePath": "profiles/drc/injection_shell.json",
+   "summary": "Profil DRC dla obudów wtryskowych: minimalna grubość ścianki 1,0 mm, minimalny detal 0,8 mm oraz ostrzeżenie o otworach poniżej 1,5 mm (kruchy rdzeń formy).",
+   "tags": [
+    "configuration",
+    "drc",
+    "design-rules",
+    "profile"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:profiles/drc/machined_bracket.json",
+   "type": "config",
+   "name": "machined_bracket.json",
+   "filePath": "profiles/drc/machined_bracket.json",
+   "summary": "Profil DRC dla obrabianych wsporników: grubość ścianki ≥1,5, odległość otworu od krawędzi, ligament, zazębienie gwintu oraz ostrzeżenie o małych otworach.",
+   "tags": [
+    "configuration",
+    "drc",
+    "design-rules",
+    "profile"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:profiles/drc/sheet_metal_panel.json",
+   "type": "config",
+   "name": "sheet_metal_panel.json",
+   "filePath": "profiles/drc/sheet_metal_panel.json",
+   "summary": "Profil DRC dla paneli z blachy: grubość blachy ≥0,8, odległość otworu od krawędzi i ligament ≥2 mm, bez reguł niestandardowych.",
+   "tags": [
+    "configuration",
+    "drc",
+    "design-rules",
+    "profile"
+   ],
+   "complexity": "simple"
+  }
+ ],
+ "edges": []
+}

@@ -1,0 +1,1169 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 20,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 20,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 20
+    }
+  },
+  "results": [
+    {
+      "path": "references/advanced.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 260,
+      "nonEmptyLines": 200,
+      "sections": [
+        {
+          "heading": "高级功能参考",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "目录",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "自定义属性",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "设计表与配置",
+          "level": 2,
+          "line": 44
+        },
+        {
+          "heading": "配置管理",
+          "level": 3,
+          "line": 46
+        },
+        {
+          "heading": "设计表",
+          "level": 3,
+          "line": 84
+        },
+        {
+          "heading": "钣金设计",
+          "level": 2,
+          "line": 97
+        },
+        {
+          "heading": "基本操作",
+          "level": 3,
+          "line": 99
+        },
+        {
+          "heading": "展开图导出",
+          "level": 3,
+          "line": 121
+        },
+        {
+          "heading": "钣金参数",
+          "level": 3,
+          "line": 133
+        },
+        {
+          "heading": "焊件设计",
+          "level": 2,
+          "line": 143
+        },
+        {
+          "heading": "切割清单",
+          "level": 3,
+          "line": 145
+        },
+        {
+          "heading": "结构构件",
+          "level": 3,
+          "line": 173
+        },
+        {
+          "heading": "曲面建模",
+          "level": 2,
+          "line": 191
+        },
+        {
+          "heading": "仿真/FEA",
+          "level": 2,
+          "line": 219
+        },
+        {
+          "heading": "算例类型",
+          "level": 3,
+          "line": 250
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 16
+      }
+    },
+    {
+      "path": "references/agent-provider-architecture.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 108,
+      "nonEmptyLines": 83,
+      "sections": [
+        {
+          "heading": "多 Agent Provider 架构",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "目标",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Provider 状态不能混用",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "统一任务协议",
+          "level": 2,
+          "line": 34
+        },
+        {
+          "heading": "统一结果协议",
+          "level": 2,
+          "line": 57
+        },
+        {
+          "heading": "当前 Adapter",
+          "level": 2,
+          "line": 73
+        },
+        {
+          "heading": "新增 Provider 的步骤",
+          "level": 2,
+          "line": 88
+        },
+        {
+          "heading": "可观察执行过程",
+          "level": 2,
+          "line": 98
+        },
+        {
+          "heading": "安全边界",
+          "level": 2,
+          "line": 102
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "references/api-lookup.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 107,
+      "nonEmptyLines": 82,
+      "sections": [
+        {
+          "heading": "SolidWorks API 查证流程",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "按版本查证",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "优先资料源",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "必查 API 类型",
+          "level": 2,
+          "line": 42
+        },
+        {
+          "heading": "查证记录模板",
+          "level": 2,
+          "line": 54
+        },
+        {
+          "heading": "运动装配 API 查证速记",
+          "level": 2,
+          "line": 71
+        },
+        {
+          "heading": "最小验证脚本要求",
+          "level": 2,
+          "line": 94
+        },
+        {
+          "heading": "沉淀规则",
+          "level": 2,
+          "line": 102
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "references/appearance.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 92,
+      "nonEmptyLines": 74,
+      "sections": [
+        {
+          "heading": "外观与材质参考",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "核心规则",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "推荐用法",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "预设颜色",
+          "level": 2,
+          "line": 41
+        },
+        {
+          "heading": "已验证 API 签名",
+          "level": 2,
+          "line": 59
+        },
+        {
+          "heading": "多色装配工作流",
+          "level": 2,
+          "line": 76
+        },
+        {
+          "heading": "稳定性建议",
+          "level": 2,
+          "line": 85
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "references/assembly.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 243,
+      "nonEmptyLines": 190,
+      "sections": [
+        {
+          "heading": "装配体与运动配合参考",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "官方资料入口",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "添加组件",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "运动型装配工作流",
+          "level": 2,
+          "line": 40
+        },
+        {
+          "heading": "在线工程经验摘要",
+          "level": 2,
+          "line": 53
+        },
+        {
+          "heading": "AddMate5 参数",
+          "level": 2,
+          "line": 61
+        },
+        {
+          "heading": "配合类型枚举",
+          "level": 2,
+          "line": 119
+        },
+        {
+          "heading": "选择与装配体上下文",
+          "level": 2,
+          "line": 147
+        },
+        {
+          "heading": "圆柱面识别",
+          "level": 2,
+          "line": 180
+        },
+        {
+          "heading": "可以在软件里操作吗",
+          "level": 2,
+          "line": 206
+        },
+        {
+          "heading": "干涉与运动边界",
+          "level": 2,
+          "line": 217
+        },
+        {
+          "heading": "大型装配体建议",
+          "level": 2,
+          "line": 238
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "references/complex-hole-features.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 77,
+      "nonEmptyLines": 62,
+      "sections": [
+        {
+          "heading": "复杂孔槽自动化",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "支持范围",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "单位与基准",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "示例",
+          "level": 2,
+          "line": 23
+        },
+        {
+          "heading": "验收证据",
+          "level": 2,
+          "line": 61
+        },
+        {
+          "heading": "已知限制",
+          "level": 2,
+          "line": 73
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "references/complex-mechanical-routing.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 59,
+      "nonEmptyLines": 45,
+      "sections": [
+        {
+          "heading": "复杂机械模型能力路由",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "先探测，再执行",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "当前能力等级",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "复杂零件",
+          "level": 2,
+          "line": 34
+        },
+        {
+          "heading": "复杂装配与运动",
+          "level": 2,
+          "line": 43
+        },
+        {
+          "heading": "新能力开发门禁",
+          "level": 2,
+          "line": 52
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "references/delivery-freshness.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 30,
+      "nonEmptyLines": 19,
+      "sections": [
+        {
+          "heading": "本轮交付文件门禁",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "references/design-rule-check.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 21,
+      "nonEmptyLines": 13,
+      "sections": [
+        {
+          "heading": "中性文档设计规则审计（pilot）",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "references/design-spec.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 180,
+      "nonEmptyLines": 135,
+      "sections": [
+        {
+          "heading": "设计规格驱动建模",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "为什么需要它",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "最小可用规格",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "坐标系约定（重要）",
+          "level": 2,
+          "line": 34
+        },
+        {
+          "heading": "字段参考",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "base（基础实体）",
+          "level": 3,
+          "line": 47
+        },
+        {
+          "heading": "holes（孔）",
+          "level": 3,
+          "line": 57
+        },
+        {
+          "heading": "fillets（圆角）",
+          "level": 3,
+          "line": 83
+        },
+        {
+          "heading": "verify（构建后验证）",
+          "level": 3,
+          "line": 101
+        },
+        {
+          "heading": "单位",
+          "level": 2,
+          "line": 114
+        },
+        {
+          "heading": "使用方式",
+          "level": 2,
+          "line": 119
+        },
+        {
+          "heading": "返回结构与证据",
+          "level": 2,
+          "line": 147
+        },
+        {
+          "heading": "常见错误码",
+          "level": 2,
+          "line": 166
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "references/drawing.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 206,
+      "nonEmptyLines": 164,
+      "sections": [
+        {
+          "heading": "工程图 API 参考",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "创建视图",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "标准三视图",
+          "level": 3,
+          "line": 5
+        },
+        {
+          "heading": "自定义视图",
+          "level": 3,
+          "line": 12
+        },
+        {
+          "heading": "设置视图比例",
+          "level": 3,
+          "line": 35
+        },
+        {
+          "heading": "尺寸标注",
+          "level": 2,
+          "line": 42
+        },
+        {
+          "heading": "自动标注（模型项目）",
+          "level": 3,
+          "line": 44
+        },
+        {
+          "heading": "SW2026 尺寸文字边界证据",
+          "level": 3,
+          "line": 72
+        },
+        {
+          "heading": "手动添加尺寸",
+          "level": 3,
+          "line": 128
+        },
+        {
+          "heading": "注释与标注",
+          "level": 2,
+          "line": 138
+        },
+        {
+          "heading": "BOM 表",
+          "level": 2,
+          "line": 154
+        },
+        {
+          "heading": "图纸操作",
+          "level": 2,
+          "line": 167
+        },
+        {
+          "heading": "导出 PDF",
+          "level": 2,
+          "line": 198
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 13
+      }
+    },
+    {
+      "path": "references/drive-sizing.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 63,
+      "nonEmptyLines": 49,
+      "sections": [
+        {
+          "heading": "电机扭矩核验（drive sizing）",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "输入：`metadata.drives[]`（drive-spec，声明式 JSON，可由自然语言经代理生成）",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "约定（错一个符号就是错的）",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "判据",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "公式",
+          "level": 2,
+          "line": 44
+        },
+        {
+          "heading": "验证",
+          "level": 2,
+          "line": 54
+        },
+        {
+          "heading": "边界与后续",
+          "level": 2,
+          "line": 59
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "references/edge-selection.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 177,
+      "nonEmptyLines": 124,
+      "sections": [
+        {
+          "heading": "语义选边：圆角与倒角的正确做法",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "为什么不能用 SelectByID2 选边",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "正确做法：按 B-Rep 几何选边",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "筛选条件",
+          "level": 2,
+          "line": 44
+        },
+        {
+          "heading": "典型用法",
+          "level": 2,
+          "line": 58
+        },
+        {
+          "heading": "返回值",
+          "level": 2,
+          "line": 84
+        },
+        {
+          "heading": "凸凹判定",
+          "level": 2,
+          "line": 105
+        },
+        {
+          "heading": "已知边界",
+          "level": 2,
+          "line": 113
+        },
+        {
+          "heading": "API 注意事项",
+          "level": 2,
+          "line": 121
+        },
+        {
+          "heading": "圆角 API 的一个坑",
+          "level": 2,
+          "line": 138
+        },
+        {
+          "heading": "长度、直径与 COM 兼容契约",
+          "level": 2,
+          "line": 153
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "references/enterprise-agent-rag.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 86,
+      "nonEmptyLines": 70,
+      "sections": [
+        {
+          "heading": "企业 Agent 与机械知识库",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "目标架构",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "数据边界",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "任务配置",
+          "level": 2,
+          "line": 37
+        },
+        {
+          "heading": "知识库分层",
+          "level": 2,
+          "line": 69
+        },
+        {
+          "heading": "上云前门禁",
+          "level": 2,
+          "line": 79
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "references/export.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 145,
+      "nonEmptyLines": 111,
+      "sections": [
+        {
+          "heading": "文件导出参考",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "支持的导出格式",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "SaveAs 错误码",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "SaveAs 警告码",
+          "level": 2,
+          "line": 28
+        },
+        {
+          "heading": "STL 导出质量设置",
+          "level": 2,
+          "line": 36
+        },
+        {
+          "heading": "批量转换示例",
+          "level": 2,
+          "line": 50
+        },
+        {
+          "heading": "可审计批量导出",
+          "level": 2,
+          "line": 78
+        },
+        {
+          "heading": "Pack and Go",
+          "level": 2,
+          "line": 89
+        },
+        {
+          "heading": "拆分 STEP 再装配的坐标规则",
+          "level": 2,
+          "line": 113
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "references/gears.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 59,
+      "nonEmptyLines": 41,
+      "sections": [
+        {
+          "heading": "齿轮实体建模与装配联动路由",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "先判断用户要的是什么",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "当前可用范围",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "最小调用",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "已验证案例",
+          "level": 2,
+          "line": 43
+        },
+        {
+          "heading": "不得自动宣称支持的范围",
+          "level": 2,
+          "line": 47
+        },
+        {
+          "heading": "参考",
+          "level": 2,
+          "line": 54
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "references/language-backend-routing.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 87,
+      "nonEmptyLines": 69,
+      "sections": [
+        {
+          "heading": "CAD 多语言后端路由",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "核心原则",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "可执行查询",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "已核实的接口边界",
+          "level": 2,
+          "line": 43
+        },
+        {
+          "heading": "当前能力分类",
+          "level": 2,
+          "line": 67
+        },
+        {
+          "heading": "仍需继续扩展",
+          "level": 2,
+          "line": 78
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "references/mcp-server.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 157,
+      "nonEmptyLines": 113,
+      "sections": [
+        {
+          "heading": "SolidWorks MCP Server 设计说明",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "架构",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Transport 选择",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "工具发现与审批",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "多客户端注册策略",
+          "level": 2,
+          "line": 53
+        },
+        {
+          "heading": "并发策略",
+          "level": 2,
+          "line": 70
+        },
+        {
+          "heading": "工具命名",
+          "level": 2,
+          "line": 80
+        },
+        {
+          "heading": "安全边界",
+          "level": 2,
+          "line": 114
+        },
+        {
+          "heading": "扩展顺序建议",
+          "level": 2,
+          "line": 130
+        },
+        {
+          "heading": "返回格式",
+          "level": 2,
+          "line": 147
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "references/mesh-reference-import.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 128,
+      "nonEmptyLines": 94,
+      "sections": [
+        {
+          "heading": "高还原网格参考模型导入",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "适用场景",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "路线选择",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "GLB/FBX/BLEND 转换建议",
+          "level": 2,
+          "line": 25
+        },
+        {
+          "heading": "Python 可选依赖",
+          "level": 3,
+          "line": 33
+        },
+        {
+          "heading": "SolidWorks 稳定导入写法",
+          "level": 2,
+          "line": 90
+        },
+        {
+          "heading": "审查标准",
+          "level": 2,
+          "line": 111
+        },
+        {
+          "heading": "本次 SU7 经验摘要",
+          "level": 2,
+          "line": 122
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "references/motion-study.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 175,
+      "nonEmptyLines": 131,
+      "sections": [
+        {
+          "heading": "Motion Study 与旋转马达自动化",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "适用场景",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "推荐工作流",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "最小示例",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "结果验收门禁",
+          "level": 2,
+          "line": 72
+        },
+        {
+          "heading": "类型库与动态 COM 坑",
+          "level": 2,
+          "line": 86
+        },
+        {
+          "heading": "旋转马达关键 API",
+          "level": 2,
+          "line": 107
+        },
+        {
+          "heading": "与 Mate 自由度的关系",
+          "level": 2,
+          "line": 129
+        },
+        {
+          "heading": "会话清理与同标题文档",
+          "level": 2,
+          "line": 144
+        },
+        {
+          "heading": "实测记录",
+          "level": 2,
+          "line": 160
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    }
+  ]
+}

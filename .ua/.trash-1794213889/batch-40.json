@@ -1,0 +1,1358 @@
+{
+ "nodes": [
+  {
+   "id": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "type": "file",
+   "name": "create_cnc_mount_template.py",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "summary": "Skrypt CLI budujący w SolidWorks parametryczny uchwyt CNC (płyta, otwory, szczelina) z fazowaniem i zaokrągleniami krawędzi wybieranych predykatami geometrycznymi oraz zbierający dowody istnienia cech.",
+   "tags": [
+    "cnc",
+    "solidworks",
+    "com-automation",
+    "entry-point",
+    "fillet-chamfer"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:cut",
+   "type": "function",
+   "name": "cut",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "lineRange": [
+    125,
+    149
+   ],
+   "summary": "Wycina materiał z aktywnego szkicu z podanym typem zakończenia.",
+   "tags": [
+    "feature",
+    "cut",
+    "solidworks"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:edge_signature",
+   "type": "function",
+   "name": "edge_signature",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "lineRange": [
+    206,
+    229
+   ],
+   "summary": "Wylicza sygnaturę geometryczną krawędzi (punkty, kierunek, promień) do jej jednoznacznej identyfikacji.",
+   "tags": [
+    "topology",
+    "edge",
+    "geometry"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:select_exact_edges",
+   "type": "function",
+   "name": "select_exact_edges",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "lineRange": [
+    253,
+    273
+   ],
+   "summary": "Zaznacza w modelu dokładnie te krawędzie, które pasują do zadanych sygnatur.",
+   "tags": [
+    "selection",
+    "edge",
+    "solidworks"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:vertical_corner_predicate",
+   "type": "function",
+   "name": "vertical_corner_predicate",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "lineRange": [
+    296,
+    322
+   ],
+   "summary": "Predykat wybierający pionowe krawędzie narożników do zaokrąglenia.",
+   "tags": [
+    "predicate",
+    "corner",
+    "topology"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:hole_mouth_predicate",
+   "type": "function",
+   "name": "hole_mouth_predicate",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "lineRange": [
+    325,
+    349
+   ],
+   "summary": "Predykat wybierający krawędzie wlotów otworów do fazowania.",
+   "tags": [
+    "predicate",
+    "hole",
+    "topology"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:operation_predicate",
+   "type": "function",
+   "name": "operation_predicate",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "lineRange": [
+    352,
+    380
+   ],
+   "summary": "Dobiera predykat krawędzi dla wskazanej operacji obróbkowej.",
+   "tags": [
+    "predicate",
+    "dispatch",
+    "cnc"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:apply_treatment",
+   "type": "function",
+   "name": "apply_treatment",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "lineRange": [
+    383,
+    448
+   ],
+   "summary": "Stosuje fillet lub chamfer na wybranych krawędziach i weryfikuje powstałą cechę.",
+   "tags": [
+    "fillet",
+    "chamfer",
+    "feature"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:create_centered_slot",
+   "type": "function",
+   "name": "create_centered_slot",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "lineRange": [
+    451,
+    480
+   ],
+   "summary": "Tworzy wyśrodkowaną szczelinę jako szkic i wycięcie.",
+   "tags": [
+    "slot",
+    "sketch",
+    "cut"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:collect_feature_evidence",
+   "type": "function",
+   "name": "collect_feature_evidence",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "lineRange": [
+    483,
+    505
+   ],
+   "summary": "Zbiera dowody utrwalenia cech z drzewa FeatureManager.",
+   "tags": [
+    "evidence",
+    "verification",
+    "feature-tree"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:build_model",
+   "type": "function",
+   "name": "build_model",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "lineRange": [
+    508,
+    698
+   ],
+   "summary": "Główny przebieg budowy modelu uchwytu: płyta, otwory, szczelina, obróbki krawędzi i dowody.",
+   "tags": [
+    "orchestration",
+    "model-build",
+    "cnc"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:parse_args",
+   "type": "function",
+   "name": "parse_args",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "lineRange": [
+    701,
+    736
+   ],
+   "summary": "Parsuje argumenty wiersza poleceń skryptu.",
+   "tags": [
+    "cli",
+    "argparse"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "lineRange": [
+    758,
+    786
+   ],
+   "summary": "Punkt wejścia: parametry, plan operacji i budowa modelu.",
+   "tags": [
+    "entry-point",
+    "cli"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs",
+   "type": "file",
+   "name": "HoldLineBridge.cs",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs",
+   "summary": "Most w C# wywołujący SolidWorks API do utworzenia fillet z linią podtrzymania (hold line), z wyszukiwaniem unikalnych ścian i krawędzi oraz wynikiem w JSON.",
+   "tags": [
+    "csharp",
+    "com-interop",
+    "fillet",
+    "hold-line",
+    "bridge"
+   ],
+   "complexity": "complex",
+   "languageNotes": "Aplikacja konsolowa C# korzystająca z interopu COM SolidWorks."
+  },
+  {
+   "id": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs:HoldLineBridge",
+   "type": "class",
+   "name": "HoldLineBridge",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs",
+   "lineRange": [
+    14,
+    323
+   ],
+   "summary": "Klasa statyczna mostu: tworzy fillet z hold line i serializuje wynik do JSON.",
+   "tags": [
+    "bridge",
+    "fillet",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs:CreateHoldLineFillet",
+   "type": "function",
+   "name": "CreateHoldLineFillet",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs",
+   "lineRange": [
+    52,
+    199
+   ],
+   "summary": "Odnajduje ściany i krawędzie, buduje dane fillet z hold line i tworzy cechę.",
+   "tags": [
+    "fillet",
+    "hold-line",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs:FindUniqueFace",
+   "type": "function",
+   "name": "FindUniqueFace",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs",
+   "lineRange": [
+    202,
+    218
+   ],
+   "summary": "Znajduje jedyną ścianę spełniającą kryterium lub zgłasza błąd.",
+   "tags": [
+    "topology",
+    "face",
+    "lookup"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs:FindUniqueEdge",
+   "type": "function",
+   "name": "FindUniqueEdge",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs",
+   "lineRange": [
+    221,
+    242
+   ],
+   "summary": "Znajduje jedyną krawędź spełniającą kryterium lub zgłasza błąd.",
+   "tags": [
+    "topology",
+    "edge",
+    "lookup"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs:ToJson",
+   "type": "function",
+   "name": "ToJson",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs",
+   "lineRange": [
+    285,
+    322
+   ],
+   "summary": "Serializuje wynik operacji do tekstu JSON.",
+   "tags": [
+    "json",
+    "serialization"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp",
+   "type": "file",
+   "name": "NativeHoldLineAddin.cpp",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp",
+   "summary": "Natywny add-in C++ uruchamiający przygotowaną operację hold line z timera, odczytujący plik zadania i zapisujący wynik JSON.",
+   "tags": [
+    "cpp",
+    "addin",
+    "native",
+    "hold-line",
+    "com"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp:ReadResultPath",
+   "type": "function",
+   "name": "ReadResultPath",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp",
+   "lineRange": [
+    62,
+    88
+   ],
+   "summary": "Odczytuje z pliku zadania ścieżkę pliku wyniku.",
+   "tags": [
+    "file-io",
+    "parsing"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp:JsonString",
+   "type": "function",
+   "name": "JsonString",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp",
+   "lineRange": [
+    91,
+    118
+   ],
+   "summary": "Escapuje ciąg znaków do literału JSON.",
+   "tags": [
+    "json",
+    "escaping"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp:PreparedHoldLineTimerProc",
+   "type": "function",
+   "name": "PreparedHoldLineTimerProc",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp",
+   "lineRange": [
+    150,
+    185
+   ],
+   "summary": "Procedura timera wykonująca przygotowaną operację hold line i zapisująca wynik.",
+   "tags": [
+    "timer",
+    "callback",
+    "hold-line"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.def",
+   "type": "file",
+   "name": "NativeHoldLineAddin.def",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.def",
+   "summary": "Plik definicji eksportów DLL natywnego add-inu hold line.",
+   "tags": [
+    "native",
+    "dll-exports",
+    "addin"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineMacro.swb",
+   "type": "file",
+   "name": "NativeHoldLineMacro.swb",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineMacro.swb",
+   "summary": "Makro SolidWorks (VBA) uruchamiające natywny add-in hold line.",
+   "tags": [
+    "macro",
+    "vba",
+    "solidworks",
+    "native"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py",
+   "type": "file",
+   "name": "verify_open_source_complex_case.py",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py",
+   "summary": "Skrypt weryfikacyjny pobierający przypięty model open source, sprawdzający złożoność topologii i wykonujący złożone fazowanie szerokość-szerokość w SolidWorks.",
+   "tags": [
+    "verification",
+    "open-source",
+    "chamfer",
+    "solidworks",
+    "cli"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py:fetch_pinned_source",
+   "type": "function",
+   "name": "fetch_pinned_source",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py",
+   "lineRange": [
+    71,
+    96
+   ],
+   "summary": "Pobiera przypięty plik źródłowy i weryfikuje jego integralność.",
+   "tags": [
+    "download",
+    "integrity",
+    "security"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py:topology_counts",
+   "type": "function",
+   "name": "topology_counts",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py",
+   "lineRange": [
+    99,
+    121
+   ],
+   "summary": "Liczy ściany, krawędzie i inne elementy topologii modelu.",
+   "tags": [
+    "topology",
+    "metrics"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py:edge_signature",
+   "type": "function",
+   "name": "edge_signature",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py",
+   "lineRange": [
+    146,
+    170
+   ],
+   "summary": "Wylicza sygnaturę krawędzi do jej jednoznacznego wyboru.",
+   "tags": [
+    "edge",
+    "geometry"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py:apply_complex_width_width_chamfer",
+   "type": "function",
+   "name": "apply_complex_width_width_chamfer",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py",
+   "lineRange": [
+    173,
+    229
+   ],
+   "summary": "Wykonuje fazowanie szerokość-szerokość na złożonym zestawie krawędzi.",
+   "tags": [
+    "chamfer",
+    "feature",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py:run_solidworks_case",
+   "type": "function",
+   "name": "run_solidworks_case",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py",
+   "lineRange": [
+    242,
+    311
+   ],
+   "summary": "Uruchamia pełny przypadek w SolidWorks i zbiera dowody.",
+   "tags": [
+    "orchestration",
+    "solidworks",
+    "verification"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py",
+   "lineRange": [
+    324,
+    338
+   ],
+   "summary": "Punkt wejścia CLI weryfikacji.",
+   "tags": [
+    "entry-point",
+    "cli"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:subskills/solidworks-threaded-holes/agents/openai.yaml",
+   "type": "config",
+   "name": "openai.yaml",
+   "filePath": "subskills/solidworks-threaded-holes/agents/openai.yaml",
+   "summary": "Konfiguracja interfejsu agenta dla podumiejętności gwintowanych otworów.",
+   "tags": [
+    "configuration",
+    "agent",
+    "interface"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:subskills/solidworks-threaded-holes/references/threaded-hole-lessons.md",
+   "type": "document",
+   "name": "threaded-hole-lessons.md",
+   "filePath": "subskills/solidworks-threaded-holes/references/threaded-hole-lessons.md",
+   "summary": "Wnioski z testów gwintowanych otworów w SolidWorks: podstawy API, warunki zakończenia, walidacja parametrów i dowody trwałości cech.",
+   "tags": [
+    "documentation",
+    "threaded-holes",
+    "lessons",
+    "solidworks"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "document:subskills/solidworks-threaded-holes/references/threaded-hole-roadmap.md",
+   "type": "document",
+   "name": "threaded-hole-roadmap.md",
+   "filePath": "subskills/solidworks-threaded-holes/references/threaded-hole-roadmap.md",
+   "summary": "Mapa drogowa rozszerzeń gwintowanych otworów z priorytetami P0-P2, w tym Hole Wizard i modyfikacja istniejących części.",
+   "tags": [
+    "documentation",
+    "roadmap",
+    "threaded-holes"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "type": "file",
+   "name": "create_threaded_hole_template.py",
+   "filePath": "subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "summary": "Skrypt CLI tworzący blok z gwintowanym otworem w SolidWorks: rozwiązanie specyfikacji gwintu, otwór, fazka, gwint rzeczywisty lub kosmetyczny, spirala dowodowa i weryfikacja.",
+   "tags": [
+    "threaded-hole",
+    "solidworks",
+    "cli",
+    "com-automation",
+    "verification"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "class:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:ThreadedHoleParams",
+   "type": "class",
+   "name": "ThreadedHoleParams",
+   "filePath": "subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "lineRange": [
+    75,
+    94
+   ],
+   "summary": "Dataclass z parametrami gwintowanego otworu.",
+   "tags": [
+    "dataclass",
+    "parameters",
+    "thread"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:normalize_thread_key",
+   "type": "function",
+   "name": "normalize_thread_key",
+   "filePath": "subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "lineRange": [
+    97,
+    114
+   ],
+   "summary": "Normalizuje oznaczenie gwintu do klucza wyszukiwania.",
+   "tags": [
+    "thread",
+    "normalization"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:resolve_thread_spec",
+   "type": "function",
+   "name": "resolve_thread_spec",
+   "filePath": "subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "lineRange": [
+    117,
+    141
+   ],
+   "summary": "Rozwiązuje specyfikację gwintu (średnica, skok, wiertło).",
+   "tags": [
+    "thread",
+    "lookup"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:locate_hole_mouth_edge",
+   "type": "function",
+   "name": "locate_hole_mouth_edge",
+   "filePath": "subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "lineRange": [
+    317,
+    340
+   ],
+   "summary": "Lokalizuje krawędź wlotu otworu w modelu.",
+   "tags": [
+    "topology",
+    "edge",
+    "hole"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:add_real_thread_feature",
+   "type": "function",
+   "name": "add_real_thread_feature",
+   "filePath": "subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "lineRange": [
+    360,
+    406
+   ],
+   "summary": "Dodaje rzeczywistą cechę gwintu SolidWorks.",
+   "tags": [
+    "thread",
+    "feature",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:add_cosmetic_thread_feature",
+   "type": "function",
+   "name": "add_cosmetic_thread_feature",
+   "filePath": "subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "lineRange": [
+    409,
+    431
+   ],
+   "summary": "Dodaje kosmetyczny gwint do otworu.",
+   "tags": [
+    "thread",
+    "cosmetic",
+    "feature"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:add_visible_thread_helix",
+   "type": "function",
+   "name": "add_visible_thread_helix",
+   "filePath": "subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "lineRange": [
+    452,
+    499
+   ],
+   "summary": "Rysuje widoczną spiralę gwintu jako dowód wizualny.",
+   "tags": [
+    "helix",
+    "evidence",
+    "sketch"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:build_params",
+   "type": "function",
+   "name": "build_params",
+   "filePath": "subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "lineRange": [
+    517,
+    588
+   ],
+   "summary": "Buduje i waliduje parametry otworu z argumentów.",
+   "tags": [
+    "validation",
+    "parameters"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:collect_thread_feature_evidence",
+   "type": "function",
+   "name": "collect_thread_feature_evidence",
+   "filePath": "subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "lineRange": [
+    591,
+    628
+   ],
+   "summary": "Zbiera dowody utrwalenia cech gwintu.",
+   "tags": [
+    "evidence",
+    "verification"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:create_threaded_hole_block",
+   "type": "function",
+   "name": "create_threaded_hole_block",
+   "filePath": "subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "lineRange": [
+    642,
+    765
+   ],
+   "summary": "Główny przebieg tworzenia bloku z gwintowanym otworem.",
+   "tags": [
+    "orchestration",
+    "model-build"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:parse_args",
+   "type": "function",
+   "name": "parse_args",
+   "filePath": "subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "lineRange": [
+    768,
+    798
+   ],
+   "summary": "Parsuje argumenty CLI.",
+   "tags": [
+    "cli",
+    "argparse"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "lineRange": [
+    801,
+    808
+   ],
+   "summary": "Punkt wejścia skryptu.",
+   "tags": [
+    "entry-point",
+    "cli"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:subskills/solidworks-vibecad/knowledge/manufacturing_rules.yaml",
+   "type": "config",
+   "name": "manufacturing_rules.yaml",
+   "filePath": "subskills/solidworks-vibecad/knowledge/manufacturing_rules.yaml",
+   "summary": "Baza reguł produkcyjnych: wiertła pod gwinty, domyślne ustawienia CNC, kolejność cech i wymagania przeglądu.",
+   "tags": [
+    "configuration",
+    "knowledge-base",
+    "manufacturing",
+    "cnc"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "document:subskills/solidworks-vibecad/prompts/solidworks_parametric_planner.md",
+   "type": "document",
+   "name": "solidworks_parametric_planner.md",
+   "filePath": "subskills/solidworks-vibecad/prompts/solidworks_parametric_planner.md",
+   "summary": "Prompt planisty parametrycznego: wejścia, wymagania wyjścia, zasady planowania i zakazy dla planu JSON.",
+   "tags": [
+    "prompt",
+    "planning",
+    "documentation",
+    "vibecad"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:subskills/solidworks-vibecad/references/vibecad-roadmap.md",
+   "type": "document",
+   "name": "vibecad-roadmap.md",
+   "filePath": "subskills/solidworks-vibecad/references/vibecad-roadmap.md",
+   "summary": "Mapa drogowa VibeCAD w czterech etapach: pętla planu, wykonawca SolidWorks, rozbudowa bazy wiedzy i interfejs.",
+   "tags": [
+    "documentation",
+    "roadmap",
+    "vibecad"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "config:subskills/solidworks-vibecad/schemas/design_plan.schema.json",
+   "type": "config",
+   "name": "design_plan.schema.json",
+   "filePath": "subskills/solidworks-vibecad/schemas/design_plan.schema.json",
+   "summary": "Schemat JSON planu projektowego walidujący strukturę wyjścia planisty.",
+   "tags": [
+    "schema",
+    "json-schema",
+    "validation",
+    "design-plan"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:subskills/solidworks-vibecad/scripts/plan_from_brief.py",
+   "type": "file",
+   "name": "plan_from_brief.py",
+   "filePath": "subskills/solidworks-vibecad/scripts/plan_from_brief.py",
+   "summary": "Generuje plan projektowy JSON z krótkiego opisu tekstowego: parsuje wymiary, gwinty, promienie i fazki.",
+   "tags": [
+    "planning",
+    "parsing",
+    "cli",
+    "vibecad"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-vibecad/scripts/plan_from_brief.py:parse_triplet_mm",
+   "type": "function",
+   "name": "parse_triplet_mm",
+   "filePath": "subskills/solidworks-vibecad/scripts/plan_from_brief.py",
+   "lineRange": [
+    27,
+    35
+   ],
+   "summary": "Parsuje trójkę wymiarów w mm z tekstu.",
+   "tags": [
+    "parsing",
+    "dimensions"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/solidworks-vibecad/scripts/plan_from_brief.py:build_plan",
+   "type": "function",
+   "name": "build_plan",
+   "filePath": "subskills/solidworks-vibecad/scripts/plan_from_brief.py",
+   "lineRange": [
+    59,
+    229
+   ],
+   "summary": "Buduje pełny plan projektowy z opisu.",
+   "tags": [
+    "planning",
+    "orchestration"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/solidworks-vibecad/scripts/plan_from_brief.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "subskills/solidworks-vibecad/scripts/plan_from_brief.py",
+   "lineRange": [
+    238,
+    255
+   ],
+   "summary": "Punkt wejścia CLI.",
+   "tags": [
+    "entry-point",
+    "cli"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:subskills/solidworks-vibecad/scripts/sw_execution_outline.py",
+   "type": "file",
+   "name": "sw_execution_outline.py",
+   "filePath": "subskills/solidworks-vibecad/scripts/sw_execution_outline.py",
+   "summary": "Zamienia plan projektowy JSON na zarys wykonania w SolidWorks zapisany jako Markdown.",
+   "tags": [
+    "planning",
+    "markdown-generation",
+    "cli",
+    "vibecad"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-vibecad/scripts/sw_execution_outline.py:build_outline",
+   "type": "function",
+   "name": "build_outline",
+   "filePath": "subskills/solidworks-vibecad/scripts/sw_execution_outline.py",
+   "lineRange": [
+    36,
+    73
+   ],
+   "summary": "Buduje strukturę zarysu wykonania z planu.",
+   "tags": [
+    "planning",
+    "outline"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-vibecad/scripts/sw_execution_outline.py:write_markdown",
+   "type": "function",
+   "name": "write_markdown",
+   "filePath": "subskills/solidworks-vibecad/scripts/sw_execution_outline.py",
+   "lineRange": [
+    76,
+    99
+   ],
+   "summary": "Zapisuje zarys jako plik Markdown.",
+   "tags": [
+    "markdown",
+    "file-io"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/solidworks-vibecad/scripts/sw_execution_outline.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "subskills/solidworks-vibecad/scripts/sw_execution_outline.py",
+   "lineRange": [
+    102,
+    113
+   ],
+   "summary": "Punkt wejścia CLI.",
+   "tags": [
+    "entry-point",
+    "cli"
+   ],
+   "complexity": "simple"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:cut",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:edge_signature",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:select_exact_edges",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:vertical_corner_predicate",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:hole_mouth_predicate",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:operation_predicate",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:apply_treatment",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:create_centered_slot",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:collect_feature_evidence",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:build_model",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:parse_args",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs",
+   "target": "class:subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs:HoldLineBridge",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs:CreateHoldLineFillet",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs:FindUniqueFace",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs:FindUniqueEdge",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs:ToJson",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp:ReadResultPath",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp:JsonString",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp:PreparedHoldLineTimerProc",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py:fetch_pinned_source",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py:topology_counts",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py:edge_signature",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py:apply_complex_width_width_chamfer",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py:run_solidworks_case",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "target": "class:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:ThreadedHoleParams",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "target": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:normalize_thread_key",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "target": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:resolve_thread_spec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "target": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:locate_hole_mouth_edge",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "target": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:add_real_thread_feature",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "target": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:add_cosmetic_thread_feature",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "target": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:add_visible_thread_helix",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "target": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:build_params",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "target": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:collect_thread_feature_evidence",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "target": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:create_threaded_hole_block",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "target": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:parse_args",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "target": "function:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-vibecad/scripts/plan_from_brief.py",
+   "target": "function:subskills/solidworks-vibecad/scripts/plan_from_brief.py:parse_triplet_mm",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-vibecad/scripts/plan_from_brief.py",
+   "target": "function:subskills/solidworks-vibecad/scripts/plan_from_brief.py:build_plan",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-vibecad/scripts/plan_from_brief.py",
+   "target": "function:subskills/solidworks-vibecad/scripts/plan_from_brief.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-vibecad/scripts/sw_execution_outline.py",
+   "target": "function:subskills/solidworks-vibecad/scripts/sw_execution_outline.py:build_outline",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-vibecad/scripts/sw_execution_outline.py",
+   "target": "function:subskills/solidworks-vibecad/scripts/sw_execution_outline.py:write_markdown",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-vibecad/scripts/sw_execution_outline.py",
+   "target": "function:subskills/solidworks-vibecad/scripts/sw_execution_outline.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+   "target": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py:build_model",
+   "target": "function:subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py:build_operation_plan",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "document:subskills/solidworks-vibecad/prompts/solidworks_parametric_planner.md",
+   "target": "config:subskills/solidworks-vibecad/schemas/design_plan.schema.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:subskills/solidworks-vibecad/schemas/design_plan.schema.json",
+   "target": "file:subskills/solidworks-vibecad/scripts/plan_from_brief.py",
+   "type": "defines_schema",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "config:subskills/solidworks-vibecad/knowledge/manufacturing_rules.yaml",
+   "target": "file:subskills/solidworks-vibecad/scripts/plan_from_brief.py",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:subskills/solidworks-vibecad/scripts/sw_execution_outline.py",
+   "target": "config:subskills/solidworks-vibecad/schemas/design_plan.schema.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:subskills/solidworks-threaded-holes/references/threaded-hole-lessons.md",
+   "target": "file:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:subskills/solidworks-threaded-holes/references/threaded-hole-roadmap.md",
+   "target": "file:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:subskills/solidworks-threaded-holes/agents/openai.yaml",
+   "target": "file:subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "document:subskills/solidworks-vibecad/references/vibecad-roadmap.md",
+   "target": "file:subskills/solidworks-vibecad/scripts/plan_from_brief.py",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs",
+   "target": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineMacro.swb",
+   "target": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.def",
+   "target": "file:subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  }
+ ]
+}

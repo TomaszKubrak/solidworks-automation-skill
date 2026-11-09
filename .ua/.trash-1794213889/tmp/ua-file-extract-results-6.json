@@ -1,0 +1,674 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 5,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 5,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 5,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "apps/workbench-ui/src/components/AppUpdatePanel.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 144,
+      "nonEmptyLines": 135,
+      "functions": [
+        {
+          "name": "AppUpdatePanel",
+          "startLine": 16,
+          "endLine": 144,
+          "params": [
+            "{ expanded }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AppUpdatePanel",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "useState",
+          "lineNumber": 17
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "useState",
+          "lineNumber": 18
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "useState",
+          "lineNumber": 19
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "useState",
+          "lineNumber": 20
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "useState",
+          "lineNumber": 21
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "useState",
+          "lineNumber": 22
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "useState",
+          "lineNumber": 23
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "useRef",
+          "lineNumber": 24
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "useRef",
+          "lineNumber": 25
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "useRef",
+          "lineNumber": 26
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "useCallback",
+          "lineNumber": 28
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "current.close().catch",
+          "lineNumber": 31
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "current.close",
+          "lineNumber": 31
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "useCallback",
+          "lineNumber": 34
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "isTauriRuntime",
+          "lineNumber": 35
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setDismissed",
+          "lineNumber": 37
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setStatus",
+          "lineNumber": 38
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setMessage",
+          "lineNumber": 39
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setAvailableVersion",
+          "lineNumber": 40
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setReleaseNotes",
+          "lineNumber": 41
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setProgress",
+          "lineNumber": 42
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "closeCurrentUpdate",
+          "lineNumber": 44
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "check",
+          "lineNumber": 45
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "nextUpdate?.close().catch",
+          "lineNumber": 47
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "nextUpdate?.close",
+          "lineNumber": 47
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setAvailableVersion",
+          "lineNumber": 51
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setStatus",
+          "lineNumber": 52
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setMessage",
+          "lineNumber": 53
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setAvailableVersion",
+          "lineNumber": 57
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setReleaseNotes",
+          "lineNumber": 58
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "nextUpdate.body?.trim",
+          "lineNumber": 58
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setStatus",
+          "lineNumber": 59
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setMessage",
+          "lineNumber": 60
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "String",
+          "lineNumber": 63
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setStatus",
+          "lineNumber": 64
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setMessage",
+          "lineNumber": 65
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "useCallback",
+          "lineNumber": 71
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "checkForUpdates",
+          "lineNumber": 74
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setStatus",
+          "lineNumber": 77
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setProgress",
+          "lineNumber": 78
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setMessage",
+          "lineNumber": 79
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "update.downloadAndInstall",
+          "lineNumber": 82
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "updateDownloadProgress",
+          "lineNumber": 83
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setProgress",
+          "lineNumber": 84
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setStatus",
+          "lineNumber": 86
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setMessage",
+          "lineNumber": 87
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setStatus",
+          "lineNumber": 91
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setMessage",
+          "lineNumber": 92
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "String",
+          "lineNumber": 92
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "useEffect",
+          "lineNumber": 96
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "isTauriRuntime",
+          "lineNumber": 99
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setCurrentVersion",
+          "lineNumber": 100
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setMessage",
+          "lineNumber": 101
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "getVersion().then(setCurrentVersion).catch",
+          "lineNumber": 103
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "getVersion().then",
+          "lineNumber": 103
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "getVersion",
+          "lineNumber": 103
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setCurrentVersion",
+          "lineNumber": 103
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "window.setTimeout",
+          "lineNumber": 104
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "checkForUpdates",
+          "lineNumber": 104
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "window.clearTimeout",
+          "lineNumber": 108
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "closeCurrentUpdate",
+          "lineNumber": 109
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "installUpdate",
+          "lineNumber": 135
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "isTauriRuntime",
+          "lineNumber": 136
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "checkForUpdates",
+          "lineNumber": 136
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "invoke(\"open_external_download\", { url: RELEASES_URL }).catch",
+          "lineNumber": 139
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "invoke",
+          "lineNumber": 139
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setMessage",
+          "lineNumber": 139
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "String",
+          "lineNumber": 139
+        },
+        {
+          "caller": "AppUpdatePanel",
+          "callee": "setDismissed",
+          "lineNumber": 140
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "apps/workbench-ui/src/domain/updateProgress.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 20,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "apps/workbench-ui/src/domain/updateProgress.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 25,
+      "nonEmptyLines": 24,
+      "functions": [
+        {
+          "name": "updateDownloadProgress",
+          "startLine": 10,
+          "endLine": 25,
+          "params": [
+            "current",
+            "event"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "updateDownloadProgress",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "updateDownloadProgress",
+          "callee": "Math.max",
+          "lineNumber": 20
+        },
+        {
+          "caller": "updateDownloadProgress",
+          "callee": "Math.max",
+          "lineNumber": 20
+        },
+        {
+          "caller": "updateDownloadProgress",
+          "callee": "Math.min",
+          "lineNumber": 22
+        },
+        {
+          "caller": "updateDownloadProgress",
+          "callee": "Math.round",
+          "lineNumber": 22
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "apps/workbench-ui/src/persistence.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 83,
+      "nonEmptyLines": 67,
+      "functions": [
+        {
+          "name": "installDesktopStorage",
+          "startLine": 8,
+          "endLine": 18,
+          "params": [
+            "initial"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "installDesktopStorage",
+          "callee": "Object.entries",
+          "lineNumber": 9
+        },
+        {
+          "caller": "installDesktopStorage",
+          "callee": "vi.fn",
+          "lineNumber": 11
+        },
+        {
+          "caller": "installDesktopStorage",
+          "callee": "values.get",
+          "lineNumber": 11
+        },
+        {
+          "caller": "installDesktopStorage",
+          "callee": "vi.fn",
+          "lineNumber": 12
+        },
+        {
+          "caller": "installDesktopStorage",
+          "callee": "values.set",
+          "lineNumber": 12
+        },
+        {
+          "caller": "installDesktopStorage",
+          "callee": "vi.fn",
+          "lineNumber": 13
+        },
+        {
+          "caller": "installDesktopStorage",
+          "callee": "values.delete",
+          "lineNumber": 13
+        },
+        {
+          "caller": "installDesktopStorage",
+          "callee": "vi.stubGlobal",
+          "lineNumber": 15
+        },
+        {
+          "caller": "installDesktopStorage",
+          "callee": "vi.stubGlobal",
+          "lineNumber": 16
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "apps/workbench-ui/src/persistence.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 81,
+      "nonEmptyLines": 72,
+      "functions": [
+        {
+          "name": "isTauriRuntime",
+          "startLine": 15,
+          "endLine": 17,
+          "params": []
+        },
+        {
+          "name": "parsePersistedJson",
+          "startLine": 22,
+          "endLine": 29,
+          "params": [
+            "raw"
+          ]
+        },
+        {
+          "name": "readPersistedState",
+          "startLine": 34,
+          "endLine": 61,
+          "params": [
+            "namespace",
+            "legacyKey"
+          ]
+        },
+        {
+          "name": "writePersistedState",
+          "startLine": 66,
+          "endLine": 81,
+          "params": [
+            "namespace",
+            "legacyKey",
+            "payload"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "isTauriRuntime",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "parsePersistedJson",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "readPersistedState",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "writePersistedState",
+          "line": 66,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "parsePersistedJson",
+          "callee": "JSON.parse",
+          "lineNumber": 25
+        },
+        {
+          "caller": "readPersistedState",
+          "callee": "localStorage.getItem",
+          "lineNumber": 35
+        },
+        {
+          "caller": "readPersistedState",
+          "callee": "parsePersistedJson",
+          "lineNumber": 36
+        },
+        {
+          "caller": "readPersistedState",
+          "callee": "isTauriRuntime",
+          "lineNumber": 37
+        },
+        {
+          "caller": "readPersistedState",
+          "callee": "invoke",
+          "lineNumber": 45
+        },
+        {
+          "caller": "readPersistedState",
+          "callee": "localStorage.setItem",
+          "lineNumber": 46
+        },
+        {
+          "caller": "readPersistedState",
+          "callee": "localStorage.removeItem",
+          "lineNumber": 47
+        },
+        {
+          "caller": "readPersistedState",
+          "callee": "await invoke",
+          "lineNumber": 55
+        },
+        {
+          "caller": "writePersistedState",
+          "callee": "JSON.stringify",
+          "lineNumber": 67
+        },
+        {
+          "caller": "writePersistedState",
+          "callee": "isTauriRuntime",
+          "lineNumber": 68
+        },
+        {
+          "caller": "writePersistedState",
+          "callee": "localStorage.setItem",
+          "lineNumber": 69
+        },
+        {
+          "caller": "writePersistedState",
+          "callee": "invoke",
+          "lineNumber": 74
+        },
+        {
+          "caller": "writePersistedState",
+          "callee": "localStorage.removeItem",
+          "lineNumber": 75
+        },
+        {
+          "caller": "writePersistedState",
+          "callee": "localStorage.setItem",
+          "lineNumber": 78
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    }
+  ]
+}

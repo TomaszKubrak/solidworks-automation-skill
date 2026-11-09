@@ -1,0 +1,35 @@
+{
+ "projectRoot": "/Users/tomasz/Developer/solidworks-automation-skill",
+ "batchFiles": [
+  {
+   "path": "mcp-server/README.md",
+   "language": "markdown",
+   "sizeLines": 434,
+   "fileCategory": "docs"
+  },
+  {
+   "path": "mcp-server/register_all_ai_mcp.ps1",
+   "language": "powershell",
+   "sizeLines": 48,
+   "fileCategory": "script"
+  },
+  {
+   "path": "mcp-server/register_codex_mcp.ps1",
+   "language": "powershell",
+   "sizeLines": 94,
+   "fileCategory": "script"
+  },
+  {
+   "path": "mcp-server/requirements.txt",
+   "language": "txt",
+   "sizeLines": 6,
+   "fileCategory": "docs"
+  }
+ ],
+ "batchImportData": {
+  "mcp-server/README.md": [],
+  "mcp-server/register_all_ai_mcp.ps1": [],
+  "mcp-server/register_codex_mcp.ps1": [],
+  "mcp-server/requirements.txt": []
+ }
+}

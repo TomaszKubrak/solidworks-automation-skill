@@ -1,0 +1,696 @@
+{
+ "nodes": [
+  {
+   "id": "file:subskills/autocad-automation/scripts/acad_draw.py",
+   "type": "file",
+   "name": "acad_draw.py",
+   "filePath": "subskills/autocad-automation/scripts/acad_draw.py",
+   "summary": "Skrypt CLI rysujący w AutoCAD na podstawie briefu JSON; obsługuje tryb dry-run i opcjonalny tryb live przez AutoCADSession.",
+   "tags": [
+    "cli",
+    "autocad",
+    "drawing",
+    "json-brief"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_draw.py:load_brief",
+   "type": "function",
+   "name": "load_brief",
+   "filePath": "subskills/autocad-automation/scripts/acad_draw.py",
+   "lineRange": [
+    16,
+    22
+   ],
+   "summary": "Wczytuje i waliduje brief JSON z dysku.",
+   "tags": [
+    "json",
+    "io"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_draw.py:draw_entity",
+   "type": "function",
+   "name": "draw_entity",
+   "filePath": "subskills/autocad-automation/scripts/acad_draw.py",
+   "lineRange": [
+    25,
+    67
+   ],
+   "summary": "Rozdziela encję z briefu na odpowiednie wywołanie rysujące sesji AutoCAD.",
+   "tags": [
+    "dispatch",
+    "drawing"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_draw.py:_is_live_enabled",
+   "type": "function",
+   "name": "_is_live_enabled",
+   "filePath": "subskills/autocad-automation/scripts/acad_draw.py",
+   "lineRange": [
+    70,
+    74
+   ],
+   "summary": "Sprawdza, czy tryb live jest włączony.",
+   "tags": [
+    "guard",
+    "config"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_draw.py:run",
+   "type": "function",
+   "name": "run",
+   "filePath": "subskills/autocad-automation/scripts/acad_draw.py",
+   "lineRange": [
+    77,
+    129
+   ],
+   "summary": "Główny przebieg rysowania: warstwy, encje, zapis i eksport według briefu.",
+   "tags": [
+    "workflow",
+    "drawing"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_draw.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "subskills/autocad-automation/scripts/acad_draw.py",
+   "lineRange": [
+    132,
+    146
+   ],
+   "summary": "Punkt wejścia CLI parsujący argumenty.",
+   "tags": [
+    "entry-point",
+    "cli"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:subskills/autocad-automation/scripts/acad_preview.py",
+   "type": "file",
+   "name": "acad_preview.py",
+   "filePath": "subskills/autocad-automation/scripts/acad_preview.py",
+   "summary": "Eksportuje podgląd bieżącego rysunku AutoCAD do BMP/PNG na potrzeby wizualnej pętli przeglądu.",
+   "tags": [
+    "preview",
+    "autocad",
+    "image-conversion",
+    "cli"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_preview.py:convert_bmp_to_png",
+   "type": "function",
+   "name": "convert_bmp_to_png",
+   "filePath": "subskills/autocad-automation/scripts/acad_preview.py",
+   "lineRange": [
+    17,
+    75
+   ],
+   "summary": "Konwertuje podgląd BMP na PNG za pomocą dostępnych narzędzi.",
+   "tags": [
+    "image-conversion",
+    "subprocess"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_preview.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "subskills/autocad-automation/scripts/acad_preview.py",
+   "lineRange": [
+    78,
+    111
+   ],
+   "summary": "Punkt wejścia CLI generujący podgląd.",
+   "tags": [
+    "entry-point",
+    "cli"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:subskills/autocad-automation/scripts/acad_review.py",
+   "type": "file",
+   "name": "acad_review.py",
+   "filePath": "subskills/autocad-automation/scripts/acad_review.py",
+   "summary": "Weryfikuje aktywny rysunek AutoCAD: zlicza encje, warstwy i oblicza bounding box.",
+   "tags": [
+    "review",
+    "autocad",
+    "validation",
+    "cli"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_review.py:_safe_getattr",
+   "type": "function",
+   "name": "_safe_getattr",
+   "filePath": "subskills/autocad-automation/scripts/acad_review.py",
+   "lineRange": [
+    17,
+    22
+   ],
+   "summary": "Bezpieczny odczyt atrybutu COM z obsługą wyjątków.",
+   "tags": [
+    "utility",
+    "com"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_review.py:_entity_bbox",
+   "type": "function",
+   "name": "_entity_bbox",
+   "filePath": "subskills/autocad-automation/scripts/acad_review.py",
+   "lineRange": [
+    25,
+    31
+   ],
+   "summary": "Pobiera bounding box encji.",
+   "tags": [
+    "geometry",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_review.py:_merge_bbox",
+   "type": "function",
+   "name": "_merge_bbox",
+   "filePath": "subskills/autocad-automation/scripts/acad_review.py",
+   "lineRange": [
+    34,
+    45
+   ],
+   "summary": "Łączy bounding boxy w jeden.",
+   "tags": [
+    "geometry",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_review.py:review_active",
+   "type": "function",
+   "name": "review_active",
+   "filePath": "subskills/autocad-automation/scripts/acad_review.py",
+   "lineRange": [
+    48,
+    82
+   ],
+   "summary": "Przegląda aktywny dokument i zwraca statystyki encji, warstw oraz zakres.",
+   "tags": [
+    "review",
+    "analysis"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_review.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "subskills/autocad-automation/scripts/acad_review.py",
+   "lineRange": [
+    85,
+    106
+   ],
+   "summary": "Punkt wejścia CLI przeglądu.",
+   "tags": [
+    "entry-point",
+    "cli"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:subskills/autocad-automation/scripts/acad_session.py",
+   "type": "file",
+   "name": "acad_session.py",
+   "filePath": "subskills/autocad-automation/scripts/acad_session.py",
+   "summary": "Cienka warstwa COM nad AutoCAD: połączenie, dokumenty, warstwy, encje, wymiary, eksport oraz bezpieczne zamykanie własnej instancji.",
+   "tags": [
+    "autocad",
+    "com-wrapper",
+    "session",
+    "windows"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "class:subskills/autocad-automation/scripts/acad_session.py:AutoCADSession",
+   "type": "class",
+   "name": "AutoCADSession",
+   "filePath": "subskills/autocad-automation/scripts/acad_session.py",
+   "lineRange": [
+    170,
+    760
+   ],
+   "summary": "Sesja AutoCAD COM z metodami do zarządzania dokumentami, warstwami, rysowania encji, wymiarowania, eksportu DXF/BMP i zamykania instancji.",
+   "tags": [
+    "com-wrapper",
+    "session",
+    "drawing",
+    "autocad"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_session.py:_retry_com_busy",
+   "type": "function",
+   "name": "_retry_com_busy",
+   "filePath": "subskills/autocad-automation/scripts/acad_session.py",
+   "lineRange": [
+    31,
+    43
+   ],
+   "summary": "Ponawia wywołanie COM, gdy aplikacja jest zajęta.",
+   "tags": [
+    "retry",
+    "com"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_session.py:_window_process_id",
+   "type": "function",
+   "name": "_window_process_id",
+   "filePath": "subskills/autocad-automation/scripts/acad_session.py",
+   "lineRange": [
+    46,
+    54
+   ],
+   "summary": "Zwraca PID procesu okna AutoCAD.",
+   "tags": [
+    "process",
+    "win32"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_session.py:_process_is_running",
+   "type": "function",
+   "name": "_process_is_running",
+   "filePath": "subskills/autocad-automation/scripts/acad_session.py",
+   "lineRange": [
+    57,
+    71
+   ],
+   "summary": "Sprawdza, czy proces nadal działa.",
+   "tags": [
+    "process",
+    "win32"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_session.py:_wait_for_process_exit",
+   "type": "function",
+   "name": "_wait_for_process_exit",
+   "filePath": "subskills/autocad-automation/scripts/acad_session.py",
+   "lineRange": [
+    74,
+    87
+   ],
+   "summary": "Czeka na zakończenie procesu z limitem czasu.",
+   "tags": [
+    "process",
+    "timeout"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_session.py:_terminate_owned_process",
+   "type": "function",
+   "name": "_terminate_owned_process",
+   "filePath": "subskills/autocad-automation/scripts/acad_session.py",
+   "lineRange": [
+    90,
+    101
+   ],
+   "summary": "Kończy proces należący do sesji.",
+   "tags": [
+    "process",
+    "cleanup"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_session.py:require_pywin32",
+   "type": "function",
+   "name": "require_pywin32",
+   "filePath": "subskills/autocad-automation/scripts/acad_session.py",
+   "lineRange": [
+    104,
+    107
+   ],
+   "summary": "Wymusza obecność pywin32.",
+   "tags": [
+    "guard",
+    "dependency"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_session.py:mm",
+   "type": "function",
+   "name": "mm",
+   "filePath": "subskills/autocad-automation/scripts/acad_session.py",
+   "lineRange": [
+    110,
+    112
+   ],
+   "summary": "Konwersja jednostek na milimetry.",
+   "tags": [
+    "utility",
+    "units"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_session.py:acad_point",
+   "type": "function",
+   "name": "acad_point",
+   "filePath": "subskills/autocad-automation/scripts/acad_session.py",
+   "lineRange": [
+    115,
+    127
+   ],
+   "summary": "Buduje punkt COM AutoCAD.",
+   "tags": [
+    "utility",
+    "geometry"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_session.py:acad_double_array",
+   "type": "function",
+   "name": "acad_double_array",
+   "filePath": "subskills/autocad-automation/scripts/acad_session.py",
+   "lineRange": [
+    130,
+    136
+   ],
+   "summary": "Buduje tablicę double dla COM.",
+   "tags": [
+    "utility",
+    "com"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_session.py:connect_autocad",
+   "type": "function",
+   "name": "connect_autocad",
+   "filePath": "subskills/autocad-automation/scripts/acad_session.py",
+   "lineRange": [
+    139,
+    167
+   ],
+   "summary": "Łączy się z uruchomionym AutoCAD lub uruchamia nową instancję.",
+   "tags": [
+    "connection",
+    "com"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_session.py:point_tuple",
+   "type": "function",
+   "name": "point_tuple",
+   "filePath": "subskills/autocad-automation/scripts/acad_session.py",
+   "lineRange": [
+    763,
+    768
+   ],
+   "summary": "Zamienia punkt COM na krotkę.",
+   "tags": [
+    "utility",
+    "geometry"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:subskills/autocad-automation/scripts/acad_session.py:run_whitelisted_script_command",
+   "type": "function",
+   "name": "run_whitelisted_script_command",
+   "filePath": "subskills/autocad-automation/scripts/acad_session.py",
+   "lineRange": [
+    778,
+    811
+   ],
+   "summary": "Uruchamia dozwolone polecenie skryptu z kontrolą białej listy.",
+   "tags": [
+    "security",
+    "whitelist",
+    "subprocess"
+   ],
+   "complexity": "moderate"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_draw.py",
+   "target": "file:subskills/autocad-automation/scripts/acad_session.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_preview.py",
+   "target": "file:subskills/autocad-automation/scripts/acad_session.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_review.py",
+   "target": "file:subskills/autocad-automation/scripts/acad_session.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_draw.py",
+   "target": "class:subskills/autocad-automation/scripts/acad_session.py:AutoCADSession",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_preview.py",
+   "target": "class:subskills/autocad-automation/scripts/acad_session.py:AutoCADSession",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_review.py",
+   "target": "class:subskills/autocad-automation/scripts/acad_session.py:AutoCADSession",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_review.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_session.py:point_tuple",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_draw.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_draw.py:load_brief",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_draw.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_draw.py:draw_entity",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_draw.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_draw.py:_is_live_enabled",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_draw.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_draw.py:run",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_draw.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_draw.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_preview.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_preview.py:convert_bmp_to_png",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_preview.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_preview.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_review.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_review.py:_safe_getattr",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_review.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_review.py:_entity_bbox",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_review.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_review.py:_merge_bbox",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_review.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_review.py:review_active",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_review.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_review.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_session.py",
+   "target": "class:subskills/autocad-automation/scripts/acad_session.py:AutoCADSession",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_session.py",
+   "target": "class:subskills/autocad-automation/scripts/acad_session.py:AutoCADSession",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_session.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_session.py:_retry_com_busy",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_session.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_session.py:_window_process_id",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_session.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_session.py:_process_is_running",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_session.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_session.py:_wait_for_process_exit",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_session.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_session.py:_terminate_owned_process",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_session.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_session.py:require_pywin32",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_session.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_session.py:mm",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_session.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_session.py:acad_point",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_session.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_session.py:acad_double_array",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_session.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_session.py:connect_autocad",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_session.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_session.py:point_tuple",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:subskills/autocad-automation/scripts/acad_session.py",
+   "target": "function:subskills/autocad-automation/scripts/acad_session.py:run_whitelisted_script_command",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  }
+ ]
+}

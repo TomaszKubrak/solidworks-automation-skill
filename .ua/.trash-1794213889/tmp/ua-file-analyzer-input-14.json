@@ -1,0 +1,63 @@
+{
+ "projectRoot": "/Users/tomasz/Developer/solidworks-automation-skill",
+ "batchFiles": [
+  {
+   "path": "apps/desktop/cad_workbench/schemas/advanced_geometry.schema.json",
+   "language": "json",
+   "sizeLines": 35,
+   "fileCategory": "config"
+  },
+  {
+   "path": "apps/desktop/cad_workbench/schemas/advanced_surface.schema.json",
+   "language": "json",
+   "sizeLines": 65,
+   "fileCategory": "config"
+  },
+  {
+   "path": "apps/desktop/cad_workbench/schemas/automation_job.schema.json",
+   "language": "json",
+   "sizeLines": 369,
+   "fileCategory": "config"
+  },
+  {
+   "path": "apps/desktop/cad_workbench/schemas/codex_final_response.schema.json",
+   "language": "json",
+   "sizeLines": 54,
+   "fileCategory": "config"
+  },
+  {
+   "path": "apps/desktop/cad_workbench/schemas/evidence_graph.schema.json",
+   "language": "json",
+   "sizeLines": 38,
+   "fileCategory": "config"
+  },
+  {
+   "path": "apps/desktop/cad_workbench/schemas/fea_analysis.schema.json",
+   "language": "json",
+   "sizeLines": 159,
+   "fileCategory": "config"
+  },
+  {
+   "path": "apps/desktop/cad_workbench/schemas/neutral_cad_document.schema.json",
+   "language": "json",
+   "sizeLines": 43,
+   "fileCategory": "config"
+  },
+  {
+   "path": "apps/desktop/cad_workbench/schemas/preview_manifest.schema.json",
+   "language": "json",
+   "sizeLines": 24,
+   "fileCategory": "config"
+  }
+ ],
+ "batchImportData": {
+  "apps/desktop/cad_workbench/schemas/advanced_geometry.schema.json": [],
+  "apps/desktop/cad_workbench/schemas/advanced_surface.schema.json": [],
+  "apps/desktop/cad_workbench/schemas/automation_job.schema.json": [],
+  "apps/desktop/cad_workbench/schemas/codex_final_response.schema.json": [],
+  "apps/desktop/cad_workbench/schemas/evidence_graph.schema.json": [],
+  "apps/desktop/cad_workbench/schemas/fea_analysis.schema.json": [],
+  "apps/desktop/cad_workbench/schemas/neutral_cad_document.schema.json": [],
+  "apps/desktop/cad_workbench/schemas/preview_manifest.schema.json": []
+ }
+}

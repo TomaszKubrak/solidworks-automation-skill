@@ -1,0 +1,1180 @@
+{
+ "nodes": [
+  {
+   "id": "file:scripts/sw_document_data.py",
+   "type": "file",
+   "name": "sw_document_data.py",
+   "filePath": "scripts/sw_document_data.py",
+   "summary": "Zarządza konfiguracjami dokumentu SolidWorks, wymiarami i właściwościami niestandardowymi (odczyt, tworzenie, aktywacja, aktualizacja).",
+   "tags": [
+    "document",
+    "configuration",
+    "properties"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:scripts/sw_drawing.py",
+   "type": "file",
+   "name": "sw_drawing.py",
+   "filePath": "scripts/sw_drawing.py",
+   "summary": "Cienka fasada modułu rysunków SolidWorks udostępniająca funkcje rysunkowe pozostałym skryptom.",
+   "tags": [
+    "drawing",
+    "facade",
+    "solidworks"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/sw_drawing_review.py",
+   "type": "file",
+   "name": "sw_drawing_review.py",
+   "filePath": "scripts/sw_drawing_review.py",
+   "summary": "Cienka fasada przeglądu rysunków przekierowująca do logiki weryfikacji rysunku.",
+   "tags": [
+    "drawing",
+    "review",
+    "facade"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/sw_edge_select.py",
+   "type": "file",
+   "name": "sw_edge_select.py",
+   "filePath": "scripts/sw_edge_select.py",
+   "summary": "Opisuje, filtruje i wybiera krawędzie modelu (długość, średnica, wypukłość) dla semantycznego wyboru krawędzi.",
+   "tags": [
+    "edge-selection",
+    "geometry",
+    "semantic"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:scripts/sw_entity_reference.py",
+   "type": "file",
+   "name": "sw_entity_reference.py",
+   "filePath": "scripts/sw_entity_reference.py",
+   "summary": "Definiuje semantyczne odwołania do encji z sygnaturą geometrii i ich ponowne rozwiązywanie w modelu.",
+   "tags": [
+    "entity-reference",
+    "geometry",
+    "data-model"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/sw_export.py",
+   "type": "file",
+   "name": "sw_export.py",
+   "filePath": "scripts/sw_export.py",
+   "summary": "Eksport modeli i rysunków do STEP, STL, IGES, Parasolid, PDF, DXF oraz eksport wsadowy.",
+   "tags": [
+    "export",
+    "file-format",
+    "batch"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:scripts/sw_file_load.py",
+   "type": "file",
+   "name": "sw_file_load.py",
+   "filePath": "scripts/sw_file_load.py",
+   "summary": "Klasyfikuje błędy i ostrzeżenia ładowania plików SolidWorks oraz definiuje wyjątek otwarcia dokumentu.",
+   "tags": [
+    "error-handling",
+    "file-load",
+    "validation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/sw_gdt_options.py",
+   "type": "file",
+   "name": "sw_gdt_options.py",
+   "filePath": "scripts/sw_gdt_options.py",
+   "summary": "Normalizuje opcje GD&T (bazy, tolerancje, modyfikatory) i dopisuje je do XML ramki tolerancji.",
+   "tags": [
+    "gdt",
+    "xml",
+    "normalization"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:scripts/sw_gear.py",
+   "type": "file",
+   "name": "sw_gear.py",
+   "filePath": "scripts/sw_gear.py",
+   "summary": "Oblicza geometrię zewnętrznego koła zębatego walcowego i tworzy je w SolidWorks.",
+   "tags": [
+    "gear",
+    "parametric",
+    "geometry"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:scripts/sw_hole_features.py",
+   "type": "file",
+   "name": "sw_hole_features.py",
+   "filePath": "scripts/sw_hole_features.py",
+   "summary": "Tworzy elementy otworów (nieprzelotowe, przelotowe, z pogłębieniem, rowki) i wzory otworów.",
+   "tags": [
+    "hole",
+    "features",
+    "modeling"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:scripts/sw_import_mesh_reference.py",
+   "type": "file",
+   "name": "sw_import_mesh_reference.py",
+   "filePath": "scripts/sw_import_mesh_reference.py",
+   "summary": "Skrypt CLI importujący siatkę jako referencję z konfiguracją preferencji importu.",
+   "tags": [
+    "mesh-import",
+    "cli",
+    "reference"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:scripts/sw_macro_guard.py",
+   "type": "file",
+   "name": "sw_macro_guard.py",
+   "filePath": "scripts/sw_macro_guard.py",
+   "summary": "Generuje i waliduje makra VBA z modelu AI z zabezpieczeniami oraz makrami zastępczymi.",
+   "tags": [
+    "macro",
+    "vba",
+    "guard",
+    "cli"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:scripts/sw_mcp_approve.py",
+   "type": "file",
+   "name": "sw_mcp_approve.py",
+   "filePath": "scripts/sw_mcp_approve.py",
+   "summary": "Interaktywne CLI zatwierdzania oczekujących operacji MCP przez użytkownika.",
+   "tags": [
+    "mcp",
+    "approval",
+    "cli"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:scripts/sw_measure.py",
+   "type": "file",
+   "name": "sw_measure.py",
+   "filePath": "scripts/sw_measure.py",
+   "summary": "Zbiera właściwości masowe, bryłę ograniczającą, interferencje i sprawdza pasowania tolerancyjne.",
+   "tags": [
+    "measurement",
+    "mass-properties",
+    "interference"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:scripts/sw_motion.py",
+   "type": "file",
+   "name": "sw_motion.py",
+   "filePath": "scripts/sw_motion.py",
+   "summary": "Obsługa Motion Study: tworzenie badań, silniki obrotowe, obliczenia i walidacja podsumowań.",
+   "tags": [
+    "motion",
+    "simulation",
+    "com"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:scripts/sw_native_wire.cs",
+   "type": "file",
+   "name": "sw_native_wire.cs",
+   "filePath": "scripts/sw_native_wire.cs",
+   "summary": "Narzędzia C# łączące się z działającym SolidWorks przez ROT oraz budujące sweep i bryły natywnie.",
+   "tags": [
+    "csharp",
+    "com-interop",
+    "sweep"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:scripts/sw_pattern.py",
+   "type": "file",
+   "name": "sw_pattern.py",
+   "filePath": "scripts/sw_pattern.py",
+   "summary": "Tworzy liniowe i kołowe szyki elementów w SolidWorks.",
+   "tags": [
+    "pattern",
+    "features",
+    "modeling"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/sw_process.py",
+   "type": "file",
+   "name": "sw_process.py",
+   "filePath": "scripts/sw_process.py",
+   "summary": "Wyświetla uruchomione procesy SolidWorks w systemie.",
+   "tags": [
+    "process",
+    "diagnostics",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/sw_review.py",
+   "type": "file",
+   "name": "sw_review.py",
+   "filePath": "scripts/sw_review.py",
+   "summary": "Rozbudowany moduł przeglądu: układ rysunku, PDF/BMP, podglądy, pomiary geometrii i raport oceny.",
+   "tags": [
+    "review",
+    "report",
+    "validation",
+    "drawing"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:scripts/sw_sheet_metal.py",
+   "type": "file",
+   "name": "sw_sheet_metal.py",
+   "filePath": "scripts/sw_sheet_metal.py",
+   "summary": "Tworzy podstawowy kołnierz blachy i zbiera dowody cech blachy.",
+   "tags": [
+    "sheet-metal",
+    "features",
+    "evidence"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:scripts/sw_spring.py",
+   "type": "file",
+   "name": "sw_spring.py",
+   "filePath": "scripts/sw_spring.py",
+   "summary": "Waliduje specyfikację i tworzy otwartą sprężynę śrubową z weryfikacją gabarytów.",
+   "tags": [
+    "spring",
+    "helix",
+    "parametric"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:scripts/sw_sprocket.py",
+   "type": "file",
+   "name": "sw_sprocket.py",
+   "filePath": "scripts/sw_sprocket.py",
+   "summary": "Tworzy przybliżone koło łańcuchowe na podstawie specyfikacji.",
+   "tags": [
+    "sprocket",
+    "parametric",
+    "modeling"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/sw_tolerance_extract.py",
+   "type": "file",
+   "name": "sw_tolerance_extract.py",
+   "filePath": "scripts/sw_tolerance_extract.py",
+   "summary": "Wyodrębnia tolerancje wymiarów z dokumentu i zapisuje je do CSV.",
+   "tags": [
+    "tolerance",
+    "extraction",
+    "csv"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:scripts/sw_weldment.py",
+   "type": "file",
+   "name": "sw_weldment.py",
+   "filePath": "scripts/sw_weldment.py",
+   "summary": "Obsługa spawanych konstrukcji: profile, elementy strukturalne, cut list i eksport CSV.",
+   "tags": [
+    "weldment",
+    "cut-list",
+    "features"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "file:scripts/sync_bundled_skill.py",
+   "type": "file",
+   "name": "sync_bundled_skill.py",
+   "filePath": "scripts/sync_bundled_skill.py",
+   "summary": "Synchronizuje pliki runtime do dołączonego skilla.",
+   "tags": [
+    "sync",
+    "build-system",
+    "cli"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_document_data.py:inspect_configurations",
+   "type": "function",
+   "name": "inspect_configurations",
+   "filePath": "scripts/sw_document_data.py",
+   "lineRange": [
+    67,
+    77
+   ],
+   "summary": "Odczytuje listę konfiguracji dokumentu.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-document-data"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_document_data.py:activate_configuration",
+   "type": "function",
+   "name": "activate_configuration",
+   "filePath": "scripts/sw_document_data.py",
+   "lineRange": [
+    80,
+    119
+   ],
+   "summary": "Aktywuje wskazaną konfigurację.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-document-data"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_document_data.py:create_configuration",
+   "type": "function",
+   "name": "create_configuration",
+   "filePath": "scripts/sw_document_data.py",
+   "lineRange": [
+    122,
+    197
+   ],
+   "summary": "Tworzy nową konfigurację.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-document-data"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_document_data.py:update_dimension_mm",
+   "type": "function",
+   "name": "update_dimension_mm",
+   "filePath": "scripts/sw_document_data.py",
+   "lineRange": [
+    207,
+    285
+   ],
+   "summary": "Aktualizuje wymiar w mm.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-document-data"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_document_data.py:read_custom_property",
+   "type": "function",
+   "name": "read_custom_property",
+   "filePath": "scripts/sw_document_data.py",
+   "lineRange": [
+    296,
+    313
+   ],
+   "summary": "Odczytuje właściwość niestandardową.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-document-data"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_document_data.py:set_custom_properties",
+   "type": "function",
+   "name": "set_custom_properties",
+   "filePath": "scripts/sw_document_data.py",
+   "lineRange": [
+    316,
+    354
+   ],
+   "summary": "Ustawia właściwości niestandardowe.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-document-data"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_edge_select.py:describe_edge",
+   "type": "function",
+   "name": "describe_edge",
+   "filePath": "scripts/sw_edge_select.py",
+   "lineRange": [
+    129,
+    230
+   ],
+   "summary": "Buduje opis geometrii krawędzi.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-edge-select"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_edge_select.py:filter_edges",
+   "type": "function",
+   "name": "filter_edges",
+   "filePath": "scripts/sw_edge_select.py",
+   "lineRange": [
+    305,
+    399
+   ],
+   "summary": "Filtruje krawędzie według kryteriów.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-edge-select"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_edge_select.py:select_edges",
+   "type": "function",
+   "name": "select_edges",
+   "filePath": "scripts/sw_edge_select.py",
+   "lineRange": [
+    402,
+    487
+   ],
+   "summary": "Wybiera krawędzie w modelu.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-edge-select"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_entity_reference.py:resolve_semantic_reference",
+   "type": "function",
+   "name": "resolve_semantic_reference",
+   "filePath": "scripts/sw_entity_reference.py",
+   "lineRange": [
+    53,
+    75
+   ],
+   "summary": "Rozwiązuje semantyczne odwołanie do encji.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-entity-reference"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_export.py:export_flat_pattern_dxf",
+   "type": "function",
+   "name": "export_flat_pattern_dxf",
+   "filePath": "scripts/sw_export.py",
+   "lineRange": [
+    114,
+    159
+   ],
+   "summary": "Eksportuje rozwinięcie do DXF.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-export"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_export.py:batch_export_formats",
+   "type": "function",
+   "name": "batch_export_formats",
+   "filePath": "scripts/sw_export.py",
+   "lineRange": [
+    253,
+    350
+   ],
+   "summary": "Wsadowy eksport do wielu formatów.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-export"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_gdt_options.py:normalize_detail",
+   "type": "function",
+   "name": "normalize_detail",
+   "filePath": "scripts/sw_gdt_options.py",
+   "lineRange": [
+    71,
+    100
+   ],
+   "summary": "Normalizuje szczegóły tolerancji GD&T.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-gdt-options"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_gdt_options.py:append_options_before_material",
+   "type": "function",
+   "name": "append_options_before_material",
+   "filePath": "scripts/sw_gdt_options.py",
+   "lineRange": [
+    281,
+    329
+   ],
+   "summary": "Dopisuje opcje GD&T do XML przed modyfikatorem materiału.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-gdt-options"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_gear.py:calculate_external_spur_gear",
+   "type": "function",
+   "name": "calculate_external_spur_gear",
+   "filePath": "scripts/sw_gear.py",
+   "lineRange": [
+    100,
+    234
+   ],
+   "summary": "Oblicza geometrię koła zębatego.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-gear"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_gear.py:create_external_spur_gear",
+   "type": "function",
+   "name": "create_external_spur_gear",
+   "filePath": "scripts/sw_gear.py",
+   "lineRange": [
+    237,
+    301
+   ],
+   "summary": "Tworzy koło zębate w SolidWorks.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-gear"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_hole_features.py:create_counterbore_hole",
+   "type": "function",
+   "name": "create_counterbore_hole",
+   "filePath": "scripts/sw_hole_features.py",
+   "lineRange": [
+    152,
+    174
+   ],
+   "summary": "Tworzy otwór z pogłębieniem walcowym.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-hole-features"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_hole_features.py:create_countersink_hole",
+   "type": "function",
+   "name": "create_countersink_hole",
+   "filePath": "scripts/sw_hole_features.py",
+   "lineRange": [
+    177,
+    204
+   ],
+   "summary": "Tworzy otwór z pogłębieniem stożkowym.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-hole-features"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_import_mesh_reference.py:import_mesh_reference",
+   "type": "function",
+   "name": "import_mesh_reference",
+   "filePath": "scripts/sw_import_mesh_reference.py",
+   "lineRange": [
+    137,
+    219
+   ],
+   "summary": "Importuje siatkę jako referencję.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-import-mesh-reference"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_macro_guard.py:generate_macro_with_guard",
+   "type": "function",
+   "name": "generate_macro_with_guard",
+   "filePath": "scripts/sw_macro_guard.py",
+   "lineRange": [
+    249,
+    298
+   ],
+   "summary": "Generuje makro z walidacją i fallbackiem.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-macro-guard"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_measure.py:collect_mass_properties",
+   "type": "function",
+   "name": "collect_mass_properties",
+   "filePath": "scripts/sw_measure.py",
+   "lineRange": [
+    60,
+    196
+   ],
+   "summary": "Zbiera właściwości masowe.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-measure"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_measure.py:inspect_interference",
+   "type": "function",
+   "name": "inspect_interference",
+   "filePath": "scripts/sw_measure.py",
+   "lineRange": [
+    248,
+    348
+   ],
+   "summary": "Sprawdza interferencje zespołu.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-measure"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_motion.py:validate_motion_study_summary",
+   "type": "function",
+   "name": "validate_motion_study_summary",
+   "filePath": "scripts/sw_motion.py",
+   "lineRange": [
+    390,
+    489
+   ],
+   "summary": "Waliduje podsumowanie badania ruchu.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-motion"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_review.py:review_drawing_layout",
+   "type": "function",
+   "name": "review_drawing_layout",
+   "filePath": "scripts/sw_review.py",
+   "lineRange": [
+    86,
+    313
+   ],
+   "summary": "Ocenia układ rysunku.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-review"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_review.py:build_review_report",
+   "type": "function",
+   "name": "build_review_report",
+   "filePath": "scripts/sw_review.py",
+   "lineRange": [
+    897,
+    978
+   ],
+   "summary": "Buduje raport przeglądu.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-review"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_review.py:evaluate_review_report",
+   "type": "function",
+   "name": "evaluate_review_report",
+   "filePath": "scripts/sw_review.py",
+   "lineRange": [
+    981,
+    1151
+   ],
+   "summary": "Ocenia raport i wystawia werdykt.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-review"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_weldment.py:create_structural_member",
+   "type": "function",
+   "name": "create_structural_member",
+   "filePath": "scripts/sw_weldment.py",
+   "lineRange": [
+    106,
+    162
+   ],
+   "summary": "Tworzy element strukturalny.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-weldment"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_pattern.py:linear_pattern",
+   "type": "function",
+   "name": "linear_pattern",
+   "filePath": "scripts/sw_pattern.py",
+   "lineRange": [
+    62,
+    90
+   ],
+   "summary": "Tworzy szyk liniowy.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-pattern"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_pattern.py:circular_pattern",
+   "type": "function",
+   "name": "circular_pattern",
+   "filePath": "scripts/sw_pattern.py",
+   "lineRange": [
+    93,
+    112
+   ],
+   "summary": "Tworzy szyk kołowy.",
+   "tags": [
+    "function",
+    "solidworks",
+    "sw-pattern"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:scripts/sw_gear.py:SpurGearSpec",
+   "type": "class",
+   "name": "SpurGearSpec",
+   "filePath": "scripts/sw_gear.py",
+   "lineRange": [
+    10,
+    20
+   ],
+   "summary": "Specyfikacja koła zębatego.",
+   "tags": [
+    "data-model",
+    "solidworks",
+    "sw-gear"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:scripts/sw_gear.py:SpurGearGeometry",
+   "type": "class",
+   "name": "SpurGearGeometry",
+   "filePath": "scripts/sw_gear.py",
+   "lineRange": [
+    24,
+    66
+   ],
+   "summary": "Wyliczona geometria koła.",
+   "tags": [
+    "data-model",
+    "solidworks",
+    "sw-gear"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:scripts/sw_entity_reference.py:SemanticEntityReference",
+   "type": "class",
+   "name": "SemanticEntityReference",
+   "filePath": "scripts/sw_entity_reference.py",
+   "lineRange": [
+    16,
+    25
+   ],
+   "summary": "Semantyczne odwołanie do encji.",
+   "tags": [
+    "data-model",
+    "solidworks",
+    "sw-entity-reference"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:scripts/sw_file_load.py:SolidWorksDocumentOpenError",
+   "type": "class",
+   "name": "SolidWorksDocumentOpenError",
+   "filePath": "scripts/sw_file_load.py",
+   "lineRange": [
+    29,
+    40
+   ],
+   "summary": "Wyjątek otwarcia dokumentu.",
+   "tags": [
+    "data-model",
+    "solidworks",
+    "sw-file-load"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:scripts/sw_macro_guard.py:MacroValidationResult",
+   "type": "class",
+   "name": "MacroValidationResult",
+   "filePath": "scripts/sw_macro_guard.py",
+   "lineRange": [
+    159,
+    163
+   ],
+   "summary": "Wynik walidacji makra.",
+   "tags": [
+    "data-model",
+    "solidworks",
+    "sw-macro-guard"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:scripts/sw_macro_guard.py:MacroGenerationResult",
+   "type": "class",
+   "name": "MacroGenerationResult",
+   "filePath": "scripts/sw_macro_guard.py",
+   "lineRange": [
+    167,
+    173
+   ],
+   "summary": "Wynik generowania makra.",
+   "tags": [
+    "data-model",
+    "solidworks",
+    "sw-macro-guard"
+   ],
+   "complexity": "simple"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:scripts/sw_document_data.py",
+   "target": "function:scripts/sw_document_data.py:inspect_configurations",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_document_data.py",
+   "target": "function:scripts/sw_document_data.py:activate_configuration",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_document_data.py",
+   "target": "function:scripts/sw_document_data.py:create_configuration",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_document_data.py",
+   "target": "function:scripts/sw_document_data.py:update_dimension_mm",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_document_data.py",
+   "target": "function:scripts/sw_document_data.py:read_custom_property",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_document_data.py",
+   "target": "function:scripts/sw_document_data.py:set_custom_properties",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_edge_select.py",
+   "target": "function:scripts/sw_edge_select.py:describe_edge",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_edge_select.py",
+   "target": "function:scripts/sw_edge_select.py:filter_edges",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_edge_select.py",
+   "target": "function:scripts/sw_edge_select.py:select_edges",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_entity_reference.py",
+   "target": "function:scripts/sw_entity_reference.py:resolve_semantic_reference",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_export.py",
+   "target": "function:scripts/sw_export.py:export_flat_pattern_dxf",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_export.py",
+   "target": "function:scripts/sw_export.py:batch_export_formats",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_gdt_options.py",
+   "target": "function:scripts/sw_gdt_options.py:normalize_detail",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_gdt_options.py",
+   "target": "function:scripts/sw_gdt_options.py:append_options_before_material",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_gear.py",
+   "target": "function:scripts/sw_gear.py:calculate_external_spur_gear",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_gear.py",
+   "target": "function:scripts/sw_gear.py:create_external_spur_gear",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_hole_features.py",
+   "target": "function:scripts/sw_hole_features.py:create_counterbore_hole",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_hole_features.py",
+   "target": "function:scripts/sw_hole_features.py:create_countersink_hole",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_import_mesh_reference.py",
+   "target": "function:scripts/sw_import_mesh_reference.py:import_mesh_reference",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_macro_guard.py",
+   "target": "function:scripts/sw_macro_guard.py:generate_macro_with_guard",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_measure.py",
+   "target": "function:scripts/sw_measure.py:collect_mass_properties",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_measure.py",
+   "target": "function:scripts/sw_measure.py:inspect_interference",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_motion.py",
+   "target": "function:scripts/sw_motion.py:validate_motion_study_summary",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_review.py",
+   "target": "function:scripts/sw_review.py:review_drawing_layout",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_review.py",
+   "target": "function:scripts/sw_review.py:build_review_report",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_review.py",
+   "target": "function:scripts/sw_review.py:evaluate_review_report",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_weldment.py",
+   "target": "function:scripts/sw_weldment.py:create_structural_member",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_pattern.py",
+   "target": "function:scripts/sw_pattern.py:linear_pattern",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_pattern.py",
+   "target": "function:scripts/sw_pattern.py:circular_pattern",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_gear.py",
+   "target": "class:scripts/sw_gear.py:SpurGearSpec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_gear.py",
+   "target": "class:scripts/sw_gear.py:SpurGearGeometry",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_entity_reference.py",
+   "target": "class:scripts/sw_entity_reference.py:SemanticEntityReference",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_file_load.py",
+   "target": "class:scripts/sw_file_load.py:SolidWorksDocumentOpenError",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_macro_guard.py",
+   "target": "class:scripts/sw_macro_guard.py:MacroValidationResult",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_macro_guard.py",
+   "target": "class:scripts/sw_macro_guard.py:MacroGenerationResult",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_review.py",
+   "target": "file:subskills/solidworks-engineering-drawing/scripts/drawing_review.py",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  }
+ ]
+}

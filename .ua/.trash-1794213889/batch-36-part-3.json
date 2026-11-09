@@ -1,0 +1,1019 @@
+{
+ "nodes": [
+  {
+   "id": "file:scripts/build_smithery_mcpb.py",
+   "type": "file",
+   "name": "build_smithery_mcpb.py",
+   "filePath": "scripts/build_smithery_mcpb.py",
+   "summary": "Buduje pakiet Smithery MCPB z kartami narzędzi serwera MCP.",
+   "tags": [
+    "packaging",
+    "smithery",
+    "mcp",
+    "build-system"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/build_smithery_mcpb.py:collect_tool_cards",
+   "type": "function",
+   "name": "collect_tool_cards",
+   "filePath": "scripts/build_smithery_mcpb.py",
+   "lineRange": [
+    12,
+    30
+   ],
+   "summary": "Zbiera karty narzędzi MCP.",
+   "tags": [
+    "mcp",
+    "metadata",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/build_smithery_mcpb.py:build_smithery_bundle",
+   "type": "function",
+   "name": "build_smithery_bundle",
+   "filePath": "scripts/build_smithery_mcpb.py",
+   "lineRange": [
+    33,
+    54
+   ],
+   "summary": "Buduje pakiet MCPB.",
+   "tags": [
+    "packaging",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/build_smithery_mcpb.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "scripts/build_smithery_mcpb.py",
+   "lineRange": [
+    57,
+    66
+   ],
+   "summary": "Punkt wejścia CLI.",
+   "tags": [
+    "entry-point",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/capabilities.py",
+   "type": "file",
+   "name": "capabilities.py",
+   "filePath": "scripts/capabilities.py",
+   "summary": "Ładuje manifest możliwości i rozwiązuje backend dla operacji wraz z migawkami routingu.",
+   "tags": [
+    "capabilities",
+    "routing",
+    "manifest",
+    "backend"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/capabilities.py:load_capabilities",
+   "type": "function",
+   "name": "load_capabilities",
+   "filePath": "scripts/capabilities.py",
+   "lineRange": [
+    29,
+    68
+   ],
+   "summary": "Ładuje i waliduje manifest możliwości.",
+   "tags": [
+    "manifest",
+    "validation",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/capabilities.py:resolve_operation_backend",
+   "type": "function",
+   "name": "resolve_operation_backend",
+   "filePath": "scripts/capabilities.py",
+   "lineRange": [
+    89,
+    190
+   ],
+   "summary": "Wybiera backend dla operacji.",
+   "tags": [
+    "routing",
+    "backend",
+    "python"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/capabilities.py:backend_route_snapshot",
+   "type": "function",
+   "name": "backend_route_snapshot",
+   "filePath": "scripts/capabilities.py",
+   "lineRange": [
+    193,
+    205
+   ],
+   "summary": "Tworzy migawkę routingu backendów.",
+   "tags": [
+    "snapshot",
+    "routing",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/capabilities.py:capability_snapshot",
+   "type": "function",
+   "name": "capability_snapshot",
+   "filePath": "scripts/capabilities.py",
+   "lineRange": [
+    218,
+    222
+   ],
+   "summary": "Tworzy migawkę możliwości.",
+   "tags": [
+    "snapshot",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/ci/check_governance_drift.cjs",
+   "type": "file",
+   "name": "check_governance_drift.cjs",
+   "filePath": "scripts/ci/check_governance_drift.cjs",
+   "summary": "Skrypt CI wykrywający dryf zarządzania przez porównanie skrótów SHA-256 plików z manifestem.",
+   "tags": [
+    "ci",
+    "governance",
+    "drift-detection",
+    "hashing"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/ci/check_governance_drift.cjs:computeManifest",
+   "type": "function",
+   "name": "computeManifest",
+   "filePath": "scripts/ci/check_governance_drift.cjs",
+   "lineRange": [
+    55,
+    62
+   ],
+   "summary": "Oblicza manifest skrótów plików.",
+   "tags": [
+    "hashing",
+    "manifest",
+    "javascript"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/ci/check_governance_drift.cjs:diffManifest",
+   "type": "function",
+   "name": "diffManifest",
+   "filePath": "scripts/ci/check_governance_drift.cjs",
+   "lineRange": [
+    65,
+    78
+   ],
+   "summary": "Porównuje manifest z oczekiwanym.",
+   "tags": [
+    "diff",
+    "drift",
+    "javascript"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/ci/check_governance_drift.cjs:readManifest",
+   "type": "function",
+   "name": "readManifest",
+   "filePath": "scripts/ci/check_governance_drift.cjs",
+   "lineRange": [
+    80,
+    88
+   ],
+   "summary": "Wczytuje manifest z dysku.",
+   "tags": [
+    "io",
+    "manifest",
+    "javascript"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/ci/check_governance_drift.cjs:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "scripts/ci/check_governance_drift.cjs",
+   "lineRange": [
+    90,
+    116
+   ],
+   "summary": "Punkt wejścia sprawdzenia.",
+   "tags": [
+    "entry-point",
+    "ci",
+    "javascript"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:scripts/delivery_compare.py",
+   "type": "file",
+   "name": "delivery_compare.py",
+   "filePath": "scripts/delivery_compare.py",
+   "summary": "Porównuje migawki plików dostawy i buduje żądanie regeneracji.",
+   "tags": [
+    "delivery",
+    "comparison",
+    "hashing"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/delivery_compare.py:snapshot_files",
+   "type": "function",
+   "name": "snapshot_files",
+   "filePath": "scripts/delivery_compare.py",
+   "lineRange": [
+    18,
+    37
+   ],
+   "summary": "Tworzy migawkę plików ze skrótami.",
+   "tags": [
+    "snapshot",
+    "hashing",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/delivery_compare.py:compare_snapshots",
+   "type": "function",
+   "name": "compare_snapshots",
+   "filePath": "scripts/delivery_compare.py",
+   "lineRange": [
+    40,
+    59
+   ],
+   "summary": "Porównuje dwie migawki.",
+   "tags": [
+    "diff",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/delivery_compare.py:build_regeneration_request",
+   "type": "function",
+   "name": "build_regeneration_request",
+   "filePath": "scripts/delivery_compare.py",
+   "lineRange": [
+    62,
+    90
+   ],
+   "summary": "Buduje żądanie regeneracji dostawy.",
+   "tags": [
+    "regeneration",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:scripts/design_audit.py",
+   "type": "file",
+   "name": "design_audit.py",
+   "filePath": "scripts/design_audit.py",
+   "summary": "Audyt projektu: odciski wyników, różnice, waivery, status bramki, ocena ryzyka i brak regresji.",
+   "tags": [
+    "audit",
+    "governance",
+    "waivers",
+    "risk"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/design_audit.py:finding_fingerprint",
+   "type": "function",
+   "name": "finding_fingerprint",
+   "filePath": "scripts/design_audit.py",
+   "lineRange": [
+    28,
+    35
+   ],
+   "summary": "Tworzy odcisk ustalenia.",
+   "tags": [
+    "hashing",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/design_audit.py:diff_findings",
+   "type": "function",
+   "name": "diff_findings",
+   "filePath": "scripts/design_audit.py",
+   "lineRange": [
+    57,
+    72
+   ],
+   "summary": "Porównuje ustalenia.",
+   "tags": [
+    "diff",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/design_audit.py:validate_waiver",
+   "type": "function",
+   "name": "validate_waiver",
+   "filePath": "scripts/design_audit.py",
+   "lineRange": [
+    96,
+    124
+   ],
+   "summary": "Waliduje waiver.",
+   "tags": [
+    "validation",
+    "waivers",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/design_audit.py:apply_waivers",
+   "type": "function",
+   "name": "apply_waivers",
+   "filePath": "scripts/design_audit.py",
+   "lineRange": [
+    127,
+    171
+   ],
+   "summary": "Stosuje waivery do ustaleń.",
+   "tags": [
+    "waivers",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/design_audit.py:gated_status",
+   "type": "function",
+   "name": "gated_status",
+   "filePath": "scripts/design_audit.py",
+   "lineRange": [
+    174,
+    183
+   ],
+   "summary": "Wyznacza status bramki.",
+   "tags": [
+    "gate",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/design_audit.py:risk_score",
+   "type": "function",
+   "name": "risk_score",
+   "filePath": "scripts/design_audit.py",
+   "lineRange": [
+    194,
+    207
+   ],
+   "summary": "Oblicza wynik ryzyka.",
+   "tags": [
+    "risk",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/design_audit.py:summarize_audit",
+   "type": "function",
+   "name": "summarize_audit",
+   "filePath": "scripts/design_audit.py",
+   "lineRange": [
+    210,
+    238
+   ],
+   "summary": "Podsumowuje audyt.",
+   "tags": [
+    "summary",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/design_audit.py:assert_no_regression",
+   "type": "function",
+   "name": "assert_no_regression",
+   "filePath": "scripts/design_audit.py",
+   "lineRange": [
+    241,
+    299
+   ],
+   "summary": "Weryfikuje brak regresji względem bazy.",
+   "tags": [
+    "regression",
+    "gate",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:scripts/design_rule_check.py",
+   "type": "file",
+   "name": "design_rule_check.py",
+   "filePath": "scripts/design_rule_check.py",
+   "summary": "Silnik kontroli reguł projektowych (DRC): ekstrakcja kontekstu, reguły geometrii, otworów, części normalnych, złożeń i rysunków, raport.",
+   "tags": [
+    "drc",
+    "design-rules",
+    "validation",
+    "report"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/design_rule_check.py:_extract_context",
+   "type": "function",
+   "name": "_extract_context",
+   "filePath": "scripts/design_rule_check.py",
+   "lineRange": [
+    119,
+    208
+   ],
+   "summary": "Wyodrębnia kontekst z dokumentu.",
+   "tags": [
+    "extraction",
+    "python"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/design_rule_check.py:rule_holes",
+   "type": "function",
+   "name": "rule_holes",
+   "filePath": "scripts/design_rule_check.py",
+   "lineRange": [
+    235,
+    281
+   ],
+   "summary": "Reguła kontroli otworów.",
+   "tags": [
+    "rule",
+    "holes",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/design_rule_check.py:rule_standard_parts",
+   "type": "function",
+   "name": "rule_standard_parts",
+   "filePath": "scripts/design_rule_check.py",
+   "lineRange": [
+    305,
+    350
+   ],
+   "summary": "Reguła części normalnych.",
+   "tags": [
+    "rule",
+    "standard-parts",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/design_rule_check.py:rule_ligament",
+   "type": "function",
+   "name": "rule_ligament",
+   "filePath": "scripts/design_rule_check.py",
+   "lineRange": [
+    391,
+    419
+   ],
+   "summary": "Reguła minimalnego mostka materiału.",
+   "tags": [
+    "rule",
+    "ligament",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/design_rule_check.py:rule_relations",
+   "type": "function",
+   "name": "rule_relations",
+   "filePath": "scripts/design_rule_check.py",
+   "lineRange": [
+    444,
+    498
+   ],
+   "summary": "Reguła relacji między elementami.",
+   "tags": [
+    "rule",
+    "relations",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/design_rule_check.py:list_rules",
+   "type": "function",
+   "name": "list_rules",
+   "filePath": "scripts/design_rule_check.py",
+   "lineRange": [
+    617,
+    630
+   ],
+   "summary": "Zwraca listę reguł.",
+   "tags": [
+    "rules",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/design_rule_check.py:_apply_custom_rule",
+   "type": "function",
+   "name": "_apply_custom_rule",
+   "filePath": "scripts/design_rule_check.py",
+   "lineRange": [
+    675,
+    710
+   ],
+   "summary": "Stosuje regułę niestandardową.",
+   "tags": [
+    "custom-rule",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/design_rule_check.py:build_drc_report",
+   "type": "function",
+   "name": "build_drc_report",
+   "filePath": "scripts/design_rule_check.py",
+   "lineRange": [
+    740,
+    851
+   ],
+   "summary": "Buduje pełny raport DRC.",
+   "tags": [
+    "report",
+    "orchestration",
+    "python"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/design_rule_check.py:write_drc_report",
+   "type": "function",
+   "name": "write_drc_report",
+   "filePath": "scripts/design_rule_check.py",
+   "lineRange": [
+    861,
+    912
+   ],
+   "summary": "Zapisuje raport DRC.",
+   "tags": [
+    "report",
+    "io",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/design_rule_check.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "scripts/design_rule_check.py",
+   "lineRange": [
+    915,
+    959
+   ],
+   "summary": "Punkt wejścia CLI.",
+   "tags": [
+    "entry-point",
+    "cli",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:scripts/design_rule_profiles.py",
+   "type": "file",
+   "name": "design_rule_profiles.py",
+   "filePath": "scripts/design_rule_profiles.py",
+   "summary": "Walidacja, ładowanie i scalanie profili reguł DRC oraz pakietów reguł.",
+   "tags": [
+    "drc",
+    "profiles",
+    "validation",
+    "configuration"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/design_rule_profiles.py:_validate_custom_rule",
+   "type": "function",
+   "name": "_validate_custom_rule",
+   "filePath": "scripts/design_rule_profiles.py",
+   "lineRange": [
+    77,
+    107
+   ],
+   "summary": "Waliduje regułę niestandardową.",
+   "tags": [
+    "validation",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/design_rule_profiles.py:validate_profile",
+   "type": "function",
+   "name": "validate_profile",
+   "filePath": "scripts/design_rule_profiles.py",
+   "lineRange": [
+    110,
+    151
+   ],
+   "summary": "Waliduje profil reguł.",
+   "tags": [
+    "validation",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/design_rule_profiles.py:load_profile",
+   "type": "function",
+   "name": "load_profile",
+   "filePath": "scripts/design_rule_profiles.py",
+   "lineRange": [
+    154,
+    162
+   ],
+   "summary": "Ładuje profil z pliku.",
+   "tags": [
+    "io",
+    "profile",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/design_rule_profiles.py:list_rule_packs",
+   "type": "function",
+   "name": "list_rule_packs",
+   "filePath": "scripts/design_rule_profiles.py",
+   "lineRange": [
+    169,
+    188
+   ],
+   "summary": "Wylistowuje dostępne pakiety reguł.",
+   "tags": [
+    "rule-pack",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/design_rule_profiles.py:load_rule_pack",
+   "type": "function",
+   "name": "load_rule_pack",
+   "filePath": "scripts/design_rule_profiles.py",
+   "lineRange": [
+    191,
+    197
+   ],
+   "summary": "Ładuje pakiet reguł.",
+   "tags": [
+    "rule-pack",
+    "python"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/design_rule_profiles.py:merge_profiles",
+   "type": "function",
+   "name": "merge_profiles",
+   "filePath": "scripts/design_rule_profiles.py",
+   "lineRange": [
+    200,
+    234
+   ],
+   "summary": "Scala profile.",
+   "tags": [
+    "merge",
+    "python"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:scripts/design_rule_profiles.py:DrcProfileError",
+   "type": "class",
+   "name": "DrcProfileError",
+   "filePath": "scripts/design_rule_profiles.py",
+   "lineRange": [
+    59,
+    60
+   ],
+   "summary": "Wyjątek błędu profilu DRC.",
+   "tags": [
+    "exception",
+    "class"
+   ],
+   "complexity": "simple"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:scripts/build_smithery_mcpb.py",
+   "target": "function:scripts/build_smithery_mcpb.py:collect_tool_cards",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/build_smithery_mcpb.py",
+   "target": "function:scripts/build_smithery_mcpb.py:build_smithery_bundle",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/build_smithery_mcpb.py",
+   "target": "function:scripts/build_smithery_mcpb.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/capabilities.py",
+   "target": "function:scripts/capabilities.py:load_capabilities",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/capabilities.py",
+   "target": "function:scripts/capabilities.py:resolve_operation_backend",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/capabilities.py",
+   "target": "function:scripts/capabilities.py:backend_route_snapshot",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/capabilities.py",
+   "target": "function:scripts/capabilities.py:capability_snapshot",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/ci/check_governance_drift.cjs",
+   "target": "function:scripts/ci/check_governance_drift.cjs:computeManifest",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/ci/check_governance_drift.cjs",
+   "target": "function:scripts/ci/check_governance_drift.cjs:diffManifest",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/ci/check_governance_drift.cjs",
+   "target": "function:scripts/ci/check_governance_drift.cjs:readManifest",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/ci/check_governance_drift.cjs",
+   "target": "function:scripts/ci/check_governance_drift.cjs:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/delivery_compare.py",
+   "target": "function:scripts/delivery_compare.py:snapshot_files",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/delivery_compare.py",
+   "target": "function:scripts/delivery_compare.py:compare_snapshots",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/delivery_compare.py",
+   "target": "function:scripts/delivery_compare.py:build_regeneration_request",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_audit.py",
+   "target": "function:scripts/design_audit.py:finding_fingerprint",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_audit.py",
+   "target": "function:scripts/design_audit.py:diff_findings",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_audit.py",
+   "target": "function:scripts/design_audit.py:validate_waiver",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_audit.py",
+   "target": "function:scripts/design_audit.py:apply_waivers",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_audit.py",
+   "target": "function:scripts/design_audit.py:gated_status",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_audit.py",
+   "target": "function:scripts/design_audit.py:risk_score",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_audit.py",
+   "target": "function:scripts/design_audit.py:summarize_audit",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_audit.py",
+   "target": "function:scripts/design_audit.py:assert_no_regression",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_rule_check.py",
+   "target": "function:scripts/design_rule_check.py:_extract_context",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_rule_check.py",
+   "target": "function:scripts/design_rule_check.py:rule_holes",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_rule_check.py",
+   "target": "function:scripts/design_rule_check.py:rule_standard_parts",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_rule_check.py",
+   "target": "function:scripts/design_rule_check.py:rule_ligament",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_rule_check.py",
+   "target": "function:scripts/design_rule_check.py:rule_relations",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_rule_check.py",
+   "target": "function:scripts/design_rule_check.py:list_rules",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_rule_check.py",
+   "target": "function:scripts/design_rule_check.py:_apply_custom_rule",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_rule_check.py",
+   "target": "function:scripts/design_rule_check.py:build_drc_report",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_rule_check.py",
+   "target": "function:scripts/design_rule_check.py:write_drc_report",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_rule_check.py",
+   "target": "function:scripts/design_rule_check.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_rule_profiles.py",
+   "target": "function:scripts/design_rule_profiles.py:_validate_custom_rule",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_rule_profiles.py",
+   "target": "function:scripts/design_rule_profiles.py:validate_profile",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_rule_profiles.py",
+   "target": "function:scripts/design_rule_profiles.py:load_profile",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_rule_profiles.py",
+   "target": "function:scripts/design_rule_profiles.py:list_rule_packs",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_rule_profiles.py",
+   "target": "function:scripts/design_rule_profiles.py:load_rule_pack",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_rule_profiles.py",
+   "target": "function:scripts/design_rule_profiles.py:merge_profiles",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/design_rule_profiles.py",
+   "target": "class:scripts/design_rule_profiles.py:DrcProfileError",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  }
+ ]
+}

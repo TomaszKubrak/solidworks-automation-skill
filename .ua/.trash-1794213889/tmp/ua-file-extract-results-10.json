@@ -1,0 +1,5963 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 4,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 4,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 374,
+      "nonEmptyLines": 325,
+      "functions": [
+        {
+          "name": "_finite_positive",
+          "startLine": 137,
+          "endLine": 145,
+          "params": [
+            "name",
+            "value"
+          ]
+        },
+        {
+          "name": "validate_variable_spec",
+          "startLine": 148,
+          "endLine": 181,
+          "params": [
+            "spec",
+            "edge_length_mm"
+          ]
+        },
+        {
+          "name": "validate_face_spec",
+          "startLine": 184,
+          "endLine": 192,
+          "params": [
+            "spec",
+            "clearance_mm"
+          ]
+        },
+        {
+          "name": "validate_hold_line_spec",
+          "startLine": 195,
+          "endLine": 218,
+          "params": [
+            "spec",
+            "clearance_mm",
+            "available_hold_lines"
+          ]
+        },
+        {
+          "name": "validate_surface_combination_spec",
+          "startLine": 221,
+          "endLine": 245,
+          "params": [
+            "spec",
+            "clearance_mm",
+            "surface_types"
+          ]
+        },
+        {
+          "name": "validate_full_round_spec",
+          "startLine": 248,
+          "endLine": 260,
+          "params": [
+            "_spec",
+            "face_set_counts"
+          ]
+        },
+        {
+          "name": "validate_setback_spec",
+          "startLine": 263,
+          "endLine": 285,
+          "params": [
+            "spec",
+            "incident_edge_lengths_mm"
+          ]
+        },
+        {
+          "name": "validate_width_width_chamfer_spec",
+          "startLine": 288,
+          "endLine": 311,
+          "params": [
+            "spec",
+            "adjacent_clearances_mm"
+          ]
+        },
+        {
+          "name": "inspect_typelib_members",
+          "startLine": 314,
+          "endLine": 336,
+          "params": [
+            "type_library_path"
+          ]
+        },
+        {
+          "name": "build_capability_report",
+          "startLine": 339,
+          "endLine": 365,
+          "params": [
+            "interfaces",
+            "source"
+          ]
+        },
+        {
+          "name": "spec_payload",
+          "startLine": 368,
+          "endLine": 374,
+          "params": [
+            "spec",
+            "validation"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "VariableFilletSpec",
+          "startLine": 74,
+          "endLine": 81,
+          "methods": [],
+          "properties": [
+            "start_radius",
+            "end_radius",
+            "control_points",
+            "transition",
+            "overflow"
+          ]
+        },
+        {
+          "name": "FaceFilletSpec",
+          "startLine": 85,
+          "endLine": 90,
+          "methods": [],
+          "properties": [
+            "radius",
+            "propagate_tangent",
+            "overflow"
+          ]
+        },
+        {
+          "name": "HoldLineFilletSpec",
+          "startLine": 94,
+          "endLine": 100,
+          "methods": [],
+          "properties": [
+            "radius",
+            "hold_line_count",
+            "tangent_hold_line",
+            "propagate_tangent"
+          ]
+        },
+        {
+          "name": "SurfaceCombinationSpec",
+          "startLine": 104,
+          "endLine": 109,
+          "methods": [],
+          "properties": [
+            "radius",
+            "curvature_continuous",
+            "propagate_tangent"
+          ]
+        },
+        {
+          "name": "FullRoundFilletSpec",
+          "startLine": 113,
+          "endLine": 116,
+          "methods": [],
+          "properties": [
+            "propagate_tangent"
+          ]
+        },
+        {
+          "name": "SetbackFilletSpec",
+          "startLine": 120,
+          "endLine": 125,
+          "methods": [],
+          "properties": [
+            "radius",
+            "distances",
+            "overflow"
+          ]
+        },
+        {
+          "name": "WidthWidthChamferSpec",
+          "startLine": 129,
+          "endLine": 134,
+          "methods": [],
+          "properties": [
+            "width1",
+            "width2",
+            "propagate_tangent"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "VariableFilletSpec",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "FaceFilletSpec",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "HoldLineFilletSpec",
+          "line": 93,
+          "isDefault": false
+        },
+        {
+          "name": "SurfaceCombinationSpec",
+          "line": 103,
+          "isDefault": false
+        },
+        {
+          "name": "FullRoundFilletSpec",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "SetbackFilletSpec",
+          "line": 119,
+          "isDefault": false
+        },
+        {
+          "name": "WidthWidthChamferSpec",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "_finite_positive",
+          "line": 137,
+          "isDefault": false
+        },
+        {
+          "name": "validate_variable_spec",
+          "line": 148,
+          "isDefault": false
+        },
+        {
+          "name": "validate_face_spec",
+          "line": 184,
+          "isDefault": false
+        },
+        {
+          "name": "validate_hold_line_spec",
+          "line": 195,
+          "isDefault": false
+        },
+        {
+          "name": "validate_surface_combination_spec",
+          "line": 221,
+          "isDefault": false
+        },
+        {
+          "name": "validate_full_round_spec",
+          "line": 248,
+          "isDefault": false
+        },
+        {
+          "name": "validate_setback_spec",
+          "line": 263,
+          "isDefault": false
+        },
+        {
+          "name": "validate_width_width_chamfer_spec",
+          "line": 288,
+          "isDefault": false
+        },
+        {
+          "name": "inspect_typelib_members",
+          "line": 314,
+          "isDefault": false
+        },
+        {
+          "name": "build_capability_report",
+          "line": 339,
+          "isDefault": false
+        },
+        {
+          "name": "spec_payload",
+          "line": 368,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_finite_positive",
+          "callee": "float",
+          "lineNumber": 140
+        },
+        {
+          "caller": "_finite_positive",
+          "callee": "ValueError",
+          "lineNumber": 142
+        },
+        {
+          "caller": "_finite_positive",
+          "callee": "math.isfinite",
+          "lineNumber": 143
+        },
+        {
+          "caller": "_finite_positive",
+          "callee": "ValueError",
+          "lineNumber": 144
+        },
+        {
+          "caller": "validate_variable_spec",
+          "callee": "_finite_positive",
+          "lineNumber": 150
+        },
+        {
+          "caller": "validate_variable_spec",
+          "callee": "_finite_positive",
+          "lineNumber": 152
+        },
+        {
+          "caller": "validate_variable_spec",
+          "callee": "_finite_positive",
+          "lineNumber": 153
+        },
+        {
+          "caller": "validate_variable_spec",
+          "callee": "enumerate",
+          "lineNumber": 157
+        },
+        {
+          "caller": "validate_variable_spec",
+          "callee": "isinstance",
+          "lineNumber": 158
+        },
+        {
+          "caller": "validate_variable_spec",
+          "callee": "len",
+          "lineNumber": 158
+        },
+        {
+          "caller": "validate_variable_spec",
+          "callee": "ValueError",
+          "lineNumber": 159
+        },
+        {
+          "caller": "validate_variable_spec",
+          "callee": "float",
+          "lineNumber": 160
+        },
+        {
+          "caller": "validate_variable_spec",
+          "callee": "_finite_positive",
+          "lineNumber": 161
+        },
+        {
+          "caller": "validate_variable_spec",
+          "callee": "math.isfinite",
+          "lineNumber": 162
+        },
+        {
+          "caller": "validate_variable_spec",
+          "callee": "ValueError",
+          "lineNumber": 163
+        },
+        {
+          "caller": "validate_variable_spec",
+          "callee": "ValueError",
+          "lineNumber": 165
+        },
+        {
+          "caller": "validate_variable_spec",
+          "callee": "radii.append",
+          "lineNumber": 167
+        },
+        {
+          "caller": "validate_variable_spec",
+          "callee": "controls.append",
+          "lineNumber": 168
+        },
+        {
+          "caller": "validate_variable_spec",
+          "callee": "ValueError",
+          "lineNumber": 170
+        },
+        {
+          "caller": "validate_variable_spec",
+          "callee": "ValueError",
+          "lineNumber": 172
+        },
+        {
+          "caller": "validate_variable_spec",
+          "callee": "max",
+          "lineNumber": 173
+        },
+        {
+          "caller": "validate_variable_spec",
+          "callee": "ValueError",
+          "lineNumber": 174
+        },
+        {
+          "caller": "validate_face_spec",
+          "callee": "_finite_positive",
+          "lineNumber": 186
+        },
+        {
+          "caller": "validate_face_spec",
+          "callee": "_finite_positive",
+          "lineNumber": 187
+        },
+        {
+          "caller": "validate_face_spec",
+          "callee": "ValueError",
+          "lineNumber": 189
+        },
+        {
+          "caller": "validate_face_spec",
+          "callee": "ValueError",
+          "lineNumber": 191
+        },
+        {
+          "caller": "validate_hold_line_spec",
+          "callee": "_finite_positive",
+          "lineNumber": 202
+        },
+        {
+          "caller": "validate_hold_line_spec",
+          "callee": "_finite_positive",
+          "lineNumber": 203
+        },
+        {
+          "caller": "validate_hold_line_spec",
+          "callee": "int",
+          "lineNumber": 204
+        },
+        {
+          "caller": "validate_hold_line_spec",
+          "callee": "int",
+          "lineNumber": 205
+        },
+        {
+          "caller": "validate_hold_line_spec",
+          "callee": "ValueError",
+          "lineNumber": 207
+        },
+        {
+          "caller": "validate_hold_line_spec",
+          "callee": "ValueError",
+          "lineNumber": 209
+        },
+        {
+          "caller": "validate_hold_line_spec",
+          "callee": "ValueError",
+          "lineNumber": 211
+        },
+        {
+          "caller": "validate_hold_line_spec",
+          "callee": "bool",
+          "lineNumber": 217
+        },
+        {
+          "caller": "validate_surface_combination_spec",
+          "callee": "_finite_positive",
+          "lineNumber": 228
+        },
+        {
+          "caller": "validate_surface_combination_spec",
+          "callee": "_finite_positive",
+          "lineNumber": 229
+        },
+        {
+          "caller": "validate_surface_combination_spec",
+          "callee": "tuple",
+          "lineNumber": 230
+        },
+        {
+          "caller": "validate_surface_combination_spec",
+          "callee": "str(item).strip().lower",
+          "lineNumber": 230
+        },
+        {
+          "caller": "validate_surface_combination_spec",
+          "callee": "str(item).strip",
+          "lineNumber": 230
+        },
+        {
+          "caller": "validate_surface_combination_spec",
+          "callee": "str",
+          "lineNumber": 230
+        },
+        {
+          "caller": "validate_surface_combination_spec",
+          "callee": "len",
+          "lineNumber": 231
+        },
+        {
+          "caller": "validate_surface_combination_spec",
+          "callee": "any",
+          "lineNumber": 231
+        },
+        {
+          "caller": "validate_surface_combination_spec",
+          "callee": "ValueError",
+          "lineNumber": 232
+        },
+        {
+          "caller": "validate_surface_combination_spec",
+          "callee": "len",
+          "lineNumber": 233
+        },
+        {
+          "caller": "validate_surface_combination_spec",
+          "callee": "set",
+          "lineNumber": 233
+        },
+        {
+          "caller": "validate_surface_combination_spec",
+          "callee": "ValueError",
+          "lineNumber": 234
+        },
+        {
+          "caller": "validate_surface_combination_spec",
+          "callee": "ValueError",
+          "lineNumber": 236
+        },
+        {
+          "caller": "validate_surface_combination_spec",
+          "callee": "ValueError",
+          "lineNumber": 238
+        },
+        {
+          "caller": "validate_surface_combination_spec",
+          "callee": "list",
+          "lineNumber": 244
+        },
+        {
+          "caller": "validate_full_round_spec",
+          "callee": "len",
+          "lineNumber": 254
+        },
+        {
+          "caller": "validate_full_round_spec",
+          "callee": "any",
+          "lineNumber": 254
+        },
+        {
+          "caller": "validate_full_round_spec",
+          "callee": "int",
+          "lineNumber": 254
+        },
+        {
+          "caller": "validate_full_round_spec",
+          "callee": "ValueError",
+          "lineNumber": 255
+        },
+        {
+          "caller": "validate_full_round_spec",
+          "callee": "list",
+          "lineNumber": 259
+        },
+        {
+          "caller": "validate_setback_spec",
+          "callee": "_finite_positive",
+          "lineNumber": 269
+        },
+        {
+          "caller": "validate_setback_spec",
+          "callee": "_finite_positive",
+          "lineNumber": 270
+        },
+        {
+          "caller": "validate_setback_spec",
+          "callee": "_finite_positive",
+          "lineNumber": 271
+        },
+        {
+          "caller": "validate_setback_spec",
+          "callee": "len",
+          "lineNumber": 272
+        },
+        {
+          "caller": "validate_setback_spec",
+          "callee": "len",
+          "lineNumber": 272
+        },
+        {
+          "caller": "validate_setback_spec",
+          "callee": "ValueError",
+          "lineNumber": 273
+        },
+        {
+          "caller": "validate_setback_spec",
+          "callee": "enumerate",
+          "lineNumber": 274
+        },
+        {
+          "caller": "validate_setback_spec",
+          "callee": "zip",
+          "lineNumber": 274
+        },
+        {
+          "caller": "validate_setback_spec",
+          "callee": "ValueError",
+          "lineNumber": 276
+        },
+        {
+          "caller": "validate_setback_spec",
+          "callee": "min",
+          "lineNumber": 277
+        },
+        {
+          "caller": "validate_setback_spec",
+          "callee": "ValueError",
+          "lineNumber": 278
+        },
+        {
+          "caller": "validate_width_width_chamfer_spec",
+          "callee": "_finite_positive",
+          "lineNumber": 294
+        },
+        {
+          "caller": "validate_width_width_chamfer_spec",
+          "callee": "_finite_positive",
+          "lineNumber": 295
+        },
+        {
+          "caller": "validate_width_width_chamfer_spec",
+          "callee": "len",
+          "lineNumber": 296
+        },
+        {
+          "caller": "validate_width_width_chamfer_spec",
+          "callee": "ValueError",
+          "lineNumber": 297
+        },
+        {
+          "caller": "validate_width_width_chamfer_spec",
+          "callee": "tuple",
+          "lineNumber": 298
+        },
+        {
+          "caller": "validate_width_width_chamfer_spec",
+          "callee": "_finite_positive",
+          "lineNumber": 299
+        },
+        {
+          "caller": "validate_width_width_chamfer_spec",
+          "callee": "enumerate",
+          "lineNumber": 300
+        },
+        {
+          "caller": "validate_width_width_chamfer_spec",
+          "callee": "enumerate",
+          "lineNumber": 302
+        },
+        {
+          "caller": "validate_width_width_chamfer_spec",
+          "callee": "zip",
+          "lineNumber": 302
+        },
+        {
+          "caller": "validate_width_width_chamfer_spec",
+          "callee": "ValueError",
+          "lineNumber": 304
+        },
+        {
+          "caller": "validate_width_width_chamfer_spec",
+          "callee": "list",
+          "lineNumber": 309
+        },
+        {
+          "caller": "validate_width_width_chamfer_spec",
+          "callee": "math.isclose",
+          "lineNumber": 310
+        },
+        {
+          "caller": "inspect_typelib_members",
+          "callee": "RuntimeError",
+          "lineNumber": 319
+        },
+        {
+          "caller": "inspect_typelib_members",
+          "callee": "Path",
+          "lineNumber": 320
+        },
+        {
+          "caller": "inspect_typelib_members",
+          "callee": "path.is_file",
+          "lineNumber": 321
+        },
+        {
+          "caller": "inspect_typelib_members",
+          "callee": "FileNotFoundError",
+          "lineNumber": 322
+        },
+        {
+          "caller": "inspect_typelib_members",
+          "callee": "pythoncom.LoadTypeLib",
+          "lineNumber": 323
+        },
+        {
+          "caller": "inspect_typelib_members",
+          "callee": "str",
+          "lineNumber": 323
+        },
+        {
+          "caller": "inspect_typelib_members",
+          "callee": "REQUIRED_INTERFACES.values",
+          "lineNumber": 325
+        },
+        {
+          "caller": "inspect_typelib_members",
+          "callee": "range",
+          "lineNumber": 326
+        },
+        {
+          "caller": "inspect_typelib_members",
+          "callee": "library.GetTypeInfoCount",
+          "lineNumber": 326
+        },
+        {
+          "caller": "inspect_typelib_members",
+          "callee": "library.GetTypeInfo",
+          "lineNumber": 327
+        },
+        {
+          "caller": "inspect_typelib_members",
+          "callee": "library.GetDocumentation",
+          "lineNumber": 328
+        },
+        {
+          "caller": "inspect_typelib_members",
+          "callee": "info.GetTypeAttr",
+          "lineNumber": 331
+        },
+        {
+          "caller": "inspect_typelib_members",
+          "callee": "info.GetNames",
+          "lineNumber": 333
+        },
+        {
+          "caller": "inspect_typelib_members",
+          "callee": "info.GetFuncDesc",
+          "lineNumber": 333
+        },
+        {
+          "caller": "inspect_typelib_members",
+          "callee": "range",
+          "lineNumber": 334
+        },
+        {
+          "caller": "build_capability_report",
+          "callee": "set",
+          "lineNumber": 345
+        },
+        {
+          "caller": "build_capability_report",
+          "callee": "interfaces.items",
+          "lineNumber": 345
+        },
+        {
+          "caller": "build_capability_report",
+          "callee": "REQUIRED_INTERFACES.items",
+          "lineNumber": 347
+        },
+        {
+          "caller": "build_capability_report",
+          "callee": "requirements.items",
+          "lineNumber": 350
+        },
+        {
+          "caller": "build_capability_report",
+          "callee": "normalized.get",
+          "lineNumber": 351
+        },
+        {
+          "caller": "build_capability_report",
+          "callee": "set",
+          "lineNumber": 351
+        },
+        {
+          "caller": "build_capability_report",
+          "callee": "(present if member in found else missing).append",
+          "lineNumber": 354
+        },
+        {
+          "caller": "spec_payload",
+          "callee": "asdict",
+          "lineNumber": 372
+        },
+        {
+          "caller": "spec_payload",
+          "callee": "dict",
+          "lineNumber": 373
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 18,
+        "functionCount": 11,
+        "classCount": 7
+      }
+    },
+    {
+      "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 431,
+      "nonEmptyLines": 392,
+      "functions": [
+        {
+          "name": "unsafe_hold_line_probe_enabled",
+          "startLine": 43,
+          "endLine": 47,
+          "params": []
+        },
+        {
+          "name": "known_hold_line_block_evidence",
+          "startLine": 50,
+          "endLine": 65,
+          "params": [
+            "backend"
+          ]
+        },
+        {
+          "name": "_require_unsafe_probe",
+          "startLine": 68,
+          "endLine": 82,
+          "params": [
+            "backend",
+            "allow_unsafe",
+            "solidworks_revision"
+          ]
+        },
+        {
+          "name": "_solidworks_revision",
+          "startLine": 85,
+          "endLine": 91,
+          "params": [
+            "sw"
+          ]
+        },
+        {
+          "name": "_long_path",
+          "startLine": 94,
+          "endLine": 98,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "_short_path",
+          "startLine": 101,
+          "endLine": 105,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "_solidworks_install_dir",
+          "startLine": 108,
+          "endLine": 118,
+          "params": []
+        },
+        {
+          "name": "discover_bridge_toolchain",
+          "startLine": 121,
+          "endLine": 135,
+          "params": []
+        },
+        {
+          "name": "discover_native_toolchain",
+          "startLine": 138,
+          "endLine": 157,
+          "params": []
+        },
+        {
+          "name": "build_native_hold_line_addin",
+          "startLine": 160,
+          "endLine": 205,
+          "params": [
+            "build_dir"
+          ]
+        },
+        {
+          "name": "build_native_hold_line_macro",
+          "startLine": 208,
+          "endLine": 226,
+          "params": [
+            "build_dir"
+          ]
+        },
+        {
+          "name": "create_hold_line_via_native_addin",
+          "startLine": 229,
+          "endLine": 323,
+          "params": [
+            "sw",
+            "expected_title",
+            "build_dir",
+            "allow_unsafe"
+          ]
+        },
+        {
+          "name": "build_hold_line_bridge",
+          "startLine": 326,
+          "endLine": 372,
+          "params": [
+            "build_dir"
+          ]
+        },
+        {
+          "name": "create_hold_line_via_csharp",
+          "startLine": 375,
+          "endLine": 417,
+          "params": [
+            "expected_title",
+            "build_dir",
+            "allow_unsafe",
+            "solidworks_revision"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "HoldLineBridgeError",
+          "startLine": 35,
+          "endLine": 40,
+          "methods": [
+            "__init__"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "HoldLineBridgeError",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "unsafe_hold_line_probe_enabled",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "known_hold_line_block_evidence",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "_require_unsafe_probe",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "_solidworks_revision",
+          "line": 85,
+          "isDefault": false
+        },
+        {
+          "name": "_long_path",
+          "line": 94,
+          "isDefault": false
+        },
+        {
+          "name": "_short_path",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "_solidworks_install_dir",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "discover_bridge_toolchain",
+          "line": 121,
+          "isDefault": false
+        },
+        {
+          "name": "discover_native_toolchain",
+          "line": 138,
+          "isDefault": false
+        },
+        {
+          "name": "build_native_hold_line_addin",
+          "line": 160,
+          "isDefault": false
+        },
+        {
+          "name": "build_native_hold_line_macro",
+          "line": 208,
+          "isDefault": false
+        },
+        {
+          "name": "create_hold_line_via_native_addin",
+          "line": 229,
+          "isDefault": false
+        },
+        {
+          "name": "build_hold_line_bridge",
+          "line": 326,
+          "isDefault": false
+        },
+        {
+          "name": "create_hold_line_via_csharp",
+          "line": 375,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "super().__init__",
+          "lineNumber": 39
+        },
+        {
+          "caller": "__init__",
+          "callee": "super",
+          "lineNumber": 39
+        },
+        {
+          "caller": "unsafe_hold_line_probe_enabled",
+          "callee": "os.environ.get(UNSAFE_HOLD_LINE_ENV, \"\").strip().lower",
+          "lineNumber": 45
+        },
+        {
+          "caller": "unsafe_hold_line_probe_enabled",
+          "callee": "os.environ.get(UNSAFE_HOLD_LINE_ENV, \"\").strip",
+          "lineNumber": 45
+        },
+        {
+          "caller": "unsafe_hold_line_probe_enabled",
+          "callee": "os.environ.get",
+          "lineNumber": 45
+        },
+        {
+          "caller": "_require_unsafe_probe",
+          "callee": "unsafe_hold_line_probe_enabled",
+          "lineNumber": 74
+        },
+        {
+          "caller": "_require_unsafe_probe",
+          "callee": "solidworks_revision.startswith",
+          "lineNumber": 76
+        },
+        {
+          "caller": "_require_unsafe_probe",
+          "callee": "HoldLineBridgeError",
+          "lineNumber": 78
+        },
+        {
+          "caller": "_require_unsafe_probe",
+          "callee": "known_hold_line_block_evidence",
+          "lineNumber": 81
+        },
+        {
+          "caller": "_solidworks_revision",
+          "callee": "getattr",
+          "lineNumber": 88
+        },
+        {
+          "caller": "_solidworks_revision",
+          "callee": "str",
+          "lineNumber": 89
+        },
+        {
+          "caller": "_solidworks_revision",
+          "callee": "member",
+          "lineNumber": 89
+        },
+        {
+          "caller": "_solidworks_revision",
+          "callee": "callable",
+          "lineNumber": 89
+        },
+        {
+          "caller": "_long_path",
+          "callee": "ctypes.create_unicode_buffer",
+          "lineNumber": 96
+        },
+        {
+          "caller": "_long_path",
+          "callee": "ctypes.windll.kernel32.GetLongPathNameW",
+          "lineNumber": 97
+        },
+        {
+          "caller": "_long_path",
+          "callee": "len",
+          "lineNumber": 97
+        },
+        {
+          "caller": "_long_path",
+          "callee": "Path",
+          "lineNumber": 98
+        },
+        {
+          "caller": "_short_path",
+          "callee": "ctypes.create_unicode_buffer",
+          "lineNumber": 103
+        },
+        {
+          "caller": "_short_path",
+          "callee": "ctypes.windll.kernel32.GetShortPathNameW",
+          "lineNumber": 104
+        },
+        {
+          "caller": "_short_path",
+          "callee": "str",
+          "lineNumber": 104
+        },
+        {
+          "caller": "_short_path",
+          "callee": "len",
+          "lineNumber": 104
+        },
+        {
+          "caller": "_short_path",
+          "callee": "str",
+          "lineNumber": 105
+        },
+        {
+          "caller": "_solidworks_install_dir",
+          "callee": "winreg.OpenKey",
+          "lineNumber": 110
+        },
+        {
+          "caller": "_solidworks_install_dir",
+          "callee": "winreg.QueryValueEx",
+          "lineNumber": 111
+        },
+        {
+          "caller": "_solidworks_install_dir",
+          "callee": "winreg.OpenKey",
+          "lineNumber": 112
+        },
+        {
+          "caller": "_solidworks_install_dir",
+          "callee": "winreg.QueryValueEx",
+          "lineNumber": 116
+        },
+        {
+          "caller": "_solidworks_install_dir",
+          "callee": "command.strip().strip('\"').split",
+          "lineNumber": 117
+        },
+        {
+          "caller": "_solidworks_install_dir",
+          "callee": "command.strip().strip",
+          "lineNumber": 117
+        },
+        {
+          "caller": "_solidworks_install_dir",
+          "callee": "command.strip",
+          "lineNumber": 117
+        },
+        {
+          "caller": "_solidworks_install_dir",
+          "callee": "_long_path(executable).resolve",
+          "lineNumber": 118
+        },
+        {
+          "caller": "_solidworks_install_dir",
+          "callee": "_long_path",
+          "lineNumber": 118
+        },
+        {
+          "caller": "discover_bridge_toolchain",
+          "callee": "next",
+          "lineNumber": 123
+        },
+        {
+          "caller": "discover_bridge_toolchain",
+          "callee": "candidate.is_file",
+          "lineNumber": 123
+        },
+        {
+          "caller": "discover_bridge_toolchain",
+          "callee": "HoldLineBridgeError",
+          "lineNumber": 125
+        },
+        {
+          "caller": "discover_bridge_toolchain",
+          "callee": "_solidworks_install_dir",
+          "lineNumber": 126
+        },
+        {
+          "caller": "discover_bridge_toolchain",
+          "callee": "str",
+          "lineNumber": 132
+        },
+        {
+          "caller": "discover_bridge_toolchain",
+          "callee": "paths.values",
+          "lineNumber": 132
+        },
+        {
+          "caller": "discover_bridge_toolchain",
+          "callee": "path.is_file",
+          "lineNumber": 132
+        },
+        {
+          "caller": "discover_bridge_toolchain",
+          "callee": "HoldLineBridgeError",
+          "lineNumber": 134
+        },
+        {
+          "caller": "discover_native_toolchain",
+          "callee": "_solidworks_install_dir",
+          "lineNumber": 140
+        },
+        {
+          "caller": "discover_native_toolchain",
+          "callee": "Path",
+          "lineNumber": 142
+        },
+        {
+          "caller": "discover_native_toolchain",
+          "callee": "Path",
+          "lineNumber": 143
+        },
+        {
+          "caller": "discover_native_toolchain",
+          "callee": "Path",
+          "lineNumber": 144
+        },
+        {
+          "caller": "discover_native_toolchain",
+          "callee": "next",
+          "lineNumber": 146
+        },
+        {
+          "caller": "discover_native_toolchain",
+          "callee": "candidate.is_file",
+          "lineNumber": 146
+        },
+        {
+          "caller": "discover_native_toolchain",
+          "callee": "HoldLineBridgeError",
+          "lineNumber": 148
+        },
+        {
+          "caller": "discover_native_toolchain",
+          "callee": "str",
+          "lineNumber": 154
+        },
+        {
+          "caller": "discover_native_toolchain",
+          "callee": "paths.values",
+          "lineNumber": 154
+        },
+        {
+          "caller": "discover_native_toolchain",
+          "callee": "path.is_file",
+          "lineNumber": 154
+        },
+        {
+          "caller": "discover_native_toolchain",
+          "callee": "HoldLineBridgeError",
+          "lineNumber": 156
+        },
+        {
+          "caller": "build_native_hold_line_addin",
+          "callee": "discover_native_toolchain",
+          "lineNumber": 162
+        },
+        {
+          "caller": "build_native_hold_line_addin",
+          "callee": "(\n        build_dir or Path(tempfile.gettempdir()) / \"cad-studio-native-hold-line-addin\"\n    ).resolve",
+          "lineNumber": 163
+        },
+        {
+          "caller": "build_native_hold_line_addin",
+          "callee": "Path",
+          "lineNumber": 164
+        },
+        {
+          "caller": "build_native_hold_line_addin",
+          "callee": "tempfile.gettempdir",
+          "lineNumber": 164
+        },
+        {
+          "caller": "build_native_hold_line_addin",
+          "callee": "target_dir.mkdir",
+          "lineNumber": 166
+        },
+        {
+          "caller": "build_native_hold_line_addin",
+          "callee": "_short_path",
+          "lineNumber": 170
+        },
+        {
+          "caller": "build_native_hold_line_addin",
+          "callee": "_short_path",
+          "lineNumber": 172
+        },
+        {
+          "caller": "build_native_hold_line_addin",
+          "callee": "_short_path",
+          "lineNumber": 172
+        },
+        {
+          "caller": "build_native_hold_line_addin",
+          "callee": "_short_path",
+          "lineNumber": 173
+        },
+        {
+          "caller": "build_native_hold_line_addin",
+          "callee": "_short_path",
+          "lineNumber": 173
+        },
+        {
+          "caller": "build_native_hold_line_addin",
+          "callee": "subprocess.run",
+          "lineNumber": 176
+        },
+        {
+          "caller": "build_native_hold_line_addin",
+          "callee": "str",
+          "lineNumber": 178
+        },
+        {
+          "caller": "build_native_hold_line_addin",
+          "callee": "dll_path.is_file",
+          "lineNumber": 186
+        },
+        {
+          "caller": "build_native_hold_line_addin",
+          "callee": "HoldLineBridgeError",
+          "lineNumber": 187
+        },
+        {
+          "caller": "build_native_hold_line_addin",
+          "callee": "str",
+          "lineNumber": 198
+        },
+        {
+          "caller": "build_native_hold_line_addin",
+          "callee": "str",
+          "lineNumber": 199
+        },
+        {
+          "caller": "build_native_hold_line_addin",
+          "callee": "str",
+          "lineNumber": 200
+        },
+        {
+          "caller": "build_native_hold_line_addin",
+          "callee": "str",
+          "lineNumber": 201
+        },
+        {
+          "caller": "build_native_hold_line_addin",
+          "callee": "str",
+          "lineNumber": 202
+        },
+        {
+          "caller": "build_native_hold_line_addin",
+          "callee": "str",
+          "lineNumber": 203
+        },
+        {
+          "caller": "build_native_hold_line_macro",
+          "callee": "build_native_hold_line_addin",
+          "lineNumber": 212
+        },
+        {
+          "caller": "build_native_hold_line_macro",
+          "callee": "NATIVE_MACRO_SOURCE_PATH.read_text",
+          "lineNumber": 215
+        },
+        {
+          "caller": "build_native_hold_line_macro",
+          "callee": "str(native_path).replace",
+          "lineNumber": 216
+        },
+        {
+          "caller": "build_native_hold_line_macro",
+          "callee": "str",
+          "lineNumber": 216
+        },
+        {
+          "caller": "build_native_hold_line_macro",
+          "callee": "macro_path.write_text",
+          "lineNumber": 217
+        },
+        {
+          "caller": "build_native_hold_line_macro",
+          "callee": "macro_source.replace",
+          "lineNumber": 218
+        },
+        {
+          "caller": "build_native_hold_line_macro",
+          "callee": "str",
+          "lineNumber": 223
+        },
+        {
+          "caller": "build_native_hold_line_macro",
+          "callee": "str",
+          "lineNumber": 224
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "_require_unsafe_probe",
+          "lineNumber": 237
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "_solidworks_revision",
+          "lineNumber": 240
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "build_native_hold_line_macro",
+          "lineNumber": 242
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "Path",
+          "lineNumber": 243
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "tempfile.gettempdir",
+          "lineNumber": 243
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "Path",
+          "lineNumber": 244
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "tempfile.gettempdir",
+          "lineNumber": 244
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "result_path.unlink",
+          "lineNumber": 245
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "job_path.write_text",
+          "lineNumber": 246
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "VARIANT",
+          "lineNumber": 251
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "sw.RunMacro2",
+          "lineNumber": 252
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "str",
+          "lineNumber": 253
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "sw.ActiveDoc.FeatureByName",
+          "lineNumber": 255
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "int",
+          "lineNumber": 262
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "time.monotonic",
+          "lineNumber": 265
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "time.monotonic",
+          "lineNumber": 267
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "result_path.is_file",
+          "lineNumber": 268
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "json.loads",
+          "lineNumber": 270
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "result_path.read_text",
+          "lineNumber": 270
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "candidate.get",
+          "lineNumber": 271
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "time.sleep",
+          "lineNumber": 276
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "result_path.is_file",
+          "lineNumber": 279
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "json.loads",
+          "lineNumber": 281
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "result_path.read_text",
+          "lineNumber": 281
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "HoldLineBridgeError",
+          "lineNumber": 284
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "int",
+          "lineNumber": 288
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "result.update",
+          "lineNumber": 293
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "int",
+          "lineNumber": 296
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "sw.ActiveDoc.FeatureByName",
+          "lineNumber": 298
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "feature.GetDefinition",
+          "lineNumber": 301
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "definition.AccessSelections",
+          "lineNumber": 302
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "int",
+          "lineNumber": 304
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "definition.GetHoldLineCount",
+          "lineNumber": 304
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "definition.ReleaseSelectionAccess",
+          "lineNumber": 306
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "result.update",
+          "lineNumber": 307
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "result.get",
+          "lineNumber": 312
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "int",
+          "lineNumber": 313
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "result.get",
+          "lineNumber": 313
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "HoldLineBridgeError",
+          "lineNumber": 316
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "str",
+          "lineNumber": 317
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "result.get",
+          "lineNumber": 317
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "result_path.unlink",
+          "lineNumber": 322
+        },
+        {
+          "caller": "create_hold_line_via_native_addin",
+          "callee": "job_path.unlink",
+          "lineNumber": 323
+        },
+        {
+          "caller": "build_hold_line_bridge",
+          "callee": "discover_bridge_toolchain",
+          "lineNumber": 328
+        },
+        {
+          "caller": "build_hold_line_bridge",
+          "callee": "(build_dir or Path(tempfile.gettempdir()) / \"cad-studio-hold-line-bridge\").resolve",
+          "lineNumber": 329
+        },
+        {
+          "caller": "build_hold_line_bridge",
+          "callee": "Path",
+          "lineNumber": 329
+        },
+        {
+          "caller": "build_hold_line_bridge",
+          "callee": "tempfile.gettempdir",
+          "lineNumber": 329
+        },
+        {
+          "caller": "build_hold_line_bridge",
+          "callee": "target_dir.mkdir",
+          "lineNumber": 330
+        },
+        {
+          "caller": "build_hold_line_bridge",
+          "callee": "str",
+          "lineNumber": 333
+        },
+        {
+          "caller": "build_hold_line_bridge",
+          "callee": "str",
+          "lineNumber": 341
+        },
+        {
+          "caller": "build_hold_line_bridge",
+          "callee": "subprocess.run",
+          "lineNumber": 343
+        },
+        {
+          "caller": "build_hold_line_bridge",
+          "callee": "str",
+          "lineNumber": 345
+        },
+        {
+          "caller": "build_hold_line_bridge",
+          "callee": "executable.is_file",
+          "lineNumber": 353
+        },
+        {
+          "caller": "build_hold_line_bridge",
+          "callee": "HoldLineBridgeError",
+          "lineNumber": 354
+        },
+        {
+          "caller": "build_hold_line_bridge",
+          "callee": "shutil.copy2",
+          "lineNumber": 364
+        },
+        {
+          "caller": "build_hold_line_bridge",
+          "callee": "str",
+          "lineNumber": 366
+        },
+        {
+          "caller": "build_hold_line_bridge",
+          "callee": "str",
+          "lineNumber": 367
+        },
+        {
+          "caller": "build_hold_line_bridge",
+          "callee": "str",
+          "lineNumber": 368
+        },
+        {
+          "caller": "build_hold_line_bridge",
+          "callee": "str",
+          "lineNumber": 369
+        },
+        {
+          "caller": "build_hold_line_bridge",
+          "callee": "str",
+          "lineNumber": 370
+        },
+        {
+          "caller": "create_hold_line_via_csharp",
+          "callee": "_require_unsafe_probe",
+          "lineNumber": 383
+        },
+        {
+          "caller": "create_hold_line_via_csharp",
+          "callee": "build_hold_line_bridge",
+          "lineNumber": 384
+        },
+        {
+          "caller": "create_hold_line_via_csharp",
+          "callee": "subprocess.run",
+          "lineNumber": 385
+        },
+        {
+          "caller": "create_hold_line_via_csharp",
+          "callee": "str",
+          "lineNumber": 386
+        },
+        {
+          "caller": "create_hold_line_via_csharp",
+          "callee": "str",
+          "lineNumber": 386
+        },
+        {
+          "caller": "create_hold_line_via_csharp",
+          "callee": "str",
+          "lineNumber": 387
+        },
+        {
+          "caller": "create_hold_line_via_csharp",
+          "callee": "line.strip",
+          "lineNumber": 396
+        },
+        {
+          "caller": "create_hold_line_via_csharp",
+          "callee": "completed.stdout.splitlines",
+          "lineNumber": 396
+        },
+        {
+          "caller": "create_hold_line_via_csharp",
+          "callee": "line.strip",
+          "lineNumber": 396
+        },
+        {
+          "caller": "create_hold_line_via_csharp",
+          "callee": "json.loads",
+          "lineNumber": 398
+        },
+        {
+          "caller": "create_hold_line_via_csharp",
+          "callee": "HoldLineBridgeError",
+          "lineNumber": 400
+        },
+        {
+          "caller": "create_hold_line_via_csharp",
+          "callee": "result.get",
+          "lineNumber": 412
+        },
+        {
+          "caller": "create_hold_line_via_csharp",
+          "callee": "HoldLineBridgeError",
+          "lineNumber": 413
+        },
+        {
+          "caller": "create_hold_line_via_csharp",
+          "callee": "str",
+          "lineNumber": 414
+        },
+        {
+          "caller": "create_hold_line_via_csharp",
+          "callee": "result.get",
+          "lineNumber": 414
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 15,
+        "functionCount": 14,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 1014,
+      "nonEmptyLines": 928,
+      "functions": [
+        {
+          "name": "_dispatch_array",
+          "startLine": 96,
+          "endLine": 98,
+          "params": [
+            "items"
+          ]
+        },
+        {
+          "name": "_double_array",
+          "startLine": 101,
+          "endLine": 106,
+          "params": [
+            "values"
+          ]
+        },
+        {
+          "name": "_variant_array",
+          "startLine": 109,
+          "endLine": 111,
+          "params": [
+            "items"
+          ]
+        },
+        {
+          "name": "_typed_feature_data",
+          "startLine": 114,
+          "endLine": 120,
+          "params": [
+            "data",
+            "interface_name"
+          ]
+        },
+        {
+          "name": "_find_typelib",
+          "startLine": 123,
+          "endLine": 146,
+          "params": [
+            "explicit"
+          ]
+        },
+        {
+          "name": "_select_plane",
+          "startLine": 149,
+          "endLine": 157,
+          "params": [
+            "model"
+          ]
+        },
+        {
+          "name": "_hide_review_helpers",
+          "startLine": 160,
+          "endLine": 167,
+          "params": [
+            "model"
+          ]
+        },
+        {
+          "name": "_create_box",
+          "startLine": 170,
+          "endLine": 195,
+          "params": [
+            "model",
+            "length_mm",
+            "width_mm",
+            "height_mm",
+            "name"
+          ]
+        },
+        {
+          "name": "_create_cylinder",
+          "startLine": 198,
+          "endLine": 221,
+          "params": [
+            "model",
+            "radius_mm",
+            "height_mm",
+            "name"
+          ]
+        },
+        {
+          "name": "_add_projected_hold_line",
+          "startLine": 224,
+          "endLine": 244,
+          "params": [
+            "model"
+          ]
+        },
+        {
+          "name": "_body",
+          "startLine": 247,
+          "endLine": 252,
+          "params": [
+            "model"
+          ]
+        },
+        {
+          "name": "_point",
+          "startLine": 255,
+          "endLine": 257,
+          "params": [
+            "vertex"
+          ]
+        },
+        {
+          "name": "_edge_points",
+          "startLine": 260,
+          "endLine": 266,
+          "params": [
+            "edge"
+          ]
+        },
+        {
+          "name": "_edge_length_mm",
+          "startLine": 269,
+          "endLine": 275,
+          "params": [
+            "edge"
+          ]
+        },
+        {
+          "name": "_near",
+          "startLine": 278,
+          "endLine": 280,
+          "params": [
+            "left",
+            "right"
+          ]
+        },
+        {
+          "name": "_find_edge",
+          "startLine": 283,
+          "endLine": 292,
+          "params": [
+            "model",
+            "predicate"
+          ]
+        },
+        {
+          "name": "_face_box",
+          "startLine": 295,
+          "endLine": 297,
+          "params": [
+            "face"
+          ]
+        },
+        {
+          "name": "_find_face",
+          "startLine": 300,
+          "endLine": 309,
+          "params": [
+            "model",
+            "predicate"
+          ]
+        },
+        {
+          "name": "_surface_type",
+          "startLine": 312,
+          "endLine": 329,
+          "params": [
+            "face"
+          ]
+        },
+        {
+          "name": "_find_vertex",
+          "startLine": 332,
+          "endLine": 348,
+          "params": [
+            "model",
+            "target"
+          ]
+        },
+        {
+          "name": "_incident_edges",
+          "startLine": 351,
+          "endLine": 361,
+          "params": [
+            "model",
+            "vertex"
+          ]
+        },
+        {
+          "name": "_assert_feature",
+          "startLine": 364,
+          "endLine": 374,
+          "params": [
+            "model",
+            "feature",
+            "name"
+          ]
+        },
+        {
+          "name": "_create_variable",
+          "startLine": 377,
+          "endLine": 413,
+          "params": [
+            "model"
+          ]
+        },
+        {
+          "name": "_create_face",
+          "startLine": 416,
+          "endLine": 438,
+          "params": [
+            "model"
+          ]
+        },
+        {
+          "name": "_create_hold_line",
+          "startLine": 441,
+          "endLine": 620,
+          "params": [
+            "model",
+            "sw"
+          ]
+        },
+        {
+          "name": "_create_surface_combo",
+          "startLine": 623,
+          "endLine": 651,
+          "params": [
+            "model"
+          ]
+        },
+        {
+          "name": "_create_full_round",
+          "startLine": 654,
+          "endLine": 677,
+          "params": [
+            "model"
+          ]
+        },
+        {
+          "name": "_create_setback",
+          "startLine": 680,
+          "endLine": 712,
+          "params": [
+            "model"
+          ]
+        },
+        {
+          "name": "_create_width_width_chamfer",
+          "startLine": 715,
+          "endLine": 742,
+          "params": [
+            "model"
+          ]
+        },
+        {
+          "name": "_feature_data_evidence",
+          "startLine": 756,
+          "endLine": 810,
+          "params": [
+            "feature",
+            "kind",
+            "model"
+          ]
+        },
+        {
+          "name": "_evidence_passes",
+          "startLine": 813,
+          "endLine": 846,
+          "params": [
+            "kind",
+            "evidence"
+          ]
+        },
+        {
+          "name": "_verify_one",
+          "startLine": 849,
+          "endLine": 930,
+          "params": [
+            "session",
+            "kind",
+            "output_dir"
+          ]
+        },
+        {
+          "name": "parse_args",
+          "startLine": 933,
+          "endLine": 956,
+          "params": []
+        },
+        {
+          "name": "main",
+          "startLine": 959,
+          "endLine": 1010,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "HoldLineInteropBlockedError",
+          "startLine": 84,
+          "endLine": 93,
+          "methods": [
+            "__init__"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "HoldLineInteropBlockedError",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "_dispatch_array",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "_double_array",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "_variant_array",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "_typed_feature_data",
+          "line": 114,
+          "isDefault": false
+        },
+        {
+          "name": "_find_typelib",
+          "line": 123,
+          "isDefault": false
+        },
+        {
+          "name": "_select_plane",
+          "line": 149,
+          "isDefault": false
+        },
+        {
+          "name": "_hide_review_helpers",
+          "line": 160,
+          "isDefault": false
+        },
+        {
+          "name": "_create_box",
+          "line": 170,
+          "isDefault": false
+        },
+        {
+          "name": "_create_cylinder",
+          "line": 198,
+          "isDefault": false
+        },
+        {
+          "name": "_add_projected_hold_line",
+          "line": 224,
+          "isDefault": false
+        },
+        {
+          "name": "_body",
+          "line": 247,
+          "isDefault": false
+        },
+        {
+          "name": "_point",
+          "line": 255,
+          "isDefault": false
+        },
+        {
+          "name": "_edge_points",
+          "line": 260,
+          "isDefault": false
+        },
+        {
+          "name": "_edge_length_mm",
+          "line": 269,
+          "isDefault": false
+        },
+        {
+          "name": "_near",
+          "line": 278,
+          "isDefault": false
+        },
+        {
+          "name": "_find_edge",
+          "line": 283,
+          "isDefault": false
+        },
+        {
+          "name": "_face_box",
+          "line": 295,
+          "isDefault": false
+        },
+        {
+          "name": "_find_face",
+          "line": 300,
+          "isDefault": false
+        },
+        {
+          "name": "_surface_type",
+          "line": 312,
+          "isDefault": false
+        },
+        {
+          "name": "_find_vertex",
+          "line": 332,
+          "isDefault": false
+        },
+        {
+          "name": "_incident_edges",
+          "line": 351,
+          "isDefault": false
+        },
+        {
+          "name": "_assert_feature",
+          "line": 364,
+          "isDefault": false
+        },
+        {
+          "name": "_create_variable",
+          "line": 377,
+          "isDefault": false
+        },
+        {
+          "name": "_create_face",
+          "line": 416,
+          "isDefault": false
+        },
+        {
+          "name": "_create_hold_line",
+          "line": 441,
+          "isDefault": false
+        },
+        {
+          "name": "_create_surface_combo",
+          "line": 623,
+          "isDefault": false
+        },
+        {
+          "name": "_create_full_round",
+          "line": 654,
+          "isDefault": false
+        },
+        {
+          "name": "_create_setback",
+          "line": 680,
+          "isDefault": false
+        },
+        {
+          "name": "_create_width_width_chamfer",
+          "line": 715,
+          "isDefault": false
+        },
+        {
+          "name": "_feature_data_evidence",
+          "line": 756,
+          "isDefault": false
+        },
+        {
+          "name": "_evidence_passes",
+          "line": 813,
+          "isDefault": false
+        },
+        {
+          "name": "_verify_one",
+          "line": 849,
+          "isDefault": false
+        },
+        {
+          "name": "parse_args",
+          "line": 933,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 959,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "__init__",
+          "callee": "super().__init__",
+          "lineNumber": 88
+        },
+        {
+          "caller": "__init__",
+          "callee": "super",
+          "lineNumber": 88
+        },
+        {
+          "caller": "__init__",
+          "callee": "len",
+          "lineNumber": 91
+        },
+        {
+          "caller": "_dispatch_array",
+          "callee": "VARIANT",
+          "lineNumber": 98
+        },
+        {
+          "caller": "_dispatch_array",
+          "callee": "list",
+          "lineNumber": 98
+        },
+        {
+          "caller": "_double_array",
+          "callee": "VARIANT",
+          "lineNumber": 103
+        },
+        {
+          "caller": "_double_array",
+          "callee": "float",
+          "lineNumber": 105
+        },
+        {
+          "caller": "_variant_array",
+          "callee": "VARIANT",
+          "lineNumber": 111
+        },
+        {
+          "caller": "_variant_array",
+          "callee": "list",
+          "lineNumber": 111
+        },
+        {
+          "caller": "_typed_feature_data",
+          "callee": "_win32com_client.gencache.EnsureModule",
+          "lineNumber": 116
+        },
+        {
+          "caller": "_typed_feature_data",
+          "callee": "getattr",
+          "lineNumber": 119
+        },
+        {
+          "caller": "_typed_feature_data",
+          "callee": "interface",
+          "lineNumber": 120
+        },
+        {
+          "caller": "_find_typelib",
+          "callee": "explicit.resolve",
+          "lineNumber": 130
+        },
+        {
+          "caller": "_find_typelib",
+          "callee": "discover_installations",
+          "lineNumber": 132
+        },
+        {
+          "caller": "_find_typelib",
+          "callee": "installation.get",
+          "lineNumber": 133
+        },
+        {
+          "caller": "_find_typelib",
+          "callee": "candidates.append",
+          "lineNumber": 135
+        },
+        {
+          "caller": "_find_typelib",
+          "callee": "Path",
+          "lineNumber": 135
+        },
+        {
+          "caller": "_find_typelib",
+          "callee": "str(os.environ.get(\"SOLIDWORKS_TYPELIB_DIRS\", \"\")).split",
+          "lineNumber": 136
+        },
+        {
+          "caller": "_find_typelib",
+          "callee": "str",
+          "lineNumber": 136
+        },
+        {
+          "caller": "_find_typelib",
+          "callee": "os.environ.get",
+          "lineNumber": 136
+        },
+        {
+          "caller": "_find_typelib",
+          "callee": "directory.strip",
+          "lineNumber": 137
+        },
+        {
+          "caller": "_find_typelib",
+          "callee": "candidates.append",
+          "lineNumber": 138
+        },
+        {
+          "caller": "_find_typelib",
+          "callee": "Path(directory.strip()).expanduser",
+          "lineNumber": 138
+        },
+        {
+          "caller": "_find_typelib",
+          "callee": "Path",
+          "lineNumber": 138
+        },
+        {
+          "caller": "_find_typelib",
+          "callee": "directory.strip",
+          "lineNumber": 138
+        },
+        {
+          "caller": "_find_typelib",
+          "callee": "candidates.extend",
+          "lineNumber": 139
+        },
+        {
+          "caller": "_find_typelib",
+          "callee": "Path",
+          "lineNumber": 140
+        },
+        {
+          "caller": "_find_typelib",
+          "callee": "os.environ.get",
+          "lineNumber": 140
+        },
+        {
+          "caller": "_find_typelib",
+          "callee": "Path",
+          "lineNumber": 141
+        },
+        {
+          "caller": "_find_typelib",
+          "callee": "candidate.is_file",
+          "lineNumber": 144
+        },
+        {
+          "caller": "_find_typelib",
+          "callee": "FileNotFoundError",
+          "lineNumber": 146
+        },
+        {
+          "caller": "_select_plane",
+          "callee": "model.ClearSelection2",
+          "lineNumber": 151
+        },
+        {
+          "caller": "_select_plane",
+          "callee": "model.Extension.SelectByID2",
+          "lineNumber": 153
+        },
+        {
+          "caller": "_select_plane",
+          "callee": "create_empty_dispatch_variant",
+          "lineNumber": 154
+        },
+        {
+          "caller": "_select_plane",
+          "callee": "RuntimeError",
+          "lineNumber": 157
+        },
+        {
+          "caller": "_hide_review_helpers",
+          "callee": "model.SetUserPreferenceToggle",
+          "lineNumber": 164
+        },
+        {
+          "caller": "_hide_review_helpers",
+          "callee": "model.ClearSelection2",
+          "lineNumber": 167
+        },
+        {
+          "caller": "_create_box",
+          "callee": "_select_plane",
+          "lineNumber": 172
+        },
+        {
+          "caller": "_create_box",
+          "callee": "model.SketchManager.InsertSketch",
+          "lineNumber": 173
+        },
+        {
+          "caller": "_create_box",
+          "callee": "model.SketchManager.CreateCenterRectangle",
+          "lineNumber": 176
+        },
+        {
+          "caller": "_create_box",
+          "callee": "mm",
+          "lineNumber": 177
+        },
+        {
+          "caller": "_create_box",
+          "callee": "mm",
+          "lineNumber": 177
+        },
+        {
+          "caller": "_create_box",
+          "callee": "model.SketchManager.InsertSketch",
+          "lineNumber": 179
+        },
+        {
+          "caller": "_create_box",
+          "callee": "model.ClearSelection2",
+          "lineNumber": 180
+        },
+        {
+          "caller": "_create_box",
+          "callee": "model.Extension.SelectByID2",
+          "lineNumber": 181
+        },
+        {
+          "caller": "_create_box",
+          "callee": "create_empty_dispatch_variant",
+          "lineNumber": 182
+        },
+        {
+          "caller": "_create_box",
+          "callee": "RuntimeError",
+          "lineNumber": 184
+        },
+        {
+          "caller": "_create_box",
+          "callee": "model.FeatureManager.FeatureExtrusion3",
+          "lineNumber": 185
+        },
+        {
+          "caller": "_create_box",
+          "callee": "mm",
+          "lineNumber": 186
+        },
+        {
+          "caller": "_create_box",
+          "callee": "RuntimeError",
+          "lineNumber": 192
+        },
+        {
+          "caller": "_create_box",
+          "callee": "model.ForceRebuild3",
+          "lineNumber": 194
+        },
+        {
+          "caller": "_create_cylinder",
+          "callee": "_select_plane",
+          "lineNumber": 200
+        },
+        {
+          "caller": "_create_cylinder",
+          "callee": "model.SketchManager.InsertSketch",
+          "lineNumber": 201
+        },
+        {
+          "caller": "_create_cylinder",
+          "callee": "model.SketchManager.CreateCircleByRadius",
+          "lineNumber": 204
+        },
+        {
+          "caller": "_create_cylinder",
+          "callee": "mm",
+          "lineNumber": 204
+        },
+        {
+          "caller": "_create_cylinder",
+          "callee": "model.SketchManager.InsertSketch",
+          "lineNumber": 205
+        },
+        {
+          "caller": "_create_cylinder",
+          "callee": "model.ClearSelection2",
+          "lineNumber": 206
+        },
+        {
+          "caller": "_create_cylinder",
+          "callee": "model.Extension.SelectByID2",
+          "lineNumber": 207
+        },
+        {
+          "caller": "_create_cylinder",
+          "callee": "create_empty_dispatch_variant",
+          "lineNumber": 208
+        },
+        {
+          "caller": "_create_cylinder",
+          "callee": "RuntimeError",
+          "lineNumber": 210
+        },
+        {
+          "caller": "_create_cylinder",
+          "callee": "model.FeatureManager.FeatureExtrusion3",
+          "lineNumber": 211
+        },
+        {
+          "caller": "_create_cylinder",
+          "callee": "mm",
+          "lineNumber": 212
+        },
+        {
+          "caller": "_create_cylinder",
+          "callee": "RuntimeError",
+          "lineNumber": 218
+        },
+        {
+          "caller": "_create_cylinder",
+          "callee": "model.ForceRebuild3",
+          "lineNumber": 220
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "_select_plane",
+          "lineNumber": 226
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "model.SketchManager.InsertSketch",
+          "lineNumber": 227
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "model.SketchManager.CreateLine",
+          "lineNumber": 230
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "mm",
+          "lineNumber": 230
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "mm",
+          "lineNumber": 230
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "mm",
+          "lineNumber": 230
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "mm",
+          "lineNumber": 230
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "model.SketchManager.InsertSketch",
+          "lineNumber": 231
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "_find_face",
+          "lineNumber": 232
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "_near",
+          "lineNumber": 232
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "mm",
+          "lineNumber": 232
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "_near",
+          "lineNumber": 232
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "mm",
+          "lineNumber": 232
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "model.ClearSelection2",
+          "lineNumber": 233
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "model.Extension.SelectByID2",
+          "lineNumber": 234
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "create_empty_dispatch_variant",
+          "lineNumber": 235
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "RuntimeError",
+          "lineNumber": 237
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "top.Select2",
+          "lineNumber": 238
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "RuntimeError",
+          "lineNumber": 239
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "model.InsertSplitLineProject",
+          "lineNumber": 240
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "model.ForceRebuild3",
+          "lineNumber": 241
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "RuntimeError",
+          "lineNumber": 242
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "model.FeatureByName",
+          "lineNumber": 243
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "model.FeatureByName",
+          "lineNumber": 243
+        },
+        {
+          "caller": "_add_projected_hold_line",
+          "callee": "RuntimeError",
+          "lineNumber": 244
+        },
+        {
+          "caller": "_body",
+          "callee": "tuple",
+          "lineNumber": 249
+        },
+        {
+          "caller": "_body",
+          "callee": "get_com_member",
+          "lineNumber": 249
+        },
+        {
+          "caller": "_body",
+          "callee": "len",
+          "lineNumber": 250
+        },
+        {
+          "caller": "_body",
+          "callee": "RuntimeError",
+          "lineNumber": 251
+        },
+        {
+          "caller": "_body",
+          "callee": "len",
+          "lineNumber": 251
+        },
+        {
+          "caller": "_point",
+          "callee": "tuple",
+          "lineNumber": 257
+        },
+        {
+          "caller": "_point",
+          "callee": "float",
+          "lineNumber": 257
+        },
+        {
+          "caller": "_point",
+          "callee": "get_com_member",
+          "lineNumber": 257
+        },
+        {
+          "caller": "_edge_points",
+          "callee": "get_com_member",
+          "lineNumber": 262
+        },
+        {
+          "caller": "_edge_points",
+          "callee": "get_com_member",
+          "lineNumber": 263
+        },
+        {
+          "caller": "_edge_points",
+          "callee": "_point",
+          "lineNumber": 266
+        },
+        {
+          "caller": "_edge_points",
+          "callee": "_point",
+          "lineNumber": 266
+        },
+        {
+          "caller": "_edge_length_mm",
+          "callee": "_edge_points",
+          "lineNumber": 271
+        },
+        {
+          "caller": "_edge_length_mm",
+          "callee": "RuntimeError",
+          "lineNumber": 273
+        },
+        {
+          "caller": "_edge_length_mm",
+          "callee": "sum",
+          "lineNumber": 275
+        },
+        {
+          "caller": "_edge_length_mm",
+          "callee": "range",
+          "lineNumber": 275
+        },
+        {
+          "caller": "_near",
+          "callee": "abs",
+          "lineNumber": 280
+        },
+        {
+          "caller": "_find_edge",
+          "callee": "tuple",
+          "lineNumber": 286
+        },
+        {
+          "caller": "_find_edge",
+          "callee": "get_com_member",
+          "lineNumber": 286
+        },
+        {
+          "caller": "_find_edge",
+          "callee": "_body",
+          "lineNumber": 286
+        },
+        {
+          "caller": "_find_edge",
+          "callee": "_edge_points",
+          "lineNumber": 287
+        },
+        {
+          "caller": "_find_edge",
+          "callee": "predicate",
+          "lineNumber": 288
+        },
+        {
+          "caller": "_find_edge",
+          "callee": "matches.append",
+          "lineNumber": 289
+        },
+        {
+          "caller": "_find_edge",
+          "callee": "len",
+          "lineNumber": 290
+        },
+        {
+          "caller": "_find_edge",
+          "callee": "RuntimeError",
+          "lineNumber": 291
+        },
+        {
+          "caller": "_find_edge",
+          "callee": "len",
+          "lineNumber": 291
+        },
+        {
+          "caller": "_face_box",
+          "callee": "tuple",
+          "lineNumber": 297
+        },
+        {
+          "caller": "_face_box",
+          "callee": "float",
+          "lineNumber": 297
+        },
+        {
+          "caller": "_face_box",
+          "callee": "get_com_member",
+          "lineNumber": 297
+        },
+        {
+          "caller": "_find_face",
+          "callee": "tuple",
+          "lineNumber": 304
+        },
+        {
+          "caller": "_find_face",
+          "callee": "get_com_member",
+          "lineNumber": 304
+        },
+        {
+          "caller": "_find_face",
+          "callee": "_body",
+          "lineNumber": 304
+        },
+        {
+          "caller": "_find_face",
+          "callee": "predicate",
+          "lineNumber": 305
+        },
+        {
+          "caller": "_find_face",
+          "callee": "_face_box",
+          "lineNumber": 305
+        },
+        {
+          "caller": "_find_face",
+          "callee": "len",
+          "lineNumber": 307
+        },
+        {
+          "caller": "_find_face",
+          "callee": "RuntimeError",
+          "lineNumber": 308
+        },
+        {
+          "caller": "_find_face",
+          "callee": "len",
+          "lineNumber": 308
+        },
+        {
+          "caller": "_surface_type",
+          "callee": "get_com_member",
+          "lineNumber": 314
+        },
+        {
+          "caller": "_surface_type",
+          "callee": "bool",
+          "lineNumber": 325
+        },
+        {
+          "caller": "_surface_type",
+          "callee": "get_com_member",
+          "lineNumber": 325
+        },
+        {
+          "caller": "_find_vertex",
+          "callee": "set",
+          "lineNumber": 335
+        },
+        {
+          "caller": "_find_vertex",
+          "callee": "tuple",
+          "lineNumber": 336
+        },
+        {
+          "caller": "_find_vertex",
+          "callee": "get_com_member",
+          "lineNumber": 336
+        },
+        {
+          "caller": "_find_vertex",
+          "callee": "_body",
+          "lineNumber": 336
+        },
+        {
+          "caller": "_find_vertex",
+          "callee": "get_com_member",
+          "lineNumber": 338
+        },
+        {
+          "caller": "_find_vertex",
+          "callee": "_point",
+          "lineNumber": 341
+        },
+        {
+          "caller": "_find_vertex",
+          "callee": "tuple",
+          "lineNumber": 342
+        },
+        {
+          "caller": "_find_vertex",
+          "callee": "round",
+          "lineNumber": 342
+        },
+        {
+          "caller": "_find_vertex",
+          "callee": "all",
+          "lineNumber": 343
+        },
+        {
+          "caller": "_find_vertex",
+          "callee": "_near",
+          "lineNumber": 343
+        },
+        {
+          "caller": "_find_vertex",
+          "callee": "range",
+          "lineNumber": 343
+        },
+        {
+          "caller": "_find_vertex",
+          "callee": "seen.add",
+          "lineNumber": 344
+        },
+        {
+          "caller": "_find_vertex",
+          "callee": "vertices.append",
+          "lineNumber": 345
+        },
+        {
+          "caller": "_find_vertex",
+          "callee": "len",
+          "lineNumber": 346
+        },
+        {
+          "caller": "_find_vertex",
+          "callee": "RuntimeError",
+          "lineNumber": 347
+        },
+        {
+          "caller": "_find_vertex",
+          "callee": "len",
+          "lineNumber": 347
+        },
+        {
+          "caller": "_incident_edges",
+          "callee": "_point",
+          "lineNumber": 353
+        },
+        {
+          "caller": "_incident_edges",
+          "callee": "tuple",
+          "lineNumber": 355
+        },
+        {
+          "caller": "_incident_edges",
+          "callee": "get_com_member",
+          "lineNumber": 355
+        },
+        {
+          "caller": "_incident_edges",
+          "callee": "_body",
+          "lineNumber": 355
+        },
+        {
+          "caller": "_incident_edges",
+          "callee": "_edge_points",
+          "lineNumber": 356
+        },
+        {
+          "caller": "_incident_edges",
+          "callee": "any",
+          "lineNumber": 357
+        },
+        {
+          "caller": "_incident_edges",
+          "callee": "all",
+          "lineNumber": 358
+        },
+        {
+          "caller": "_incident_edges",
+          "callee": "_near",
+          "lineNumber": 358
+        },
+        {
+          "caller": "_incident_edges",
+          "callee": "range",
+          "lineNumber": 358
+        },
+        {
+          "caller": "_incident_edges",
+          "callee": "result.append",
+          "lineNumber": 360
+        },
+        {
+          "caller": "_incident_edges",
+          "callee": "tuple",
+          "lineNumber": 361
+        },
+        {
+          "caller": "_assert_feature",
+          "callee": "RuntimeError",
+          "lineNumber": 367
+        },
+        {
+          "caller": "_assert_feature",
+          "callee": "model.ForceRebuild3",
+          "lineNumber": 369
+        },
+        {
+          "caller": "_assert_feature",
+          "callee": "RuntimeError",
+          "lineNumber": 370
+        },
+        {
+          "caller": "_assert_feature",
+          "callee": "model.FeatureByName",
+          "lineNumber": 371
+        },
+        {
+          "caller": "_assert_feature",
+          "callee": "RuntimeError",
+          "lineNumber": 373
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "VariableFilletSpec",
+          "lineNumber": 379
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "_find_edge",
+          "lineNumber": 384
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "_near",
+          "lineNumber": 386
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "abs",
+          "lineNumber": 386
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "mm",
+          "lineNumber": 386
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "_near",
+          "lineNumber": 387
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "mm",
+          "lineNumber": 387
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "_near",
+          "lineNumber": 387
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "mm",
+          "lineNumber": 387
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "_near",
+          "lineNumber": 388
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "mm",
+          "lineNumber": 388
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "_near",
+          "lineNumber": 388
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "mm",
+          "lineNumber": 388
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "validate_variable_spec",
+          "lineNumber": 390
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "_edge_length_mm",
+          "lineNumber": 390
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "model.ClearSelection2",
+          "lineNumber": 391
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "edge.Select2",
+          "lineNumber": 392
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "RuntimeError",
+          "lineNumber": 393
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "_edge_points",
+          "lineNumber": 394
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "RuntimeError",
+          "lineNumber": 396
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "tuple",
+          "lineNumber": 399
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "range",
+          "lineNumber": 399
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "model.Extension.SelectByID2",
+          "lineNumber": 400
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "create_empty_dispatch_variant",
+          "lineNumber": 401
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "RuntimeError",
+          "lineNumber": 403
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "model.FeatureManager.FeatureFillet3",
+          "lineNumber": 405
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "_double_array",
+          "lineNumber": 408
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "mm",
+          "lineNumber": 408
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "mm",
+          "lineNumber": 408
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "_double_array",
+          "lineNumber": 410
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "mm",
+          "lineNumber": 410
+        },
+        {
+          "caller": "_create_variable",
+          "callee": "_assert_feature",
+          "lineNumber": 413
+        },
+        {
+          "caller": "_create_face",
+          "callee": "FaceFilletSpec",
+          "lineNumber": 418
+        },
+        {
+          "caller": "_create_face",
+          "callee": "validate_face_spec",
+          "lineNumber": 419
+        },
+        {
+          "caller": "_create_face",
+          "callee": "_find_face",
+          "lineNumber": 420
+        },
+        {
+          "caller": "_create_face",
+          "callee": "_near",
+          "lineNumber": 420
+        },
+        {
+          "caller": "_create_face",
+          "callee": "mm",
+          "lineNumber": 420
+        },
+        {
+          "caller": "_create_face",
+          "callee": "_near",
+          "lineNumber": 420
+        },
+        {
+          "caller": "_create_face",
+          "callee": "mm",
+          "lineNumber": 420
+        },
+        {
+          "caller": "_create_face",
+          "callee": "_find_face",
+          "lineNumber": 421
+        },
+        {
+          "caller": "_create_face",
+          "callee": "_near",
+          "lineNumber": 421
+        },
+        {
+          "caller": "_create_face",
+          "callee": "mm",
+          "lineNumber": 421
+        },
+        {
+          "caller": "_create_face",
+          "callee": "_near",
+          "lineNumber": 421
+        },
+        {
+          "caller": "_create_face",
+          "callee": "mm",
+          "lineNumber": 421
+        },
+        {
+          "caller": "_create_face",
+          "callee": "model.ClearSelection2",
+          "lineNumber": 422
+        },
+        {
+          "caller": "_create_face",
+          "callee": "top.Select2",
+          "lineNumber": 423
+        },
+        {
+          "caller": "_create_face",
+          "callee": "side.Select2",
+          "lineNumber": 423
+        },
+        {
+          "caller": "_create_face",
+          "callee": "RuntimeError",
+          "lineNumber": 424
+        },
+        {
+          "caller": "_create_face",
+          "callee": "model.FeatureManager.CreateDefinition",
+          "lineNumber": 425
+        },
+        {
+          "caller": "_create_face",
+          "callee": "data.Initialize",
+          "lineNumber": 426
+        },
+        {
+          "caller": "_create_face",
+          "callee": "RuntimeError",
+          "lineNumber": 427
+        },
+        {
+          "caller": "_create_face",
+          "callee": "mm",
+          "lineNumber": 429
+        },
+        {
+          "caller": "_create_face",
+          "callee": "data.SetFaces",
+          "lineNumber": 431
+        },
+        {
+          "caller": "_create_face",
+          "callee": "_dispatch_array",
+          "lineNumber": 431
+        },
+        {
+          "caller": "_create_face",
+          "callee": "data.SetFaces",
+          "lineNumber": 432
+        },
+        {
+          "caller": "_create_face",
+          "callee": "_dispatch_array",
+          "lineNumber": 432
+        },
+        {
+          "caller": "_create_face",
+          "callee": "int",
+          "lineNumber": 433
+        },
+        {
+          "caller": "_create_face",
+          "callee": "data.GetFaceCount",
+          "lineNumber": 433
+        },
+        {
+          "caller": "_create_face",
+          "callee": "RuntimeError",
+          "lineNumber": 434
+        },
+        {
+          "caller": "_create_face",
+          "callee": "int",
+          "lineNumber": 435
+        },
+        {
+          "caller": "_create_face",
+          "callee": "data.GetFaceCount",
+          "lineNumber": 435
+        },
+        {
+          "caller": "_create_face",
+          "callee": "RuntimeError",
+          "lineNumber": 436
+        },
+        {
+          "caller": "_create_face",
+          "callee": "model.FeatureManager.CreateFeature",
+          "lineNumber": 437
+        },
+        {
+          "caller": "_create_face",
+          "callee": "_assert_feature",
+          "lineNumber": 438
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "HoldLineFilletSpec",
+          "lineNumber": 443
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_add_projected_hold_line",
+          "lineNumber": 444
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_find_face",
+          "lineNumber": 445
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_near",
+          "lineNumber": 447
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "mm",
+          "lineNumber": 447
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_near",
+          "lineNumber": 447
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "mm",
+          "lineNumber": 447
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_near",
+          "lineNumber": 448
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "mm",
+          "lineNumber": 448
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_near",
+          "lineNumber": 448
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "mm",
+          "lineNumber": 448
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_find_face",
+          "lineNumber": 450
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_near",
+          "lineNumber": 452
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "mm",
+          "lineNumber": 452
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_near",
+          "lineNumber": 452
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "mm",
+          "lineNumber": 452
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_near",
+          "lineNumber": 453
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "mm",
+          "lineNumber": 453
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_near",
+          "lineNumber": 453
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "mm",
+          "lineNumber": 453
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_find_face",
+          "lineNumber": 455
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_near",
+          "lineNumber": 455
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "mm",
+          "lineNumber": 455
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_near",
+          "lineNumber": 455
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "mm",
+          "lineNumber": 455
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_find_edge",
+          "lineNumber": 456
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_near",
+          "lineNumber": 458
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "abs",
+          "lineNumber": 458
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "mm",
+          "lineNumber": 458
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_near",
+          "lineNumber": 459
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "mm",
+          "lineNumber": 459
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_near",
+          "lineNumber": 459
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "mm",
+          "lineNumber": 459
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_near",
+          "lineNumber": 460
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "mm",
+          "lineNumber": 460
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_near",
+          "lineNumber": 460
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "mm",
+          "lineNumber": 460
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "validate_hold_line_spec",
+          "lineNumber": 462
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "model.ClearSelection2",
+          "lineNumber": 469
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "outer_top.Select2",
+          "lineNumber": 471
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "side.Select2",
+          "lineNumber": 472
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "hold_line.Select2",
+          "lineNumber": 473
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "HoldLineBridgeError",
+          "lineNumber": 475
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "create_hold_line_via_native_addin",
+          "lineNumber": 476
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "str",
+          "lineNumber": 478
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "get_com_member",
+          "lineNumber": 478
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "str",
+          "lineNumber": 480
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "native.get",
+          "lineNumber": 480
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "model.FeatureByName",
+          "lineNumber": 481
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "HoldLineBridgeError",
+          "lineNumber": 483
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_assert_feature",
+          "lineNumber": 489
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "attempts.append",
+          "lineNumber": 491
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "str",
+          "lineNumber": 494
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "create_hold_line_via_csharp",
+          "lineNumber": 499
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "str",
+          "lineNumber": 500
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "get_com_member",
+          "lineNumber": 500
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "str",
+          "lineNumber": 501
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "get_com_member",
+          "lineNumber": 501
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "str",
+          "lineNumber": 503
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "bridge.get",
+          "lineNumber": 503
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "model.FeatureByName",
+          "lineNumber": 504
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "HoldLineBridgeError",
+          "lineNumber": 506
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_assert_feature",
+          "lineNumber": 512
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "attempts.append",
+          "lineNumber": 514
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "str",
+          "lineNumber": 517
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "unsafe_hold_line_probe_enabled",
+          "lineNumber": 521
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "HoldLineInteropBlockedError",
+          "lineNumber": 523
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_dispatch_array",
+          "lineNumber": 528
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_variant_array",
+          "lineNumber": 529
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "model.ClearSelection2",
+          "lineNumber": 534
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "top.Select2",
+          "lineNumber": 536
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "side.Select2",
+          "lineNumber": 537
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "hold_line.Select2",
+          "lineNumber": 538
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "RuntimeError",
+          "lineNumber": 540
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "model.FeatureManager.CreateDefinition",
+          "lineNumber": 541
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "RuntimeError",
+          "lineNumber": 543
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_typed_feature_data",
+          "lineNumber": 544
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "data.Initialize",
+          "lineNumber": 545
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "RuntimeError",
+          "lineNumber": 546
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "data.SetFaces",
+          "lineNumber": 548
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_dispatch_array",
+          "lineNumber": 548
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "data.SetFaces",
+          "lineNumber": 549
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_dispatch_array",
+          "lineNumber": 549
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "int",
+          "lineNumber": 551
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "data.GetHoldLineCount",
+          "lineNumber": 551
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "model.FeatureManager.CreateFeature",
+          "lineNumber": 553
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "attempts.append",
+          "lineNumber": 554
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "attempts.append",
+          "lineNumber": 562
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "type",
+          "lineNumber": 566
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "model.ClearSelection2",
+          "lineNumber": 577
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "faces[0].Select2",
+          "lineNumber": 579
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "faces[1].Select2",
+          "lineNumber": 580
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "hold_line.Select2",
+          "lineNumber": 581
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "RuntimeError",
+          "lineNumber": 583
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "model.FeatureManager.FeatureFillet3",
+          "lineNumber": 589
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "attempts.append",
+          "lineNumber": 599
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "HoldLineInteropBlockedError",
+          "lineNumber": 619
+        },
+        {
+          "caller": "_create_hold_line",
+          "callee": "_assert_feature",
+          "lineNumber": 620
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "SurfaceCombinationSpec",
+          "lineNumber": 625
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "_find_face",
+          "lineNumber": 626
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "_near",
+          "lineNumber": 626
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "mm",
+          "lineNumber": 626
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "_near",
+          "lineNumber": 626
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "mm",
+          "lineNumber": 626
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "_find_face",
+          "lineNumber": 627
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "_near",
+          "lineNumber": 629
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "mm",
+          "lineNumber": 629
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "_near",
+          "lineNumber": 629
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "mm",
+          "lineNumber": 629
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "_near",
+          "lineNumber": 630
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "mm",
+          "lineNumber": 630
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "_near",
+          "lineNumber": 630
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "mm",
+          "lineNumber": 630
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "_near",
+          "lineNumber": 631
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "_near",
+          "lineNumber": 631
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "mm",
+          "lineNumber": 631
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "_surface_type",
+          "lineNumber": 633
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "_surface_type",
+          "lineNumber": 633
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "validate_surface_combination_spec",
+          "lineNumber": 634
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "model.ClearSelection2",
+          "lineNumber": 639
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "top.Select2",
+          "lineNumber": 640
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "cylinder.Select2",
+          "lineNumber": 640
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "RuntimeError",
+          "lineNumber": 641
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "model.FeatureManager.CreateDefinition",
+          "lineNumber": 642
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "data.Initialize",
+          "lineNumber": 643
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "RuntimeError",
+          "lineNumber": 644
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "mm",
+          "lineNumber": 645
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "data.SetFaces",
+          "lineNumber": 648
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "_dispatch_array",
+          "lineNumber": 648
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "data.SetFaces",
+          "lineNumber": 649
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "_dispatch_array",
+          "lineNumber": 649
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "model.FeatureManager.CreateFeature",
+          "lineNumber": 650
+        },
+        {
+          "caller": "_create_surface_combo",
+          "callee": "_assert_feature",
+          "lineNumber": 651
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "FullRoundFilletSpec",
+          "lineNumber": 656
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "validate_full_round_spec",
+          "lineNumber": 657
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "_find_face",
+          "lineNumber": 658
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "_near",
+          "lineNumber": 658
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "mm",
+          "lineNumber": 658
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "_near",
+          "lineNumber": 658
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "mm",
+          "lineNumber": 658
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "_find_face",
+          "lineNumber": 659
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "_near",
+          "lineNumber": 659
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "mm",
+          "lineNumber": 659
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "_near",
+          "lineNumber": 659
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "mm",
+          "lineNumber": 659
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "_find_face",
+          "lineNumber": 660
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "_near",
+          "lineNumber": 660
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "mm",
+          "lineNumber": 660
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "_near",
+          "lineNumber": 660
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "mm",
+          "lineNumber": 660
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "model.ClearSelection2",
+          "lineNumber": 661
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "side1.Select2",
+          "lineNumber": 662
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "center.Select2",
+          "lineNumber": 662
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "side2.Select2",
+          "lineNumber": 662
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "RuntimeError",
+          "lineNumber": 663
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "model.FeatureManager.CreateDefinition",
+          "lineNumber": 664
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "data.Initialize",
+          "lineNumber": 665
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "RuntimeError",
+          "lineNumber": 666
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "data.SetFaces",
+          "lineNumber": 673
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "_dispatch_array",
+          "lineNumber": 673
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "int",
+          "lineNumber": 674
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "data.GetFaceCount",
+          "lineNumber": 674
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "len",
+          "lineNumber": 674
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "RuntimeError",
+          "lineNumber": 675
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "model.FeatureManager.CreateFeature",
+          "lineNumber": 676
+        },
+        {
+          "caller": "_create_full_round",
+          "callee": "_assert_feature",
+          "lineNumber": 677
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "SetbackFilletSpec",
+          "lineNumber": 682
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "_find_vertex",
+          "lineNumber": 683
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "mm",
+          "lineNumber": 683
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "mm",
+          "lineNumber": 683
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "mm",
+          "lineNumber": 683
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "_incident_edges",
+          "lineNumber": 684
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "tuple",
+          "lineNumber": 685
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "_edge_length_mm",
+          "lineNumber": 685
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "validate_setback_spec",
+          "lineNumber": 686
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "len",
+          "lineNumber": 687
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "RuntimeError",
+          "lineNumber": 688
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "len",
+          "lineNumber": 688
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "model.ClearSelection2",
+          "lineNumber": 689
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "enumerate",
+          "lineNumber": 690
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "edge.Select2",
+          "lineNumber": 691
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "RuntimeError",
+          "lineNumber": 692
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "vertex.Select2",
+          "lineNumber": 693
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "RuntimeError",
+          "lineNumber": 694
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "model.FeatureManager.FeatureFillet3",
+          "lineNumber": 696
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "mm",
+          "lineNumber": 698
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "_double_array",
+          "lineNumber": 707
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "mm",
+          "lineNumber": 707
+        },
+        {
+          "caller": "_create_setback",
+          "callee": "_assert_feature",
+          "lineNumber": 712
+        },
+        {
+          "caller": "_create_width_width_chamfer",
+          "callee": "WidthWidthChamferSpec",
+          "lineNumber": 717
+        },
+        {
+          "caller": "_create_width_width_chamfer",
+          "callee": "_find_edge",
+          "lineNumber": 718
+        },
+        {
+          "caller": "_create_width_width_chamfer",
+          "callee": "_near",
+          "lineNumber": 720
+        },
+        {
+          "caller": "_create_width_width_chamfer",
+          "callee": "abs",
+          "lineNumber": 720
+        },
+        {
+          "caller": "_create_width_width_chamfer",
+          "callee": "mm",
+          "lineNumber": 720
+        },
+        {
+          "caller": "_create_width_width_chamfer",
+          "callee": "_near",
+          "lineNumber": 721
+        },
+        {
+          "caller": "_create_width_width_chamfer",
+          "callee": "mm",
+          "lineNumber": 721
+        },
+        {
+          "caller": "_create_width_width_chamfer",
+          "callee": "_near",
+          "lineNumber": 721
+        },
+        {
+          "caller": "_create_width_width_chamfer",
+          "callee": "mm",
+          "lineNumber": 721
+        },
+        {
+          "caller": "_create_width_width_chamfer",
+          "callee": "_near",
+          "lineNumber": 722
+        },
+        {
+          "caller": "_create_width_width_chamfer",
+          "callee": "mm",
+          "lineNumber": 722
+        },
+        {
+          "caller": "_create_width_width_chamfer",
+          "callee": "_near",
+          "lineNumber": 722
+        },
+        {
+          "caller": "_create_width_width_chamfer",
+          "callee": "mm",
+          "lineNumber": 722
+        },
+        {
+          "caller": "_create_width_width_chamfer",
+          "callee": "validate_width_width_chamfer_spec",
+          "lineNumber": 724
+        },
+        {
+          "caller": "_create_width_width_chamfer",
+          "callee": "model.ClearSelection2",
+          "lineNumber": 728
+        },
+        {
+          "caller": "_create_width_width_chamfer",
+          "callee": "edge.Select2",
+          "lineNumber": 729
+        },
+        {
+          "caller": "_create_width_width_chamfer",
+          "callee": "RuntimeError",
+          "lineNumber": 730
+        },
+        {
+          "caller": "_create_width_width_chamfer",
+          "callee": "model.FeatureManager.InsertFeatureChamfer",
+          "lineNumber": 732
+        },
+        {
+          "caller": "_create_width_width_chamfer",
+          "callee": "mm",
+          "lineNumber": 735
+        },
+        {
+          "caller": "_create_width_width_chamfer",
+          "callee": "mm",
+          "lineNumber": 737
+        },
+        {
+          "caller": "_create_width_width_chamfer",
+          "callee": "_assert_feature",
+          "lineNumber": 742
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "get_com_member",
+          "lineNumber": 758
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "str",
+          "lineNumber": 761
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "get_com_member",
+          "lineNumber": 761
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "bool",
+          "lineNumber": 767
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "data.AccessSelections",
+          "lineNumber": 767
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "get_com_member",
+          "lineNumber": 775
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "isinstance",
+          "lineNumber": 776
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "round",
+          "lineNumber": 777
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "int",
+          "lineNumber": 781
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "evidence.get",
+          "lineNumber": 781
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "range",
+          "lineNumber": 783
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "int",
+          "lineNumber": 783
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "VARIANT",
+          "lineNumber": 784
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "VARIANT",
+          "lineNumber": 785
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "data.GetControlPointRadiusAtIndex",
+          "lineNumber": 787
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "controls.append",
+          "lineNumber": 788
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "round",
+          "lineNumber": 790
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "float",
+          "lineNumber": 790
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "round",
+          "lineNumber": 791
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "float",
+          "lineNumber": 791
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "controls.append",
+          "lineNumber": 795
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "str",
+          "lineNumber": 795
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "round",
+          "lineNumber": 800
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "float",
+          "lineNumber": 800
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "data.GetEdgeChamferDistance",
+          "lineNumber": 800
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "str",
+          "lineNumber": 804
+        },
+        {
+          "caller": "_feature_data_evidence",
+          "callee": "data.ReleaseSelectionAccess",
+          "lineNumber": 806
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "evidence.get",
+          "lineNumber": 815
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "evidence.get",
+          "lineNumber": 818
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "str",
+          "lineNumber": 820
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "evidence.get",
+          "lineNumber": 820
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "int",
+          "lineNumber": 821
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "evidence.get",
+          "lineNumber": 821
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "len",
+          "lineNumber": 822
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "all",
+          "lineNumber": 823
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "int",
+          "lineNumber": 828
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "evidence.get",
+          "lineNumber": 828
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "int",
+          "lineNumber": 831
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "evidence.get",
+          "lineNumber": 831
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "int",
+          "lineNumber": 832
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "evidence.get",
+          "lineNumber": 832
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "int",
+          "lineNumber": 836
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "evidence.get",
+          "lineNumber": 836
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "evidence.get",
+          "lineNumber": 837
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "int",
+          "lineNumber": 840
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "evidence.get",
+          "lineNumber": 840
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "int",
+          "lineNumber": 842
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "evidence.get",
+          "lineNumber": 842
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "sorted",
+          "lineNumber": 844
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "float",
+          "lineNumber": 844
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "evidence.get",
+          "lineNumber": 844
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "int",
+          "lineNumber": 845
+        },
+        {
+          "caller": "_evidence_passes",
+          "callee": "evidence.get",
+          "lineNumber": 845
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "session.new_part",
+          "lineNumber": 858
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "_create_cylinder",
+          "lineNumber": 860
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "_create_box",
+          "lineNumber": 862
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "builder",
+          "lineNumber": 863
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "builder",
+          "lineNumber": 863
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "set_document_appearance",
+          "lineNumber": 864
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "_hide_review_helpers",
+          "lineNumber": 865
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "model.ViewZoomtofit2",
+          "lineNumber": 866
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "session.save",
+          "lineNumber": 867
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "str",
+          "lineNumber": 867
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "RuntimeError",
+          "lineNumber": 868
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "export_to_step",
+          "lineNumber": 869
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "str",
+          "lineNumber": 869
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "RuntimeError",
+          "lineNumber": 870
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "run_review",
+          "lineNumber": 871
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "str",
+          "lineNumber": 875
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "str",
+          "lineNumber": 875
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "_feature_data_evidence",
+          "lineNumber": 877
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "str",
+          "lineNumber": 878
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "session.close",
+          "lineNumber": 879
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "get_com_member",
+          "lineNumber": 879
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "session.open",
+          "lineNumber": 881
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "str",
+          "lineNumber": 881
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "reopened.FeatureByName",
+          "lineNumber": 882
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "bool",
+          "lineNumber": 883
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "reopened.ForceRebuild3",
+          "lineNumber": 883
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "str",
+          "lineNumber": 885
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "get_com_member",
+          "lineNumber": 885
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "_feature_data_evidence",
+          "lineNumber": 890
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "session.close",
+          "lineNumber": 894
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "_evidence_passes",
+          "lineNumber": 899
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "_evidence_passes",
+          "lineNumber": 900
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "part_path.is_file",
+          "lineNumber": 901
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "step_path.is_file",
+          "lineNumber": 902
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "str",
+          "lineNumber": 917
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "str",
+          "lineNumber": 919
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "str",
+          "lineNumber": 920
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "session.close",
+          "lineNumber": 928
+        },
+        {
+          "caller": "_verify_one",
+          "callee": "get_com_member",
+          "lineNumber": 928
+        },
+        {
+          "caller": "parse_args",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 935
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 936
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 937
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 941
+        },
+        {
+          "caller": "parse_args",
+          "callee": "list",
+          "lineNumber": 942
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 945
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 946
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 951
+        },
+        {
+          "caller": "parse_args",
+          "callee": "Path.cwd",
+          "lineNumber": 953
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.parse_args",
+          "lineNumber": 956
+        },
+        {
+          "caller": "main",
+          "callee": "parse_args",
+          "lineNumber": 961
+        },
+        {
+          "caller": "main",
+          "callee": "args.output_dir.resolve",
+          "lineNumber": 964
+        },
+        {
+          "caller": "main",
+          "callee": "args.output_dir.mkdir",
+          "lineNumber": 965
+        },
+        {
+          "caller": "main",
+          "callee": "_find_typelib",
+          "lineNumber": 966
+        },
+        {
+          "caller": "main",
+          "callee": "inspect_typelib_members",
+          "lineNumber": 967
+        },
+        {
+          "caller": "main",
+          "callee": "build_capability_report",
+          "lineNumber": 968
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 968
+        },
+        {
+          "caller": "main",
+          "callee": "set",
+          "lineNumber": 969
+        },
+        {
+          "caller": "main",
+          "callee": "report[\"capabilities\"].items",
+          "lineNumber": 971
+        },
+        {
+          "caller": "main",
+          "callee": "SolidWorksSession",
+          "lineNumber": 974
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 977
+        },
+        {
+          "caller": "main",
+          "callee": "get_com_member",
+          "lineNumber": 977
+        },
+        {
+          "caller": "main",
+          "callee": "_verify_one",
+          "lineNumber": 989
+        },
+        {
+          "caller": "main",
+          "callee": "isinstance",
+          "lineNumber": 992
+        },
+        {
+          "caller": "main",
+          "callee": "type",
+          "lineNumber": 996
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 997
+        },
+        {
+          "caller": "main",
+          "callee": "traceback.format_exc",
+          "lineNumber": 998
+        },
+        {
+          "caller": "main",
+          "callee": "isinstance",
+          "lineNumber": 1000
+        },
+        {
+          "caller": "main",
+          "callee": "session.quit_owned_instance",
+          "lineNumber": 1003
+        },
+        {
+          "caller": "main",
+          "callee": "report_path.write_text",
+          "lineNumber": 1005
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 1005
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 1006
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 1006
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 1006
+        },
+        {
+          "caller": "main",
+          "callee": "report[\"capabilities\"].values",
+          "lineNumber": 1007
+        },
+        {
+          "caller": "main",
+          "callee": "all",
+          "lineNumber": 1009
+        },
+        {
+          "caller": "main",
+          "callee": "all",
+          "lineNumber": 1010
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 35,
+        "functionCount": 34,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 291,
+      "nonEmptyLines": 265,
+      "functions": [
+        {
+          "name": "_advanced_evidence_passes",
+          "startLine": 54,
+          "endLine": 69,
+          "params": [
+            "evidence"
+          ]
+        },
+        {
+          "name": "_sha256",
+          "startLine": 72,
+          "endLine": 78,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "_body_stats",
+          "startLine": 81,
+          "endLine": 102,
+          "params": [
+            "model"
+          ]
+        },
+        {
+          "name": "_add_variable_fillet",
+          "startLine": 105,
+          "endLine": 136,
+          "params": [
+            "model"
+          ]
+        },
+        {
+          "name": "_add_width_width_chamfer",
+          "startLine": 139,
+          "endLine": 160,
+          "params": [
+            "model"
+          ]
+        },
+        {
+          "name": "run_regression",
+          "startLine": 163,
+          "endLine": 262,
+          "params": [
+            "args"
+          ]
+        },
+        {
+          "name": "parse_args",
+          "startLine": 265,
+          "endLine": 277,
+          "params": []
+        },
+        {
+          "name": "main",
+          "startLine": 280,
+          "endLine": 287,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_advanced_evidence_passes",
+          "line": 54,
+          "isDefault": false
+        },
+        {
+          "name": "_sha256",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "_body_stats",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "_add_variable_fillet",
+          "line": 105,
+          "isDefault": false
+        },
+        {
+          "name": "_add_width_width_chamfer",
+          "line": 139,
+          "isDefault": false
+        },
+        {
+          "name": "run_regression",
+          "line": 163,
+          "isDefault": false
+        },
+        {
+          "name": "parse_args",
+          "line": 265,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 280,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_advanced_evidence_passes",
+          "callee": "variable.get",
+          "lineNumber": 58
+        },
+        {
+          "caller": "_advanced_evidence_passes",
+          "callee": "str",
+          "lineNumber": 60
+        },
+        {
+          "caller": "_advanced_evidence_passes",
+          "callee": "variable.get",
+          "lineNumber": 60
+        },
+        {
+          "caller": "_advanced_evidence_passes",
+          "callee": "int",
+          "lineNumber": 61
+        },
+        {
+          "caller": "_advanced_evidence_passes",
+          "callee": "variable.get",
+          "lineNumber": 61
+        },
+        {
+          "caller": "_advanced_evidence_passes",
+          "callee": "item.get",
+          "lineNumber": 62
+        },
+        {
+          "caller": "_advanced_evidence_passes",
+          "callee": "item.get",
+          "lineNumber": 64
+        },
+        {
+          "caller": "_advanced_evidence_passes",
+          "callee": "int",
+          "lineNumber": 66
+        },
+        {
+          "caller": "_advanced_evidence_passes",
+          "callee": "chamfer.get",
+          "lineNumber": 66
+        },
+        {
+          "caller": "_advanced_evidence_passes",
+          "callee": "sorted",
+          "lineNumber": 67
+        },
+        {
+          "caller": "_advanced_evidence_passes",
+          "callee": "float",
+          "lineNumber": 67
+        },
+        {
+          "caller": "_advanced_evidence_passes",
+          "callee": "chamfer.get",
+          "lineNumber": 67
+        },
+        {
+          "caller": "_sha256",
+          "callee": "hashlib.sha256",
+          "lineNumber": 74
+        },
+        {
+          "caller": "_sha256",
+          "callee": "path.open",
+          "lineNumber": 75
+        },
+        {
+          "caller": "_sha256",
+          "callee": "iter",
+          "lineNumber": 76
+        },
+        {
+          "caller": "_sha256",
+          "callee": "stream.read",
+          "lineNumber": 76
+        },
+        {
+          "caller": "_sha256",
+          "callee": "digest.update",
+          "lineNumber": 77
+        },
+        {
+          "caller": "_sha256",
+          "callee": "digest.hexdigest",
+          "lineNumber": 78
+        },
+        {
+          "caller": "_body_stats",
+          "callee": "tuple",
+          "lineNumber": 83
+        },
+        {
+          "caller": "_body_stats",
+          "callee": "get_com_member",
+          "lineNumber": 83
+        },
+        {
+          "caller": "_body_stats",
+          "callee": "len",
+          "lineNumber": 84
+        },
+        {
+          "caller": "_body_stats",
+          "callee": "RuntimeError",
+          "lineNumber": 85
+        },
+        {
+          "caller": "_body_stats",
+          "callee": "len",
+          "lineNumber": 85
+        },
+        {
+          "caller": "_body_stats",
+          "callee": "tuple",
+          "lineNumber": 86
+        },
+        {
+          "caller": "_body_stats",
+          "callee": "get_com_member",
+          "lineNumber": 86
+        },
+        {
+          "caller": "_body_stats",
+          "callee": "tuple",
+          "lineNumber": 87
+        },
+        {
+          "caller": "_body_stats",
+          "callee": "get_com_member",
+          "lineNumber": 87
+        },
+        {
+          "caller": "_body_stats",
+          "callee": "get_com_member",
+          "lineNumber": 90
+        },
+        {
+          "caller": "_body_stats",
+          "callee": "bool",
+          "lineNumber": 91
+        },
+        {
+          "caller": "_body_stats",
+          "callee": "get_com_member",
+          "lineNumber": 91
+        },
+        {
+          "caller": "_body_stats",
+          "callee": "bool",
+          "lineNumber": 93
+        },
+        {
+          "caller": "_body_stats",
+          "callee": "get_com_member",
+          "lineNumber": 93
+        },
+        {
+          "caller": "_body_stats",
+          "callee": "len",
+          "lineNumber": 98
+        },
+        {
+          "caller": "_body_stats",
+          "callee": "len",
+          "lineNumber": 99
+        },
+        {
+          "caller": "_body_stats",
+          "callee": "len",
+          "lineNumber": 100
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "_find_edge",
+          "lineNumber": 107
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "_near",
+          "lineNumber": 109
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "_near",
+          "lineNumber": 109
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "_near",
+          "lineNumber": 110
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "mm",
+          "lineNumber": 110
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "_near",
+          "lineNumber": 110
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "mm",
+          "lineNumber": 110
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "_near",
+          "lineNumber": 111
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "abs",
+          "lineNumber": 111
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "mm",
+          "lineNumber": 111
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "model.ClearSelection2",
+          "lineNumber": 114
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "edge.Select2",
+          "lineNumber": 115
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "RuntimeError",
+          "lineNumber": 116
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "_edge_points",
+          "lineNumber": 117
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "tuple",
+          "lineNumber": 119
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "range",
+          "lineNumber": 121
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "model.Extension.SelectByID2",
+          "lineNumber": 123
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "create_empty_dispatch_variant",
+          "lineNumber": 124
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "RuntimeError",
+          "lineNumber": 126
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "model.FeatureManager.FeatureFillet3",
+          "lineNumber": 127
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "_double_array",
+          "lineNumber": 131
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "mm",
+          "lineNumber": 131
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "mm",
+          "lineNumber": 131
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "_double_array",
+          "lineNumber": 133
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "mm",
+          "lineNumber": 133
+        },
+        {
+          "caller": "_add_variable_fillet",
+          "callee": "_assert_feature",
+          "lineNumber": 136
+        },
+        {
+          "caller": "_add_width_width_chamfer",
+          "callee": "_find_edge",
+          "lineNumber": 141
+        },
+        {
+          "caller": "_add_width_width_chamfer",
+          "callee": "_near",
+          "lineNumber": 143
+        },
+        {
+          "caller": "_add_width_width_chamfer",
+          "callee": "mm",
+          "lineNumber": 143
+        },
+        {
+          "caller": "_add_width_width_chamfer",
+          "callee": "_near",
+          "lineNumber": 143
+        },
+        {
+          "caller": "_add_width_width_chamfer",
+          "callee": "mm",
+          "lineNumber": 143
+        },
+        {
+          "caller": "_add_width_width_chamfer",
+          "callee": "_near",
+          "lineNumber": 144
+        },
+        {
+          "caller": "_add_width_width_chamfer",
+          "callee": "_near",
+          "lineNumber": 144
+        },
+        {
+          "caller": "_add_width_width_chamfer",
+          "callee": "_near",
+          "lineNumber": 145
+        },
+        {
+          "caller": "_add_width_width_chamfer",
+          "callee": "abs",
+          "lineNumber": 145
+        },
+        {
+          "caller": "_add_width_width_chamfer",
+          "callee": "mm",
+          "lineNumber": 145
+        },
+        {
+          "caller": "_add_width_width_chamfer",
+          "callee": "model.ClearSelection2",
+          "lineNumber": 147
+        },
+        {
+          "caller": "_add_width_width_chamfer",
+          "callee": "edge.Select2",
+          "lineNumber": 148
+        },
+        {
+          "caller": "_add_width_width_chamfer",
+          "callee": "RuntimeError",
+          "lineNumber": 149
+        },
+        {
+          "caller": "_add_width_width_chamfer",
+          "callee": "model.FeatureManager.InsertFeatureChamfer",
+          "lineNumber": 150
+        },
+        {
+          "caller": "_add_width_width_chamfer",
+          "callee": "mm",
+          "lineNumber": 153
+        },
+        {
+          "caller": "_add_width_width_chamfer",
+          "callee": "mm",
+          "lineNumber": 155
+        },
+        {
+          "caller": "_add_width_width_chamfer",
+          "callee": "_assert_feature",
+          "lineNumber": 160
+        },
+        {
+          "caller": "run_regression",
+          "callee": "args.source.resolve",
+          "lineNumber": 165
+        },
+        {
+          "caller": "run_regression",
+          "callee": "source.is_file",
+          "lineNumber": 166
+        },
+        {
+          "caller": "run_regression",
+          "callee": "FileNotFoundError",
+          "lineNumber": 167
+        },
+        {
+          "caller": "run_regression",
+          "callee": "_sha256",
+          "lineNumber": 168
+        },
+        {
+          "caller": "run_regression",
+          "callee": "RuntimeError",
+          "lineNumber": 170
+        },
+        {
+          "caller": "run_regression",
+          "callee": "RuntimeError",
+          "lineNumber": 174
+        },
+        {
+          "caller": "run_regression",
+          "callee": "args.output_dir.resolve",
+          "lineNumber": 177
+        },
+        {
+          "caller": "run_regression",
+          "callee": "output_dir.mkdir",
+          "lineNumber": 178
+        },
+        {
+          "caller": "run_regression",
+          "callee": "SolidWorksSession",
+          "lineNumber": 181
+        },
+        {
+          "caller": "run_regression",
+          "callee": "session.open",
+          "lineNumber": 185
+        },
+        {
+          "caller": "run_regression",
+          "callee": "str",
+          "lineNumber": 185
+        },
+        {
+          "caller": "run_regression",
+          "callee": "_body_stats",
+          "lineNumber": 186
+        },
+        {
+          "caller": "run_regression",
+          "callee": "RuntimeError",
+          "lineNumber": 188
+        },
+        {
+          "caller": "run_regression",
+          "callee": "session.save",
+          "lineNumber": 189
+        },
+        {
+          "caller": "run_regression",
+          "callee": "str",
+          "lineNumber": 189
+        },
+        {
+          "caller": "run_regression",
+          "callee": "RuntimeError",
+          "lineNumber": 190
+        },
+        {
+          "caller": "run_regression",
+          "callee": "_add_variable_fillet",
+          "lineNumber": 191
+        },
+        {
+          "caller": "run_regression",
+          "callee": "_add_width_width_chamfer",
+          "lineNumber": 192
+        },
+        {
+          "caller": "run_regression",
+          "callee": "set_document_appearance",
+          "lineNumber": 193
+        },
+        {
+          "caller": "run_regression",
+          "callee": "_hide_review_helpers",
+          "lineNumber": 194
+        },
+        {
+          "caller": "run_regression",
+          "callee": "model.ViewZoomtofit2",
+          "lineNumber": 195
+        },
+        {
+          "caller": "run_regression",
+          "callee": "session.save",
+          "lineNumber": 196
+        },
+        {
+          "caller": "run_regression",
+          "callee": "RuntimeError",
+          "lineNumber": 197
+        },
+        {
+          "caller": "run_regression",
+          "callee": "export_to_step",
+          "lineNumber": 198
+        },
+        {
+          "caller": "run_regression",
+          "callee": "str",
+          "lineNumber": 198
+        },
+        {
+          "caller": "run_regression",
+          "callee": "RuntimeError",
+          "lineNumber": 199
+        },
+        {
+          "caller": "run_regression",
+          "callee": "run_review",
+          "lineNumber": 200
+        },
+        {
+          "caller": "run_regression",
+          "callee": "str",
+          "lineNumber": 204
+        },
+        {
+          "caller": "run_regression",
+          "callee": "str",
+          "lineNumber": 204
+        },
+        {
+          "caller": "run_regression",
+          "callee": "_feature_data_evidence",
+          "lineNumber": 207
+        },
+        {
+          "caller": "run_regression",
+          "callee": "_feature_data_evidence",
+          "lineNumber": 208
+        },
+        {
+          "caller": "run_regression",
+          "callee": "_body_stats",
+          "lineNumber": 211
+        },
+        {
+          "caller": "run_regression",
+          "callee": "session.close",
+          "lineNumber": 213
+        },
+        {
+          "caller": "run_regression",
+          "callee": "session.open",
+          "lineNumber": 215
+        },
+        {
+          "caller": "run_regression",
+          "callee": "str",
+          "lineNumber": 215
+        },
+        {
+          "caller": "run_regression",
+          "callee": "bool",
+          "lineNumber": 216
+        },
+        {
+          "caller": "run_regression",
+          "callee": "reopened.ForceRebuild3",
+          "lineNumber": 216
+        },
+        {
+          "caller": "run_regression",
+          "callee": "reopened.FeatureByName",
+          "lineNumber": 217
+        },
+        {
+          "caller": "run_regression",
+          "callee": "reopened.FeatureByName",
+          "lineNumber": 218
+        },
+        {
+          "caller": "run_regression",
+          "callee": "_feature_data_evidence",
+          "lineNumber": 220
+        },
+        {
+          "caller": "run_regression",
+          "callee": "_feature_data_evidence",
+          "lineNumber": 223
+        },
+        {
+          "caller": "run_regression",
+          "callee": "_body_stats",
+          "lineNumber": 226
+        },
+        {
+          "caller": "run_regression",
+          "callee": "_advanced_evidence_passes",
+          "lineNumber": 230
+        },
+        {
+          "caller": "run_regression",
+          "callee": "_advanced_evidence_passes",
+          "lineNumber": 231
+        },
+        {
+          "caller": "run_regression",
+          "callee": "part_path.is_file",
+          "lineNumber": 232
+        },
+        {
+          "caller": "run_regression",
+          "callee": "step_path.is_file",
+          "lineNumber": 233
+        },
+        {
+          "caller": "run_regression",
+          "callee": "str",
+          "lineNumber": 243
+        },
+        {
+          "caller": "run_regression",
+          "callee": "str",
+          "lineNumber": 246
+        },
+        {
+          "caller": "run_regression",
+          "callee": "get_com_member",
+          "lineNumber": 246
+        },
+        {
+          "caller": "run_regression",
+          "callee": "str",
+          "lineNumber": 252
+        },
+        {
+          "caller": "run_regression",
+          "callee": "str",
+          "lineNumber": 253
+        },
+        {
+          "caller": "run_regression",
+          "callee": "str",
+          "lineNumber": 253
+        },
+        {
+          "caller": "run_regression",
+          "callee": "session.close",
+          "lineNumber": 259
+        },
+        {
+          "caller": "run_regression",
+          "callee": "session.quit_owned_instance",
+          "lineNumber": 262
+        },
+        {
+          "caller": "parse_args",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 267
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 268
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 269
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 270
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 271
+        },
+        {
+          "caller": "parse_args",
+          "callee": "Path.cwd",
+          "lineNumber": 274
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.parse_args",
+          "lineNumber": 277
+        },
+        {
+          "caller": "main",
+          "callee": "parse_args",
+          "lineNumber": 282
+        },
+        {
+          "caller": "main",
+          "callee": "run_regression",
+          "lineNumber": 283
+        },
+        {
+          "caller": "main",
+          "callee": "args.output_dir.resolve",
+          "lineNumber": 284
+        },
+        {
+          "caller": "main",
+          "callee": "report_path.write_text",
+          "lineNumber": 285
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 285
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 286
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 286
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 286
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 8,
+        "functionCount": 8,
+        "classCount": 0
+      }
+    }
+  ]
+}

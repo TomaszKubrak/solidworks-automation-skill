@@ -1,0 +1,820 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 6,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 6
+    }
+  },
+  "results": [
+    {
+      "path": "docs/CAD_STUDIO_USER_MANUAL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 319,
+      "nonEmptyLines": 219,
+      "sections": [
+        {
+          "heading": "CAD Studio 用户说明书",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. 软件能做什么",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "2. 系统要求",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "2.1 软件本体",
+          "level": 3,
+          "line": 17
+        },
+        {
+          "heading": "2.2 执行 AI",
+          "level": 3,
+          "line": 23
+        },
+        {
+          "heading": "2.3 真实 CAD 自动化",
+          "level": 3,
+          "line": 45
+        },
+        {
+          "heading": "2.4 无 CAD 软件开放格式后端",
+          "level": 3,
+          "line": 91
+        },
+        {
+          "heading": "3. 安装与启动",
+          "level": 2,
+          "line": 147
+        },
+        {
+          "heading": "安装版",
+          "level": 3,
+          "line": 149
+        },
+        {
+          "heading": "便携版",
+          "level": 3,
+          "line": 157
+        },
+        {
+          "heading": "自动更新",
+          "level": 3,
+          "line": 166
+        },
+        {
+          "heading": "4. 第一次使用",
+          "level": 2,
+          "line": 176
+        },
+        {
+          "heading": "5. 创建第一个模型",
+          "level": 2,
+          "line": 185
+        },
+        {
+          "heading": "从零建模",
+          "level": 3,
+          "line": 187
+        },
+        {
+          "heading": "修改已有文件",
+          "level": 3,
+          "line": 207
+        },
+        {
+          "heading": "6. 综合工程怎么用",
+          "level": 2,
+          "line": 214
+        },
+        {
+          "heading": "7. 页面说明",
+          "level": 2,
+          "line": 232
+        },
+        {
+          "heading": "8. Agent 与 CC Switch",
+          "level": 2,
+          "line": 244
+        },
+        {
+          "heading": "9. 审批与复核",
+          "level": 2,
+          "line": 255
+        },
+        {
+          "heading": "10. 文件保存与隐私",
+          "level": 2,
+          "line": 274
+        },
+        {
+          "heading": "11. 常见问题",
+          "level": 2,
+          "line": 284
+        },
+        {
+          "heading": "“未检测到 Agent Provider”",
+          "level": 3,
+          "line": 286
+        },
+        {
+          "heading": "“Python 未安装”",
+          "level": 3,
+          "line": 290
+        },
+        {
+          "heading": "“SolidWorks / AutoCAD 未检测到”",
+          "level": 3,
+          "line": 294
+        },
+        {
+          "heading": "CC Switch 没有显示全部模型",
+          "level": 3,
+          "line": 298
+        },
+        {
+          "heading": "任务一直待审批",
+          "level": 3,
+          "line": 302
+        },
+        {
+          "heading": "左侧为什么有很多任务",
+          "level": 3,
+          "line": 306
+        },
+        {
+          "heading": "12. 获取帮助和反馈",
+          "level": 2,
+          "line": 310
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 28
+      }
+    },
+    {
+      "path": "docs/market-research-2026.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 426,
+      "nonEmptyLines": 312,
+      "sections": [
+        {
+          "heading": "SolidWorks Automation Skill 市场调研与产品定位",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. 结论先行",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "2. 市场信号",
+          "level": 2,
+          "line": 23
+        },
+        {
+          "heading": "2.1 CAD 和工业研发设计软件仍在增长",
+          "level": 3,
+          "line": 25
+        },
+        {
+          "heading": "2.2 AI 在机械工程中的落点已经清晰",
+          "level": 3,
+          "line": 34
+        },
+        {
+          "heading": "2.3 大厂正在做 AI，但仍留下垂直机会",
+          "level": 3,
+          "line": 52
+        },
+        {
+          "heading": "3. 竞品观察",
+          "level": 2,
+          "line": 71
+        },
+        {
+          "heading": "4. 目标用户",
+          "level": 2,
+          "line": 84
+        },
+        {
+          "heading": "4.1 第一目标用户",
+          "level": 3,
+          "line": 86
+        },
+        {
+          "heading": "4.2 第二目标用户",
+          "level": 3,
+          "line": 98
+        },
+        {
+          "heading": "4.3 暂不优先服务的用户",
+          "level": 3,
+          "line": 109
+        },
+        {
+          "heading": "5. 机械工程师高频痛点",
+          "level": 2,
+          "line": 116
+        },
+        {
+          "heading": "6. 本项目当前资产",
+          "level": 2,
+          "line": 128
+        },
+        {
+          "heading": "7. 产品定位",
+          "level": 2,
+          "line": 150
+        },
+        {
+          "heading": "8. MVP 功能建议",
+          "level": 2,
+          "line": 179
+        },
+        {
+          "heading": "MVP 目标",
+          "level": 3,
+          "line": 181
+        },
+        {
+          "heading": "必做功能",
+          "level": 3,
+          "line": 189
+        },
+        {
+          "heading": "暂缓功能",
+          "level": 3,
+          "line": 225
+        },
+        {
+          "heading": "9. 图纸规范能力优先级",
+          "level": 2,
+          "line": 235
+        },
+        {
+          "heading": "P0 硬规则",
+          "level": 3,
+          "line": 237
+        },
+        {
+          "heading": "P1 建议规则",
+          "level": 3,
+          "line": 246
+        },
+        {
+          "heading": "P2 增强规则",
+          "level": 3,
+          "line": 254
+        },
+        {
+          "heading": "10. 3D 打印规则库初版",
+          "level": 2,
+          "line": 261
+        },
+        {
+          "heading": "11. 软件形态建议",
+          "level": 2,
+          "line": 279
+        },
+        {
+          "heading": "12. MVP 验证指标",
+          "level": 2,
+          "line": 303
+        },
+        {
+          "heading": "13. 90 天路线图",
+          "level": 2,
+          "line": 318
+        },
+        {
+          "heading": "第 1-2 周: 产品骨架",
+          "level": 3,
+          "line": 320
+        },
+        {
+          "heading": "第 3-4 周: 外壳模板",
+          "level": 3,
+          "line": 327
+        },
+        {
+          "heading": "第 5-6 周: 工程图与复核",
+          "level": 3,
+          "line": 334
+        },
+        {
+          "heading": "第 7-8 周: 交付包",
+          "level": 3,
+          "line": 341
+        },
+        {
+          "heading": "第 9-12 周: 模板扩展",
+          "level": 3,
+          "line": 348
+        },
+        {
+          "heading": "14. 风险",
+          "level": 2,
+          "line": 356
+        },
+        {
+          "heading": "15. 下一步任务",
+          "level": 2,
+          "line": 367
+        },
+        {
+          "heading": "16. 调研来源",
+          "level": 2,
+          "line": 389
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 34
+      }
+    },
+    {
+      "path": "docs/native-wire-tools.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 38,
+      "nonEmptyLines": 24,
+      "sections": [
+        {
+          "heading": "原生圆截面路径与机械导入（pilot）",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "规格",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "实机验证",
+          "level": 2,
+          "line": 24
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "docs/product-mvp-spec.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 831,
+      "nonEmptyLines": 646,
+      "sections": [
+        {
+          "heading": "CAD 自动化交付工作台 MVP 产品规格",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. 产品定位",
+          "level": 2,
+          "line": 12
+        },
+        {
+          "heading": "2. MVP 成功标准",
+          "level": 2,
+          "line": 32
+        },
+        {
+          "heading": "验收指标",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "3. 技术边界",
+          "level": 2,
+          "line": 54
+        },
+        {
+          "heading": "必须本地运行",
+          "level": 3,
+          "line": 56
+        },
+        {
+          "heading": "不做的功能",
+          "level": 3,
+          "line": 71
+        },
+        {
+          "heading": "4. 第一版用户画像",
+          "level": 2,
+          "line": 81
+        },
+        {
+          "heading": "主要用户",
+          "level": 3,
+          "line": 83
+        },
+        {
+          "heading": "使用前提",
+          "level": 3,
+          "line": 95
+        },
+        {
+          "heading": "5. 信息架构",
+          "level": 2,
+          "line": 105
+        },
+        {
+          "heading": "6. 核心流程",
+          "level": 2,
+          "line": 124
+        },
+        {
+          "heading": "6.1 新建项目",
+          "level": 3,
+          "line": 126
+        },
+        {
+          "heading": "6.2 上传参考图",
+          "level": 3,
+          "line": 145
+        },
+        {
+          "heading": "6.3 填写参数",
+          "level": 3,
+          "line": 164
+        },
+        {
+          "heading": "6.4 生成模型",
+          "level": 3,
+          "line": 178
+        },
+        {
+          "heading": "6.5 生成工程图",
+          "level": 3,
+          "line": 201
+        },
+        {
+          "heading": "6.6 规范复核",
+          "level": 3,
+          "line": 229
+        },
+        {
+          "heading": "7. 页面规格",
+          "level": 2,
+          "line": 253
+        },
+        {
+          "heading": "7.1 首页 / 项目列表",
+          "level": 3,
+          "line": 255
+        },
+        {
+          "heading": "7.2 新建项目页",
+          "level": 3,
+          "line": 274
+        },
+        {
+          "heading": "7.3 参数填写页",
+          "level": 3,
+          "line": 291
+        },
+        {
+          "heading": "外形参数",
+          "level": 4,
+          "line": 293
+        },
+        {
+          "heading": "3D 打印参数",
+          "level": 4,
+          "line": 306
+        },
+        {
+          "heading": "孔参数",
+          "level": 4,
+          "line": 316
+        },
+        {
+          "heading": "接口开孔",
+          "level": 4,
+          "line": 348
+        },
+        {
+          "heading": "螺丝柱参数",
+          "level": 4,
+          "line": 380
+        },
+        {
+          "heading": "7.4 生成执行页",
+          "level": 3,
+          "line": 395
+        },
+        {
+          "heading": "7.5 复核报告页",
+          "level": 3,
+          "line": 412
+        },
+        {
+          "heading": "8. 项目目录结构",
+          "level": 2,
+          "line": 429
+        },
+        {
+          "heading": "9. 数据文件规格",
+          "level": 2,
+          "line": 470
+        },
+        {
+          "heading": "9.1 project.json",
+          "level": 3,
+          "line": 472
+        },
+        {
+          "heading": "9.2 parameters.json",
+          "level": 3,
+          "line": 489
+        },
+        {
+          "heading": "9.3 final_review.json",
+          "level": 3,
+          "line": 529
+        },
+        {
+          "heading": "10. P0 规范检查清单",
+          "level": 2,
+          "line": 559
+        },
+        {
+          "heading": "10.1 模型 P0",
+          "level": 3,
+          "line": 561
+        },
+        {
+          "heading": "10.2 工程图 P0",
+          "level": 3,
+          "line": 572
+        },
+        {
+          "heading": "10.3 3D 打印 P0",
+          "level": 3,
+          "line": 587
+        },
+        {
+          "heading": "11. 图纸默认样式",
+          "level": 2,
+          "line": 596
+        },
+        {
+          "heading": "12. 交付包规格",
+          "level": 2,
+          "line": 619
+        },
+        {
+          "heading": "13. 状态机",
+          "level": 2,
+          "line": 659
+        },
+        {
+          "heading": "14. 错误处理",
+          "level": 2,
+          "line": 686
+        },
+        {
+          "heading": "15. MVP 界面优先级",
+          "level": 2,
+          "line": 713
+        },
+        {
+          "heading": "P0 页面",
+          "level": 3,
+          "line": 715
+        },
+        {
+          "heading": "P1 页面",
+          "level": 3,
+          "line": 724
+        },
+        {
+          "heading": "P2 页面",
+          "level": 3,
+          "line": 731
+        },
+        {
+          "heading": "16. 开发拆分",
+          "level": 2,
+          "line": 738
+        },
+        {
+          "heading": "第一个可运行版本",
+          "level": 3,
+          "line": 740
+        },
+        {
+          "heading": "第二个版本",
+          "level": 3,
+          "line": 758
+        },
+        {
+          "heading": "第三个版本",
+          "level": 3,
+          "line": 774
+        },
+        {
+          "heading": "第四个版本",
+          "level": 3,
+          "line": 790
+        },
+        {
+          "heading": "17. 首版不确定项",
+          "level": 2,
+          "line": 805
+        },
+        {
+          "heading": "18. 下一步",
+          "level": 2,
+          "line": 815
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 53
+      }
+    },
+    {
+      "path": "docs/skill-map.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 72,
+      "nonEmptyLines": 52,
+      "sections": [
+        {
+          "heading": "Skill Map",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Root Skill",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Subskills",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Recommended Agent Routing",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "Shared Review Contract",
+          "level": 2,
+          "line": 36
+        },
+        {
+          "heading": "Productization Docs",
+          "level": 2,
+          "line": 46
+        },
+        {
+          "heading": "Adding a New Subskill",
+          "level": 2,
+          "line": 53
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "docs/weekly-delivery-plan.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 114,
+      "nonEmptyLines": 82,
+      "sections": [
+        {
+          "heading": "CAD Studio 周阶段交付计划",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "第 1 周结果",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "第 2 周结果",
+          "level": 2,
+          "line": 21
+        },
+        {
+          "heading": "第 3 周补充结果",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "SolidWorks 2026 SP01.1 升级回归结果",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "第 4 周补充结果",
+          "level": 2,
+          "line": 43
+        },
+        {
+          "heading": "第 5 周结果",
+          "level": 2,
+          "line": 48
+        },
+        {
+          "heading": "第 6 周结果",
+          "level": 2,
+          "line": 54
+        },
+        {
+          "heading": "下一阶段四周拓展结果",
+          "level": 2,
+          "line": 60
+        },
+        {
+          "heading": "后续第 1 阶段结果：版本化重试与交付门禁",
+          "level": 2,
+          "line": 69
+        },
+        {
+          "heading": "第 7–8 周结果：无头几何双后端",
+          "level": 2,
+          "line": 77
+        },
+        {
+          "heading": "第 9–12 周结果：无头二维写入",
+          "level": 2,
+          "line": 83
+        },
+        {
+          "heading": "第 13–16 周结果：JS 预览第一版",
+          "level": 2,
+          "line": 89
+        },
+        {
+          "heading": "第 17–20 周结果：DXF 检视台与演示边界",
+          "level": 2,
+          "line": 95
+        },
+        {
+          "heading": "第 21 周补强：DFM、Routing、FEA 与复杂几何门禁",
+          "level": 2,
+          "line": 102
+        },
+        {
+          "heading": "1–20 周审计结论",
+          "level": 2,
+          "line": 110
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 16
+      }
+    }
+  ]
+}

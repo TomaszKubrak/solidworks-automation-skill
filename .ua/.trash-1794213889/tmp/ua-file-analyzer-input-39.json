@@ -1,0 +1,184 @@
+{
+ "projectRoot": "/Users/tomasz/Developer/solidworks-automation-skill",
+ "batchFiles": [
+  {
+   "path": "scripts/validate_mcp.py",
+   "language": "python",
+   "sizeLines": 188,
+   "fileCategory": "code"
+  },
+  {
+   "path": "scripts/validate_skill.py",
+   "language": "python",
+   "sizeLines": 171,
+   "fileCategory": "code"
+  },
+  {
+   "path": "setup.py",
+   "language": "python",
+   "sizeLines": 62,
+   "fileCategory": "code"
+  },
+  {
+   "path": "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudio.AutoCAD2024.csproj",
+   "language": "csproj",
+   "sizeLines": 34,
+   "fileCategory": "config"
+  },
+  {
+   "path": "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudioCommands.cs",
+   "language": "csharp",
+   "sizeLines": 320,
+   "fileCategory": "code"
+  },
+  {
+   "path": "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/NuGet.Config",
+   "language": "config",
+   "sizeLines": 7,
+   "fileCategory": "code"
+  },
+  {
+   "path": "subskills/autocad-automation/evals/evals.json",
+   "language": "json",
+   "sizeLines": 24,
+   "fileCategory": "config"
+  },
+  {
+   "path": "subskills/autocad-automation/examples/draw_mounting_plate.py",
+   "language": "python",
+   "sizeLines": 47,
+   "fileCategory": "code"
+  },
+  {
+   "path": "subskills/autocad-automation/scripts/acad_dotnet_preflight.py",
+   "language": "python",
+   "sizeLines": 242,
+   "fileCategory": "code"
+  },
+  {
+   "path": "subskills/autocad-automation/scripts/acad_dotnet_regression.py",
+   "language": "python",
+   "sizeLines": 316,
+   "fileCategory": "code"
+  },
+  {
+   "path": "subskills/autocad-automation/scripts/acad_headless.py",
+   "language": "python",
+   "sizeLines": 300,
+   "fileCategory": "code"
+  },
+  {
+   "path": "subskills/autocad-automation/scripts/acad_preflight.py",
+   "language": "python",
+   "sizeLines": 136,
+   "fileCategory": "code"
+  },
+  {
+   "path": "subskills/solidworks-engineering-drawing/schemas/drawing_spec.schema.json",
+   "language": "json",
+   "sizeLines": 463,
+   "fileCategory": "config"
+  },
+  {
+   "path": "subskills/solidworks-engineering-drawing/schemas/gdt_copy_spec.schema.json",
+   "language": "json",
+   "sizeLines": 336,
+   "fileCategory": "config"
+  },
+  {
+   "path": "subskills/solidworks-engineering-drawing/scripts/__init__.py",
+   "language": "python",
+   "sizeLines": 1,
+   "fileCategory": "code"
+  },
+  {
+   "path": "subskills/solidworks-engineering-drawing/scripts/drawing_review.py",
+   "language": "python",
+   "sizeLines": 922,
+   "fileCategory": "code"
+  },
+  {
+   "path": "subskills/solidworks-engineering-drawing/scripts/drawing_spec.py",
+   "language": "python",
+   "sizeLines": 150,
+   "fileCategory": "code"
+  },
+  {
+   "path": "subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py",
+   "language": "python",
+   "sizeLines": 2135,
+   "fileCategory": "code"
+  },
+  {
+   "path": "subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py",
+   "language": "python",
+   "sizeLines": 874,
+   "fileCategory": "code"
+  },
+  {
+   "path": "subskills/solidworks-fillet-chamfer-cnc/agents/openai.yaml",
+   "language": "yaml",
+   "sizeLines": 7,
+   "fileCategory": "config"
+  },
+  {
+   "path": "subskills/solidworks-fillet-chamfer-cnc/evals/evals.json",
+   "language": "json",
+   "sizeLines": 23,
+   "fileCategory": "config"
+  },
+  {
+   "path": "subskills/solidworks-fillet-chamfer-cnc/examples/cnc_mount_precision_params.json",
+   "language": "json",
+   "sizeLines": 36,
+   "fileCategory": "config"
+  },
+  {
+   "path": "subskills/solidworks-fillet-chamfer-cnc/examples/open_source_corner_bracket_case.json",
+   "language": "json",
+   "sizeLines": 30,
+   "fileCategory": "config"
+  },
+  {
+   "path": "subskills/solidworks-fillet-chamfer-cnc/references/cnc-fillet-chamfer-lessons.md",
+   "language": "markdown",
+   "sizeLines": 240,
+   "fileCategory": "docs"
+  },
+  {
+   "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py",
+   "language": "python",
+   "sizeLines": 397,
+   "fileCategory": "code"
+  }
+ ],
+ "batchImportData": {
+  "scripts/validate_mcp.py": [],
+  "scripts/validate_skill.py": [],
+  "setup.py": [],
+  "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudio.AutoCAD2024.csproj": [],
+  "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudioCommands.cs": [],
+  "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/NuGet.Config": [],
+  "subskills/autocad-automation/evals/evals.json": [],
+  "subskills/autocad-automation/examples/draw_mounting_plate.py": [],
+  "subskills/autocad-automation/scripts/acad_dotnet_preflight.py": [],
+  "subskills/autocad-automation/scripts/acad_dotnet_regression.py": [],
+  "subskills/autocad-automation/scripts/acad_headless.py": [],
+  "subskills/autocad-automation/scripts/acad_preflight.py": [],
+  "subskills/solidworks-engineering-drawing/schemas/drawing_spec.schema.json": [],
+  "subskills/solidworks-engineering-drawing/schemas/gdt_copy_spec.schema.json": [],
+  "subskills/solidworks-engineering-drawing/scripts/__init__.py": [],
+  "subskills/solidworks-engineering-drawing/scripts/drawing_review.py": [
+   "scripts/sw_review.py"
+  ],
+  "subskills/solidworks-engineering-drawing/scripts/drawing_spec.py": [],
+  "subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py": [],
+  "subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py": [],
+  "subskills/solidworks-fillet-chamfer-cnc/agents/openai.yaml": [],
+  "subskills/solidworks-fillet-chamfer-cnc/evals/evals.json": [],
+  "subskills/solidworks-fillet-chamfer-cnc/examples/cnc_mount_precision_params.json": [],
+  "subskills/solidworks-fillet-chamfer-cnc/examples/open_source_corner_bracket_case.json": [],
+  "subskills/solidworks-fillet-chamfer-cnc/references/cnc-fillet-chamfer-lessons.md": [],
+  "subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py": []
+ }
+}

@@ -1,0 +1,242 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 3,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 3
+    }
+  },
+  "results": [
+    {
+      "path": "subskills/autocad-automation/references/api-lookup.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 73,
+      "nonEmptyLines": 56,
+      "sections": [
+        {
+          "heading": "AutoCAD API 查证路线",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "官方资料优先级",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "GitHub 参考",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "查证流程",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "COM/ActiveX 常用对象",
+          "level": 2,
+          "line": 36
+        },
+        {
+          "heading": "常用方法核查清单",
+          "level": 2,
+          "line": 44
+        },
+        {
+          "heading": ".NET 插件路线",
+          "level": 2,
+          "line": 57
+        },
+        {
+          "heading": "资料使用底线",
+          "level": 2,
+          "line": 67
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "subskills/autocad-automation/references/engineering-patterns.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 77,
+      "nonEmptyLines": 57,
+      "sections": [
+        {
+          "heading": "AutoCAD 工程实践",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "绘图前设计",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "图层与对象",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "尺寸和标注",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "国内机械制图习惯检查",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "自动化编码",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "复核思路",
+          "level": 2,
+          "line": 54
+        },
+        {
+          "heading": "经验判断",
+          "level": 2,
+          "line": 71
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "subskills/autocad-automation/references/troubleshooting.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 244,
+      "nonEmptyLines": 159,
+      "sections": [
+        {
+          "heading": "AutoCAD 自动化排查",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Python 依赖",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "找不到 AutoCAD COM",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "AutoCAD 已打开但无活动文档",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "新建文档后访问 `Layers` / `ModelSpace` 失败",
+          "level": 2,
+          "line": 33
+        },
+        {
+          "heading": "`SendCommand` 没有效果",
+          "level": 2,
+          "line": 46
+        },
+        {
+          "heading": "保存失败或覆盖风险",
+          "level": 2,
+          "line": 62
+        },
+        {
+          "heading": "DXF 导出失败",
+          "level": 2,
+          "line": 72
+        },
+        {
+          "heading": "图片线稿里出现奇怪的外围轮廓、椭圆、三角形或彩色线",
+          "level": 2,
+          "line": 78
+        },
+        {
+          "heading": "AutoCAD COM 短暂拒绝调用或返回乱码错误",
+          "level": 2,
+          "line": 117
+        },
+        {
+          "heading": "ModelSpace 不能直接枚举",
+          "level": 2,
+          "line": 149
+        },
+        {
+          "heading": "`SaveAs` 覆盖当前已打开 DWG 失败",
+          "level": 2,
+          "line": 163
+        },
+        {
+          "heading": "`SelectionSets` 或 `Export` 代理异常",
+          "level": 2,
+          "line": 173
+        },
+        {
+          "heading": "窗口截图被遮挡或黑屏",
+          "level": 2,
+          "line": 192
+        },
+        {
+          "heading": "画图过程不可见",
+          "level": 2,
+          "line": 203
+        },
+        {
+          "heading": "SelectionSet 名称冲突",
+          "level": 2,
+          "line": 214
+        },
+        {
+          "heading": "包围盒读取失败",
+          "level": 2,
+          "line": 220
+        },
+        {
+          "heading": "PDF/Plot 不稳定",
+          "level": 2,
+          "line": 224
+        },
+        {
+          "heading": "任务实例退出后仍被误报为运行中",
+          "level": 2,
+          "line": 233
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 19
+      }
+    }
+  ]
+}

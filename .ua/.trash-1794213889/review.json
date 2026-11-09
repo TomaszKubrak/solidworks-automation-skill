@@ -1,0 +1,33 @@
+{
+  "issues": [],
+  "warnings": [
+    "73 orphan nodes without edges"
+  ],
+  "stats": {
+    "totalNodes": 1257,
+    "totalEdges": 1505,
+    "totalLayers": 11,
+    "tourSteps": 12,
+    "nodeTypes": {
+      "file": 231,
+      "function": 766,
+      "class": 93,
+      "pipeline": 2,
+      "document": 96,
+      "config": 69
+    },
+    "edgeTypes": {
+      "contains": 859,
+      "exports": 319,
+      "imports": 147,
+      "tested_by": 3,
+      "calls": 19,
+      "depends_on": 21,
+      "related": 69,
+      "triggers": 5,
+      "documents": 36,
+      "configures": 26,
+      "defines_schema": 1
+    }
+  }
+}

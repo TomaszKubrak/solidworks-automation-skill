@@ -1,0 +1,35 @@
+{
+ "projectRoot": "/Users/tomasz/Developer/solidworks-automation-skill",
+ "batchFiles": [
+  {
+   "path": "apps/workbench-ui/README.md",
+   "language": "markdown",
+   "sizeLines": 141,
+   "fileCategory": "docs"
+  },
+  {
+   "path": "apps/workbench-ui/index.html",
+   "language": "html",
+   "sizeLines": 15,
+   "fileCategory": "markup"
+  },
+  {
+   "path": "apps/workbench-ui/package.json",
+   "language": "json",
+   "sizeLines": 39,
+   "fileCategory": "config"
+  },
+  {
+   "path": "apps/workbench-ui/tsconfig.json",
+   "language": "json",
+   "sizeLines": 21,
+   "fileCategory": "config"
+  }
+ ],
+ "batchImportData": {
+  "apps/workbench-ui/README.md": [],
+  "apps/workbench-ui/index.html": [],
+  "apps/workbench-ui/package.json": [],
+  "apps/workbench-ui/tsconfig.json": []
+ }
+}

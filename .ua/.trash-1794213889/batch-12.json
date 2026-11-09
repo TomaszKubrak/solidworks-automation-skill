@@ -1,0 +1,293 @@
+{
+ "nodes": [
+  {
+   "id": "document:CONTRIBUTING.md",
+   "type": "document",
+   "name": "CONTRIBUTING.md",
+   "filePath": "CONTRIBUTING.md",
+   "summary": "Przewodnik kontrybutora (PL/ZH) opisujący tryb utrzymania, ograniczenia governance, zgłaszanie błędów, zasady kodu i wymóg ponownego zebrania dowodów po zmianie reguł.",
+   "tags": [
+    "documentation",
+    "development",
+    "governance",
+    "contributing"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "document:README.md",
+   "type": "document",
+   "name": "README.md",
+   "filePath": "README.md",
+   "summary": "Główny README projektu: opis toolkitu SolidWorks Automation, wymagania, szybki start (Skill i MCP), demo i przegląd możliwości.",
+   "tags": [
+    "documentation",
+    "entry-point",
+    "overview",
+    "mcp"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "document:SECURITY.md",
+   "type": "document",
+   "name": "SECURITY.md",
+   "filePath": "SECURITY.md",
+   "summary": "Krótka polityka bezpieczeństwa: wspierane wersje, zgłaszanie podatności i granice zaufania.",
+   "tags": [
+    "documentation",
+    "security",
+    "policy"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:SKILL.md",
+   "type": "document",
+   "name": "SKILL.md",
+   "filePath": "SKILL.md",
+   "summary": "Główna definicja skilla: szybki start, wymagania, autotest wejścia, wiele backendów, połączenie z SolidWorks i reguły pracy agenta.",
+   "tags": [
+    "documentation",
+    "skill",
+    "entry-point",
+    "agent-instructions"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "document:SUBSKILLS.md",
+   "type": "document",
+   "name": "SUBSKILLS.md",
+   "filePath": "SUBSKILLS.md",
+   "summary": "Macierz podskilli (vibecad, fillet-chamfer-cnc, threaded-holes, engineering-drawing, autocad) z rekomendowanym routingiem i kryteriami wyboru.",
+   "tags": [
+    "documentation",
+    "skill",
+    "routing",
+    "index"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "config:capabilities.yaml",
+   "type": "config",
+   "name": "capabilities.yaml",
+   "filePath": "capabilities.yaml",
+   "summary": "Katalog backendów i zdolności (pywin32, comtypes, C# PIA/add-in itd.) wraz z ograniczeniami i zweryfikowanymi wersjami SolidWorks/AutoCAD.",
+   "tags": [
+    "configuration",
+    "capabilities",
+    "backend-catalog",
+    "schema"
+   ],
+   "complexity": "complex",
+   "languageNotes": "Mimo rozszerzenia .yaml plik zawiera składnię JSON (podzbiór YAML)."
+  },
+  {
+   "id": "config:golden-workflows.yaml",
+   "type": "config",
+   "name": "golden-workflows.yaml",
+   "filePath": "golden-workflows.yaml",
+   "summary": "Definicje złotych przepływów pracy (wspornik, obudowa, chwytak, rysunek, eksport) z wejściami, artefaktami i akceptacją SW2026.",
+   "tags": [
+    "configuration",
+    "workflows",
+    "acceptance",
+    "testing-data"
+   ],
+   "complexity": "moderate",
+   "languageNotes": "Plik w składni JSON w rozszerzeniu .yaml."
+  },
+  {
+   "id": "config:manifest.json",
+   "type": "config",
+   "name": "manifest.json",
+   "filePath": "manifest.json",
+   "summary": "Manifest pakietu (rozszerzenie/MCP bundle) z nazwą, wersją, opisem i konfiguracją serwera.",
+   "tags": [
+    "configuration",
+    "manifest",
+    "packaging",
+    "mcp"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:package.json",
+   "type": "config",
+   "name": "package.json",
+   "filePath": "package.json",
+   "summary": "Metadane pakietu npm: wersja, punkt wejścia, bin, skrypty, wymagania silnika i słowa kluczowe.",
+   "tags": [
+    "configuration",
+    "npm",
+    "packaging",
+    "build-system"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:project.yaml",
+   "type": "config",
+   "name": "project.yaml",
+   "filePath": "project.yaml",
+   "summary": "Metadane projektu dla agregatora MICU AI: autorzy, kategoria, tagi, status oraz lista podskilli.",
+   "tags": [
+    "configuration",
+    "metadata",
+    "project",
+    "subskills"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "config:pyproject.toml",
+   "type": "config",
+   "name": "pyproject.toml",
+   "filePath": "pyproject.toml",
+   "summary": "Konfiguracja projektu Python: metadane, URL-e, ustawienia uv i pytest.",
+   "tags": [
+    "configuration",
+    "python",
+    "build-system",
+    "testing"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:requirements-mesh.txt",
+   "type": "document",
+   "name": "requirements-mesh.txt",
+   "filePath": "requirements-mesh.txt",
+   "summary": "Opcjonalne zależności Python do obsługi siatek (mesh).",
+   "tags": [
+    "dependencies",
+    "python",
+    "mesh",
+    "optional"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:requirements-occt.txt",
+   "type": "document",
+   "name": "requirements-occt.txt",
+   "filePath": "requirements-occt.txt",
+   "summary": "Opcjonalne zależności Python dla OpenCASCADE (OCCT).",
+   "tags": [
+    "dependencies",
+    "python",
+    "occt",
+    "optional"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:requirements-pdf.txt",
+   "type": "document",
+   "name": "requirements-pdf.txt",
+   "filePath": "requirements-pdf.txt",
+   "summary": "Opcjonalna zależność Python do obsługi PDF.",
+   "tags": [
+    "dependencies",
+    "python",
+    "pdf",
+    "optional"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:requirements.txt",
+   "type": "document",
+   "name": "requirements.txt",
+   "filePath": "requirements.txt",
+   "summary": "Podstawowe zależności Python projektu.",
+   "tags": [
+    "dependencies",
+    "python",
+    "requirements"
+   ],
+   "complexity": "simple"
+  }
+ ],
+ "edges": [
+  {
+   "source": "document:README.md",
+   "target": "document:SKILL.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:README.md",
+   "target": "document:SUBSKILLS.md",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:SUBSKILLS.md",
+   "target": "config:project.yaml",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:CONTRIBUTING.md",
+   "target": "config:golden-workflows.yaml",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:SECURITY.md",
+   "target": "document:README.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:capabilities.yaml",
+   "target": "config:golden-workflows.yaml",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:package.json",
+   "target": "config:manifest.json",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:pyproject.toml",
+   "target": "document:requirements.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:requirements.txt",
+   "target": "document:requirements-mesh.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:requirements.txt",
+   "target": "document:requirements-occt.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:requirements.txt",
+   "target": "document:requirements-pdf.txt",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  }
+ ]
+}

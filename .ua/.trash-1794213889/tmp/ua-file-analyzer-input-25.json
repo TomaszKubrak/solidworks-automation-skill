@@ -1,0 +1,35 @@
+{
+ "projectRoot": "/Users/tomasz/Developer/solidworks-automation-skill",
+ "batchFiles": [
+  {
+   "path": "scripts/build_windows_release.ps1",
+   "language": "powershell",
+   "sizeLines": 123,
+   "fileCategory": "script"
+  },
+  {
+   "path": "scripts/sw_addin_host.ps1",
+   "language": "powershell",
+   "sizeLines": 197,
+   "fileCategory": "script"
+  },
+  {
+   "path": "scripts/sw_native_wire.ps1",
+   "language": "powershell",
+   "sizeLines": 13,
+   "fileCategory": "script"
+  },
+  {
+   "path": "scripts/verify_updater_release.ps1",
+   "language": "powershell",
+   "sizeLines": 72,
+   "fileCategory": "script"
+  }
+ ],
+ "batchImportData": {
+  "scripts/build_windows_release.ps1": [],
+  "scripts/sw_addin_host.ps1": [],
+  "scripts/sw_native_wire.ps1": [],
+  "scripts/verify_updater_release.ps1": []
+ }
+}

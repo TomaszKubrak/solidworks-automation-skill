@@ -1,0 +1,49 @@
+{
+ "projectRoot": "/Users/tomasz/Developer/solidworks-automation-skill",
+ "batchFiles": [
+  {
+   "path": "apps/workbench-ui/src/components/AppUpdatePanel.tsx",
+   "language": "typescript",
+   "sizeLines": 144,
+   "fileCategory": "code"
+  },
+  {
+   "path": "apps/workbench-ui/src/domain/updateProgress.test.ts",
+   "language": "typescript",
+   "sizeLines": 23,
+   "fileCategory": "code"
+  },
+  {
+   "path": "apps/workbench-ui/src/domain/updateProgress.ts",
+   "language": "typescript",
+   "sizeLines": 25,
+   "fileCategory": "code"
+  },
+  {
+   "path": "apps/workbench-ui/src/persistence.test.ts",
+   "language": "typescript",
+   "sizeLines": 83,
+   "fileCategory": "code"
+  },
+  {
+   "path": "apps/workbench-ui/src/persistence.ts",
+   "language": "typescript",
+   "sizeLines": 81,
+   "fileCategory": "code"
+  }
+ ],
+ "batchImportData": {
+  "apps/workbench-ui/src/components/AppUpdatePanel.tsx": [
+   "apps/workbench-ui/src/domain/updateProgress.ts",
+   "apps/workbench-ui/src/persistence.ts"
+  ],
+  "apps/workbench-ui/src/domain/updateProgress.test.ts": [
+   "apps/workbench-ui/src/domain/updateProgress.ts"
+  ],
+  "apps/workbench-ui/src/domain/updateProgress.ts": [],
+  "apps/workbench-ui/src/persistence.test.ts": [
+   "apps/workbench-ui/src/persistence.ts"
+  ],
+  "apps/workbench-ui/src/persistence.ts": []
+ }
+}

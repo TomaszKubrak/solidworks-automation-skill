@@ -1,0 +1,2666 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 4,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 4,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 4,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "scripts/cad_diagnostics.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 64,
+      "nonEmptyLines": 53,
+      "functions": [
+        {
+          "name": "_redact",
+          "startLine": 17,
+          "endLine": 29,
+          "params": [
+            "value",
+            "key"
+          ]
+        },
+        {
+          "name": "create_diagnostic_bundle",
+          "startLine": 32,
+          "endLine": 47,
+          "params": [
+            "output",
+            "events"
+          ]
+        },
+        {
+          "name": "main",
+          "startLine": 50,
+          "endLine": 60,
+          "params": [
+            "argv"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "_redact",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "create_diagnostic_bundle",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 50,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_redact",
+          "callee": "SENSITIVE_KEYS.search",
+          "lineNumber": 18
+        },
+        {
+          "caller": "_redact",
+          "callee": "isinstance",
+          "lineNumber": 20
+        },
+        {
+          "caller": "_redact",
+          "callee": "str",
+          "lineNumber": 21
+        },
+        {
+          "caller": "_redact",
+          "callee": "_redact",
+          "lineNumber": 21
+        },
+        {
+          "caller": "_redact",
+          "callee": "str",
+          "lineNumber": 21
+        },
+        {
+          "caller": "_redact",
+          "callee": "value.items",
+          "lineNumber": 21
+        },
+        {
+          "caller": "_redact",
+          "callee": "isinstance",
+          "lineNumber": 22
+        },
+        {
+          "caller": "_redact",
+          "callee": "_redact",
+          "lineNumber": 23
+        },
+        {
+          "caller": "_redact",
+          "callee": "isinstance",
+          "lineNumber": 24
+        },
+        {
+          "caller": "_redact",
+          "callee": "re.match",
+          "lineNumber": 26
+        },
+        {
+          "caller": "_redact",
+          "callee": "Path",
+          "lineNumber": 27
+        },
+        {
+          "caller": "create_diagnostic_bundle",
+          "callee": "Path",
+          "lineNumber": 34
+        },
+        {
+          "caller": "create_diagnostic_bundle",
+          "callee": "output.suffix.lower",
+          "lineNumber": 35
+        },
+        {
+          "caller": "create_diagnostic_bundle",
+          "callee": "output.with_suffix",
+          "lineNumber": 36
+        },
+        {
+          "caller": "create_diagnostic_bundle",
+          "callee": "output.parent.mkdir",
+          "lineNumber": 37
+        },
+        {
+          "caller": "create_diagnostic_bundle",
+          "callee": "datetime.now(timezone.utc).isoformat",
+          "lineNumber": 40
+        },
+        {
+          "caller": "create_diagnostic_bundle",
+          "callee": "datetime.now",
+          "lineNumber": 40
+        },
+        {
+          "caller": "create_diagnostic_bundle",
+          "callee": "_redact",
+          "lineNumber": 41
+        },
+        {
+          "caller": "create_diagnostic_bundle",
+          "callee": "run_doctor",
+          "lineNumber": 41
+        },
+        {
+          "caller": "create_diagnostic_bundle",
+          "callee": "_redact",
+          "lineNumber": 42
+        },
+        {
+          "caller": "create_diagnostic_bundle",
+          "callee": "zipfile.ZipFile",
+          "lineNumber": 45
+        },
+        {
+          "caller": "create_diagnostic_bundle",
+          "callee": "archive.writestr",
+          "lineNumber": 46
+        },
+        {
+          "caller": "create_diagnostic_bundle",
+          "callee": "json.dumps",
+          "lineNumber": 46
+        },
+        {
+          "caller": "main",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 51
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 52
+        },
+        {
+          "caller": "main",
+          "callee": "Path.cwd",
+          "lineNumber": 52
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 53
+        },
+        {
+          "caller": "main",
+          "callee": "parser.parse_args",
+          "lineNumber": 54
+        },
+        {
+          "caller": "main",
+          "callee": "args.events.is_file",
+          "lineNumber": 56
+        },
+        {
+          "caller": "main",
+          "callee": "json.loads",
+          "lineNumber": 57
+        },
+        {
+          "caller": "main",
+          "callee": "args.events.read_text",
+          "lineNumber": 57
+        },
+        {
+          "caller": "main",
+          "callee": "create_diagnostic_bundle",
+          "lineNumber": 58
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 59
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 59
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scripts/cad_doctor.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 272,
+      "nonEmptyLines": 245,
+      "functions": [
+        {
+          "name": "_check",
+          "startLine": 30,
+          "endLine": 57,
+          "params": [
+            "name",
+            "ok",
+            "message",
+            "severity",
+            "code",
+            "action",
+            "install_command",
+            "download_url",
+            "required"
+          ]
+        },
+        {
+          "name": "_collect_remediations",
+          "startLine": 60,
+          "endLine": 88,
+          "params": [
+            "checks"
+          ]
+        },
+        {
+          "name": "_is_writable",
+          "startLine": 91,
+          "endLine": 99,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "_solidworks_installation",
+          "startLine": 102,
+          "endLine": 115,
+          "params": []
+        },
+        {
+          "name": "run_doctor",
+          "startLine": 118,
+          "endLine": 254,
+          "params": [
+            "probe_cad"
+          ]
+        },
+        {
+          "name": "main",
+          "startLine": 257,
+          "endLine": 268,
+          "params": [
+            "argv"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "_check",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "_collect_remediations",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "_is_writable",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "_solidworks_installation",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "run_doctor",
+          "line": 118,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 257,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_check",
+          "callee": "name.upper",
+          "lineNumber": 46
+        },
+        {
+          "caller": "_collect_remediations",
+          "callee": "set",
+          "lineNumber": 63
+        },
+        {
+          "caller": "_collect_remediations",
+          "callee": "any",
+          "lineNumber": 64
+        },
+        {
+          "caller": "_collect_remediations",
+          "callee": "item[\"id\"].startswith",
+          "lineNumber": 65
+        },
+        {
+          "caller": "_collect_remediations",
+          "callee": "item.get",
+          "lineNumber": 69
+        },
+        {
+          "caller": "_collect_remediations",
+          "callee": "item[\"id\"].startswith",
+          "lineNumber": 72
+        },
+        {
+          "caller": "_collect_remediations",
+          "callee": "str",
+          "lineNumber": 74
+        },
+        {
+          "caller": "_collect_remediations",
+          "callee": "seen.add",
+          "lineNumber": 77
+        },
+        {
+          "caller": "_collect_remediations",
+          "callee": "bool",
+          "lineNumber": 82
+        },
+        {
+          "caller": "_collect_remediations",
+          "callee": "item.get",
+          "lineNumber": 82
+        },
+        {
+          "caller": "_collect_remediations",
+          "callee": "item.get",
+          "lineNumber": 85
+        },
+        {
+          "caller": "_collect_remediations",
+          "callee": "remediations.append",
+          "lineNumber": 87
+        },
+        {
+          "caller": "_is_writable",
+          "callee": "path.mkdir",
+          "lineNumber": 93
+        },
+        {
+          "caller": "_is_writable",
+          "callee": "os.getpid",
+          "lineNumber": 94
+        },
+        {
+          "caller": "_is_writable",
+          "callee": "probe.write_text",
+          "lineNumber": 95
+        },
+        {
+          "caller": "_is_writable",
+          "callee": "probe.unlink",
+          "lineNumber": 96
+        },
+        {
+          "caller": "_solidworks_installation",
+          "callee": "discover_all",
+          "lineNumber": 103
+        },
+        {
+          "caller": "_solidworks_installation",
+          "callee": "discover_installations",
+          "lineNumber": 104
+        },
+        {
+          "caller": "_solidworks_installation",
+          "callee": "installation.get",
+          "lineNumber": 111
+        },
+        {
+          "caller": "_solidworks_installation",
+          "callee": "installation.get",
+          "lineNumber": 112
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "checks.append",
+          "lineNumber": 122
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "_check",
+          "lineNumber": 122
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "platform.python_version",
+          "lineNumber": 125
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "platform.python_version",
+          "lineNumber": 125
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "importlib.util.find_spec",
+          "lineNumber": 143
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "checks.append",
+          "lineNumber": 146
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "_check",
+          "lineNumber": 146
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "label.lower",
+          "lineNumber": 147
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "discover_solver",
+          "lineNumber": 160
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "calculix.get",
+          "lineNumber": 161
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "checks.append",
+          "lineNumber": 164
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "_check",
+          "lineNumber": 164
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "shutil.which",
+          "lineNumber": 175
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "shutil.which",
+          "lineNumber": 175
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "checks.append",
+          "lineNumber": 176
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "_check",
+          "lineNumber": 176
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "bool",
+          "lineNumber": 178
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "_solidworks_installation",
+          "lineNumber": 186
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "bool",
+          "lineNumber": 187
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "checks.append",
+          "lineNumber": 188
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "_check",
+          "lineNumber": 188
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "discover_all",
+          "lineNumber": 197
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "bool",
+          "lineNumber": 198
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "checks.append",
+          "lineNumber": 199
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "_check",
+          "lineNumber": 199
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "Path.home",
+          "lineNumber": 209
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "_is_writable",
+          "lineNumber": 210
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "checks.append",
+          "lineNumber": 211
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "_check",
+          "lineNumber": 211
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "_is_writable",
+          "lineNumber": 219
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "Path",
+          "lineNumber": 219
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "os.environ.get",
+          "lineNumber": 219
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "str",
+          "lineNumber": 219
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "Path.home",
+          "lineNumber": 219
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "checks.append",
+          "lineNumber": 220
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "_check",
+          "lineNumber": 220
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "sys.path.insert",
+          "lineNumber": 231
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "str",
+          "lineNumber": 231
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "connect_solidworks",
+          "lineNumber": 234
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "checks.append",
+          "lineNumber": 235
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "_check",
+          "lineNumber": 235
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "checks.append",
+          "lineNumber": 237
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "_check",
+          "lineNumber": 237
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "str",
+          "lineNumber": 237
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "sum",
+          "lineNumber": 239
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "sum",
+          "lineNumber": 240
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "_collect_remediations",
+          "lineNumber": 241
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "platform.platform",
+          "lineNumber": 245
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "platform.python_version",
+          "lineNumber": 246
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "Path",
+          "lineNumber": 246
+        },
+        {
+          "caller": "run_doctor",
+          "callee": "sw.items",
+          "lineNumber": 248
+        },
+        {
+          "caller": "main",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 258
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 259
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 260
+        },
+        {
+          "caller": "main",
+          "callee": "parser.parse_args",
+          "lineNumber": 261
+        },
+        {
+          "caller": "main",
+          "callee": "run_doctor",
+          "lineNumber": 262
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 263
+        },
+        {
+          "caller": "main",
+          "callee": "args.output.parent.mkdir",
+          "lineNumber": 265
+        },
+        {
+          "caller": "main",
+          "callee": "args.output.write_text",
+          "lineNumber": 266
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 267
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 6,
+        "functionCount": 6,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scripts/cad_installation.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 349,
+      "nonEmptyLines": 310,
+      "functions": [
+        {
+          "name": "resolve_shortcut_target",
+          "startLine": 26,
+          "endLine": 41,
+          "params": [
+            "target",
+            "working_directory",
+            "executable_name"
+          ]
+        },
+        {
+          "name": "_unique_paths",
+          "startLine": 44,
+          "endLine": 52,
+          "params": [
+            "paths"
+          ]
+        },
+        {
+          "name": "_shortcut_info",
+          "startLine": 55,
+          "endLine": 65,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "_shortcut_paths",
+          "startLine": 68,
+          "endLine": 74,
+          "params": [
+            "product"
+          ]
+        },
+        {
+          "name": "_version_metadata",
+          "startLine": 77,
+          "endLine": 87,
+          "params": []
+        },
+        {
+          "name": "_uninstall_registry_candidates",
+          "startLine": 90,
+          "endLine": 152,
+          "params": [
+            "product"
+          ]
+        },
+        {
+          "name": "_registry_paths",
+          "startLine": 155,
+          "endLine": 202,
+          "params": [
+            "product"
+          ]
+        },
+        {
+          "name": "_candidate_drives",
+          "startLine": 205,
+          "endLine": 221,
+          "params": []
+        },
+        {
+          "name": "_common_candidates",
+          "startLine": 224,
+          "endLine": 247,
+          "params": [
+            "product"
+          ]
+        },
+        {
+          "name": "discover_installations",
+          "startLine": 250,
+          "endLine": 324,
+          "params": [
+            "product",
+            "exists"
+          ]
+        },
+        {
+          "name": "discover_installation",
+          "startLine": 327,
+          "endLine": 332,
+          "params": [
+            "product",
+            "exists"
+          ]
+        },
+        {
+          "name": "_com_registered",
+          "startLine": 335,
+          "endLine": 345,
+          "params": [
+            "product"
+          ]
+        },
+        {
+          "name": "discover_all",
+          "startLine": 348,
+          "endLine": 349,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "resolve_shortcut_target",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "_unique_paths",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "_shortcut_info",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "_shortcut_paths",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "_version_metadata",
+          "line": 77,
+          "isDefault": false
+        },
+        {
+          "name": "_uninstall_registry_candidates",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "_registry_paths",
+          "line": 155,
+          "isDefault": false
+        },
+        {
+          "name": "_candidate_drives",
+          "line": 205,
+          "isDefault": false
+        },
+        {
+          "name": "_common_candidates",
+          "line": 224,
+          "isDefault": false
+        },
+        {
+          "name": "discover_installations",
+          "line": 250,
+          "isDefault": false
+        },
+        {
+          "name": "discover_installation",
+          "line": 327,
+          "isDefault": false
+        },
+        {
+          "name": "_com_registered",
+          "line": 335,
+          "isDefault": false
+        },
+        {
+          "name": "discover_all",
+          "line": 348,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "resolve_shortcut_target",
+          "callee": "Path",
+          "lineNumber": 33
+        },
+        {
+          "caller": "resolve_shortcut_target",
+          "callee": "target_path.name.lower",
+          "lineNumber": 34
+        },
+        {
+          "caller": "resolve_shortcut_target",
+          "callee": "executable_name.lower",
+          "lineNumber": 34
+        },
+        {
+          "caller": "resolve_shortcut_target",
+          "callee": "candidates.append",
+          "lineNumber": 35
+        },
+        {
+          "caller": "resolve_shortcut_target",
+          "callee": "Path",
+          "lineNumber": 36
+        },
+        {
+          "caller": "resolve_shortcut_target",
+          "callee": "candidates.append",
+          "lineNumber": 38
+        },
+        {
+          "caller": "resolve_shortcut_target",
+          "callee": "candidates.append",
+          "lineNumber": 40
+        },
+        {
+          "caller": "resolve_shortcut_target",
+          "callee": "_unique_paths",
+          "lineNumber": 41
+        },
+        {
+          "caller": "_unique_paths",
+          "callee": "set",
+          "lineNumber": 46
+        },
+        {
+          "caller": "_unique_paths",
+          "callee": "os.path.normcase",
+          "lineNumber": 48
+        },
+        {
+          "caller": "_unique_paths",
+          "callee": "os.path.normpath",
+          "lineNumber": 48
+        },
+        {
+          "caller": "_unique_paths",
+          "callee": "str",
+          "lineNumber": 48
+        },
+        {
+          "caller": "_unique_paths",
+          "callee": "seen.add",
+          "lineNumber": 50
+        },
+        {
+          "caller": "_unique_paths",
+          "callee": "result.append",
+          "lineNumber": 51
+        },
+        {
+          "caller": "_shortcut_info",
+          "callee": "path.is_file",
+          "lineNumber": 57
+        },
+        {
+          "caller": "_shortcut_info",
+          "callee": "win32com.client.Dispatch(\"WScript.Shell\").CreateShortcut",
+          "lineNumber": 62
+        },
+        {
+          "caller": "_shortcut_info",
+          "callee": "win32com.client.Dispatch",
+          "lineNumber": 62
+        },
+        {
+          "caller": "_shortcut_info",
+          "callee": "str",
+          "lineNumber": 62
+        },
+        {
+          "caller": "_shortcut_info",
+          "callee": "str",
+          "lineNumber": 63
+        },
+        {
+          "caller": "_shortcut_info",
+          "callee": "str",
+          "lineNumber": 63
+        },
+        {
+          "caller": "_shortcut_paths",
+          "callee": "PUBLIC_DESKTOP.is_dir",
+          "lineNumber": 71
+        },
+        {
+          "caller": "_shortcut_paths",
+          "callee": "paths.extend",
+          "lineNumber": 73
+        },
+        {
+          "caller": "_shortcut_paths",
+          "callee": "PUBLIC_DESKTOP.glob",
+          "lineNumber": 73
+        },
+        {
+          "caller": "_shortcut_paths",
+          "callee": "_unique_paths",
+          "lineNumber": 74
+        },
+        {
+          "caller": "_version_metadata",
+          "callee": "\" \".join",
+          "lineNumber": 79
+        },
+        {
+          "caller": "_version_metadata",
+          "callee": "str",
+          "lineNumber": 79
+        },
+        {
+          "caller": "_version_metadata",
+          "callee": "re.search",
+          "lineNumber": 80
+        },
+        {
+          "caller": "_version_metadata",
+          "callee": "re.search",
+          "lineNumber": 81
+        },
+        {
+          "caller": "_version_metadata",
+          "callee": "int",
+          "lineNumber": 84
+        },
+        {
+          "caller": "_version_metadata",
+          "callee": "service_pack_match.group",
+          "lineNumber": 84
+        },
+        {
+          "caller": "_version_metadata",
+          "callee": "service_pack_match.group",
+          "lineNumber": 85
+        },
+        {
+          "caller": "_version_metadata",
+          "callee": "int",
+          "lineNumber": 86
+        },
+        {
+          "caller": "_version_metadata",
+          "callee": "service_pack_match.group",
+          "lineNumber": 86
+        },
+        {
+          "caller": "_version_metadata",
+          "callee": "version_match.group",
+          "lineNumber": 87
+        },
+        {
+          "caller": "_uninstall_registry_candidates",
+          "callee": "re.compile",
+          "lineNumber": 101
+        },
+        {
+          "caller": "_uninstall_registry_candidates",
+          "callee": "re.compile",
+          "lineNumber": 103
+        },
+        {
+          "caller": "_uninstall_registry_candidates",
+          "callee": "winreg.OpenKey",
+          "lineNumber": 113
+        },
+        {
+          "caller": "_uninstall_registry_candidates",
+          "callee": "winreg.EnumKey",
+          "lineNumber": 118
+        },
+        {
+          "caller": "_uninstall_registry_candidates",
+          "callee": "range",
+          "lineNumber": 118
+        },
+        {
+          "caller": "_uninstall_registry_candidates",
+          "callee": "winreg.QueryInfoKey",
+          "lineNumber": 118
+        },
+        {
+          "caller": "_uninstall_registry_candidates",
+          "callee": "winreg.OpenKey",
+          "lineNumber": 123
+        },
+        {
+          "caller": "_uninstall_registry_candidates",
+          "callee": "str",
+          "lineNumber": 128
+        },
+        {
+          "caller": "_uninstall_registry_candidates",
+          "callee": "winreg.QueryValueEx",
+          "lineNumber": 128
+        },
+        {
+          "caller": "_uninstall_registry_candidates",
+          "callee": "product_pattern.match",
+          "lineNumber": 131
+        },
+        {
+          "caller": "_uninstall_registry_candidates",
+          "callee": "display_name.strip",
+          "lineNumber": 131
+        },
+        {
+          "caller": "_uninstall_registry_candidates",
+          "callee": "str",
+          "lineNumber": 134
+        },
+        {
+          "caller": "_uninstall_registry_candidates",
+          "callee": "winreg.QueryValueEx",
+          "lineNumber": 134
+        },
+        {
+          "caller": "_uninstall_registry_candidates",
+          "callee": "_version_metadata",
+          "lineNumber": 139
+        },
+        {
+          "caller": "_uninstall_registry_candidates",
+          "callee": "result.append",
+          "lineNumber": 140
+        },
+        {
+          "caller": "_uninstall_registry_candidates",
+          "callee": "Path",
+          "lineNumber": 141
+        },
+        {
+          "caller": "_uninstall_registry_candidates",
+          "callee": "winreg.CloseKey",
+          "lineNumber": 149
+        },
+        {
+          "caller": "_uninstall_registry_candidates",
+          "callee": "winreg.CloseKey",
+          "lineNumber": 151
+        },
+        {
+          "caller": "walk",
+          "callee": "winreg.QueryValueEx",
+          "lineNumber": 172
+        },
+        {
+          "caller": "walk",
+          "callee": "Path",
+          "lineNumber": 175
+        },
+        {
+          "caller": "walk",
+          "callee": "str",
+          "lineNumber": 175
+        },
+        {
+          "caller": "walk",
+          "callee": "result.append",
+          "lineNumber": 176
+        },
+        {
+          "caller": "walk",
+          "callee": "path.suffix.lower",
+          "lineNumber": 176
+        },
+        {
+          "caller": "walk",
+          "callee": "winreg.EnumKey",
+          "lineNumber": 180
+        },
+        {
+          "caller": "walk",
+          "callee": "range",
+          "lineNumber": 180
+        },
+        {
+          "caller": "walk",
+          "callee": "winreg.QueryInfoKey",
+          "lineNumber": 180
+        },
+        {
+          "caller": "walk",
+          "callee": "winreg.OpenKey",
+          "lineNumber": 185
+        },
+        {
+          "caller": "walk",
+          "callee": "walk",
+          "lineNumber": 189
+        },
+        {
+          "caller": "walk",
+          "callee": "winreg.CloseKey",
+          "lineNumber": 191
+        },
+        {
+          "caller": "_registry_paths",
+          "callee": "winreg.OpenKey",
+          "lineNumber": 195
+        },
+        {
+          "caller": "_registry_paths",
+          "callee": "walk",
+          "lineNumber": 199
+        },
+        {
+          "caller": "_registry_paths",
+          "callee": "winreg.CloseKey",
+          "lineNumber": 201
+        },
+        {
+          "caller": "_candidate_drives",
+          "callee": "str(item).rstrip",
+          "lineNumber": 214
+        },
+        {
+          "caller": "_candidate_drives",
+          "callee": "str",
+          "lineNumber": 214
+        },
+        {
+          "caller": "_candidate_drives",
+          "callee": "os.listdrives",
+          "lineNumber": 214
+        },
+        {
+          "caller": "_candidate_drives",
+          "callee": "str(item).strip",
+          "lineNumber": 214
+        },
+        {
+          "caller": "_candidate_drives",
+          "callee": "str",
+          "lineNumber": 214
+        },
+        {
+          "caller": "_candidate_drives",
+          "callee": "ordered.extend",
+          "lineNumber": 220
+        },
+        {
+          "caller": "_candidate_drives",
+          "callee": "tuple",
+          "lineNumber": 221
+        },
+        {
+          "caller": "_common_candidates",
+          "callee": "Path",
+          "lineNumber": 227
+        },
+        {
+          "caller": "_common_candidates",
+          "callee": "os.environ.get",
+          "lineNumber": 227
+        },
+        {
+          "caller": "_common_candidates",
+          "callee": "Path",
+          "lineNumber": 228
+        },
+        {
+          "caller": "_common_candidates",
+          "callee": "os.environ.get",
+          "lineNumber": 228
+        },
+        {
+          "caller": "_common_candidates",
+          "callee": "_candidate_drives",
+          "lineNumber": 230
+        },
+        {
+          "caller": "_common_candidates",
+          "callee": "PureWindowsPath",
+          "lineNumber": 231
+        },
+        {
+          "caller": "_common_candidates",
+          "callee": "candidates.extend",
+          "lineNumber": 233
+        },
+        {
+          "caller": "_common_candidates",
+          "callee": "Path",
+          "lineNumber": 234
+        },
+        {
+          "caller": "_common_candidates",
+          "callee": "Path",
+          "lineNumber": 235
+        },
+        {
+          "caller": "_common_candidates",
+          "callee": "candidates.extend",
+          "lineNumber": 242
+        },
+        {
+          "caller": "_common_candidates",
+          "callee": "Path",
+          "lineNumber": 242
+        },
+        {
+          "caller": "_common_candidates",
+          "callee": "glob.glob",
+          "lineNumber": 242
+        },
+        {
+          "caller": "_common_candidates",
+          "callee": "candidates.extend",
+          "lineNumber": 244
+        },
+        {
+          "caller": "_common_candidates",
+          "callee": "Path",
+          "lineNumber": 244
+        },
+        {
+          "caller": "_common_candidates",
+          "callee": "Path",
+          "lineNumber": 244
+        },
+        {
+          "caller": "_common_candidates",
+          "callee": "candidates.extend",
+          "lineNumber": 246
+        },
+        {
+          "caller": "_common_candidates",
+          "callee": "Path",
+          "lineNumber": 246
+        },
+        {
+          "caller": "_common_candidates",
+          "callee": "glob.glob",
+          "lineNumber": 246
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "ValueError",
+          "lineNumber": 253
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "_shortcut_paths",
+          "lineNumber": 257
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "_shortcut_info",
+          "lineNumber": 258
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "_version_metadata",
+          "lineNumber": 259
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "candidates.extend",
+          "lineNumber": 260
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "str",
+          "lineNumber": 266
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "resolve_shortcut_target",
+          "lineNumber": 267
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "candidates.extend",
+          "lineNumber": 268
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "_uninstall_registry_candidates",
+          "lineNumber": 268
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "candidates.extend",
+          "lineNumber": 269
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "_version_metadata",
+          "lineNumber": 272
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "_version_metadata",
+          "lineNumber": 273
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "_registry_paths",
+          "lineNumber": 276
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "candidates.extend",
+          "lineNumber": 277
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "_version_metadata",
+          "lineNumber": 280
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "_version_metadata",
+          "lineNumber": 281
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "_common_candidates",
+          "lineNumber": 284
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "candidates.sort",
+          "lineNumber": 287
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "int",
+          "lineNumber": 289
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "str(item.get(\"version\") or \"\").isdigit",
+          "lineNumber": 289
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "str",
+          "lineNumber": 289
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "item.get",
+          "lineNumber": 289
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "source_priority.get",
+          "lineNumber": 290
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "str",
+          "lineNumber": 290
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "item.get",
+          "lineNumber": 290
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "set",
+          "lineNumber": 295
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "Path",
+          "lineNumber": 297
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "exists",
+          "lineNumber": 298
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "os.path.normcase",
+          "lineNumber": 300
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "os.path.normpath",
+          "lineNumber": 300
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "str",
+          "lineNumber": 300
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "seen.add",
+          "lineNumber": 303
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "candidate.get",
+          "lineNumber": 304
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "_version_metadata",
+          "lineNumber": 304
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "installed.append",
+          "lineNumber": 305
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "str",
+          "lineNumber": 308
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "candidate.get",
+          "lineNumber": 311
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "candidate.get",
+          "lineNumber": 312
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "candidate.get",
+          "lineNumber": 313
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "_com_registered",
+          "lineNumber": 314
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "installed.sort",
+          "lineNumber": 317
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "int",
+          "lineNumber": 319
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "str(item.get(\"version\") or \"\").isdigit",
+          "lineNumber": 319
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "str",
+          "lineNumber": 319
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "item.get",
+          "lineNumber": 319
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "source_priority.get",
+          "lineNumber": 320
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "str",
+          "lineNumber": 320
+        },
+        {
+          "caller": "discover_installations",
+          "callee": "item.get",
+          "lineNumber": 320
+        },
+        {
+          "caller": "discover_installation",
+          "callee": "discover_installations",
+          "lineNumber": 329
+        },
+        {
+          "caller": "discover_installation",
+          "callee": "_com_registered",
+          "lineNumber": 332
+        },
+        {
+          "caller": "_com_registered",
+          "callee": "winreg.QueryValue",
+          "lineNumber": 342
+        },
+        {
+          "caller": "discover_all",
+          "callee": "discover_installation",
+          "lineNumber": 349
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 13,
+        "functionCount": 13,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scripts/cad_studio.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 341,
+      "nonEmptyLines": 308,
+      "functions": [
+        {
+          "name": "_print_json",
+          "startLine": 25,
+          "endLine": 34,
+          "params": [
+            "value",
+            "indent"
+          ]
+        },
+        {
+          "name": "_queue_jobs",
+          "startLine": 37,
+          "endLine": 48,
+          "params": [
+            "queue_dir"
+          ]
+        },
+        {
+          "name": "_job_path",
+          "startLine": 51,
+          "endLine": 61,
+          "params": [
+            "queue_dir",
+            "job_id"
+          ]
+        },
+        {
+          "name": "_retry_from_stage",
+          "startLine": 64,
+          "endLine": 77,
+          "params": [
+            "job"
+          ]
+        },
+        {
+          "name": "_run_history_snapshot",
+          "startLine": 80,
+          "endLine": 87,
+          "params": [
+            "job"
+          ]
+        },
+        {
+          "name": "prepare_job_for_retry",
+          "startLine": 90,
+          "endLine": 121,
+          "params": [
+            "job",
+            "updated_at"
+          ]
+        },
+        {
+          "name": "main",
+          "startLine": 124,
+          "endLine": 337,
+          "params": [
+            "argv"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "_print_json",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "_queue_jobs",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "_job_path",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "_retry_from_stage",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "_run_history_snapshot",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "prepare_job_for_retry",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 124,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_print_json",
+          "callee": "json.dumps",
+          "lineNumber": 27
+        },
+        {
+          "caller": "_print_json",
+          "callee": "getattr",
+          "lineNumber": 28
+        },
+        {
+          "caller": "_print_json",
+          "callee": "text.encode",
+          "lineNumber": 31
+        },
+        {
+          "caller": "_print_json",
+          "callee": "json.dumps",
+          "lineNumber": 33
+        },
+        {
+          "caller": "_print_json",
+          "callee": "sys.stdout.write",
+          "lineNumber": 34
+        },
+        {
+          "caller": "_queue_jobs",
+          "callee": "sorted",
+          "lineNumber": 39
+        },
+        {
+          "caller": "_queue_jobs",
+          "callee": "Path(queue_dir).glob",
+          "lineNumber": 39
+        },
+        {
+          "caller": "_queue_jobs",
+          "callee": "Path",
+          "lineNumber": 39
+        },
+        {
+          "caller": "_queue_jobs",
+          "callee": "read_job",
+          "lineNumber": 43
+        },
+        {
+          "caller": "_queue_jobs",
+          "callee": "jobs.append",
+          "lineNumber": 45
+        },
+        {
+          "caller": "_job_path",
+          "callee": "Path",
+          "lineNumber": 52
+        },
+        {
+          "caller": "_job_path",
+          "callee": "path.is_file",
+          "lineNumber": 53
+        },
+        {
+          "caller": "_job_path",
+          "callee": "Path(queue_dir).glob",
+          "lineNumber": 55
+        },
+        {
+          "caller": "_job_path",
+          "callee": "Path",
+          "lineNumber": 55
+        },
+        {
+          "caller": "_job_path",
+          "callee": "read_job(candidate).get",
+          "lineNumber": 57
+        },
+        {
+          "caller": "_job_path",
+          "callee": "read_job",
+          "lineNumber": 57
+        },
+        {
+          "caller": "_job_path",
+          "callee": "FileNotFoundError",
+          "lineNumber": 61
+        },
+        {
+          "caller": "_retry_from_stage",
+          "callee": "((job.get(\"result\") or {}).get(\"engineeringPlan\") or {}).get",
+          "lineNumber": 66
+        },
+        {
+          "caller": "_retry_from_stage",
+          "callee": "(job.get(\"result\") or {}).get",
+          "lineNumber": 66
+        },
+        {
+          "caller": "_retry_from_stage",
+          "callee": "job.get",
+          "lineNumber": 66
+        },
+        {
+          "caller": "_retry_from_stage",
+          "callee": "phase.get",
+          "lineNumber": 68
+        },
+        {
+          "caller": "_retry_from_stage",
+          "callee": "phase.get",
+          "lineNumber": 68
+        },
+        {
+          "caller": "_retry_from_stage",
+          "callee": "str",
+          "lineNumber": 69
+        },
+        {
+          "caller": "_retry_from_stage",
+          "callee": "(job.get(key) or {}).get",
+          "lineNumber": 71
+        },
+        {
+          "caller": "_retry_from_stage",
+          "callee": "job.get",
+          "lineNumber": 71
+        },
+        {
+          "caller": "_retry_from_stage",
+          "callee": "(job.get(\"dfmEvidence\") or {}).get",
+          "lineNumber": 73
+        },
+        {
+          "caller": "_retry_from_stage",
+          "callee": "job.get",
+          "lineNumber": 73
+        },
+        {
+          "caller": "_retry_from_stage",
+          "callee": "job.get",
+          "lineNumber": 75
+        },
+        {
+          "caller": "prepare_job_for_retry",
+          "callee": "job.get",
+          "lineNumber": 92
+        },
+        {
+          "caller": "prepare_job_for_retry",
+          "callee": "ValueError",
+          "lineNumber": 93
+        },
+        {
+          "caller": "prepare_job_for_retry",
+          "callee": "job.get",
+          "lineNumber": 93
+        },
+        {
+          "caller": "prepare_job_for_retry",
+          "callee": "job.get",
+          "lineNumber": 94
+        },
+        {
+          "caller": "prepare_job_for_retry",
+          "callee": "job.get",
+          "lineNumber": 95
+        },
+        {
+          "caller": "prepare_job_for_retry",
+          "callee": "_run_history_snapshot",
+          "lineNumber": 95
+        },
+        {
+          "caller": "prepare_job_for_retry",
+          "callee": "_retry_from_stage",
+          "lineNumber": 96
+        },
+        {
+          "caller": "prepare_job_for_retry",
+          "callee": "job.update",
+          "lineNumber": 97
+        },
+        {
+          "caller": "prepare_job_for_retry",
+          "callee": "uuid4",
+          "lineNumber": 107
+        },
+        {
+          "caller": "prepare_job_for_retry",
+          "callee": "job.pop",
+          "lineNumber": 120
+        },
+        {
+          "caller": "main",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 125
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 126
+        },
+        {
+          "caller": "main",
+          "callee": "default_tauri_queue_dir",
+          "lineNumber": 126
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_subparsers",
+          "lineNumber": 127
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 128
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 129
+        },
+        {
+          "caller": "main",
+          "callee": "run.add_argument",
+          "lineNumber": 130
+        },
+        {
+          "caller": "main",
+          "callee": "run.add_argument",
+          "lineNumber": 131
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 132
+        },
+        {
+          "caller": "main",
+          "callee": "status.add_argument",
+          "lineNumber": 133
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 134
+        },
+        {
+          "caller": "main",
+          "callee": "retry.add_argument",
+          "lineNumber": 135
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 136
+        },
+        {
+          "caller": "main",
+          "callee": "cancel.add_argument",
+          "lineNumber": 137
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 138
+        },
+        {
+          "caller": "main",
+          "callee": "diagnostics.add_argument",
+          "lineNumber": 139
+        },
+        {
+          "caller": "main",
+          "callee": "Path.cwd",
+          "lineNumber": 139
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 140
+        },
+        {
+          "caller": "main",
+          "callee": "write_open.add_argument",
+          "lineNumber": 141
+        },
+        {
+          "caller": "main",
+          "callee": "write_open.add_argument",
+          "lineNumber": 142
+        },
+        {
+          "caller": "main",
+          "callee": "write_open.add_argument",
+          "lineNumber": 143
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 144
+        },
+        {
+          "caller": "main",
+          "callee": "preview_dxf.add_argument",
+          "lineNumber": 145
+        },
+        {
+          "caller": "main",
+          "callee": "preview_dxf.add_argument",
+          "lineNumber": 146
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 147
+        },
+        {
+          "caller": "main",
+          "callee": "dfm.add_argument",
+          "lineNumber": 148
+        },
+        {
+          "caller": "main",
+          "callee": "dfm.add_argument",
+          "lineNumber": 149
+        },
+        {
+          "caller": "main",
+          "callee": "dfm.add_argument",
+          "lineNumber": 150
+        },
+        {
+          "caller": "main",
+          "callee": "dfm.add_argument",
+          "lineNumber": 151
+        },
+        {
+          "caller": "main",
+          "callee": "dfm.add_argument",
+          "lineNumber": 152
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 153
+        },
+        {
+          "caller": "main",
+          "callee": "drc.add_argument",
+          "lineNumber": 154
+        },
+        {
+          "caller": "main",
+          "callee": "drc.add_argument",
+          "lineNumber": 155
+        },
+        {
+          "caller": "main",
+          "callee": "drc.add_argument",
+          "lineNumber": 156
+        },
+        {
+          "caller": "main",
+          "callee": "drc.add_argument",
+          "lineNumber": 157
+        },
+        {
+          "caller": "main",
+          "callee": "drc.add_argument",
+          "lineNumber": 158
+        },
+        {
+          "caller": "main",
+          "callee": "drc.add_argument",
+          "lineNumber": 159
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 160
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 161
+        },
+        {
+          "caller": "main",
+          "callee": "routing.add_argument",
+          "lineNumber": 162
+        },
+        {
+          "caller": "main",
+          "callee": "routing.add_argument",
+          "lineNumber": 163
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 164
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 165
+        },
+        {
+          "caller": "main",
+          "callee": "fea_preflight.add_argument",
+          "lineNumber": 166
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 167
+        },
+        {
+          "caller": "main",
+          "callee": "fea_prepare.add_argument",
+          "lineNumber": 168
+        },
+        {
+          "caller": "main",
+          "callee": "fea_prepare.add_argument",
+          "lineNumber": 169
+        },
+        {
+          "caller": "main",
+          "callee": "fea_prepare.add_argument",
+          "lineNumber": 170
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 171
+        },
+        {
+          "caller": "main",
+          "callee": "fea_run.add_argument",
+          "lineNumber": 172
+        },
+        {
+          "caller": "main",
+          "callee": "fea_run.add_argument",
+          "lineNumber": 173
+        },
+        {
+          "caller": "main",
+          "callee": "fea_run.add_argument",
+          "lineNumber": 174
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 175
+        },
+        {
+          "caller": "main",
+          "callee": "fea_convergence.add_argument",
+          "lineNumber": 176
+        },
+        {
+          "caller": "main",
+          "callee": "fea_convergence.add_argument",
+          "lineNumber": 177
+        },
+        {
+          "caller": "main",
+          "callee": "fea_convergence.add_argument",
+          "lineNumber": 178
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 179
+        },
+        {
+          "caller": "main",
+          "callee": "advanced.add_argument",
+          "lineNumber": 180
+        },
+        {
+          "caller": "main",
+          "callee": "advanced.add_argument",
+          "lineNumber": 181
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 182
+        },
+        {
+          "caller": "main",
+          "callee": "loft.add_argument",
+          "lineNumber": 183
+        },
+        {
+          "caller": "main",
+          "callee": "loft.add_argument",
+          "lineNumber": 184
+        },
+        {
+          "caller": "main",
+          "callee": "sub.add_parser",
+          "lineNumber": 185
+        },
+        {
+          "caller": "main",
+          "callee": "surface.add_argument",
+          "lineNumber": 186
+        },
+        {
+          "caller": "main",
+          "callee": "surface.add_argument",
+          "lineNumber": 187
+        },
+        {
+          "caller": "main",
+          "callee": "parser.parse_args",
+          "lineNumber": 188
+        },
+        {
+          "caller": "main",
+          "callee": "run_doctor",
+          "lineNumber": 191
+        },
+        {
+          "caller": "main",
+          "callee": "_print_json",
+          "lineNumber": 192
+        },
+        {
+          "caller": "main",
+          "callee": "_queue_jobs",
+          "lineNumber": 195
+        },
+        {
+          "caller": "main",
+          "callee": "job.get",
+          "lineNumber": 197
+        },
+        {
+          "caller": "main",
+          "callee": "_print_json",
+          "lineNumber": 198
+        },
+        {
+          "caller": "main",
+          "callee": "process_queue",
+          "lineNumber": 203
+        },
+        {
+          "caller": "main",
+          "callee": "build_handlers",
+          "lineNumber": 203
+        },
+        {
+          "caller": "main",
+          "callee": "_print_json",
+          "lineNumber": 204
+        },
+        {
+          "caller": "main",
+          "callee": "_job_path",
+          "lineNumber": 207
+        },
+        {
+          "caller": "main",
+          "callee": "read_job",
+          "lineNumber": 208
+        },
+        {
+          "caller": "main",
+          "callee": "datetime.now(timezone.utc).isoformat",
+          "lineNumber": 209
+        },
+        {
+          "caller": "main",
+          "callee": "datetime.now",
+          "lineNumber": 209
+        },
+        {
+          "caller": "main",
+          "callee": "prepare_job_for_retry",
+          "lineNumber": 212
+        },
+        {
+          "caller": "main",
+          "callee": "SystemExit",
+          "lineNumber": 214
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 214
+        },
+        {
+          "caller": "main",
+          "callee": "cancel_marker_path(path).unlink",
+          "lineNumber": 215
+        },
+        {
+          "caller": "main",
+          "callee": "cancel_marker_path",
+          "lineNumber": 215
+        },
+        {
+          "caller": "main",
+          "callee": "job.update",
+          "lineNumber": 217
+        },
+        {
+          "caller": "main",
+          "callee": "cancel_marker_path(path).touch",
+          "lineNumber": 218
+        },
+        {
+          "caller": "main",
+          "callee": "cancel_marker_path",
+          "lineNumber": 218
+        },
+        {
+          "caller": "main",
+          "callee": "write_job",
+          "lineNumber": 219
+        },
+        {
+          "caller": "main",
+          "callee": "_print_json",
+          "lineNumber": 220
+        },
+        {
+          "caller": "main",
+          "callee": "create_diagnostic_bundle",
+          "lineNumber": 223
+        },
+        {
+          "caller": "main",
+          "callee": "_print_json",
+          "lineNumber": 224
+        },
+        {
+          "caller": "main",
+          "callee": "export_headless",
+          "lineNumber": 229
+        },
+        {
+          "caller": "main",
+          "callee": "_print_json",
+          "lineNumber": 230
+        },
+        {
+          "caller": "main",
+          "callee": "result.get",
+          "lineNumber": 231
+        },
+        {
+          "caller": "main",
+          "callee": "dxf_to_preview_scene",
+          "lineNumber": 235
+        },
+        {
+          "caller": "main",
+          "callee": "_print_json",
+          "lineNumber": 236
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 240
+        },
+        {
+          "caller": "main",
+          "callee": "args.output.resolve",
+          "lineNumber": 240
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 241
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 242
+        },
+        {
+          "caller": "main",
+          "callee": "write_dfm_report",
+          "lineNumber": 249
+        },
+        {
+          "caller": "main",
+          "callee": "_print_json",
+          "lineNumber": 250
+        },
+        {
+          "caller": "main",
+          "callee": "result.get",
+          "lineNumber": 251
+        },
+        {
+          "caller": "main",
+          "callee": "_print_json",
+          "lineNumber": 255
+        },
+        {
+          "caller": "main",
+          "callee": "list_rules",
+          "lineNumber": 255
+        },
+        {
+          "caller": "main",
+          "callee": "list_rule_packs",
+          "lineNumber": 255
+        },
+        {
+          "caller": "main",
+          "callee": "write_drc_report",
+          "lineNumber": 259
+        },
+        {
+          "caller": "main",
+          "callee": "_print_json",
+          "lineNumber": 262
+        },
+        {
+          "caller": "main",
+          "callee": "result.get",
+          "lineNumber": 263
+        },
+        {
+          "caller": "main",
+          "callee": "result.get(\"regressionGate\", {}).get",
+          "lineNumber": 263
+        },
+        {
+          "caller": "main",
+          "callee": "result.get",
+          "lineNumber": 263
+        },
+        {
+          "caller": "main",
+          "callee": "result.get",
+          "lineNumber": 265
+        },
+        {
+          "caller": "main",
+          "callee": "review_routing_file",
+          "lineNumber": 269
+        },
+        {
+          "caller": "main",
+          "callee": "_print_json",
+          "lineNumber": 270
+        },
+        {
+          "caller": "main",
+          "callee": "result.get",
+          "lineNumber": 271
+        },
+        {
+          "caller": "main",
+          "callee": "probe_solidworks_routing",
+          "lineNumber": 275
+        },
+        {
+          "caller": "main",
+          "callee": "_print_json",
+          "lineNumber": 276
+        },
+        {
+          "caller": "main",
+          "callee": "result.get",
+          "lineNumber": 277
+        },
+        {
+          "caller": "main",
+          "callee": "discover_solver",
+          "lineNumber": 281
+        },
+        {
+          "caller": "main",
+          "callee": "_print_json",
+          "lineNumber": 282
+        },
+        {
+          "caller": "main",
+          "callee": "result.get",
+          "lineNumber": 283
+        },
+        {
+          "caller": "main",
+          "callee": "validate_analysis",
+          "lineNumber": 287
+        },
+        {
+          "caller": "main",
+          "callee": "args.out_dir.mkdir",
+          "lineNumber": 303
+        },
+        {
+          "caller": "main",
+          "callee": "build_calculix_input",
+          "lineNumber": 304
+        },
+        {
+          "caller": "main",
+          "callee": "_print_json",
+          "lineNumber": 305
+        },
+        {
+          "caller": "main",
+          "callee": "result.get",
+          "lineNumber": 306
+        },
+        {
+          "caller": "main",
+          "callee": "run_analysis",
+          "lineNumber": 310
+        },
+        {
+          "caller": "main",
+          "callee": "_print_json",
+          "lineNumber": 311
+        },
+        {
+          "caller": "main",
+          "callee": "result.get",
+          "lineNumber": 312
+        },
+        {
+          "caller": "main",
+          "callee": "run_convergence_study",
+          "lineNumber": 316
+        },
+        {
+          "caller": "main",
+          "callee": "max",
+          "lineNumber": 316
+        },
+        {
+          "caller": "main",
+          "callee": "min",
+          "lineNumber": 316
+        },
+        {
+          "caller": "main",
+          "callee": "_print_json",
+          "lineNumber": 317
+        },
+        {
+          "caller": "main",
+          "callee": "result.get",
+          "lineNumber": 318
+        },
+        {
+          "caller": "main",
+          "callee": "write_preflight_report",
+          "lineNumber": 322
+        },
+        {
+          "caller": "main",
+          "callee": "_print_json",
+          "lineNumber": 323
+        },
+        {
+          "caller": "main",
+          "callee": "result.get",
+          "lineNumber": 324
+        },
+        {
+          "caller": "main",
+          "callee": "execute_ocp_loft",
+          "lineNumber": 328
+        },
+        {
+          "caller": "main",
+          "callee": "_print_json",
+          "lineNumber": 329
+        },
+        {
+          "caller": "main",
+          "callee": "result.get",
+          "lineNumber": 330
+        },
+        {
+          "caller": "main",
+          "callee": "execute_advanced_surface",
+          "lineNumber": 334
+        },
+        {
+          "caller": "main",
+          "callee": "_print_json",
+          "lineNumber": 335
+        },
+        {
+          "caller": "main",
+          "callee": "result.get",
+          "lineNumber": 336
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 7,
+        "functionCount": 7,
+        "classCount": 0
+      }
+    }
+  ]
+}

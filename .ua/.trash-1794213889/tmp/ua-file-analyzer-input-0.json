@@ -1,0 +1,152 @@
+{
+ "projectRoot": "/Users/tomasz/Developer/solidworks-automation-skill",
+ "batchFiles": [
+  {
+   "path": "apps/workbench-ui/src/App.tsx",
+   "language": "typescript",
+   "sizeLines": 3924,
+   "fileCategory": "code"
+  },
+  {
+   "path": "apps/workbench-ui/src/components/ArtifactBrowser.tsx",
+   "language": "typescript",
+   "sizeLines": 39,
+   "fileCategory": "code"
+  },
+  {
+   "path": "apps/workbench-ui/src/components/ConversationControls.tsx",
+   "language": "typescript",
+   "sizeLines": 48,
+   "fileCategory": "code"
+  },
+  {
+   "path": "apps/workbench-ui/src/components/EnvironmentRemediationPanel.tsx",
+   "language": "typescript",
+   "sizeLines": 52,
+   "fileCategory": "code"
+  },
+  {
+   "path": "apps/workbench-ui/src/components/ManualReviewPanel.tsx",
+   "language": "typescript",
+   "sizeLines": 39,
+   "fileCategory": "code"
+  },
+  {
+   "path": "apps/workbench-ui/src/components/ProjectSwitcher.tsx",
+   "language": "typescript",
+   "sizeLines": 187,
+   "fileCategory": "code"
+  },
+  {
+   "path": "apps/workbench-ui/src/components/TaskSequence.tsx",
+   "language": "typescript",
+   "sizeLines": 88,
+   "fileCategory": "code"
+  },
+  {
+   "path": "apps/workbench-ui/src/domain/artifacts.ts",
+   "language": "typescript",
+   "sizeLines": 127,
+   "fileCategory": "code"
+  },
+  {
+   "path": "apps/workbench-ui/src/domain/delivery.test.ts",
+   "language": "typescript",
+   "sizeLines": 98,
+   "fileCategory": "code"
+  },
+  {
+   "path": "apps/workbench-ui/src/domain/delivery.ts",
+   "language": "typescript",
+   "sizeLines": 175,
+   "fileCategory": "code"
+  },
+  {
+   "path": "apps/workbench-ui/src/domain/jobs.ts",
+   "language": "typescript",
+   "sizeLines": 34,
+   "fileCategory": "code"
+  },
+  {
+   "path": "apps/workbench-ui/src/domain/projects.ts",
+   "language": "typescript",
+   "sizeLines": 67,
+   "fileCategory": "code"
+  },
+  {
+   "path": "apps/workbench-ui/src/main.tsx",
+   "language": "typescript",
+   "sizeLines": 10,
+   "fileCategory": "code"
+  },
+  {
+   "path": "apps/workbench-ui/src/types.ts",
+   "language": "typescript",
+   "sizeLines": 310,
+   "fileCategory": "code"
+  }
+ ],
+ "batchImportData": {
+  "apps/workbench-ui/src/App.tsx": [
+   "apps/workbench-ui/src/components/AppUpdatePanel.tsx",
+   "apps/workbench-ui/src/components/ArtifactBrowser.tsx",
+   "apps/workbench-ui/src/components/ConversationControls.tsx",
+   "apps/workbench-ui/src/components/EnvironmentRemediationPanel.tsx",
+   "apps/workbench-ui/src/components/ManualReviewPanel.tsx",
+   "apps/workbench-ui/src/components/ProjectSwitcher.tsx",
+   "apps/workbench-ui/src/components/TaskSequence.tsx",
+   "apps/workbench-ui/src/domain/artifacts.ts",
+   "apps/workbench-ui/src/domain/delivery.ts",
+   "apps/workbench-ui/src/domain/jobs.ts",
+   "apps/workbench-ui/src/domain/projects.ts",
+   "apps/workbench-ui/src/persistence.ts",
+   "apps/workbench-ui/src/preview/PreviewShowcase.tsx",
+   "apps/workbench-ui/src/types.ts"
+  ],
+  "apps/workbench-ui/src/components/ArtifactBrowser.tsx": [
+   "apps/workbench-ui/src/CadPreview.tsx",
+   "apps/workbench-ui/src/domain/artifacts.ts",
+   "apps/workbench-ui/src/types.ts"
+  ],
+  "apps/workbench-ui/src/components/ConversationControls.tsx": [
+   "apps/workbench-ui/src/types.ts"
+  ],
+  "apps/workbench-ui/src/components/EnvironmentRemediationPanel.tsx": [
+   "apps/workbench-ui/src/types.ts"
+  ],
+  "apps/workbench-ui/src/components/ManualReviewPanel.tsx": [
+   "apps/workbench-ui/src/types.ts"
+  ],
+  "apps/workbench-ui/src/components/ProjectSwitcher.tsx": [
+   "apps/workbench-ui/src/domain/projects.ts",
+   "apps/workbench-ui/src/types.ts"
+  ],
+  "apps/workbench-ui/src/components/TaskSequence.tsx": [
+   "apps/workbench-ui/src/domain/jobs.ts",
+   "apps/workbench-ui/src/types.ts"
+  ],
+  "apps/workbench-ui/src/domain/artifacts.ts": [
+   "apps/workbench-ui/src/types.ts"
+  ],
+  "apps/workbench-ui/src/domain/delivery.test.ts": [
+   "apps/workbench-ui/src/domain/artifacts.ts",
+   "apps/workbench-ui/src/domain/delivery.ts",
+   "apps/workbench-ui/src/types.ts"
+  ],
+  "apps/workbench-ui/src/domain/delivery.ts": [
+   "apps/workbench-ui/src/domain/artifacts.ts",
+   "apps/workbench-ui/src/types.ts"
+  ],
+  "apps/workbench-ui/src/domain/jobs.ts": [
+   "apps/workbench-ui/src/types.ts"
+  ],
+  "apps/workbench-ui/src/domain/projects.ts": [
+   "apps/workbench-ui/src/types.ts"
+  ],
+  "apps/workbench-ui/src/main.tsx": [
+   "apps/workbench-ui/src/App.tsx",
+   "apps/workbench-ui/src/styles.css"
+  ],
+  "apps/workbench-ui/src/types.ts": []
+ }
+}

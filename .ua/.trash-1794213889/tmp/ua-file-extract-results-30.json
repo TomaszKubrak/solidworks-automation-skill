@@ -1,0 +1,187 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 3,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 3
+    }
+  },
+  "results": [
+    {
+      "path": "subskills/solidworks-fillet-chamfer-cnc/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 99,
+      "nonEmptyLines": 77,
+      "sections": [
+        {
+          "heading": "SolidWorks Fillet Chamfer CNC",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "适用场景",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "核心原则",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "快速命令",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "目录",
+          "level": 2,
+          "line": 73
+        },
+        {
+          "heading": "关联能力",
+          "level": 2,
+          "line": 95
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "subskills/solidworks-fillet-chamfer-cnc/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 135,
+      "nonEmptyLines": 97,
+      "sections": [
+        {
+          "heading": "SolidWorks Fillet Chamfer CNC",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "先判定任务模式",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "模板入口",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "不可跳过的门禁",
+          "level": 2,
+          "line": 40
+        },
+        {
+          "heading": "高级圆角入口",
+          "level": 2,
+          "line": 49
+        },
+        {
+          "heading": "开源复杂案例回归",
+          "level": 2,
+          "line": 83
+        },
+        {
+          "heading": "CNC 几何默认值",
+          "level": 2,
+          "line": 109
+        },
+        {
+          "heading": "验证要求",
+          "level": 2,
+          "line": 117
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "subskills/solidworks-fillet-chamfer-cnc/manifest.yaml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 21,
+      "nonEmptyLines": 21,
+      "sections": [
+        {
+          "heading": "name",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "title",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "status",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "summary",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "entrypoint",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "scripts",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "references",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "examples",
+          "level": 1,
+          "line": 14
+        },
+        {
+          "heading": "depends_on",
+          "level": 1,
+          "line": 17
+        },
+        {
+          "heading": "related",
+          "level": 1,
+          "line": 19
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    }
+  ]
+}

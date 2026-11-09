@@ -1,0 +1,14 @@
+{"nodes":[
+{"id":"document:apps/desktop/DESIGN.md","type":"document","name":"DESIGN.md","filePath":"apps/desktop/DESIGN.md","summary":"System projektowy interfejsu desktopowego „cichej sterowni inżynierskiej”: paleta kolorów z akcentem miedzianym, typografia, style komponentów, układ i antywzorce.","tags":["documentation","design-system","ui","styleguide"],"complexity":"moderate"},
+{"id":"document:apps/desktop/README.md","type":"document","name":"README.md","filePath":"apps/desktop/README.md","summary":"Opis starszego prototypu PySide6 (legacy): instalacja, uruchamianie, pakowanie exe, możliwości i ograniczenia. Zawiera ostrzeżenie, że produktem jest apps/workbench-ui, a katalogu nie wolno usuwać.","tags":["documentation","legacy","desktop","entry-point"],"complexity":"moderate"},
+{"id":"file:apps/desktop/build_exe.ps1","type":"file","name":"build_exe.ps1","filePath":"apps/desktop/build_exe.ps1","summary":"Skrypt PowerShell pakujący prototyp desktopowy do exe przez PyInstaller (doinstalowuje go w razie braku), wynik trafia do apps\\desktop\\dist.","tags":["script","build-system","powershell","packaging"],"complexity":"simple","languageNotes":"Skrypt PowerShell ustawiający UTF-8 i ErrorActionPreference=Stop; ścieżkę repo wylicza z $MyInvocation."},
+{"id":"document:apps/desktop/requirements.txt","type":"document","name":"requirements.txt","filePath":"apps/desktop/requirements.txt","summary":"Lista zależności Pythona prototypu desktopowego: wyłącznie PySide6 w wersji co najmniej 6.7.","tags":["configuration","dependencies","python","pyside6"],"complexity":"simple"},
+{"id":"file:apps/desktop/start_desktop.ps1","type":"file","name":"start_desktop.ps1","filePath":"apps/desktop/start_desktop.ps1","summary":"Skrypt startowy PowerShell: sprawdza obecność PySide6, przy braku podpowiada polecenie instalacji, a następnie uruchamia apps\\desktop\\run.py.","tags":["script","launcher","powershell","desktop"],"complexity":"simple"}
+],"edges":[
+{"source":"document:apps/desktop/README.md","target":"file:apps/desktop/build_exe.ps1","type":"documents","direction":"forward","weight":0.5},
+{"source":"document:apps/desktop/README.md","target":"file:apps/desktop/start_desktop.ps1","type":"documents","direction":"forward","weight":0.5},
+{"source":"document:apps/desktop/README.md","target":"document:apps/desktop/DESIGN.md","type":"related","direction":"forward","weight":0.5},
+{"source":"document:apps/desktop/README.md","target":"document:apps/desktop/requirements.txt","type":"documents","direction":"forward","weight":0.5},
+{"source":"document:apps/desktop/requirements.txt","target":"file:apps/desktop/start_desktop.ps1","type":"configures","direction":"forward","weight":0.6},
+{"source":"file:apps/desktop/start_desktop.ps1","target":"document:apps/desktop/requirements.txt","type":"depends_on","direction":"forward","weight":0.6}
+]}

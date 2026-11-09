@@ -1,0 +1,9 @@
+{"nodes":[
+{"id":"document:subskills/solidworks-threaded-holes/README.md","type":"document","name":"README.md","filePath":"subskills/solidworks-threaded-holes/README.md","summary":"Przegląd subskilla do ISO metrycznych gwintów wewnętrznych: możliwości, szybkie użycie z PowerShell oraz weryfikacja w SolidWorks 2026 (M6x1 6H, otwór ślepy i przelotowy).","tags":["documentation","threaded-holes","solidworks","overview"],"complexity":"simple"},
+{"id":"document:subskills/solidworks-threaded-holes/SKILL.md","type":"document","name":"SKILL.md","filePath":"subskills/solidworks-threaded-holes/SKILL.md","summary":"Punkt wejścia subskilla: poziomy dojrzałości (verified/reviewed/pilot), 10-krokowy stabilny workflow tworzenia gwintu (Metric Tap, CosmeticThread, helisa 3D jako fallback) i zasady walidacji przed COM.","tags":["documentation","entry-point","workflow","threaded-holes","solidworks"],"complexity":"moderate"},
+{"id":"config:subskills/solidworks-threaded-holes/manifest.yaml","type":"config","name":"manifest.yaml","filePath":"subskills/solidworks-threaded-holes/manifest.yaml","summary":"Manifest subskilla: nazwa, status stable, punkt wejścia SKILL.md, skrypt generujący, referencje oraz zależności od solidworks-automation i powiązane subskille.","tags":["configuration","manifest","subskill","yaml"],"complexity":"simple"}],
+"edges":[
+{"source":"document:subskills/solidworks-threaded-holes/README.md","target":"document:subskills/solidworks-threaded-holes/SKILL.md","type":"related","direction":"forward","weight":0.5},
+{"source":"config:subskills/solidworks-threaded-holes/manifest.yaml","target":"document:subskills/solidworks-threaded-holes/SKILL.md","type":"configures","direction":"forward","weight":0.6},
+{"source":"document:subskills/solidworks-threaded-holes/SKILL.md","target":"file:scripts/sw_preflight.py","type":"documents","direction":"forward","weight":0.5}
+]}

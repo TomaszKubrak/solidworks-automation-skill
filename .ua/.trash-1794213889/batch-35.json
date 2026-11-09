@@ -1,0 +1,1127 @@
+{
+ "nodes": [
+  {
+   "id": "file:apps/workbench-ui/src-tauri/src/main.rs",
+   "type": "file",
+   "name": "main.rs",
+   "summary": "Punkt wejścia aplikacji Tauri; deleguje uruchomienie do funkcji run z biblioteki crate.",
+   "tags": [
+    "entry-point",
+    "tauri",
+    "rust"
+   ],
+   "complexity": "simple",
+   "filePath": "apps/workbench-ui/src-tauri/src/main.rs"
+  },
+  {
+   "id": "file:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+   "type": "file",
+   "name": "runtime_boundary_tests.rs",
+   "summary": "Testy integracyjne granicy runtime: izolacja fixture, obsługa ścieżek agentów, ścieżek ze spacjami i znakami chińskimi oraz odrzucanie symlinków poza rootem.",
+   "tags": [
+    "test",
+    "rust",
+    "runtime-boundary",
+    "filesystem"
+   ],
+   "complexity": "moderate",
+   "filePath": "apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs"
+  },
+  {
+   "id": "class:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs:Fixture",
+   "type": "class",
+   "name": "Fixture",
+   "summary": "Struktura pomocnicza testów przechowująca tymczasowy katalog fixture.",
+   "tags": [
+    "test",
+    "fixture",
+    "helper"
+   ],
+   "complexity": "simple",
+   "filePath": "apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+   "lineRange": [
+    12,
+    12
+   ]
+  },
+  {
+   "id": "function:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs:with_timestamp",
+   "type": "function",
+   "name": "with_timestamp",
+   "summary": "Tworzy fixture z jawnym znacznikiem czasu w nazwie katalogu.",
+   "tags": [
+    "test",
+    "fixture",
+    "helper"
+   ],
+   "complexity": "simple",
+   "filePath": "apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+   "lineRange": [
+    23,
+    32
+   ]
+  },
+  {
+   "id": "function:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs:fixtures_with_identical_timestamps_remain_isolated",
+   "type": "function",
+   "name": "fixtures_with_identical_timestamps_remain_isolated",
+   "summary": "Sprawdza, że fixture z identycznym znacznikiem czasu pozostają od siebie odizolowane.",
+   "tags": [
+    "test",
+    "runtime-boundary",
+    "assertion"
+   ],
+   "complexity": "simple",
+   "filePath": "apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+   "lineRange": [
+    36,
+    50
+   ]
+  },
+  {
+   "id": "function:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs:all_existing_agent_path_names_remain_supported",
+   "type": "function",
+   "name": "all_existing_agent_path_names_remain_supported",
+   "summary": "Weryfikuje, że wszystkie dotychczasowe nazwy ścieżek agentów nadal są obsługiwane.",
+   "tags": [
+    "test",
+    "runtime-boundary",
+    "assertion"
+   ],
+   "complexity": "simple",
+   "filePath": "apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+   "lineRange": [
+    71,
+    88
+   ]
+  },
+  {
+   "id": "function:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs:fixed_json_and_database_paths_share_the_same_boundary",
+   "type": "function",
+   "name": "fixed_json_and_database_paths_share_the_same_boundary",
+   "summary": "Test, że stałe ścieżki JSON i bazy danych dzielą tę samą granicę runtime.",
+   "tags": [
+    "test",
+    "runtime-boundary",
+    "assertion"
+   ],
+   "complexity": "simple",
+   "filePath": "apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+   "lineRange": [
+    91,
+    105
+   ]
+  },
+  {
+   "id": "function:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs:explicit_cli_with_spaces_and_chinese_path_still_runs",
+   "type": "function",
+   "name": "explicit_cli_with_spaces_and_chinese_path_still_runs",
+   "summary": "Test uruchomienia jawnego CLI ze ścieżką zawierającą spacje i znaki chińskie.",
+   "tags": [
+    "test",
+    "runtime-boundary",
+    "assertion"
+   ],
+   "complexity": "simple",
+   "filePath": "apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+   "lineRange": [
+    109,
+    128
+   ]
+  },
+  {
+   "id": "function:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs:config_symlink_outside_root_is_rejected",
+   "type": "function",
+   "name": "config_symlink_outside_root_is_rejected",
+   "summary": "Sprawdza odrzucenie konfiguracji będącej symlinkiem wskazującym poza root.",
+   "tags": [
+    "test",
+    "runtime-boundary",
+    "assertion"
+   ],
+   "complexity": "simple",
+   "filePath": "apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+   "lineRange": [
+    132,
+    150
+   ]
+  },
+  {
+   "id": "function:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs:drop",
+   "type": "function",
+   "name": "drop",
+   "summary": "Implementacja Drop sprzątająca katalog tymczasowy fixture.",
+   "tags": [
+    "test",
+    "cleanup",
+    "raii"
+   ],
+   "complexity": "simple",
+   "filePath": "apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+   "lineRange": [
+    52,
+    67
+   ]
+  },
+  {
+   "id": "config:apps/workbench-ui/src-tauri/tauri.conf.json",
+   "type": "config",
+   "name": "tauri.conf.json",
+   "summary": "Konfiguracja aplikacji Tauri: okno, bundling, zasoby i ustawienia bezpieczeństwa workbench UI.",
+   "tags": [
+    "configuration",
+    "tauri",
+    "desktop",
+    "build-system"
+   ],
+   "complexity": "moderate",
+   "filePath": "apps/workbench-ui/src-tauri/tauri.conf.json"
+  },
+  {
+   "id": "document:apps/workbench-ui/src/assets/WALLPAPER_CREDITS.md",
+   "type": "document",
+   "name": "WALLPAPER_CREDITS.md",
+   "summary": "Informacje o autorach i licencjach tapet użytych w workbench UI.",
+   "tags": [
+    "documentation",
+    "credits",
+    "assets"
+   ],
+   "complexity": "simple",
+   "filePath": "apps/workbench-ui/src/assets/WALLPAPER_CREDITS.md"
+  },
+  {
+   "id": "file:apps/workbench-ui/src/assets/default-blossom-poster.webp",
+   "type": "file",
+   "name": "default-blossom-poster.webp",
+   "summary": "Zasób graficzny WebP: domyślny plakat kwitnącej wiśni używany jako tło interfejsu workbench.",
+   "tags": [
+    "asset",
+    "image",
+    "webp",
+    "wallpaper"
+   ],
+   "complexity": "simple",
+   "filePath": "apps/workbench-ui/src/assets/default-blossom-poster.webp"
+  },
+  {
+   "id": "file:apps/workbench-ui/src/assets/wallpaper-anime-sky.webp",
+   "type": "file",
+   "name": "wallpaper-anime-sky.webp",
+   "summary": "Zasób graficzny WebP: tapeta w stylu anime z niebem używany jako tło interfejsu workbench.",
+   "tags": [
+    "asset",
+    "image",
+    "webp",
+    "wallpaper"
+   ],
+   "complexity": "simple",
+   "filePath": "apps/workbench-ui/src/assets/wallpaper-anime-sky.webp"
+  },
+  {
+   "id": "file:apps/workbench-ui/src/assets/wallpaper-fuji.webp",
+   "type": "file",
+   "name": "wallpaper-fuji.webp",
+   "summary": "Zasób graficzny WebP: tapeta z górą Fuji używany jako tło interfejsu workbench.",
+   "tags": [
+    "asset",
+    "image",
+    "webp",
+    "wallpaper"
+   ],
+   "complexity": "simple",
+   "filePath": "apps/workbench-ui/src/assets/wallpaper-fuji.webp"
+  },
+  {
+   "id": "file:apps/workbench-ui/src/assets/wallpaper-tokyo-neon.webp",
+   "type": "file",
+   "name": "wallpaper-tokyo-neon.webp",
+   "summary": "Zasób graficzny WebP: tapeta neonowego Tokio używany jako tło interfejsu workbench.",
+   "tags": [
+    "asset",
+    "image",
+    "webp",
+    "wallpaper"
+   ],
+   "complexity": "simple",
+   "filePath": "apps/workbench-ui/src/assets/wallpaper-tokyo-neon.webp"
+  },
+  {
+   "id": "file:apps/workbench-ui/src/styles.css",
+   "type": "file",
+   "name": "styles.css",
+   "summary": "Główny arkusz stylów workbench UI (ok. 5,5 tys. linii) z motywami, układem paneli i komponentów oraz tłami.",
+   "tags": [
+    "css",
+    "styling",
+    "theme",
+    "ui"
+   ],
+   "complexity": "complex",
+   "filePath": "apps/workbench-ui/src/styles.css"
+  },
+  {
+   "id": "file:apps/workbench-ui/vite.config.ts",
+   "type": "file",
+   "name": "vite.config.ts",
+   "summary": "Konfiguracja Vite dla workbench UI (serwer dev i build pod Tauri).",
+   "tags": [
+    "configuration",
+    "vite",
+    "build-system",
+    "typescript"
+   ],
+   "complexity": "simple",
+   "filePath": "apps/workbench-ui/vite.config.ts"
+  },
+  {
+   "id": "config:config/runtime.example.json",
+   "type": "config",
+   "name": "runtime.example.json",
+   "summary": "Przykładowy plik konfiguracji runtime kopiowany przez użytkownika.",
+   "tags": [
+    "configuration",
+    "example",
+    "runtime"
+   ],
+   "complexity": "simple",
+   "filePath": "config/runtime.example.json"
+  },
+  {
+   "id": "document:config/README.md",
+   "type": "document",
+   "name": "README.md",
+   "summary": "Opis plików konfiguracyjnych runtime, ich pól i zasad użycia.",
+   "tags": [
+    "documentation",
+    "configuration",
+    "runtime"
+   ],
+   "complexity": "moderate",
+   "filePath": "config/README.md"
+  },
+  {
+   "id": "document:docs/agent-framework/enterprise-agent-control-plane.md",
+   "type": "document",
+   "name": "enterprise-agent-control-plane.md",
+   "summary": "Opis architektury enterprise control plane dla frameworka agentów.",
+   "tags": [
+    "documentation",
+    "architecture",
+    "agent-framework"
+   ],
+   "complexity": "moderate",
+   "filePath": "docs/agent-framework/enterprise-agent-control-plane.md"
+  },
+  {
+   "id": "document:docs/releases/v2.0.1.md",
+   "type": "document",
+   "name": "v2.0.1.md",
+   "summary": "Notatki wydania v2.0.1 z listą zmian.",
+   "tags": [
+    "documentation",
+    "release-notes",
+    "changelog"
+   ],
+   "complexity": "simple",
+   "filePath": "docs/releases/v2.0.1.md"
+  },
+  {
+   "id": "document:docs/research/week1-js-cad-viewers.md",
+   "type": "document",
+   "name": "week1-js-cad-viewers.md",
+   "summary": "Notatki badawcze porównujące JavaScriptowe przeglądarki CAD (tydzień 1).",
+   "tags": [
+    "documentation",
+    "research",
+    "cad-viewer"
+   ],
+   "complexity": "simple",
+   "filePath": "docs/research/week1-js-cad-viewers.md"
+  },
+  {
+   "id": "file:dotnet/CadStudio.SolidWorks.AddinHost/CadStudio.AddinHost.snk.base64",
+   "type": "file",
+   "name": "CadStudio.AddinHost.snk.base64",
+   "summary": "Klucz silnej nazwy (snk) assembly add-inu zakodowany w base64.",
+   "tags": [
+    "security",
+    "signing",
+    "dotnet",
+    "key"
+   ],
+   "complexity": "simple",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/CadStudio.AddinHost.snk.base64"
+  },
+  {
+   "id": "config:dotnet/CadStudio.SolidWorks.AddinHost/CadStudio.SolidWorks.AddinHost.csproj",
+   "type": "config",
+   "name": "CadStudio.SolidWorks.AddinHost.csproj",
+   "summary": "Projekt .NET add-inu SolidWorks: framework docelowy, referencje COM, podpisywanie assembly.",
+   "tags": [
+    "configuration",
+    "dotnet",
+    "build-system",
+    "solidworks"
+   ],
+   "complexity": "moderate",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/CadStudio.SolidWorks.AddinHost.csproj"
+  },
+  {
+   "id": "file:dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs",
+   "type": "file",
+   "name": "HostDiagnostics.cs",
+   "summary": "Statyczna klasa diagnostyczna hosta add-inu zapisująca stan połączenia, UI, zdarzenia i błędy do pliku.",
+   "tags": [
+    "diagnostics",
+    "logging",
+    "dotnet",
+    "solidworks"
+   ],
+   "complexity": "moderate",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs"
+  },
+  {
+   "id": "class:dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs:HostDiagnostics",
+   "type": "class",
+   "name": "HostDiagnostics",
+   "summary": "Zbiera i zapisuje diagnostykę hosta add-inu (połączenie, UI, zdarzenia, błędy).",
+   "tags": [
+    "diagnostics",
+    "logging",
+    "state"
+   ],
+   "complexity": "moderate",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs",
+   "lineRange": [
+    11,
+    140
+   ]
+  },
+  {
+   "id": "function:dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs:WriteUnsafe",
+   "type": "function",
+   "name": "WriteUnsafe",
+   "summary": "Zapisuje migawkę diagnostyki do pliku bez blokowania.",
+   "tags": [
+    "diagnostics",
+    "io",
+    "helper"
+   ],
+   "complexity": "simple",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs",
+   "lineRange": [
+    114,
+    139
+   ]
+  },
+  {
+   "id": "function:dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs:MarkConnection",
+   "type": "function",
+   "name": "MarkConnection",
+   "summary": "Oznacza nawiązanie połączenia z SolidWorks w diagnostyce.",
+   "tags": [
+    "diagnostics",
+    "connection"
+   ],
+   "complexity": "simple",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs",
+   "lineRange": [
+    40,
+    50
+   ]
+  },
+  {
+   "id": "function:dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs:RecordError",
+   "type": "function",
+   "name": "RecordError",
+   "summary": "Rejestruje błąd w diagnostyce hosta.",
+   "tags": [
+    "diagnostics",
+    "error-handling"
+   ],
+   "complexity": "simple",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs",
+   "lineRange": [
+    77,
+    88
+   ]
+  },
+  {
+   "id": "function:dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs:MarkDisconnected",
+   "type": "function",
+   "name": "MarkDisconnected",
+   "summary": "Oznacza rozłączenie add-inu od SolidWorks.",
+   "tags": [
+    "diagnostics",
+    "connection"
+   ],
+   "complexity": "simple",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs",
+   "lineRange": [
+    100,
+    111
+   ]
+  },
+  {
+   "id": "file:dotnet/CadStudio.SolidWorks.AddinHost/Properties/AssemblyInfo.cs",
+   "type": "file",
+   "name": "AssemblyInfo.cs",
+   "summary": "Metadane assembly add-inu (atrybuty wersji i COM).",
+   "tags": [
+    "dotnet",
+    "metadata",
+    "assembly"
+   ],
+   "complexity": "simple",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/Properties/AssemblyInfo.cs"
+  },
+  {
+   "id": "file:dotnet/CadStudio.SolidWorks.AddinHost/PropertyPageHandler.cs",
+   "type": "file",
+   "name": "PropertyPageHandler.cs",
+   "summary": "Pusta implementacja handlera PropertyManager Page SolidWorks z no-op callbackami zdarzeń.",
+   "tags": [
+    "solidworks",
+    "property-page",
+    "event-handler",
+    "dotnet"
+   ],
+   "complexity": "moderate",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/PropertyPageHandler.cs"
+  },
+  {
+   "id": "class:dotnet/CadStudio.SolidWorks.AddinHost/PropertyPageHandler.cs:PropertyPageHandler",
+   "type": "class",
+   "name": "PropertyPageHandler",
+   "summary": "Klasa implementująca interfejs handlera strony właściwości, z większością zdarzeń jako no-op.",
+   "tags": [
+    "event-handler",
+    "property-page",
+    "com"
+   ],
+   "complexity": "moderate",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/PropertyPageHandler.cs",
+   "lineRange": [
+    8,
+    58
+   ]
+  },
+  {
+   "id": "file:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "type": "file",
+   "name": "SwAddin.cs",
+   "summary": "Główna klasa COM add-inu SolidWorks: rejestracja, połączenie, grupa poleceń, panel zadań, PropertyManager Page i obsługa zdarzeń aplikacji.",
+   "tags": [
+    "entry-point",
+    "solidworks",
+    "com-addin",
+    "dotnet"
+   ],
+   "complexity": "complex",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "lineRange": "C# COM add-in z atrybutami rejestracji ComRegisterFunction."
+  },
+  {
+   "id": "class:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs:SwAddin",
+   "type": "class",
+   "name": "SwAddin",
+   "summary": "Implementacja ISwAddin: cykl życia add-inu i integracja UI z SolidWorks.",
+   "tags": [
+    "com-addin",
+    "lifecycle",
+    "ui"
+   ],
+   "complexity": "complex",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "lineRange": [
+    13,
+    397
+   ]
+  },
+  {
+   "id": "function:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs:ConnectToSW",
+   "type": "function",
+   "name": "ConnectToSW",
+   "summary": "Łączy add-in z SolidWorks i inicjalizuje UI oraz zdarzenia.",
+   "tags": [
+    "solidworks",
+    "addin",
+    "lifecycle"
+   ],
+   "complexity": "moderate",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "lineRange": [
+    71,
+    109
+   ]
+  },
+  {
+   "id": "function:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs:CreateCommandGroup",
+   "type": "function",
+   "name": "CreateCommandGroup",
+   "summary": "Tworzy grupę poleceń i przyciski na pasku SolidWorks.",
+   "tags": [
+    "solidworks",
+    "addin",
+    "lifecycle"
+   ],
+   "complexity": "moderate",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "lineRange": [
+    168,
+    194
+   ]
+  },
+  {
+   "id": "function:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs:CreatePropertyManagerPage",
+   "type": "function",
+   "name": "CreatePropertyManagerPage",
+   "summary": "Buduje stronę PropertyManager add-inu.",
+   "tags": [
+    "solidworks",
+    "addin",
+    "lifecycle"
+   ],
+   "complexity": "moderate",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "lineRange": [
+    236,
+    275
+   ]
+  },
+  {
+   "id": "function:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs:ReleaseHostResources",
+   "type": "function",
+   "name": "ReleaseHostResources",
+   "summary": "Zwalnia zasoby COM i UI przy rozłączeniu.",
+   "tags": [
+    "solidworks",
+    "addin",
+    "lifecycle"
+   ],
+   "complexity": "moderate",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "lineRange": [
+    302,
+    333
+   ]
+  },
+  {
+   "id": "function:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs:CreateIconFile",
+   "type": "function",
+   "name": "CreateIconFile",
+   "summary": "Generuje plik ikony dla poleceń add-inu.",
+   "tags": [
+    "solidworks",
+    "addin",
+    "lifecycle"
+   ],
+   "complexity": "moderate",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "lineRange": [
+    365,
+    396
+   ]
+  },
+  {
+   "id": "function:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs:DisconnectFromSW",
+   "type": "function",
+   "name": "DisconnectFromSW",
+   "summary": "Rozłącza add-in z SolidWorks.",
+   "tags": [
+    "solidworks",
+    "addin",
+    "lifecycle"
+   ],
+   "complexity": "simple",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "lineRange": [
+    112,
+    119
+   ]
+  },
+  {
+   "id": "function:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs:Register",
+   "type": "function",
+   "name": "Register",
+   "summary": "Rejestruje add-in w rejestrze COM.",
+   "tags": [
+    "solidworks",
+    "addin",
+    "lifecycle"
+   ],
+   "complexity": "simple",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "lineRange": [
+    45,
+    59
+   ]
+  },
+  {
+   "id": "function:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs:CreateTaskPane",
+   "type": "function",
+   "name": "CreateTaskPane",
+   "summary": "Tworzy panel zadań z kontrolką hosta.",
+   "tags": [
+    "solidworks",
+    "addin",
+    "lifecycle"
+   ],
+   "complexity": "simple",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "lineRange": [
+    221,
+    233
+   ]
+  },
+  {
+   "id": "file:dotnet/CadStudio.SolidWorks.AddinHost/TaskPaneControl.cs",
+   "type": "file",
+   "name": "TaskPaneControl.cs",
+   "summary": "Kontrolka WinForms osadzana w panelu zadań SolidWorks.",
+   "tags": [
+    "ui",
+    "winforms",
+    "task-pane",
+    "dotnet"
+   ],
+   "complexity": "simple",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/TaskPaneControl.cs"
+  },
+  {
+   "id": "class:dotnet/CadStudio.SolidWorks.AddinHost/TaskPaneControl.cs:TaskPaneControl",
+   "type": "class",
+   "name": "TaskPaneControl",
+   "summary": "Kontrolka UserControl wyświetlana w panelu zadań add-inu.",
+   "tags": [
+    "ui",
+    "winforms",
+    "component"
+   ],
+   "complexity": "simple",
+   "filePath": "dotnet/CadStudio.SolidWorks.AddinHost/TaskPaneControl.cs",
+   "lineRange": [
+    8,
+    57
+   ]
+  },
+  {
+   "id": "file:examples/03_assembly.py",
+   "type": "file",
+   "name": "03_assembly.py",
+   "summary": "Przykład tworzenia złożenia SolidWorks przez API automatyzacji.",
+   "tags": [
+    "example",
+    "python",
+    "solidworks",
+    "script"
+   ],
+   "complexity": "simple",
+   "filePath": "examples/03_assembly.py"
+  },
+  {
+   "id": "function:examples/03_assembly.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "examples/03_assembly.py",
+   "summary": "Funkcja główna przykładu: Przykład tworzenia złożenia SolidWorks przez API automatyzacji.",
+   "tags": [
+    "example",
+    "entry-point",
+    "demo"
+   ],
+   "complexity": "simple",
+   "lineRange": [
+    16,
+    53
+   ]
+  },
+  {
+   "id": "file:examples/04_batch_export.py",
+   "type": "file",
+   "name": "04_batch_export.py",
+   "summary": "Przykład wsadowego eksportu dokumentów SolidWorks do innych formatów.",
+   "tags": [
+    "example",
+    "python",
+    "solidworks",
+    "script"
+   ],
+   "complexity": "simple",
+   "filePath": "examples/04_batch_export.py"
+  },
+  {
+   "id": "function:examples/04_batch_export.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "examples/04_batch_export.py",
+   "summary": "Funkcja główna przykładu: Przykład wsadowego eksportu dokumentów SolidWorks do innych formatów.",
+   "tags": [
+    "example",
+    "entry-point",
+    "demo"
+   ],
+   "complexity": "simple",
+   "lineRange": [
+    12,
+    39
+   ]
+  },
+  {
+   "id": "file:examples/05_drawing.py",
+   "type": "file",
+   "name": "05_drawing.py",
+   "summary": "Przykład tworzenia rysunku technicznego przez automatyzację.",
+   "tags": [
+    "example",
+    "python",
+    "solidworks",
+    "script"
+   ],
+   "complexity": "simple",
+   "filePath": "examples/05_drawing.py"
+  },
+  {
+   "id": "function:examples/05_drawing.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "examples/05_drawing.py",
+   "summary": "Funkcja główna przykładu: Przykład tworzenia rysunku technicznego przez automatyzację.",
+   "tags": [
+    "example",
+    "entry-point",
+    "demo"
+   ],
+   "complexity": "simple",
+   "lineRange": [
+    16,
+    43
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:apps/workbench-ui/src-tauri/src/main.rs",
+   "target": "function:apps/workbench-ui/src-tauri/src/lib.rs:run",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src-tauri/src/lib.rs",
+   "target": "file:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+   "target": "function:apps/workbench-ui/src-tauri/src/lib.rs:run",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+   "target": "class:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs:Fixture",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+   "target": "function:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs:with_timestamp",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+   "target": "function:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs:fixtures_with_identical_timestamps_remain_isolated",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+   "target": "function:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs:all_existing_agent_path_names_remain_supported",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+   "target": "function:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs:fixed_json_and_database_paths_share_the_same_boundary",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+   "target": "function:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs:explicit_cli_with_spaces_and_chinese_path_still_runs",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+   "target": "function:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs:config_symlink_outside_root_is_rejected",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs",
+   "target": "function:apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs:drop",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "config:apps/workbench-ui/src-tauri/tauri.conf.json",
+   "target": "file:apps/workbench-ui/src-tauri/src/main.rs",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "document:apps/workbench-ui/src/assets/WALLPAPER_CREDITS.md",
+   "target": "file:apps/workbench-ui/src/assets/default-blossom-poster.webp",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:apps/workbench-ui/src/assets/WALLPAPER_CREDITS.md",
+   "target": "file:apps/workbench-ui/src/assets/wallpaper-anime-sky.webp",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:apps/workbench-ui/src/assets/WALLPAPER_CREDITS.md",
+   "target": "file:apps/workbench-ui/src/assets/wallpaper-fuji.webp",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:apps/workbench-ui/src/assets/WALLPAPER_CREDITS.md",
+   "target": "file:apps/workbench-ui/src/assets/wallpaper-tokyo-neon.webp",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:apps/workbench-ui/src/styles.css",
+   "target": "file:apps/workbench-ui/src/main.tsx",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:config/README.md",
+   "target": "config:config/runtime.example.json",
+   "type": "documents",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "config:dotnet/CadStudio.SolidWorks.AddinHost/CadStudio.SolidWorks.AddinHost.csproj",
+   "target": "file:dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "config:dotnet/CadStudio.SolidWorks.AddinHost/CadStudio.SolidWorks.AddinHost.csproj",
+   "target": "file:dotnet/CadStudio.SolidWorks.AddinHost/Properties/AssemblyInfo.cs",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "config:dotnet/CadStudio.SolidWorks.AddinHost/CadStudio.SolidWorks.AddinHost.csproj",
+   "target": "file:dotnet/CadStudio.SolidWorks.AddinHost/PropertyPageHandler.cs",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "config:dotnet/CadStudio.SolidWorks.AddinHost/CadStudio.SolidWorks.AddinHost.csproj",
+   "target": "file:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "config:dotnet/CadStudio.SolidWorks.AddinHost/CadStudio.SolidWorks.AddinHost.csproj",
+   "target": "file:dotnet/CadStudio.SolidWorks.AddinHost/TaskPaneControl.cs",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "config:dotnet/CadStudio.SolidWorks.AddinHost/CadStudio.SolidWorks.AddinHost.csproj",
+   "target": "file:dotnet/CadStudio.SolidWorks.AddinHost/CadStudio.AddinHost.snk.base64",
+   "type": "configures",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs",
+   "target": "class:dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs:HostDiagnostics",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs",
+   "target": "function:dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs:WriteUnsafe",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs",
+   "target": "function:dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs:MarkConnection",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs",
+   "target": "function:dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs:RecordError",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs",
+   "target": "function:dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs:MarkDisconnected",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:dotnet/CadStudio.SolidWorks.AddinHost/PropertyPageHandler.cs",
+   "target": "class:dotnet/CadStudio.SolidWorks.AddinHost/PropertyPageHandler.cs:PropertyPageHandler",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "target": "class:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs:SwAddin",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "target": "function:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs:ConnectToSW",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "target": "function:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs:CreateCommandGroup",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "target": "function:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs:CreatePropertyManagerPage",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "target": "function:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs:ReleaseHostResources",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "target": "function:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs:CreateIconFile",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "target": "function:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs:DisconnectFromSW",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "target": "function:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs:Register",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "target": "function:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs:CreateTaskPane",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:dotnet/CadStudio.SolidWorks.AddinHost/TaskPaneControl.cs",
+   "target": "class:dotnet/CadStudio.SolidWorks.AddinHost/TaskPaneControl.cs:TaskPaneControl",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "target": "class:dotnet/CadStudio.SolidWorks.AddinHost/TaskPaneControl.cs:TaskPaneControl",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "target": "class:dotnet/CadStudio.SolidWorks.AddinHost/PropertyPageHandler.cs:PropertyPageHandler",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs",
+   "target": "class:dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs:HostDiagnostics",
+   "type": "depends_on",
+   "direction": "forward",
+   "weight": 0.6
+  },
+  {
+   "source": "file:examples/03_assembly.py",
+   "target": "function:examples/03_assembly.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:examples/04_batch_export.py",
+   "target": "function:examples/04_batch_export.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:examples/05_drawing.py",
+   "target": "function:examples/05_drawing.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  }
+ ]
+}

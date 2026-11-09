@@ -1,0 +1,1257 @@
+{
+ "nodes": [
+  {
+   "id": "file:scripts/sw_gdt_annotation.py",
+   "type": "file",
+   "name": "sw_gdt_annotation.py",
+   "filePath": "scripts/sw_gdt_annotation.py",
+   "summary": "Wstawia bazy odniesienia i tolerancje GD&T (ramki, XML gtol) na rysunku SolidWorks oraz weryfikuje ich poprawność i pozycję.",
+   "tags": [
+    "gdt",
+    "annotation",
+    "drawing",
+    "com-automation",
+    "validation"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/sw_gdt_annotation.py:build_frame_xml",
+   "type": "function",
+   "name": "build_frame_xml",
+   "filePath": "scripts/sw_gdt_annotation.py",
+   "lineRange": [
+    32,
+    77
+   ],
+   "summary": "Buduje XML ramki tolerancji.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_gdt_annotation.py:build_gtol_xmls",
+   "type": "function",
+   "name": "build_gtol_xmls",
+   "filePath": "scripts/sw_gdt_annotation.py",
+   "lineRange": [
+    80,
+    117
+   ],
+   "summary": "Buduje XML-e gtol dla zestawu ramek.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_gdt_annotation.py:verify_gtol_xml",
+   "type": "function",
+   "name": "verify_gtol_xml",
+   "filePath": "scripts/sw_gdt_annotation.py",
+   "lineRange": [
+    125,
+    146
+   ],
+   "summary": "Weryfikuje XML gtol.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_gdt_annotation.py:insert_datum",
+   "type": "function",
+   "name": "insert_datum",
+   "filePath": "scripts/sw_gdt_annotation.py",
+   "lineRange": [
+    219,
+    236
+   ],
+   "summary": "Wstawia bazę odniesienia.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_gdt_annotation.py:insert_gtol",
+   "type": "function",
+   "name": "insert_gtol",
+   "filePath": "scripts/sw_gdt_annotation.py",
+   "lineRange": [
+    239,
+    289
+   ],
+   "summary": "Wstawia tolerancję GD&T na rysunku.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:scripts/sw_gdt_copy.py",
+   "type": "file",
+   "name": "sw_gdt_copy.py",
+   "filePath": "scripts/sw_gdt_copy.py",
+   "summary": "Tworzy adnotacje GD&T na kopii dokumentu: rozwiązuje cele, waliduje plan, wstawia adnotacje i weryfikuje je po ponownym otwarciu; posiada CLI.",
+   "tags": [
+    "gdt",
+    "annotation",
+    "verification",
+    "cli",
+    "com-automation"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/sw_gdt_copy.py:inspect_targets",
+   "type": "function",
+   "name": "inspect_targets",
+   "filePath": "scripts/sw_gdt_copy.py",
+   "lineRange": [
+    24,
+    61
+   ],
+   "summary": "Inspekcja celów adnotacji.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_gdt_copy.py:validate_plan",
+   "type": "function",
+   "name": "validate_plan",
+   "filePath": "scripts/sw_gdt_copy.py",
+   "lineRange": [
+    64,
+    83
+   ],
+   "summary": "Waliduje plan adnotacji.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_gdt_copy.py:resolve_target",
+   "type": "function",
+   "name": "resolve_target",
+   "filePath": "scripts/sw_gdt_copy.py",
+   "lineRange": [
+    90,
+    123
+   ],
+   "summary": "Rozwiązuje cel adnotacji.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_gdt_copy.py:create_annotations",
+   "type": "function",
+   "name": "create_annotations",
+   "filePath": "scripts/sw_gdt_copy.py",
+   "lineRange": [
+    178,
+    208
+   ],
+   "summary": "Tworzy adnotacje według planu.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_gdt_copy.py:annotate_copy",
+   "type": "function",
+   "name": "annotate_copy",
+   "filePath": "scripts/sw_gdt_copy.py",
+   "lineRange": [
+    254,
+    336
+   ],
+   "summary": "Adnotuje kopię dokumentu i weryfikuje po ponownym otwarciu.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_gdt_copy.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "scripts/sw_gdt_copy.py",
+   "lineRange": [
+    339,
+    360
+   ],
+   "summary": "Punkt wejścia CLI.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/sw_part.py",
+   "type": "file",
+   "name": "sw_part.py",
+   "filePath": "scripts/sw_part.py",
+   "summary": "Rozbudowany moduł modelowania części: cache referencji szkiców, selekcja obiektów, prymitywy szkicu, automatyczne wymiarowanie oraz operacje bryłowe (wyciągnięcia, obrót, zaokrąglenia, szyki, żebra).",
+   "tags": [
+    "part-modeling",
+    "sketch",
+    "features",
+    "com-automation",
+    "solidworks"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "class:scripts/sw_part.py:SketchSelectionRef",
+   "type": "class",
+   "name": "SketchSelectionRef",
+   "filePath": "scripts/sw_part.py",
+   "lineRange": [
+    55,
+    84
+   ],
+   "summary": "Referencja do zaznaczenia szkicu.",
+   "tags": [
+    "class",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:scripts/sw_part.py:_SketchCacheEntry",
+   "type": "class",
+   "name": "_SketchCacheEntry",
+   "filePath": "scripts/sw_part.py",
+   "lineRange": [
+    87,
+    115
+   ],
+   "summary": "Wpis cache szkiców.",
+   "tags": [
+    "class",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_part.py:clear_sketch_selection_cache",
+   "type": "function",
+   "name": "clear_sketch_selection_cache",
+   "filePath": "scripts/sw_part.py",
+   "lineRange": [
+    143,
+    158
+   ],
+   "summary": "Czyści cache zaznaczeń szkiców.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_part.py:_ensure_sketch_selected",
+   "type": "function",
+   "name": "_ensure_sketch_selected",
+   "filePath": "scripts/sw_part.py",
+   "lineRange": [
+    449,
+    484
+   ],
+   "summary": "Zapewnia zaznaczenie szkicu przed operacją.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_part.py:start_sketch",
+   "type": "function",
+   "name": "start_sketch",
+   "filePath": "scripts/sw_part.py",
+   "lineRange": [
+    487,
+    506
+   ],
+   "summary": "Rozpoczyna szkic na płaszczyźnie.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_part.py:sketch",
+   "type": "function",
+   "name": "sketch",
+   "filePath": "scripts/sw_part.py",
+   "lineRange": [
+    522,
+    549
+   ],
+   "summary": "Menedżer kontekstu szkicu.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_part.py:auto_dimension_sketch",
+   "type": "function",
+   "name": "auto_dimension_sketch",
+   "filePath": "scripts/sw_part.py",
+   "lineRange": [
+    632,
+    713
+   ],
+   "summary": "Automatycznie wymiaruje szkic.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_part.py:extrude_boss",
+   "type": "function",
+   "name": "extrude_boss",
+   "filePath": "scripts/sw_part.py",
+   "lineRange": [
+    737,
+    774
+   ],
+   "summary": "Wyciągnięcie dodające materiał.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_part.py:extrude_cut",
+   "type": "function",
+   "name": "extrude_cut",
+   "filePath": "scripts/sw_part.py",
+   "lineRange": [
+    777,
+    804
+   ],
+   "summary": "Wyciągnięcie usuwające materiał.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_part.py:extrude_midplane",
+   "type": "function",
+   "name": "extrude_midplane",
+   "filePath": "scripts/sw_part.py",
+   "lineRange": [
+    807,
+    839
+   ],
+   "summary": "Wyciągnięcie symetryczne.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_part.py:revolve_boss",
+   "type": "function",
+   "name": "revolve_boss",
+   "filePath": "scripts/sw_part.py",
+   "lineRange": [
+    842,
+    860
+   ],
+   "summary": "Obrót dodający materiał.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_part.py:fillet",
+   "type": "function",
+   "name": "fillet",
+   "filePath": "scripts/sw_part.py",
+   "lineRange": [
+    863,
+    898
+   ],
+   "summary": "Zaokrąglenie krawędzi.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_part.py:chamfer",
+   "type": "function",
+   "name": "chamfer",
+   "filePath": "scripts/sw_part.py",
+   "lineRange": [
+    901,
+    913
+   ],
+   "summary": "Fazowanie krawędzi.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_part.py:linear_pattern",
+   "type": "function",
+   "name": "linear_pattern",
+   "filePath": "scripts/sw_part.py",
+   "lineRange": [
+    916,
+    931
+   ],
+   "summary": "Szyk liniowy.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_part.py:circular_pattern",
+   "type": "function",
+   "name": "circular_pattern",
+   "filePath": "scripts/sw_part.py",
+   "lineRange": [
+    934,
+    949
+   ],
+   "summary": "Szyk kołowy.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_part.py:rib",
+   "type": "function",
+   "name": "rib",
+   "filePath": "scripts/sw_part.py",
+   "lineRange": [
+    986,
+    998
+   ],
+   "summary": "Żebro.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/sw_read_guard.py",
+   "type": "file",
+   "name": "sw_read_guard.py",
+   "filePath": "scripts/sw_read_guard.py",
+   "summary": "Mała klasa ochrony odczytu, wskazująca że operacja SolidWorks nie może modyfikować dokumentu.",
+   "tags": [
+    "guard",
+    "safety",
+    "read-only"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:scripts/sw_read_guard.py:SolidWorksReadGuard",
+   "type": "class",
+   "name": "SolidWorksReadGuard",
+   "filePath": "scripts/sw_read_guard.py",
+   "lineRange": [
+    11,
+    16
+   ],
+   "summary": "Klasa ochrony odczytu.",
+   "tags": [
+    "class",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/sw_rename_copy.py",
+   "type": "file",
+   "name": "sw_rename_copy.py",
+   "filePath": "scripts/sw_rename_copy.py",
+   "summary": "Kopiuje dokumenty SolidWorks pod nowymi nazwami z sumami SHA-256, migawkami i sprawdzonym otwarciem; punkt wejścia CLI.",
+   "tags": [
+    "copy",
+    "rename",
+    "integrity",
+    "cli"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_rename_copy.py:prepare_plan",
+   "type": "function",
+   "name": "prepare_plan",
+   "filePath": "scripts/sw_rename_copy.py",
+   "lineRange": [
+    26,
+    49
+   ],
+   "summary": "Przygotowuje plan kopiowania.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_rename_copy.py:copy_batch",
+   "type": "function",
+   "name": "copy_batch",
+   "filePath": "scripts/sw_rename_copy.py",
+   "lineRange": [
+    114,
+    165
+   ],
+   "summary": "Kopiuje partię dokumentów pod nowymi nazwami.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_rename_copy.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "scripts/sw_rename_copy.py",
+   "lineRange": [
+    168,
+    182
+   ],
+   "summary": "Punkt wejścia CLI.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/sw_session.py",
+   "type": "file",
+   "name": "sw_session.py",
+   "filePath": "scripts/sw_session.py",
+   "summary": "Menedżer kontekstu sesji SolidWorks (SolidWorksSession) zarządzający połączeniem i cyklem życia dokumentów.",
+   "tags": [
+    "session",
+    "context-manager",
+    "com-automation",
+    "lifecycle"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:scripts/sw_session.py:SolidWorksSession",
+   "type": "class",
+   "name": "SolidWorksSession",
+   "filePath": "scripts/sw_session.py",
+   "lineRange": [
+    31,
+    225
+   ],
+   "summary": "Sesja SolidWorks zarządzająca połączeniem i dokumentami.",
+   "tags": [
+    "class",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_session.py:session",
+   "type": "function",
+   "name": "session",
+   "filePath": "scripts/sw_session.py",
+   "lineRange": [
+    228,
+    234
+   ],
+   "summary": "Fabryka kontekstu sesji.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/sw_sketch_quality.py",
+   "type": "file",
+   "name": "sw_sketch_quality.py",
+   "filePath": "scripts/sw_sketch_quality.py",
+   "summary": "Inspekcja jakości szkiców i pełne zdefiniowanie szkicu oraz modeli, wspierające kontrolę jakości modelowania.",
+   "tags": [
+    "sketch",
+    "quality",
+    "inspection",
+    "validation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_sketch_quality.py:inspect_sketch",
+   "type": "function",
+   "name": "inspect_sketch",
+   "filePath": "scripts/sw_sketch_quality.py",
+   "lineRange": [
+    8,
+    30
+   ],
+   "summary": "Inspekcja stanu zdefiniowania szkicu.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_sketch_quality.py:fully_define_sketch",
+   "type": "function",
+   "name": "fully_define_sketch",
+   "filePath": "scripts/sw_sketch_quality.py",
+   "lineRange": [
+    33,
+    71
+   ],
+   "summary": "Doprowadza szkic do pełnego zdefiniowania.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_sketch_quality.py:inspect_model_sketches",
+   "type": "function",
+   "name": "inspect_model_sketches",
+   "filePath": "scripts/sw_sketch_quality.py",
+   "lineRange": [
+    74,
+    104
+   ],
+   "summary": "Inspekcja wszystkich szkiców modelu.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:scripts/sw_gdt_annotation.py",
+   "target": "function:scripts/sw_gdt_annotation.py:build_frame_xml",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_gdt_annotation.py",
+   "target": "function:scripts/sw_gdt_annotation.py:build_frame_xml",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_gdt_annotation.py",
+   "target": "function:scripts/sw_gdt_annotation.py:build_gtol_xmls",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_gdt_annotation.py",
+   "target": "function:scripts/sw_gdt_annotation.py:build_gtol_xmls",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_gdt_annotation.py",
+   "target": "function:scripts/sw_gdt_annotation.py:verify_gtol_xml",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_gdt_annotation.py",
+   "target": "function:scripts/sw_gdt_annotation.py:verify_gtol_xml",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_gdt_annotation.py",
+   "target": "function:scripts/sw_gdt_annotation.py:insert_datum",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_gdt_annotation.py",
+   "target": "function:scripts/sw_gdt_annotation.py:insert_datum",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_gdt_annotation.py",
+   "target": "function:scripts/sw_gdt_annotation.py:insert_gtol",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_gdt_annotation.py",
+   "target": "function:scripts/sw_gdt_annotation.py:insert_gtol",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_gdt_copy.py",
+   "target": "file:scripts/sw_connect.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/sw_gdt_copy.py",
+   "target": "file:scripts/sw_gdt_annotation.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/sw_gdt_copy.py",
+   "target": "file:scripts/sw_read_guard.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/sw_gdt_copy.py",
+   "target": "file:scripts/sw_rename_copy.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/sw_gdt_copy.py",
+   "target": "file:scripts/sw_session.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/sw_gdt_copy.py",
+   "target": "function:scripts/sw_gdt_copy.py:inspect_targets",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_gdt_copy.py",
+   "target": "function:scripts/sw_gdt_copy.py:inspect_targets",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_gdt_copy.py",
+   "target": "function:scripts/sw_gdt_copy.py:validate_plan",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_gdt_copy.py",
+   "target": "function:scripts/sw_gdt_copy.py:validate_plan",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_gdt_copy.py",
+   "target": "function:scripts/sw_gdt_copy.py:resolve_target",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_gdt_copy.py",
+   "target": "function:scripts/sw_gdt_copy.py:resolve_target",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_gdt_copy.py",
+   "target": "function:scripts/sw_gdt_copy.py:create_annotations",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_gdt_copy.py",
+   "target": "function:scripts/sw_gdt_copy.py:create_annotations",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_gdt_copy.py",
+   "target": "function:scripts/sw_gdt_copy.py:annotate_copy",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_gdt_copy.py",
+   "target": "function:scripts/sw_gdt_copy.py:annotate_copy",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_gdt_copy.py",
+   "target": "function:scripts/sw_gdt_copy.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_gdt_copy.py",
+   "target": "function:scripts/sw_gdt_copy.py:main",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "class:scripts/sw_part.py:SketchSelectionRef",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "class:scripts/sw_part.py:SketchSelectionRef",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "class:scripts/sw_part.py:_SketchCacheEntry",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "class:scripts/sw_part.py:_SketchCacheEntry",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:clear_sketch_selection_cache",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:clear_sketch_selection_cache",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:_ensure_sketch_selected",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:_ensure_sketch_selected",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:start_sketch",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:start_sketch",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:sketch",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:sketch",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:auto_dimension_sketch",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:auto_dimension_sketch",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:extrude_boss",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:extrude_boss",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:extrude_cut",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:extrude_cut",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:extrude_midplane",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:extrude_midplane",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:revolve_boss",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:revolve_boss",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:fillet",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:fillet",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:chamfer",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:chamfer",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:linear_pattern",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:linear_pattern",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:circular_pattern",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:circular_pattern",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:rib",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_part.py",
+   "target": "function:scripts/sw_part.py:rib",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_read_guard.py",
+   "target": "class:scripts/sw_read_guard.py:SolidWorksReadGuard",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_read_guard.py",
+   "target": "class:scripts/sw_read_guard.py:SolidWorksReadGuard",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_rename_copy.py",
+   "target": "function:scripts/sw_rename_copy.py:prepare_plan",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_rename_copy.py",
+   "target": "function:scripts/sw_rename_copy.py:prepare_plan",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_rename_copy.py",
+   "target": "function:scripts/sw_rename_copy.py:copy_batch",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_rename_copy.py",
+   "target": "function:scripts/sw_rename_copy.py:copy_batch",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_rename_copy.py",
+   "target": "function:scripts/sw_rename_copy.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_rename_copy.py",
+   "target": "function:scripts/sw_rename_copy.py:main",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_session.py",
+   "target": "class:scripts/sw_session.py:SolidWorksSession",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_session.py",
+   "target": "class:scripts/sw_session.py:SolidWorksSession",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_session.py",
+   "target": "function:scripts/sw_session.py:session",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_session.py",
+   "target": "function:scripts/sw_session.py:session",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_sketch_quality.py",
+   "target": "function:scripts/sw_sketch_quality.py:inspect_sketch",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_sketch_quality.py",
+   "target": "function:scripts/sw_sketch_quality.py:inspect_sketch",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_sketch_quality.py",
+   "target": "function:scripts/sw_sketch_quality.py:fully_define_sketch",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_sketch_quality.py",
+   "target": "function:scripts/sw_sketch_quality.py:fully_define_sketch",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_sketch_quality.py",
+   "target": "function:scripts/sw_sketch_quality.py:inspect_model_sketches",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_sketch_quality.py",
+   "target": "function:scripts/sw_sketch_quality.py:inspect_model_sketches",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  }
+ ]
+}

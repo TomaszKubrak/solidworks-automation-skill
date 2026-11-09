@@ -1,0 +1,616 @@
+{
+  "scriptCompleted": true,
+  "stats": {
+    "filesScanned": 398,
+    "filesWithImports": 60,
+    "totalEdges": 147
+  },
+  "failures": [],
+  "importMap": {
+    ".gitattributes": [],
+    ".github/CODEOWNERS": [],
+    ".github/actionlint.yaml": [],
+    ".github/governance-sensitive-manifest.json": [],
+    ".github/workflows/windows-cad-regression.yml": [],
+    ".github/workflows/windows-release.yml": [],
+    ".mcpbignore": [],
+    ".ua/config.json": [],
+    "CONTRIBUTING.md": [],
+    "README.md": [],
+    "SECURITY.md": [],
+    "SKILL.md": [],
+    "SUBSKILLS.md": [],
+    "agents/openai.yaml": [],
+    "ai_team/delivery-gate-e2e.cjs": [],
+    "ai_team/nsis-install-e2e.ps1": [],
+    "ai_team/preview-viewport-e2e.cjs": [],
+    "ai_team/provider-ui-e2e.cjs": [],
+    "ai_team/release-portable-e2e.cjs": [],
+    "ai_team/ui-layout-check.cjs": [],
+    "ai_team/workbench-e2e-final.cjs": [],
+    "apps/desktop/DESIGN.md": [],
+    "apps/desktop/README.md": [],
+    "apps/desktop/__init__.py": [],
+    "apps/desktop/build_exe.ps1": [],
+    "apps/desktop/cad_workbench/__init__.py": [],
+    "apps/desktop/cad_workbench/agent_contracts.py": [],
+    "apps/desktop/cad_workbench/agent_providers.py": [],
+    "apps/desktop/cad_workbench/app.py": [
+      "apps/desktop/cad_workbench/core.py",
+      "apps/desktop/cad_workbench/mock_runner.py",
+      "apps/desktop/cad_workbench/style.py"
+    ],
+    "apps/desktop/cad_workbench/artifact_ledger.py": [
+      "apps/desktop/cad_workbench/agent_contracts.py",
+      "apps/desktop/cad_workbench/core.py"
+    ],
+    "apps/desktop/cad_workbench/cad_core_contracts.py": [],
+    "apps/desktop/cad_workbench/core.py": [],
+    "apps/desktop/cad_workbench/engineering_orchestrator.py": [],
+    "apps/desktop/cad_workbench/knowledge_retrieval.py": [],
+    "apps/desktop/cad_workbench/mock_runner.py": [
+      "apps/desktop/cad_workbench/core.py"
+    ],
+    "apps/desktop/cad_workbench/queue_worker.py": [
+      "apps/desktop/cad_workbench/agent_contracts.py",
+      "apps/desktop/cad_workbench/agent_providers.py",
+      "apps/desktop/cad_workbench/artifact_ledger.py",
+      "apps/desktop/cad_workbench/core.py",
+      "apps/desktop/cad_workbench/engineering_orchestrator.py",
+      "apps/desktop/cad_workbench/knowledge_retrieval.py",
+      "apps/desktop/cad_workbench/reviewer_gate.py",
+      "apps/desktop/cad_workbench/worker_health.py"
+    ],
+    "apps/desktop/cad_workbench/reviewer_gate.py": [
+      "apps/desktop/cad_workbench/agent_contracts.py",
+      "apps/desktop/cad_workbench/artifact_ledger.py",
+      "apps/desktop/cad_workbench/core.py"
+    ],
+    "apps/desktop/cad_workbench/schemas/advanced_geometry.schema.json": [],
+    "apps/desktop/cad_workbench/schemas/advanced_surface.schema.json": [],
+    "apps/desktop/cad_workbench/schemas/automation_job.schema.json": [],
+    "apps/desktop/cad_workbench/schemas/codex_final_response.schema.json": [],
+    "apps/desktop/cad_workbench/schemas/evidence_graph.schema.json": [],
+    "apps/desktop/cad_workbench/schemas/fea_analysis.schema.json": [],
+    "apps/desktop/cad_workbench/schemas/neutral_cad_document.schema.json": [],
+    "apps/desktop/cad_workbench/schemas/preview_manifest.schema.json": [],
+    "apps/desktop/cad_workbench/style.py": [],
+    "apps/desktop/cad_workbench/worker_health.py": [
+      "apps/desktop/cad_workbench/core.py"
+    ],
+    "apps/desktop/requirements.txt": [],
+    "apps/desktop/run.py": [],
+    "apps/desktop/start_desktop.ps1": [],
+    "apps/workbench-ui/README.md": [],
+    "apps/workbench-ui/docs/automation-queue-protocol.md": [],
+    "apps/workbench-ui/index.html": [],
+    "apps/workbench-ui/package.json": [],
+    "apps/workbench-ui/src-tauri/Cargo.toml": [],
+    "apps/workbench-ui/src-tauri/build.rs": [],
+    "apps/workbench-ui/src-tauri/capabilities/default.json": [],
+    "apps/workbench-ui/src-tauri/examples/verify_updater_signature.rs": [],
+    "apps/workbench-ui/src-tauri/icons/icon.icns": [],
+    "apps/workbench-ui/src-tauri/src/lib.rs": [
+      "apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs"
+    ],
+    "apps/workbench-ui/src-tauri/src/main.rs": [],
+    "apps/workbench-ui/src-tauri/src/runtime_boundary_tests.rs": [],
+    "apps/workbench-ui/src-tauri/tauri.conf.json": [],
+    "apps/workbench-ui/src/App.tsx": [
+      "apps/workbench-ui/src/components/AppUpdatePanel.tsx",
+      "apps/workbench-ui/src/components/ArtifactBrowser.tsx",
+      "apps/workbench-ui/src/components/ConversationControls.tsx",
+      "apps/workbench-ui/src/components/EnvironmentRemediationPanel.tsx",
+      "apps/workbench-ui/src/components/ManualReviewPanel.tsx",
+      "apps/workbench-ui/src/components/ProjectSwitcher.tsx",
+      "apps/workbench-ui/src/components/TaskSequence.tsx",
+      "apps/workbench-ui/src/domain/artifacts.ts",
+      "apps/workbench-ui/src/domain/delivery.ts",
+      "apps/workbench-ui/src/domain/jobs.ts",
+      "apps/workbench-ui/src/domain/projects.ts",
+      "apps/workbench-ui/src/persistence.ts",
+      "apps/workbench-ui/src/preview/PreviewShowcase.tsx",
+      "apps/workbench-ui/src/types.ts"
+    ],
+    "apps/workbench-ui/src/CadPreview.tsx": [
+      "apps/workbench-ui/src/preview/DxfViewport.tsx",
+      "apps/workbench-ui/src/preview/ModelViewport.tsx",
+      "apps/workbench-ui/src/preview/PreviewEvidencePanel.tsx",
+      "apps/workbench-ui/src/preview/PreviewInspector.tsx",
+      "apps/workbench-ui/src/preview/PreviewStatus.tsx",
+      "apps/workbench-ui/src/preview/PreviewToolbar.tsx",
+      "apps/workbench-ui/src/preview/previewTypes.ts",
+      "apps/workbench-ui/src/preview/previewUtils.ts"
+    ],
+    "apps/workbench-ui/src/assets/WALLPAPER_CREDITS.md": [],
+    "apps/workbench-ui/src/assets/default-blossom-poster.webp": [],
+    "apps/workbench-ui/src/assets/wallpaper-anime-sky.webp": [],
+    "apps/workbench-ui/src/assets/wallpaper-fuji.webp": [],
+    "apps/workbench-ui/src/assets/wallpaper-tokyo-neon.webp": [],
+    "apps/workbench-ui/src/components/AppUpdatePanel.tsx": [
+      "apps/workbench-ui/src/domain/updateProgress.ts",
+      "apps/workbench-ui/src/persistence.ts"
+    ],
+    "apps/workbench-ui/src/components/ArtifactBrowser.tsx": [
+      "apps/workbench-ui/src/CadPreview.tsx",
+      "apps/workbench-ui/src/domain/artifacts.ts",
+      "apps/workbench-ui/src/types.ts"
+    ],
+    "apps/workbench-ui/src/components/ConversationControls.tsx": [
+      "apps/workbench-ui/src/types.ts"
+    ],
+    "apps/workbench-ui/src/components/EnvironmentRemediationPanel.tsx": [
+      "apps/workbench-ui/src/types.ts"
+    ],
+    "apps/workbench-ui/src/components/ManualReviewPanel.tsx": [
+      "apps/workbench-ui/src/types.ts"
+    ],
+    "apps/workbench-ui/src/components/ProjectSwitcher.tsx": [
+      "apps/workbench-ui/src/domain/projects.ts",
+      "apps/workbench-ui/src/types.ts"
+    ],
+    "apps/workbench-ui/src/components/TaskSequence.tsx": [
+      "apps/workbench-ui/src/domain/jobs.ts",
+      "apps/workbench-ui/src/types.ts"
+    ],
+    "apps/workbench-ui/src/domain/artifacts.ts": [
+      "apps/workbench-ui/src/types.ts"
+    ],
+    "apps/workbench-ui/src/domain/delivery.test.ts": [
+      "apps/workbench-ui/src/domain/artifacts.ts",
+      "apps/workbench-ui/src/domain/delivery.ts",
+      "apps/workbench-ui/src/types.ts"
+    ],
+    "apps/workbench-ui/src/domain/delivery.ts": [
+      "apps/workbench-ui/src/domain/artifacts.ts",
+      "apps/workbench-ui/src/types.ts"
+    ],
+    "apps/workbench-ui/src/domain/jobs.ts": [
+      "apps/workbench-ui/src/types.ts"
+    ],
+    "apps/workbench-ui/src/domain/projects.ts": [
+      "apps/workbench-ui/src/types.ts"
+    ],
+    "apps/workbench-ui/src/domain/updateProgress.test.ts": [
+      "apps/workbench-ui/src/domain/updateProgress.ts"
+    ],
+    "apps/workbench-ui/src/domain/updateProgress.ts": [],
+    "apps/workbench-ui/src/main.tsx": [
+      "apps/workbench-ui/src/App.tsx",
+      "apps/workbench-ui/src/styles.css"
+    ],
+    "apps/workbench-ui/src/persistence.test.ts": [
+      "apps/workbench-ui/src/persistence.ts"
+    ],
+    "apps/workbench-ui/src/persistence.ts": [],
+    "apps/workbench-ui/src/preview/DxfViewport.tsx": [
+      "apps/workbench-ui/src/preview/previewTypes.ts",
+      "apps/workbench-ui/src/preview/previewUtils.ts"
+    ],
+    "apps/workbench-ui/src/preview/ModelViewport.tsx": [
+      "apps/workbench-ui/src/preview/previewTypes.ts",
+      "apps/workbench-ui/src/preview/previewUtils.ts"
+    ],
+    "apps/workbench-ui/src/preview/PreviewEvidencePanel.tsx": [
+      "apps/workbench-ui/src/preview/previewTypes.ts"
+    ],
+    "apps/workbench-ui/src/preview/PreviewInspector.tsx": [
+      "apps/workbench-ui/src/preview/previewTypes.ts",
+      "apps/workbench-ui/src/preview/previewUtils.ts"
+    ],
+    "apps/workbench-ui/src/preview/PreviewShowcase.tsx": [
+      "apps/workbench-ui/src/CadPreview.tsx",
+      "apps/workbench-ui/src/preview/demoScenes.ts"
+    ],
+    "apps/workbench-ui/src/preview/PreviewStatus.tsx": [
+      "apps/workbench-ui/src/preview/previewTypes.ts"
+    ],
+    "apps/workbench-ui/src/preview/PreviewToolbar.tsx": [
+      "apps/workbench-ui/src/preview/previewTypes.ts"
+    ],
+    "apps/workbench-ui/src/preview/demoScenes.ts": [
+      "apps/workbench-ui/src/preview/previewTypes.ts"
+    ],
+    "apps/workbench-ui/src/preview/dxfWorker.ts": [
+      "apps/workbench-ui/src/preview/previewTypes.ts"
+    ],
+    "apps/workbench-ui/src/preview/previewTypes.ts": [],
+    "apps/workbench-ui/src/preview/previewUtils.ts": [
+      "apps/workbench-ui/src/preview/previewTypes.ts"
+    ],
+    "apps/workbench-ui/src/styles.css": [],
+    "apps/workbench-ui/src/types.ts": [],
+    "apps/workbench-ui/tsconfig.json": [],
+    "apps/workbench-ui/vite.config.ts": [],
+    "capabilities.yaml": [],
+    "config/README.md": [],
+    "config/runtime.example.json": [],
+    "docs/CAD_STUDIO_USER_MANUAL.md": [],
+    "docs/agent-framework/enterprise-agent-control-plane.md": [],
+    "docs/architecture/evidence/governance-ruleset-attestation.json": [],
+    "docs/architecture/evidence/p0-11-real-golden-2026-10-23.json": [],
+    "docs/architecture/evidence/p0-12-real-golden-2026-10-23.json": [],
+    "docs/architecture/evidence/p0-2-1-2026-10-27/README.md": [],
+    "docs/architecture/evidence/p0-2-1-2026-10-27/manifest.json": [],
+    "docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-evidence-sha256.json": [],
+    "docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-independent-seal-verification.json": [],
+    "docs/architecture/evidence/p0-2-1-2026-10-27/p0-2-1-work-state.json": [],
+    "docs/architecture/evidence/p0-2-1-2026-10-27/suite-summary.redacted.json": [],
+    "docs/architecture/evidence/p0-2-1-real-gripper-travel-2026-10-27.json": [],
+    "docs/architecture/evidence/p0-2-real-gripper-2026-10-26.json": [],
+    "docs/architecture/evidence/p0-real-golden-2026-10-23.json": [],
+    "docs/architecture/execution-core.md": [],
+    "docs/architecture/governance-attestation.md": [],
+    "docs/architecture/governance-bypass-remediation.md": [],
+    "docs/architecture/real-golden-gripper-retention-travel-acceptance.md": [],
+    "docs/architecture/real-golden-merge-readiness.md": [],
+    "docs/architecture/real-golden-parallel-gripper-acceptance.md": [],
+    "docs/architecture/real-golden-workflow-acceptance.md": [],
+    "docs/architecture/remaining-pr-increments.md": [],
+    "docs/architecture/scheme-b-reliability.md": [],
+    "docs/architecture/v2-audit.md": [],
+    "docs/architecture/v2-evaluation.md": [],
+    "docs/architecture/v2-regression-report.md": [],
+    "docs/architecture/v2-release-notes.md": [],
+    "docs/market-research-2026.md": [],
+    "docs/native-wire-tools.md": [],
+    "docs/product-mvp-spec.md": [],
+    "docs/releases/v2.0.1.md": [],
+    "docs/research/week1-js-cad-viewers.md": [],
+    "docs/skill-map.md": [],
+    "docs/weekly-delivery-plan.md": [],
+    "dotnet/CadStudio.SolidWorks.AddinHost/CadStudio.AddinHost.snk.base64": [],
+    "dotnet/CadStudio.SolidWorks.AddinHost/CadStudio.SolidWorks.AddinHost.csproj": [],
+    "dotnet/CadStudio.SolidWorks.AddinHost/HostDiagnostics.cs": [],
+    "dotnet/CadStudio.SolidWorks.AddinHost/Properties/AssemblyInfo.cs": [],
+    "dotnet/CadStudio.SolidWorks.AddinHost/PropertyPageHandler.cs": [],
+    "dotnet/CadStudio.SolidWorks.AddinHost/SwAddin.cs": [],
+    "dotnet/CadStudio.SolidWorks.AddinHost/TaskPaneControl.cs": [],
+    "examples/01_basic_part.py": [
+      "scripts/sw_connect.py",
+      "scripts/sw_part.py",
+      "scripts/sw_session.py",
+      "scripts/sw_sketch_quality.py"
+    ],
+    "examples/02_complex_part.py": [
+      "scripts/sw_connect.py",
+      "scripts/sw_part.py",
+      "scripts/sw_session.py",
+      "scripts/sw_sketch_quality.py"
+    ],
+    "examples/03_assembly.py": [],
+    "examples/04_batch_export.py": [],
+    "examples/05_drawing.py": [],
+    "examples/06_friendly_api.py": [],
+    "examples/07_motion_study_rotary_motor.py": [],
+    "examples/08_mini_fan_motion_assembly.py": [],
+    "examples/README.md": [],
+    "examples/drc_profile_strict.json": [],
+    "examples/drc_sample_part.cadstudio.json": [],
+    "examples/drilling_panel_sample.cadstudio.json": [],
+    "examples/drive_sizing_sample.cadstudio.json": [],
+    "examples/fastener_stack_sample.cadstudio.json": [],
+    "examples/fea_tetra_static.json": [],
+    "examples/generate_fea_convergence_example.py": [],
+    "examples/ocp_loft_adapter.json": [],
+    "examples/part.cadstudio.json": [],
+    "examples/supplier-profile.json": [],
+    "examples/weldment/coremark_hss1x1x16ga.json": [],
+    "golden-workflows.yaml": [],
+    "install.js": [],
+    "manifest.json": [],
+    "mcp-server/README.md": [],
+    "mcp-server/approval.py": [
+      "mcp-server/policy.py"
+    ],
+    "mcp-server/artifact_access.py": [
+      "apps/desktop/cad_workbench/artifact_ledger.py"
+    ],
+    "mcp-server/discovery.py": [],
+    "mcp-server/document_identity.py": [],
+    "mcp-server/gate.py": [
+      "mcp-server/approval.py",
+      "mcp-server/discovery.py",
+      "mcp-server/document_identity.py",
+      "mcp-server/policy.py"
+    ],
+    "mcp-server/http_transport.py": [],
+    "mcp-server/policy.py": [],
+    "mcp-server/register_all_ai_mcp.js": [],
+    "mcp-server/register_all_ai_mcp.ps1": [],
+    "mcp-server/register_codex_mcp.ps1": [],
+    "mcp-server/requirements.txt": [],
+    "mcp-server/server.py": [
+      "mcp-server/artifact_access.py",
+      "mcp-server/document_identity.py",
+      "mcp-server/gate.py",
+      "scripts/core/execution.py",
+      "scripts/sw_native_wire.py",
+      "scripts/sw_preflight.py"
+    ],
+    "package.json": [],
+    "profiles/drc/drilling_panel.json": [],
+    "profiles/drc/injection_shell.json": [],
+    "profiles/drc/machined_bracket.json": [],
+    "profiles/drc/sheet_metal_panel.json": [],
+    "project.yaml": [],
+    "pyproject.toml": [],
+    "references/advanced.md": [],
+    "references/agent-provider-architecture.md": [],
+    "references/api-lookup.md": [],
+    "references/appearance.md": [],
+    "references/assembly.md": [],
+    "references/complex-hole-features.md": [],
+    "references/complex-mechanical-routing.md": [],
+    "references/delivery-freshness.md": [],
+    "references/design-rule-check.md": [],
+    "references/design-spec.md": [],
+    "references/drawing.md": [],
+    "references/drive-sizing.md": [],
+    "references/edge-selection.md": [],
+    "references/enterprise-agent-rag.md": [],
+    "references/export.md": [],
+    "references/gears.md": [],
+    "references/language-backend-routing.md": [],
+    "references/mcp-server.md": [],
+    "references/mesh-reference-import.md": [],
+    "references/motion-study.md": [],
+    "references/openclaw.md": [],
+    "references/part-modeling.md": [],
+    "references/rename-preview.md": [],
+    "references/review.md": [],
+    "references/solidworks-addin-host.md": [],
+    "references/spring.md": [],
+    "references/sprocket.md": [],
+    "references/tolerance-extraction.md": [],
+    "references/troubleshooting.md": [],
+    "requirements-mesh.txt": [],
+    "requirements-occt.txt": [],
+    "requirements-pdf.txt": [],
+    "requirements.txt": [],
+    "scripts/__init__.py": [],
+    "scripts/advanced_geometry.py": [],
+    "scripts/advanced_geometry_ocp.py": [],
+    "scripts/advanced_surface_ocp.py": [],
+    "scripts/api_environment.py": [],
+    "scripts/api_help_restore.py": [],
+    "scripts/api_intent.py": [],
+    "scripts/backend_router.py": [],
+    "scripts/build_from_spec.py": [],
+    "scripts/build_skill_release.py": [],
+    "scripts/build_smithery_mcpb.py": [],
+    "scripts/build_windows_release.ps1": [],
+    "scripts/cad_diagnostics.py": [
+      "scripts/cad_doctor.py"
+    ],
+    "scripts/cad_doctor.py": [
+      "scripts/cad_installation.py"
+    ],
+    "scripts/cad_installation.py": [],
+    "scripts/cad_studio.py": [
+      "scripts/cad_diagnostics.py",
+      "scripts/cad_doctor.py"
+    ],
+    "scripts/capabilities.py": [],
+    "scripts/ci/cad_ci_guard.cjs": [
+      "scripts/ci/governance_attestation.cjs",
+      "scripts/ci/governance_trust_root.cjs"
+    ],
+    "scripts/ci/capture_governance_attestation.cjs": [
+      "scripts/ci/governance_attestation.cjs",
+      "scripts/ci/governance_trust_root.cjs"
+    ],
+    "scripts/ci/check_governance_drift.cjs": [],
+    "scripts/ci/governance_attestation.cjs": [],
+    "scripts/ci/governance_trust_root.cjs": [],
+    "scripts/core/__init__.py": [
+      "scripts/core/capability.py",
+      "scripts/core/execution.py",
+      "scripts/core/recovery.py",
+      "scripts/core/state.py",
+      "scripts/core/trace.py",
+      "scripts/core/verification.py"
+    ],
+    "scripts/core/capability.py": [],
+    "scripts/core/execution.py": [
+      "scripts/core/capability.py",
+      "scripts/core/recovery.py",
+      "scripts/core/state.py",
+      "scripts/core/trace.py",
+      "scripts/core/verification.py"
+    ],
+    "scripts/core/recovery.py": [
+      "scripts/core/__init__.py",
+      "scripts/core/state.py",
+      "scripts/core/trace.py",
+      "scripts/core/verification.py"
+    ],
+    "scripts/core/state.py": [],
+    "scripts/core/trace.py": [
+      "scripts/core/state.py"
+    ],
+    "scripts/core/verification.py": [
+      "scripts/core/state.py",
+      "scripts/core/trace.py"
+    ],
+    "scripts/delivery_compare.py": [],
+    "scripts/design_audit.py": [],
+    "scripts/design_rule_check.py": [],
+    "scripts/design_rule_profiles.py": [],
+    "scripts/design_spec.py": [],
+    "scripts/dfm_profiles.py": [],
+    "scripts/dfm_review.py": [],
+    "scripts/drawing_spec.py": [],
+    "scripts/drive_sizing.py": [],
+    "scripts/dxf_preview_scene.py": [],
+    "scripts/fastener_audit.py": [],
+    "scripts/fea_analysis.py": [],
+    "scripts/fea_convergence.py": [],
+    "scripts/headless_cad_writer.py": [],
+    "scripts/headless_occt_service.py": [],
+    "scripts/http_boundary.py": [],
+    "scripts/local_api_evidence.py": [],
+    "scripts/parallel_api_lookup.py": [],
+    "scripts/release_check.py": [],
+    "scripts/routing_review.py": [],
+    "scripts/stability_regression.py": [],
+    "scripts/standard_parts_geometry.py": [],
+    "scripts/sw_addin_host.ps1": [],
+    "scripts/sw_addin_host.py": [],
+    "scripts/sw_api_lookup.py": [],
+    "scripts/sw_appearance.py": [],
+    "scripts/sw_assembly.py": [],
+    "scripts/sw_assembly_rename.py": [],
+    "scripts/sw_capability_probe.py": [],
+    "scripts/sw_connect.py": [],
+    "scripts/sw_delivery.py": [],
+    "scripts/sw_delivery_comtypes_worker.py": [],
+    "scripts/sw_document_data.py": [],
+    "scripts/sw_drawing.py": [],
+    "scripts/sw_drawing_native.py": [
+      "scripts/sw_connect.py",
+      "scripts/sw_gdt_annotation.py",
+      "scripts/sw_gdt_copy.py"
+    ],
+    "scripts/sw_drawing_package.py": [
+      "scripts/drawing_spec.py",
+      "scripts/sw_connect.py",
+      "scripts/sw_file_rename.py",
+      "scripts/sw_read_guard.py",
+      "scripts/sw_rename_copy.py",
+      "scripts/sw_session.py"
+    ],
+    "scripts/sw_drawing_review.py": [],
+    "scripts/sw_edge_select.py": [],
+    "scripts/sw_entity_reference.py": [],
+    "scripts/sw_export.py": [],
+    "scripts/sw_file_load.py": [],
+    "scripts/sw_file_rename.py": [],
+    "scripts/sw_gdt_annotation.py": [],
+    "scripts/sw_gdt_copy.py": [
+      "scripts/sw_connect.py",
+      "scripts/sw_gdt_annotation.py",
+      "scripts/sw_read_guard.py",
+      "scripts/sw_rename_copy.py",
+      "scripts/sw_session.py"
+    ],
+    "scripts/sw_gdt_options.py": [],
+    "scripts/sw_gear.py": [],
+    "scripts/sw_hole_features.py": [],
+    "scripts/sw_import_mesh_reference.py": [],
+    "scripts/sw_macro_guard.py": [],
+    "scripts/sw_mcp_approve.py": [],
+    "scripts/sw_measure.py": [],
+    "scripts/sw_motion.py": [],
+    "scripts/sw_native_wire.cs": [],
+    "scripts/sw_native_wire.ps1": [],
+    "scripts/sw_native_wire.py": [],
+    "scripts/sw_part.py": [],
+    "scripts/sw_pattern.py": [],
+    "scripts/sw_preflight.py": [],
+    "scripts/sw_process.py": [],
+    "scripts/sw_read_guard.py": [],
+    "scripts/sw_rename_copy.py": [],
+    "scripts/sw_review.py": [],
+    "scripts/sw_session.py": [],
+    "scripts/sw_sheet_metal.py": [],
+    "scripts/sw_sketch_quality.py": [],
+    "scripts/sw_spring.py": [],
+    "scripts/sw_sprocket.py": [],
+    "scripts/sw_tolerance_extract.py": [],
+    "scripts/sw_weldment.py": [],
+    "scripts/sync_bundled_skill.py": [],
+    "scripts/validate_mcp.py": [],
+    "scripts/validate_skill.py": [],
+    "scripts/verify_updater_release.ps1": [],
+    "setup.py": [],
+    "subskills/autocad-automation/README.md": [],
+    "subskills/autocad-automation/SKILL.md": [],
+    "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudio.AutoCAD2024.csproj": [],
+    "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/CadStudioCommands.cs": [],
+    "subskills/autocad-automation/dotnet/CadStudio.AutoCAD2024/NuGet.Config": [],
+    "subskills/autocad-automation/evals/evals.json": [],
+    "subskills/autocad-automation/examples/draw_mounting_plate.py": [],
+    "subskills/autocad-automation/manifest.yaml": [],
+    "subskills/autocad-automation/references/api-lookup.md": [],
+    "subskills/autocad-automation/references/engineering-patterns.md": [],
+    "subskills/autocad-automation/references/troubleshooting.md": [],
+    "subskills/autocad-automation/scripts/acad_dotnet_preflight.py": [],
+    "subskills/autocad-automation/scripts/acad_dotnet_regression.py": [],
+    "subskills/autocad-automation/scripts/acad_draw.py": [
+      "subskills/autocad-automation/scripts/acad_session.py"
+    ],
+    "subskills/autocad-automation/scripts/acad_headless.py": [],
+    "subskills/autocad-automation/scripts/acad_preflight.py": [],
+    "subskills/autocad-automation/scripts/acad_preview.py": [
+      "subskills/autocad-automation/scripts/acad_session.py"
+    ],
+    "subskills/autocad-automation/scripts/acad_review.py": [
+      "subskills/autocad-automation/scripts/acad_session.py"
+    ],
+    "subskills/autocad-automation/scripts/acad_session.py": [],
+    "subskills/solidworks-engineering-drawing/README.md": [],
+    "subskills/solidworks-engineering-drawing/SKILL.md": [],
+    "subskills/solidworks-engineering-drawing/manifest.yaml": [],
+    "subskills/solidworks-engineering-drawing/references/api-lookup.md": [],
+    "subskills/solidworks-engineering-drawing/references/drawing.md": [],
+    "subskills/solidworks-engineering-drawing/references/drilling-panel-gdt.md": [],
+    "subskills/solidworks-engineering-drawing/references/gdt-extended-options.md": [],
+    "subskills/solidworks-engineering-drawing/references/native-gdt.md": [],
+    "subskills/solidworks-engineering-drawing/references/review.md": [],
+    "subskills/solidworks-engineering-drawing/schemas/drawing_spec.schema.json": [],
+    "subskills/solidworks-engineering-drawing/schemas/gdt_copy_spec.schema.json": [],
+    "subskills/solidworks-engineering-drawing/scripts/__init__.py": [],
+    "subskills/solidworks-engineering-drawing/scripts/drawing_review.py": [
+      "scripts/sw_review.py"
+    ],
+    "subskills/solidworks-engineering-drawing/scripts/drawing_spec.py": [],
+    "subskills/solidworks-engineering-drawing/scripts/drawing_workflow.py": [],
+    "subskills/solidworks-engineering-drawing/scripts/drilling_panel_gdt.py": [],
+    "subskills/solidworks-fillet-chamfer-cnc/README.md": [],
+    "subskills/solidworks-fillet-chamfer-cnc/SKILL.md": [],
+    "subskills/solidworks-fillet-chamfer-cnc/agents/openai.yaml": [],
+    "subskills/solidworks-fillet-chamfer-cnc/evals/evals.json": [],
+    "subskills/solidworks-fillet-chamfer-cnc/examples/cnc_mount_precision_params.json": [],
+    "subskills/solidworks-fillet-chamfer-cnc/examples/open_source_corner_bracket_case.json": [],
+    "subskills/solidworks-fillet-chamfer-cnc/manifest.yaml": [],
+    "subskills/solidworks-fillet-chamfer-cnc/references/cnc-fillet-chamfer-lessons.md": [],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py": [],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py": [],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py": [
+      "subskills/solidworks-fillet-chamfer-cnc/scripts/cnc_strategy.py"
+    ],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py": [],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs": [],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp": [],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.def": [],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineMacro.swb": [],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py": [
+      "subskills/solidworks-fillet-chamfer-cnc/scripts/advanced_fillet_strategy.py",
+      "subskills/solidworks-fillet-chamfer-cnc/scripts/hold_line_bridge.py"
+    ],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_bracket.py": [
+      "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_advanced_fillets.py"
+    ],
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py": [],
+    "subskills/solidworks-threaded-holes/README.md": [],
+    "subskills/solidworks-threaded-holes/SKILL.md": [],
+    "subskills/solidworks-threaded-holes/agents/openai.yaml": [],
+    "subskills/solidworks-threaded-holes/manifest.yaml": [],
+    "subskills/solidworks-threaded-holes/references/threaded-hole-lessons.md": [],
+    "subskills/solidworks-threaded-holes/references/threaded-hole-roadmap.md": [],
+    "subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py": [],
+    "subskills/solidworks-vibecad/README.md": [],
+    "subskills/solidworks-vibecad/SKILL.md": [],
+    "subskills/solidworks-vibecad/examples/motor_mount_brief.txt": [],
+    "subskills/solidworks-vibecad/examples/motor_mount_execution.md": [],
+    "subskills/solidworks-vibecad/examples/motor_mount_plan.json": [],
+    "subskills/solidworks-vibecad/knowledge/manufacturing_rules.yaml": [],
+    "subskills/solidworks-vibecad/manifest.yaml": [],
+    "subskills/solidworks-vibecad/prompts/solidworks_parametric_planner.md": [],
+    "subskills/solidworks-vibecad/references/vibecad-roadmap.md": [],
+    "subskills/solidworks-vibecad/schemas/design_plan.schema.json": [],
+    "subskills/solidworks-vibecad/scripts/plan_from_brief.py": [],
+    "subskills/solidworks-vibecad/scripts/sw_execution_outline.py": []
+  }
+}

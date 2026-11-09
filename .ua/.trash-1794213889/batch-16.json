@@ -1,0 +1,125 @@
+{
+ "nodes": [
+  {
+   "id": "document:docs/CAD_STUDIO_USER_MANUAL.md",
+   "type": "document",
+   "name": "CAD_STUDIO_USER_MANUAL.md",
+   "filePath": "docs/CAD_STUDIO_USER_MANUAL.md",
+   "summary": "Podręcznik użytkownika CAD Studio w 12 rozdziałach: wymagania, instalacja, pierwszy model, strony interfejsu, Agent i CC Switch, zatwierdzanie i prywatność plików oraz FAQ.",
+   "tags": [
+    "documentation",
+    "user-guide",
+    "cad-studio",
+    "onboarding"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "document:docs/market-research-2026.md",
+   "type": "document",
+   "name": "market-research-2026.md",
+   "filePath": "docs/market-research-2026.md",
+   "summary": "Badanie rynku i pozycjonowanie produktu: konkurencja, użytkownicy docelowi, bolączki inżynierów mechaników, zakres MVP, priorytety norm rysunkowych, reguły druku 3D, 90-dniowa mapa drogowa i ryzyka.",
+   "tags": [
+    "documentation",
+    "market-research",
+    "product-strategy",
+    "roadmap"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "document:docs/native-wire-tools.md",
+   "type": "document",
+   "name": "native-wire-tools.md",
+   "filePath": "docs/native-wire-tools.md",
+   "summary": "Opis pilotażowych narzędzi natywnych SOLIDWORKS PIA: skanowanie kołowych przekrojów po ścieżce, inspekcja geometrii, import STEP i wykluczanie brył, z przykładową specyfikacją JSON.",
+   "tags": [
+    "documentation",
+    "solidworks",
+    "native-tools",
+    "mcp"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:docs/product-mvp-spec.md",
+   "type": "document",
+   "name": "product-mvp-spec.md",
+   "filePath": "docs/product-mvp-spec.md",
+   "summary": "Specyfikacja MVP stacji roboczej automatyzacji dostaw CAD: granice techniczne, przepływy, strony, struktura projektu, formaty danych, lista kontrolna P0, paczka dostawy, maszyna stanów i obsługa błędów.",
+   "tags": [
+    "documentation",
+    "specification",
+    "mvp",
+    "product-design"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "document:docs/skill-map.md",
+   "type": "document",
+   "name": "skill-map.md",
+   "filePath": "docs/skill-map.md",
+   "summary": "Mapa umiejętności: skill główny, podumiejętności, zalecany routing agentów, wspólny kontrakt przeglądu i zasady dodawania nowej podumiejętności.",
+   "tags": [
+    "documentation",
+    "skill-map",
+    "routing",
+    "architecture"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:docs/weekly-delivery-plan.md",
+   "type": "document",
+   "name": "weekly-delivery-plan.md",
+   "filePath": "docs/weekly-delivery-plan.md",
+   "summary": "Tygodniowy plan i wyniki dostaw CAD Studio (tyg. 1–20 i dalej): regresja SW2026, bramki dostawy, backendy bezgłowe, podgląd JS, DXF, DFM/FEA oraz audyt.",
+   "tags": [
+    "documentation",
+    "delivery-plan",
+    "roadmap",
+    "changelog"
+   ],
+   "complexity": "moderate"
+  }
+ ],
+ "edges": [
+  {
+   "source": "document:docs/skill-map.md",
+   "target": "document:docs/product-mvp-spec.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:docs/product-mvp-spec.md",
+   "target": "document:docs/market-research-2026.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:docs/weekly-delivery-plan.md",
+   "target": "document:docs/product-mvp-spec.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:docs/CAD_STUDIO_USER_MANUAL.md",
+   "target": "document:docs/product-mvp-spec.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:docs/native-wire-tools.md",
+   "target": "document:docs/skill-map.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  }
+ ]
+}

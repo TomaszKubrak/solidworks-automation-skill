@@ -1,0 +1,167 @@
+{
+ "nodes": [
+  {
+   "id": "document:references/openclaw.md",
+   "type": "document",
+   "name": "openclaw.md",
+   "filePath": "references/openclaw.md",
+   "summary": "Instrukcja sterowania SolidWorks przez agenta OpenClaw: kontrole przed uruchomieniem, zalecany przebieg, szablon importu, zabezpieczenia makr VBA i lista samokontroli.",
+   "tags": [
+    "documentation",
+    "openclaw",
+    "agent",
+    "vba-guard"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "document:references/part-modeling.md",
+   "type": "document",
+   "name": "part-modeling.md",
+   "filePath": "references/part-modeling.md",
+   "summary": "Referencja API modelowania części: szkice, płaszczyzny, więzy, szyki oraz parametry FeatureExtrusion3, FeatureCut4, FeatureRevolve2, wałki stopniowane i fazowania.",
+   "tags": [
+    "documentation",
+    "part-modeling",
+    "api-reference",
+    "sketch"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "document:references/rename-preview.md",
+   "type": "document",
+   "name": "rename-preview.md",
+   "filePath": "references/rename-preview.md",
+   "summary": "Opis pilotażowego podglądu zmiany nazw na podstawie własnych właściwości: kopie złożenia i kopiowanie części pod nową nazwą (SW2026).",
+   "tags": [
+    "documentation",
+    "pilot",
+    "rename",
+    "assembly"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:references/review.md",
+   "type": "document",
+   "name": "review.md",
+   "filePath": "references/review.md",
+   "summary": "Referencja samokontroli wyników: obowiązkowe kontrole, strukturalny raport, przegląd z linii poleceń, lista kontrolna wizualna i postępowanie przy błędach.",
+   "tags": [
+    "documentation",
+    "review",
+    "quality-gate",
+    "verification"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "document:references/solidworks-addin-host.md",
+   "type": "document",
+   "name": "solidworks-addin-host.md",
+   "filePath": "references/solidworks-addin-host.md",
+   "summary": "Dokumentacja hosta add-in C# dla SolidWorks: budowanie, rejestracja, bramki akceptacji, dowody z SW2026, ograniczenia i źródła oficjalne.",
+   "tags": [
+    "documentation",
+    "csharp",
+    "add-in",
+    "sw2026"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "document:references/spring.md",
+   "type": "document",
+   "name": "spring.md",
+   "filePath": "references/spring.md",
+   "summary": "Opis pilotażowej bryły sprężyny o otwartych końcach i stałym skoku.",
+   "tags": [
+    "documentation",
+    "pilot",
+    "spring",
+    "modeling"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:references/sprocket.md",
+   "type": "document",
+   "name": "sprocket.md",
+   "filePath": "references/sprocket.md",
+   "summary": "Opis pilotażowego przybliżonego koła łańcuchowego (bryła).",
+   "tags": [
+    "documentation",
+    "pilot",
+    "sprocket",
+    "modeling"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:references/tolerance-extraction.md",
+   "type": "document",
+   "name": "tolerance-extraction.md",
+   "filePath": "references/tolerance-extraction.md",
+   "summary": "Opis pilotażowego wyodrębniania tolerancji wymiarów wyświetlanych na rysunku.",
+   "tags": [
+    "documentation",
+    "pilot",
+    "tolerance",
+    "drawing"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "document:references/troubleshooting.md",
+   "type": "document",
+   "name": "troubleshooting.md",
+   "filePath": "references/troubleshooting.md",
+   "summary": "Obszerny przewodnik rozwiązywania problemów: połączenie COM, błędy typów, SelectByID2, by-ref, Pack and Go, Motion Study i inne pułapki API.",
+   "tags": [
+    "documentation",
+    "troubleshooting",
+    "com",
+    "errors"
+   ],
+   "complexity": "complex"
+  }
+ ],
+ "edges": [
+  {
+   "source": "document:references/review.md",
+   "target": "document:references/troubleshooting.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:references/openclaw.md",
+   "target": "document:references/review.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:references/rename-preview.md",
+   "target": "document:references/part-modeling.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:references/spring.md",
+   "target": "document:references/part-modeling.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "document:references/sprocket.md",
+   "target": "document:references/part-modeling.md",
+   "type": "related",
+   "direction": "forward",
+   "weight": 0.5
+  }
+ ]
+}

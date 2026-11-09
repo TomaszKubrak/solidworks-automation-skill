@@ -1,0 +1,125 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 2,
+  "filesSkipped": [
+    "apps/desktop/build_exe.ps1",
+    "apps/desktop/requirements.txt",
+    "apps/desktop/start_desktop.ps1"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 2,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 2
+    }
+  },
+  "results": [
+    {
+      "path": "apps/desktop/DESIGN.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 58,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "Design System: CAD 自动化交付工作台",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Visual Theme & Atmosphere",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "2. Color Palette & Roles",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "3. Typography Rules",
+          "level": 2,
+          "line": 21
+        },
+        {
+          "heading": "4. Component Stylings",
+          "level": 2,
+          "line": 28
+        },
+        {
+          "heading": "5. Layout Principles",
+          "level": 2,
+          "line": 37
+        },
+        {
+          "heading": "6. Motion & Interaction",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "7. Anti-Patterns",
+          "level": 2,
+          "line": 49
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "apps/desktop/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 79,
+      "nonEmptyLines": 57,
+      "sections": [
+        {
+          "heading": "CAD 自动化交付工作台桌面原型",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "安装依赖",
+          "level": 2,
+          "line": 32
+        },
+        {
+          "heading": "启动",
+          "level": 2,
+          "line": 38
+        },
+        {
+          "heading": "打包 exe",
+          "level": 2,
+          "line": 50
+        },
+        {
+          "heading": "当前能力",
+          "level": 2,
+          "line": 62
+        },
+        {
+          "heading": "当前限制",
+          "level": 2,
+          "line": 74
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    }
+  ]
+}

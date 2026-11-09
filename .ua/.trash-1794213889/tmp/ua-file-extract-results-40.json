@@ -1,0 +1,7438 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 14,
+  "filesSkipped": [
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.def",
+    "subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineMacro.swb"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 14,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 7,
+      "failed": 0,
+      "skipped": 7
+    }
+  },
+  "results": [
+    {
+      "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/create_cnc_mount_template.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 790,
+      "nonEmptyLines": 706,
+      "functions": [
+        {
+          "name": "assert_feature",
+          "startLine": 45,
+          "endLine": 50,
+          "params": [
+            "feature",
+            "label"
+          ]
+        },
+        {
+          "name": "clear",
+          "startLine": 53,
+          "endLine": 55,
+          "params": [
+            "model"
+          ]
+        },
+        {
+          "name": "hide_reference_planes",
+          "startLine": 58,
+          "endLine": 66,
+          "params": [
+            "model"
+          ]
+        },
+        {
+          "name": "select_plane",
+          "startLine": 69,
+          "endLine": 78,
+          "params": [
+            "model",
+            "aliases"
+          ]
+        },
+        {
+          "name": "current_sketch_name",
+          "startLine": 81,
+          "endLine": 84,
+          "params": [
+            "model",
+            "fallback"
+          ]
+        },
+        {
+          "name": "offset_front_plane",
+          "startLine": 87,
+          "endLine": 96,
+          "params": [
+            "model",
+            "name",
+            "z_mm"
+          ]
+        },
+        {
+          "name": "select_sketch",
+          "startLine": 99,
+          "endLine": 106,
+          "params": [
+            "model",
+            "name"
+          ]
+        },
+        {
+          "name": "extrude_boss",
+          "startLine": 109,
+          "endLine": 122,
+          "params": [
+            "model",
+            "name",
+            "depth_mm",
+            "label"
+          ]
+        },
+        {
+          "name": "cut",
+          "startLine": 125,
+          "endLine": 149,
+          "params": [
+            "model",
+            "name",
+            "depth_mm",
+            "label",
+            "through_all",
+            "total_depth_mm"
+          ]
+        },
+        {
+          "name": "edge_points",
+          "startLine": 152,
+          "endLine": 164,
+          "params": [
+            "edge"
+          ]
+        },
+        {
+          "name": "midpoint",
+          "startLine": 167,
+          "endLine": 173,
+          "params": [
+            "edge"
+          ]
+        },
+        {
+          "name": "edge_direction",
+          "startLine": 176,
+          "endLine": 191,
+          "params": [
+            "edge"
+          ]
+        },
+        {
+          "name": "circle_center_radius",
+          "startLine": 194,
+          "endLine": 203,
+          "params": [
+            "edge"
+          ]
+        },
+        {
+          "name": "edge_signature",
+          "startLine": 206,
+          "endLine": 229,
+          "params": [
+            "edge"
+          ]
+        },
+        {
+          "name": "all_edges",
+          "startLine": 232,
+          "endLine": 238,
+          "params": [
+            "model"
+          ]
+        },
+        {
+          "name": "matching_edges",
+          "startLine": 241,
+          "endLine": 250,
+          "params": [
+            "model",
+            "predicate"
+          ]
+        },
+        {
+          "name": "select_exact_edges",
+          "startLine": 253,
+          "endLine": 273,
+          "params": [
+            "model",
+            "predicate",
+            "label",
+            "expected_count"
+          ]
+        },
+        {
+          "name": "planar_outer_loop_predicate",
+          "startLine": 276,
+          "endLine": 293,
+          "params": [
+            "z_mm",
+            "half_x_mm",
+            "half_y_mm"
+          ]
+        },
+        {
+          "name": "vertical_corner_predicate",
+          "startLine": 296,
+          "endLine": 322,
+          "params": [
+            "z_min_mm",
+            "z_max_mm",
+            "half_x_mm",
+            "half_y_mm"
+          ]
+        },
+        {
+          "name": "hole_mouth_predicate",
+          "startLine": 325,
+          "endLine": 349,
+          "params": [
+            "params"
+          ]
+        },
+        {
+          "name": "operation_predicate",
+          "startLine": 352,
+          "endLine": 380,
+          "params": [
+            "name",
+            "params"
+          ]
+        },
+        {
+          "name": "apply_treatment",
+          "startLine": 383,
+          "endLine": 448,
+          "params": [
+            "model",
+            "operation",
+            "params"
+          ]
+        },
+        {
+          "name": "create_centered_slot",
+          "startLine": 451,
+          "endLine": 480,
+          "params": [
+            "model",
+            "center_x_mm",
+            "center_y_mm",
+            "size_x_mm",
+            "size_y_mm"
+          ]
+        },
+        {
+          "name": "collect_feature_evidence",
+          "startLine": 483,
+          "endLine": 505,
+          "params": [
+            "model",
+            "expected_names"
+          ]
+        },
+        {
+          "name": "build_model",
+          "startLine": 508,
+          "endLine": 698,
+          "params": [
+            "params",
+            "validation",
+            "output_dir",
+            "basename",
+            "failure_policy"
+          ]
+        },
+        {
+          "name": "parse_args",
+          "startLine": 701,
+          "endLine": 736,
+          "params": []
+        },
+        {
+          "name": "parameters_from_args",
+          "startLine": 739,
+          "endLine": 755,
+          "params": [
+            "args"
+          ]
+        },
+        {
+          "name": "main",
+          "startLine": 758,
+          "endLine": 786,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "assert_feature",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "clear",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "hide_reference_planes",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "select_plane",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "current_sketch_name",
+          "line": 81,
+          "isDefault": false
+        },
+        {
+          "name": "offset_front_plane",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "select_sketch",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "extrude_boss",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "cut",
+          "line": 125,
+          "isDefault": false
+        },
+        {
+          "name": "edge_points",
+          "line": 152,
+          "isDefault": false
+        },
+        {
+          "name": "midpoint",
+          "line": 167,
+          "isDefault": false
+        },
+        {
+          "name": "edge_direction",
+          "line": 176,
+          "isDefault": false
+        },
+        {
+          "name": "circle_center_radius",
+          "line": 194,
+          "isDefault": false
+        },
+        {
+          "name": "edge_signature",
+          "line": 206,
+          "isDefault": false
+        },
+        {
+          "name": "all_edges",
+          "line": 232,
+          "isDefault": false
+        },
+        {
+          "name": "matching_edges",
+          "line": 241,
+          "isDefault": false
+        },
+        {
+          "name": "select_exact_edges",
+          "line": 253,
+          "isDefault": false
+        },
+        {
+          "name": "planar_outer_loop_predicate",
+          "line": 276,
+          "isDefault": false
+        },
+        {
+          "name": "vertical_corner_predicate",
+          "line": 296,
+          "isDefault": false
+        },
+        {
+          "name": "hole_mouth_predicate",
+          "line": 325,
+          "isDefault": false
+        },
+        {
+          "name": "operation_predicate",
+          "line": 352,
+          "isDefault": false
+        },
+        {
+          "name": "apply_treatment",
+          "line": 383,
+          "isDefault": false
+        },
+        {
+          "name": "create_centered_slot",
+          "line": 451,
+          "isDefault": false
+        },
+        {
+          "name": "collect_feature_evidence",
+          "line": 483,
+          "isDefault": false
+        },
+        {
+          "name": "build_model",
+          "line": 508,
+          "isDefault": false
+        },
+        {
+          "name": "parse_args",
+          "line": 701,
+          "isDefault": false
+        },
+        {
+          "name": "parameters_from_args",
+          "line": 739,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 758,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "assert_feature",
+          "callee": "RuntimeError",
+          "lineNumber": 48
+        },
+        {
+          "caller": "assert_feature",
+          "callee": "print",
+          "lineNumber": 49
+        },
+        {
+          "caller": "assert_feature",
+          "callee": "getattr",
+          "lineNumber": 49
+        },
+        {
+          "caller": "clear",
+          "callee": "model.ClearSelection2",
+          "lineNumber": 55
+        },
+        {
+          "caller": "hide_reference_planes",
+          "callee": "clear",
+          "lineNumber": 60
+        },
+        {
+          "caller": "hide_reference_planes",
+          "callee": "bool",
+          "lineNumber": 62
+        },
+        {
+          "caller": "hide_reference_planes",
+          "callee": "get_com_member",
+          "lineNumber": 62
+        },
+        {
+          "caller": "hide_reference_planes",
+          "callee": "get_com_member",
+          "lineNumber": 63
+        },
+        {
+          "caller": "hide_reference_planes",
+          "callee": "print",
+          "lineNumber": 65
+        },
+        {
+          "caller": "hide_reference_planes",
+          "callee": "clear",
+          "lineNumber": 66
+        },
+        {
+          "caller": "select_plane",
+          "callee": "clear",
+          "lineNumber": 71
+        },
+        {
+          "caller": "select_plane",
+          "callee": "model.Extension.SelectByID2",
+          "lineNumber": 73
+        },
+        {
+          "caller": "select_plane",
+          "callee": "create_empty_dispatch_variant",
+          "lineNumber": 74
+        },
+        {
+          "caller": "select_plane",
+          "callee": "RuntimeError",
+          "lineNumber": 78
+        },
+        {
+          "caller": "offset_front_plane",
+          "callee": "model.FeatureByName",
+          "lineNumber": 89
+        },
+        {
+          "caller": "offset_front_plane",
+          "callee": "select_plane",
+          "lineNumber": 91
+        },
+        {
+          "caller": "offset_front_plane",
+          "callee": "assert_feature",
+          "lineNumber": 92
+        },
+        {
+          "caller": "offset_front_plane",
+          "callee": "model.FeatureManager.InsertRefPlane",
+          "lineNumber": 93
+        },
+        {
+          "caller": "offset_front_plane",
+          "callee": "mm",
+          "lineNumber": 93
+        },
+        {
+          "caller": "select_sketch",
+          "callee": "clear",
+          "lineNumber": 101
+        },
+        {
+          "caller": "select_sketch",
+          "callee": "model.Extension.SelectByID2",
+          "lineNumber": 102
+        },
+        {
+          "caller": "select_sketch",
+          "callee": "create_empty_dispatch_variant",
+          "lineNumber": 103
+        },
+        {
+          "caller": "select_sketch",
+          "callee": "RuntimeError",
+          "lineNumber": 106
+        },
+        {
+          "caller": "extrude_boss",
+          "callee": "select_sketch",
+          "lineNumber": 111
+        },
+        {
+          "caller": "extrude_boss",
+          "callee": "assert_feature",
+          "lineNumber": 112
+        },
+        {
+          "caller": "extrude_boss",
+          "callee": "model.FeatureManager.FeatureExtrusion3",
+          "lineNumber": 113
+        },
+        {
+          "caller": "extrude_boss",
+          "callee": "mm",
+          "lineNumber": 114
+        },
+        {
+          "caller": "cut",
+          "callee": "select_sketch",
+          "lineNumber": 135
+        },
+        {
+          "caller": "cut",
+          "callee": "mm",
+          "lineNumber": 137
+        },
+        {
+          "caller": "cut",
+          "callee": "max",
+          "lineNumber": 137
+        },
+        {
+          "caller": "cut",
+          "callee": "assert_feature",
+          "lineNumber": 138
+        },
+        {
+          "caller": "cut",
+          "callee": "model.FeatureManager.FeatureCut4",
+          "lineNumber": 139
+        },
+        {
+          "caller": "edge_points",
+          "callee": "get_com_member",
+          "lineNumber": 155
+        },
+        {
+          "caller": "edge_points",
+          "callee": "get_com_member",
+          "lineNumber": 156
+        },
+        {
+          "caller": "edge_points",
+          "callee": "tuple",
+          "lineNumber": 160
+        },
+        {
+          "caller": "edge_points",
+          "callee": "float",
+          "lineNumber": 160
+        },
+        {
+          "caller": "edge_points",
+          "callee": "get_com_member",
+          "lineNumber": 160
+        },
+        {
+          "caller": "edge_points",
+          "callee": "tuple",
+          "lineNumber": 161
+        },
+        {
+          "caller": "edge_points",
+          "callee": "float",
+          "lineNumber": 161
+        },
+        {
+          "caller": "edge_points",
+          "callee": "get_com_member",
+          "lineNumber": 161
+        },
+        {
+          "caller": "midpoint",
+          "callee": "edge_points",
+          "lineNumber": 169
+        },
+        {
+          "caller": "midpoint",
+          "callee": "tuple",
+          "lineNumber": 173
+        },
+        {
+          "caller": "midpoint",
+          "callee": "range",
+          "lineNumber": 173
+        },
+        {
+          "caller": "edge_direction",
+          "callee": "get_com_member",
+          "lineNumber": 179
+        },
+        {
+          "caller": "edge_direction",
+          "callee": "get_com_member",
+          "lineNumber": 180
+        },
+        {
+          "caller": "edge_direction",
+          "callee": "edge_points",
+          "lineNumber": 184
+        },
+        {
+          "caller": "edge_direction",
+          "callee": "abs",
+          "lineNumber": 188
+        },
+        {
+          "caller": "edge_direction",
+          "callee": "range",
+          "lineNumber": 188
+        },
+        {
+          "caller": "edge_direction",
+          "callee": "max",
+          "lineNumber": 189
+        },
+        {
+          "caller": "edge_direction",
+          "callee": "mm",
+          "lineNumber": 189
+        },
+        {
+          "caller": "edge_direction",
+          "callee": "deltas.index",
+          "lineNumber": 191
+        },
+        {
+          "caller": "edge_direction",
+          "callee": "max",
+          "lineNumber": 191
+        },
+        {
+          "caller": "circle_center_radius",
+          "callee": "get_com_member",
+          "lineNumber": 197
+        },
+        {
+          "caller": "circle_center_radius",
+          "callee": "get_com_member",
+          "lineNumber": 198
+        },
+        {
+          "caller": "circle_center_radius",
+          "callee": "get_com_member",
+          "lineNumber": 200
+        },
+        {
+          "caller": "circle_center_radius",
+          "callee": "float",
+          "lineNumber": 201
+        },
+        {
+          "caller": "circle_center_radius",
+          "callee": "float",
+          "lineNumber": 201
+        },
+        {
+          "caller": "circle_center_radius",
+          "callee": "float",
+          "lineNumber": 201
+        },
+        {
+          "caller": "circle_center_radius",
+          "callee": "float",
+          "lineNumber": 201
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "circle_center_radius",
+          "lineNumber": 208
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "edge_points",
+          "lineNumber": 209
+        },
+        {
+          "caller": "point_mm",
+          "callee": "round",
+          "lineNumber": 212
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "point_mm",
+          "lineNumber": 218
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "round",
+          "lineNumber": 219
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "point_mm",
+          "lineNumber": 222
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "point_mm",
+          "lineNumber": 222
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "edge_direction",
+          "lineNumber": 226
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "point_mm",
+          "lineNumber": 227
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "point_mm",
+          "lineNumber": 227
+        },
+        {
+          "caller": "all_edges",
+          "callee": "model.ForceRebuild3",
+          "lineNumber": 234
+        },
+        {
+          "caller": "all_edges",
+          "callee": "get_com_member",
+          "lineNumber": 236
+        },
+        {
+          "caller": "all_edges",
+          "callee": "edges.extend",
+          "lineNumber": 237
+        },
+        {
+          "caller": "all_edges",
+          "callee": "list",
+          "lineNumber": 237
+        },
+        {
+          "caller": "all_edges",
+          "callee": "get_com_member",
+          "lineNumber": 237
+        },
+        {
+          "caller": "matching_edges",
+          "callee": "all_edges",
+          "lineNumber": 244
+        },
+        {
+          "caller": "matching_edges",
+          "callee": "predicate",
+          "lineNumber": 246
+        },
+        {
+          "caller": "matching_edges",
+          "callee": "matched.append",
+          "lineNumber": 247
+        },
+        {
+          "caller": "select_exact_edges",
+          "callee": "clear",
+          "lineNumber": 260
+        },
+        {
+          "caller": "select_exact_edges",
+          "callee": "matching_edges",
+          "lineNumber": 261
+        },
+        {
+          "caller": "select_exact_edges",
+          "callee": "edge_signature",
+          "lineNumber": 262
+        },
+        {
+          "caller": "select_exact_edges",
+          "callee": "len",
+          "lineNumber": 263
+        },
+        {
+          "caller": "select_exact_edges",
+          "callee": "RuntimeError",
+          "lineNumber": 264
+        },
+        {
+          "caller": "select_exact_edges",
+          "callee": "len",
+          "lineNumber": 265
+        },
+        {
+          "caller": "select_exact_edges",
+          "callee": "json.dumps",
+          "lineNumber": 266
+        },
+        {
+          "caller": "select_exact_edges",
+          "callee": "enumerate",
+          "lineNumber": 268
+        },
+        {
+          "caller": "select_exact_edges",
+          "callee": "edge.Select2",
+          "lineNumber": 269
+        },
+        {
+          "caller": "select_exact_edges",
+          "callee": "clear",
+          "lineNumber": 270
+        },
+        {
+          "caller": "select_exact_edges",
+          "callee": "RuntimeError",
+          "lineNumber": 271
+        },
+        {
+          "caller": "select_exact_edges",
+          "callee": "print",
+          "lineNumber": 272
+        },
+        {
+          "caller": "select_exact_edges",
+          "callee": "len",
+          "lineNumber": 272
+        },
+        {
+          "caller": "planar_outer_loop_predicate",
+          "callee": "mm",
+          "lineNumber": 278
+        },
+        {
+          "caller": "planar_outer_loop_predicate",
+          "callee": "mm",
+          "lineNumber": 279
+        },
+        {
+          "caller": "planar_outer_loop_predicate",
+          "callee": "mm",
+          "lineNumber": 280
+        },
+        {
+          "caller": "planar_outer_loop_predicate",
+          "callee": "mm",
+          "lineNumber": 281
+        },
+        {
+          "caller": "predicate",
+          "callee": "edge_points",
+          "lineNumber": 284
+        },
+        {
+          "caller": "predicate",
+          "callee": "any",
+          "lineNumber": 285
+        },
+        {
+          "caller": "predicate",
+          "callee": "abs",
+          "lineNumber": 285
+        },
+        {
+          "caller": "predicate",
+          "callee": "any",
+          "lineNumber": 287
+        },
+        {
+          "caller": "predicate",
+          "callee": "abs",
+          "lineNumber": 288
+        },
+        {
+          "caller": "predicate",
+          "callee": "abs",
+          "lineNumber": 288
+        },
+        {
+          "caller": "predicate",
+          "callee": "abs",
+          "lineNumber": 289
+        },
+        {
+          "caller": "predicate",
+          "callee": "abs",
+          "lineNumber": 289
+        },
+        {
+          "caller": "vertical_corner_predicate",
+          "callee": "mm",
+          "lineNumber": 303
+        },
+        {
+          "caller": "vertical_corner_predicate",
+          "callee": "mm",
+          "lineNumber": 304
+        },
+        {
+          "caller": "vertical_corner_predicate",
+          "callee": "mm",
+          "lineNumber": 305
+        },
+        {
+          "caller": "vertical_corner_predicate",
+          "callee": "mm",
+          "lineNumber": 306
+        },
+        {
+          "caller": "vertical_corner_predicate",
+          "callee": "mm",
+          "lineNumber": 307
+        },
+        {
+          "caller": "predicate",
+          "callee": "edge_points",
+          "lineNumber": 310
+        },
+        {
+          "caller": "predicate",
+          "callee": "midpoint",
+          "lineNumber": 311
+        },
+        {
+          "caller": "predicate",
+          "callee": "edge_direction",
+          "lineNumber": 312
+        },
+        {
+          "caller": "predicate",
+          "callee": "sorted",
+          "lineNumber": 314
+        },
+        {
+          "caller": "predicate",
+          "callee": "abs",
+          "lineNumber": 316
+        },
+        {
+          "caller": "predicate",
+          "callee": "abs",
+          "lineNumber": 317
+        },
+        {
+          "caller": "predicate",
+          "callee": "abs",
+          "lineNumber": 318
+        },
+        {
+          "caller": "predicate",
+          "callee": "abs",
+          "lineNumber": 318
+        },
+        {
+          "caller": "predicate",
+          "callee": "abs",
+          "lineNumber": 319
+        },
+        {
+          "caller": "predicate",
+          "callee": "abs",
+          "lineNumber": 319
+        },
+        {
+          "caller": "hole_mouth_predicate",
+          "callee": "parameter_positions",
+          "lineNumber": 327
+        },
+        {
+          "caller": "hole_mouth_predicate",
+          "callee": "mm",
+          "lineNumber": 332
+        },
+        {
+          "caller": "hole_mouth_predicate",
+          "callee": "mm",
+          "lineNumber": 333
+        },
+        {
+          "caller": "predicate",
+          "callee": "circle_center_radius",
+          "lineNumber": 336
+        },
+        {
+          "caller": "predicate",
+          "callee": "abs",
+          "lineNumber": 340
+        },
+        {
+          "caller": "predicate",
+          "callee": "any",
+          "lineNumber": 342
+        },
+        {
+          "caller": "predicate",
+          "callee": "abs",
+          "lineNumber": 343
+        },
+        {
+          "caller": "predicate",
+          "callee": "mm",
+          "lineNumber": 343
+        },
+        {
+          "caller": "predicate",
+          "callee": "abs",
+          "lineNumber": 344
+        },
+        {
+          "caller": "predicate",
+          "callee": "mm",
+          "lineNumber": 344
+        },
+        {
+          "caller": "predicate",
+          "callee": "abs",
+          "lineNumber": 345
+        },
+        {
+          "caller": "predicate",
+          "callee": "mm",
+          "lineNumber": 345
+        },
+        {
+          "caller": "operation_predicate",
+          "callee": "vertical_corner_predicate",
+          "lineNumber": 355
+        },
+        {
+          "caller": "operation_predicate",
+          "callee": "vertical_corner_predicate",
+          "lineNumber": 358
+        },
+        {
+          "caller": "operation_predicate",
+          "callee": "planar_outer_loop_predicate",
+          "lineNumber": 364
+        },
+        {
+          "caller": "operation_predicate",
+          "callee": "planar_outer_loop_predicate",
+          "lineNumber": 367
+        },
+        {
+          "caller": "operation_predicate",
+          "callee": "planar_outer_loop_predicate",
+          "lineNumber": 370
+        },
+        {
+          "caller": "operation_predicate",
+          "callee": "hole_mouth_predicate",
+          "lineNumber": 375
+        },
+        {
+          "caller": "operation_predicate",
+          "callee": "ValueError",
+          "lineNumber": 380
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "operation_predicate",
+          "lineNumber": 386
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "select_exact_edges",
+          "lineNumber": 388
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "model.FeatureManager.FeatureFillet",
+          "lineNumber": 393
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "mm",
+          "lineNumber": 394
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "model.FeatureManager.InsertFeatureChamfer",
+          "lineNumber": 397
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "mm",
+          "lineNumber": 398
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "math.radians",
+          "lineNumber": 398
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "clear",
+          "lineNumber": 401
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "RuntimeError",
+          "lineNumber": 402
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "attempts.append",
+          "lineNumber": 407
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "clear",
+          "lineNumber": 414
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "model.ForceRebuild3",
+          "lineNumber": 415
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "clear",
+          "lineNumber": 419
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "model.ForceRebuild3",
+          "lineNumber": 420
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "model.FeatureByName",
+          "lineNumber": 421
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "RuntimeError",
+          "lineNumber": 422
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "clear",
+          "lineNumber": 424
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "RuntimeError",
+          "lineNumber": 425
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "attempts.append",
+          "lineNumber": 429
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "print",
+          "lineNumber": 436
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "RuntimeError",
+          "lineNumber": 445
+        },
+        {
+          "caller": "apply_treatment",
+          "callee": "json.dumps",
+          "lineNumber": 447
+        },
+        {
+          "caller": "create_centered_slot",
+          "callee": "sketch_slot",
+          "lineNumber": 462
+        },
+        {
+          "caller": "create_centered_slot",
+          "callee": "mm",
+          "lineNumber": 464
+        },
+        {
+          "caller": "create_centered_slot",
+          "callee": "mm",
+          "lineNumber": 465
+        },
+        {
+          "caller": "create_centered_slot",
+          "callee": "mm",
+          "lineNumber": 466
+        },
+        {
+          "caller": "create_centered_slot",
+          "callee": "mm",
+          "lineNumber": 467
+        },
+        {
+          "caller": "create_centered_slot",
+          "callee": "mm",
+          "lineNumber": 468
+        },
+        {
+          "caller": "create_centered_slot",
+          "callee": "sketch_slot",
+          "lineNumber": 473
+        },
+        {
+          "caller": "create_centered_slot",
+          "callee": "mm",
+          "lineNumber": 475
+        },
+        {
+          "caller": "create_centered_slot",
+          "callee": "mm",
+          "lineNumber": 476
+        },
+        {
+          "caller": "create_centered_slot",
+          "callee": "mm",
+          "lineNumber": 477
+        },
+        {
+          "caller": "create_centered_slot",
+          "callee": "mm",
+          "lineNumber": 478
+        },
+        {
+          "caller": "create_centered_slot",
+          "callee": "mm",
+          "lineNumber": 479
+        },
+        {
+          "caller": "collect_feature_evidence",
+          "callee": "model.ForceRebuild3",
+          "lineNumber": 485
+        },
+        {
+          "caller": "collect_feature_evidence",
+          "callee": "get_com_member",
+          "lineNumber": 487
+        },
+        {
+          "caller": "collect_feature_evidence",
+          "callee": "features.append",
+          "lineNumber": 490
+        },
+        {
+          "caller": "collect_feature_evidence",
+          "callee": "str",
+          "lineNumber": 492
+        },
+        {
+          "caller": "collect_feature_evidence",
+          "callee": "get_com_member",
+          "lineNumber": 492
+        },
+        {
+          "caller": "collect_feature_evidence",
+          "callee": "str",
+          "lineNumber": 493
+        },
+        {
+          "caller": "collect_feature_evidence",
+          "callee": "get_com_member",
+          "lineNumber": 493
+        },
+        {
+          "caller": "collect_feature_evidence",
+          "callee": "get_com_member",
+          "lineNumber": 496
+        },
+        {
+          "caller": "build_model",
+          "callee": "validate_basename",
+          "lineNumber": 516
+        },
+        {
+          "caller": "build_model",
+          "callee": "output_dir.mkdir",
+          "lineNumber": 517
+        },
+        {
+          "caller": "build_model",
+          "callee": "build_operation_plan",
+          "lineNumber": 521
+        },
+        {
+          "caller": "build_model",
+          "callee": "SolidWorksSession",
+          "lineNumber": 526
+        },
+        {
+          "caller": "build_model",
+          "callee": "session.close",
+          "lineNumber": 528
+        },
+        {
+          "caller": "build_model",
+          "callee": "session.new_part",
+          "lineNumber": 531
+        },
+        {
+          "caller": "build_model",
+          "callee": "select_plane",
+          "lineNumber": 533
+        },
+        {
+          "caller": "build_model",
+          "callee": "model.SketchManager.InsertSketch",
+          "lineNumber": 534
+        },
+        {
+          "caller": "build_model",
+          "callee": "current_sketch_name",
+          "lineNumber": 535
+        },
+        {
+          "caller": "build_model",
+          "callee": "model.SketchManager.CreateCenterRectangle",
+          "lineNumber": 536
+        },
+        {
+          "caller": "build_model",
+          "callee": "mm",
+          "lineNumber": 537
+        },
+        {
+          "caller": "build_model",
+          "callee": "mm",
+          "lineNumber": 537
+        },
+        {
+          "caller": "build_model",
+          "callee": "model.SketchManager.InsertSketch",
+          "lineNumber": 539
+        },
+        {
+          "caller": "build_model",
+          "callee": "extrude_boss",
+          "lineNumber": 540
+        },
+        {
+          "caller": "build_model",
+          "callee": "offset_front_plane",
+          "lineNumber": 541
+        },
+        {
+          "caller": "build_model",
+          "callee": "clear",
+          "lineNumber": 543
+        },
+        {
+          "caller": "build_model",
+          "callee": "model.Extension.SelectByID2",
+          "lineNumber": 544
+        },
+        {
+          "caller": "build_model",
+          "callee": "create_empty_dispatch_variant",
+          "lineNumber": 545
+        },
+        {
+          "caller": "build_model",
+          "callee": "model.SketchManager.InsertSketch",
+          "lineNumber": 547
+        },
+        {
+          "caller": "build_model",
+          "callee": "current_sketch_name",
+          "lineNumber": 548
+        },
+        {
+          "caller": "build_model",
+          "callee": "model.SketchManager.CreateCenterRectangle",
+          "lineNumber": 549
+        },
+        {
+          "caller": "build_model",
+          "callee": "mm",
+          "lineNumber": 550
+        },
+        {
+          "caller": "build_model",
+          "callee": "mm",
+          "lineNumber": 550
+        },
+        {
+          "caller": "build_model",
+          "callee": "model.SketchManager.InsertSketch",
+          "lineNumber": 552
+        },
+        {
+          "caller": "build_model",
+          "callee": "extrude_boss",
+          "lineNumber": 553
+        },
+        {
+          "caller": "build_model",
+          "callee": "operations_by_name.get",
+          "lineNumber": 562
+        },
+        {
+          "caller": "build_model",
+          "callee": "treatment_evidence.append",
+          "lineNumber": 564
+        },
+        {
+          "caller": "build_model",
+          "callee": "apply_treatment",
+          "lineNumber": 564
+        },
+        {
+          "caller": "build_model",
+          "callee": "expected_features.append",
+          "lineNumber": 565
+        },
+        {
+          "caller": "build_model",
+          "callee": "clear",
+          "lineNumber": 567
+        },
+        {
+          "caller": "build_model",
+          "callee": "model.Extension.SelectByID2",
+          "lineNumber": 568
+        },
+        {
+          "caller": "build_model",
+          "callee": "create_empty_dispatch_variant",
+          "lineNumber": 569
+        },
+        {
+          "caller": "build_model",
+          "callee": "model.SketchManager.InsertSketch",
+          "lineNumber": 571
+        },
+        {
+          "caller": "build_model",
+          "callee": "current_sketch_name",
+          "lineNumber": 572
+        },
+        {
+          "caller": "build_model",
+          "callee": "create_centered_slot",
+          "lineNumber": 575
+        },
+        {
+          "caller": "build_model",
+          "callee": "model.SketchManager.CreateCenterRectangle",
+          "lineNumber": 579
+        },
+        {
+          "caller": "build_model",
+          "callee": "mm",
+          "lineNumber": 580
+        },
+        {
+          "caller": "build_model",
+          "callee": "mm",
+          "lineNumber": 583
+        },
+        {
+          "caller": "build_model",
+          "callee": "mm",
+          "lineNumber": 584
+        },
+        {
+          "caller": "build_model",
+          "callee": "model.SketchManager.InsertSketch",
+          "lineNumber": 587
+        },
+        {
+          "caller": "build_model",
+          "callee": "cut",
+          "lineNumber": 588
+        },
+        {
+          "caller": "build_model",
+          "callee": "expected_features.append",
+          "lineNumber": 595
+        },
+        {
+          "caller": "build_model",
+          "callee": "parameter_positions",
+          "lineNumber": 597
+        },
+        {
+          "caller": "build_model",
+          "callee": "clear",
+          "lineNumber": 604
+        },
+        {
+          "caller": "build_model",
+          "callee": "model.Extension.SelectByID2",
+          "lineNumber": 605
+        },
+        {
+          "caller": "build_model",
+          "callee": "create_empty_dispatch_variant",
+          "lineNumber": 606
+        },
+        {
+          "caller": "build_model",
+          "callee": "model.SketchManager.InsertSketch",
+          "lineNumber": 608
+        },
+        {
+          "caller": "build_model",
+          "callee": "current_sketch_name",
+          "lineNumber": 609
+        },
+        {
+          "caller": "build_model",
+          "callee": "model.SketchManager.CreateCircleByRadius",
+          "lineNumber": 611
+        },
+        {
+          "caller": "build_model",
+          "callee": "mm",
+          "lineNumber": 611
+        },
+        {
+          "caller": "build_model",
+          "callee": "mm",
+          "lineNumber": 611
+        },
+        {
+          "caller": "build_model",
+          "callee": "mm",
+          "lineNumber": 611
+        },
+        {
+          "caller": "build_model",
+          "callee": "model.SketchManager.InsertSketch",
+          "lineNumber": 612
+        },
+        {
+          "caller": "build_model",
+          "callee": "cut",
+          "lineNumber": 613
+        },
+        {
+          "caller": "build_model",
+          "callee": "expected_features.append",
+          "lineNumber": 621
+        },
+        {
+          "caller": "build_model",
+          "callee": "offset_front_plane",
+          "lineNumber": 623
+        },
+        {
+          "caller": "build_model",
+          "callee": "clear",
+          "lineNumber": 626
+        },
+        {
+          "caller": "build_model",
+          "callee": "model.Extension.SelectByID2",
+          "lineNumber": 627
+        },
+        {
+          "caller": "build_model",
+          "callee": "create_empty_dispatch_variant",
+          "lineNumber": 628
+        },
+        {
+          "caller": "build_model",
+          "callee": "model.SketchManager.InsertSketch",
+          "lineNumber": 630
+        },
+        {
+          "caller": "build_model",
+          "callee": "current_sketch_name",
+          "lineNumber": 631
+        },
+        {
+          "caller": "build_model",
+          "callee": "create_centered_slot",
+          "lineNumber": 632
+        },
+        {
+          "caller": "build_model",
+          "callee": "model.SketchManager.InsertSketch",
+          "lineNumber": 633
+        },
+        {
+          "caller": "build_model",
+          "callee": "cut",
+          "lineNumber": 634
+        },
+        {
+          "caller": "build_model",
+          "callee": "expected_features.append",
+          "lineNumber": 642
+        },
+        {
+          "caller": "build_model",
+          "callee": "operations_by_name.get",
+          "lineNumber": 644
+        },
+        {
+          "caller": "build_model",
+          "callee": "treatment_evidence.append",
+          "lineNumber": 646
+        },
+        {
+          "caller": "build_model",
+          "callee": "apply_treatment",
+          "lineNumber": 646
+        },
+        {
+          "caller": "build_model",
+          "callee": "expected_features.append",
+          "lineNumber": 647
+        },
+        {
+          "caller": "build_model",
+          "callee": "set_document_appearance",
+          "lineNumber": 649
+        },
+        {
+          "caller": "build_model",
+          "callee": "model.ForceRebuild3",
+          "lineNumber": 650
+        },
+        {
+          "caller": "build_model",
+          "callee": "collect_feature_evidence",
+          "lineNumber": 651
+        },
+        {
+          "caller": "build_model",
+          "callee": "RuntimeError",
+          "lineNumber": 653
+        },
+        {
+          "caller": "build_model",
+          "callee": "\", \".join",
+          "lineNumber": 654
+        },
+        {
+          "caller": "build_model",
+          "callee": "hide_reference_planes",
+          "lineNumber": 656
+        },
+        {
+          "caller": "build_model",
+          "callee": "model.ViewZoomtofit2",
+          "lineNumber": 657
+        },
+        {
+          "caller": "build_model",
+          "callee": "plan_payload",
+          "lineNumber": 659
+        },
+        {
+          "caller": "build_model",
+          "callee": "payload.update",
+          "lineNumber": 660
+        },
+        {
+          "caller": "build_model",
+          "callee": "str",
+          "lineNumber": 664
+        },
+        {
+          "caller": "build_model",
+          "callee": "str",
+          "lineNumber": 664
+        },
+        {
+          "caller": "build_model",
+          "callee": "parameter_path.write_text",
+          "lineNumber": 667
+        },
+        {
+          "caller": "build_model",
+          "callee": "json.dumps",
+          "lineNumber": 668
+        },
+        {
+          "caller": "build_model",
+          "callee": "session.save",
+          "lineNumber": 670
+        },
+        {
+          "caller": "build_model",
+          "callee": "str",
+          "lineNumber": 670
+        },
+        {
+          "caller": "build_model",
+          "callee": "RuntimeError",
+          "lineNumber": 671
+        },
+        {
+          "caller": "build_model",
+          "callee": "export_to_step",
+          "lineNumber": 672
+        },
+        {
+          "caller": "build_model",
+          "callee": "str",
+          "lineNumber": 672
+        },
+        {
+          "caller": "build_model",
+          "callee": "RuntimeError",
+          "lineNumber": 673
+        },
+        {
+          "caller": "build_model",
+          "callee": "run_review",
+          "lineNumber": 674
+        },
+        {
+          "caller": "build_model",
+          "callee": "str",
+          "lineNumber": 678
+        },
+        {
+          "caller": "build_model",
+          "callee": "str",
+          "lineNumber": 678
+        },
+        {
+          "caller": "build_model",
+          "callee": "str",
+          "lineNumber": 678
+        },
+        {
+          "caller": "build_model",
+          "callee": "print",
+          "lineNumber": 680
+        },
+        {
+          "caller": "build_model",
+          "callee": "str",
+          "lineNumber": 685
+        },
+        {
+          "caller": "build_model",
+          "callee": "str",
+          "lineNumber": 686
+        },
+        {
+          "caller": "build_model",
+          "callee": "str",
+          "lineNumber": 687
+        },
+        {
+          "caller": "build_model",
+          "callee": "str",
+          "lineNumber": 688
+        },
+        {
+          "caller": "parse_args",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 703
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 706
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 707
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 715
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 716
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 717
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 718
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 719
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 720
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 721
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 722
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 728
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 729
+        },
+        {
+          "caller": "parse_args",
+          "callee": "Path.cwd",
+          "lineNumber": 732
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 735
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.parse_args",
+          "lineNumber": 736
+        },
+        {
+          "caller": "parameters_from_args",
+          "callee": "overlays.append",
+          "lineNumber": 743
+        },
+        {
+          "caller": "parameters_from_args",
+          "callee": "load_parameter_file",
+          "lineNumber": 743
+        },
+        {
+          "caller": "parameters_from_args",
+          "callee": "overlays.append",
+          "lineNumber": 744
+        },
+        {
+          "caller": "parameters_from_args",
+          "callee": "parse_set_values",
+          "lineNumber": 744
+        },
+        {
+          "caller": "parameters_from_args",
+          "callee": "overlays.append",
+          "lineNumber": 754
+        },
+        {
+          "caller": "parameters_from_args",
+          "callee": "explicit.items",
+          "lineNumber": 754
+        },
+        {
+          "caller": "parameters_from_args",
+          "callee": "build_parameters",
+          "lineNumber": 755
+        },
+        {
+          "caller": "main",
+          "callee": "parse_args",
+          "lineNumber": 760
+        },
+        {
+          "caller": "main",
+          "callee": "validate_basename",
+          "lineNumber": 761
+        },
+        {
+          "caller": "main",
+          "callee": "parameters_from_args",
+          "lineNumber": 762
+        },
+        {
+          "caller": "main",
+          "callee": "args.output_dir.mkdir",
+          "lineNumber": 764
+        },
+        {
+          "caller": "main",
+          "callee": "plan_path.write_text",
+          "lineNumber": 766
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 767
+        },
+        {
+          "caller": "main",
+          "callee": "plan_payload",
+          "lineNumber": 768
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 774
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 775
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 776
+        },
+        {
+          "caller": "main",
+          "callee": "build_model",
+          "lineNumber": 782
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 785
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 785
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 28,
+        "functionCount": 28,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/native/HoldLineBridge.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 324,
+      "nonEmptyLines": 302,
+      "functions": [
+        {
+          "name": "Main",
+          "startLine": 22,
+          "endLine": 47,
+          "params": [
+            "args"
+          ]
+        },
+        {
+          "name": "CreateHoldLineFillet",
+          "startLine": 52,
+          "endLine": 199,
+          "params": [
+            "expectedTitle",
+            "result"
+          ]
+        },
+        {
+          "name": "FindUniqueFace",
+          "startLine": 202,
+          "endLine": 218,
+          "params": [
+            "body",
+            "predicate"
+          ]
+        },
+        {
+          "name": "FindUniqueEdge",
+          "startLine": 221,
+          "endLine": 242,
+          "params": [
+            "body",
+            "predicate"
+          ]
+        },
+        {
+          "name": "AsObjectArray",
+          "startLine": 245,
+          "endLine": 259,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "AsDoubleArray",
+          "startLine": 262,
+          "endLine": 276,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "Near",
+          "startLine": 279,
+          "endLine": 282,
+          "params": [
+            "left",
+            "right"
+          ]
+        },
+        {
+          "name": "ToJson",
+          "startLine": 285,
+          "endLine": 322,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "HoldLineBridge",
+          "startLine": 14,
+          "endLine": 323,
+          "methods": [
+            "Main",
+            "CreateHoldLineFillet",
+            "FindUniqueFace",
+            "FindUniqueEdge",
+            "AsObjectArray",
+            "AsDoubleArray",
+            "Near",
+            "ToJson"
+          ],
+          "properties": [
+            "ToleranceM",
+            "FeatureName"
+          ]
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Main",
+          "callee": "new Dictionary<string, object>",
+          "lineNumber": 26
+        },
+        {
+          "caller": "Main",
+          "callee": "String.IsNullOrWhiteSpace",
+          "lineNumber": 29
+        },
+        {
+          "caller": "Main",
+          "callee": "new ArgumentException",
+          "lineNumber": 31
+        },
+        {
+          "caller": "Main",
+          "callee": "CreateHoldLineFillet",
+          "lineNumber": 34
+        },
+        {
+          "caller": "Main",
+          "callee": "Console.WriteLine",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Main",
+          "callee": "ToJson",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Main",
+          "callee": "exception.GetType",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Main",
+          "callee": "Console.WriteLine",
+          "lineNumber": 44
+        },
+        {
+          "caller": "Main",
+          "callee": "ToJson",
+          "lineNumber": 44
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "Marshal.GetActiveObject",
+          "lineNumber": 54
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 58
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "model.GetTitle",
+          "lineNumber": 61
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "String.Equals",
+          "lineNumber": 64
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 66
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "String.Format",
+          "lineNumber": 67
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 73
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "AsObjectArray",
+          "lineNumber": 76
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "part.GetBodies2",
+          "lineNumber": 76
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 79
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "String.Format",
+          "lineNumber": 79
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "FindUniqueFace",
+          "lineNumber": 83
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "Near",
+          "lineNumber": 85
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "Near",
+          "lineNumber": 85
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "Near",
+          "lineNumber": 86
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "Near",
+          "lineNumber": 86
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "FindUniqueFace",
+          "lineNumber": 88
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "Near",
+          "lineNumber": 90
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "Near",
+          "lineNumber": 90
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "Near",
+          "lineNumber": 91
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "Near",
+          "lineNumber": 91
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "FindUniqueFace",
+          "lineNumber": 93
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "Near",
+          "lineNumber": 95
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "Near",
+          "lineNumber": 95
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "FindUniqueEdge",
+          "lineNumber": 97
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "Near",
+          "lineNumber": 99
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "Math.Abs",
+          "lineNumber": 99
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "Near",
+          "lineNumber": 100
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "Near",
+          "lineNumber": 100
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "Near",
+          "lineNumber": 101
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "Near",
+          "lineNumber": 101
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "new List<object>",
+          "lineNumber": 104
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "new Dictionary<string, object>",
+          "lineNumber": 110
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "Object.ReferenceEquals",
+          "lineNumber": 111
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "model.ClearSelection2",
+          "lineNumber": 115
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "((IEntity)top).Select2",
+          "lineNumber": 116
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "((IEntity)side).Select2",
+          "lineNumber": 117
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "((IEntity)holdLine).Select2",
+          "lineNumber": 118
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 120
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "model.FeatureManager.CreateDefinition",
+          "lineNumber": 123
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "data.Initialize",
+          "lineNumber": 125
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 127
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "data.SetFaces",
+          "lineNumber": 132
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "data.SetFaces",
+          "lineNumber": 133
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "data.GetHoldLineCount",
+          "lineNumber": 138
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "data.GetFaceCount",
+          "lineNumber": 140
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "data.GetFaceCount",
+          "lineNumber": 141
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 144
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "String.Format",
+          "lineNumber": 145
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "model.FeatureManager.CreateFeature",
+          "lineNumber": 148
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 151
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "model.ForceRebuild3",
+          "lineNumber": 154
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 156
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "feature.GetDefinition",
+          "lineNumber": 159
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 162
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "persistedData.AccessSelections",
+          "lineNumber": 164
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "persistedData.GetHoldLineCount",
+          "lineNumber": 165
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "persistedData.ReleaseSelectionAccess",
+          "lineNumber": 168
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "feature.GetTypeName2",
+          "lineNumber": 171
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "attempts.Add",
+          "lineNumber": 173
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 176
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "String.Format",
+          "lineNumber": 177
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "exception.GetType",
+          "lineNumber": 189
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "attempts.Add",
+          "lineNumber": 191
+        },
+        {
+          "caller": "CreateHoldLineFillet",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 198
+        },
+        {
+          "caller": "FindUniqueFace",
+          "callee": "new List<IFace2>",
+          "lineNumber": 204
+        },
+        {
+          "caller": "FindUniqueFace",
+          "callee": "AsObjectArray",
+          "lineNumber": 205
+        },
+        {
+          "caller": "FindUniqueFace",
+          "callee": "body.GetFaces",
+          "lineNumber": 205
+        },
+        {
+          "caller": "FindUniqueFace",
+          "callee": "predicate",
+          "lineNumber": 208
+        },
+        {
+          "caller": "FindUniqueFace",
+          "callee": "AsDoubleArray",
+          "lineNumber": 208
+        },
+        {
+          "caller": "FindUniqueFace",
+          "callee": "face.GetBox",
+          "lineNumber": 208
+        },
+        {
+          "caller": "FindUniqueFace",
+          "callee": "matches.Add",
+          "lineNumber": 210
+        },
+        {
+          "caller": "FindUniqueFace",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 215
+        },
+        {
+          "caller": "FindUniqueFace",
+          "callee": "String.Format",
+          "lineNumber": 215
+        },
+        {
+          "caller": "FindUniqueEdge",
+          "callee": "new List<IEdge>",
+          "lineNumber": 225
+        },
+        {
+          "caller": "FindUniqueEdge",
+          "callee": "AsObjectArray",
+          "lineNumber": 226
+        },
+        {
+          "caller": "FindUniqueEdge",
+          "callee": "body.GetEdges",
+          "lineNumber": 226
+        },
+        {
+          "caller": "FindUniqueEdge",
+          "callee": "edge.GetStartVertex",
+          "lineNumber": 229
+        },
+        {
+          "caller": "FindUniqueEdge",
+          "callee": "edge.GetEndVertex",
+          "lineNumber": 230
+        },
+        {
+          "caller": "FindUniqueEdge",
+          "callee": "predicate",
+          "lineNumber": 232
+        },
+        {
+          "caller": "FindUniqueEdge",
+          "callee": "AsDoubleArray",
+          "lineNumber": 232
+        },
+        {
+          "caller": "FindUniqueEdge",
+          "callee": "start.GetPoint",
+          "lineNumber": 232
+        },
+        {
+          "caller": "FindUniqueEdge",
+          "callee": "AsDoubleArray",
+          "lineNumber": 232
+        },
+        {
+          "caller": "FindUniqueEdge",
+          "callee": "end.GetPoint",
+          "lineNumber": 232
+        },
+        {
+          "caller": "FindUniqueEdge",
+          "callee": "matches.Add",
+          "lineNumber": 234
+        },
+        {
+          "caller": "FindUniqueEdge",
+          "callee": "new InvalidOperationException",
+          "lineNumber": 239
+        },
+        {
+          "caller": "FindUniqueEdge",
+          "callee": "String.Format",
+          "lineNumber": 239
+        },
+        {
+          "caller": "AsDoubleArray",
+          "callee": "Convert.ToDouble",
+          "lineNumber": 273
+        },
+        {
+          "caller": "Near",
+          "callee": "Math.Abs",
+          "lineNumber": 281
+        },
+        {
+          "caller": "ToJson",
+          "callee": "text.Replace(\"\\\\\", \"\\\\\\\\\").Replace(\"\\\"\", \"\\\\\\\"\")\n                    .Replace(\"\\r\", \"\\\\r\").Replace",
+          "lineNumber": 294
+        },
+        {
+          "caller": "ToJson",
+          "callee": "text.Replace(\"\\\\\", \"\\\\\\\\\").Replace(\"\\\"\", \"\\\\\\\"\")\n                    .Replace",
+          "lineNumber": 294
+        },
+        {
+          "caller": "ToJson",
+          "callee": "text.Replace(\"\\\\\", \"\\\\\\\\\").Replace",
+          "lineNumber": 294
+        },
+        {
+          "caller": "ToJson",
+          "callee": "text.Replace",
+          "lineNumber": 294
+        },
+        {
+          "caller": "ToJson",
+          "callee": "new List<string>",
+          "lineNumber": 304
+        },
+        {
+          "caller": "ToJson",
+          "callee": "items.Add",
+          "lineNumber": 307
+        },
+        {
+          "caller": "ToJson",
+          "callee": "ToJson",
+          "lineNumber": 307
+        },
+        {
+          "caller": "ToJson",
+          "callee": "Convert.ToString",
+          "lineNumber": 307
+        },
+        {
+          "caller": "ToJson",
+          "callee": "ToJson",
+          "lineNumber": 307
+        },
+        {
+          "caller": "ToJson",
+          "callee": "String.Join",
+          "lineNumber": 309
+        },
+        {
+          "caller": "ToJson",
+          "callee": "items.ToArray",
+          "lineNumber": 309
+        },
+        {
+          "caller": "ToJson",
+          "callee": "new List<string>",
+          "lineNumber": 314
+        },
+        {
+          "caller": "ToJson",
+          "callee": "items.Add",
+          "lineNumber": 317
+        },
+        {
+          "caller": "ToJson",
+          "callee": "ToJson",
+          "lineNumber": 317
+        },
+        {
+          "caller": "ToJson",
+          "callee": "String.Join",
+          "lineNumber": 319
+        },
+        {
+          "caller": "ToJson",
+          "callee": "items.ToArray",
+          "lineNumber": 319
+        },
+        {
+          "caller": "ToJson",
+          "callee": "Convert.ToString",
+          "lineNumber": 321
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/native/NativeHoldLineAddin.cpp",
+      "language": "cpp",
+      "fileCategory": "code",
+      "totalLines": 236,
+      "nonEmptyLines": 222,
+      "functions": [
+        {
+          "name": "Check",
+          "startLine": 28,
+          "endLine": 35,
+          "params": [
+            "result",
+            "operation"
+          ]
+        },
+        {
+          "name": "Wide",
+          "startLine": 38,
+          "endLine": 49,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "JobFilePath",
+          "startLine": 52,
+          "endLine": 59,
+          "params": []
+        },
+        {
+          "name": "ReadResultPath",
+          "startLine": 62,
+          "endLine": 88,
+          "params": []
+        },
+        {
+          "name": "JsonString",
+          "startLine": 91,
+          "endLine": 118,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "WriteResult",
+          "startLine": 121,
+          "endLine": 131,
+          "params": [
+            "path",
+            "json"
+          ]
+        },
+        {
+          "name": "ReleasePreparedObjects",
+          "startLine": 134,
+          "endLine": 147,
+          "params": []
+        },
+        {
+          "name": "PreparedHoldLineTimerProc",
+          "startLine": 150,
+          "endLine": 185,
+          "params": [
+            "timer_id"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Check",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "Wide",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "JobFilePath",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "ReadResultPath",
+          "line": 62,
+          "isDefault": false
+        },
+        {
+          "name": "JsonString",
+          "line": 91,
+          "isDefault": false
+        },
+        {
+          "name": "WriteResult",
+          "line": 121,
+          "isDefault": false
+        },
+        {
+          "name": "ReleasePreparedObjects",
+          "line": 134,
+          "isDefault": false
+        },
+        {
+          "name": "PreparedHoldLineTimerProc",
+          "line": 150,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Check",
+          "callee": "SUCCEEDED",
+          "lineNumber": 30
+        },
+        {
+          "caller": "Check",
+          "callee": "static_cast<unsigned long>",
+          "lineNumber": 33
+        },
+        {
+          "caller": "Check",
+          "callee": "std::runtime_error",
+          "lineNumber": 34
+        },
+        {
+          "caller": "Check",
+          "callee": "str",
+          "lineNumber": 34
+        },
+        {
+          "caller": "Wide",
+          "callee": "empty",
+          "lineNumber": 40
+        },
+        {
+          "caller": "Wide",
+          "callee": "std::wstring",
+          "lineNumber": 40
+        },
+        {
+          "caller": "Wide",
+          "callee": "MultiByteToWideChar",
+          "lineNumber": 41
+        },
+        {
+          "caller": "Wide",
+          "callee": "c_str",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Wide",
+          "callee": "static_cast<int>",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Wide",
+          "callee": "size",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Wide",
+          "callee": "std::runtime_error",
+          "lineNumber": 43
+        },
+        {
+          "caller": "Wide",
+          "callee": "static_cast<size_t>",
+          "lineNumber": 44
+        },
+        {
+          "caller": "Wide",
+          "callee": "MultiByteToWideChar",
+          "lineNumber": 45
+        },
+        {
+          "caller": "Wide",
+          "callee": "c_str",
+          "lineNumber": 46
+        },
+        {
+          "caller": "Wide",
+          "callee": "static_cast<int>",
+          "lineNumber": 46
+        },
+        {
+          "caller": "Wide",
+          "callee": "size",
+          "lineNumber": 46
+        },
+        {
+          "caller": "JobFilePath",
+          "callee": "GetTempPathW",
+          "lineNumber": 55
+        },
+        {
+          "caller": "JobFilePath",
+          "callee": "std::runtime_error",
+          "lineNumber": 57
+        },
+        {
+          "caller": "JobFilePath",
+          "callee": "std::wstring",
+          "lineNumber": 58
+        },
+        {
+          "caller": "ReadResultPath",
+          "callee": "JobFilePath",
+          "lineNumber": 64
+        },
+        {
+          "caller": "ReadResultPath",
+          "callee": "CreateFileW",
+          "lineNumber": 65
+        },
+        {
+          "caller": "ReadResultPath",
+          "callee": "c_str",
+          "lineNumber": 66
+        },
+        {
+          "caller": "ReadResultPath",
+          "callee": "std::runtime_error",
+          "lineNumber": 69
+        },
+        {
+          "caller": "ReadResultPath",
+          "callee": "GetFileSizeEx",
+          "lineNumber": 71
+        },
+        {
+          "caller": "ReadResultPath",
+          "callee": "CloseHandle",
+          "lineNumber": 73
+        },
+        {
+          "caller": "ReadResultPath",
+          "callee": "std::runtime_error",
+          "lineNumber": 74
+        },
+        {
+          "caller": "ReadResultPath",
+          "callee": "static_cast<size_t>",
+          "lineNumber": 76
+        },
+        {
+          "caller": "ReadResultPath",
+          "callee": "ReadFile",
+          "lineNumber": 78
+        },
+        {
+          "caller": "ReadResultPath",
+          "callee": "static_cast<DWORD>",
+          "lineNumber": 79
+        },
+        {
+          "caller": "ReadResultPath",
+          "callee": "size",
+          "lineNumber": 79
+        },
+        {
+          "caller": "ReadResultPath",
+          "callee": "CloseHandle",
+          "lineNumber": 80
+        },
+        {
+          "caller": "ReadResultPath",
+          "callee": "size",
+          "lineNumber": 81
+        },
+        {
+          "caller": "ReadResultPath",
+          "callee": "std::runtime_error",
+          "lineNumber": 82
+        },
+        {
+          "caller": "ReadResultPath",
+          "callee": "find_first_of",
+          "lineNumber": 83
+        },
+        {
+          "caller": "ReadResultPath",
+          "callee": "substr",
+          "lineNumber": 84
+        },
+        {
+          "caller": "ReadResultPath",
+          "callee": "empty",
+          "lineNumber": 85
+        },
+        {
+          "caller": "ReadResultPath",
+          "callee": "std::runtime_error",
+          "lineNumber": 86
+        },
+        {
+          "caller": "ReadResultPath",
+          "callee": "Wide",
+          "lineNumber": 87
+        },
+        {
+          "caller": "JsonString",
+          "callee": "std::setw",
+          "lineNumber": 107
+        },
+        {
+          "caller": "JsonString",
+          "callee": "std::setfill",
+          "lineNumber": 108
+        },
+        {
+          "caller": "JsonString",
+          "callee": "static_cast<int>",
+          "lineNumber": 108
+        },
+        {
+          "caller": "JsonString",
+          "callee": "static_cast<char>",
+          "lineNumber": 112
+        },
+        {
+          "caller": "JsonString",
+          "callee": "str",
+          "lineNumber": 117
+        },
+        {
+          "caller": "WriteResult",
+          "callee": "CreateFileW",
+          "lineNumber": 123
+        },
+        {
+          "caller": "WriteResult",
+          "callee": "c_str",
+          "lineNumber": 124
+        },
+        {
+          "caller": "WriteResult",
+          "callee": "WriteFile",
+          "lineNumber": 128
+        },
+        {
+          "caller": "WriteResult",
+          "callee": "data",
+          "lineNumber": 128
+        },
+        {
+          "caller": "WriteResult",
+          "callee": "static_cast<DWORD>",
+          "lineNumber": 128
+        },
+        {
+          "caller": "WriteResult",
+          "callee": "size",
+          "lineNumber": 128
+        },
+        {
+          "caller": "WriteResult",
+          "callee": "FlushFileBuffers",
+          "lineNumber": 129
+        },
+        {
+          "caller": "WriteResult",
+          "callee": "CloseHandle",
+          "lineNumber": 130
+        },
+        {
+          "caller": "ReleasePreparedObjects",
+          "callee": "Release",
+          "lineNumber": 138
+        },
+        {
+          "caller": "ReleasePreparedObjects",
+          "callee": "Release",
+          "lineNumber": 143
+        },
+        {
+          "caller": "ReleasePreparedObjects",
+          "callee": "InterlockedExchange",
+          "lineNumber": 146
+        },
+        {
+          "caller": "PreparedHoldLineTimerProc",
+          "callee": "KillTimer",
+          "lineNumber": 152
+        },
+        {
+          "caller": "PreparedHoldLineTimerProc",
+          "callee": "ReadResultPath",
+          "lineNumber": 156
+        },
+        {
+          "caller": "PreparedHoldLineTimerProc",
+          "callee": "std::runtime_error",
+          "lineNumber": 158
+        },
+        {
+          "caller": "PreparedHoldLineTimerProc",
+          "callee": "Check",
+          "lineNumber": 160
+        },
+        {
+          "caller": "PreparedHoldLineTimerProc",
+          "callee": "ISetHoldLines",
+          "lineNumber": 161
+        },
+        {
+          "caller": "PreparedHoldLineTimerProc",
+          "callee": "Check",
+          "lineNumber": 164
+        },
+        {
+          "caller": "PreparedHoldLineTimerProc",
+          "callee": "GetHoldLineCount",
+          "lineNumber": 165
+        },
+        {
+          "caller": "PreparedHoldLineTimerProc",
+          "callee": "std::runtime_error",
+          "lineNumber": 168
+        },
+        {
+          "caller": "PreparedHoldLineTimerProc",
+          "callee": "WriteResult",
+          "lineNumber": 169
+        },
+        {
+          "caller": "PreparedHoldLineTimerProc",
+          "callee": "empty",
+          "lineNumber": 176
+        },
+        {
+          "caller": "PreparedHoldLineTimerProc",
+          "callee": "WriteResult",
+          "lineNumber": 178
+        },
+        {
+          "caller": "PreparedHoldLineTimerProc",
+          "callee": "JsonString",
+          "lineNumber": 181
+        },
+        {
+          "caller": "PreparedHoldLineTimerProc",
+          "callee": "what",
+          "lineNumber": 181
+        },
+        {
+          "caller": "PreparedHoldLineTimerProc",
+          "callee": "ReleasePreparedObjects",
+          "lineNumber": 184
+        },
+        {
+          "caller": "RunPreparedHoldLine",
+          "callee": "ReadResultPath",
+          "lineNumber": 203
+        },
+        {
+          "caller": "RunPreparedHoldLine",
+          "callee": "std::runtime_error",
+          "lineNumber": 206
+        },
+        {
+          "caller": "RunPreparedHoldLine",
+          "callee": "InterlockedCompareExchange",
+          "lineNumber": 207
+        },
+        {
+          "caller": "RunPreparedHoldLine",
+          "callee": "std::runtime_error",
+          "lineNumber": 208
+        },
+        {
+          "caller": "RunPreparedHoldLine",
+          "callee": "Check",
+          "lineNumber": 210
+        },
+        {
+          "caller": "RunPreparedHoldLine",
+          "callee": "QueryInterface",
+          "lineNumber": 211
+        },
+        {
+          "caller": "RunPreparedHoldLine",
+          "callee": "__uuidof",
+          "lineNumber": 212
+        },
+        {
+          "caller": "RunPreparedHoldLine",
+          "callee": "reinterpret_cast<void**>",
+          "lineNumber": 213
+        },
+        {
+          "caller": "RunPreparedHoldLine",
+          "callee": "Check",
+          "lineNumber": 215
+        },
+        {
+          "caller": "RunPreparedHoldLine",
+          "callee": "QueryInterface",
+          "lineNumber": 216
+        },
+        {
+          "caller": "RunPreparedHoldLine",
+          "callee": "reinterpret_cast<void**>",
+          "lineNumber": 218
+        },
+        {
+          "caller": "RunPreparedHoldLine",
+          "callee": "SetTimer",
+          "lineNumber": 220
+        },
+        {
+          "caller": "RunPreparedHoldLine",
+          "callee": "std::runtime_error",
+          "lineNumber": 221
+        },
+        {
+          "caller": "RunPreparedHoldLine",
+          "callee": "ReleasePreparedObjects",
+          "lineNumber": 226
+        },
+        {
+          "caller": "RunPreparedHoldLine",
+          "callee": "empty",
+          "lineNumber": 227
+        },
+        {
+          "caller": "RunPreparedHoldLine",
+          "callee": "WriteResult",
+          "lineNumber": 229
+        },
+        {
+          "caller": "RunPreparedHoldLine",
+          "callee": "JsonString",
+          "lineNumber": 232
+        },
+        {
+          "caller": "RunPreparedHoldLine",
+          "callee": "what",
+          "lineNumber": 232
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 8,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "subskills/solidworks-fillet-chamfer-cnc/scripts/verify_open_source_complex_case.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 342,
+      "nonEmptyLines": 307,
+      "functions": [
+        {
+          "name": "_validate_download_url",
+          "startLine": 38,
+          "endLine": 40,
+          "params": [
+            "url"
+          ]
+        },
+        {
+          "name": "load_case",
+          "startLine": 43,
+          "endLine": 46,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "_validate_case_payload",
+          "startLine": 49,
+          "endLine": 68,
+          "params": [
+            "payload"
+          ]
+        },
+        {
+          "name": "fetch_pinned_source",
+          "startLine": 71,
+          "endLine": 96,
+          "params": [
+            "case",
+            "destination"
+          ]
+        },
+        {
+          "name": "topology_counts",
+          "startLine": 99,
+          "endLine": 121,
+          "params": [
+            "model"
+          ]
+        },
+        {
+          "name": "topology_is_complex",
+          "startLine": 124,
+          "endLine": 131,
+          "params": [
+            "counts"
+          ]
+        },
+        {
+          "name": "assert_expected_source_topology",
+          "startLine": 134,
+          "endLine": 143,
+          "params": [
+            "case",
+            "counts"
+          ]
+        },
+        {
+          "name": "edge_signature",
+          "startLine": 146,
+          "endLine": 170,
+          "params": [
+            "edge"
+          ]
+        },
+        {
+          "name": "apply_complex_width_width_chamfer",
+          "startLine": 173,
+          "endLine": 229,
+          "params": [
+            "model",
+            "case"
+          ]
+        },
+        {
+          "name": "hide_review_helpers",
+          "startLine": 232,
+          "endLine": 239,
+          "params": [
+            "model"
+          ]
+        },
+        {
+          "name": "run_solidworks_case",
+          "startLine": 242,
+          "endLine": 311,
+          "params": [
+            "case",
+            "source",
+            "output_dir",
+            "version"
+          ]
+        },
+        {
+          "name": "parse_args",
+          "startLine": 314,
+          "endLine": 321,
+          "params": []
+        },
+        {
+          "name": "main",
+          "startLine": 324,
+          "endLine": 338,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "_validate_download_url",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "load_case",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "_validate_case_payload",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "fetch_pinned_source",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "topology_counts",
+          "line": 99,
+          "isDefault": false
+        },
+        {
+          "name": "topology_is_complex",
+          "line": 124,
+          "isDefault": false
+        },
+        {
+          "name": "assert_expected_source_topology",
+          "line": 134,
+          "isDefault": false
+        },
+        {
+          "name": "edge_signature",
+          "line": 146,
+          "isDefault": false
+        },
+        {
+          "name": "apply_complex_width_width_chamfer",
+          "line": 173,
+          "isDefault": false
+        },
+        {
+          "name": "hide_review_helpers",
+          "line": 232,
+          "isDefault": false
+        },
+        {
+          "name": "run_solidworks_case",
+          "line": 242,
+          "isDefault": false
+        },
+        {
+          "name": "parse_args",
+          "line": 314,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 324,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_validate_download_url",
+          "callee": "validate_https_url",
+          "lineNumber": 40
+        },
+        {
+          "caller": "load_case",
+          "callee": "json.loads",
+          "lineNumber": 45
+        },
+        {
+          "caller": "load_case",
+          "callee": "path.read_text",
+          "lineNumber": 45
+        },
+        {
+          "caller": "load_case",
+          "callee": "_validate_case_payload",
+          "lineNumber": 46
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "payload.get",
+          "lineNumber": 52
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "ValueError",
+          "lineNumber": 54
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "str(payload[\"sha256\"]).lower",
+          "lineNumber": 55
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "str",
+          "lineNumber": 55
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "len",
+          "lineNumber": 56
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "any",
+          "lineNumber": 56
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "ValueError",
+          "lineNumber": 57
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "_validate_download_url",
+          "lineNumber": 58
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "str",
+          "lineNumber": 58
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "validate_https_url",
+          "lineNumber": 59
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "str",
+          "lineNumber": 59
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "unquote(parts.path).split",
+          "lineNumber": 60
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "unquote",
+          "lineNumber": 60
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "str",
+          "lineNumber": 61
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "re.fullmatch",
+          "lineNumber": 62
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "len",
+          "lineNumber": 62
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "segments[3].lower",
+          "lineNumber": 62
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "commit.lower",
+          "lineNumber": 62
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "ValueError",
+          "lineNumber": 63
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "any",
+          "lineNumber": 64
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "ValueError",
+          "lineNumber": 65
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "payload.get",
+          "lineNumber": 66
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "\"/\".join",
+          "lineNumber": 66
+        },
+        {
+          "caller": "_validate_case_payload",
+          "callee": "ValueError",
+          "lineNumber": 67
+        },
+        {
+          "caller": "fetch_pinned_source",
+          "callee": "_validate_case_payload",
+          "lineNumber": 73
+        },
+        {
+          "caller": "fetch_pinned_source",
+          "callee": "destination.parent.mkdir",
+          "lineNumber": 74
+        },
+        {
+          "caller": "fetch_pinned_source",
+          "callee": "destination.exists",
+          "lineNumber": 75
+        },
+        {
+          "caller": "fetch_pinned_source",
+          "callee": "destination.open",
+          "lineNumber": 76
+        },
+        {
+          "caller": "fetch_pinned_source",
+          "callee": "stream.read",
+          "lineNumber": 77
+        },
+        {
+          "caller": "fetch_pinned_source",
+          "callee": "len",
+          "lineNumber": 78
+        },
+        {
+          "caller": "fetch_pinned_source",
+          "callee": "ValueError",
+          "lineNumber": 79
+        },
+        {
+          "caller": "fetch_pinned_source",
+          "callee": "urllib.request.Request",
+          "lineNumber": 82
+        },
+        {
+          "caller": "fetch_pinned_source",
+          "callee": "str",
+          "lineNumber": 83
+        },
+        {
+          "caller": "fetch_pinned_source",
+          "callee": "read_https_response",
+          "lineNumber": 86
+        },
+        {
+          "caller": "fetch_pinned_source",
+          "callee": "hashlib.sha256(content).hexdigest",
+          "lineNumber": 88
+        },
+        {
+          "caller": "fetch_pinned_source",
+          "callee": "hashlib.sha256",
+          "lineNumber": 88
+        },
+        {
+          "caller": "fetch_pinned_source",
+          "callee": "str(case[\"sha256\"]).lower",
+          "lineNumber": 89
+        },
+        {
+          "caller": "fetch_pinned_source",
+          "callee": "str",
+          "lineNumber": 89
+        },
+        {
+          "caller": "fetch_pinned_source",
+          "callee": "RuntimeError",
+          "lineNumber": 91
+        },
+        {
+          "caller": "fetch_pinned_source",
+          "callee": "destination.open",
+          "lineNumber": 94
+        },
+        {
+          "caller": "fetch_pinned_source",
+          "callee": "stream.write",
+          "lineNumber": 95
+        },
+        {
+          "caller": "fetch_pinned_source",
+          "callee": "str",
+          "lineNumber": 96
+        },
+        {
+          "caller": "fetch_pinned_source",
+          "callee": "destination.resolve",
+          "lineNumber": 96
+        },
+        {
+          "caller": "fetch_pinned_source",
+          "callee": "len",
+          "lineNumber": 96
+        },
+        {
+          "caller": "topology_counts",
+          "callee": "tuple",
+          "lineNumber": 101
+        },
+        {
+          "caller": "topology_counts",
+          "callee": "get_com_member",
+          "lineNumber": 101
+        },
+        {
+          "caller": "topology_counts",
+          "callee": "set",
+          "lineNumber": 104
+        },
+        {
+          "caller": "topology_counts",
+          "callee": "faces.extend",
+          "lineNumber": 106
+        },
+        {
+          "caller": "topology_counts",
+          "callee": "tuple",
+          "lineNumber": 106
+        },
+        {
+          "caller": "topology_counts",
+          "callee": "get_com_member",
+          "lineNumber": 106
+        },
+        {
+          "caller": "topology_counts",
+          "callee": "tuple",
+          "lineNumber": 107
+        },
+        {
+          "caller": "topology_counts",
+          "callee": "get_com_member",
+          "lineNumber": 107
+        },
+        {
+          "caller": "topology_counts",
+          "callee": "edges.extend",
+          "lineNumber": 108
+        },
+        {
+          "caller": "topology_counts",
+          "callee": "get_com_member",
+          "lineNumber": 111
+        },
+        {
+          "caller": "topology_counts",
+          "callee": "tuple",
+          "lineNumber": 114
+        },
+        {
+          "caller": "topology_counts",
+          "callee": "round",
+          "lineNumber": 114
+        },
+        {
+          "caller": "topology_counts",
+          "callee": "float",
+          "lineNumber": 114
+        },
+        {
+          "caller": "topology_counts",
+          "callee": "get_com_member",
+          "lineNumber": 114
+        },
+        {
+          "caller": "topology_counts",
+          "callee": "vertices.add",
+          "lineNumber": 115
+        },
+        {
+          "caller": "topology_counts",
+          "callee": "len",
+          "lineNumber": 117
+        },
+        {
+          "caller": "topology_counts",
+          "callee": "len",
+          "lineNumber": 118
+        },
+        {
+          "caller": "topology_counts",
+          "callee": "len",
+          "lineNumber": 119
+        },
+        {
+          "caller": "topology_counts",
+          "callee": "len",
+          "lineNumber": 120
+        },
+        {
+          "caller": "topology_is_complex",
+          "callee": "counts.get",
+          "lineNumber": 127
+        },
+        {
+          "caller": "topology_is_complex",
+          "callee": "counts.get",
+          "lineNumber": 128
+        },
+        {
+          "caller": "topology_is_complex",
+          "callee": "counts.get",
+          "lineNumber": 129
+        },
+        {
+          "caller": "topology_is_complex",
+          "callee": "counts.get",
+          "lineNumber": 130
+        },
+        {
+          "caller": "assert_expected_source_topology",
+          "callee": "case.get",
+          "lineNumber": 136
+        },
+        {
+          "caller": "assert_expected_source_topology",
+          "callee": "int",
+          "lineNumber": 138
+        },
+        {
+          "caller": "assert_expected_source_topology",
+          "callee": "int",
+          "lineNumber": 138
+        },
+        {
+          "caller": "assert_expected_source_topology",
+          "callee": "counts.get",
+          "lineNumber": 138
+        },
+        {
+          "caller": "assert_expected_source_topology",
+          "callee": "expected.items",
+          "lineNumber": 139
+        },
+        {
+          "caller": "assert_expected_source_topology",
+          "callee": "int",
+          "lineNumber": 140
+        },
+        {
+          "caller": "assert_expected_source_topology",
+          "callee": "counts.get",
+          "lineNumber": 140
+        },
+        {
+          "caller": "assert_expected_source_topology",
+          "callee": "int",
+          "lineNumber": 140
+        },
+        {
+          "caller": "assert_expected_source_topology",
+          "callee": "RuntimeError",
+          "lineNumber": 143
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "get_com_member",
+          "lineNumber": 148
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "bool",
+          "lineNumber": 149
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "get_com_member",
+          "lineNumber": 149
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "get_com_member",
+          "lineNumber": 151
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "get_com_member",
+          "lineNumber": 152
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "tuple",
+          "lineNumber": 156
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "float",
+          "lineNumber": 156
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "get_com_member",
+          "lineNumber": 156
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "sum",
+          "lineNumber": 159
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "range",
+          "lineNumber": 160
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "sorted",
+          "lineNumber": 162
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "round",
+          "lineNumber": 163
+        },
+        {
+          "caller": "edge_signature",
+          "callee": "round",
+          "lineNumber": 168
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "tuple",
+          "lineNumber": 175
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "get_com_member",
+          "lineNumber": 175
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "len",
+          "lineNumber": 176
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "RuntimeError",
+          "lineNumber": 177
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "case.get",
+          "lineNumber": 178
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "operation.get",
+          "lineNumber": 179
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "operation.get",
+          "lineNumber": 180
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "operation.get",
+          "lineNumber": 181
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "len",
+          "lineNumber": 181
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "ValueError",
+          "lineNumber": 182
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "float",
+          "lineNumber": 183
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "ValueError",
+          "lineNumber": 185
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "tuple",
+          "lineNumber": 187
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "get_com_member",
+          "lineNumber": 187
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "edge_signature",
+          "lineNumber": 188
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "matches.append",
+          "lineNumber": 190
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "len",
+          "lineNumber": 191
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "RuntimeError",
+          "lineNumber": 192
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "len",
+          "lineNumber": 192
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "model.ClearSelection2",
+          "lineNumber": 194
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "edge.Select2",
+          "lineNumber": 195
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "RuntimeError",
+          "lineNumber": 196
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "model.FeatureManager.InsertFeatureChamfer",
+          "lineNumber": 197
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "mm",
+          "lineNumber": 200
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "mm",
+          "lineNumber": 202
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "RuntimeError",
+          "lineNumber": 208
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "model.ForceRebuild3",
+          "lineNumber": 210
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "RuntimeError",
+          "lineNumber": 211
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "get_com_member",
+          "lineNumber": 212
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "int",
+          "lineNumber": 213
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "get_com_member",
+          "lineNumber": 213
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "round",
+          "lineNumber": 215
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "float",
+          "lineNumber": 215
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "data.GetEdgeChamferDistance",
+          "lineNumber": 215
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "sorted",
+          "lineNumber": 219
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "sorted",
+          "lineNumber": 219
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "RuntimeError",
+          "lineNumber": 220
+        },
+        {
+          "caller": "apply_complex_width_width_chamfer",
+          "callee": "str",
+          "lineNumber": 225
+        },
+        {
+          "caller": "hide_review_helpers",
+          "callee": "model.SetUserPreferenceToggle",
+          "lineNumber": 236
+        },
+        {
+          "caller": "hide_review_helpers",
+          "callee": "model.ClearSelection2",
+          "lineNumber": 239
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "output_dir.mkdir",
+          "lineNumber": 244
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "SolidWorksSession",
+          "lineNumber": 249
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "session.open",
+          "lineNumber": 251
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "topology_counts",
+          "lineNumber": 252
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "topology_is_complex",
+          "lineNumber": 253
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "RuntimeError",
+          "lineNumber": 254
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "assert_expected_source_topology",
+          "lineNumber": 255
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "apply_complex_width_width_chamfer",
+          "lineNumber": 256
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "topology_counts",
+          "lineNumber": 257
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "session.save",
+          "lineNumber": 258
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "RuntimeError",
+          "lineNumber": 259
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "export_to_step",
+          "lineNumber": 260
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "RuntimeError",
+          "lineNumber": 261
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "hide_review_helpers",
+          "lineNumber": 262
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "run_review",
+          "lineNumber": 263
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "str",
+          "lineNumber": 267
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "str",
+          "lineNumber": 267
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "RuntimeError",
+          "lineNumber": 270
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "session.close",
+          "lineNumber": 271
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "session.open",
+          "lineNumber": 273
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "topology_counts",
+          "lineNumber": 274
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "bool",
+          "lineNumber": 275
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "reopened.ForceRebuild3",
+          "lineNumber": 275
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "RuntimeError",
+          "lineNumber": 277
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "reopened.FeatureByName",
+          "lineNumber": 280
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "str",
+          "lineNumber": 281
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "get_com_member",
+          "lineNumber": 281
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "RuntimeError",
+          "lineNumber": 282
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "str",
+          "lineNumber": 285
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "session.sw.RevisionNumber",
+          "lineNumber": 285
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "topology_is_complex",
+          "lineNumber": 291
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "part_path.is_file",
+          "lineNumber": 294
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "part_path.stat",
+          "lineNumber": 294
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "step_path.is_file",
+          "lineNumber": 295
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "step_path.stat",
+          "lineNumber": 295
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "str",
+          "lineNumber": 301
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "part_path.resolve",
+          "lineNumber": 301
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "str",
+          "lineNumber": 302
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "step_path.resolve",
+          "lineNumber": 302
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "str",
+          "lineNumber": 303
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "Path(review_path).resolve",
+          "lineNumber": 303
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "Path",
+          "lineNumber": 303
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "session.close",
+          "lineNumber": 308
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "session.close",
+          "lineNumber": 310
+        },
+        {
+          "caller": "run_solidworks_case",
+          "callee": "session.quit_owned_instance",
+          "lineNumber": 311
+        },
+        {
+          "caller": "parse_args",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 316
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 317
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 318
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 319
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 320
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.parse_args",
+          "lineNumber": 321
+        },
+        {
+          "caller": "main",
+          "callee": "parse_args",
+          "lineNumber": 326
+        },
+        {
+          "caller": "main",
+          "callee": "args.output_dir.resolve",
+          "lineNumber": 327
+        },
+        {
+          "caller": "main",
+          "callee": "load_case",
+          "lineNumber": 328
+        },
+        {
+          "caller": "main",
+          "callee": "args.case.resolve",
+          "lineNumber": 328
+        },
+        {
+          "caller": "main",
+          "callee": "fetch_pinned_source",
+          "lineNumber": 329
+        },
+        {
+          "caller": "main",
+          "callee": "report.update",
+          "lineNumber": 334
+        },
+        {
+          "caller": "main",
+          "callee": "run_solidworks_case",
+          "lineNumber": 334
+        },
+        {
+          "caller": "main",
+          "callee": "Path",
+          "lineNumber": 334
+        },
+        {
+          "caller": "main",
+          "callee": "report_path.write_text",
+          "lineNumber": 336
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 336
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 337
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 337
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 337
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 13,
+        "functionCount": 13,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "subskills/solidworks-threaded-holes/agents/openai.yaml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 4,
+      "nonEmptyLines": 4,
+      "sections": [
+        {
+          "heading": "interface",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "subskills/solidworks-threaded-holes/references/threaded-hole-lessons.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 84,
+      "nonEmptyLines": 57,
+      "sections": [
+        {
+          "heading": "SolidWorks 螺纹孔实测经验",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "2026-08-29 实测结论",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "官方 API 依据",
+          "level": 2,
+          "line": 21
+        },
+        {
+          "heading": "正确的终止条件",
+          "level": 2,
+          "line": 31
+        },
+        {
+          "heading": "参数验证底线",
+          "level": 2,
+          "line": 52
+        },
+        {
+          "heading": "特征持久化证据",
+          "level": 2,
+          "line": 62
+        },
+        {
+          "heading": "3D 螺旋线只是证据表达",
+          "level": 2,
+          "line": 72
+        },
+        {
+          "heading": "尚未覆盖的制造细节",
+          "level": 2,
+          "line": 80
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "subskills/solidworks-threaded-holes/references/threaded-hole-roadmap.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 67,
+      "nonEmptyLines": 43,
+      "sections": [
+        {
+          "heading": "SolidWorks 螺纹孔扩展路线图",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "P0：核心正确性（已完成）",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "P1：原生孔语义与现有零件（优先级最高）",
+          "level": 2,
+          "line": 14
+        },
+        {
+          "heading": "1. Hole Wizard5 / WizardHoleFeatureData2",
+          "level": 3,
+          "line": 16
+        },
+        {
+          "heading": "2. 修改现有零件与批量孔位",
+          "level": 3,
+          "line": 29
+        },
+        {
+          "heading": "P2：螺纹标准数据化",
+          "level": 2,
+          "line": 41
+        },
+        {
+          "heading": "P3：制造真实性",
+          "level": 2,
+          "line": 52
+        },
+        {
+          "heading": "P4：工程图、PMI 与 CAM 证据",
+          "level": 2,
+          "line": 61
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "subskills/solidworks-threaded-holes/scripts/create_threaded_hole_template.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 812,
+      "nonEmptyLines": 713,
+      "functions": [
+        {
+          "name": "normalize_thread_key",
+          "startLine": 97,
+          "endLine": 114,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "resolve_thread_spec",
+          "startLine": 117,
+          "endLine": 141,
+          "params": [
+            "value",
+            "tap_drill_override"
+          ]
+        },
+        {
+          "name": "finite_number",
+          "startLine": 144,
+          "endLine": 149,
+          "params": [
+            "name",
+            "value"
+          ]
+        },
+        {
+          "name": "positive_number",
+          "startLine": 152,
+          "endLine": 157,
+          "params": [
+            "name",
+            "value"
+          ]
+        },
+        {
+          "name": "validate_basename",
+          "startLine": 160,
+          "endLine": 165,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "face_config",
+          "startLine": 168,
+          "endLine": 173,
+          "params": [
+            "face_name"
+          ]
+        },
+        {
+          "name": "assert_feature",
+          "startLine": 176,
+          "endLine": 181,
+          "params": [
+            "feature",
+            "label"
+          ]
+        },
+        {
+          "name": "clear",
+          "startLine": 184,
+          "endLine": 186,
+          "params": [
+            "model"
+          ]
+        },
+        {
+          "name": "hide_reference_planes",
+          "startLine": 189,
+          "endLine": 197,
+          "params": [
+            "model"
+          ]
+        },
+        {
+          "name": "hide_visible_thread_sketch",
+          "startLine": 200,
+          "endLine": 210,
+          "params": [
+            "model",
+            "params"
+          ]
+        },
+        {
+          "name": "select_plane",
+          "startLine": 213,
+          "endLine": 235,
+          "params": [
+            "model",
+            "plane_name"
+          ]
+        },
+        {
+          "name": "current_sketch_name",
+          "startLine": 238,
+          "endLine": 241,
+          "params": [
+            "model",
+            "fallback"
+          ]
+        },
+        {
+          "name": "create_offset_plane",
+          "startLine": 244,
+          "endLine": 251,
+          "params": [
+            "model",
+            "name",
+            "base_plane",
+            "offset_mm"
+          ]
+        },
+        {
+          "name": "select_sketch",
+          "startLine": 254,
+          "endLine": 269,
+          "params": [
+            "model",
+            "name"
+          ]
+        },
+        {
+          "name": "cut_hole_from_sketch",
+          "startLine": 272,
+          "endLine": 283,
+          "params": [
+            "model",
+            "sketch_name",
+            "depth_mm",
+            "label",
+            "through"
+          ]
+        },
+        {
+          "name": "circle_center_radius",
+          "startLine": 286,
+          "endLine": 295,
+          "params": [
+            "edge"
+          ]
+        },
+        {
+          "name": "all_edges",
+          "startLine": 298,
+          "endLine": 304,
+          "params": [
+            "model"
+          ]
+        },
+        {
+          "name": "model_point_from_local",
+          "startLine": 307,
+          "endLine": 314,
+          "params": [
+            "params",
+            "u_m",
+            "v_m",
+            "axis_m"
+          ]
+        },
+        {
+          "name": "locate_hole_mouth_edge",
+          "startLine": 317,
+          "endLine": 340,
+          "params": [
+            "model",
+            "params",
+            "select"
+          ]
+        },
+        {
+          "name": "select_hole_mouth_edge",
+          "startLine": 343,
+          "endLine": 346,
+          "params": [
+            "model",
+            "params"
+          ]
+        },
+        {
+          "name": "add_hole_mouth_chamfer",
+          "startLine": 349,
+          "endLine": 357,
+          "params": [
+            "model",
+            "params"
+          ]
+        },
+        {
+          "name": "add_real_thread_feature",
+          "startLine": 360,
+          "endLine": 406,
+          "params": [
+            "model",
+            "params"
+          ]
+        },
+        {
+          "name": "add_cosmetic_thread_feature",
+          "startLine": 409,
+          "endLine": 431,
+          "params": [
+            "model",
+            "params"
+          ]
+        },
+        {
+          "name": "visible_helix_plan",
+          "startLine": 434,
+          "endLine": 449,
+          "params": [
+            "params"
+          ]
+        },
+        {
+          "name": "add_visible_thread_helix",
+          "startLine": 452,
+          "endLine": 499,
+          "params": [
+            "model",
+            "params"
+          ]
+        },
+        {
+          "name": "write_thread_properties",
+          "startLine": 502,
+          "endLine": 514,
+          "params": [
+            "model",
+            "params",
+            "thread_status",
+            "visible_segments"
+          ]
+        },
+        {
+          "name": "build_params",
+          "startLine": 517,
+          "endLine": 588,
+          "params": [
+            "args"
+          ]
+        },
+        {
+          "name": "collect_thread_feature_evidence",
+          "startLine": 591,
+          "endLine": 628,
+          "params": [
+            "model",
+            "params",
+            "visible_segments"
+          ]
+        },
+        {
+          "name": "require_thread_representation",
+          "startLine": 631,
+          "endLine": 639,
+          "params": [
+            "evidence"
+          ]
+        },
+        {
+          "name": "create_threaded_hole_block",
+          "startLine": 642,
+          "endLine": 765,
+          "params": [
+            "params",
+            "output_dir",
+            "basename"
+          ]
+        },
+        {
+          "name": "parse_args",
+          "startLine": 768,
+          "endLine": 798,
+          "params": []
+        },
+        {
+          "name": "main",
+          "startLine": 801,
+          "endLine": 808,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ThreadedHoleParams",
+          "startLine": 75,
+          "endLine": 94,
+          "methods": [],
+          "properties": [
+            "thread_label",
+            "block_length_mm",
+            "block_width_mm",
+            "block_thickness_mm",
+            "hole_x_mm",
+            "hole_y_mm",
+            "nominal_diameter_mm",
+            "pitch_mm",
+            "tap_drill_diameter_mm",
+            "pilot_depth_mm",
+            "thread_depth_mm",
+            "mouth_chamfer_mm",
+            "through_hole",
+            "hole_face",
+            "thread_class",
+            "right_handed",
+            "visible_thread_mode"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ThreadedHoleParams",
+          "line": 74,
+          "isDefault": false
+        },
+        {
+          "name": "normalize_thread_key",
+          "line": 97,
+          "isDefault": false
+        },
+        {
+          "name": "resolve_thread_spec",
+          "line": 117,
+          "isDefault": false
+        },
+        {
+          "name": "finite_number",
+          "line": 144,
+          "isDefault": false
+        },
+        {
+          "name": "positive_number",
+          "line": 152,
+          "isDefault": false
+        },
+        {
+          "name": "validate_basename",
+          "line": 160,
+          "isDefault": false
+        },
+        {
+          "name": "face_config",
+          "line": 168,
+          "isDefault": false
+        },
+        {
+          "name": "assert_feature",
+          "line": 176,
+          "isDefault": false
+        },
+        {
+          "name": "clear",
+          "line": 184,
+          "isDefault": false
+        },
+        {
+          "name": "hide_reference_planes",
+          "line": 189,
+          "isDefault": false
+        },
+        {
+          "name": "hide_visible_thread_sketch",
+          "line": 200,
+          "isDefault": false
+        },
+        {
+          "name": "select_plane",
+          "line": 213,
+          "isDefault": false
+        },
+        {
+          "name": "current_sketch_name",
+          "line": 238,
+          "isDefault": false
+        },
+        {
+          "name": "create_offset_plane",
+          "line": 244,
+          "isDefault": false
+        },
+        {
+          "name": "select_sketch",
+          "line": 254,
+          "isDefault": false
+        },
+        {
+          "name": "cut_hole_from_sketch",
+          "line": 272,
+          "isDefault": false
+        },
+        {
+          "name": "circle_center_radius",
+          "line": 286,
+          "isDefault": false
+        },
+        {
+          "name": "all_edges",
+          "line": 298,
+          "isDefault": false
+        },
+        {
+          "name": "model_point_from_local",
+          "line": 307,
+          "isDefault": false
+        },
+        {
+          "name": "locate_hole_mouth_edge",
+          "line": 317,
+          "isDefault": false
+        },
+        {
+          "name": "select_hole_mouth_edge",
+          "line": 343,
+          "isDefault": false
+        },
+        {
+          "name": "add_hole_mouth_chamfer",
+          "line": 349,
+          "isDefault": false
+        },
+        {
+          "name": "add_real_thread_feature",
+          "line": 360,
+          "isDefault": false
+        },
+        {
+          "name": "add_cosmetic_thread_feature",
+          "line": 409,
+          "isDefault": false
+        },
+        {
+          "name": "visible_helix_plan",
+          "line": 434,
+          "isDefault": false
+        },
+        {
+          "name": "add_visible_thread_helix",
+          "line": 452,
+          "isDefault": false
+        },
+        {
+          "name": "write_thread_properties",
+          "line": 502,
+          "isDefault": false
+        },
+        {
+          "name": "build_params",
+          "line": 517,
+          "isDefault": false
+        },
+        {
+          "name": "collect_thread_feature_evidence",
+          "line": 591,
+          "isDefault": false
+        },
+        {
+          "name": "require_thread_representation",
+          "line": 631,
+          "isDefault": false
+        },
+        {
+          "name": "create_threaded_hole_block",
+          "line": 642,
+          "isDefault": false
+        },
+        {
+          "name": "parse_args",
+          "line": 768,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 801,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "normalize_thread_key",
+          "callee": "value.strip().upper().replace(\" \", \"\").replace",
+          "lineNumber": 99
+        },
+        {
+          "caller": "normalize_thread_key",
+          "callee": "value.strip().upper().replace",
+          "lineNumber": 99
+        },
+        {
+          "caller": "normalize_thread_key",
+          "callee": "value.strip().upper",
+          "lineNumber": 99
+        },
+        {
+          "caller": "normalize_thread_key",
+          "callee": "value.strip",
+          "lineNumber": 99
+        },
+        {
+          "caller": "normalize_thread_key",
+          "callee": "ValueError",
+          "lineNumber": 103
+        },
+        {
+          "caller": "normalize_thread_key",
+          "callee": "raw.split",
+          "lineNumber": 104
+        },
+        {
+          "caller": "normalize_thread_key",
+          "callee": "float",
+          "lineNumber": 106
+        },
+        {
+          "caller": "normalize_thread_key",
+          "callee": "ValueError",
+          "lineNumber": 108
+        },
+        {
+          "caller": "normalize_thread_key",
+          "callee": "known.split",
+          "lineNumber": 111
+        },
+        {
+          "caller": "normalize_thread_key",
+          "callee": "abs",
+          "lineNumber": 112
+        },
+        {
+          "caller": "normalize_thread_key",
+          "callee": "float",
+          "lineNumber": 112
+        },
+        {
+          "caller": "normalize_thread_key",
+          "callee": "ValueError",
+          "lineNumber": 114
+        },
+        {
+          "caller": "normalize_thread_key",
+          "callee": "', '.join",
+          "lineNumber": 114
+        },
+        {
+          "caller": "normalize_thread_key",
+          "callee": "sorted",
+          "lineNumber": 114
+        },
+        {
+          "caller": "resolve_thread_spec",
+          "callee": "normalize_thread_key",
+          "lineNumber": 120
+        },
+        {
+          "caller": "resolve_thread_spec",
+          "callee": "value.strip().upper().replace(\" \", \"\").replace",
+          "lineNumber": 122
+        },
+        {
+          "caller": "resolve_thread_spec",
+          "callee": "value.strip().upper().replace",
+          "lineNumber": 122
+        },
+        {
+          "caller": "resolve_thread_spec",
+          "callee": "value.strip().upper",
+          "lineNumber": 122
+        },
+        {
+          "caller": "resolve_thread_spec",
+          "callee": "value.strip",
+          "lineNumber": 122
+        },
+        {
+          "caller": "resolve_thread_spec",
+          "callee": "re.fullmatch",
+          "lineNumber": 123
+        },
+        {
+          "caller": "resolve_thread_spec",
+          "callee": "float",
+          "lineNumber": 126
+        },
+        {
+          "caller": "resolve_thread_spec",
+          "callee": "match.group",
+          "lineNumber": 126
+        },
+        {
+          "caller": "resolve_thread_spec",
+          "callee": "float",
+          "lineNumber": 127
+        },
+        {
+          "caller": "resolve_thread_spec",
+          "callee": "match.group",
+          "lineNumber": 127
+        },
+        {
+          "caller": "resolve_thread_spec",
+          "callee": "float",
+          "lineNumber": 132
+        },
+        {
+          "caller": "resolve_thread_spec",
+          "callee": "dict",
+          "lineNumber": 135
+        },
+        {
+          "caller": "resolve_thread_spec",
+          "callee": "float",
+          "lineNumber": 137
+        },
+        {
+          "caller": "finite_number",
+          "callee": "float",
+          "lineNumber": 146
+        },
+        {
+          "caller": "finite_number",
+          "callee": "math.isfinite",
+          "lineNumber": 147
+        },
+        {
+          "caller": "finite_number",
+          "callee": "ValueError",
+          "lineNumber": 148
+        },
+        {
+          "caller": "positive_number",
+          "callee": "finite_number",
+          "lineNumber": 154
+        },
+        {
+          "caller": "positive_number",
+          "callee": "ValueError",
+          "lineNumber": 156
+        },
+        {
+          "caller": "validate_basename",
+          "callee": "str(value).strip",
+          "lineNumber": 162
+        },
+        {
+          "caller": "validate_basename",
+          "callee": "str",
+          "lineNumber": 162
+        },
+        {
+          "caller": "validate_basename",
+          "callee": "Path",
+          "lineNumber": 163
+        },
+        {
+          "caller": "validate_basename",
+          "callee": "any",
+          "lineNumber": 163
+        },
+        {
+          "caller": "validate_basename",
+          "callee": "ValueError",
+          "lineNumber": 164
+        },
+        {
+          "caller": "face_config",
+          "callee": "face_name.strip().lower",
+          "lineNumber": 170
+        },
+        {
+          "caller": "face_config",
+          "callee": "face_name.strip",
+          "lineNumber": 170
+        },
+        {
+          "caller": "face_config",
+          "callee": "ValueError",
+          "lineNumber": 172
+        },
+        {
+          "caller": "assert_feature",
+          "callee": "RuntimeError",
+          "lineNumber": 179
+        },
+        {
+          "caller": "assert_feature",
+          "callee": "print",
+          "lineNumber": 180
+        },
+        {
+          "caller": "assert_feature",
+          "callee": "getattr",
+          "lineNumber": 180
+        },
+        {
+          "caller": "clear",
+          "callee": "model.ClearSelection2",
+          "lineNumber": 186
+        },
+        {
+          "caller": "hide_reference_planes",
+          "callee": "clear",
+          "lineNumber": 191
+        },
+        {
+          "caller": "hide_reference_planes",
+          "callee": "bool",
+          "lineNumber": 193
+        },
+        {
+          "caller": "hide_reference_planes",
+          "callee": "get_com_member",
+          "lineNumber": 193
+        },
+        {
+          "caller": "hide_reference_planes",
+          "callee": "get_com_member",
+          "lineNumber": 194
+        },
+        {
+          "caller": "hide_reference_planes",
+          "callee": "print",
+          "lineNumber": 196
+        },
+        {
+          "caller": "hide_reference_planes",
+          "callee": "clear",
+          "lineNumber": 197
+        },
+        {
+          "caller": "hide_visible_thread_sketch",
+          "callee": "clear",
+          "lineNumber": 203
+        },
+        {
+          "caller": "hide_visible_thread_sketch",
+          "callee": "model.FeatureByName",
+          "lineNumber": 204
+        },
+        {
+          "caller": "hide_visible_thread_sketch",
+          "callee": "bool",
+          "lineNumber": 205
+        },
+        {
+          "caller": "hide_visible_thread_sketch",
+          "callee": "feature.Select2",
+          "lineNumber": 205
+        },
+        {
+          "caller": "hide_visible_thread_sketch",
+          "callee": "clear",
+          "lineNumber": 206
+        },
+        {
+          "caller": "hide_visible_thread_sketch",
+          "callee": "get_com_member",
+          "lineNumber": 208
+        },
+        {
+          "caller": "hide_visible_thread_sketch",
+          "callee": "clear",
+          "lineNumber": 209
+        },
+        {
+          "caller": "select_plane",
+          "callee": "clear",
+          "lineNumber": 215
+        },
+        {
+          "caller": "select_plane",
+          "callee": "model.Extension.SelectByID2",
+          "lineNumber": 222
+        },
+        {
+          "caller": "select_plane",
+          "callee": "create_empty_dispatch_variant",
+          "lineNumber": 230
+        },
+        {
+          "caller": "select_plane",
+          "callee": "RuntimeError",
+          "lineNumber": 235
+        },
+        {
+          "caller": "create_offset_plane",
+          "callee": "model.FeatureByName",
+          "lineNumber": 246
+        },
+        {
+          "caller": "create_offset_plane",
+          "callee": "select_plane",
+          "lineNumber": 248
+        },
+        {
+          "caller": "create_offset_plane",
+          "callee": "assert_feature",
+          "lineNumber": 249
+        },
+        {
+          "caller": "create_offset_plane",
+          "callee": "model.FeatureManager.InsertRefPlane",
+          "lineNumber": 249
+        },
+        {
+          "caller": "create_offset_plane",
+          "callee": "mm",
+          "lineNumber": 249
+        },
+        {
+          "caller": "select_sketch",
+          "callee": "clear",
+          "lineNumber": 256
+        },
+        {
+          "caller": "select_sketch",
+          "callee": "model.Extension.SelectByID2",
+          "lineNumber": 257
+        },
+        {
+          "caller": "select_sketch",
+          "callee": "create_empty_dispatch_variant",
+          "lineNumber": 265
+        },
+        {
+          "caller": "select_sketch",
+          "callee": "RuntimeError",
+          "lineNumber": 269
+        },
+        {
+          "caller": "cut_hole_from_sketch",
+          "callee": "select_sketch",
+          "lineNumber": 274
+        },
+        {
+          "caller": "cut_hole_from_sketch",
+          "callee": "model.FeatureManager.FeatureCut4",
+          "lineNumber": 276
+        },
+        {
+          "caller": "cut_hole_from_sketch",
+          "callee": "mm",
+          "lineNumber": 277
+        },
+        {
+          "caller": "cut_hole_from_sketch",
+          "callee": "assert_feature",
+          "lineNumber": 283
+        },
+        {
+          "caller": "circle_center_radius",
+          "callee": "get_com_member",
+          "lineNumber": 289
+        },
+        {
+          "caller": "circle_center_radius",
+          "callee": "get_com_member",
+          "lineNumber": 290
+        },
+        {
+          "caller": "circle_center_radius",
+          "callee": "get_com_member",
+          "lineNumber": 292
+        },
+        {
+          "caller": "circle_center_radius",
+          "callee": "float",
+          "lineNumber": 293
+        },
+        {
+          "caller": "circle_center_radius",
+          "callee": "float",
+          "lineNumber": 293
+        },
+        {
+          "caller": "circle_center_radius",
+          "callee": "float",
+          "lineNumber": 293
+        },
+        {
+          "caller": "circle_center_radius",
+          "callee": "float",
+          "lineNumber": 293
+        },
+        {
+          "caller": "all_edges",
+          "callee": "model.ForceRebuild3",
+          "lineNumber": 300
+        },
+        {
+          "caller": "all_edges",
+          "callee": "get_com_member",
+          "lineNumber": 302
+        },
+        {
+          "caller": "all_edges",
+          "callee": "edges.extend",
+          "lineNumber": 303
+        },
+        {
+          "caller": "all_edges",
+          "callee": "list",
+          "lineNumber": 303
+        },
+        {
+          "caller": "all_edges",
+          "callee": "get_com_member",
+          "lineNumber": 303
+        },
+        {
+          "caller": "model_point_from_local",
+          "callee": "face_config",
+          "lineNumber": 309
+        },
+        {
+          "caller": "model_point_from_local",
+          "callee": "tuple",
+          "lineNumber": 314
+        },
+        {
+          "caller": "locate_hole_mouth_edge",
+          "callee": "face_config",
+          "lineNumber": 319
+        },
+        {
+          "caller": "locate_hole_mouth_edge",
+          "callee": "mm",
+          "lineNumber": 322
+        },
+        {
+          "caller": "locate_hole_mouth_edge",
+          "callee": "mm",
+          "lineNumber": 323
+        },
+        {
+          "caller": "locate_hole_mouth_edge",
+          "callee": "clear",
+          "lineNumber": 325
+        },
+        {
+          "caller": "locate_hole_mouth_edge",
+          "callee": "all_edges",
+          "lineNumber": 326
+        },
+        {
+          "caller": "locate_hole_mouth_edge",
+          "callee": "circle_center_radius",
+          "lineNumber": 327
+        },
+        {
+          "caller": "locate_hole_mouth_edge",
+          "callee": "abs",
+          "lineNumber": 332
+        },
+        {
+          "caller": "locate_hole_mouth_edge",
+          "callee": "mm",
+          "lineNumber": 332
+        },
+        {
+          "caller": "locate_hole_mouth_edge",
+          "callee": "mm",
+          "lineNumber": 332
+        },
+        {
+          "caller": "locate_hole_mouth_edge",
+          "callee": "abs",
+          "lineNumber": 333
+        },
+        {
+          "caller": "locate_hole_mouth_edge",
+          "callee": "mm",
+          "lineNumber": 333
+        },
+        {
+          "caller": "locate_hole_mouth_edge",
+          "callee": "mm",
+          "lineNumber": 333
+        },
+        {
+          "caller": "locate_hole_mouth_edge",
+          "callee": "abs",
+          "lineNumber": 334
+        },
+        {
+          "caller": "locate_hole_mouth_edge",
+          "callee": "abs",
+          "lineNumber": 334
+        },
+        {
+          "caller": "locate_hole_mouth_edge",
+          "callee": "mm",
+          "lineNumber": 334
+        },
+        {
+          "caller": "locate_hole_mouth_edge",
+          "callee": "abs",
+          "lineNumber": 336
+        },
+        {
+          "caller": "locate_hole_mouth_edge",
+          "callee": "mm",
+          "lineNumber": 336
+        },
+        {
+          "caller": "locate_hole_mouth_edge",
+          "callee": "edge.Select2",
+          "lineNumber": 338
+        },
+        {
+          "caller": "locate_hole_mouth_edge",
+          "callee": "RuntimeError",
+          "lineNumber": 340
+        },
+        {
+          "caller": "select_hole_mouth_edge",
+          "callee": "locate_hole_mouth_edge",
+          "lineNumber": 345
+        },
+        {
+          "caller": "add_hole_mouth_chamfer",
+          "callee": "select_hole_mouth_edge",
+          "lineNumber": 351
+        },
+        {
+          "caller": "add_hole_mouth_chamfer",
+          "callee": "model.FeatureManager.InsertFeatureChamfer",
+          "lineNumber": 352
+        },
+        {
+          "caller": "add_hole_mouth_chamfer",
+          "callee": "mm",
+          "lineNumber": 353
+        },
+        {
+          "caller": "add_hole_mouth_chamfer",
+          "callee": "assert_feature",
+          "lineNumber": 355
+        },
+        {
+          "caller": "add_hole_mouth_chamfer",
+          "callee": "clear",
+          "lineNumber": 356
+        },
+        {
+          "caller": "add_real_thread_feature",
+          "callee": "locate_hole_mouth_edge",
+          "lineNumber": 362
+        },
+        {
+          "caller": "add_real_thread_feature",
+          "callee": "model.FeatureManager.CreateDefinition",
+          "lineNumber": 363
+        },
+        {
+          "caller": "add_real_thread_feature",
+          "callee": "RuntimeError",
+          "lineNumber": 365
+        },
+        {
+          "caller": "add_real_thread_feature",
+          "callee": "thread_data.InitializeThreadData",
+          "lineNumber": 368
+        },
+        {
+          "caller": "add_real_thread_feature",
+          "callee": "print",
+          "lineNumber": 370
+        },
+        {
+          "caller": "add_real_thread_feature",
+          "callee": "clear",
+          "lineNumber": 372
+        },
+        {
+          "caller": "add_real_thread_feature",
+          "callee": "edge.Select2",
+          "lineNumber": 373
+        },
+        {
+          "caller": "add_real_thread_feature",
+          "callee": "RuntimeError",
+          "lineNumber": 374
+        },
+        {
+          "caller": "add_real_thread_feature",
+          "callee": "mm",
+          "lineNumber": 380
+        },
+        {
+          "caller": "add_real_thread_feature",
+          "callee": "mm",
+          "lineNumber": 388
+        },
+        {
+          "caller": "add_real_thread_feature",
+          "callee": "setattr",
+          "lineNumber": 395
+        },
+        {
+          "caller": "add_real_thread_feature",
+          "callee": "print",
+          "lineNumber": 396
+        },
+        {
+          "caller": "add_real_thread_feature",
+          "callee": "print",
+          "lineNumber": 398
+        },
+        {
+          "caller": "add_real_thread_feature",
+          "callee": "model.FeatureManager.CreateFeature",
+          "lineNumber": 400
+        },
+        {
+          "caller": "add_real_thread_feature",
+          "callee": "RuntimeError",
+          "lineNumber": 402
+        },
+        {
+          "caller": "add_real_thread_feature",
+          "callee": "assert_feature",
+          "lineNumber": 406
+        },
+        {
+          "caller": "add_cosmetic_thread_feature",
+          "callee": "select_hole_mouth_edge",
+          "lineNumber": 411
+        },
+        {
+          "caller": "add_cosmetic_thread_feature",
+          "callee": "clear",
+          "lineNumber": 412
+        },
+        {
+          "caller": "add_cosmetic_thread_feature",
+          "callee": "edge.Select2",
+          "lineNumber": 413
+        },
+        {
+          "caller": "add_cosmetic_thread_feature",
+          "callee": "RuntimeError",
+          "lineNumber": 414
+        },
+        {
+          "caller": "add_cosmetic_thread_feature",
+          "callee": "model.FeatureManager.InsertCosmeticThread3",
+          "lineNumber": 417
+        },
+        {
+          "caller": "add_cosmetic_thread_feature",
+          "callee": "mm",
+          "lineNumber": 421
+        },
+        {
+          "caller": "add_cosmetic_thread_feature",
+          "callee": "mm",
+          "lineNumber": 423
+        },
+        {
+          "caller": "add_cosmetic_thread_feature",
+          "callee": "RuntimeError",
+          "lineNumber": 427
+        },
+        {
+          "caller": "add_cosmetic_thread_feature",
+          "callee": "clear",
+          "lineNumber": 430
+        },
+        {
+          "caller": "add_cosmetic_thread_feature",
+          "callee": "assert_feature",
+          "lineNumber": 431
+        },
+        {
+          "caller": "visible_helix_plan",
+          "callee": "min",
+          "lineNumber": 436
+        },
+        {
+          "caller": "visible_helix_plan",
+          "callee": "min",
+          "lineNumber": 438
+        },
+        {
+          "caller": "visible_helix_plan",
+          "callee": "ValueError",
+          "lineNumber": 441
+        },
+        {
+          "caller": "visible_helix_plan",
+          "callee": "max",
+          "lineNumber": 443
+        },
+        {
+          "caller": "visible_helix_plan",
+          "callee": "int",
+          "lineNumber": 443
+        },
+        {
+          "caller": "visible_helix_plan",
+          "callee": "math.ceil",
+          "lineNumber": 443
+        },
+        {
+          "caller": "add_visible_thread_helix",
+          "callee": "locate_hole_mouth_edge",
+          "lineNumber": 454
+        },
+        {
+          "caller": "add_visible_thread_helix",
+          "callee": "face_config",
+          "lineNumber": 455
+        },
+        {
+          "caller": "add_visible_thread_helix",
+          "callee": "visible_helix_plan",
+          "lineNumber": 459
+        },
+        {
+          "caller": "add_visible_thread_helix",
+          "callee": "mm",
+          "lineNumber": 462
+        },
+        {
+          "caller": "add_visible_thread_helix",
+          "callee": "max",
+          "lineNumber": 462
+        },
+        {
+          "caller": "add_visible_thread_helix",
+          "callee": "mm",
+          "lineNumber": 463
+        },
+        {
+          "caller": "add_visible_thread_helix",
+          "callee": "mm",
+          "lineNumber": 464
+        },
+        {
+          "caller": "add_visible_thread_helix",
+          "callee": "sketch_mgr.Insert3DSketch",
+          "lineNumber": 468
+        },
+        {
+          "caller": "add_visible_thread_helix",
+          "callee": "current_sketch_name",
+          "lineNumber": 469
+        },
+        {
+          "caller": "add_visible_thread_helix",
+          "callee": "range",
+          "lineNumber": 472
+        },
+        {
+          "caller": "add_visible_thread_helix",
+          "callee": "model_point_from_local",
+          "lineNumber": 475
+        },
+        {
+          "caller": "add_visible_thread_helix",
+          "callee": "mm",
+          "lineNumber": 477
+        },
+        {
+          "caller": "add_visible_thread_helix",
+          "callee": "math.cos",
+          "lineNumber": 477
+        },
+        {
+          "caller": "add_visible_thread_helix",
+          "callee": "mm",
+          "lineNumber": 478
+        },
+        {
+          "caller": "add_visible_thread_helix",
+          "callee": "math.sin",
+          "lineNumber": 478
+        },
+        {
+          "caller": "add_visible_thread_helix",
+          "callee": "sketch_mgr.CreateLine",
+          "lineNumber": 482
+        },
+        {
+          "caller": "add_visible_thread_helix",
+          "callee": "sketch_mgr.Insert3DSketch",
+          "lineNumber": 493
+        },
+        {
+          "caller": "add_visible_thread_helix",
+          "callee": "model.FeatureByName",
+          "lineNumber": 495
+        },
+        {
+          "caller": "add_visible_thread_helix",
+          "callee": "print",
+          "lineNumber": 498
+        },
+        {
+          "caller": "write_thread_properties",
+          "callee": "model.Extension.CustomPropertyManager",
+          "lineNumber": 504
+        },
+        {
+          "caller": "write_thread_properties",
+          "callee": "manager.Add3",
+          "lineNumber": 505
+        },
+        {
+          "caller": "write_thread_properties",
+          "callee": "manager.Add3",
+          "lineNumber": 506
+        },
+        {
+          "caller": "write_thread_properties",
+          "callee": "manager.Add3",
+          "lineNumber": 507
+        },
+        {
+          "caller": "write_thread_properties",
+          "callee": "manager.Add3",
+          "lineNumber": 508
+        },
+        {
+          "caller": "write_thread_properties",
+          "callee": "manager.Add3",
+          "lineNumber": 509
+        },
+        {
+          "caller": "write_thread_properties",
+          "callee": "manager.Add3",
+          "lineNumber": 510
+        },
+        {
+          "caller": "write_thread_properties",
+          "callee": "manager.Add3",
+          "lineNumber": 511
+        },
+        {
+          "caller": "write_thread_properties",
+          "callee": "manager.Add3",
+          "lineNumber": 512
+        },
+        {
+          "caller": "write_thread_properties",
+          "callee": "manager.Add3",
+          "lineNumber": 513
+        },
+        {
+          "caller": "write_thread_properties",
+          "callee": "manager.Add3",
+          "lineNumber": 514
+        },
+        {
+          "caller": "build_params",
+          "callee": "positive_number",
+          "lineNumber": 519
+        },
+        {
+          "caller": "build_params",
+          "callee": "positive_number",
+          "lineNumber": 520
+        },
+        {
+          "caller": "build_params",
+          "callee": "positive_number",
+          "lineNumber": 521
+        },
+        {
+          "caller": "build_params",
+          "callee": "finite_number",
+          "lineNumber": 522
+        },
+        {
+          "caller": "build_params",
+          "callee": "finite_number",
+          "lineNumber": 523
+        },
+        {
+          "caller": "build_params",
+          "callee": "positive_number",
+          "lineNumber": 524
+        },
+        {
+          "caller": "build_params",
+          "callee": "positive_number",
+          "lineNumber": 525
+        },
+        {
+          "caller": "build_params",
+          "callee": "resolve_thread_spec",
+          "lineNumber": 526
+        },
+        {
+          "caller": "build_params",
+          "callee": "positive_number",
+          "lineNumber": 527
+        },
+        {
+          "caller": "build_params",
+          "callee": "positive_number",
+          "lineNumber": 528
+        },
+        {
+          "caller": "build_params",
+          "callee": "positive_number",
+          "lineNumber": 529
+        },
+        {
+          "caller": "build_params",
+          "callee": "ValueError",
+          "lineNumber": 531
+        },
+        {
+          "caller": "build_params",
+          "callee": "min",
+          "lineNumber": 535
+        },
+        {
+          "caller": "build_params",
+          "callee": "positive_number",
+          "lineNumber": 536
+        },
+        {
+          "caller": "build_params",
+          "callee": "math.isclose",
+          "lineNumber": 539
+        },
+        {
+          "caller": "build_params",
+          "callee": "float",
+          "lineNumber": 539
+        },
+        {
+          "caller": "build_params",
+          "callee": "ValueError",
+          "lineNumber": 540
+        },
+        {
+          "caller": "build_params",
+          "callee": "ValueError",
+          "lineNumber": 543
+        },
+        {
+          "caller": "build_params",
+          "callee": "min",
+          "lineNumber": 546
+        },
+        {
+          "caller": "build_params",
+          "callee": "max",
+          "lineNumber": 546
+        },
+        {
+          "caller": "build_params",
+          "callee": "positive_number",
+          "lineNumber": 547
+        },
+        {
+          "caller": "build_params",
+          "callee": "ValueError",
+          "lineNumber": 549
+        },
+        {
+          "caller": "build_params",
+          "callee": "ValueError",
+          "lineNumber": 551
+        },
+        {
+          "caller": "build_params",
+          "callee": "max",
+          "lineNumber": 553
+        },
+        {
+          "caller": "build_params",
+          "callee": "abs",
+          "lineNumber": 554
+        },
+        {
+          "caller": "build_params",
+          "callee": "ValueError",
+          "lineNumber": 555
+        },
+        {
+          "caller": "build_params",
+          "callee": "abs",
+          "lineNumber": 556
+        },
+        {
+          "caller": "build_params",
+          "callee": "ValueError",
+          "lineNumber": 557
+        },
+        {
+          "caller": "build_params",
+          "callee": "args.hole_face.strip().lower",
+          "lineNumber": 559
+        },
+        {
+          "caller": "build_params",
+          "callee": "args.hole_face.strip",
+          "lineNumber": 559
+        },
+        {
+          "caller": "build_params",
+          "callee": "face_config",
+          "lineNumber": 560
+        },
+        {
+          "caller": "build_params",
+          "callee": "str(getattr(args, \"thread_class\", \"6H\")).strip",
+          "lineNumber": 561
+        },
+        {
+          "caller": "build_params",
+          "callee": "str",
+          "lineNumber": 561
+        },
+        {
+          "caller": "build_params",
+          "callee": "getattr",
+          "lineNumber": 561
+        },
+        {
+          "caller": "build_params",
+          "callee": "ValueError",
+          "lineNumber": 563
+        },
+        {
+          "caller": "build_params",
+          "callee": "str(getattr(args, \"handedness\", \"right\")).strip().lower",
+          "lineNumber": 564
+        },
+        {
+          "caller": "build_params",
+          "callee": "str(getattr(args, \"handedness\", \"right\")).strip",
+          "lineNumber": 564
+        },
+        {
+          "caller": "build_params",
+          "callee": "str",
+          "lineNumber": 564
+        },
+        {
+          "caller": "build_params",
+          "callee": "getattr",
+          "lineNumber": 564
+        },
+        {
+          "caller": "build_params",
+          "callee": "ValueError",
+          "lineNumber": 566
+        },
+        {
+          "caller": "build_params",
+          "callee": "str(getattr(args, \"visible_thread\", \"fallback\")).strip().lower",
+          "lineNumber": 567
+        },
+        {
+          "caller": "build_params",
+          "callee": "str(getattr(args, \"visible_thread\", \"fallback\")).strip",
+          "lineNumber": 567
+        },
+        {
+          "caller": "build_params",
+          "callee": "str",
+          "lineNumber": 567
+        },
+        {
+          "caller": "build_params",
+          "callee": "getattr",
+          "lineNumber": 567
+        },
+        {
+          "caller": "build_params",
+          "callee": "ValueError",
+          "lineNumber": 569
+        },
+        {
+          "caller": "build_params",
+          "callee": "ThreadedHoleParams",
+          "lineNumber": 570
+        },
+        {
+          "caller": "build_params",
+          "callee": "bool",
+          "lineNumber": 583
+        },
+        {
+          "caller": "traverse",
+          "callee": "str",
+          "lineNumber": 600
+        },
+        {
+          "caller": "traverse",
+          "callee": "get_com_member",
+          "lineNumber": 600
+        },
+        {
+          "caller": "traverse",
+          "callee": "str",
+          "lineNumber": 603
+        },
+        {
+          "caller": "traverse",
+          "callee": "get_com_member",
+          "lineNumber": 603
+        },
+        {
+          "caller": "traverse",
+          "callee": "features.append",
+          "lineNumber": 607
+        },
+        {
+          "caller": "traverse",
+          "callee": "get_com_member",
+          "lineNumber": 609
+        },
+        {
+          "caller": "traverse",
+          "callee": "traverse",
+          "lineNumber": 611
+        },
+        {
+          "caller": "traverse",
+          "callee": "get_com_member",
+          "lineNumber": 612
+        },
+        {
+          "caller": "collect_thread_feature_evidence",
+          "callee": "traverse",
+          "lineNumber": 614
+        },
+        {
+          "caller": "collect_thread_feature_evidence",
+          "callee": "get_com_member",
+          "lineNumber": 614
+        },
+        {
+          "caller": "collect_thread_feature_evidence",
+          "callee": "any",
+          "lineNumber": 616
+        },
+        {
+          "caller": "collect_thread_feature_evidence",
+          "callee": "name.startswith",
+          "lineNumber": 616
+        },
+        {
+          "caller": "collect_thread_feature_evidence",
+          "callee": "any",
+          "lineNumber": 617
+        },
+        {
+          "caller": "collect_thread_feature_evidence",
+          "callee": "name.startswith",
+          "lineNumber": 617
+        },
+        {
+          "caller": "collect_thread_feature_evidence",
+          "callee": "any",
+          "lineNumber": 618
+        },
+        {
+          "caller": "require_thread_representation",
+          "callee": "str",
+          "lineNumber": 633
+        },
+        {
+          "caller": "require_thread_representation",
+          "callee": "evidence.get",
+          "lineNumber": 633
+        },
+        {
+          "caller": "require_thread_representation",
+          "callee": "RuntimeError",
+          "lineNumber": 635
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "validate_basename",
+          "lineNumber": 644
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "output_dir.mkdir",
+          "lineNumber": 645
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "SolidWorksSession",
+          "lineNumber": 650
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "session.close",
+          "lineNumber": 652
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "session.new_part",
+          "lineNumber": 655
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "face_config",
+          "lineNumber": 656
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "sketch",
+          "lineNumber": 658
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "sketch_rectangle",
+          "lineNumber": 659
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "mm",
+          "lineNumber": 659
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "mm",
+          "lineNumber": 659
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "extrude_boss",
+          "lineNumber": 660
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "mm",
+          "lineNumber": 660
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "assert_feature",
+          "lineNumber": 661
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "create_offset_plane",
+          "lineNumber": 663
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "clear",
+          "lineNumber": 664
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "model.Extension.SelectByID2",
+          "lineNumber": 665
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "create_empty_dispatch_variant",
+          "lineNumber": 665
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "model.SketchManager.InsertSketch",
+          "lineNumber": 666
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "current_sketch_name",
+          "lineNumber": 667
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "model.SketchManager.CreateCircleByRadius",
+          "lineNumber": 668
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "mm",
+          "lineNumber": 669
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "mm",
+          "lineNumber": 670
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "mm",
+          "lineNumber": 672
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "model.SketchManager.InsertSketch",
+          "lineNumber": 674
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "cut_hole_from_sketch",
+          "lineNumber": 675
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "add_real_thread_feature",
+          "lineNumber": 686
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "thread_attempts.append",
+          "lineNumber": 687
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "thread_attempts.append",
+          "lineNumber": 689
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "str",
+          "lineNumber": 689
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "print",
+          "lineNumber": 690
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "add_cosmetic_thread_feature",
+          "lineNumber": 692
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "thread_attempts.append",
+          "lineNumber": 693
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "thread_attempts.append",
+          "lineNumber": 695
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "str",
+          "lineNumber": 695
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "print",
+          "lineNumber": 696
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "model.ForceRebuild3",
+          "lineNumber": 698
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "collect_thread_feature_evidence",
+          "lineNumber": 699
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "add_visible_thread_helix",
+          "lineNumber": 704
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "add_hole_mouth_chamfer",
+          "lineNumber": 705
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "set_document_appearance",
+          "lineNumber": 707
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "model.ForceRebuild3",
+          "lineNumber": 708
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "collect_thread_feature_evidence",
+          "lineNumber": 709
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "RuntimeError",
+          "lineNumber": 711
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "require_thread_representation",
+          "lineNumber": 712
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "write_thread_properties",
+          "lineNumber": 713
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "hide_reference_planes",
+          "lineNumber": 714
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "model.ViewZoomtofit2",
+          "lineNumber": 715
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "save_preview",
+          "lineNumber": 720
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "hide_visible_thread_sketch",
+          "lineNumber": 721
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "print",
+          "lineNumber": 722
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "param_path.write_text",
+          "lineNumber": 724
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "json.dumps",
+          "lineNumber": 725
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "asdict",
+          "lineNumber": 728
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "str",
+          "lineNumber": 732
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "session.save",
+          "lineNumber": 740
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "str",
+          "lineNumber": 740
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "RuntimeError",
+          "lineNumber": 741
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "export_to_step",
+          "lineNumber": 742
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "str",
+          "lineNumber": 742
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "RuntimeError",
+          "lineNumber": 743
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "str",
+          "lineNumber": 745
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "str",
+          "lineNumber": 745
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "str",
+          "lineNumber": 745
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "expected_outputs.append",
+          "lineNumber": 747
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "str",
+          "lineNumber": 747
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "run_review",
+          "lineNumber": 748
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "print",
+          "lineNumber": 754
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "print",
+          "lineNumber": 755
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "print",
+          "lineNumber": 756
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "str",
+          "lineNumber": 758
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "str",
+          "lineNumber": 759
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "str",
+          "lineNumber": 760
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "str",
+          "lineNumber": 761
+        },
+        {
+          "caller": "create_threaded_hole_block",
+          "callee": "str",
+          "lineNumber": 764
+        },
+        {
+          "caller": "parse_args",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 770
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 771
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 772
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 773
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 774
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 775
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 776
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 777
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 778
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 779
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 780
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 781
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 782
+        },
+        {
+          "caller": "parse_args",
+          "callee": "sorted",
+          "lineNumber": 782
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 783
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 784
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 785
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 791
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.add_argument",
+          "lineNumber": 792
+        },
+        {
+          "caller": "parse_args",
+          "callee": "Path.cwd",
+          "lineNumber": 795
+        },
+        {
+          "caller": "parse_args",
+          "callee": "parser.parse_args",
+          "lineNumber": 798
+        },
+        {
+          "caller": "main",
+          "callee": "parse_args",
+          "lineNumber": 803
+        },
+        {
+          "caller": "main",
+          "callee": "build_params",
+          "lineNumber": 804
+        },
+        {
+          "caller": "main",
+          "callee": "validate_basename",
+          "lineNumber": 805
+        },
+        {
+          "caller": "main",
+          "callee": "params.thread_label.replace",
+          "lineNumber": 805
+        },
+        {
+          "caller": "main",
+          "callee": "create_threaded_hole_block",
+          "lineNumber": 806
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 807
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 807
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 33,
+        "functionCount": 32,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "subskills/solidworks-vibecad/knowledge/manufacturing_rules.yaml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 87,
+      "nonEmptyLines": 83,
+      "sections": [
+        {
+          "heading": "version",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "unit",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "thread_tap_drills",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "cnc_defaults",
+          "level": 1,
+          "line": 41
+        },
+        {
+          "heading": "feature_order",
+          "level": 1,
+          "line": 60
+        },
+        {
+          "heading": "review_requirements",
+          "level": 1,
+          "line": 76
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "subskills/solidworks-vibecad/prompts/solidworks_parametric_planner.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 42,
+      "nonEmptyLines": 31,
+      "sections": [
+        {
+          "heading": "SolidWorks 参数化设计规划提示词",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "输入",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "输出要求",
+          "level": 2,
+          "line": 12
+        },
+        {
+          "heading": "规划原则",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "输出 JSON 重点字段",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "禁止",
+          "level": 2,
+          "line": 37
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "subskills/solidworks-vibecad/references/vibecad-roadmap.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 76,
+      "nonEmptyLines": 54,
+      "sections": [
+        {
+          "heading": "VibeCAD 工程化路线",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "方向判断",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "第一阶段：计划闭环",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "第二阶段：真实 SolidWorks 执行器",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "第三阶段：知识库变厚",
+          "level": 2,
+          "line": 49
+        },
+        {
+          "heading": "第四阶段：交互入口",
+          "level": 2,
+          "line": 60
+        },
+        {
+          "heading": "衡量指标",
+          "level": 2,
+          "line": 69
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "subskills/solidworks-vibecad/schemas/design_plan.schema.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 96,
+      "nonEmptyLines": 96,
+      "sections": [
+        {
+          "heading": "$schema",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "title",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "type",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "required",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "properties",
+          "level": 1,
+          "line": 16
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "subskills/solidworks-vibecad/scripts/plan_from_brief.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 259,
+      "nonEmptyLines": 232,
+      "functions": [
+        {
+          "name": "parse_triplet_mm",
+          "startLine": 27,
+          "endLine": 35,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "parse_first_number_before",
+          "startLine": 38,
+          "endLine": 44,
+          "params": [
+            "text",
+            "keywords"
+          ]
+        },
+        {
+          "name": "parse_radius_or_chamfer",
+          "startLine": 47,
+          "endLine": 50,
+          "params": [
+            "text",
+            "prefix",
+            "default"
+          ]
+        },
+        {
+          "name": "detect_thread",
+          "startLine": 53,
+          "endLine": 56,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "build_plan",
+          "startLine": 59,
+          "endLine": 229,
+          "params": [
+            "brief"
+          ]
+        },
+        {
+          "name": "clearance_diameter",
+          "startLine": 232,
+          "endLine": 235,
+          "params": [
+            "thread"
+          ]
+        },
+        {
+          "name": "main",
+          "startLine": 238,
+          "endLine": 255,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "parse_triplet_mm",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "parse_first_number_before",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "parse_radius_or_chamfer",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "detect_thread",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "build_plan",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "clearance_diameter",
+          "line": 232,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 238,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "parse_triplet_mm",
+          "callee": "re.search",
+          "lineNumber": 29
+        },
+        {
+          "caller": "parse_triplet_mm",
+          "callee": "tuple",
+          "lineNumber": 35
+        },
+        {
+          "caller": "parse_triplet_mm",
+          "callee": "float",
+          "lineNumber": 35
+        },
+        {
+          "caller": "parse_triplet_mm",
+          "callee": "match.group",
+          "lineNumber": 35
+        },
+        {
+          "caller": "parse_triplet_mm",
+          "callee": "range",
+          "lineNumber": 35
+        },
+        {
+          "caller": "parse_first_number_before",
+          "callee": "\"|\".join",
+          "lineNumber": 40
+        },
+        {
+          "caller": "parse_first_number_before",
+          "callee": "map",
+          "lineNumber": 40
+        },
+        {
+          "caller": "parse_first_number_before",
+          "callee": "re.search",
+          "lineNumber": 41
+        },
+        {
+          "caller": "parse_first_number_before",
+          "callee": "float",
+          "lineNumber": 43
+        },
+        {
+          "caller": "parse_first_number_before",
+          "callee": "match.group",
+          "lineNumber": 43
+        },
+        {
+          "caller": "parse_radius_or_chamfer",
+          "callee": "re.search",
+          "lineNumber": 49
+        },
+        {
+          "caller": "parse_radius_or_chamfer",
+          "callee": "re.escape",
+          "lineNumber": 49
+        },
+        {
+          "caller": "parse_radius_or_chamfer",
+          "callee": "float",
+          "lineNumber": 50
+        },
+        {
+          "caller": "parse_radius_or_chamfer",
+          "callee": "match.group",
+          "lineNumber": 50
+        },
+        {
+          "caller": "detect_thread",
+          "callee": "re.search",
+          "lineNumber": 55
+        },
+        {
+          "caller": "detect_thread",
+          "callee": "match.group(1).upper",
+          "lineNumber": 56
+        },
+        {
+          "caller": "detect_thread",
+          "callee": "match.group",
+          "lineNumber": 56
+        },
+        {
+          "caller": "build_plan",
+          "callee": "parse_triplet_mm",
+          "lineNumber": 61
+        },
+        {
+          "caller": "build_plan",
+          "callee": "detect_thread",
+          "lineNumber": 63
+        },
+        {
+          "caller": "build_plan",
+          "callee": "parse_first_number_before",
+          "lineNumber": 65
+        },
+        {
+          "caller": "build_plan",
+          "callee": "parse_radius_or_chamfer",
+          "lineNumber": 66
+        },
+        {
+          "caller": "build_plan",
+          "callee": "parse_radius_or_chamfer",
+          "lineNumber": 67
+        },
+        {
+          "caller": "build_plan",
+          "callee": "parse_triplet_mm",
+          "lineNumber": 70
+        },
+        {
+          "caller": "build_plan",
+          "callee": "assumptions.append",
+          "lineNumber": 71
+        },
+        {
+          "caller": "build_plan",
+          "callee": "detect_thread",
+          "lineNumber": 72
+        },
+        {
+          "caller": "build_plan",
+          "callee": "assumptions.append",
+          "lineNumber": 73
+        },
+        {
+          "caller": "build_plan",
+          "callee": "assumptions.extend",
+          "lineNumber": 74
+        },
+        {
+          "caller": "build_plan",
+          "callee": "clearance_diameter",
+          "lineNumber": 116
+        },
+        {
+          "caller": "build_plan",
+          "callee": "max",
+          "lineNumber": 143
+        },
+        {
+          "caller": "build_plan",
+          "callee": "brief.strip",
+          "lineNumber": 152
+        },
+        {
+          "caller": "clearance_diameter",
+          "callee": "table.get",
+          "lineNumber": 235
+        },
+        {
+          "caller": "main",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 240
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 241
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 242
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 243
+        },
+        {
+          "caller": "main",
+          "callee": "parser.parse_args",
+          "lineNumber": 244
+        },
+        {
+          "caller": "main",
+          "callee": "parser.error",
+          "lineNumber": 247
+        },
+        {
+          "caller": "main",
+          "callee": "args.brief_file.read_text",
+          "lineNumber": 249
+        },
+        {
+          "caller": "main",
+          "callee": "build_plan",
+          "lineNumber": 250
+        },
+        {
+          "caller": "main",
+          "callee": "args.out.parent.mkdir",
+          "lineNumber": 252
+        },
+        {
+          "caller": "main",
+          "callee": "args.out.write_text",
+          "lineNumber": 253
+        },
+        {
+          "caller": "main",
+          "callee": "json.dumps",
+          "lineNumber": 253
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 254
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 254
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 7,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "subskills/solidworks-vibecad/scripts/sw_execution_outline.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 117,
+      "nonEmptyLines": 100,
+      "functions": [
+        {
+          "name": "load_plan",
+          "startLine": 31,
+          "endLine": 33,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "build_outline",
+          "startLine": 36,
+          "endLine": 73,
+          "params": [
+            "plan"
+          ]
+        },
+        {
+          "name": "write_markdown",
+          "startLine": 76,
+          "endLine": 99,
+          "params": [
+            "outline"
+          ]
+        },
+        {
+          "name": "main",
+          "startLine": 102,
+          "endLine": 113,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "load_plan",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "build_outline",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "write_markdown",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 102,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "load_plan",
+          "callee": "json.loads",
+          "lineNumber": 33
+        },
+        {
+          "caller": "load_plan",
+          "callee": "path.read_text",
+          "lineNumber": 33
+        },
+        {
+          "caller": "build_outline",
+          "callee": "enumerate",
+          "lineNumber": 39
+        },
+        {
+          "caller": "build_outline",
+          "callee": "steps.append",
+          "lineNumber": 40
+        },
+        {
+          "caller": "build_outline",
+          "callee": "API_MAP.get",
+          "lineNumber": 44
+        },
+        {
+          "caller": "build_outline",
+          "callee": "feature_gate.append",
+          "lineNumber": 51
+        },
+        {
+          "caller": "build_outline",
+          "callee": "feature.get",
+          "lineNumber": 56
+        },
+        {
+          "caller": "write_markdown",
+          "callee": "lines.append",
+          "lineNumber": 89
+        },
+        {
+          "caller": "write_markdown",
+          "callee": "lines.extend",
+          "lineNumber": 92
+        },
+        {
+          "caller": "write_markdown",
+          "callee": "lines.append",
+          "lineNumber": 95
+        },
+        {
+          "caller": "write_markdown",
+          "callee": "lines.extend",
+          "lineNumber": 96
+        },
+        {
+          "caller": "write_markdown",
+          "callee": "lines.append",
+          "lineNumber": 98
+        },
+        {
+          "caller": "write_markdown",
+          "callee": "\"\\n\".join",
+          "lineNumber": 99
+        },
+        {
+          "caller": "main",
+          "callee": "argparse.ArgumentParser",
+          "lineNumber": 104
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 105
+        },
+        {
+          "caller": "main",
+          "callee": "parser.add_argument",
+          "lineNumber": 106
+        },
+        {
+          "caller": "main",
+          "callee": "parser.parse_args",
+          "lineNumber": 107
+        },
+        {
+          "caller": "main",
+          "callee": "build_outline",
+          "lineNumber": 109
+        },
+        {
+          "caller": "main",
+          "callee": "load_plan",
+          "lineNumber": 109
+        },
+        {
+          "caller": "main",
+          "callee": "args.out.parent.mkdir",
+          "lineNumber": 110
+        },
+        {
+          "caller": "main",
+          "callee": "args.out.write_text",
+          "lineNumber": 111
+        },
+        {
+          "caller": "main",
+          "callee": "write_markdown",
+          "lineNumber": 111
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 112
+        },
+        {
+          "caller": "main",
+          "callee": "str",
+          "lineNumber": 112
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    }
+  ]
+}

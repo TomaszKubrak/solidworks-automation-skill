@@ -1,0 +1,1312 @@
+{
+ "nodes": [
+  {
+   "id": "file:mcp-server/approval.py",
+   "type": "file",
+   "name": "approval.py",
+   "filePath": "mcp-server/approval.py",
+   "summary": "Księga zatwierdzeń (ApprovalLedger) przechowująca podpisane, ograniczone czasowo zgody na operacje zapisu CAD, z blokadą pliku i weryfikacją ścieżek.",
+   "tags": [
+    "approval",
+    "security",
+    "ledger",
+    "persistence"
+   ],
+   "complexity": "complex",
+   "languageNotes": "Python z adnotacjami typów."
+  },
+  {
+   "id": "file:mcp-server/artifact_access.py",
+   "type": "file",
+   "name": "artifact_access.py",
+   "filePath": "mcp-server/artifact_access.py",
+   "summary": "Warstwa dostępu do artefaktów generowanych przez narzędzia, oparta na księdze artefaktów aplikacji desktopowej; kontroluje odczyt plików w dozwolonych katalogach.",
+   "tags": [
+    "artifact",
+    "access-control",
+    "service",
+    "ledger"
+   ],
+   "complexity": "moderate",
+   "languageNotes": "Python z adnotacjami typów."
+  },
+  {
+   "id": "file:mcp-server/discovery.py",
+   "type": "file",
+   "name": "discovery.py",
+   "filePath": "mcp-server/discovery.py",
+   "summary": "Katalog narzędzi MCP (ToolCatalog) umożliwiający wyszukiwanie i opisywanie narzędzi po nazwie, metadanych i klasyfikacji odczyt/zapis.",
+   "tags": [
+    "discovery",
+    "catalog",
+    "search",
+    "mcp"
+   ],
+   "complexity": "moderate",
+   "languageNotes": "Python z adnotacjami typów."
+  },
+  {
+   "id": "file:mcp-server/document_identity.py",
+   "type": "file",
+   "name": "document_identity.py",
+   "filePath": "mcp-server/document_identity.py",
+   "summary": "Wiąże sesję z tożsamością aktywnego dokumentu (ścieżka, PID) i weryfikuje ją przed operacjami, aby zapobiec edycji niewłaściwego modelu.",
+   "tags": [
+    "document-identity",
+    "validation",
+    "safety",
+    "mcp"
+   ],
+   "complexity": "simple",
+   "languageNotes": "Python z adnotacjami typów."
+  },
+  {
+   "id": "file:mcp-server/gate.py",
+   "type": "file",
+   "name": "gate.py",
+   "filePath": "mcp-server/gate.py",
+   "summary": "Bramka ToolGate łącząca politykę, zatwierdzenia, tożsamość dokumentu i katalog narzędzi, decydująca czy wywołanie narzędzia jest dozwolone.",
+   "tags": [
+    "gate",
+    "policy-enforcement",
+    "security",
+    "middleware"
+   ],
+   "complexity": "complex",
+   "languageNotes": "Python z adnotacjami typów."
+  },
+  {
+   "id": "file:mcp-server/policy.py",
+   "type": "file",
+   "name": "policy.py",
+   "filePath": "mcp-server/policy.py",
+   "summary": "Klasyfikuje narzędzia według efektu (odczyt/zapis/niszczące), wylicza cele i skrót kanoniczny wywołania oraz decyduje o wymaganiu zatwierdzenia.",
+   "tags": [
+    "policy",
+    "classification",
+    "security",
+    "hashing"
+   ],
+   "complexity": "moderate",
+   "languageNotes": "Python z adnotacjami typów."
+  },
+  {
+   "id": "file:mcp-server/server.py",
+   "type": "file",
+   "name": "server.py",
+   "filePath": "mcp-server/server.py",
+   "summary": "Główny serwer FastMCP rejestrujący dziesiątki narzędzi SolidWorks i CAD Studio (modelowanie, złożenia, rysunki, FEA, eksport), z modelami wejściowymi Pydantic, blokadą COM i bramką zatwierdzeń.",
+   "tags": [
+    "entry-point",
+    "mcp-server",
+    "api-handler",
+    "solidworks",
+    "com-automation"
+   ],
+   "complexity": "complex",
+   "languageNotes": "Python z adnotacjami typów."
+  },
+  {
+   "id": "file:scripts/sw_native_wire.py",
+   "type": "file",
+   "name": "sw_native_wire.py",
+   "filePath": "scripts/sw_native_wire.py",
+   "summary": "Podłącza natywne narzędzia (build/import/replace/delete) do serwera MCP wraz z modelami wejściowymi Pydantic i funkcją invoke_native.",
+   "tags": [
+    "native-bridge",
+    "mcp-tools",
+    "data-model",
+    "wiring"
+   ],
+   "complexity": "moderate",
+   "languageNotes": "Python z adnotacjami typów."
+  },
+  {
+   "id": "file:scripts/sw_preflight.py",
+   "type": "file",
+   "name": "sw_preflight.py",
+   "filePath": "scripts/sw_preflight.py",
+   "summary": "Kontrole wstępne środowiska: wykrywa brakujące zależności COM (pywin32), proponuje instalację oraz sprawdza obecność SolidWorks.",
+   "tags": [
+    "preflight",
+    "environment",
+    "cli",
+    "dependency-check"
+   ],
+   "complexity": "moderate",
+   "languageNotes": "Python z adnotacjami typów."
+  },
+  {
+   "id": "function:mcp-server/approval.py:default_root",
+   "type": "function",
+   "name": "default_root",
+   "filePath": "mcp-server/approval.py",
+   "lineRange": [
+    37,
+    43
+   ],
+   "summary": "Zwraca domyślny katalog główny przechowywania zatwierdzeń.",
+   "tags": [
+    "utility",
+    "path",
+    "config"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:mcp-server/approval.py:ApprovalError",
+   "type": "class",
+   "name": "ApprovalError",
+   "filePath": "mcp-server/approval.py",
+   "lineRange": [
+    46,
+    47
+   ],
+   "summary": "Wyjątek zgłaszany przy nieprawidłowej lub wygasłej zgodzie.",
+   "tags": [
+    "error",
+    "exception",
+    "approval"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:mcp-server/approval.py:ApprovalLedger",
+   "type": "class",
+   "name": "ApprovalLedger",
+   "filePath": "mcp-server/approval.py",
+   "lineRange": [
+    59,
+    327
+   ],
+   "summary": "Trwała księga zatwierdzeń: wystawia, weryfikuje i zużywa podpisane zgody powiązane ze skrótem wywołania.",
+   "tags": [
+    "ledger",
+    "approval",
+    "persistence"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "class:mcp-server/artifact_access.py:ArtifactAccess",
+   "type": "class",
+   "name": "ArtifactAccess",
+   "filePath": "mcp-server/artifact_access.py",
+   "lineRange": [
+    15,
+    93
+   ],
+   "summary": "Udostępnia kontrolowany odczyt artefaktów z weryfikacją względem księgi artefaktów.",
+   "tags": [
+    "artifact",
+    "access-control",
+    "service"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:mcp-server/discovery.py:ToolCatalog",
+   "type": "class",
+   "name": "ToolCatalog",
+   "filePath": "mcp-server/discovery.py",
+   "lineRange": [
+    171,
+    252
+   ],
+   "summary": "Indeks metadanych narzędzi z wyszukiwaniem i opisem na żądanie.",
+   "tags": [
+    "catalog",
+    "search",
+    "discovery"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:mcp-server/document_identity.py:DocumentIdentityError",
+   "type": "class",
+   "name": "DocumentIdentityError",
+   "filePath": "mcp-server/document_identity.py",
+   "lineRange": [
+    17,
+    18
+   ],
+   "summary": "Wyjątek niezgodności tożsamości dokumentu.",
+   "tags": [
+    "error",
+    "exception",
+    "document-identity"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:mcp-server/document_identity.py:DocumentIdentity",
+   "type": "class",
+   "name": "DocumentIdentity",
+   "filePath": "mcp-server/document_identity.py",
+   "lineRange": [
+    44,
+    63
+   ],
+   "summary": "Niezmienna tożsamość dokumentu (ścieżka, PID) z porównaniem.",
+   "tags": [
+    "data-model",
+    "document-identity",
+    "validation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:mcp-server/document_identity.py:bind_document",
+   "type": "function",
+   "name": "bind_document",
+   "filePath": "mcp-server/document_identity.py",
+   "lineRange": [
+    72,
+    80
+   ],
+   "summary": "Wiąże aktywny dokument z bieżącą sesją.",
+   "tags": [
+    "binding",
+    "document-identity"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:mcp-server/document_identity.py:verify_bound_document",
+   "type": "function",
+   "name": "verify_bound_document",
+   "filePath": "mcp-server/document_identity.py",
+   "lineRange": [
+    83,
+    88
+   ],
+   "summary": "Sprawdza, czy aktywny dokument pasuje do powiązanego.",
+   "tags": [
+    "verification",
+    "document-identity"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:mcp-server/document_identity.py:has_bound_document",
+   "type": "function",
+   "name": "has_bound_document",
+   "filePath": "mcp-server/document_identity.py",
+   "lineRange": [
+    91,
+    93
+   ],
+   "summary": "Informuje czy dokument jest już powiązany.",
+   "tags": [
+    "predicate",
+    "document-identity"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:mcp-server/gate.py:ToolGate",
+   "type": "class",
+   "name": "ToolGate",
+   "filePath": "mcp-server/gate.py",
+   "lineRange": [
+    39,
+    251
+   ],
+   "summary": "Centralna bramka autoryzacji wywołań narzędzi: polityka, zgoda, tożsamość dokumentu.",
+   "tags": [
+    "gate",
+    "security",
+    "policy-enforcement"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:mcp-server/gate.py:allowed_reason",
+   "type": "function",
+   "name": "allowed_reason",
+   "filePath": "mcp-server/gate.py",
+   "lineRange": [
+    254,
+    268
+   ],
+   "summary": "Buduje uzasadnienie dopuszczenia wywołania narzędzia.",
+   "tags": [
+    "policy",
+    "reason",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:mcp-server/policy.py:Effect",
+   "type": "class",
+   "name": "Effect",
+   "filePath": "mcp-server/policy.py",
+   "lineRange": [
+    17,
+    23
+   ],
+   "summary": "Enum efektów narzędzia (odczyt, zapis, niszczący).",
+   "tags": [
+    "enum",
+    "policy",
+    "classification"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:mcp-server/policy.py:classify",
+   "type": "function",
+   "name": "classify",
+   "filePath": "mcp-server/policy.py",
+   "lineRange": [
+    166,
+    183
+   ],
+   "summary": "Klasyfikuje narzędzie do kategorii efektu.",
+   "tags": [
+    "classification",
+    "policy"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:mcp-server/policy.py:targets",
+   "type": "function",
+   "name": "targets",
+   "filePath": "mcp-server/policy.py",
+   "lineRange": [
+    196,
+    205
+   ],
+   "summary": "Wyodrębnia cele (ścieżki/dokumenty) z argumentów wywołania.",
+   "tags": [
+    "targets",
+    "parsing",
+    "policy"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:mcp-server/policy.py:canonical_digest",
+   "type": "function",
+   "name": "canonical_digest",
+   "filePath": "mcp-server/policy.py",
+   "lineRange": [
+    208,
+    214
+   ],
+   "summary": "Liczy kanoniczny skrót wywołania do powiązania z zatwierdzeniem.",
+   "tags": [
+    "hashing",
+    "canonical",
+    "approval"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:mcp-server/policy.py:summarize",
+   "type": "function",
+   "name": "summarize",
+   "filePath": "mcp-server/policy.py",
+   "lineRange": [
+    217,
+    220
+   ],
+   "summary": "Tworzy zwięzłe podsumowanie wywołania dla użytkownika.",
+   "tags": [
+    "summary",
+    "policy"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:mcp-server/server.py:_load_automation_modules",
+   "type": "function",
+   "name": "_load_automation_modules",
+   "filePath": "mcp-server/server.py",
+   "lineRange": [
+    66,
+    186
+   ],
+   "summary": "Leniwie ładuje moduły automatyzacji SolidWorks i CAD Studio oraz zwraca je jako zestaw.",
+   "tags": [
+    "loader",
+    "lazy-import",
+    "automation"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:mcp-server/server.py:_run_locked",
+   "type": "function",
+   "name": "_run_locked",
+   "filePath": "mcp-server/server.py",
+   "lineRange": [
+    1363,
+    1410
+   ],
+   "summary": "Wykonuje operację COM pod blokadą z obsługą błędów i śledzeniem przez rdzeń wykonania.",
+   "tags": [
+    "concurrency",
+    "com",
+    "execution"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:mcp-server/server.py:_tool_error",
+   "type": "function",
+   "name": "_tool_error",
+   "filePath": "mcp-server/server.py",
+   "lineRange": [
+    1340,
+    1360
+   ],
+   "summary": "Zamienia wyjątki w ustrukturyzowaną odpowiedź błędu narzędzia.",
+   "tags": [
+    "error-handling",
+    "mcp"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:mcp-server/server.py:_result",
+   "type": "function",
+   "name": "_result",
+   "filePath": "mcp-server/server.py",
+   "lineRange": [
+    1314,
+    1328
+   ],
+   "summary": "Formatuje wynik narzędzia (JSON lub Markdown).",
+   "tags": [
+    "formatting",
+    "response"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:mcp-server/server.py:BaseInput",
+   "type": "class",
+   "name": "BaseInput",
+   "filePath": "mcp-server/server.py",
+   "lineRange": [
+    281,
+    284
+   ],
+   "summary": "Bazowy model wejściowy Pydantic dla narzędzi.",
+   "tags": [
+    "pydantic",
+    "data-model",
+    "input"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:mcp-server/server.py:ResponseFormat",
+   "type": "class",
+   "name": "ResponseFormat",
+   "filePath": "mcp-server/server.py",
+   "lineRange": [
+    226,
+    230
+   ],
+   "summary": "Enum formatu odpowiedzi (markdown/json).",
+   "tags": [
+    "enum",
+    "format"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:mcp-server/server.py:solidworks_connect",
+   "type": "function",
+   "name": "solidworks_connect",
+   "filePath": "mcp-server/server.py",
+   "lineRange": [
+    1806,
+    1833
+   ],
+   "summary": "Narzędzie łączące się z działającą instancją SolidWorks przez COM.",
+   "tags": [
+    "tool",
+    "solidworks",
+    "connection"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:mcp-server/server.py:solidworks_health_check",
+   "type": "function",
+   "name": "solidworks_health_check",
+   "filePath": "mcp-server/server.py",
+   "lineRange": [
+    1872,
+    1911
+   ],
+   "summary": "Narzędzie diagnostyczne stanu SolidWorks i połączenia.",
+   "tags": [
+    "tool",
+    "diagnostics",
+    "solidworks"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:mcp-server/server.py:solidworks_recover",
+   "type": "function",
+   "name": "solidworks_recover",
+   "filePath": "mcp-server/server.py",
+   "lineRange": [
+    1967,
+    2051
+   ],
+   "summary": "Narzędzie odzyskiwania po zawieszeniu lub blokadzie SolidWorks.",
+   "tags": [
+    "tool",
+    "recovery",
+    "solidworks"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:mcp-server/server.py:solidworks_sketch_and_extrude",
+   "type": "function",
+   "name": "solidworks_sketch_and_extrude",
+   "filePath": "mcp-server/server.py",
+   "lineRange": [
+    2274,
+    2342
+   ],
+   "summary": "Narzędzie tworzące szkic na płaszczyźnie i wyciągnięcie.",
+   "tags": [
+    "tool",
+    "modeling",
+    "feature"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:mcp-server/server.py:solidworks_generate_drawing",
+   "type": "function",
+   "name": "solidworks_generate_drawing",
+   "filePath": "mcp-server/server.py",
+   "lineRange": [
+    3350,
+    3356
+   ],
+   "summary": "Narzędzie generujące rysunek z modelu.",
+   "tags": [
+    "tool",
+    "drawing",
+    "solidworks"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:mcp-server/server.py:solidworks_review_drawing",
+   "type": "function",
+   "name": "solidworks_review_drawing",
+   "filePath": "mcp-server/server.py",
+   "lineRange": [
+    3369,
+    3396
+   ],
+   "summary": "Narzędzie przeglądu rysunku (wymiary, tolerancje, GD&T).",
+   "tags": [
+    "tool",
+    "drawing",
+    "review"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:mcp-server/server.py:solidworks_export_active",
+   "type": "function",
+   "name": "solidworks_export_active",
+   "filePath": "mcp-server/server.py",
+   "lineRange": [
+    3090,
+    3112
+   ],
+   "summary": "Narzędzie eksportu aktywnego dokumentu do wybranego formatu.",
+   "tags": [
+    "tool",
+    "export",
+    "solidworks"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:mcp-server/server.py:cadstudio_run_fea",
+   "type": "function",
+   "name": "cadstudio_run_fea",
+   "filePath": "mcp-server/server.py",
+   "lineRange": [
+    1687,
+    1697
+   ],
+   "summary": "Narzędzie uruchamiające analizę MES w CAD Studio.",
+   "tags": [
+    "tool",
+    "fea",
+    "cadstudio"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:mcp-server/server.py:cadstudio_read_artifact",
+   "type": "function",
+   "name": "cadstudio_read_artifact",
+   "filePath": "mcp-server/server.py",
+   "lineRange": [
+    3646,
+    3669
+   ],
+   "summary": "Narzędzie odczytu artefaktu przez kontrolę dostępu.",
+   "tags": [
+    "tool",
+    "artifact",
+    "cadstudio"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:mcp-server/server.py:sw_search_tools",
+   "type": "function",
+   "name": "sw_search_tools",
+   "filePath": "mcp-server/server.py",
+   "lineRange": [
+    3708,
+    3717
+   ],
+   "summary": "Meta-narzędzie wyszukiwania narzędzi w katalogu.",
+   "tags": [
+    "meta-tool",
+    "discovery",
+    "search"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:mcp-server/server.py:sw_describe_tool",
+   "type": "function",
+   "name": "sw_describe_tool",
+   "filePath": "mcp-server/server.py",
+   "lineRange": [
+    3725,
+    3730
+   ],
+   "summary": "Meta-narzędzie opisujące schemat wybranego narzędzia.",
+   "tags": [
+    "meta-tool",
+    "discovery",
+    "schema"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:mcp-server/server.py:sw_call_tool",
+   "type": "function",
+   "name": "sw_call_tool",
+   "filePath": "mcp-server/server.py",
+   "lineRange": [
+    3738,
+    3760
+   ],
+   "summary": "Meta-narzędzie wywołujące inne narzędzie przez bramkę ToolGate.",
+   "tags": [
+    "meta-tool",
+    "gate",
+    "dispatch"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:mcp-server/server.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "mcp-server/server.py",
+   "lineRange": [
+    3763,
+    3828
+   ],
+   "summary": "Punkt wejścia uruchamiający serwer MCP (preflight, rejestracja, transport).",
+   "tags": [
+    "entry-point",
+    "startup",
+    "mcp"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_native_wire.py:invoke_native",
+   "type": "function",
+   "name": "invoke_native",
+   "filePath": "scripts/sw_native_wire.py",
+   "lineRange": [
+    68,
+    85
+   ],
+   "summary": "Wywołuje natywne narzędzie hosta i normalizuje wynik.",
+   "tags": [
+    "bridge",
+    "native",
+    "invoke"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_native_wire.py:register_tools",
+   "type": "function",
+   "name": "register_tools",
+   "filePath": "scripts/sw_native_wire.py",
+   "lineRange": [
+    88,
+    128
+   ],
+   "summary": "Rejestruje natywne narzędzia build/import/replace/delete w aplikacji MCP.",
+   "tags": [
+    "registration",
+    "mcp-tools",
+    "wiring"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "class:scripts/sw_native_wire.py:BuildSpec",
+   "type": "class",
+   "name": "BuildSpec",
+   "filePath": "scripts/sw_native_wire.py",
+   "lineRange": [
+    37,
+    44
+   ],
+   "summary": "Model specyfikacji budowy geometrii (sweep, box).",
+   "tags": [
+    "data-model",
+    "pydantic",
+    "spec"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_preflight.py:ensure_com_dependencies",
+   "type": "function",
+   "name": "ensure_com_dependencies",
+   "filePath": "scripts/sw_preflight.py",
+   "lineRange": [
+    131,
+    168
+   ],
+   "summary": "Zapewnia zależności COM, w razie potrzeby pytając o zgodę na instalację.",
+   "tags": [
+    "dependency",
+    "install",
+    "preflight"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_preflight.py:run_preflight",
+   "type": "function",
+   "name": "run_preflight",
+   "filePath": "scripts/sw_preflight.py",
+   "lineRange": [
+    219,
+    233
+   ],
+   "summary": "Uruchamia pełną kontrolę wstępną środowiska.",
+   "tags": [
+    "preflight",
+    "orchestration"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_preflight.py:solidworks_installed",
+   "type": "function",
+   "name": "solidworks_installed",
+   "filePath": "scripts/sw_preflight.py",
+   "lineRange": [
+    200,
+    207
+   ],
+   "summary": "Sprawdza obecność instalacji SolidWorks.",
+   "tags": [
+    "detection",
+    "solidworks"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_preflight.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "scripts/sw_preflight.py",
+   "lineRange": [
+    245,
+    256
+   ],
+   "summary": "Punkt wejścia CLI preflight.",
+   "tags": [
+    "entry-point",
+    "cli"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:scripts/sw_preflight.py:PreflightResult",
+   "type": "class",
+   "name": "PreflightResult",
+   "filePath": "scripts/sw_preflight.py",
+   "lineRange": [
+    49,
+    54
+   ],
+   "summary": "Wynik kontroli wstępnej.",
+   "tags": [
+    "data-model",
+    "result"
+   ],
+   "complexity": "simple"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:mcp-server/approval.py",
+   "target": "function:mcp-server/approval.py:default_root",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/approval.py",
+   "target": "class:mcp-server/approval.py:ApprovalError",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/approval.py",
+   "target": "class:mcp-server/approval.py:ApprovalLedger",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/artifact_access.py",
+   "target": "class:mcp-server/artifact_access.py:ArtifactAccess",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/discovery.py",
+   "target": "class:mcp-server/discovery.py:ToolCatalog",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/document_identity.py",
+   "target": "class:mcp-server/document_identity.py:DocumentIdentityError",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/document_identity.py",
+   "target": "class:mcp-server/document_identity.py:DocumentIdentity",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/document_identity.py",
+   "target": "function:mcp-server/document_identity.py:bind_document",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/document_identity.py",
+   "target": "function:mcp-server/document_identity.py:verify_bound_document",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/document_identity.py",
+   "target": "function:mcp-server/document_identity.py:has_bound_document",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/gate.py",
+   "target": "class:mcp-server/gate.py:ToolGate",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/gate.py",
+   "target": "function:mcp-server/gate.py:allowed_reason",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/policy.py",
+   "target": "class:mcp-server/policy.py:Effect",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/policy.py",
+   "target": "function:mcp-server/policy.py:classify",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/policy.py",
+   "target": "function:mcp-server/policy.py:targets",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/policy.py",
+   "target": "function:mcp-server/policy.py:canonical_digest",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/policy.py",
+   "target": "function:mcp-server/policy.py:summarize",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "function:mcp-server/server.py:_load_automation_modules",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "function:mcp-server/server.py:_run_locked",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "function:mcp-server/server.py:_tool_error",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "function:mcp-server/server.py:_result",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "class:mcp-server/server.py:BaseInput",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "class:mcp-server/server.py:ResponseFormat",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "function:mcp-server/server.py:solidworks_connect",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "function:mcp-server/server.py:solidworks_health_check",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "function:mcp-server/server.py:solidworks_recover",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "function:mcp-server/server.py:solidworks_sketch_and_extrude",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "function:mcp-server/server.py:solidworks_generate_drawing",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "function:mcp-server/server.py:solidworks_review_drawing",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "function:mcp-server/server.py:solidworks_export_active",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "function:mcp-server/server.py:cadstudio_run_fea",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "function:mcp-server/server.py:cadstudio_read_artifact",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "function:mcp-server/server.py:sw_search_tools",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "function:mcp-server/server.py:sw_describe_tool",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "function:mcp-server/server.py:sw_call_tool",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "function:mcp-server/server.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_native_wire.py",
+   "target": "function:scripts/sw_native_wire.py:invoke_native",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_native_wire.py",
+   "target": "function:scripts/sw_native_wire.py:register_tools",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_native_wire.py",
+   "target": "class:scripts/sw_native_wire.py:BuildSpec",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_preflight.py",
+   "target": "function:scripts/sw_preflight.py:ensure_com_dependencies",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_preflight.py",
+   "target": "function:scripts/sw_preflight.py:run_preflight",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_preflight.py",
+   "target": "function:scripts/sw_preflight.py:solidworks_installed",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_preflight.py",
+   "target": "function:scripts/sw_preflight.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:scripts/sw_preflight.py",
+   "target": "class:scripts/sw_preflight.py:PreflightResult",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:mcp-server/approval.py",
+   "target": "file:mcp-server/policy.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:mcp-server/artifact_access.py",
+   "target": "file:apps/desktop/cad_workbench/artifact_ledger.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:mcp-server/gate.py",
+   "target": "file:mcp-server/approval.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:mcp-server/gate.py",
+   "target": "file:mcp-server/discovery.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:mcp-server/gate.py",
+   "target": "file:mcp-server/document_identity.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:mcp-server/gate.py",
+   "target": "file:mcp-server/policy.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "file:mcp-server/artifact_access.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "file:mcp-server/document_identity.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "file:mcp-server/gate.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "file:scripts/core/execution.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "file:scripts/sw_native_wire.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:mcp-server/server.py",
+   "target": "file:scripts/sw_preflight.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "function:mcp-server/server.py:_run_locked",
+   "target": "function:scripts/core/execution.py:execute_with_core",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:mcp-server/artifact_access.py:ArtifactAccess",
+   "target": "function:apps/desktop/cad_workbench/artifact_ledger.py:build_artifact_ledger",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:mcp-server/gate.py:ToolGate",
+   "target": "class:mcp-server/approval.py:ApprovalLedger",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:mcp-server/gate.py:ToolGate",
+   "target": "function:mcp-server/policy.py:classify",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "class:mcp-server/gate.py:ToolGate",
+   "target": "class:mcp-server/discovery.py:ToolCatalog",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:mcp-server/server.py:sw_call_tool",
+   "target": "class:mcp-server/gate.py:ToolGate",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  }
+ ]
+}

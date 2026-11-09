@@ -1,0 +1,539 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 10,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 10,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 10
+    }
+  },
+  "results": [
+    {
+      "path": "examples/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 235,
+      "nonEmptyLines": 174,
+      "sections": [
+        {
+          "heading": "示例代码",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "示例列表",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "01_basic_part.py",
+          "level": 3,
+          "line": 7
+        },
+        {
+          "heading": "02_complex_part.py",
+          "level": 3,
+          "line": 23
+        },
+        {
+          "heading": "03_assembly.py",
+          "level": 3,
+          "line": 37
+        },
+        {
+          "heading": "04_batch_export.py",
+          "level": 3,
+          "line": 53
+        },
+        {
+          "heading": "05_drawing.py",
+          "level": 3,
+          "line": 67
+        },
+        {
+          "heading": "06_friendly_api.py",
+          "level": 3,
+          "line": 83
+        },
+        {
+          "heading": "07_motion_study_rotary_motor.py",
+          "level": 3,
+          "line": 97
+        },
+        {
+          "heading": "08_mini_fan_motion_assembly.py",
+          "level": 3,
+          "line": 113
+        },
+        {
+          "heading": "数据文件示例（无需 SolidWorks）",
+          "level": 2,
+          "line": 134
+        },
+        {
+          "heading": "`part.cadstudio.json` 的字段含义",
+          "level": 3,
+          "line": 148
+        },
+        {
+          "heading": "DFM 检查",
+          "level": 3,
+          "line": 169
+        },
+        {
+          "heading": "运行示例",
+          "level": 2,
+          "line": 193
+        },
+        {
+          "heading": "修改路径",
+          "level": 2,
+          "line": 207
+        },
+        {
+          "heading": "常见问题",
+          "level": 2,
+          "line": 219
+        },
+        {
+          "heading": "无法连接 SolidWorks?",
+          "level": 3,
+          "line": 221
+        },
+        {
+          "heading": "找不到基准面?",
+          "level": 3,
+          "line": 224
+        },
+        {
+          "heading": "特征创建失败?",
+          "level": 3,
+          "line": 229
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 19
+      }
+    },
+    {
+      "path": "examples/drc_profile_strict.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 15,
+      "nonEmptyLines": 15,
+      "sections": [
+        {
+          "heading": "schema",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "id",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "description",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "thresholds",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "disabledRules",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "customRules",
+          "level": 1,
+          "line": 12
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "examples/drc_sample_part.cadstudio.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 18,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "documentId",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "units",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "features",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "metadata",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "standardParts",
+          "level": 1,
+          "line": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "examples/drilling_panel_sample.cadstudio.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 316,
+      "nonEmptyLines": 316,
+      "sections": [
+        {
+          "heading": "documentId",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "units",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "features",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "metadata",
+          "level": 1,
+          "line": 306
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "examples/drive_sizing_sample.cadstudio.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 23,
+      "nonEmptyLines": 23,
+      "sections": [
+        {
+          "heading": "documentId",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "units",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "features",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "metadata",
+          "level": 1,
+          "line": 5
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "examples/fastener_stack_sample.cadstudio.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 14,
+      "nonEmptyLines": 14,
+      "sections": [
+        {
+          "heading": "documentId",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "units",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "features",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "metadata",
+          "level": 1,
+          "line": 8
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "examples/fea_tetra_static.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 42,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "schemaVersion",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "analysisId",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "analysisType",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "solver",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "units",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "material",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "mesh",
+          "level": 1,
+          "line": 18
+        },
+        {
+          "heading": "constraints",
+          "level": 1,
+          "line": 36
+        },
+        {
+          "heading": "loads",
+          "level": 1,
+          "line": 39
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "examples/ocp_loft_adapter.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 15,
+      "nonEmptyLines": 15,
+      "sections": [
+        {
+          "heading": "schemaVersion",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "modelId",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "units",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "operation",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "solid",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "ruled",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "toleranceMm",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "sections",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "outputs",
+          "level": 1,
+          "line": 14
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "examples/part.cadstudio.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 34,
+      "nonEmptyLines": 34,
+      "sections": [
+        {
+          "heading": "documentId",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "name",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "units",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "metadata",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "features",
+          "level": 1,
+          "line": 12
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "examples/supplier-profile.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 38,
+      "nonEmptyLines": 38,
+      "sections": [
+        {
+          "heading": "schema",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "version",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "id",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "description",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "source",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "processes",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "limits",
+          "level": 1,
+          "line": 16
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    }
+  ]
+}

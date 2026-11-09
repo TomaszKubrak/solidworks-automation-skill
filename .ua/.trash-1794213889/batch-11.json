@@ -1,0 +1,10 @@
+{"nodes":[
+{"id":"pipeline:.github/workflows/windows-cad-regression.yml","type":"pipeline","name":"windows-cad-regression.yml","filePath":".github/workflows/windows-cad-regression.yml","summary":"Ręcznie uruchamiany workflow GitHub Actions: job autoryzacji na ubuntu oraz regresja CAD na self-hosted runnerze Windows (pytest, eval runner, cad_doctor, regresje SolidWorks/AutoCAD, preflight .NET) z publikacją artefaktów.","tags":["ci-cd","regression","self-hosted-runner","cad","testing"],"complexity":"moderate","languageNotes":"Akcje przypięte do SHA commitów oraz job authorize chroniący self-hosted runner."},
+{"id":"pipeline:.github/workflows/windows-release.yml","type":"pipeline","name":"windows-release.yml","filePath":".github/workflows/windows-release.yml","summary":"Pipeline wydania na windows-2022: bramka governance, testy Python, frontendu i Rust, budowa pakietu przez skrypty PowerShell, weryfikacja updatera oraz publikacja szkicu release.","tags":["ci-cd","release","deployment","windows","build-system"],"complexity":"complex","languageNotes":"Wiele jobów z zależnościami (needs) agregowanych w test_and_build przed publish_release."}
+],"edges":[
+{"source":"pipeline:.github/workflows/windows-cad-regression.yml","target":"file:scripts/cad_doctor.py","type":"triggers","direction":"forward","weight":0.6},
+{"source":"pipeline:.github/workflows/windows-cad-regression.yml","target":"file:scripts/stability_regression.py","type":"triggers","direction":"forward","weight":0.6},
+{"source":"pipeline:.github/workflows/windows-release.yml","target":"file:scripts/release_check.py","type":"triggers","direction":"forward","weight":0.6},
+{"source":"pipeline:.github/workflows/windows-release.yml","target":"file:scripts/validate_skill.py","type":"triggers","direction":"forward","weight":0.6},
+{"source":"pipeline:.github/workflows/windows-release.yml","target":"file:scripts/build_windows_release.ps1","type":"triggers","direction":"forward","weight":0.6}
+]}

@@ -1,0 +1,205 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 6,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 6
+    }
+  },
+  "results": [
+    {
+      "path": "subskills/solidworks-engineering-drawing/references/api-lookup.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 13,
+      "nonEmptyLines": 10,
+      "sections": [
+        {
+          "heading": "工程图 API 查证清单",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "subskills/solidworks-engineering-drawing/references/drawing.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 19,
+      "nonEmptyLines": 12,
+      "sections": [
+        {
+          "heading": "工程图生成参考",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "标准",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "证据要求",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "API 规则",
+          "level": 2,
+          "line": 15
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "subskills/solidworks-engineering-drawing/references/drilling-panel-gdt.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 27,
+      "nonEmptyLines": 16,
+      "sections": [
+        {
+          "heading": "钻孔面板分析（pilot）",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "subskills/solidworks-engineering-drawing/references/gdt-extended-options.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 119,
+      "nonEmptyLines": 94,
+      "sections": [
+        {
+          "heading": "SW2026 扩展 GD&T 结构化输入",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "公共基准与子基准组",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "公差层选项",
+          "level": 2,
+          "line": 41
+        },
+        {
+          "heading": "轮廓与公差带",
+          "level": 3,
+          "line": 67
+        },
+        {
+          "heading": "滤波",
+          "level": 3,
+          "line": 82
+        },
+        {
+          "heading": "SW2026 实测格式差异与验收",
+          "level": 2,
+          "line": 95
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "subskills/solidworks-engineering-drawing/references/native-gdt.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 138,
+      "nonEmptyLines": 112,
+      "sections": [
+        {
+          "heading": "SolidWorks 2026 原生 GD&T 与结构化自动落图（pilot）",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "自然语言任务的执行顺序",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "从三维模型自动落图",
+          "level": 2,
+          "line": 54
+        },
+        {
+          "heading": "成功和失败的含义",
+          "level": 2,
+          "line": 99
+        },
+        {
+          "heading": "可复现验证",
+          "level": 2,
+          "line": 114
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "subskills/solidworks-engineering-drawing/references/review.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "工程图审视参考",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    }
+  ]
+}

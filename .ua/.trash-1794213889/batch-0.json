@@ -1,0 +1,1544 @@
+{
+ "nodes": [
+  {
+   "id": "file:apps/workbench-ui/src/App.tsx",
+   "type": "file",
+   "name": "App.tsx",
+   "filePath": "apps/workbench-ui/src/App.tsx",
+   "summary": "Główny komponent React workbencha CAD: zarządza zadaniami, projektami, konwersacjami z agentem, ustawieniami, kolejką lokalną i bramką dostarczania artefaktów.",
+   "tags": [
+    "component",
+    "entry-point",
+    "state-management",
+    "workbench",
+    "react"
+   ],
+   "complexity": "complex",
+   "languageNotes": "Bardzo duży plik (ok. 3900 linii) z jednym komponentem App i wieloma funkcjami pomocniczymi."
+  },
+  {
+   "id": "function:apps/workbench-ui/src/App.tsx:App",
+   "type": "function",
+   "name": "App",
+   "filePath": "apps/workbench-ui/src/App.tsx",
+   "lineRange": [
+    861,
+    3922
+   ],
+   "summary": "Korzenny komponent aplikacji łączący stan, trwałość, panele i obsługę zadań CAD.",
+   "tags": [
+    "component",
+    "react",
+    "state-management"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/App.tsx:loadSettings",
+   "type": "function",
+   "name": "loadSettings",
+   "filePath": "apps/workbench-ui/src/App.tsx",
+   "lineRange": [
+    461,
+    539
+   ],
+   "summary": "Wczytuje i normalizuje ustawienia użytkownika z trwałego magazynu.",
+   "tags": [
+    "settings",
+    "persistence",
+    "normalization"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/App.tsx:preloadWallpaper",
+   "type": "function",
+   "name": "preloadWallpaper",
+   "filePath": "apps/workbench-ui/src/App.tsx",
+   "lineRange": [
+    425,
+    454
+   ],
+   "summary": "Wstępnie ładuje tapetę (obraz lub wideo) i zwraca jej stan.",
+   "tags": [
+    "wallpaper",
+    "async",
+    "media"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/App.tsx:buildCodexPrompt",
+   "type": "function",
+   "name": "buildCodexPrompt",
+   "filePath": "apps/workbench-ui/src/App.tsx",
+   "lineRange": [
+    815,
+    859
+   ],
+   "summary": "Buduje prompt dla agenta Codex na podstawie zadania i snapshotu możliwości.",
+   "tags": [
+    "prompt",
+    "agent",
+    "codex"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/App.tsx:buildChatPrompt",
+   "type": "function",
+   "name": "buildChatPrompt",
+   "filePath": "apps/workbench-ui/src/App.tsx",
+   "lineRange": [
+    670,
+    698
+   ],
+   "summary": "Składa prompt czatu z historii konwersacji i kontekstu projektu.",
+   "tags": [
+    "prompt",
+    "chat",
+    "agent"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/App.tsx:createJob",
+   "type": "function",
+   "name": "createJob",
+   "filePath": "apps/workbench-ui/src/App.tsx",
+   "lineRange": [
+    754,
+    791
+   ],
+   "summary": "Tworzy nowy rekord zadania z domyślnymi polami i identyfikatorem projektu.",
+   "tags": [
+    "job",
+    "factory",
+    "domain"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/App.tsx:loadAgentConversations",
+   "type": "function",
+   "name": "loadAgentConversations",
+   "filePath": "apps/workbench-ui/src/App.tsx",
+   "lineRange": [
+    565,
+    590
+   ],
+   "summary": "Wczytuje i waliduje zapisane konwersacje z agentami.",
+   "tags": [
+    "persistence",
+    "chat",
+    "agent"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/App.tsx:reviewOptionsFor",
+   "type": "function",
+   "name": "reviewOptionsFor",
+   "filePath": "apps/workbench-ui/src/App.tsx",
+   "lineRange": [
+    725,
+    738
+   ],
+   "summary": "Zwraca dostępne opcje przeglądu ręcznego dla zadania.",
+   "tags": [
+    "review",
+    "ui-logic",
+    "job"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/App.tsx:capabilitySnapshot",
+   "type": "function",
+   "name": "capabilitySnapshot",
+   "filePath": "apps/workbench-ui/src/App.tsx",
+   "lineRange": [
+    806,
+    813
+   ],
+   "summary": "Tworzy snapshot możliwości agenta dla konfiguracji.",
+   "tags": [
+    "capabilities",
+    "snapshot",
+    "config"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/App.tsx:capabilityIdsForConfig",
+   "type": "function",
+   "name": "capabilityIdsForConfig",
+   "filePath": "apps/workbench-ui/src/App.tsx",
+   "lineRange": [
+    793,
+    804
+   ],
+   "summary": "Wyznacza identyfikatory możliwości wynikające z konfiguracji.",
+   "tags": [
+    "capabilities",
+    "config",
+    "helper"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:apps/workbench-ui/src/components/ArtifactBrowser.tsx",
+   "type": "file",
+   "name": "ArtifactBrowser.tsx",
+   "filePath": "apps/workbench-ui/src/components/ArtifactBrowser.tsx",
+   "summary": "Przeglądarka artefaktów zadania z podglądem CAD i grupowaniem wg rodzaju.",
+   "tags": [
+    "component",
+    "react",
+    "ui",
+    "workbench"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/components/ArtifactBrowser.tsx:ArtifactBrowser",
+   "type": "function",
+   "name": "ArtifactBrowser",
+   "filePath": "apps/workbench-ui/src/components/ArtifactBrowser.tsx",
+   "lineRange": [
+    13,
+    39
+   ],
+   "summary": "Przeglądarka artefaktów zadania z podglądem CAD i grupowaniem wg rodzaju.",
+   "tags": [
+    "component",
+    "react",
+    "ui"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:apps/workbench-ui/src/components/ConversationControls.tsx",
+   "type": "file",
+   "name": "ConversationControls.tsx",
+   "filePath": "apps/workbench-ui/src/components/ConversationControls.tsx",
+   "summary": "Kontrolki konwersacji agenta (wybór, nowa, usuń).",
+   "tags": [
+    "component",
+    "react",
+    "ui",
+    "workbench"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/components/ConversationControls.tsx:ConversationControls",
+   "type": "function",
+   "name": "ConversationControls",
+   "filePath": "apps/workbench-ui/src/components/ConversationControls.tsx",
+   "lineRange": [
+    19,
+    48
+   ],
+   "summary": "Kontrolki konwersacji agenta (wybór, nowa, usuń).",
+   "tags": [
+    "component",
+    "react",
+    "ui"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:apps/workbench-ui/src/components/EnvironmentRemediationPanel.tsx",
+   "type": "file",
+   "name": "EnvironmentRemediationPanel.tsx",
+   "filePath": "apps/workbench-ui/src/components/EnvironmentRemediationPanel.tsx",
+   "summary": "Panel napraw środowiska pokazujący problemy i proponowane działania.",
+   "tags": [
+    "component",
+    "react",
+    "ui",
+    "workbench"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/components/EnvironmentRemediationPanel.tsx:EnvironmentRemediationPanel",
+   "type": "function",
+   "name": "EnvironmentRemediationPanel",
+   "filePath": "apps/workbench-ui/src/components/EnvironmentRemediationPanel.tsx",
+   "lineRange": [
+    11,
+    52
+   ],
+   "summary": "Panel napraw środowiska pokazujący problemy i proponowane działania.",
+   "tags": [
+    "component",
+    "react",
+    "ui"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:apps/workbench-ui/src/components/ManualReviewPanel.tsx",
+   "type": "file",
+   "name": "ManualReviewPanel.tsx",
+   "filePath": "apps/workbench-ui/src/components/ManualReviewPanel.tsx",
+   "summary": "Panel ręcznego przeglądu zadania z decyzją akceptacji.",
+   "tags": [
+    "component",
+    "react",
+    "ui",
+    "workbench"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/components/ManualReviewPanel.tsx:ManualReviewPanel",
+   "type": "function",
+   "name": "ManualReviewPanel",
+   "filePath": "apps/workbench-ui/src/components/ManualReviewPanel.tsx",
+   "lineRange": [
+    11,
+    39
+   ],
+   "summary": "Panel ręcznego przeglądu zadania z decyzją akceptacji.",
+   "tags": [
+    "component",
+    "react",
+    "ui"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:apps/workbench-ui/src/components/ProjectSwitcher.tsx",
+   "type": "file",
+   "name": "ProjectSwitcher.tsx",
+   "filePath": "apps/workbench-ui/src/components/ProjectSwitcher.tsx",
+   "summary": "Przełącznik projektów z wyszukiwaniem, duplikowaniem i zarządzaniem projektami.",
+   "tags": [
+    "component",
+    "react",
+    "ui",
+    "workbench"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/components/ProjectSwitcher.tsx:ProjectSwitcher",
+   "type": "function",
+   "name": "ProjectSwitcher",
+   "filePath": "apps/workbench-ui/src/components/ProjectSwitcher.tsx",
+   "lineRange": [
+    43,
+    187
+   ],
+   "summary": "Przełącznik projektów z wyszukiwaniem, duplikowaniem i zarządzaniem projektami.",
+   "tags": [
+    "component",
+    "react",
+    "ui"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:apps/workbench-ui/src/components/TaskSequence.tsx",
+   "type": "file",
+   "name": "TaskSequence.tsx",
+   "filePath": "apps/workbench-ui/src/components/TaskSequence.tsx",
+   "summary": "Lista sekwencji zadań z etykietami statusów.",
+   "tags": [
+    "component",
+    "react",
+    "ui",
+    "workbench"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/components/TaskSequence.tsx:TaskSequence",
+   "type": "function",
+   "name": "TaskSequence",
+   "filePath": "apps/workbench-ui/src/components/TaskSequence.tsx",
+   "lineRange": [
+    18,
+    88
+   ],
+   "summary": "Lista sekwencji zadań z etykietami statusów.",
+   "tags": [
+    "component",
+    "react",
+    "ui"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "type": "file",
+   "name": "artifacts.ts",
+   "filePath": "apps/workbench-ui/src/domain/artifacts.ts",
+   "summary": "Logika domenowa artefaktów: etykiety rodzajów, grupowanie, statusy, formaty dostarczania i zbieranie artefaktów zadań.",
+   "tags": [
+    "domain-logic",
+    "artifacts",
+    "utility",
+    "delivery"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/domain/artifacts.ts:collectJobArtifacts",
+   "type": "function",
+   "name": "collectJobArtifacts",
+   "filePath": "apps/workbench-ui/src/domain/artifacts.ts",
+   "lineRange": [
+    91,
+    127
+   ],
+   "summary": "Zbiera i deduplikuje artefakty z zadania.",
+   "tags": [
+    "domain-logic",
+    "artifacts",
+    "helper"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/domain/artifacts.ts:deliveryFormatStatus",
+   "type": "function",
+   "name": "deliveryFormatStatus",
+   "filePath": "apps/workbench-ui/src/domain/artifacts.ts",
+   "lineRange": [
+    69,
+    88
+   ],
+   "summary": "Ocenia status wymaganych formatów dostarczenia.",
+   "tags": [
+    "domain-logic",
+    "artifacts",
+    "helper"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/domain/artifacts.ts:groupedArtifacts",
+   "type": "function",
+   "name": "groupedArtifacts",
+   "filePath": "apps/workbench-ui/src/domain/artifacts.ts",
+   "lineRange": [
+    47,
+    51
+   ],
+   "summary": "Grupuje artefakty wg kategorii.",
+   "tags": [
+    "domain-logic",
+    "artifacts",
+    "helper"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/domain/artifacts.ts:artifactKindLabel",
+   "type": "function",
+   "name": "artifactKindLabel",
+   "filePath": "apps/workbench-ui/src/domain/artifacts.ts",
+   "lineRange": [
+    20,
+    33
+   ],
+   "summary": "Zwraca czytelną etykietę rodzaju artefaktu.",
+   "tags": [
+    "domain-logic",
+    "artifacts",
+    "helper"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/domain/artifacts.ts:artifactStatusLabel",
+   "type": "function",
+   "name": "artifactStatusLabel",
+   "filePath": "apps/workbench-ui/src/domain/artifacts.ts",
+   "lineRange": [
+    60,
+    67
+   ],
+   "summary": "Zwraca etykietę statusu artefaktu.",
+   "tags": [
+    "domain-logic",
+    "artifacts",
+    "helper"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/domain/artifacts.ts:formatBytes",
+   "type": "function",
+   "name": "formatBytes",
+   "filePath": "apps/workbench-ui/src/domain/artifacts.ts",
+   "lineRange": [
+    53,
+    58
+   ],
+   "summary": "Formatuje rozmiar w bajtach.",
+   "tags": [
+    "domain-logic",
+    "artifacts",
+    "helper"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/domain/artifacts.ts:artifactGroup",
+   "type": "function",
+   "name": "artifactGroup",
+   "filePath": "apps/workbench-ui/src/domain/artifacts.ts",
+   "lineRange": [
+    37,
+    45
+   ],
+   "summary": "Przypisuje artefakt do grupy.",
+   "tags": [
+    "domain-logic",
+    "artifacts",
+    "helper"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/domain/artifacts.ts:fileNameFromPath",
+   "type": "function",
+   "name": "fileNameFromPath",
+   "filePath": "apps/workbench-ui/src/domain/artifacts.ts",
+   "lineRange": [
+    15,
+    18
+   ],
+   "summary": "Wyciąga nazwę pliku ze ścieżki.",
+   "tags": [
+    "domain-logic",
+    "artifacts",
+    "helper"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/domain/artifacts.ts:artifactRequiresCurrentRunProof",
+   "type": "function",
+   "name": "artifactRequiresCurrentRunProof",
+   "filePath": "apps/workbench-ui/src/domain/artifacts.ts",
+   "lineRange": [
+    10,
+    13
+   ],
+   "summary": "Sprawdza czy artefakt wymaga dowodu z bieżącego uruchomienia.",
+   "tags": [
+    "domain-logic",
+    "artifacts",
+    "helper"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:apps/workbench-ui/src/domain/delivery.test.ts",
+   "type": "file",
+   "name": "delivery.test.ts",
+   "filePath": "apps/workbench-ui/src/domain/delivery.test.ts",
+   "summary": "Testy jednostkowe bramki dostarczania sprawdzające ocenę artefaktów i porównanie wersji.",
+   "tags": [
+    "test",
+    "delivery",
+    "domain-logic",
+    "vitest"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "file:apps/workbench-ui/src/domain/delivery.ts",
+   "type": "file",
+   "name": "delivery.ts",
+   "filePath": "apps/workbench-ui/src/domain/delivery.ts",
+   "summary": "Bramka dostarczania: ocenia gotowość zadania, diagnozuje backend, porównuje wersje artefaktów i tworzy snapshot uruchomienia.",
+   "tags": [
+    "domain-logic",
+    "delivery",
+    "validation",
+    "gate"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/domain/delivery.ts:assessDelivery",
+   "type": "function",
+   "name": "assessDelivery",
+   "filePath": "apps/workbench-ui/src/domain/delivery.ts",
+   "lineRange": [
+    73,
+    122
+   ],
+   "summary": "Ocenia czy zadanie spełnia wymagania dostarczenia.",
+   "tags": [
+    "domain-logic",
+    "delivery",
+    "helper"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/domain/delivery.ts:createRunSnapshot",
+   "type": "function",
+   "name": "createRunSnapshot",
+   "filePath": "apps/workbench-ui/src/domain/delivery.ts",
+   "lineRange": [
+    154,
+    175
+   ],
+   "summary": "Tworzy snapshot uruchomienia do porównań.",
+   "tags": [
+    "domain-logic",
+    "delivery",
+    "helper"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/domain/delivery.ts:artifactVersionComparison",
+   "type": "function",
+   "name": "artifactVersionComparison",
+   "filePath": "apps/workbench-ui/src/domain/delivery.ts",
+   "lineRange": [
+    136,
+    152
+   ],
+   "summary": "Porównuje wersje artefaktów między uruchomieniami.",
+   "tags": [
+    "domain-logic",
+    "delivery",
+    "helper"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/domain/delivery.ts:backendDiagnosticsFor",
+   "type": "function",
+   "name": "backendDiagnosticsFor",
+   "filePath": "apps/workbench-ui/src/domain/delivery.ts",
+   "lineRange": [
+    124,
+    134
+   ],
+   "summary": "Buduje diagnostykę backendu dla zadania.",
+   "tags": [
+    "domain-logic",
+    "delivery",
+    "helper"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/domain/delivery.ts:retryStageForJob",
+   "type": "function",
+   "name": "retryStageForJob",
+   "filePath": "apps/workbench-ui/src/domain/delivery.ts",
+   "lineRange": [
+    39,
+    51
+   ],
+   "summary": "Wyznacza etap ponowienia dla zadania.",
+   "tags": [
+    "domain-logic",
+    "delivery",
+    "helper"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/domain/delivery.ts:retryStageLabel",
+   "type": "function",
+   "name": "retryStageLabel",
+   "filePath": "apps/workbench-ui/src/domain/delivery.ts",
+   "lineRange": [
+    34,
+    37
+   ],
+   "summary": "Etykieta etapu ponowienia.",
+   "tags": [
+    "domain-logic",
+    "delivery",
+    "helper"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:apps/workbench-ui/src/domain/jobs.ts",
+   "type": "file",
+   "name": "jobs.ts",
+   "filePath": "apps/workbench-ui/src/domain/jobs.ts",
+   "summary": "Pomocnicze funkcje etykiet statusów i tytułów zadań.",
+   "tags": [
+    "domain-logic",
+    "jobs",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/domain/jobs.ts:jobStatusLabel",
+   "type": "function",
+   "name": "jobStatusLabel",
+   "filePath": "apps/workbench-ui/src/domain/jobs.ts",
+   "lineRange": [
+    4,
+    13
+   ],
+   "summary": "Mapuje status zadania na etykietę.",
+   "tags": [
+    "jobs",
+    "label",
+    "helper"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/domain/jobs.ts:jobDisplayTitle",
+   "type": "function",
+   "name": "jobDisplayTitle",
+   "filePath": "apps/workbench-ui/src/domain/jobs.ts",
+   "lineRange": [
+    29,
+    34
+   ],
+   "summary": "Wyznacza wyświetlany tytuł zadania.",
+   "tags": [
+    "jobs",
+    "title",
+    "helper"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:apps/workbench-ui/src/domain/projects.ts",
+   "type": "file",
+   "name": "projects.ts",
+   "filePath": "apps/workbench-ui/src/domain/projects.ts",
+   "summary": "Logika domenowa projektów: identyfikatory, filtrowanie, duplikowanie i wykrywanie aktywnych zadań.",
+   "tags": [
+    "domain-logic",
+    "projects",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/domain/projects.ts:filterProjects",
+   "type": "function",
+   "name": "filterProjects",
+   "filePath": "apps/workbench-ui/src/domain/projects.ts",
+   "lineRange": [
+    37,
+    45
+   ],
+   "summary": "Filtruje projekty wg zapytania.",
+   "tags": [
+    "projects",
+    "helper",
+    "domain-logic"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/domain/projects.ts:duplicateProjectRecord",
+   "type": "function",
+   "name": "duplicateProjectRecord",
+   "filePath": "apps/workbench-ui/src/domain/projects.ts",
+   "lineRange": [
+    48,
+    57
+   ],
+   "summary": "Tworzy kopię rekordu projektu.",
+   "tags": [
+    "projects",
+    "helper",
+    "domain-logic"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/domain/projects.ts:latestProjectConversation",
+   "type": "function",
+   "name": "latestProjectConversation",
+   "filePath": "apps/workbench-ui/src/domain/projects.ts",
+   "lineRange": [
+    28,
+    34
+   ],
+   "summary": "Zwraca najnowszą konwersację projektu.",
+   "tags": [
+    "projects",
+    "helper",
+    "domain-logic"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:apps/workbench-ui/src/domain/projects.ts:terminalProjectJobs",
+   "type": "function",
+   "name": "terminalProjectJobs",
+   "filePath": "apps/workbench-ui/src/domain/projects.ts",
+   "lineRange": [
+    65,
+    67
+   ],
+   "summary": "Zwraca zakończone zadania projektu.",
+   "tags": [
+    "projects",
+    "helper",
+    "domain-logic"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:apps/workbench-ui/src/main.tsx",
+   "type": "file",
+   "name": "main.tsx",
+   "filePath": "apps/workbench-ui/src/main.tsx",
+   "summary": "Punkt wejścia React: montuje komponent App i ładuje style.",
+   "tags": [
+    "entry-point",
+    "react",
+    "bootstrap"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:apps/workbench-ui/src/types.ts",
+   "type": "file",
+   "name": "types.ts",
+   "filePath": "apps/workbench-ui/src/types.ts",
+   "summary": "Wspólne definicje typów TypeScript workbencha: zadania, artefakty, projekty, konwersacje i ustawienia.",
+   "tags": [
+    "type-definition",
+    "data-model",
+    "domain",
+    "shared"
+   ],
+   "complexity": "moderate"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "function:apps/workbench-ui/src/App.tsx:App",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "function:apps/workbench-ui/src/App.tsx:loadSettings",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "function:apps/workbench-ui/src/App.tsx:preloadWallpaper",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "function:apps/workbench-ui/src/App.tsx:buildCodexPrompt",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "function:apps/workbench-ui/src/App.tsx:buildChatPrompt",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "function:apps/workbench-ui/src/App.tsx:createJob",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "function:apps/workbench-ui/src/App.tsx:loadAgentConversations",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "function:apps/workbench-ui/src/App.tsx:reviewOptionsFor",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "function:apps/workbench-ui/src/App.tsx:capabilitySnapshot",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "function:apps/workbench-ui/src/App.tsx:capabilityIdsForConfig",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/ArtifactBrowser.tsx",
+   "target": "function:apps/workbench-ui/src/components/ArtifactBrowser.tsx:ArtifactBrowser",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/ArtifactBrowser.tsx",
+   "target": "function:apps/workbench-ui/src/components/ArtifactBrowser.tsx:ArtifactBrowser",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/ConversationControls.tsx",
+   "target": "function:apps/workbench-ui/src/components/ConversationControls.tsx:ConversationControls",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/ConversationControls.tsx",
+   "target": "function:apps/workbench-ui/src/components/ConversationControls.tsx:ConversationControls",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/EnvironmentRemediationPanel.tsx",
+   "target": "function:apps/workbench-ui/src/components/EnvironmentRemediationPanel.tsx:EnvironmentRemediationPanel",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/EnvironmentRemediationPanel.tsx",
+   "target": "function:apps/workbench-ui/src/components/EnvironmentRemediationPanel.tsx:EnvironmentRemediationPanel",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/ManualReviewPanel.tsx",
+   "target": "function:apps/workbench-ui/src/components/ManualReviewPanel.tsx:ManualReviewPanel",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/ManualReviewPanel.tsx",
+   "target": "function:apps/workbench-ui/src/components/ManualReviewPanel.tsx:ManualReviewPanel",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/ProjectSwitcher.tsx",
+   "target": "function:apps/workbench-ui/src/components/ProjectSwitcher.tsx:ProjectSwitcher",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/ProjectSwitcher.tsx",
+   "target": "function:apps/workbench-ui/src/components/ProjectSwitcher.tsx:ProjectSwitcher",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/TaskSequence.tsx",
+   "target": "function:apps/workbench-ui/src/components/TaskSequence.tsx:TaskSequence",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/TaskSequence.tsx",
+   "target": "function:apps/workbench-ui/src/components/TaskSequence.tsx:TaskSequence",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "target": "function:apps/workbench-ui/src/domain/artifacts.ts:collectJobArtifacts",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "target": "function:apps/workbench-ui/src/domain/artifacts.ts:collectJobArtifacts",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "target": "function:apps/workbench-ui/src/domain/artifacts.ts:deliveryFormatStatus",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "target": "function:apps/workbench-ui/src/domain/artifacts.ts:deliveryFormatStatus",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "target": "function:apps/workbench-ui/src/domain/artifacts.ts:groupedArtifacts",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "target": "function:apps/workbench-ui/src/domain/artifacts.ts:groupedArtifacts",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "target": "function:apps/workbench-ui/src/domain/artifacts.ts:artifactKindLabel",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "target": "function:apps/workbench-ui/src/domain/artifacts.ts:artifactKindLabel",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "target": "function:apps/workbench-ui/src/domain/artifacts.ts:artifactStatusLabel",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "target": "function:apps/workbench-ui/src/domain/artifacts.ts:artifactStatusLabel",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "target": "function:apps/workbench-ui/src/domain/artifacts.ts:formatBytes",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "target": "function:apps/workbench-ui/src/domain/artifacts.ts:formatBytes",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "target": "function:apps/workbench-ui/src/domain/artifacts.ts:artifactGroup",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "target": "function:apps/workbench-ui/src/domain/artifacts.ts:artifactGroup",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "target": "function:apps/workbench-ui/src/domain/artifacts.ts:fileNameFromPath",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "target": "function:apps/workbench-ui/src/domain/artifacts.ts:fileNameFromPath",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "target": "function:apps/workbench-ui/src/domain/artifacts.ts:artifactRequiresCurrentRunProof",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "target": "function:apps/workbench-ui/src/domain/artifacts.ts:artifactRequiresCurrentRunProof",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/delivery.ts",
+   "target": "function:apps/workbench-ui/src/domain/delivery.ts:assessDelivery",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/delivery.ts",
+   "target": "function:apps/workbench-ui/src/domain/delivery.ts:assessDelivery",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/delivery.ts",
+   "target": "function:apps/workbench-ui/src/domain/delivery.ts:createRunSnapshot",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/delivery.ts",
+   "target": "function:apps/workbench-ui/src/domain/delivery.ts:createRunSnapshot",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/delivery.ts",
+   "target": "function:apps/workbench-ui/src/domain/delivery.ts:artifactVersionComparison",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/delivery.ts",
+   "target": "function:apps/workbench-ui/src/domain/delivery.ts:artifactVersionComparison",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/delivery.ts",
+   "target": "function:apps/workbench-ui/src/domain/delivery.ts:backendDiagnosticsFor",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/delivery.ts",
+   "target": "function:apps/workbench-ui/src/domain/delivery.ts:backendDiagnosticsFor",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/delivery.ts",
+   "target": "function:apps/workbench-ui/src/domain/delivery.ts:retryStageForJob",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/delivery.ts",
+   "target": "function:apps/workbench-ui/src/domain/delivery.ts:retryStageForJob",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/delivery.ts",
+   "target": "function:apps/workbench-ui/src/domain/delivery.ts:retryStageLabel",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/delivery.ts",
+   "target": "function:apps/workbench-ui/src/domain/delivery.ts:retryStageLabel",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/jobs.ts",
+   "target": "function:apps/workbench-ui/src/domain/jobs.ts:jobStatusLabel",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/jobs.ts",
+   "target": "function:apps/workbench-ui/src/domain/jobs.ts:jobStatusLabel",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/jobs.ts",
+   "target": "function:apps/workbench-ui/src/domain/jobs.ts:jobDisplayTitle",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/jobs.ts",
+   "target": "function:apps/workbench-ui/src/domain/jobs.ts:jobDisplayTitle",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/projects.ts",
+   "target": "function:apps/workbench-ui/src/domain/projects.ts:filterProjects",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/projects.ts",
+   "target": "function:apps/workbench-ui/src/domain/projects.ts:filterProjects",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/projects.ts",
+   "target": "function:apps/workbench-ui/src/domain/projects.ts:duplicateProjectRecord",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/projects.ts",
+   "target": "function:apps/workbench-ui/src/domain/projects.ts:duplicateProjectRecord",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/projects.ts",
+   "target": "function:apps/workbench-ui/src/domain/projects.ts:latestProjectConversation",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/projects.ts",
+   "target": "function:apps/workbench-ui/src/domain/projects.ts:latestProjectConversation",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/projects.ts",
+   "target": "function:apps/workbench-ui/src/domain/projects.ts:terminalProjectJobs",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/projects.ts",
+   "target": "function:apps/workbench-ui/src/domain/projects.ts:terminalProjectJobs",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "file:apps/workbench-ui/src/components/AppUpdatePanel.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "file:apps/workbench-ui/src/components/ArtifactBrowser.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "file:apps/workbench-ui/src/components/ConversationControls.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "file:apps/workbench-ui/src/components/EnvironmentRemediationPanel.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "file:apps/workbench-ui/src/components/ManualReviewPanel.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "file:apps/workbench-ui/src/components/ProjectSwitcher.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "file:apps/workbench-ui/src/components/TaskSequence.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "file:apps/workbench-ui/src/domain/delivery.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "file:apps/workbench-ui/src/domain/jobs.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "file:apps/workbench-ui/src/domain/projects.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "file:apps/workbench-ui/src/persistence.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "file:apps/workbench-ui/src/preview/PreviewShowcase.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "file:apps/workbench-ui/src/types.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/ArtifactBrowser.tsx",
+   "target": "file:apps/workbench-ui/src/CadPreview.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/ArtifactBrowser.tsx",
+   "target": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/ArtifactBrowser.tsx",
+   "target": "file:apps/workbench-ui/src/types.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/ConversationControls.tsx",
+   "target": "file:apps/workbench-ui/src/types.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/EnvironmentRemediationPanel.tsx",
+   "target": "file:apps/workbench-ui/src/types.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/ManualReviewPanel.tsx",
+   "target": "file:apps/workbench-ui/src/types.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/ProjectSwitcher.tsx",
+   "target": "file:apps/workbench-ui/src/domain/projects.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/ProjectSwitcher.tsx",
+   "target": "file:apps/workbench-ui/src/types.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/TaskSequence.tsx",
+   "target": "file:apps/workbench-ui/src/domain/jobs.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/components/TaskSequence.tsx",
+   "target": "file:apps/workbench-ui/src/types.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "target": "file:apps/workbench-ui/src/types.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/delivery.test.ts",
+   "target": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/delivery.test.ts",
+   "target": "file:apps/workbench-ui/src/domain/delivery.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/delivery.test.ts",
+   "target": "file:apps/workbench-ui/src/types.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/delivery.ts",
+   "target": "file:apps/workbench-ui/src/domain/artifacts.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/delivery.ts",
+   "target": "file:apps/workbench-ui/src/types.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/jobs.ts",
+   "target": "file:apps/workbench-ui/src/types.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/projects.ts",
+   "target": "file:apps/workbench-ui/src/types.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/main.tsx",
+   "target": "file:apps/workbench-ui/src/App.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/main.tsx",
+   "target": "file:apps/workbench-ui/src/styles.css",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:apps/workbench-ui/src/domain/delivery.ts",
+   "target": "file:apps/workbench-ui/src/domain/delivery.test.ts",
+   "type": "tested_by",
+   "direction": "forward",
+   "weight": 0.5
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "function:apps/workbench-ui/src/domain/delivery.ts:assessDelivery",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "function:apps/workbench-ui/src/domain/artifacts.ts:collectJobArtifacts",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:apps/workbench-ui/src/App.tsx",
+   "target": "function:apps/workbench-ui/src/domain/delivery.ts:createRunSnapshot",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  }
+ ]
+}

@@ -1,0 +1,197 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 3,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 3
+    }
+  },
+  "results": [
+    {
+      "path": "subskills/solidworks-vibecad/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 82,
+      "nonEmptyLines": 63,
+      "sections": [
+        {
+          "heading": "SolidWorks VibeCAD",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "为什么放在子技能里",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "当前能力",
+          "level": 2,
+          "line": 15
+        },
+        {
+          "heading": "目录",
+          "level": 2,
+          "line": 23
+        },
+        {
+          "heading": "快速运行",
+          "level": 2,
+          "line": 47
+        },
+        {
+          "heading": "示例输出",
+          "level": 2,
+          "line": 61
+        },
+        {
+          "heading": "下一步",
+          "level": 2,
+          "line": 72
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "subskills/solidworks-vibecad/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 77,
+      "nonEmptyLines": 55,
+      "sections": [
+        {
+          "heading": "SolidWorks VibeCAD",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "核心定位",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "适用任务",
+          "level": 2,
+          "line": 18
+        },
+        {
+          "heading": "工作流",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "快速命令",
+          "level": 2,
+          "line": 36
+        },
+        {
+          "heading": "与父技能的关系",
+          "level": 2,
+          "line": 48
+        },
+        {
+          "heading": "少走弯路",
+          "level": 2,
+          "line": 67
+        },
+        {
+          "heading": "当前状态",
+          "level": 2,
+          "line": 75
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "subskills/solidworks-vibecad/manifest.yaml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 22,
+      "nonEmptyLines": 22,
+      "sections": [
+        {
+          "heading": "name",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "title",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "status",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "summary",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "entrypoint",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "scripts",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "knowledge",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "prompts",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "schemas",
+          "level": 1,
+          "line": 13
+        },
+        {
+          "heading": "examples",
+          "level": 1,
+          "line": 15
+        },
+        {
+          "heading": "depends_on",
+          "level": 1,
+          "line": 19
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    }
+  ]
+}

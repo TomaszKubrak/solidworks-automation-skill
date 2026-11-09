@@ -1,0 +1,139 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 1,
+  "filesSkipped": [
+    "mcp-server/register_all_ai_mcp.ps1",
+    "mcp-server/register_codex_mcp.ps1",
+    "mcp-server/requirements.txt"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 1,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 1
+    }
+  },
+  "results": [
+    {
+      "path": "mcp-server/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 434,
+      "nonEmptyLines": 339,
+      "sections": [
+        {
+          "heading": "SolidWorks MCP Server",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "环境要求",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "启动",
+          "level": 2,
+          "line": 21
+        },
+        {
+          "heading": "工具发现模式（默认）",
+          "level": 2,
+          "line": 31
+        },
+        {
+          "heading": "环境变量",
+          "level": 3,
+          "line": 49
+        },
+        {
+          "heading": "任务授权和可选逐次审批",
+          "level": 3,
+          "line": 62
+        },
+        {
+          "heading": "回滚到旧行为",
+          "level": 3,
+          "line": 105
+        },
+        {
+          "heading": "协议验证",
+          "level": 3,
+          "line": 119
+        },
+        {
+          "heading": "HTTP 传输（streamable-http）",
+          "level": 2,
+          "line": 129
+        },
+        {
+          "heading": "取回预览与交付文件",
+          "level": 3,
+          "line": 169
+        },
+        {
+          "heading": "Smithery 发布",
+          "level": 2,
+          "line": 181
+        },
+        {
+          "heading": "多客户端自动注册",
+          "level": 2,
+          "line": 196
+        },
+        {
+          "heading": "Codex 专用注册",
+          "level": 2,
+          "line": 233
+        },
+        {
+          "heading": "手动配置",
+          "level": 2,
+          "line": 241
+        },
+        {
+          "heading": "已暴露工具",
+          "level": 2,
+          "line": 265
+        },
+        {
+          "heading": "基础装配工具示例",
+          "level": 2,
+          "line": 317
+        },
+        {
+          "heading": "Motion Study 示例",
+          "level": 2,
+          "line": 369
+        },
+        {
+          "heading": "设计原则",
+          "level": 2,
+          "line": 419
+        },
+        {
+          "heading": "已知限制",
+          "level": 2,
+          "line": 426
+        },
+        {
+          "heading": "原生圆截面路径工具",
+          "level": 2,
+          "line": 432
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 20
+      }
+    }
+  ]
+}

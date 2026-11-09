@@ -1,0 +1,811 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 11,
+  "filesSkipped": [
+    "requirements-mesh.txt",
+    "requirements-occt.txt",
+    "requirements-pdf.txt",
+    "requirements.txt"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 11,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 11
+    }
+  },
+  "results": [
+    {
+      "path": "CONTRIBUTING.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 367,
+      "nonEmptyLines": 276,
+      "sections": [
+        {
+          "heading": "贡献指南 / Contributing Guide",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "治理与维护模式",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "当前治理限制（如实记录，截至 2026-10-27）",
+          "level": 3,
+          "line": 16
+        },
+        {
+          "heading": "维护者：规则集变更后必须重新采集证明",
+          "level": 3,
+          "line": 38
+        },
+        {
+          "heading": "如何贡献",
+          "level": 2,
+          "line": 55
+        },
+        {
+          "heading": "报告 Bug",
+          "level": 3,
+          "line": 57
+        },
+        {
+          "heading": "提交功能请求",
+          "level": 3,
+          "line": 67
+        },
+        {
+          "heading": "提交代码",
+          "level": 3,
+          "line": 75
+        },
+        {
+          "heading": "PR 审查与合并标准",
+          "level": 2,
+          "line": 109
+        },
+        {
+          "heading": "1. 提交前要求",
+          "level": 3,
+          "line": 113
+        },
+        {
+          "heading": "2. PR 描述必须包含的六项",
+          "level": 3,
+          "line": 120
+        },
+        {
+          "heading": "3. 测试证据要求",
+          "level": 3,
+          "line": 133
+        },
+        {
+          "heading": "4. CI 检查",
+          "level": 3,
+          "line": 147
+        },
+        {
+          "heading": "4.1 合并流程与独立审核的边界",
+          "level": 3,
+          "line": 176
+        },
+        {
+          "heading": "5. 代码审查维度",
+          "level": 3,
+          "line": 214
+        },
+        {
+          "heading": "6. 拒绝或要求修改的条件",
+          "level": 3,
+          "line": 225
+        },
+        {
+          "heading": "7. CAD 相关修改的额外要求",
+          "level": 3,
+          "line": 240
+        },
+        {
+          "heading": "8. 桌面端端到端测试（`ai_team/`）",
+          "level": 3,
+          "line": 251
+        },
+        {
+          "heading": "代码规范",
+          "level": 2,
+          "line": 283
+        },
+        {
+          "heading": "Python 代码风格",
+          "level": 3,
+          "line": 285
+        },
+        {
+          "heading": "文档规范",
+          "level": 3,
+          "line": 293
+        },
+        {
+          "heading": "提交信息规范",
+          "level": 3,
+          "line": 318
+        },
+        {
+          "heading": "项目结构",
+          "level": 2,
+          "line": 328
+        },
+        {
+          "heading": "添加新功能",
+          "level": 2,
+          "line": 344
+        },
+        {
+          "heading": "需要帮助?",
+          "level": 2,
+          "line": 353
+        },
+        {
+          "heading": "行为准则",
+          "level": 2,
+          "line": 360
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 26
+      }
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 356,
+      "nonEmptyLines": 256,
+      "sections": [
+        {
+          "heading": "SolidWorks Automation Skill",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "See It In Action",
+          "level": 2,
+          "line": 30
+        },
+        {
+          "heading": "Prerequisites",
+          "level": 2,
+          "line": 46
+        },
+        {
+          "heading": "Quick Start",
+          "level": 2,
+          "line": 78
+        },
+        {
+          "heading": "Option 1 — Skill",
+          "level": 3,
+          "line": 82
+        },
+        {
+          "heading": "Option 2 — MCP",
+          "level": 3,
+          "line": 113
+        },
+        {
+          "heading": "Option 3 — CAD Studio 桌面版",
+          "level": 3,
+          "line": 125
+        },
+        {
+          "heading": "Why This Project",
+          "level": 2,
+          "line": 143
+        },
+        {
+          "heading": "Architecture",
+          "level": 2,
+          "line": 166
+        },
+        {
+          "heading": "Reliability",
+          "level": 2,
+          "line": 200
+        },
+        {
+          "heading": "验证边界（Verification Boundary）",
+          "level": 3,
+          "line": 215
+        },
+        {
+          "heading": "Capabilities & Status",
+          "level": 2,
+          "line": 242
+        },
+        {
+          "heading": "No SolidWorks Installed?",
+          "level": 2,
+          "line": 279
+        },
+        {
+          "heading": "Examples",
+          "level": 2,
+          "line": 291
+        },
+        {
+          "heading": "Documentation",
+          "level": 2,
+          "line": 297
+        },
+        {
+          "heading": "Roadmap & Contributing",
+          "level": 2,
+          "line": 320
+        },
+        {
+          "heading": "License & Community",
+          "level": 2,
+          "line": 328
+        },
+        {
+          "heading": "English",
+          "level": 2,
+          "line": 339
+        },
+        {
+          "heading": "装配干涉检查 API",
+          "level": 3,
+          "line": 347
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 19
+      }
+    },
+    {
+      "path": "SECURITY.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 16,
+      "nonEmptyLines": 10,
+      "sections": [
+        {
+          "heading": "安全策略",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "支持版本",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "报告漏洞",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "信任边界",
+          "level": 2,
+          "line": 11
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 328,
+      "nonEmptyLines": 255,
+      "sections": [
+        {
+          "heading": "SolidWorks 自动化技能",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "快速开始",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "环境要求",
+          "level": 3,
+          "line": 11
+        },
+        {
+          "heading": "入口自检",
+          "level": 3,
+          "line": 20
+        },
+        {
+          "heading": "多入口与多后端",
+          "level": 3,
+          "line": 36
+        },
+        {
+          "heading": "Python 依赖提醒",
+          "level": 3,
+          "line": 59
+        },
+        {
+          "heading": "连接 SolidWorks",
+          "level": 3,
+          "line": 74
+        },
+        {
+          "heading": "核心工作流",
+          "level": 2,
+          "line": 104
+        },
+        {
+          "heading": "OpenClaw 协作方式",
+          "level": 2,
+          "line": 151
+        },
+        {
+          "heading": "使用流程",
+          "level": 2,
+          "line": 167
+        },
+        {
+          "heading": "机械图纸默认底线",
+          "level": 3,
+          "line": 191
+        },
+        {
+          "heading": "高还原外观/公开网格参考模型",
+          "level": 3,
+          "line": 201
+        },
+        {
+          "heading": "多色外观要求",
+          "level": 3,
+          "line": 213
+        },
+        {
+          "heading": "MCP Server 使用",
+          "level": 3,
+          "line": 224
+        },
+        {
+          "heading": "运动装配体要求",
+          "level": 3,
+          "line": 243
+        },
+        {
+          "heading": "GPT / Kimi / Claude 多模型策略",
+          "level": 2,
+          "line": 256
+        },
+        {
+          "heading": "未封装 API 规则",
+          "level": 2,
+          "line": 276
+        },
+        {
+          "heading": "结果自审查",
+          "level": 2,
+          "line": 290
+        },
+        {
+          "heading": "关键注意事项",
+          "level": 2,
+          "line": 316
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 19
+      }
+    },
+    {
+      "path": "SUBSKILLS.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 134,
+      "nonEmptyLines": 94,
+      "sections": [
+        {
+          "heading": "SolidWorks Automation 子技能矩阵",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "技能索引",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "推荐路由",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "什么时候用哪个",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "solidworks-vibecad",
+          "level": 3,
+          "line": 31
+        },
+        {
+          "heading": "solidworks-fillet-chamfer-cnc",
+          "level": 3,
+          "line": 46
+        },
+        {
+          "heading": "solidworks-threaded-holes",
+          "level": 3,
+          "line": 61
+        },
+        {
+          "heading": "autocad-automation",
+          "level": 3,
+          "line": 76
+        },
+        {
+          "heading": "solidworks-engineering-drawing",
+          "level": 3,
+          "line": 92
+        },
+        {
+          "heading": "子技能目录规范",
+          "level": 2,
+          "line": 111
+        },
+        {
+          "heading": "质量门禁",
+          "level": 2,
+          "line": 126
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "capabilities.yaml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 583,
+      "nonEmptyLines": 583,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 0
+      }
+    },
+    {
+      "path": "golden-workflows.yaml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 18,
+      "nonEmptyLines": 18,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 0
+      }
+    },
+    {
+      "path": "manifest.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 58,
+      "nonEmptyLines": 58,
+      "sections": [
+        {
+          "heading": "$schema",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "manifest_version",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "name",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "display_name",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "version",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "description",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "long_description",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "author",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "repository",
+          "level": 1,
+          "line": 13
+        },
+        {
+          "heading": "homepage",
+          "level": 1,
+          "line": 17
+        },
+        {
+          "heading": "documentation",
+          "level": 1,
+          "line": 18
+        },
+        {
+          "heading": "support",
+          "level": 1,
+          "line": 19
+        },
+        {
+          "heading": "server",
+          "level": 1,
+          "line": 20
+        },
+        {
+          "heading": "tools_generated",
+          "level": 1,
+          "line": 37
+        },
+        {
+          "heading": "keywords",
+          "level": 1,
+          "line": 38
+        },
+        {
+          "heading": "license",
+          "level": 1,
+          "line": 49
+        },
+        {
+          "heading": "compatibility",
+          "level": 1,
+          "line": 50
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 17
+      }
+    },
+    {
+      "path": "package.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 37,
+      "nonEmptyLines": 37,
+      "sections": [
+        {
+          "heading": "name",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "version",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "description",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "main",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "bin",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "scripts",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "engines",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "keywords",
+          "level": 1,
+          "line": 15
+        },
+        {
+          "heading": "author",
+          "level": 1,
+          "line": 30
+        },
+        {
+          "heading": "license",
+          "level": 1,
+          "line": 31
+        },
+        {
+          "heading": "repository",
+          "level": 1,
+          "line": 32
+        },
+        {
+          "heading": "homepage",
+          "level": 1,
+          "line": 36
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "project.yaml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 38,
+      "nonEmptyLines": 34,
+      "sections": [
+        {
+          "heading": "name",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "authors",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "category",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "tags",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "status",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "updated",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "summary",
+          "level": 1,
+          "line": 10
+        },
+        {
+          "heading": "cover",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "readme",
+          "level": 1,
+          "line": 13
+        },
+        {
+          "heading": "links",
+          "level": 1,
+          "line": 15
+        },
+        {
+          "heading": "subskills",
+          "level": 1,
+          "line": 18
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 11
+      }
+    },
+    {
+      "path": "pyproject.toml",
+      "language": "toml",
+      "fileCategory": "config",
+      "totalLines": 32,
+      "nonEmptyLines": 29,
+      "sections": [
+        {
+          "heading": "project",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "project.urls",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "tool.uv",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "tool.pytest.ini_options",
+          "level": 3,
+          "line": 30
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    }
+  ]
+}

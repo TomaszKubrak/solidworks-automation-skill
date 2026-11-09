@@ -1,0 +1,3588 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 7,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 7,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 7,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "scripts/core/__init__.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 121,
+      "nonEmptyLines": 118,
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scripts/core/capability.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 149,
+      "nonEmptyLines": 125,
+      "functions": [
+        {
+          "name": "load_capabilities",
+          "startLine": 22,
+          "endLine": 24,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "get_capability",
+          "startLine": 27,
+          "endLine": 30,
+          "params": [
+            "capability_id",
+            "payload"
+          ]
+        },
+        {
+          "name": "get_operation_route",
+          "startLine": 33,
+          "endLine": 36,
+          "params": [
+            "operation_id",
+            "payload"
+          ]
+        },
+        {
+          "name": "get_backend_candidates",
+          "startLine": 39,
+          "endLine": 45,
+          "params": [
+            "operation_id",
+            "payload"
+          ]
+        },
+        {
+          "name": "resolve_backend",
+          "startLine": 48,
+          "endLine": 65,
+          "params": [
+            "operation_id",
+            "available_backends",
+            "available_requirements",
+            "solidworks_revision",
+            "exact_api",
+            "payload"
+          ]
+        },
+        {
+          "name": "requires_review",
+          "startLine": 68,
+          "endLine": 85,
+          "params": [
+            "capability_id",
+            "operation_id",
+            "payload"
+          ]
+        },
+        {
+          "name": "get_capability_status",
+          "startLine": 88,
+          "endLine": 115,
+          "params": [
+            "capability_id",
+            "payload"
+          ]
+        },
+        {
+          "name": "capability_gap",
+          "startLine": 118,
+          "endLine": 137,
+          "params": [
+            "requested_capability",
+            "reason",
+            "searched_existing_tools",
+            "searched_backends"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "load_capabilities",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "get_capability",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "get_operation_route",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "get_backend_candidates",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "resolve_backend",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "requires_review",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "get_capability_status",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "capability_gap",
+          "line": 118,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "load_capabilities",
+          "callee": "_capabilities.load_capabilities",
+          "lineNumber": 24
+        },
+        {
+          "caller": "get_capability",
+          "callee": "_capabilities.capability_index(payload).get",
+          "lineNumber": 29
+        },
+        {
+          "caller": "get_capability",
+          "callee": "_capabilities.capability_index",
+          "lineNumber": 29
+        },
+        {
+          "caller": "get_capability",
+          "callee": "str",
+          "lineNumber": 29
+        },
+        {
+          "caller": "get_capability",
+          "callee": "dict",
+          "lineNumber": 30
+        },
+        {
+          "caller": "get_operation_route",
+          "callee": "_capabilities.operation_route_index(payload).get",
+          "lineNumber": 35
+        },
+        {
+          "caller": "get_operation_route",
+          "callee": "_capabilities.operation_route_index",
+          "lineNumber": 35
+        },
+        {
+          "caller": "get_operation_route",
+          "callee": "str",
+          "lineNumber": 35
+        },
+        {
+          "caller": "get_operation_route",
+          "callee": "dict",
+          "lineNumber": 36
+        },
+        {
+          "caller": "get_backend_candidates",
+          "callee": "get_operation_route",
+          "lineNumber": 41
+        },
+        {
+          "caller": "get_backend_candidates",
+          "callee": "route.get",
+          "lineNumber": 44
+        },
+        {
+          "caller": "get_backend_candidates",
+          "callee": "isinstance",
+          "lineNumber": 44
+        },
+        {
+          "caller": "get_backend_candidates",
+          "callee": "sorted",
+          "lineNumber": 45
+        },
+        {
+          "caller": "get_backend_candidates",
+          "callee": "int",
+          "lineNumber": 45
+        },
+        {
+          "caller": "get_backend_candidates",
+          "callee": "item.get",
+          "lineNumber": 45
+        },
+        {
+          "caller": "resolve_backend",
+          "callee": "_capabilities.resolve_operation_backend",
+          "lineNumber": 58
+        },
+        {
+          "caller": "resolve_backend",
+          "callee": "str",
+          "lineNumber": 59
+        },
+        {
+          "caller": "requires_review",
+          "callee": "get_operation_route",
+          "lineNumber": 80
+        },
+        {
+          "caller": "requires_review",
+          "callee": "bool",
+          "lineNumber": 81
+        },
+        {
+          "caller": "requires_review",
+          "callee": "route.get",
+          "lineNumber": 81
+        },
+        {
+          "caller": "requires_review",
+          "callee": "get_capability",
+          "lineNumber": 83
+        },
+        {
+          "caller": "requires_review",
+          "callee": "item.get",
+          "lineNumber": 84
+        },
+        {
+          "caller": "get_capability_status",
+          "callee": "get_capability",
+          "lineNumber": 90
+        },
+        {
+          "caller": "get_capability_status",
+          "callee": "str",
+          "lineNumber": 94
+        },
+        {
+          "caller": "get_capability_status",
+          "callee": "item.get",
+          "lineNumber": 104
+        },
+        {
+          "caller": "get_capability_status",
+          "callee": "str",
+          "lineNumber": 107
+        },
+        {
+          "caller": "get_capability_status",
+          "callee": "_capabilities.unattended_allowed",
+          "lineNumber": 110
+        },
+        {
+          "caller": "get_capability_status",
+          "callee": "str",
+          "lineNumber": 110
+        },
+        {
+          "caller": "get_capability_status",
+          "callee": "list",
+          "lineNumber": 111
+        },
+        {
+          "caller": "get_capability_status",
+          "callee": "item.get",
+          "lineNumber": 111
+        },
+        {
+          "caller": "get_capability_status",
+          "callee": "list",
+          "lineNumber": 112
+        },
+        {
+          "caller": "get_capability_status",
+          "callee": "item.get",
+          "lineNumber": 112
+        },
+        {
+          "caller": "get_capability_status",
+          "callee": "list",
+          "lineNumber": 113
+        },
+        {
+          "caller": "get_capability_status",
+          "callee": "item.get",
+          "lineNumber": 113
+        },
+        {
+          "caller": "capability_gap",
+          "callee": "str",
+          "lineNumber": 132
+        },
+        {
+          "caller": "capability_gap",
+          "callee": "str",
+          "lineNumber": 133
+        },
+        {
+          "caller": "capability_gap",
+          "callee": "bool",
+          "lineNumber": 134
+        },
+        {
+          "caller": "capability_gap",
+          "callee": "bool",
+          "lineNumber": 135
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 8,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scripts/core/execution.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 334,
+      "nonEmptyLines": 301,
+      "functions": [
+        {
+          "name": "normalize_tool_payload",
+          "startLine": 40,
+          "endLine": 61,
+          "params": [
+            "raw"
+          ]
+        },
+        {
+          "name": "_extract_message",
+          "startLine": 64,
+          "endLine": 70,
+          "params": [
+            "raw"
+          ]
+        },
+        {
+          "name": "_extract_outputs",
+          "startLine": 73,
+          "endLine": 80,
+          "params": [
+            "raw"
+          ]
+        },
+        {
+          "name": "_extract_error_code",
+          "startLine": 83,
+          "endLine": 87,
+          "params": [
+            "raw"
+          ]
+        },
+        {
+          "name": "_exception_summary",
+          "startLine": 90,
+          "endLine": 98,
+          "params": [
+            "exception"
+          ]
+        },
+        {
+          "name": "_trace",
+          "startLine": 128,
+          "endLine": 152,
+          "params": [
+            "event_type",
+            "trace_dir",
+            "run_id",
+            "step_id",
+            "capability_id",
+            "message",
+            "data"
+          ]
+        },
+        {
+          "name": "execute_with_core",
+          "startLine": 155,
+          "endLine": 331,
+          "params": [
+            "handler",
+            "handler_arg",
+            "run_id",
+            "step_id",
+            "tool_name",
+            "capability_id",
+            "operation_id",
+            "requires_review",
+            "reviewer",
+            "reviewer_result",
+            "artifacts",
+            "evidence",
+            "capability_facade",
+            "max_retries",
+            "trace_dir",
+            "defer_completion"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ExecutionAssessment",
+          "startLine": 102,
+          "endLine": 125,
+          "methods": [
+            "to_dict"
+          ],
+          "properties": [
+            "run_context",
+            "step",
+            "execution_result",
+            "raw_result",
+            "exception",
+            "verification_result",
+            "recovery_decision",
+            "requires_review"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "normalize_tool_payload",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "_extract_message",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "_extract_outputs",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "_extract_error_code",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "_exception_summary",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "ExecutionAssessment",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "_trace",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "execute_with_core",
+          "line": 155,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "normalize_tool_payload",
+          "callee": "dict",
+          "lineNumber": 45
+        },
+        {
+          "caller": "normalize_tool_payload",
+          "callee": "payload.get",
+          "lineNumber": 47
+        },
+        {
+          "caller": "normalize_tool_payload",
+          "callee": "flags.extend",
+          "lineNumber": 48
+        },
+        {
+          "caller": "normalize_tool_payload",
+          "callee": "payload.get",
+          "lineNumber": 49
+        },
+        {
+          "caller": "normalize_tool_payload",
+          "callee": "isinstance",
+          "lineNumber": 50
+        },
+        {
+          "caller": "normalize_tool_payload",
+          "callee": "uncertain.extend",
+          "lineNumber": 51
+        },
+        {
+          "caller": "normalize_tool_payload",
+          "callee": "payload.get",
+          "lineNumber": 52
+        },
+        {
+          "caller": "normalize_tool_payload",
+          "callee": "uncertain.append",
+          "lineNumber": 53
+        },
+        {
+          "caller": "normalize_tool_payload",
+          "callee": "payload.update",
+          "lineNumber": 55
+        },
+        {
+          "caller": "normalize_tool_payload",
+          "callee": "payload.get",
+          "lineNumber": 56
+        },
+        {
+          "caller": "normalize_tool_payload",
+          "callee": "payload.setdefault",
+          "lineNumber": 58
+        },
+        {
+          "caller": "normalize_tool_payload",
+          "callee": "\", \".join",
+          "lineNumber": 58
+        },
+        {
+          "caller": "normalize_tool_payload",
+          "callee": "payload.update",
+          "lineNumber": 60
+        },
+        {
+          "caller": "_extract_message",
+          "callee": "isinstance",
+          "lineNumber": 66
+        },
+        {
+          "caller": "_extract_message",
+          "callee": "str",
+          "lineNumber": 67
+        },
+        {
+          "caller": "_extract_message",
+          "callee": "raw.get",
+          "lineNumber": 67
+        },
+        {
+          "caller": "_extract_message",
+          "callee": "raw.get",
+          "lineNumber": 67
+        },
+        {
+          "caller": "_extract_message",
+          "callee": "str",
+          "lineNumber": 70
+        },
+        {
+          "caller": "_extract_outputs",
+          "callee": "isinstance",
+          "lineNumber": 75
+        },
+        {
+          "caller": "_extract_outputs",
+          "callee": "raw.get",
+          "lineNumber": 76
+        },
+        {
+          "caller": "_extract_outputs",
+          "callee": "raw.get",
+          "lineNumber": 76
+        },
+        {
+          "caller": "_extract_outputs",
+          "callee": "list",
+          "lineNumber": 77
+        },
+        {
+          "caller": "_extract_outputs",
+          "callee": "isinstance",
+          "lineNumber": 77
+        },
+        {
+          "caller": "_extract_error_code",
+          "callee": "isinstance",
+          "lineNumber": 85
+        },
+        {
+          "caller": "_extract_error_code",
+          "callee": "raw.get",
+          "lineNumber": 86
+        },
+        {
+          "caller": "_extract_error_code",
+          "callee": "raw.get",
+          "lineNumber": 86
+        },
+        {
+          "caller": "_exception_summary",
+          "callee": "type",
+          "lineNumber": 95
+        },
+        {
+          "caller": "_exception_summary",
+          "callee": "str",
+          "lineNumber": 96
+        },
+        {
+          "caller": "_exception_summary",
+          "callee": "getattr",
+          "lineNumber": 97
+        },
+        {
+          "caller": "to_dict",
+          "callee": "self.step.to_dict",
+          "lineNumber": 120
+        },
+        {
+          "caller": "to_dict",
+          "callee": "self.execution_result.to_dict",
+          "lineNumber": 121
+        },
+        {
+          "caller": "to_dict",
+          "callee": "self.verification_result.to_dict",
+          "lineNumber": 122
+        },
+        {
+          "caller": "to_dict",
+          "callee": "self.recovery_decision.to_dict",
+          "lineNumber": 123
+        },
+        {
+          "caller": "to_dict",
+          "callee": "_exception_summary",
+          "lineNumber": 124
+        },
+        {
+          "caller": "_trace",
+          "callee": "emit",
+          "lineNumber": 142
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "registry_requires_review",
+          "lineNumber": 181
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "RunContext",
+          "lineNumber": 184
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "StepRecord",
+          "lineNumber": 185
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "run.steps.append",
+          "lineNumber": 192
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "_trace",
+          "lineNumber": 195
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "_trace",
+          "lineNumber": 196
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "run.transition",
+          "lineNumber": 198
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "step.transition",
+          "lineNumber": 199
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "_trace",
+          "lineNumber": 200
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "handler",
+          "lineNumber": 207
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "classify_error",
+          "lineNumber": 210
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "ExecutionResult",
+          "lineNumber": 211
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "str",
+          "lineNumber": 213
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "getattr",
+          "lineNumber": 214
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "type",
+          "lineNumber": 214
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "step.transition",
+          "lineNumber": 218
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "run.transition",
+          "lineNumber": 221
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "_trace",
+          "lineNumber": 222
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "str",
+          "lineNumber": 223
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "decide",
+          "lineNumber": 224
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "normalize_tool_payload",
+          "lineNumber": 235
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "isinstance",
+          "lineNumber": 235
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "payload.get",
+          "lineNumber": 237
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "str(payload.get(\"status\", \"\")).lower",
+          "lineNumber": 238
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "str",
+          "lineNumber": 238
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "payload.get",
+          "lineNumber": 238
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "ExecutionResult",
+          "lineNumber": 240
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "_extract_message",
+          "lineNumber": 242
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "_extract_outputs",
+          "lineNumber": 243
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "_extract_error_code",
+          "lineNumber": 244
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "payload.get",
+          "lineNumber": 247
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "step.transition",
+          "lineNumber": 248
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "run.transition",
+          "lineNumber": 249
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "decide",
+          "lineNumber": 251
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "execution_result.to_dict",
+          "lineNumber": 251
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "_trace",
+          "lineNumber": 255
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "isinstance",
+          "lineNumber": 259
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "bool",
+          "lineNumber": 259
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "raw_result.get",
+          "lineNumber": 259
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "raw_result.get",
+          "lineNumber": 259
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "isinstance",
+          "lineNumber": 260
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "raw_result.get",
+          "lineNumber": 260
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "run.transition",
+          "lineNumber": 262
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "step.transition",
+          "lineNumber": 263
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "verify",
+          "lineNumber": 264
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "step.transition",
+          "lineNumber": 277
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "run.transition",
+          "lineNumber": 278
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "decide",
+          "lineNumber": 279
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "verification_result.to_dict",
+          "lineNumber": 280
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "step.transition",
+          "lineNumber": 290
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "run.transition",
+          "lineNumber": 291
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "decide",
+          "lineNumber": 292
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "verification_result.to_dict",
+          "lineNumber": 294
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "step.transition",
+          "lineNumber": 304
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "run.transition",
+          "lineNumber": 305
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "step.transition",
+          "lineNumber": 307
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "run.transition",
+          "lineNumber": 309
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "{\n            RunStatus.COMPLETED: \"run.completed\",\n            RunStatus.FAILED: \"run.failed\",\n            RunStatus.BLOCKED: \"run.blocked\",\n        }.get",
+          "lineNumber": 313
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "_trace",
+          "lineNumber": 319
+        },
+        {
+          "caller": "execute_with_core",
+          "callee": "ExecutionAssessment",
+          "lineNumber": 322
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 8,
+        "functionCount": 7,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "scripts/core/recovery.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 503,
+      "nonEmptyLines": 449,
+      "functions": [
+        {
+          "name": "_coerce_kind",
+          "startLine": 172,
+          "endLine": 182,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "_hint_kind",
+          "startLine": 185,
+          "endLine": 191,
+          "params": [
+            "text",
+            "hints"
+          ]
+        },
+        {
+          "name": "_classify_exception",
+          "startLine": 194,
+          "endLine": 205,
+          "params": [
+            "exception"
+          ]
+        },
+        {
+          "name": "_verification_fail_present",
+          "startLine": 208,
+          "endLine": 213,
+          "params": [
+            "verification_result"
+          ]
+        },
+        {
+          "name": "_classify_blocked",
+          "startLine": 216,
+          "endLine": 228,
+          "params": [
+            "result"
+          ]
+        },
+        {
+          "name": "_classify_verification",
+          "startLine": 231,
+          "endLine": 241,
+          "params": [
+            "verification_result"
+          ]
+        },
+        {
+          "name": "_classify_capability",
+          "startLine": 244,
+          "endLine": 256,
+          "params": [
+            "capability_result"
+          ]
+        },
+        {
+          "name": "_classify_execution",
+          "startLine": 259,
+          "endLine": 269,
+          "params": [
+            "execution_result"
+          ]
+        },
+        {
+          "name": "classify_error",
+          "startLine": 272,
+          "endLine": 328,
+          "params": [
+            "error_kind",
+            "error_code",
+            "exception",
+            "execution_result",
+            "verification_result",
+            "capability_result",
+            "policy_result",
+            "message"
+          ]
+        },
+        {
+          "name": "_resolve_fallback",
+          "startLine": 331,
+          "endLine": 353,
+          "params": [
+            "operation_id",
+            "failed_backend",
+            "explicit_fallback",
+            "capability_facade"
+          ]
+        },
+        {
+          "name": "_trace_decision",
+          "startLine": 356,
+          "endLine": 378,
+          "params": [
+            "decision",
+            "trace_dir",
+            "run_id",
+            "step_id"
+          ]
+        },
+        {
+          "name": "decide",
+          "startLine": 381,
+          "endLine": 495,
+          "params": [
+            "error_kind",
+            "error_code",
+            "exception",
+            "message",
+            "execution_result",
+            "verification_result",
+            "capability_result",
+            "policy_result",
+            "capability_id",
+            "operation_id",
+            "failed_backend",
+            "fallback_backend",
+            "retry_count",
+            "max_retries",
+            "capability_facade",
+            "trace_dir",
+            "run_id",
+            "step_id"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ErrorKind",
+          "startLine": 28,
+          "endLine": 40,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ErrorKind",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "_coerce_kind",
+          "line": 172,
+          "isDefault": false
+        },
+        {
+          "name": "_hint_kind",
+          "line": 185,
+          "isDefault": false
+        },
+        {
+          "name": "_classify_exception",
+          "line": 194,
+          "isDefault": false
+        },
+        {
+          "name": "_verification_fail_present",
+          "line": 208,
+          "isDefault": false
+        },
+        {
+          "name": "_classify_blocked",
+          "line": 216,
+          "isDefault": false
+        },
+        {
+          "name": "_classify_verification",
+          "line": 231,
+          "isDefault": false
+        },
+        {
+          "name": "_classify_capability",
+          "line": 244,
+          "isDefault": false
+        },
+        {
+          "name": "_classify_execution",
+          "line": 259,
+          "isDefault": false
+        },
+        {
+          "name": "classify_error",
+          "line": 272,
+          "isDefault": false
+        },
+        {
+          "name": "_resolve_fallback",
+          "line": 331,
+          "isDefault": false
+        },
+        {
+          "name": "_trace_decision",
+          "line": 356,
+          "isDefault": false
+        },
+        {
+          "name": "decide",
+          "line": 381,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "_coerce_kind",
+          "callee": "isinstance",
+          "lineNumber": 174
+        },
+        {
+          "caller": "_coerce_kind",
+          "callee": "str(value).strip().lower",
+          "lineNumber": 178
+        },
+        {
+          "caller": "_coerce_kind",
+          "callee": "str(value).strip",
+          "lineNumber": 178
+        },
+        {
+          "caller": "_coerce_kind",
+          "callee": "str",
+          "lineNumber": 178
+        },
+        {
+          "caller": "_hint_kind",
+          "callee": "text.lower",
+          "lineNumber": 187
+        },
+        {
+          "caller": "_classify_exception",
+          "callee": "type",
+          "lineNumber": 196
+        },
+        {
+          "caller": "_classify_exception",
+          "callee": "isinstance",
+          "lineNumber": 199
+        },
+        {
+          "caller": "_classify_exception",
+          "callee": "isinstance",
+          "lineNumber": 201
+        },
+        {
+          "caller": "_classify_exception",
+          "callee": "isinstance",
+          "lineNumber": 203
+        },
+        {
+          "caller": "_verification_fail_present",
+          "callee": "verification_result.get",
+          "lineNumber": 210
+        },
+        {
+          "caller": "_verification_fail_present",
+          "callee": "isinstance",
+          "lineNumber": 211
+        },
+        {
+          "caller": "_verification_fail_present",
+          "callee": "check_status",
+          "lineNumber": 211
+        },
+        {
+          "caller": "_classify_blocked",
+          "callee": "\" \".join(\n        filter(\n            None,\n            [str(result.get(\"reason\") or \"\"), str(result.get(\"message\") or \"\")],\n        )\n    ).strip",
+          "lineNumber": 218
+        },
+        {
+          "caller": "_classify_blocked",
+          "callee": "\" \".join",
+          "lineNumber": 218
+        },
+        {
+          "caller": "_classify_blocked",
+          "callee": "filter",
+          "lineNumber": 219
+        },
+        {
+          "caller": "_classify_blocked",
+          "callee": "str",
+          "lineNumber": 221
+        },
+        {
+          "caller": "_classify_blocked",
+          "callee": "result.get",
+          "lineNumber": 221
+        },
+        {
+          "caller": "_classify_blocked",
+          "callee": "str",
+          "lineNumber": 221
+        },
+        {
+          "caller": "_classify_blocked",
+          "callee": "result.get",
+          "lineNumber": 221
+        },
+        {
+          "caller": "_classify_blocked",
+          "callee": "_hint_kind",
+          "lineNumber": 225
+        },
+        {
+          "caller": "_classify_verification",
+          "callee": "normalize_status",
+          "lineNumber": 233
+        },
+        {
+          "caller": "_classify_verification",
+          "callee": "verification_result.get",
+          "lineNumber": 233
+        },
+        {
+          "caller": "_classify_verification",
+          "callee": "_verification_fail_present",
+          "lineNumber": 239
+        },
+        {
+          "caller": "_classify_verification",
+          "callee": "_classify_blocked",
+          "lineNumber": 241
+        },
+        {
+          "caller": "_classify_capability",
+          "callee": "str(capability_result.get(\"status\") or \"\").strip().lower",
+          "lineNumber": 246
+        },
+        {
+          "caller": "_classify_capability",
+          "callee": "str(capability_result.get(\"status\") or \"\").strip",
+          "lineNumber": 246
+        },
+        {
+          "caller": "_classify_capability",
+          "callee": "str",
+          "lineNumber": 246
+        },
+        {
+          "caller": "_classify_capability",
+          "callee": "capability_result.get",
+          "lineNumber": 246
+        },
+        {
+          "caller": "_classify_capability",
+          "callee": "str(capability_result.get(\"error_code\") or \"\").strip().lower",
+          "lineNumber": 249
+        },
+        {
+          "caller": "_classify_capability",
+          "callee": "str(capability_result.get(\"error_code\") or \"\").strip",
+          "lineNumber": 249
+        },
+        {
+          "caller": "_classify_capability",
+          "callee": "str",
+          "lineNumber": 249
+        },
+        {
+          "caller": "_classify_capability",
+          "callee": "capability_result.get",
+          "lineNumber": 249
+        },
+        {
+          "caller": "_classify_capability",
+          "callee": "_classify_blocked",
+          "lineNumber": 255
+        },
+        {
+          "caller": "_classify_execution",
+          "callee": "execution_result.get",
+          "lineNumber": 261
+        },
+        {
+          "caller": "_classify_execution",
+          "callee": "str(execution_result.get(\"error_code\") or \"\").strip().lower",
+          "lineNumber": 263
+        },
+        {
+          "caller": "_classify_execution",
+          "callee": "str(execution_result.get(\"error_code\") or \"\").strip",
+          "lineNumber": 263
+        },
+        {
+          "caller": "_classify_execution",
+          "callee": "str",
+          "lineNumber": 263
+        },
+        {
+          "caller": "_classify_execution",
+          "callee": "execution_result.get",
+          "lineNumber": 263
+        },
+        {
+          "caller": "_classify_execution",
+          "callee": "_coerce_kind",
+          "lineNumber": 266
+        },
+        {
+          "caller": "_classify_execution",
+          "callee": "execution_result.get",
+          "lineNumber": 266
+        },
+        {
+          "caller": "classify_error",
+          "callee": "_coerce_kind",
+          "lineNumber": 290
+        },
+        {
+          "caller": "classify_error",
+          "callee": "str(error_code).strip().lower",
+          "lineNumber": 295
+        },
+        {
+          "caller": "classify_error",
+          "callee": "str(error_code).strip",
+          "lineNumber": 295
+        },
+        {
+          "caller": "classify_error",
+          "callee": "str",
+          "lineNumber": 295
+        },
+        {
+          "caller": "classify_error",
+          "callee": "_ERROR_CODE_KIND.get",
+          "lineNumber": 296
+        },
+        {
+          "caller": "classify_error",
+          "callee": "_classify_capability",
+          "lineNumber": 304
+        },
+        {
+          "caller": "classify_error",
+          "callee": "_classify_verification",
+          "lineNumber": 310
+        },
+        {
+          "caller": "classify_error",
+          "callee": "_classify_execution",
+          "lineNumber": 313
+        },
+        {
+          "caller": "classify_error",
+          "callee": "str(getattr(exception, \"code\", \"\") or \"\").lower",
+          "lineNumber": 318
+        },
+        {
+          "caller": "classify_error",
+          "callee": "str",
+          "lineNumber": 318
+        },
+        {
+          "caller": "classify_error",
+          "callee": "getattr",
+          "lineNumber": 318
+        },
+        {
+          "caller": "classify_error",
+          "callee": "_classify_exception",
+          "lineNumber": 321
+        },
+        {
+          "caller": "classify_error",
+          "callee": "_hint_kind",
+          "lineNumber": 324
+        },
+        {
+          "caller": "classify_error",
+          "callee": "str",
+          "lineNumber": 324
+        },
+        {
+          "caller": "_resolve_fallback",
+          "callee": "str",
+          "lineNumber": 340
+        },
+        {
+          "caller": "_resolve_fallback",
+          "callee": "capability_facade.get_backend_candidates",
+          "lineNumber": 344
+        },
+        {
+          "caller": "_resolve_fallback",
+          "callee": "isinstance",
+          "lineNumber": 348
+        },
+        {
+          "caller": "_resolve_fallback",
+          "callee": "candidate.get",
+          "lineNumber": 350
+        },
+        {
+          "caller": "_resolve_fallback",
+          "callee": "str",
+          "lineNumber": 351
+        },
+        {
+          "caller": "_resolve_fallback",
+          "callee": "str",
+          "lineNumber": 352
+        },
+        {
+          "caller": "_trace_decision",
+          "callee": "emit",
+          "lineNumber": 367
+        },
+        {
+          "caller": "decide",
+          "callee": "classify_error",
+          "lineNumber": 407
+        },
+        {
+          "caller": "decide",
+          "callee": "max",
+          "lineNumber": 420
+        },
+        {
+          "caller": "decide",
+          "callee": "int",
+          "lineNumber": 420
+        },
+        {
+          "caller": "decide",
+          "callee": "max",
+          "lineNumber": 421
+        },
+        {
+          "caller": "decide",
+          "callee": "int",
+          "lineNumber": 421
+        },
+        {
+          "caller": "decide",
+          "callee": "_resolve_fallback",
+          "lineNumber": 436
+        },
+        {
+          "caller": "decide",
+          "callee": "facade.get_capability",
+          "lineNumber": 450
+        },
+        {
+          "caller": "decide",
+          "callee": "RecoveryDecision",
+          "lineNumber": 452
+        },
+        {
+          "caller": "decide",
+          "callee": "_trace_decision",
+          "lineNumber": 459
+        },
+        {
+          "caller": "decide",
+          "callee": "_resolve_fallback",
+          "lineNumber": 465
+        },
+        {
+          "caller": "decide",
+          "callee": "RecoveryDecision",
+          "lineNumber": 486
+        },
+        {
+          "caller": "decide",
+          "callee": "_trace_decision",
+          "lineNumber": 494
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 13,
+        "functionCount": 12,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "scripts/core/state.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 442,
+      "nonEmptyLines": 373,
+      "functions": [
+        {
+          "name": "now_iso",
+          "startLine": 27,
+          "endLine": 29,
+          "params": []
+        },
+        {
+          "name": "_coerce_enum",
+          "startLine": 130,
+          "endLine": 143,
+          "params": [
+            "enum_cls",
+            "value",
+            "default"
+          ]
+        },
+        {
+          "name": "_serialize",
+          "startLine": 146,
+          "endLine": 158,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "can_transition_run",
+          "startLine": 161,
+          "endLine": 167,
+          "params": [
+            "current",
+            "target"
+          ]
+        },
+        {
+          "name": "can_transition_step",
+          "startLine": 170,
+          "endLine": 176,
+          "params": [
+            "current",
+            "target"
+          ]
+        },
+        {
+          "name": "ensure_run_transition",
+          "startLine": 179,
+          "endLine": 186,
+          "params": [
+            "current",
+            "target"
+          ]
+        },
+        {
+          "name": "ensure_step_transition",
+          "startLine": 189,
+          "endLine": 196,
+          "params": [
+            "current",
+            "target"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "RunStatus",
+          "startLine": 32,
+          "endLine": 41,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "StepStatus",
+          "startLine": 44,
+          "endLine": 53,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "VerificationStatus",
+          "startLine": 56,
+          "endLine": 62,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "InvalidStateTransition",
+          "startLine": 78,
+          "endLine": 79,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "_JsonModel",
+          "startLine": 199,
+          "endLine": 210,
+          "methods": [
+            "to_dict",
+            "to_json",
+            "from_json"
+          ],
+          "properties": []
+        },
+        {
+          "name": "VerificationResult",
+          "startLine": 214,
+          "endLine": 237,
+          "methods": [
+            "from_dict"
+          ],
+          "properties": [
+            "status",
+            "reason",
+            "checks",
+            "artifacts",
+            "evidence",
+            "manual_review_required",
+            "error_code",
+            "schema_version"
+          ]
+        },
+        {
+          "name": "RecoveryDecision",
+          "startLine": 241,
+          "endLine": 268,
+          "methods": [
+            "__post_init__",
+            "from_dict"
+          ],
+          "properties": [
+            "decision",
+            "reason",
+            "retry_count",
+            "max_retries",
+            "fallback_backend",
+            "error_kind",
+            "schema_version"
+          ]
+        },
+        {
+          "name": "ExecutionResult",
+          "startLine": 272,
+          "endLine": 301,
+          "methods": [
+            "from_dict"
+          ],
+          "properties": [
+            "success",
+            "message",
+            "outputs",
+            "artifacts",
+            "evidence",
+            "error_code",
+            "error_kind",
+            "retryable",
+            "schema_version"
+          ]
+        },
+        {
+          "name": "StepRecord",
+          "startLine": 305,
+          "endLine": 359,
+          "methods": [
+            "__post_init__",
+            "transition",
+            "from_dict"
+          ],
+          "properties": [
+            "step_id",
+            "tool_name",
+            "capability_id",
+            "backend",
+            "parent_step_id",
+            "status",
+            "started_at",
+            "finished_at",
+            "duration_ms",
+            "arguments_summary",
+            "result_summary",
+            "error_code",
+            "retryable",
+            "retry_count",
+            "artifacts",
+            "evidence",
+            "verification",
+            "schema_version"
+          ]
+        },
+        {
+          "name": "RunContext",
+          "startLine": 363,
+          "endLine": 422,
+          "methods": [
+            "__post_init__",
+            "transition",
+            "step",
+            "from_dict"
+          ],
+          "properties": [
+            "run_id",
+            "goal",
+            "trace_id",
+            "status",
+            "started_at",
+            "finished_at",
+            "current_step",
+            "steps",
+            "artifacts",
+            "evidence",
+            "errors",
+            "retry_count",
+            "metadata",
+            "schema_version"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "now_iso",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "RunStatus",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "StepStatus",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "VerificationStatus",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "InvalidStateTransition",
+          "line": 78,
+          "isDefault": false
+        },
+        {
+          "name": "_coerce_enum",
+          "line": 130,
+          "isDefault": false
+        },
+        {
+          "name": "_serialize",
+          "line": 146,
+          "isDefault": false
+        },
+        {
+          "name": "can_transition_run",
+          "line": 161,
+          "isDefault": false
+        },
+        {
+          "name": "can_transition_step",
+          "line": 170,
+          "isDefault": false
+        },
+        {
+          "name": "ensure_run_transition",
+          "line": 179,
+          "isDefault": false
+        },
+        {
+          "name": "ensure_step_transition",
+          "line": 189,
+          "isDefault": false
+        },
+        {
+          "name": "_JsonModel",
+          "line": 199,
+          "isDefault": false
+        },
+        {
+          "name": "VerificationResult",
+          "line": 213,
+          "isDefault": false
+        },
+        {
+          "name": "RecoveryDecision",
+          "line": 240,
+          "isDefault": false
+        },
+        {
+          "name": "ExecutionResult",
+          "line": 271,
+          "isDefault": false
+        },
+        {
+          "name": "StepRecord",
+          "line": 304,
+          "isDefault": false
+        },
+        {
+          "name": "RunContext",
+          "line": 362,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "now_iso",
+          "callee": "datetime.now(timezone.utc).isoformat",
+          "lineNumber": 29
+        },
+        {
+          "caller": "now_iso",
+          "callee": "datetime.now",
+          "lineNumber": 29
+        },
+        {
+          "caller": "_coerce_enum",
+          "callee": "isinstance",
+          "lineNumber": 134
+        },
+        {
+          "caller": "_coerce_enum",
+          "callee": "str",
+          "lineNumber": 136
+        },
+        {
+          "caller": "_coerce_enum",
+          "callee": "member.value.lower",
+          "lineNumber": 138
+        },
+        {
+          "caller": "_coerce_enum",
+          "callee": "text.lower",
+          "lineNumber": 138
+        },
+        {
+          "caller": "_coerce_enum",
+          "callee": "enum_cls",
+          "lineNumber": 141
+        },
+        {
+          "caller": "_serialize",
+          "callee": "isinstance",
+          "lineNumber": 148
+        },
+        {
+          "caller": "_serialize",
+          "callee": "isinstance",
+          "lineNumber": 150
+        },
+        {
+          "caller": "_serialize",
+          "callee": "str",
+          "lineNumber": 151
+        },
+        {
+          "caller": "_serialize",
+          "callee": "_serialize",
+          "lineNumber": 151
+        },
+        {
+          "caller": "_serialize",
+          "callee": "value.items",
+          "lineNumber": 151
+        },
+        {
+          "caller": "_serialize",
+          "callee": "isinstance",
+          "lineNumber": 152
+        },
+        {
+          "caller": "_serialize",
+          "callee": "_serialize",
+          "lineNumber": 153
+        },
+        {
+          "caller": "_serialize",
+          "callee": "is_dataclass",
+          "lineNumber": 154
+        },
+        {
+          "caller": "_serialize",
+          "callee": "_serialize",
+          "lineNumber": 155
+        },
+        {
+          "caller": "_serialize",
+          "callee": "asdict",
+          "lineNumber": 155
+        },
+        {
+          "caller": "_serialize",
+          "callee": "isinstance",
+          "lineNumber": 156
+        },
+        {
+          "caller": "_serialize",
+          "callee": "str",
+          "lineNumber": 158
+        },
+        {
+          "caller": "can_transition_run",
+          "callee": "_coerce_enum",
+          "lineNumber": 163
+        },
+        {
+          "caller": "can_transition_run",
+          "callee": "_coerce_enum",
+          "lineNumber": 164
+        },
+        {
+          "caller": "can_transition_run",
+          "callee": "_RUN_TRANSITIONS.get",
+          "lineNumber": 167
+        },
+        {
+          "caller": "can_transition_run",
+          "callee": "set",
+          "lineNumber": 167
+        },
+        {
+          "caller": "can_transition_step",
+          "callee": "_coerce_enum",
+          "lineNumber": 172
+        },
+        {
+          "caller": "can_transition_step",
+          "callee": "_coerce_enum",
+          "lineNumber": 173
+        },
+        {
+          "caller": "can_transition_step",
+          "callee": "_STEP_TRANSITIONS.get",
+          "lineNumber": 176
+        },
+        {
+          "caller": "can_transition_step",
+          "callee": "set",
+          "lineNumber": 176
+        },
+        {
+          "caller": "ensure_run_transition",
+          "callee": "can_transition_run",
+          "lineNumber": 181
+        },
+        {
+          "caller": "ensure_run_transition",
+          "callee": "_coerce_enum",
+          "lineNumber": 182
+        },
+        {
+          "caller": "ensure_run_transition",
+          "callee": "_coerce_enum",
+          "lineNumber": 183
+        },
+        {
+          "caller": "ensure_run_transition",
+          "callee": "InvalidStateTransition",
+          "lineNumber": 184
+        },
+        {
+          "caller": "ensure_run_transition",
+          "callee": "getattr",
+          "lineNumber": 185
+        },
+        {
+          "caller": "ensure_run_transition",
+          "callee": "getattr",
+          "lineNumber": 185
+        },
+        {
+          "caller": "ensure_step_transition",
+          "callee": "can_transition_step",
+          "lineNumber": 191
+        },
+        {
+          "caller": "ensure_step_transition",
+          "callee": "_coerce_enum",
+          "lineNumber": 192
+        },
+        {
+          "caller": "ensure_step_transition",
+          "callee": "_coerce_enum",
+          "lineNumber": 193
+        },
+        {
+          "caller": "ensure_step_transition",
+          "callee": "InvalidStateTransition",
+          "lineNumber": 194
+        },
+        {
+          "caller": "ensure_step_transition",
+          "callee": "getattr",
+          "lineNumber": 195
+        },
+        {
+          "caller": "ensure_step_transition",
+          "callee": "getattr",
+          "lineNumber": 195
+        },
+        {
+          "caller": "to_dict",
+          "callee": "_serialize",
+          "lineNumber": 203
+        },
+        {
+          "caller": "to_dict",
+          "callee": "asdict",
+          "lineNumber": 203
+        },
+        {
+          "caller": "to_json",
+          "callee": "json.dumps",
+          "lineNumber": 206
+        },
+        {
+          "caller": "to_json",
+          "callee": "self.to_dict",
+          "lineNumber": 206
+        },
+        {
+          "caller": "from_json",
+          "callee": "cls.from_dict",
+          "lineNumber": 210
+        },
+        {
+          "caller": "from_json",
+          "callee": "json.loads",
+          "lineNumber": 210
+        },
+        {
+          "caller": "from_dict",
+          "callee": "cls",
+          "lineNumber": 228
+        },
+        {
+          "caller": "from_dict",
+          "callee": "_coerce_enum",
+          "lineNumber": 229
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 229
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 230
+        },
+        {
+          "caller": "from_dict",
+          "callee": "list",
+          "lineNumber": 231
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 231
+        },
+        {
+          "caller": "from_dict",
+          "callee": "list",
+          "lineNumber": 232
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 232
+        },
+        {
+          "caller": "from_dict",
+          "callee": "list",
+          "lineNumber": 233
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 233
+        },
+        {
+          "caller": "from_dict",
+          "callee": "bool",
+          "lineNumber": 234
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 234
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 235
+        },
+        {
+          "caller": "from_dict",
+          "callee": "str",
+          "lineNumber": 236
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 236
+        },
+        {
+          "caller": "__post_init__",
+          "callee": "ValueError",
+          "lineNumber": 254
+        },
+        {
+          "caller": "__post_init__",
+          "callee": "sorted",
+          "lineNumber": 255
+        },
+        {
+          "caller": "from_dict",
+          "callee": "cls",
+          "lineNumber": 260
+        },
+        {
+          "caller": "from_dict",
+          "callee": "str",
+          "lineNumber": 261
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 261
+        },
+        {
+          "caller": "from_dict",
+          "callee": "str",
+          "lineNumber": 262
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 262
+        },
+        {
+          "caller": "from_dict",
+          "callee": "int",
+          "lineNumber": 263
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 263
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 264
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 265
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 266
+        },
+        {
+          "caller": "from_dict",
+          "callee": "str",
+          "lineNumber": 267
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 267
+        },
+        {
+          "caller": "from_dict",
+          "callee": "cls",
+          "lineNumber": 291
+        },
+        {
+          "caller": "from_dict",
+          "callee": "bool",
+          "lineNumber": 292
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 292
+        },
+        {
+          "caller": "from_dict",
+          "callee": "str",
+          "lineNumber": 293
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 293
+        },
+        {
+          "caller": "from_dict",
+          "callee": "list",
+          "lineNumber": 294
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 294
+        },
+        {
+          "caller": "from_dict",
+          "callee": "list",
+          "lineNumber": 295
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 295
+        },
+        {
+          "caller": "from_dict",
+          "callee": "list",
+          "lineNumber": 296
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 296
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 297
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 298
+        },
+        {
+          "caller": "from_dict",
+          "callee": "bool",
+          "lineNumber": 299
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 299
+        },
+        {
+          "caller": "from_dict",
+          "callee": "str",
+          "lineNumber": 300
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 300
+        },
+        {
+          "caller": "__post_init__",
+          "callee": "ValueError",
+          "lineNumber": 329
+        },
+        {
+          "caller": "transition",
+          "callee": "ensure_step_transition",
+          "lineNumber": 333
+        },
+        {
+          "caller": "transition",
+          "callee": "_coerce_enum",
+          "lineNumber": 334
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 339
+        },
+        {
+          "caller": "from_dict",
+          "callee": "cls",
+          "lineNumber": 340
+        },
+        {
+          "caller": "from_dict",
+          "callee": "str",
+          "lineNumber": 341
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 341
+        },
+        {
+          "caller": "from_dict",
+          "callee": "str",
+          "lineNumber": 342
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 342
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 343
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 344
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 345
+        },
+        {
+          "caller": "from_dict",
+          "callee": "_coerce_enum",
+          "lineNumber": 346
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 346
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 347
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 348
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 349
+        },
+        {
+          "caller": "from_dict",
+          "callee": "dict",
+          "lineNumber": 350
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 350
+        },
+        {
+          "caller": "from_dict",
+          "callee": "dict",
+          "lineNumber": 351
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 351
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 352
+        },
+        {
+          "caller": "from_dict",
+          "callee": "bool",
+          "lineNumber": 353
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 353
+        },
+        {
+          "caller": "from_dict",
+          "callee": "int",
+          "lineNumber": 354
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 354
+        },
+        {
+          "caller": "from_dict",
+          "callee": "list",
+          "lineNumber": 355
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 355
+        },
+        {
+          "caller": "from_dict",
+          "callee": "list",
+          "lineNumber": 356
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 356
+        },
+        {
+          "caller": "from_dict",
+          "callee": "VerificationResult.from_dict",
+          "lineNumber": 357
+        },
+        {
+          "caller": "from_dict",
+          "callee": "isinstance",
+          "lineNumber": 357
+        },
+        {
+          "caller": "from_dict",
+          "callee": "str",
+          "lineNumber": 358
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 358
+        },
+        {
+          "caller": "__post_init__",
+          "callee": "ValueError",
+          "lineNumber": 383
+        },
+        {
+          "caller": "transition",
+          "callee": "ensure_run_transition",
+          "lineNumber": 389
+        },
+        {
+          "caller": "transition",
+          "callee": "_coerce_enum",
+          "lineNumber": 390
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 402
+        },
+        {
+          "caller": "from_dict",
+          "callee": "StepRecord.from_dict",
+          "lineNumber": 404
+        },
+        {
+          "caller": "from_dict",
+          "callee": "isinstance",
+          "lineNumber": 404
+        },
+        {
+          "caller": "from_dict",
+          "callee": "StepRecord",
+          "lineNumber": 404
+        },
+        {
+          "caller": "from_dict",
+          "callee": "cls",
+          "lineNumber": 407
+        },
+        {
+          "caller": "from_dict",
+          "callee": "str",
+          "lineNumber": 408
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 408
+        },
+        {
+          "caller": "from_dict",
+          "callee": "str",
+          "lineNumber": 409
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 409
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 410
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 410
+        },
+        {
+          "caller": "from_dict",
+          "callee": "_coerce_enum",
+          "lineNumber": 411
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 411
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 412
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 413
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 414
+        },
+        {
+          "caller": "from_dict",
+          "callee": "list",
+          "lineNumber": 416
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 416
+        },
+        {
+          "caller": "from_dict",
+          "callee": "list",
+          "lineNumber": 417
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 417
+        },
+        {
+          "caller": "from_dict",
+          "callee": "list",
+          "lineNumber": 418
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 418
+        },
+        {
+          "caller": "from_dict",
+          "callee": "int",
+          "lineNumber": 419
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 419
+        },
+        {
+          "caller": "from_dict",
+          "callee": "dict",
+          "lineNumber": 420
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 420
+        },
+        {
+          "caller": "from_dict",
+          "callee": "str",
+          "lineNumber": 421
+        },
+        {
+          "caller": "from_dict",
+          "callee": "data.get",
+          "lineNumber": 421
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 17,
+        "functionCount": 7,
+        "classCount": 10
+      }
+    },
+    {
+      "path": "scripts/core/trace.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 192,
+      "nonEmptyLines": 166,
+      "functions": [
+        {
+          "name": "sanitize_id",
+          "startLine": 69,
+          "endLine": 72,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "events_dir",
+          "startLine": 75,
+          "endLine": 79,
+          "params": [
+            "queue_dir"
+          ]
+        },
+        {
+          "name": "trace_path_for",
+          "startLine": 82,
+          "endLine": 84,
+          "params": [
+            "queue_dir",
+            "key"
+          ]
+        },
+        {
+          "name": "redact",
+          "startLine": 87,
+          "endLine": 95,
+          "params": [
+            "value",
+            "key"
+          ]
+        },
+        {
+          "name": "_event_key",
+          "startLine": 98,
+          "endLine": 105,
+          "params": [
+            "event",
+            "key"
+          ]
+        },
+        {
+          "name": "append_event",
+          "startLine": 108,
+          "endLine": 115,
+          "params": [
+            "queue_dir",
+            "event",
+            "key"
+          ]
+        },
+        {
+          "name": "emit",
+          "startLine": 118,
+          "endLine": 160,
+          "params": [
+            "queue_dir",
+            "event_type",
+            "key",
+            "run_id",
+            "trace_id",
+            "step_id",
+            "parent_step_id",
+            "capability_id",
+            "backend",
+            "duration_ms",
+            "error_code",
+            "retry_count",
+            "verification_status",
+            "message",
+            "data",
+            "at"
+          ]
+        },
+        {
+          "name": "read_events",
+          "startLine": 163,
+          "endLine": 180,
+          "params": [
+            "queue_dir",
+            "key"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "sanitize_id",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "events_dir",
+          "line": 75,
+          "isDefault": false
+        },
+        {
+          "name": "trace_path_for",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "redact",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "_event_key",
+          "line": 98,
+          "isDefault": false
+        },
+        {
+          "name": "append_event",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "emit",
+          "line": 118,
+          "isDefault": false
+        },
+        {
+          "name": "read_events",
+          "line": 163,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "sanitize_id",
+          "callee": "_SAFE_ID_CHARS.sub",
+          "lineNumber": 71
+        },
+        {
+          "caller": "sanitize_id",
+          "callee": "str",
+          "lineNumber": 71
+        },
+        {
+          "caller": "events_dir",
+          "callee": "Path",
+          "lineNumber": 77
+        },
+        {
+          "caller": "events_dir",
+          "callee": "directory.mkdir",
+          "lineNumber": 78
+        },
+        {
+          "caller": "trace_path_for",
+          "callee": "events_dir",
+          "lineNumber": 84
+        },
+        {
+          "caller": "trace_path_for",
+          "callee": "sanitize_id",
+          "lineNumber": 84
+        },
+        {
+          "caller": "redact",
+          "callee": "_SENSITIVE_KEY.search",
+          "lineNumber": 89
+        },
+        {
+          "caller": "redact",
+          "callee": "str",
+          "lineNumber": 89
+        },
+        {
+          "caller": "redact",
+          "callee": "isinstance",
+          "lineNumber": 91
+        },
+        {
+          "caller": "redact",
+          "callee": "str",
+          "lineNumber": 92
+        },
+        {
+          "caller": "redact",
+          "callee": "redact",
+          "lineNumber": 92
+        },
+        {
+          "caller": "redact",
+          "callee": "str",
+          "lineNumber": 92
+        },
+        {
+          "caller": "redact",
+          "callee": "value.items",
+          "lineNumber": 92
+        },
+        {
+          "caller": "redact",
+          "callee": "isinstance",
+          "lineNumber": 93
+        },
+        {
+          "caller": "redact",
+          "callee": "redact",
+          "lineNumber": 94
+        },
+        {
+          "caller": "_event_key",
+          "callee": "str",
+          "lineNumber": 101
+        },
+        {
+          "caller": "_event_key",
+          "callee": "event.get",
+          "lineNumber": 103
+        },
+        {
+          "caller": "_event_key",
+          "callee": "str",
+          "lineNumber": 104
+        },
+        {
+          "caller": "append_event",
+          "callee": "trace_path_for",
+          "lineNumber": 110
+        },
+        {
+          "caller": "append_event",
+          "callee": "_event_key",
+          "lineNumber": 110
+        },
+        {
+          "caller": "append_event",
+          "callee": "json.dumps",
+          "lineNumber": 111
+        },
+        {
+          "caller": "append_event",
+          "callee": "redact",
+          "lineNumber": 111
+        },
+        {
+          "caller": "append_event",
+          "callee": "path.open",
+          "lineNumber": 112
+        },
+        {
+          "caller": "append_event",
+          "callee": "handle.write",
+          "lineNumber": 113
+        },
+        {
+          "caller": "append_event",
+          "callee": "handle.flush",
+          "lineNumber": 114
+        },
+        {
+          "caller": "emit",
+          "callee": "str",
+          "lineNumber": 139
+        },
+        {
+          "caller": "emit",
+          "callee": "now_iso",
+          "lineNumber": 140
+        },
+        {
+          "caller": "emit",
+          "callee": "str",
+          "lineNumber": 141
+        },
+        {
+          "caller": "emit",
+          "callee": "optional.items",
+          "lineNumber": 155
+        },
+        {
+          "caller": "emit",
+          "callee": "append_event",
+          "lineNumber": 160
+        },
+        {
+          "caller": "read_events",
+          "callee": "trace_path_for",
+          "lineNumber": 165
+        },
+        {
+          "caller": "read_events",
+          "callee": "path.is_file",
+          "lineNumber": 166
+        },
+        {
+          "caller": "read_events",
+          "callee": "path.open",
+          "lineNumber": 169
+        },
+        {
+          "caller": "read_events",
+          "callee": "line.strip",
+          "lineNumber": 171
+        },
+        {
+          "caller": "read_events",
+          "callee": "json.loads",
+          "lineNumber": 175
+        },
+        {
+          "caller": "read_events",
+          "callee": "isinstance",
+          "lineNumber": 178
+        },
+        {
+          "caller": "read_events",
+          "callee": "events.append",
+          "lineNumber": 179
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 8,
+        "functionCount": 8,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scripts/core/verification.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 341,
+      "nonEmptyLines": 297,
+      "functions": [
+        {
+          "name": "normalize_status",
+          "startLine": 73,
+          "endLine": 79,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "aggregate_statuses",
+          "startLine": 82,
+          "endLine": 87,
+          "params": [
+            "statuses"
+          ]
+        },
+        {
+          "name": "check_status",
+          "startLine": 90,
+          "endLine": 99,
+          "params": [
+            "check"
+          ]
+        },
+        {
+          "name": "aggregate_checks",
+          "startLine": 102,
+          "endLine": 105,
+          "params": [
+            "checks"
+          ]
+        },
+        {
+          "name": "_coerce_results",
+          "startLine": 108,
+          "endLine": 116,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "_status_from_result",
+          "startLine": 119,
+          "endLine": 124,
+          "params": [
+            "result"
+          ]
+        },
+        {
+          "name": "_result_reason",
+          "startLine": 127,
+          "endLine": 138,
+          "params": [
+            "status",
+            "results"
+          ]
+        },
+        {
+          "name": "_result_error_code",
+          "startLine": 141,
+          "endLine": 151,
+          "params": [
+            "status",
+            "results"
+          ]
+        },
+        {
+          "name": "_dedup_artifacts",
+          "startLine": 154,
+          "endLine": 169,
+          "params": [
+            "items"
+          ]
+        },
+        {
+          "name": "_trace_event",
+          "startLine": 172,
+          "endLine": 199,
+          "params": [
+            "event_type",
+            "trace_dir",
+            "run_id",
+            "step_id",
+            "capability_id",
+            "status",
+            "message",
+            "data"
+          ]
+        },
+        {
+          "name": "_execution_summary",
+          "startLine": 202,
+          "endLine": 210,
+          "params": [
+            "execution"
+          ]
+        },
+        {
+          "name": "verify",
+          "startLine": 213,
+          "endLine": 332,
+          "params": [
+            "capability_id",
+            "execution",
+            "reviewer",
+            "reviewer_result",
+            "artifacts",
+            "evidence",
+            "trace_dir",
+            "run_id",
+            "step_id"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "normalize_status",
+          "line": 73,
+          "isDefault": false
+        },
+        {
+          "name": "aggregate_statuses",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "check_status",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "aggregate_checks",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "_coerce_results",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "_status_from_result",
+          "line": 119,
+          "isDefault": false
+        },
+        {
+          "name": "_result_reason",
+          "line": 127,
+          "isDefault": false
+        },
+        {
+          "name": "_result_error_code",
+          "line": 141,
+          "isDefault": false
+        },
+        {
+          "name": "_dedup_artifacts",
+          "line": 154,
+          "isDefault": false
+        },
+        {
+          "name": "_trace_event",
+          "line": 172,
+          "isDefault": false
+        },
+        {
+          "name": "_execution_summary",
+          "line": 202,
+          "isDefault": false
+        },
+        {
+          "name": "verify",
+          "line": 213,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "normalize_status",
+          "callee": "isinstance",
+          "lineNumber": 75
+        },
+        {
+          "caller": "normalize_status",
+          "callee": "str(value).strip",
+          "lineNumber": 77
+        },
+        {
+          "caller": "normalize_status",
+          "callee": "str",
+          "lineNumber": 77
+        },
+        {
+          "caller": "normalize_status",
+          "callee": "_STATUS_MAP.get",
+          "lineNumber": 79
+        },
+        {
+          "caller": "normalize_status",
+          "callee": "str(value).strip().lower",
+          "lineNumber": 79
+        },
+        {
+          "caller": "normalize_status",
+          "callee": "str(value).strip",
+          "lineNumber": 79
+        },
+        {
+          "caller": "normalize_status",
+          "callee": "str",
+          "lineNumber": 79
+        },
+        {
+          "caller": "aggregate_statuses",
+          "callee": "normalize_status",
+          "lineNumber": 84
+        },
+        {
+          "caller": "aggregate_statuses",
+          "callee": "max",
+          "lineNumber": 87
+        },
+        {
+          "caller": "check_status",
+          "callee": "normalize_status",
+          "lineNumber": 92
+        },
+        {
+          "caller": "check_status",
+          "callee": "check.get",
+          "lineNumber": 92
+        },
+        {
+          "caller": "check_status",
+          "callee": "str(check.get(\"severity\") or \"\").strip().lower",
+          "lineNumber": 94
+        },
+        {
+          "caller": "check_status",
+          "callee": "str(check.get(\"severity\") or \"\").strip",
+          "lineNumber": 94
+        },
+        {
+          "caller": "check_status",
+          "callee": "str",
+          "lineNumber": 94
+        },
+        {
+          "caller": "check_status",
+          "callee": "check.get",
+          "lineNumber": 94
+        },
+        {
+          "caller": "check_status",
+          "callee": "check.get",
+          "lineNumber": 97
+        },
+        {
+          "caller": "check_status",
+          "callee": "check.get",
+          "lineNumber": 97
+        },
+        {
+          "caller": "aggregate_checks",
+          "callee": "check_status",
+          "lineNumber": 104
+        },
+        {
+          "caller": "aggregate_checks",
+          "callee": "isinstance",
+          "lineNumber": 104
+        },
+        {
+          "caller": "aggregate_checks",
+          "callee": "aggregate_statuses",
+          "lineNumber": 105
+        },
+        {
+          "caller": "_coerce_results",
+          "callee": "isinstance",
+          "lineNumber": 112
+        },
+        {
+          "caller": "_coerce_results",
+          "callee": "isinstance",
+          "lineNumber": 114
+        },
+        {
+          "caller": "_coerce_results",
+          "callee": "isinstance",
+          "lineNumber": 114
+        },
+        {
+          "caller": "_coerce_results",
+          "callee": "isinstance",
+          "lineNumber": 115
+        },
+        {
+          "caller": "_status_from_result",
+          "callee": "result.get",
+          "lineNumber": 121
+        },
+        {
+          "caller": "_status_from_result",
+          "callee": "isinstance",
+          "lineNumber": 122
+        },
+        {
+          "caller": "_status_from_result",
+          "callee": "result.get",
+          "lineNumber": 122
+        },
+        {
+          "caller": "_status_from_result",
+          "callee": "result[\"evaluation\"].get",
+          "lineNumber": 123
+        },
+        {
+          "caller": "_status_from_result",
+          "callee": "normalize_status",
+          "lineNumber": 124
+        },
+        {
+          "caller": "_result_reason",
+          "callee": "_status_from_result",
+          "lineNumber": 132
+        },
+        {
+          "caller": "_result_reason",
+          "callee": "result.get",
+          "lineNumber": 135
+        },
+        {
+          "caller": "_result_reason",
+          "callee": "str",
+          "lineNumber": 137
+        },
+        {
+          "caller": "_result_error_code",
+          "callee": "_status_from_result",
+          "lineNumber": 146
+        },
+        {
+          "caller": "_result_error_code",
+          "callee": "result.get",
+          "lineNumber": 148
+        },
+        {
+          "caller": "_result_error_code",
+          "callee": "str",
+          "lineNumber": 150
+        },
+        {
+          "caller": "_dedup_artifacts",
+          "callee": "set",
+          "lineNumber": 156
+        },
+        {
+          "caller": "_dedup_artifacts",
+          "callee": "isinstance",
+          "lineNumber": 159
+        },
+        {
+          "caller": "_dedup_artifacts",
+          "callee": "dict",
+          "lineNumber": 161
+        },
+        {
+          "caller": "_dedup_artifacts",
+          "callee": "record.get",
+          "lineNumber": 162
+        },
+        {
+          "caller": "_dedup_artifacts",
+          "callee": "str",
+          "lineNumber": 164
+        },
+        {
+          "caller": "_dedup_artifacts",
+          "callee": "seen.add",
+          "lineNumber": 167
+        },
+        {
+          "caller": "_dedup_artifacts",
+          "callee": "result.append",
+          "lineNumber": 168
+        },
+        {
+          "caller": "_trace_event",
+          "callee": "emit",
+          "lineNumber": 187
+        },
+        {
+          "caller": "_execution_summary",
+          "callee": "isinstance",
+          "lineNumber": 206
+        },
+        {
+          "caller": "_execution_summary",
+          "callee": "execution.get",
+          "lineNumber": 207
+        },
+        {
+          "caller": "_execution_summary",
+          "callee": "execution.get",
+          "lineNumber": 207
+        },
+        {
+          "caller": "_execution_summary",
+          "callee": "hasattr",
+          "lineNumber": 208
+        },
+        {
+          "caller": "_execution_summary",
+          "callee": "getattr",
+          "lineNumber": 209
+        },
+        {
+          "caller": "verify",
+          "callee": "_trace_event",
+          "lineNumber": 234
+        },
+        {
+          "caller": "verify",
+          "callee": "_execution_summary",
+          "lineNumber": 242
+        },
+        {
+          "caller": "verify",
+          "callee": "_coerce_results",
+          "lineNumber": 249
+        },
+        {
+          "caller": "verify",
+          "callee": "_coerce_results",
+          "lineNumber": 252
+        },
+        {
+          "caller": "verify",
+          "callee": "reviewer",
+          "lineNumber": 252
+        },
+        {
+          "caller": "verify",
+          "callee": "VerificationResult",
+          "lineNumber": 257
+        },
+        {
+          "caller": "verify",
+          "callee": "type",
+          "lineNumber": 259
+        },
+        {
+          "caller": "verify",
+          "callee": "str",
+          "lineNumber": 260
+        },
+        {
+          "caller": "verify",
+          "callee": "_trace_event",
+          "lineNumber": 264
+        },
+        {
+          "caller": "verify",
+          "callee": "VerificationResult",
+          "lineNumber": 276
+        },
+        {
+          "caller": "verify",
+          "callee": "_trace_event",
+          "lineNumber": 281
+        },
+        {
+          "caller": "verify",
+          "callee": "aggregate_statuses",
+          "lineNumber": 292
+        },
+        {
+          "caller": "verify",
+          "callee": "_status_from_result",
+          "lineNumber": 292
+        },
+        {
+          "caller": "verify",
+          "callee": "result.get",
+          "lineNumber": 296
+        },
+        {
+          "caller": "verify",
+          "callee": "isinstance",
+          "lineNumber": 297
+        },
+        {
+          "caller": "verify",
+          "callee": "checks.append",
+          "lineNumber": 298
+        },
+        {
+          "caller": "verify",
+          "callee": "dict",
+          "lineNumber": 298
+        },
+        {
+          "caller": "verify",
+          "callee": "aggregate_statuses",
+          "lineNumber": 300
+        },
+        {
+          "caller": "verify",
+          "callee": "aggregate_checks",
+          "lineNumber": 300
+        },
+        {
+          "caller": "verify",
+          "callee": "_dedup_artifacts",
+          "lineNumber": 302
+        },
+        {
+          "caller": "verify",
+          "callee": "result.get",
+          "lineNumber": 304
+        },
+        {
+          "caller": "verify",
+          "callee": "result.get",
+          "lineNumber": 307
+        },
+        {
+          "caller": "verify",
+          "callee": "isinstance",
+          "lineNumber": 307
+        },
+        {
+          "caller": "verify",
+          "callee": "any",
+          "lineNumber": 309
+        },
+        {
+          "caller": "verify",
+          "callee": "bool",
+          "lineNumber": 310
+        },
+        {
+          "caller": "verify",
+          "callee": "result.get",
+          "lineNumber": 310
+        },
+        {
+          "caller": "verify",
+          "callee": "result.get",
+          "lineNumber": 310
+        },
+        {
+          "caller": "verify",
+          "callee": "VerificationResult",
+          "lineNumber": 314
+        },
+        {
+          "caller": "verify",
+          "callee": "_result_reason",
+          "lineNumber": 316
+        },
+        {
+          "caller": "verify",
+          "callee": "_result_error_code",
+          "lineNumber": 321
+        },
+        {
+          "caller": "verify",
+          "callee": "_trace_event",
+          "lineNumber": 323
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 12,
+        "functionCount": 12,
+        "classCount": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+ "projectRoot": "/Users/tomasz/Developer/solidworks-automation-skill",
+ "batchFiles": [
+  {
+   "path": "subskills/autocad-automation/README.md",
+   "language": "markdown",
+   "sizeLines": 77,
+   "fileCategory": "docs"
+  },
+  {
+   "path": "subskills/autocad-automation/SKILL.md",
+   "language": "markdown",
+   "sizeLines": 199,
+   "fileCategory": "docs"
+  },
+  {
+   "path": "subskills/autocad-automation/manifest.yaml",
+   "language": "yaml",
+   "sizeLines": 27,
+   "fileCategory": "config"
+  }
+ ],
+ "batchImportData": {
+  "subskills/autocad-automation/README.md": [],
+  "subskills/autocad-automation/SKILL.md": [],
+  "subskills/autocad-automation/manifest.yaml": []
+ }
+}

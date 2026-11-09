@@ -1,0 +1,1060 @@
+{
+ "nodes": [
+  {
+   "id": "file:examples/01_basic_part.py",
+   "type": "file",
+   "name": "01_basic_part.py",
+   "filePath": "examples/01_basic_part.py",
+   "summary": "Przykład podstawowy: łączy się z SolidWorks, tworzy prostą część (szkic + wyciągnięcie) i zapisuje ją z kontrolą jakości szkicu.",
+   "tags": [
+    "example",
+    "part-modeling",
+    "entry-point",
+    "com-automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:examples/01_basic_part.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "examples/01_basic_part.py",
+   "lineRange": [
+    13,
+    25
+   ],
+   "summary": "Tworzy prostą część, rysuje szkic, wyciąga bryłę i zapisuje plik.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:examples/02_complex_part.py",
+   "type": "file",
+   "name": "02_complex_part.py",
+   "filePath": "examples/02_complex_part.py",
+   "summary": "Rozbudowany przykład tworzenia części z wieloma szkicami i operacjami (wyciągnięcia, otwory, zaokrąglenia) z użyciem sesji SolidWorks.",
+   "tags": [
+    "example",
+    "part-modeling",
+    "entry-point",
+    "com-automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:examples/02_complex_part.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "examples/02_complex_part.py",
+   "lineRange": [
+    13,
+    31
+   ],
+   "summary": "Buduje złożoną część w wielu krokach i zapisuje wynik.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/drawing_spec.py",
+   "type": "file",
+   "name": "drawing_spec.py",
+   "filePath": "scripts/drawing_spec.py",
+   "summary": "Krótki moduł ze specyfikacją rysunku używaną przez generator pakietu rysunkowego.",
+   "tags": [
+    "drawing",
+    "specification",
+    "utility"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/sw_connect.py",
+   "type": "file",
+   "name": "sw_connect.py",
+   "filePath": "scripts/sw_connect.py",
+   "summary": "Główna warstwa połączenia z SolidWorks przez COM: uruchamianie i podpinanie się do instancji, szablony, tworzenie, otwieranie i zapis dokumentów oraz bezpieczne odczyty członków COM.",
+   "tags": [
+    "com-automation",
+    "connection",
+    "solidworks",
+    "document-management",
+    "utility"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "class:scripts/sw_connect.py:SolidWorksConnectionError",
+   "type": "class",
+   "name": "SolidWorksConnectionError",
+   "filePath": "scripts/sw_connect.py",
+   "lineRange": [
+    54,
+    60
+   ],
+   "summary": "Wyjątek zgłaszany przy błędach połączenia z SolidWorks.",
+   "tags": [
+    "class",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "class:scripts/sw_connect.py:_LaunchGuard",
+   "type": "class",
+   "name": "_LaunchGuard",
+   "filePath": "scripts/sw_connect.py",
+   "lineRange": [
+    63,
+    120
+   ],
+   "summary": "Strażnik uruchomienia, śledzący proces SolidWorks uruchomiony przez skrypt.",
+   "tags": [
+    "class",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_connect.py:get_com_member",
+   "type": "function",
+   "name": "get_com_member",
+   "filePath": "scripts/sw_connect.py",
+   "lineRange": [
+    126,
+    153
+   ],
+   "summary": "Odczytuje członka obiektu COM z obsługą różnych wariantów dostępu.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_connect.py:normalize_doc_type",
+   "type": "function",
+   "name": "normalize_doc_type",
+   "filePath": "scripts/sw_connect.py",
+   "lineRange": [
+    170,
+    186
+   ],
+   "summary": "Normalizuje nazwę typu dokumentu (part, assembly, drawing).",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_connect.py:close_owned_solidworks",
+   "type": "function",
+   "name": "close_owned_solidworks",
+   "filePath": "scripts/sw_connect.py",
+   "lineRange": [
+    238,
+    255
+   ],
+   "summary": "Zamyka instancję SolidWorks uruchomioną przez skrypt.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_connect.py:connect_solidworks",
+   "type": "function",
+   "name": "connect_solidworks",
+   "filePath": "scripts/sw_connect.py",
+   "lineRange": [
+    258,
+    349
+   ],
+   "summary": "Łączy się z działającym lub uruchamia nowy SolidWorks i czeka na gotowość.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_connect.py:find_template",
+   "type": "function",
+   "name": "find_template",
+   "filePath": "scripts/sw_connect.py",
+   "lineRange": [
+    360,
+    404
+   ],
+   "summary": "Wyszukuje szablon dokumentu odpowiedni dla typu.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_connect.py:ensure_default_templates",
+   "type": "function",
+   "name": "ensure_default_templates",
+   "filePath": "scripts/sw_connect.py",
+   "lineRange": [
+    407,
+    424
+   ],
+   "summary": "Zapewnia dostępność domyślnych szablonów.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_connect.py:snapshot_open_documents",
+   "type": "function",
+   "name": "snapshot_open_documents",
+   "filePath": "scripts/sw_connect.py",
+   "lineRange": [
+    427,
+    449
+   ],
+   "summary": "Robi migawkę otwartych dokumentów.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_connect.py:new_document",
+   "type": "function",
+   "name": "new_document",
+   "filePath": "scripts/sw_connect.py",
+   "lineRange": [
+    474,
+    528
+   ],
+   "summary": "Tworzy nowy dokument z szablonu.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_connect.py:open_document",
+   "type": "function",
+   "name": "open_document",
+   "filePath": "scripts/sw_connect.py",
+   "lineRange": [
+    531,
+    626
+   ],
+   "summary": "Otwiera dokument z obsługą błędów i ostrzeżeń.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_connect.py:save_document",
+   "type": "function",
+   "name": "save_document",
+   "filePath": "scripts/sw_connect.py",
+   "lineRange": [
+    629,
+    656
+   ],
+   "summary": "Zapisuje dokument pod wskazaną ścieżką.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/sw_drawing_native.py",
+   "type": "file",
+   "name": "sw_drawing_native.py",
+   "filePath": "scripts/sw_drawing_native.py",
+   "summary": "Natywne tworzenie wymiarów i adnotacji na rysunkach SolidWorks wraz z walidacją żądań, mapowaniem widoków i weryfikacją wymiarów.",
+   "tags": [
+    "drawing",
+    "dimensions",
+    "validation",
+    "com-automation"
+   ],
+   "complexity": "complex"
+  },
+  {
+   "id": "function:scripts/sw_drawing_native.py:validate_dimensions",
+   "type": "function",
+   "name": "validate_dimensions",
+   "filePath": "scripts/sw_drawing_native.py",
+   "lineRange": [
+    31,
+    64
+   ],
+   "summary": "Waliduje listę wymiarów do utworzenia.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_drawing_native.py:validate_native_requests",
+   "type": "function",
+   "name": "validate_native_requests",
+   "filePath": "scripts/sw_drawing_native.py",
+   "lineRange": [
+    67,
+    121
+   ],
+   "summary": "Waliduje żądania natywnych adnotacji.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_drawing_native.py:describe_target",
+   "type": "function",
+   "name": "describe_target",
+   "filePath": "scripts/sw_drawing_native.py",
+   "lineRange": [
+    124,
+    149
+   ],
+   "summary": "Opisuje cel wymiaru (krawędź, szkic).",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_drawing_native.py:target_matches",
+   "type": "function",
+   "name": "target_matches",
+   "filePath": "scripts/sw_drawing_native.py",
+   "lineRange": [
+    152,
+    166
+   ],
+   "summary": "Sprawdza dopasowanie celu do opisu.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_drawing_native.py:map_views",
+   "type": "function",
+   "name": "map_views",
+   "filePath": "scripts/sw_drawing_native.py",
+   "lineRange": [
+    169,
+    179
+   ],
+   "summary": "Mapuje widoki rysunku.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_drawing_native.py:create_dimensions",
+   "type": "function",
+   "name": "create_dimensions",
+   "filePath": "scripts/sw_drawing_native.py",
+   "lineRange": [
+    182,
+    235
+   ],
+   "summary": "Tworzy wymiary na widokach rysunku.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_drawing_native.py:verify_dimensions",
+   "type": "function",
+   "name": "verify_dimensions",
+   "filePath": "scripts/sw_drawing_native.py",
+   "lineRange": [
+    257,
+    288
+   ],
+   "summary": "Weryfikuje utworzone wymiary.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/sw_drawing_package.py",
+   "type": "file",
+   "name": "sw_drawing_package.py",
+   "filePath": "scripts/sw_drawing_package.py",
+   "summary": "Generuje pakiet rysunkowy (kopie plików, rysunki, nazwy) z użyciem sesji SolidWorks, ochrony odczytu i planu zmiany nazw; posiada punkt wejścia CLI.",
+   "tags": [
+    "drawing",
+    "package-generation",
+    "cli",
+    "entry-point"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_drawing_package.py:generate_package",
+   "type": "function",
+   "name": "generate_package",
+   "filePath": "scripts/sw_drawing_package.py",
+   "lineRange": [
+    20,
+    135
+   ],
+   "summary": "Generuje cały pakiet rysunkowy dla dokumentu.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_drawing_package.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "scripts/sw_drawing_package.py",
+   "lineRange": [
+    138,
+    147
+   ],
+   "summary": "Punkt wejścia CLI generatora pakietu.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "file:scripts/sw_file_rename.py",
+   "type": "file",
+   "name": "sw_file_rename.py",
+   "filePath": "scripts/sw_file_rename.py",
+   "summary": "Planuje i wykonuje zmianę nazw plików według szablonu pól, z walidacją nazw i zbieraniem wpisów; narzędzie CLI.",
+   "tags": [
+    "file-rename",
+    "cli",
+    "planning",
+    "utility"
+   ],
+   "complexity": "moderate"
+  },
+  {
+   "id": "function:scripts/sw_file_rename.py:template_fields",
+   "type": "function",
+   "name": "template_fields",
+   "filePath": "scripts/sw_file_rename.py",
+   "lineRange": [
+    17,
+    34
+   ],
+   "summary": "Wyznacza pola szablonu nazwy pliku.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_file_rename.py:plan_renames",
+   "type": "function",
+   "name": "plan_renames",
+   "filePath": "scripts/sw_file_rename.py",
+   "lineRange": [
+    42,
+    73
+   ],
+   "summary": "Buduje plan zmian nazw z wykrywaniem konfliktów.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_file_rename.py:collect_entries",
+   "type": "function",
+   "name": "collect_entries",
+   "filePath": "scripts/sw_file_rename.py",
+   "lineRange": [
+    76,
+    102
+   ],
+   "summary": "Zbiera wpisy plików do zmiany nazw.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  },
+  {
+   "id": "function:scripts/sw_file_rename.py:main",
+   "type": "function",
+   "name": "main",
+   "filePath": "scripts/sw_file_rename.py",
+   "lineRange": [
+    105,
+    130
+   ],
+   "summary": "Punkt wejścia CLI zmiany nazw.",
+   "tags": [
+    "function",
+    "solidworks",
+    "automation"
+   ],
+   "complexity": "simple"
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:examples/01_basic_part.py",
+   "target": "file:scripts/sw_connect.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:examples/01_basic_part.py",
+   "target": "file:scripts/sw_part.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:examples/01_basic_part.py",
+   "target": "file:scripts/sw_session.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:examples/01_basic_part.py",
+   "target": "file:scripts/sw_sketch_quality.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:examples/01_basic_part.py",
+   "target": "function:examples/01_basic_part.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:examples/01_basic_part.py",
+   "target": "function:examples/01_basic_part.py:main",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:examples/02_complex_part.py",
+   "target": "file:scripts/sw_connect.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:examples/02_complex_part.py",
+   "target": "file:scripts/sw_part.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:examples/02_complex_part.py",
+   "target": "file:scripts/sw_session.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:examples/02_complex_part.py",
+   "target": "file:scripts/sw_sketch_quality.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:examples/02_complex_part.py",
+   "target": "function:examples/02_complex_part.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:examples/02_complex_part.py",
+   "target": "function:examples/02_complex_part.py:main",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "class:scripts/sw_connect.py:SolidWorksConnectionError",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "class:scripts/sw_connect.py:SolidWorksConnectionError",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "class:scripts/sw_connect.py:_LaunchGuard",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "class:scripts/sw_connect.py:_LaunchGuard",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "function:scripts/sw_connect.py:get_com_member",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "function:scripts/sw_connect.py:get_com_member",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "function:scripts/sw_connect.py:normalize_doc_type",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "function:scripts/sw_connect.py:normalize_doc_type",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "function:scripts/sw_connect.py:close_owned_solidworks",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "function:scripts/sw_connect.py:close_owned_solidworks",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "function:scripts/sw_connect.py:connect_solidworks",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "function:scripts/sw_connect.py:connect_solidworks",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "function:scripts/sw_connect.py:find_template",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "function:scripts/sw_connect.py:find_template",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "function:scripts/sw_connect.py:ensure_default_templates",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "function:scripts/sw_connect.py:ensure_default_templates",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "function:scripts/sw_connect.py:snapshot_open_documents",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "function:scripts/sw_connect.py:snapshot_open_documents",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "function:scripts/sw_connect.py:new_document",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "function:scripts/sw_connect.py:new_document",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "function:scripts/sw_connect.py:open_document",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "function:scripts/sw_connect.py:open_document",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "function:scripts/sw_connect.py:save_document",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_connect.py",
+   "target": "function:scripts/sw_connect.py:save_document",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_drawing_native.py",
+   "target": "file:scripts/sw_connect.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/sw_drawing_native.py",
+   "target": "file:scripts/sw_gdt_annotation.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/sw_drawing_native.py",
+   "target": "file:scripts/sw_gdt_copy.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/sw_drawing_native.py",
+   "target": "function:scripts/sw_drawing_native.py:validate_dimensions",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_drawing_native.py",
+   "target": "function:scripts/sw_drawing_native.py:validate_dimensions",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_drawing_native.py",
+   "target": "function:scripts/sw_drawing_native.py:validate_native_requests",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_drawing_native.py",
+   "target": "function:scripts/sw_drawing_native.py:validate_native_requests",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_drawing_native.py",
+   "target": "function:scripts/sw_drawing_native.py:describe_target",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_drawing_native.py",
+   "target": "function:scripts/sw_drawing_native.py:describe_target",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_drawing_native.py",
+   "target": "function:scripts/sw_drawing_native.py:target_matches",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_drawing_native.py",
+   "target": "function:scripts/sw_drawing_native.py:target_matches",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_drawing_native.py",
+   "target": "function:scripts/sw_drawing_native.py:map_views",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_drawing_native.py",
+   "target": "function:scripts/sw_drawing_native.py:map_views",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_drawing_native.py",
+   "target": "function:scripts/sw_drawing_native.py:create_dimensions",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_drawing_native.py",
+   "target": "function:scripts/sw_drawing_native.py:create_dimensions",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_drawing_native.py",
+   "target": "function:scripts/sw_drawing_native.py:verify_dimensions",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_drawing_native.py",
+   "target": "function:scripts/sw_drawing_native.py:verify_dimensions",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_drawing_package.py",
+   "target": "file:scripts/drawing_spec.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/sw_drawing_package.py",
+   "target": "file:scripts/sw_connect.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/sw_drawing_package.py",
+   "target": "file:scripts/sw_file_rename.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/sw_drawing_package.py",
+   "target": "file:scripts/sw_read_guard.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/sw_drawing_package.py",
+   "target": "file:scripts/sw_rename_copy.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/sw_drawing_package.py",
+   "target": "file:scripts/sw_session.py",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:scripts/sw_drawing_package.py",
+   "target": "function:scripts/sw_drawing_package.py:generate_package",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_drawing_package.py",
+   "target": "function:scripts/sw_drawing_package.py:generate_package",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_drawing_package.py",
+   "target": "function:scripts/sw_drawing_package.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_drawing_package.py",
+   "target": "function:scripts/sw_drawing_package.py:main",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_file_rename.py",
+   "target": "function:scripts/sw_file_rename.py:template_fields",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_file_rename.py",
+   "target": "function:scripts/sw_file_rename.py:template_fields",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_file_rename.py",
+   "target": "function:scripts/sw_file_rename.py:plan_renames",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_file_rename.py",
+   "target": "function:scripts/sw_file_rename.py:plan_renames",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_file_rename.py",
+   "target": "function:scripts/sw_file_rename.py:collect_entries",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_file_rename.py",
+   "target": "function:scripts/sw_file_rename.py:collect_entries",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:scripts/sw_file_rename.py",
+   "target": "function:scripts/sw_file_rename.py:main",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:scripts/sw_file_rename.py",
+   "target": "function:scripts/sw_file_rename.py:main",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  }
+ ]
+}

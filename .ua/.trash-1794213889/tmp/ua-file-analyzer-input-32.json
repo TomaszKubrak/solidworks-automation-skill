@@ -1,0 +1,28 @@
+{
+ "projectRoot": "/Users/tomasz/Developer/solidworks-automation-skill",
+ "batchFiles": [
+  {
+   "path": "subskills/solidworks-vibecad/README.md",
+   "language": "markdown",
+   "sizeLines": 82,
+   "fileCategory": "docs"
+  },
+  {
+   "path": "subskills/solidworks-vibecad/SKILL.md",
+   "language": "markdown",
+   "sizeLines": 77,
+   "fileCategory": "docs"
+  },
+  {
+   "path": "subskills/solidworks-vibecad/manifest.yaml",
+   "language": "yaml",
+   "sizeLines": 22,
+   "fileCategory": "config"
+  }
+ ],
+ "batchImportData": {
+  "subskills/solidworks-vibecad/README.md": [],
+  "subskills/solidworks-vibecad/SKILL.md": [],
+  "subskills/solidworks-vibecad/manifest.yaml": []
+ }
+}
